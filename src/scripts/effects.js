@@ -6,6 +6,7 @@ export function showCorrectEffect(element) {
   }, 600);
 }
 
+
 export function showIncorrectEffect(element) {
   element.style.background = '#f8d7da';
   element.style.transition = 'background 0.4s';

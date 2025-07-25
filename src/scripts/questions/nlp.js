@@ -138,5 +138,145 @@ export const nlpQuestions = [
     level: "beginner",
     category: "nlp",
     type: "multiple-choice"
+  },
+  {
+    question: "What is the difference between stemming and lemmatization?",
+    choices: [
+      "Stemming removes stop words, lemmatization encodes text",
+      "Stemming cuts off word endings, lemmatization finds the dictionary form",
+      "They are the same process",
+      "Stemming is used for tokenization"
+    ],
+    correct: "Stemming cuts off word endings, lemmatization finds the dictionary form",
+    explanation: "Stemming crudely removes word endings, while lemmatization uses vocabulary and morphology analysis.",
+    level: "intermediate",
+    category: "nlp",
+    type: "multiple-choice"
+  },
+  {
+    question: "Which technique helps reduce the dimensionality of text data?",
+    choices: [
+      "TF-IDF",
+      "Principal Component Analysis (PCA)",
+      "Bag of Words",
+      "Word2Vec"
+    ],
+    correct: "Principal Component Analysis (PCA)",
+    explanation: "PCA is a dimensionality reduction technique often used after vectorizing text.",
+    level: "intermediate",
+    category: "nlp",
+    type: "multiple-choice"
+  },
+  {
+    question: "What is the main purpose of the attention mechanism in NLP models?",
+    choices: [
+      "To encode categorical variables",
+      "To focus on relevant parts of the input sequence",
+      "To normalize input features",
+      "To remove stop words"
+    ],
+    correct: "To focus on relevant parts of the input sequence",
+    explanation: "Attention allows models to weigh different parts of the input sequence differently.",
+    level: "intermediate",
+    category: "nlp",
+    type: "multiple-choice"
+  },
+  {
+    question: "Which method is commonly used for sentiment analysis?",
+    choices: [
+      "Topic modeling",
+      "Classification",
+      "Clustering",
+      "Regression"
+    ],
+    correct: "Classification",
+    explanation: "Sentiment analysis is typically framed as a classification problem.",
+    level: "intermediate",
+    category: "nlp",
+    type: "multiple-choice"
+  },
+  {
+    question: "What does the term 'out-of-vocabulary' (OOV) mean in NLP?",
+    choices: [
+      "Words not present in the training vocabulary",
+      "Words with multiple meanings",
+      "Words that are stop words",
+      "Words that are named entities"
+    ],
+    correct: "Words not present in the training vocabulary",
+    explanation: "OOV refers to words that the model has not seen during training.",
+    level: "intermediate",
+    category: "nlp",
+    type: "multiple-choice"
+  },
+  {
+    question: "Which model is commonly used for sequence-to-sequence tasks in NLP?",
+    choices: [
+      "Random Forest",
+      "Seq2Seq with attention",
+      "K-Means",
+      "Logistic Regression"
+    ],
+    correct: "Seq2Seq with attention",
+    explanation: "Seq2Seq models with attention are widely used for tasks like translation and summarization.",
+    level: "advanced",
+    category: "nlp",
+    type: "multiple-choice"
+  },
+  {
+    question: "What is the main advantage of using BERT over traditional word embeddings?",
+    choices: [
+      "BERT provides static word vectors",
+      "BERT captures context-dependent meanings",
+      "BERT is only used for image processing",
+      "BERT ignores word order"
+    ],
+    correct: "BERT captures context-dependent meanings",
+    explanation: "BERT generates embeddings that depend on the context of the word in the sentence.",
+    level: "advanced",
+    category: "nlp",
+    type: "multiple-choice"
+  },
+  {
+    question: "Which evaluation metric is best for imbalanced text classification?",
+    choices: [
+      "Accuracy",
+      "F1 Score",
+      "BLEU Score",
+      "Mean Squared Error"
+    ],
+    correct: "F1 Score",
+    explanation: "F1 Score balances precision and recall, making it suitable for imbalanced datasets.",
+    level: "advanced",
+    category: "nlp",
+    type: "multiple-choice"
+  },
+  {
+    question: "What is transfer learning in NLP?",
+    choices: [
+      "Training a model from scratch",
+      "Using a pre-trained model and fine-tuning it for a specific task",
+      "Removing stop words",
+      "Encoding text as one-hot vectors"
+    ],
+    correct: "Using a pre-trained model and fine-tuning it for a specific task",
+    explanation: "Transfer learning leverages knowledge from pre-trained models for new tasks.",
+    level: "advanced",
+    category: "nlp",
+    type: "multiple-choice"
+  },
+  {
+    question: "Which technique is used to generate text automatically?",
+    choices: [
+      "Text classification",
+      "Text generation with language models",
+      "Text clustering",
+      "Text normalization"
+    ],
+    correct: "Text generation with language models",
+    explanation: "Language models like GPT are used for automatic text generation.",
+    level: "advanced",
+    category: "nlp",
+    type: "multiple-choice"
   }
 ];

@@ -1,6 +1,7 @@
 import { loadCryptoPrices } from './crypto.js';
 import { showCorrectEffect, showIncorrectEffect } from './effects.js';
 
+
 async function loadQuestions(level, category) {
   let questions = [];
 

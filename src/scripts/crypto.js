@@ -9,7 +9,3 @@ export function loadCryptoPrices() {
       document.getElementById('crypto-bar').textContent = '⚠️ Error loading crypto prices';
     });
 }
-
-// // Call once on load and then every 2 minutes
-// loadCryptoPrices();
-// setInterval(loadCryptoPrices, 120000);

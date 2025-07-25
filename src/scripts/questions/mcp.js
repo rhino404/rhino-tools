@@ -138,5 +138,145 @@ export const mcpQuestions = [
     level: "advanced",
     category: "mcp",
     type: "multiple-choice"
+  },
+  {
+    question: "Which protocol feature helps MCP support multi-modal agent communication?",
+    choices: [
+      "Context serialization",
+      "Payload encryption",
+      "Multi-threading",
+      "GPU acceleration"
+    ],
+    correct: "Context serialization",
+    explanation: "Context serialization allows MCP to encode and transmit multi-modal data between agents.",
+    level: "intermediate",
+    category: "mcp",
+    type: "multiple-choice"
+  },
+  {
+    question: "How does MCP facilitate context traceability in agentic workflows?",
+    choices: [
+      "By using unique context identifiers",
+      "By compressing context data",
+      "By encrypting all payloads",
+      "By discarding old context"
+    ],
+    correct: "By using unique context identifiers",
+    explanation: "Unique identifiers allow agents to track and reference context throughout workflows.",
+    level: "intermediate",
+    category: "mcp",
+    type: "multiple-choice"
+  },
+  {
+    question: "What is a common challenge when integrating MCP with legacy AI systems?",
+    choices: [
+      "Lack of JSON support",
+      "Schema incompatibility",
+      "Insufficient hardware",
+      "Excessive bandwidth usage"
+    ],
+    correct: "Schema incompatibility",
+    explanation: "Legacy systems may use different context schemas, requiring mapping or translation for MCP integration.",
+    level: "intermediate",
+    category: "mcp",
+    type: "multiple-choice"
+  },
+  {
+    question: "Which layer in MCP is responsible for error handling during context exchange?",
+    choices: [
+      "Transport layer",
+      "Application layer",
+      "Encoding layer",
+      "Visualization layer"
+    ],
+    correct: "Transport layer",
+    explanation: "The transport layer manages errors and retries during context transmission.",
+    level: "intermediate",
+    category: "mcp",
+    type: "multiple-choice"
+  },
+  {
+    question: "How does MCP support agent autonomy in distributed systems?",
+    choices: [
+      "By enforcing centralized control",
+      "By enabling decentralized context management",
+      "By limiting context access",
+      "By requiring manual context updates"
+    ],
+    correct: "By enabling decentralized context management",
+    explanation: "MCP allows agents to manage and share context independently, supporting autonomy.",
+    level: "intermediate",
+    category: "mcp",
+    type: "multiple-choice"
+  },
+  {
+    question: "Which advanced feature allows MCP to optimize context exchange for large-scale systems?",
+    choices: [
+      "Context sharding",
+      "Manual context updates",
+      "Single-threaded transport",
+      "Static payloads"
+    ],
+    correct: "Context sharding",
+    explanation: "Context sharding divides context data for efficient exchange in large-scale environments.",
+    level: "advanced",
+    category: "mcp",
+    type: "multiple-choice"
+  },
+  {
+    question: "How can MCP enhance security in agentic AI deployments?",
+    choices: [
+      "By using encrypted context payloads",
+      "By disabling context sharing",
+      "By limiting agent communication",
+      "By removing transport layers"
+    ],
+    correct: "By using encrypted context payloads",
+    explanation: "Encryption protects context data during exchange between agents.",
+    level: "advanced",
+    category: "mcp",
+    type: "multiple-choice"
+  },
+  {
+    question: "What is the impact of schema evolution on MCP-based systems?",
+    choices: [
+      "It can cause context incompatibility between agents",
+      "It improves model accuracy",
+      "It reduces payload size",
+      "It eliminates the need for versioning"
+    ],
+    correct: "It can cause context incompatibility between agents",
+    explanation: "Schema changes may require agents to update or translate context for compatibility.",
+    level: "advanced",
+    category: "mcp",
+    type: "multiple-choice"
+  },
+  {
+    question: "Which strategy can MCP use to ensure high availability in distributed agent networks?",
+    choices: [
+      "Redundant transport channels",
+      "Single point of failure",
+      "Manual context synchronization",
+      "Limited agent access"
+    ],
+    correct: "Redundant transport channels",
+    explanation: "Redundant channels help maintain context exchange even if some network paths fail.",
+    level: "advanced",
+    category: "mcp",
+    type: "multiple-choice"
+  },
+  {
+    question: "How does MCP support context auditing in regulated environments?",
+    choices: [
+      "By maintaining context exchange logs",
+      "By deleting context after use",
+      "By encrypting all context",
+      "By disabling logging"
+    ],
+    correct: "By maintaining context exchange logs",
+    explanation: "Logs provide traceability and accountability for context exchanges, supporting audits.",
+    level: "advanced",
+    category: "mcp",
+    type: "multiple-choice"
   }
 ];
