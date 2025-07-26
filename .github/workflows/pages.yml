@@ -8,11 +8,17 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      pages: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './src'
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-        with:
-          folder: './src'
