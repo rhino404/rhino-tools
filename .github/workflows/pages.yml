@@ -5,12 +5,17 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  pages: write
+  contents: read
+
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      pages: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,4 +26,5 @@ jobs:
           path: './src'
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
