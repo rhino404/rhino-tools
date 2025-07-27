@@ -1,0 +1,76 @@
+/* =========================
+   Light Theme (light.css)
+========================= */
+
+:root {
+  --primary-bg: #f9f9f9;
+  --button-bg: #f0f0f0;
+  --button-color: #222;
+  --text-color: #222;
+  --border-color: #ccc;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  background-image: linear-gradient(
+    rgba(24, 24, 24, 0.8),
+    rgba(255, 255, 255, 0.8)
+  ), url(../images/rhino404.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  background-attachment: fixed;
+}
+
+.choice-btn,
+.level-btn,
+.category-btn,
+.shuffle {
+  background: var(--button-bg);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.choice-btn.correct {
+  background: #c8f7c5;
+}
+
+.choice-btn.incorrect {
+  background: #f7c5c5;
+}
+
+.explanation {
+  background: #fff;
+  border-color: var(--border-color);
+}
+
+#ad-slot {
+  background: #eee;
+  color: #222;
+}
+
+#dark-mode-toggle {
+  background: var(--button-bg);
+  color: var(--button-color);
+  border: 1px solid var(--border-color);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+footer {
+  color: #888;
+}
+
+#crypto-bar {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5em 1em;
+  background: #1a755e;
+  border-radius: 0.5em;
+}
