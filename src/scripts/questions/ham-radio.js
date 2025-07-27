@@ -1,4 +1,4 @@
-[
+export const hamRadioQuestions = [
   {
     "question": "[T1A] Which of the following is part of the Basis and Purpose of the Amateur Radio Service?",
     "choices": [
