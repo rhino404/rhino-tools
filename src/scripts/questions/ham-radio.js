@@ -1,4 +1,4 @@
-export const hamRadioQuestions = [
+[
   {
     "question": "[T1A] Which of the following is part of the Basis and Purpose of the Amateur Radio Service?",
     "choices": [
@@ -8,7 +8,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Advancing skills in the technical and communication phases of the radio art",
-    "explanation": "",
+    "explanation": "Advancing skills in the technical and communication phases of the radio art",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -22,7 +22,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "The FCC",
-    "explanation": "",
+    "explanation": "The FCC",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -36,7 +36,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "It is encouraged",
-    "explanation": "",
+    "explanation": "It is encouraged",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -50,7 +50,7 @@ export const hamRadioQuestions = [
       "One for each permanent station location from which the person plans to operate"
     ],
     "correct": "One",
-    "explanation": "",
+    "explanation": "One",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -64,7 +64,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "The license appears in the FCC ULS database",
-    "explanation": "",
+    "explanation": "The license appears in the FCC ULS database",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -78,7 +78,7 @@ export const hamRadioQuestions = [
       "An amateur station transmitting communications for the purposes of observing propagation or related experimental activities"
     ],
     "correct": "An amateur station transmitting communications for the purposes of observing propagation or related experimental activities",
-    "explanation": "",
+    "explanation": "An amateur station transmitting communications for the purposes of observing propagation or related experimental activities",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -92,7 +92,7 @@ export const hamRadioQuestions = [
       "An amateur station using amateur radio satellites for relay of signals"
     ],
     "correct": "An amateur station located more than 50 km above Earth's surface",
-    "explanation": "",
+    "explanation": "An amateur station located more than 50 km above Earth's surface",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -106,7 +106,7 @@ export const hamRadioQuestions = [
       "International Telecommunication Union"
     ],
     "correct": "Volunteer Frequency Coordinator recognized by local amateurs",
-    "explanation": "",
+    "explanation": "Volunteer Frequency Coordinator recognized by local amateurs",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -120,7 +120,7 @@ export const hamRadioQuestions = [
       "FCC Regional Field Office"
     ],
     "correct": "Amateur operators in a local or regional area whose stations are eligible to be repeater or auxiliary stations",
-    "explanation": "",
+    "explanation": "Amateur operators in a local or regional area whose stations are eligible to be repeater or auxiliary stations",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -134,7 +134,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -148,7 +148,7 @@ export const hamRadioQuestions = [
       "At any time, stations in the Amateur Radio Service are not protected from willful interference"
     ],
     "correct": "At no time",
-    "explanation": "",
+    "explanation": "At no time",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -162,7 +162,7 @@ export const hamRadioQuestions = [
       "28.500 MHz to 28.600 MHz"
     ],
     "correct": "28.300 MHz to 28.500 MHz",
-    "explanation": "",
+    "explanation": "28.300 MHz to 28.500 MHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -176,7 +176,7 @@ export const hamRadioQuestions = [
       "Any amateur holding a Technician class or higher license who has applied for and received approval from NASA"
     ],
     "correct": "Any amateur holding a Technician class or higher license",
-    "explanation": "",
+    "explanation": "Any amateur holding a Technician class or higher license",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -190,7 +190,7 @@ export const hamRadioQuestions = [
       "222.15 MHz"
     ],
     "correct": "52.525 MHz",
-    "explanation": "",
+    "explanation": "52.525 MHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -204,7 +204,7 @@ export const hamRadioQuestions = [
       "2 meters"
     ],
     "correct": "2 meters",
-    "explanation": "",
+    "explanation": "2 meters",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -218,7 +218,7 @@ export const hamRadioQuestions = [
       "Fixed digital message forwarding systems only"
     ],
     "correct": "Fixed digital message forwarding systems only",
-    "explanation": "",
+    "explanation": "Fixed digital message forwarding systems only",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -232,7 +232,7 @@ export const hamRadioQuestions = [
       "30 meter band only"
     ],
     "correct": "10 meter band only",
-    "explanation": "",
+    "explanation": "10 meter band only",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -246,7 +246,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "50.0 MHz to 50.1 MHz and 144.0 MHz to 144.1 MHz",
-    "explanation": "",
+    "explanation": "50.0 MHz to 50.1 MHz and 144.0 MHz to 144.1 MHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -260,7 +260,7 @@ export const hamRadioQuestions = [
       "Digital transmissions are not permitted in those segments"
     ],
     "correct": "U.S. amateurs may find non-amateur stations in those segments, and must avoid interfering with them",
-    "explanation": "",
+    "explanation": "U.S. amateurs may find non-amateur stations in those segments, and must avoid interfering with them",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -274,7 +274,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -288,7 +288,7 @@ export const hamRadioQuestions = [
       "On any band if the power is limited to 25 watts"
     ],
     "correct": "In at least some segment of all these bands",
-    "explanation": "",
+    "explanation": "In at least some segment of all these bands",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -302,7 +302,7 @@ export const hamRadioQuestions = [
       "10 watts"
     ],
     "correct": "200 watts",
-    "explanation": "",
+    "explanation": "200 watts",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -316,7 +316,7 @@ export const hamRadioQuestions = [
       "1500 watts"
     ],
     "correct": "1500 watts",
-    "explanation": "",
+    "explanation": "1500 watts",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -330,7 +330,7 @@ export const hamRadioQuestions = [
       "Technician, General, Amateur Extra"
     ],
     "correct": "Technician, General, Amateur Extra",
-    "explanation": "",
+    "explanation": "Technician, General, Amateur Extra",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -344,7 +344,7 @@ export const hamRadioQuestions = [
       "Any licensed amateur"
     ],
     "correct": "Any licensed amateur",
-    "explanation": "",
+    "explanation": "Any licensed amateur",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -358,7 +358,7 @@ export const hamRadioQuestions = [
       "Any communications that would be permitted by an international broadcast station"
     ],
     "correct": "Communications incidental to the purposes of the Amateur Radio Service and remarks of a personal character",
-    "explanation": "",
+    "explanation": "Communications incidental to the purposes of the Amateur Radio Service and remarks of a personal character",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -372,7 +372,7 @@ export const hamRadioQuestions = [
       "Nothing; there is no such requirement"
     ],
     "correct": "Revocation of the station license or suspension of the operator license",
-    "explanation": "",
+    "explanation": "Revocation of the station license or suspension of the operator license",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -386,7 +386,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "KF1XXX",
-    "explanation": "",
+    "explanation": "KF1XXX",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -400,7 +400,7 @@ export const hamRadioQuestions = [
       "From any vessel or craft located in international waters and documented or registered in the United States"
     ],
     "correct": "From any vessel or craft located in international waters and documented or registered in the United States",
-    "explanation": "",
+    "explanation": "From any vessel or craft located in international waters and documented or registered in the United States",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -414,7 +414,7 @@ export const hamRadioQuestions = [
       "Failure to have a copy of your license available at your station"
     ],
     "correct": "Failure to provide and maintain a correct email address with the FCC",
-    "explanation": "",
+    "explanation": "Failure to provide and maintain a correct email address with the FCC",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -428,7 +428,7 @@ export const hamRadioQuestions = [
       "Eight years"
     ],
     "correct": "Ten years",
-    "explanation": "",
+    "explanation": "Ten years",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -442,7 +442,7 @@ export const hamRadioQuestions = [
       "Ten years"
     ],
     "correct": "Two years",
-    "explanation": "",
+    "explanation": "Two years",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -456,7 +456,7 @@ export const hamRadioQuestions = [
       "As soon as you receive your license in the mail from the FCC"
     ],
     "correct": "As soon as your operator/station license grant appears in the FCC\u2019s license database",
-    "explanation": "",
+    "explanation": "As soon as your operator/station license grant appears in the FCC\u2019s license database",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -470,7 +470,7 @@ export const hamRadioQuestions = [
       "No, you must wait until the license has been renewed"
     ],
     "correct": "No, you must wait until the license has been renewed",
-    "explanation": "",
+    "explanation": "No, you must wait until the license has been renewed",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -484,7 +484,7 @@ export const hamRadioQuestions = [
       "Any country banned from making such communications by the American Radio Relay League (ARRL)"
     ],
     "correct": "Any country whose administration has notified the International Telecommunication Union (ITU) that it objects to such communications",
-    "explanation": "",
+    "explanation": "Any country whose administration has notified the International Telecommunication Union (ITU) that it objects to such communications",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -498,7 +498,7 @@ export const hamRadioQuestions = [
       "Telecommand or transmissions of telemetry"
     ],
     "correct": "Broadcasting",
-    "explanation": "",
+    "explanation": "Broadcasting",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -512,7 +512,7 @@ export const hamRadioQuestions = [
       "Never"
     ],
     "correct": "Only when transmitting control commands to space stations or radio control craft",
-    "explanation": "",
+    "explanation": "Only when transmitting control commands to space stations or radio control craft",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -526,7 +526,7 @@ export const hamRadioQuestions = [
       "When the music is transmitted above 1280 MHz"
     ],
     "correct": "When incidental to an authorized retransmission of manned spacecraft communications",
-    "explanation": "",
+    "explanation": "When incidental to an authorized retransmission of manned spacecraft communications",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -540,7 +540,7 @@ export const hamRadioQuestions = [
       "When selling amateur radio equipment and not on a regular basis"
     ],
     "correct": "When selling amateur radio equipment and not on a regular basis",
-    "explanation": "",
+    "explanation": "When selling amateur radio equipment and not on a regular basis",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -554,7 +554,7 @@ export const hamRadioQuestions = [
       "There is no such prohibition"
     ],
     "correct": "Any such language is prohibited",
-    "explanation": "",
+    "explanation": "Any such language is prohibited",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -568,7 +568,7 @@ export const hamRadioQuestions = [
       "Repeater, auxiliary, or space stations"
     ],
     "correct": "Repeater, auxiliary, or space stations",
-    "explanation": "",
+    "explanation": "Repeater, auxiliary, or space stations",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -582,7 +582,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "When the communication is incidental to classroom instruction at an educational institution",
-    "explanation": "",
+    "explanation": "When the communication is incidental to classroom instruction at an educational institution",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -596,7 +596,7 @@ export const hamRadioQuestions = [
       "Never"
     ],
     "correct": "When such communications are directly related to the immediate safety of human life or protection of property",
-    "explanation": "",
+    "explanation": "When such communications are directly related to the immediate safety of human life or protection of property",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -610,7 +610,7 @@ export const hamRadioQuestions = [
       "Transmissions intended for reception by the general public"
     ],
     "correct": "Transmissions intended for reception by the general public",
-    "explanation": "",
+    "explanation": "Transmissions intended for reception by the general public",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -624,7 +624,7 @@ export const hamRadioQuestions = [
       "When transmitting signals to control model craft"
     ],
     "correct": "When transmitting signals to control model craft",
-    "explanation": "",
+    "explanation": "When transmitting signals to control model craft",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -638,7 +638,7 @@ export const hamRadioQuestions = [
       "Never"
     ],
     "correct": "Never",
-    "explanation": "",
+    "explanation": "Never",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -652,7 +652,7 @@ export const hamRadioQuestions = [
       "Any amateur allowed to transmit on the satellite uplink frequency"
     ],
     "correct": "Any amateur allowed to transmit on the satellite uplink frequency",
-    "explanation": "",
+    "explanation": "Any amateur allowed to transmit on the satellite uplink frequency",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -666,7 +666,7 @@ export const hamRadioQuestions = [
       "Any licensed operator"
     ],
     "correct": "The station licensee",
-    "explanation": "",
+    "explanation": "The station licensee",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -680,7 +680,7 @@ export const hamRadioQuestions = [
       "The class of operator license held by the control operator"
     ],
     "correct": "The class of operator license held by the control operator",
-    "explanation": "",
+    "explanation": "The class of operator license held by the control operator",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -694,7 +694,7 @@ export const hamRadioQuestions = [
       "The mailing address of the station licensee"
     ],
     "correct": "The location at which the control operator function is performed",
-    "explanation": "",
+    "explanation": "The location at which the control operator function is performed",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -708,7 +708,7 @@ export const hamRadioQuestions = [
       "When using a club station whose trustee holds an Amateur Extra Class license"
     ],
     "correct": "At no time",
-    "explanation": "",
+    "explanation": "At no time",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -722,7 +722,7 @@ export const hamRadioQuestions = [
       "The control operator and the station licensee"
     ],
     "correct": "The control operator and the station licensee",
-    "explanation": "",
+    "explanation": "The control operator and the station licensee",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -736,7 +736,7 @@ export const hamRadioQuestions = [
       "Using a computer or other device to identify automatically"
     ],
     "correct": "Repeater operation",
-    "explanation": "",
+    "explanation": "Repeater operation",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -750,7 +750,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -764,7 +764,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Operating the station over the internet",
-    "explanation": "",
+    "explanation": "Operating the station over the internet",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -778,7 +778,7 @@ export const hamRadioQuestions = [
       "The station licensee"
     ],
     "correct": "The station licensee",
-    "explanation": "",
+    "explanation": "The station licensee",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -792,7 +792,7 @@ export const hamRadioQuestions = [
       "Only when presented with a valid warrant by an FCC official or government agent"
     ],
     "correct": "At any time upon request by an FCC representative",
-    "explanation": "",
+    "explanation": "At any time upon request by an FCC representative",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -806,7 +806,7 @@ export const hamRadioQuestions = [
       "At the end of every transmission"
     ],
     "correct": "At the end of each communication and every ten minutes during a communication",
-    "explanation": "",
+    "explanation": "At the end of each communication and every ten minutes during a communication",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -820,7 +820,7 @@ export const hamRadioQuestions = [
       "At least every 10 minutes during and at the end of a communication"
     ],
     "correct": "At least every 10 minutes during and at the end of a communication",
-    "explanation": "",
+    "explanation": "At least every 10 minutes during and at the end of a communication",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -834,7 +834,7 @@ export const hamRadioQuestions = [
       "English, French, or Spanish"
     ],
     "correct": "English",
-    "explanation": "",
+    "explanation": "English",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -848,7 +848,7 @@ export const hamRadioQuestions = [
       "Send the call sign using only a phone emission"
     ],
     "correct": "Send the call sign using a CW or phone emission",
-    "explanation": "",
+    "explanation": "Send the call sign using a CW or phone emission",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -862,7 +862,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -876,7 +876,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "The foreign station must be in a country with which the U.S. has a third party agreement",
-    "explanation": "",
+    "explanation": "The foreign station must be in a country with which the U.S. has a third party agreement",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -890,7 +890,7 @@ export const hamRadioQuestions = [
       "Temporary authorization for an unlicensed person to transmit on the amateur bands for technical experiments"
     ],
     "correct": "A message from a control operator to another amateur station control operator on behalf of another person",
-    "explanation": "",
+    "explanation": "A message from a control operator to another amateur station control operator on behalf of another person",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -904,7 +904,7 @@ export const hamRadioQuestions = [
       "Message forwarding station"
     ],
     "correct": "Repeater station",
-    "explanation": "",
+    "explanation": "Repeater station",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -918,7 +918,7 @@ export const hamRadioQuestions = [
       "Both the originating station and the repeater owner"
     ],
     "correct": "The control operator of the originating station",
-    "explanation": "",
+    "explanation": "The control operator of the originating station",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -932,7 +932,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "The club must have at least four members",
-    "explanation": "",
+    "explanation": "The club must have at least four members",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -946,7 +946,7 @@ export const hamRadioQuestions = [
       "Plus or minus 1 MHz"
     ],
     "correct": "Plus or minus 600 kHz",
-    "explanation": "",
+    "explanation": "Plus or minus 600 kHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -960,7 +960,7 @@ export const hamRadioQuestions = [
       "446.000 MHz"
     ],
     "correct": "146.520 MHz",
-    "explanation": "",
+    "explanation": "146.520 MHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -974,7 +974,7 @@ export const hamRadioQuestions = [
       "Plus or minus 1 MHz"
     ],
     "correct": "Plus or minus 5 MHz",
-    "explanation": "",
+    "explanation": "Plus or minus 5 MHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -988,7 +988,7 @@ export const hamRadioQuestions = [
       "Wait for the station to call CQ, then answer"
     ],
     "correct": "Say the station's call sign, then identify with your call sign",
-    "explanation": "",
+    "explanation": "Say the station's call sign, then identify with your call sign",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1002,7 +1002,7 @@ export const hamRadioQuestions = [
       "Transmit a signal report followed by your call sign"
     ],
     "correct": "Transmit the other station\u2019s call sign followed by your call sign",
-    "explanation": "",
+    "explanation": "Transmit the other station\u2019s call sign followed by your call sign",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1016,7 +1016,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Identify the transmitting station",
-    "explanation": "",
+    "explanation": "Identify the transmitting station",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1030,7 +1030,7 @@ export const hamRadioQuestions = [
       "The number of simultaneous transmit frequencies used by a repeater"
     ],
     "correct": "The difference between a repeater\u2019s transmit and receive frequencies",
-    "explanation": "",
+    "explanation": "The difference between a repeater\u2019s transmit and receive frequencies",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1044,7 +1044,7 @@ export const hamRadioQuestions = [
       "Calling any station"
     ],
     "correct": "Calling any station",
-    "explanation": "",
+    "explanation": "Calling any station",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1058,7 +1058,7 @@ export const hamRadioQuestions = [
       "\u201cQSY\u201d followed by your call sign"
     ],
     "correct": "The station\u2019s call sign followed by the word \u201cmonitoring\u201d",
-    "explanation": "",
+    "explanation": "The station\u2019s call sign followed by the word \u201cmonitoring\u201d",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1072,7 +1072,7 @@ export const hamRadioQuestions = [
       "A plan devised by a club to indicate frequency band usage"
     ],
     "correct": "A voluntary guideline for using different modes or activities within an amateur band",
-    "explanation": "",
+    "explanation": "A voluntary guideline for using different modes or activities within an amateur band",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1086,7 +1086,7 @@ export const hamRadioQuestions = [
       "Multiplex"
     ],
     "correct": "Simplex",
-    "explanation": "",
+    "explanation": "Simplex",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1100,7 +1100,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1114,7 +1114,7 @@ export const hamRadioQuestions = [
       "To listen on a repeater\u2019s output frequency"
     ],
     "correct": "To listen on a repeater\u2019s input frequency",
-    "explanation": "",
+    "explanation": "To listen on a repeater\u2019s input frequency",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1128,7 +1128,7 @@ export const hamRadioQuestions = [
       "CTCSS"
     ],
     "correct": "CTCSS",
-    "explanation": "",
+    "explanation": "CTCSS",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1142,7 +1142,7 @@ export const hamRadioQuestions = [
       "A system of repeaters linked by APRS"
     ],
     "correct": "A network of repeaters in which signals received by one repeater are transmitted by all the repeaters in the network",
-    "explanation": "",
+    "explanation": "A network of repeaters in which signals received by one repeater are transmitted by all the repeaters in the network",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1156,7 +1156,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1170,7 +1170,7 @@ export const hamRadioQuestions = [
       "Your transmit power is too high"
     ],
     "correct": "You are talking too loudly",
-    "explanation": "",
+    "explanation": "You are talking too loudly",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1184,7 +1184,7 @@ export const hamRadioQuestions = [
       "D-STAR"
     ],
     "correct": "DTMF",
-    "explanation": "",
+    "explanation": "DTMF",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1198,7 +1198,7 @@ export const hamRadioQuestions = [
       "Sign your call after the courtesy tone"
     ],
     "correct": "Program your radio with the group\u2019s ID or code",
-    "explanation": "",
+    "explanation": "Program your radio with the group\u2019s ID or code",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1212,7 +1212,7 @@ export const hamRadioQuestions = [
       "Use subaudible tones so both stations can share the frequency"
     ],
     "correct": "The stations should negotiate continued use of the frequency",
-    "explanation": "",
+    "explanation": "The stations should negotiate continued use of the frequency",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1226,7 +1226,7 @@ export const hamRadioQuestions = [
       "So stations with simple transmitters can access the repeater without automated offset"
     ],
     "correct": "So stations within range of each other can communicate without tying up a repeater",
-    "explanation": "",
+    "explanation": "So stations within range of each other can communicate without tying up a repeater",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1240,7 +1240,7 @@ export const hamRadioQuestions = [
       "QSB"
     ],
     "correct": "QRM",
-    "explanation": "",
+    "explanation": "QRM",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1254,7 +1254,7 @@ export const hamRadioQuestions = [
       "QRZ"
     ],
     "correct": "QSY",
-    "explanation": "",
+    "explanation": "QSY",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1268,7 +1268,7 @@ export const hamRadioQuestions = [
       "Defines the minimum signal level required for access"
     ],
     "correct": "Must match the repeater color code for access",
-    "explanation": "",
+    "explanation": "Must match the repeater color code for access",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1282,7 +1282,7 @@ export const hamRadioQuestions = [
       "Reduce interference from impulse noise"
     ],
     "correct": "Mute the receiver audio when a signal is not present",
-    "explanation": "",
+    "explanation": "Mute the receiver audio when a signal is not present",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1296,7 +1296,7 @@ export const hamRadioQuestions = [
       "FCC rules always apply"
     ],
     "correct": "FCC rules always apply",
-    "explanation": "",
+    "explanation": "FCC rules always apply",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1310,7 +1310,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Call the net to order and direct communications between stations checking in",
-    "explanation": "",
+    "explanation": "Call the net to order and direct communications between stations checking in",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1324,7 +1324,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Spell the words using a standard phonetic alphabet",
-    "explanation": "",
+    "explanation": "Spell the words using a standard phonetic alphabet",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1338,7 +1338,7 @@ export const hamRadioQuestions = [
       "An FCC part 97 amateur radio service for civil defense communications during national emergencies"
     ],
     "correct": "An FCC part 97 amateur radio service for civil defense communications during national emergencies",
-    "explanation": "",
+    "explanation": "An FCC part 97 amateur radio service for civil defense communications during national emergencies",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1352,7 +1352,7 @@ export const hamRadioQuestions = [
       "Requests to activate the net by a served agency"
     ],
     "correct": "Messages exchanged by net stations",
-    "explanation": "",
+    "explanation": "Messages exchanged by net stations",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1366,7 +1366,7 @@ export const hamRadioQuestions = [
       "A training program that certifies amateur operators for membership in the Radio Amateur Civil Emergency Service"
     ],
     "correct": "A group of licensed amateurs who have voluntarily registered their qualifications and equipment for communications duty in the public service",
-    "explanation": "",
+    "explanation": "A group of licensed amateurs who have voluntarily registered their qualifications and equipment for communications duty in the public service",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1380,7 +1380,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Unless you are reporting an emergency, transmit only when directed by the net control station",
-    "explanation": "",
+    "explanation": "Unless you are reporting an emergency, transmit only when directed by the net control station",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1394,7 +1394,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Passing messages exactly as received",
-    "explanation": "",
+    "explanation": "Passing messages exactly as received",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1408,7 +1408,7 @@ export const hamRadioQuestions = [
       "Yes, but only in situations involving the immediate safety of human life or protection of property"
     ],
     "correct": "Yes, but only in situations involving the immediate safety of human life or protection of property",
-    "explanation": "",
+    "explanation": "Yes, but only in situations involving the immediate safety of human life or protection of property",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1422,7 +1422,7 @@ export const hamRadioQuestions = [
       "Information needed to track the message"
     ],
     "correct": "Information needed to track the message",
-    "explanation": "",
+    "explanation": "Information needed to track the message",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1436,7 +1436,7 @@ export const hamRadioQuestions = [
       "A box on the message form that indicates that the message was received and/or relayed"
     ],
     "correct": "The number of words or word equivalents in the text portion of the message",
-    "explanation": "",
+    "explanation": "The number of words or word equivalents in the text portion of the message",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1450,7 +1450,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Multipath propagation cancels or reinforces signals",
-    "explanation": "",
+    "explanation": "Multipath propagation cancels or reinforces signals",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1464,7 +1464,7 @@ export const hamRadioQuestions = [
       "Polarization rotation"
     ],
     "correct": "Absorption",
-    "explanation": "",
+    "explanation": "Absorption",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1478,7 +1478,7 @@ export const hamRadioQuestions = [
       "Vertical"
     ],
     "correct": "Horizontal",
-    "explanation": "",
+    "explanation": "Horizontal",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1492,7 +1492,7 @@ export const hamRadioQuestions = [
       "Nothing significant will happen"
     ],
     "correct": "Received signal strength is reduced",
-    "explanation": "",
+    "explanation": "Received signal strength is reduced",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1506,7 +1506,7 @@ export const hamRadioQuestions = [
       "Increase the antenna SWR"
     ],
     "correct": "Try to find a path that reflects signals to the repeater",
-    "explanation": "",
+    "explanation": "Try to find a path that reflects signals to the repeater",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1520,7 +1520,7 @@ export const hamRadioQuestions = [
       "Local vs long-distance communications"
     ],
     "correct": "Rapid flutter on mobile signals due to multipath propagation",
-    "explanation": "",
+    "explanation": "Rapid flutter on mobile signals due to multipath propagation",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1534,7 +1534,7 @@ export const hamRadioQuestions = [
       "Colder temperatures"
     ],
     "correct": "Precipitation",
-    "explanation": "",
+    "explanation": "Precipitation",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1548,7 +1548,7 @@ export const hamRadioQuestions = [
       "Random combining of signals arriving via different paths"
     ],
     "correct": "Random combining of signals arriving via different paths",
-    "explanation": "",
+    "explanation": "Random combining of signals arriving via different paths",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1562,7 +1562,7 @@ export const hamRadioQuestions = [
       "Both the transmitting and receiving antennas must be of the same polarization"
     ],
     "correct": "Either vertically or horizontally polarized antennas may be used for transmission or reception",
-    "explanation": "",
+    "explanation": "Either vertically or horizontally polarized antennas may be used for transmission or reception",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1576,7 +1576,7 @@ export const hamRadioQuestions = [
       "Error rates are likely to increase"
     ],
     "correct": "Error rates are likely to increase",
-    "explanation": "",
+    "explanation": "Error rates are likely to increase",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1590,7 +1590,7 @@ export const hamRadioQuestions = [
       "The mesosphere"
     ],
     "correct": "The ionosphere",
-    "explanation": "",
+    "explanation": "The ionosphere",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1604,7 +1604,7 @@ export const hamRadioQuestions = [
       "Range increase"
     ],
     "correct": "There is little effect",
-    "explanation": "",
+    "explanation": "There is little effect",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1618,7 +1618,7 @@ export const hamRadioQuestions = [
       "They are at right angles"
     ],
     "correct": "They are at right angles",
-    "explanation": "",
+    "explanation": "They are at right angles",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1632,7 +1632,7 @@ export const hamRadioQuestions = [
       "The ratio of the velocity to the wavelength"
     ],
     "correct": "The orientation of the electric field",
-    "explanation": "",
+    "explanation": "The orientation of the electric field",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1646,7 +1646,7 @@ export const hamRadioQuestions = [
       "Ionizing and non-ionizing radiation"
     ],
     "correct": "Electric and magnetic fields",
-    "explanation": "",
+    "explanation": "Electric and magnetic fields",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1660,7 +1660,7 @@ export const hamRadioQuestions = [
       "Speed that increases as the frequency increases"
     ],
     "correct": "Speed of light",
-    "explanation": "",
+    "explanation": "Speed of light",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1674,7 +1674,7 @@ export const hamRadioQuestions = [
       "Wavelength and frequency increase as path length increases"
     ],
     "correct": "Wavelength gets shorter as frequency increases",
-    "explanation": "",
+    "explanation": "Wavelength gets shorter as frequency increases",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1688,7 +1688,7 @@ export const hamRadioQuestions = [
       "Wavelength in meters equals 300 divided by frequency in megahertz"
     ],
     "correct": "Wavelength in meters equals 300 divided by frequency in megahertz",
-    "explanation": "",
+    "explanation": "Wavelength in meters equals 300 divided by frequency in megahertz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1702,7 +1702,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "The approximate wavelength in meters",
-    "explanation": "",
+    "explanation": "The approximate wavelength in meters",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1716,7 +1716,7 @@ export const hamRadioQuestions = [
       "300 MHz to 3000 MHz"
     ],
     "correct": "30 MHz to 300 MHz",
-    "explanation": "",
+    "explanation": "30 MHz to 300 MHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1730,7 +1730,7 @@ export const hamRadioQuestions = [
       "300 to 3000 MHz"
     ],
     "correct": "300 to 3000 MHz",
-    "explanation": "",
+    "explanation": "300 to 3000 MHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1744,7 +1744,7 @@ export const hamRadioQuestions = [
       "300 to 3000 kHz"
     ],
     "correct": "3 to 30 MHz",
-    "explanation": "",
+    "explanation": "3 to 30 MHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1758,7 +1758,7 @@ export const hamRadioQuestions = [
       "150,000 miles per hour"
     ],
     "correct": "300,000,000 meters per second",
-    "explanation": "",
+    "explanation": "300,000,000 meters per second",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1772,7 +1772,7 @@ export const hamRadioQuestions = [
       "UHF signals are absorbed by the ionospheric D region"
     ],
     "correct": "UHF signals are usually not propagated by the ionosphere",
-    "explanation": "",
+    "explanation": "UHF signals are usually not propagated by the ionosphere",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1786,7 +1786,7 @@ export const hamRadioQuestions = [
       "There is less atmospheric interference (static) on HF"
     ],
     "correct": "Long-distance ionospheric propagation is far more common on HF",
-    "explanation": "",
+    "explanation": "Long-distance ionospheric propagation is far more common on HF",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1800,7 +1800,7 @@ export const hamRadioQuestions = [
       "They are generally strongest when your antenna is aimed west"
     ],
     "correct": "They are distorted and signal strength varies considerably",
-    "explanation": "",
+    "explanation": "They are distorted and signal strength varies considerably",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1814,7 +1814,7 @@ export const hamRadioQuestions = [
       "Gray-line propagation"
     ],
     "correct": "Sporadic E",
-    "explanation": "",
+    "explanation": "Sporadic E",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1828,7 +1828,7 @@ export const hamRadioQuestions = [
       "Doppler shift"
     ],
     "correct": "Knife-edge diffraction",
-    "explanation": "",
+    "explanation": "Knife-edge diffraction",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1842,7 +1842,7 @@ export const hamRadioQuestions = [
       "Faraday rotation"
     ],
     "correct": "Tropospheric ducting",
-    "explanation": "",
+    "explanation": "Tropospheric ducting",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1856,7 +1856,7 @@ export const hamRadioQuestions = [
       "70 centimeters"
     ],
     "correct": "6 meters",
-    "explanation": "",
+    "explanation": "6 meters",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1870,7 +1870,7 @@ export const hamRadioQuestions = [
       "Temperature inversions in the atmosphere"
     ],
     "correct": "Temperature inversions in the atmosphere",
-    "explanation": "",
+    "explanation": "Temperature inversions in the atmosphere",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1884,7 +1884,7 @@ export const hamRadioQuestions = [
       "From shortly after sunset to dawn during periods of low sunspot activity"
     ],
     "correct": "From dawn to shortly after sunset during periods of high sunspot activity",
-    "explanation": "",
+    "explanation": "From dawn to shortly after sunset during periods of high sunspot activity",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1898,7 +1898,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "6 and 10 meters",
-    "explanation": "",
+    "explanation": "6 and 10 meters",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1912,7 +1912,7 @@ export const hamRadioQuestions = [
       "Radio waves are blocked by dust particles"
     ],
     "correct": "The atmosphere refracts radio waves slightly",
-    "explanation": "",
+    "explanation": "The atmosphere refracts radio waves slightly",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1926,7 +1926,7 @@ export const hamRadioQuestions = [
       "13.8 volts at 12 amperes"
     ],
     "correct": "13.8 volts at 12 amperes",
-    "explanation": "",
+    "explanation": "13.8 volts at 12 amperes",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1940,7 +1940,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "The frequency and power level at which the measurements will be made",
-    "explanation": "",
+    "explanation": "The frequency and power level at which the measurements will be made",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1954,7 +1954,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "To minimize voltage drop when transmitting",
-    "explanation": "",
+    "explanation": "To minimize voltage drop when transmitting",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1968,7 +1968,7 @@ export const hamRadioQuestions = [
       "To a computer connected to the FT8converter.com website"
     ],
     "correct": "To the audio input and output of a computer running WSJT-X software",
-    "explanation": "",
+    "explanation": "To the audio input and output of a computer running WSJT-X software",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1982,7 +1982,7 @@ export const hamRadioQuestions = [
       "In the power supply cable, as close as possible to the radio"
     ],
     "correct": "In the feed line, between the transmitter and antenna",
-    "explanation": "",
+    "explanation": "In the feed line, between the transmitter and antenna",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -1996,7 +1996,7 @@ export const hamRadioQuestions = [
       "NMEA GPS location and DC power"
     ],
     "correct": "Receive audio, transmit audio, and transmitter keying",
-    "explanation": "",
+    "explanation": "Receive audio, transmit audio, and transmitter keying",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2010,7 +2010,7 @@ export const hamRadioQuestions = [
       "Computer \u201cline out\u201d to transceiver speaker connector"
     ],
     "correct": "Computer \u201cline in\u201d to transceiver speaker connector",
-    "explanation": "",
+    "explanation": "Computer \u201cline in\u201d to transceiver speaker connector",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2024,7 +2024,7 @@ export const hamRadioQuestions = [
       "Flat copper strap"
     ],
     "correct": "Flat copper strap",
-    "explanation": "",
+    "explanation": "Flat copper strap",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2038,7 +2038,7 @@ export const hamRadioQuestions = [
       "Multiply the square of the current rating of the battery by the input resistance of the equipment"
     ],
     "correct": "Divide the battery ampere-hour rating by the average current draw of the equipment",
-    "explanation": "",
+    "explanation": "Divide the battery ampere-hour rating by the average current draw of the equipment",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2052,7 +2052,7 @@ export const hamRadioQuestions = [
       "High-speed digital communications for meteor scatter"
     ],
     "correct": "Communication using digital voice or data systems via the internet",
-    "explanation": "",
+    "explanation": "Communication using digital voice or data systems via the internet",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2066,7 +2066,7 @@ export const hamRadioQuestions = [
       "Through the transceiver\u2019s mounting bracket"
     ],
     "correct": "At the 12 volt battery chassis ground",
-    "explanation": "",
+    "explanation": "At the 12 volt battery chassis ground",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2080,7 +2080,7 @@ export const hamRadioQuestions = [
       "An interlock to prevent unauthorized use of a radio"
     ],
     "correct": "A device that assists in manual sending of Morse code",
-    "explanation": "",
+    "explanation": "A device that assists in manual sending of Morse code",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2094,7 +2094,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Distorted transmitted audio",
-    "explanation": "",
+    "explanation": "Distorted transmitted audio",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2108,7 +2108,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "The keypad or VFO knob",
-    "explanation": "",
+    "explanation": "The keypad or VFO knob",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2122,7 +2122,7 @@ export const hamRadioQuestions = [
       "Enable squelch enhancement"
     ],
     "correct": "Set the squelch threshold so that receiver output audio is on all the time",
-    "explanation": "",
+    "explanation": "Set the squelch threshold so that receiver output audio is on all the time",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2136,7 +2136,7 @@ export const hamRadioQuestions = [
       "Use the scan mode to select the desired frequency"
     ],
     "correct": "Store it in a memory channel",
-    "explanation": "",
+    "explanation": "Store it in a memory channel",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2150,7 +2150,7 @@ export const hamRadioQuestions = [
       "Checks for messages left on a digital bulletin board"
     ],
     "correct": "Tunes through a range of frequencies to check for activity",
-    "explanation": "",
+    "explanation": "Tunes through a range of frequencies to check for activity",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2164,7 +2164,7 @@ export const hamRadioQuestions = [
       "The RIT or Clarifier"
     ],
     "correct": "The RIT or Clarifier",
-    "explanation": "",
+    "explanation": "The RIT or Clarifier",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2178,7 +2178,7 @@ export const hamRadioQuestions = [
       "The DMR software version"
     ],
     "correct": "Access information for repeaters and talkgroups",
-    "explanation": "",
+    "explanation": "Access information for repeaters and talkgroups",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2192,7 +2192,7 @@ export const hamRadioQuestions = [
       "Increases the amount of offset between receive and transmit frequencies"
     ],
     "correct": "Permits noise or interference reduction by selecting a bandwidth matching the mode",
-    "explanation": "",
+    "explanation": "Permits noise or interference reduction by selecting a bandwidth matching the mode",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2206,7 +2206,7 @@ export const hamRadioQuestions = [
       "By activating automatic identification"
     ],
     "correct": "By entering the group\u2019s identification code",
-    "explanation": "",
+    "explanation": "By entering the group\u2019s identification code",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2220,7 +2220,7 @@ export const hamRadioQuestions = [
       "5000 Hz"
     ],
     "correct": "2400 Hz",
-    "explanation": "",
+    "explanation": "2400 Hz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2234,7 +2234,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Your call sign",
-    "explanation": "",
+    "explanation": "Your call sign",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2248,7 +2248,7 @@ export const hamRadioQuestions = [
       "Distortion of the signal\u2019s audio"
     ],
     "correct": "Distortion of the signal\u2019s audio",
-    "explanation": "",
+    "explanation": "Distortion of the signal\u2019s audio",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2262,7 +2262,7 @@ export const hamRadioQuestions = [
       "Amperes"
     ],
     "correct": "Amperes",
-    "explanation": "",
+    "explanation": "Amperes",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2276,7 +2276,7 @@ export const hamRadioQuestions = [
       "Amperes"
     ],
     "correct": "Watts",
-    "explanation": "",
+    "explanation": "Watts",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2290,7 +2290,7 @@ export const hamRadioQuestions = [
       "Current"
     ],
     "correct": "Current",
-    "explanation": "",
+    "explanation": "Current",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2304,7 +2304,7 @@ export const hamRadioQuestions = [
       "Coulombs"
     ],
     "correct": "Ohms",
-    "explanation": "",
+    "explanation": "Ohms",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2318,7 +2318,7 @@ export const hamRadioQuestions = [
       "Inductance"
     ],
     "correct": "Voltage",
-    "explanation": "",
+    "explanation": "Voltage",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2332,7 +2332,7 @@ export const hamRadioQuestions = [
       "Tesla"
     ],
     "correct": "Hertz",
-    "explanation": "",
+    "explanation": "Hertz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2346,7 +2346,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "They have many free electrons",
-    "explanation": "",
+    "explanation": "They have many free electrons",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2360,7 +2360,7 @@ export const hamRadioQuestions = [
       "Mercury"
     ],
     "correct": "Glass",
-    "explanation": "",
+    "explanation": "Glass",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2374,7 +2374,7 @@ export const hamRadioQuestions = [
       "All these answers are correct"
     ],
     "correct": "Current that alternates between positive and negative directions",
-    "explanation": "",
+    "explanation": "Current that alternates between positive and negative directions",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2388,7 +2388,7 @@ export const hamRadioQuestions = [
       "Voltage"
     ],
     "correct": "Power",
-    "explanation": "",
+    "explanation": "Power",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2402,7 +2402,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2416,7 +2416,7 @@ export const hamRadioQuestions = [
       "Frequency"
     ],
     "correct": "Frequency",
-    "explanation": "",
+    "explanation": "Frequency",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2430,7 +2430,7 @@ export const hamRadioQuestions = [
       "15,000 milliamperes"
     ],
     "correct": "1500 milliamperes",
-    "explanation": "",
+    "explanation": "1500 milliamperes",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2444,7 +2444,7 @@ export const hamRadioQuestions = [
       "150 kHz"
     ],
     "correct": "1500 kHz",
-    "explanation": "",
+    "explanation": "1500 kHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2458,7 +2458,7 @@ export const hamRadioQuestions = [
       "One million volts"
     ],
     "correct": "One thousand volts",
-    "explanation": "",
+    "explanation": "One thousand volts",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2472,7 +2472,7 @@ export const hamRadioQuestions = [
       "One one-thousandth of a volt"
     ],
     "correct": "One one-millionth of a volt",
-    "explanation": "",
+    "explanation": "One one-millionth of a volt",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2486,7 +2486,7 @@ export const hamRadioQuestions = [
       "50 watts"
     ],
     "correct": "0.5 watts",
-    "explanation": "",
+    "explanation": "0.5 watts",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2500,7 +2500,7 @@ export const hamRadioQuestions = [
       "3 amperes"
     ],
     "correct": "3 amperes",
-    "explanation": "",
+    "explanation": "3 amperes",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2514,7 +2514,7 @@ export const hamRadioQuestions = [
       "3,525,000 kHz"
     ],
     "correct": "3525 kHz",
-    "explanation": "",
+    "explanation": "3525 kHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2528,7 +2528,7 @@ export const hamRadioQuestions = [
       "1,000,000,000 microfarads"
     ],
     "correct": "1 microfarad",
-    "explanation": "",
+    "explanation": "1 microfarad",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2542,7 +2542,7 @@ export const hamRadioQuestions = [
       "10 dB"
     ],
     "correct": "3 dB",
-    "explanation": "",
+    "explanation": "3 dB",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2556,7 +2556,7 @@ export const hamRadioQuestions = [
       "-9 dB"
     ],
     "correct": "-6 dB",
-    "explanation": "",
+    "explanation": "-6 dB",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2570,7 +2570,7 @@ export const hamRadioQuestions = [
       "28 dB"
     ],
     "correct": "10 dB",
-    "explanation": "",
+    "explanation": "10 dB",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2584,7 +2584,7 @@ export const hamRadioQuestions = [
       "28.400 MHz"
     ],
     "correct": "28.400 MHz",
-    "explanation": "",
+    "explanation": "28.400 MHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2598,7 +2598,7 @@ export const hamRadioQuestions = [
       "2425 GHz"
     ],
     "correct": "2.425 GHz",
-    "explanation": "",
+    "explanation": "2.425 GHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2612,7 +2612,7 @@ export const hamRadioQuestions = [
       "Capacitance"
     ],
     "correct": "Capacitance",
-    "explanation": "",
+    "explanation": "Capacitance",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2626,7 +2626,7 @@ export const hamRadioQuestions = [
       "The henry"
     ],
     "correct": "The farad",
-    "explanation": "",
+    "explanation": "The farad",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2640,7 +2640,7 @@ export const hamRadioQuestions = [
       "Inductance"
     ],
     "correct": "Inductance",
-    "explanation": "",
+    "explanation": "Inductance",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2654,7 +2654,7 @@ export const hamRadioQuestions = [
       "The ohm"
     ],
     "correct": "The henry",
-    "explanation": "",
+    "explanation": "The henry",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2668,7 +2668,7 @@ export const hamRadioQuestions = [
       "The ohm"
     ],
     "correct": "The ohm",
-    "explanation": "",
+    "explanation": "The ohm",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2682,7 +2682,7 @@ export const hamRadioQuestions = [
       "Reflective force in antenna transmission lines"
     ],
     "correct": "Radio frequency signals of all types",
-    "explanation": "",
+    "explanation": "Radio frequency signals of all types",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2696,7 +2696,7 @@ export const hamRadioQuestions = [
       "MHz"
     ],
     "correct": "MHz",
-    "explanation": "",
+    "explanation": "MHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2710,7 +2710,7 @@ export const hamRadioQuestions = [
       "P = I + E"
     ],
     "correct": "P = I \u00d7 E",
-    "explanation": "",
+    "explanation": "P = I \u00d7 E",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2724,7 +2724,7 @@ export const hamRadioQuestions = [
       "3.8 watts"
     ],
     "correct": "138 watts",
-    "explanation": "",
+    "explanation": "138 watts",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2738,7 +2738,7 @@ export const hamRadioQuestions = [
       "0.208 watts"
     ],
     "correct": "30 watts",
-    "explanation": "",
+    "explanation": "30 watts",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2752,7 +2752,7 @@ export const hamRadioQuestions = [
       "132 amperes"
     ],
     "correct": "10 amperes",
-    "explanation": "",
+    "explanation": "10 amperes",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2766,7 +2766,7 @@ export const hamRadioQuestions = [
       "The power handling capability of a component"
     ],
     "correct": "The opposition to AC current flow",
-    "explanation": "",
+    "explanation": "The opposition to AC current flow",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2780,7 +2780,7 @@ export const hamRadioQuestions = [
       "kHz"
     ],
     "correct": "kHz",
-    "explanation": "",
+    "explanation": "kHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2794,7 +2794,7 @@ export const hamRadioQuestions = [
       "I = E - R"
     ],
     "correct": "I = E / R",
-    "explanation": "",
+    "explanation": "I = E / R",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2808,7 +2808,7 @@ export const hamRadioQuestions = [
       "E = I - R"
     ],
     "correct": "E = I x R",
-    "explanation": "",
+    "explanation": "E = I x R",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2822,7 +2822,7 @@ export const hamRadioQuestions = [
       "R = E - I"
     ],
     "correct": "R = E / I",
-    "explanation": "",
+    "explanation": "R = E / I",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2836,7 +2836,7 @@ export const hamRadioQuestions = [
       "270 ohms"
     ],
     "correct": "30 ohms",
-    "explanation": "",
+    "explanation": "30 ohms",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2850,7 +2850,7 @@ export const hamRadioQuestions = [
       "13.5 ohms"
     ],
     "correct": "8 ohms",
-    "explanation": "",
+    "explanation": "8 ohms",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2864,7 +2864,7 @@ export const hamRadioQuestions = [
       "8 ohms"
     ],
     "correct": "3 ohms",
-    "explanation": "",
+    "explanation": "3 ohms",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2878,7 +2878,7 @@ export const hamRadioQuestions = [
       "1.5 amperes"
     ],
     "correct": "1.5 amperes",
-    "explanation": "",
+    "explanation": "1.5 amperes",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2892,7 +2892,7 @@ export const hamRadioQuestions = [
       "100 amperes"
     ],
     "correct": "2 amperes",
-    "explanation": "",
+    "explanation": "2 amperes",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2906,7 +2906,7 @@ export const hamRadioQuestions = [
       "216 amperes"
     ],
     "correct": "10 amperes",
-    "explanation": "",
+    "explanation": "10 amperes",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2920,7 +2920,7 @@ export const hamRadioQuestions = [
       "1.5 volts"
     ],
     "correct": "1 volt",
-    "explanation": "",
+    "explanation": "1 volt",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2934,7 +2934,7 @@ export const hamRadioQuestions = [
       "9 volts"
     ],
     "correct": "10 volts",
-    "explanation": "",
+    "explanation": "10 volts",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2948,7 +2948,7 @@ export const hamRadioQuestions = [
       "20 volts"
     ],
     "correct": "20 volts",
-    "explanation": "",
+    "explanation": "20 volts",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2962,7 +2962,7 @@ export const hamRadioQuestions = [
       "Branch"
     ],
     "correct": "Series",
-    "explanation": "",
+    "explanation": "Series",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2976,7 +2976,7 @@ export const hamRadioQuestions = [
       "Branch"
     ],
     "correct": "Parallel",
-    "explanation": "",
+    "explanation": "Parallel",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -2990,7 +2990,7 @@ export const hamRadioQuestions = [
       "Transformer"
     ],
     "correct": "Resistor",
-    "explanation": "",
+    "explanation": "Resistor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3004,7 +3004,7 @@ export const hamRadioQuestions = [
       "Transformer"
     ],
     "correct": "Potentiometer",
-    "explanation": "",
+    "explanation": "Potentiometer",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3018,7 +3018,7 @@ export const hamRadioQuestions = [
       "Field strength"
     ],
     "correct": "Resistance",
-    "explanation": "",
+    "explanation": "Resistance",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3032,7 +3032,7 @@ export const hamRadioQuestions = [
       "Diode"
     ],
     "correct": "Capacitor",
-    "explanation": "",
+    "explanation": "Capacitor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3046,7 +3046,7 @@ export const hamRadioQuestions = [
       "Capacitor"
     ],
     "correct": "Capacitor",
-    "explanation": "",
+    "explanation": "Capacitor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3060,7 +3060,7 @@ export const hamRadioQuestions = [
       "Diode"
     ],
     "correct": "Inductor",
-    "explanation": "",
+    "explanation": "Inductor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3074,7 +3074,7 @@ export const hamRadioQuestions = [
       "Inductor"
     ],
     "correct": "Inductor",
-    "explanation": "",
+    "explanation": "Inductor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3088,7 +3088,7 @@ export const hamRadioQuestions = [
       "Two circuits are each switched between one of two other circuits"
     ],
     "correct": "A single circuit is switched between one of two other circuits",
-    "explanation": "",
+    "explanation": "A single circuit is switched between one of two other circuits",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3102,7 +3102,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Fuse",
-    "explanation": "",
+    "explanation": "Fuse",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3116,7 +3116,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3130,7 +3130,7 @@ export const hamRadioQuestions = [
       "Lithium-ion"
     ],
     "correct": "Carbon-zinc",
-    "explanation": "",
+    "explanation": "Carbon-zinc",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3144,7 +3144,7 @@ export const hamRadioQuestions = [
       "Double-pole double-throw"
     ],
     "correct": "Single-pole single-throw",
-    "explanation": "",
+    "explanation": "Single-pole single-throw",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3158,7 +3158,7 @@ export const hamRadioQuestions = [
       "It has no impact on the voltage delivered to the load"
     ],
     "correct": "It is lower in some diode types than in others",
-    "explanation": "",
+    "explanation": "It is lower in some diode types than in others",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3172,7 +3172,7 @@ export const hamRadioQuestions = [
       "Driven element"
     ],
     "correct": "Diode",
-    "explanation": "",
+    "explanation": "Diode",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3186,7 +3186,7 @@ export const hamRadioQuestions = [
       "Thermistor"
     ],
     "correct": "Transistor",
-    "explanation": "",
+    "explanation": "Transistor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3200,7 +3200,7 @@ export const hamRadioQuestions = [
       "Pentagrid converter"
     ],
     "correct": "Transistor",
-    "explanation": "",
+    "explanation": "Transistor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3214,7 +3214,7 @@ export const hamRadioQuestions = [
       "Bipolar junction"
     ],
     "correct": "Field-effect",
-    "explanation": "",
+    "explanation": "Field-effect",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3228,7 +3228,7 @@ export const hamRadioQuestions = [
       "With the letter K"
     ],
     "correct": "With a stripe",
-    "explanation": "",
+    "explanation": "With a stripe",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3242,7 +3242,7 @@ export const hamRadioQuestions = [
       "Inductively-coupled RF signal"
     ],
     "correct": "Forward current",
-    "explanation": "",
+    "explanation": "Forward current",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3256,7 +3256,7 @@ export const hamRadioQuestions = [
       "Field Effect Transistor"
     ],
     "correct": "Field Effect Transistor",
-    "explanation": "",
+    "explanation": "Field Effect Transistor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3270,7 +3270,7 @@ export const hamRadioQuestions = [
       "Gate and base"
     ],
     "correct": "Anode and cathode",
-    "explanation": "",
+    "explanation": "Anode and cathode",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3284,7 +3284,7 @@ export const hamRadioQuestions = [
       "Resistor"
     ],
     "correct": "Transistor",
-    "explanation": "",
+    "explanation": "Transistor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3298,7 +3298,7 @@ export const hamRadioQuestions = [
       "On resistance"
     ],
     "correct": "Gain",
-    "explanation": "",
+    "explanation": "Gain",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3312,7 +3312,7 @@ export const hamRadioQuestions = [
       "Pole one, pole two, output"
     ],
     "correct": "Emitter, base, collector",
-    "explanation": "",
+    "explanation": "Emitter, base, collector",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3326,7 +3326,7 @@ export const hamRadioQuestions = [
       "Flow chart"
     ],
     "correct": "Schematic",
-    "explanation": "",
+    "explanation": "Schematic",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3340,7 +3340,7 @@ export const hamRadioQuestions = [
       "Connector"
     ],
     "correct": "Resistor",
-    "explanation": "",
+    "explanation": "Resistor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3354,7 +3354,7 @@ export const hamRadioQuestions = [
       "Connector"
     ],
     "correct": "Transistor",
-    "explanation": "",
+    "explanation": "Transistor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3368,7 +3368,7 @@ export const hamRadioQuestions = [
       "Ground symbol"
     ],
     "correct": "Lamp",
-    "explanation": "",
+    "explanation": "Lamp",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3382,7 +3382,7 @@ export const hamRadioQuestions = [
       "Battery"
     ],
     "correct": "Battery",
-    "explanation": "",
+    "explanation": "Battery",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3396,7 +3396,7 @@ export const hamRadioQuestions = [
       "Transistor"
     ],
     "correct": "Capacitor",
-    "explanation": "",
+    "explanation": "Capacitor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3410,7 +3410,7 @@ export const hamRadioQuestions = [
       "Light emitting diode"
     ],
     "correct": "Light emitting diode",
-    "explanation": "",
+    "explanation": "Light emitting diode",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3424,7 +3424,7 @@ export const hamRadioQuestions = [
       "Variable transformer"
     ],
     "correct": "Variable resistor",
-    "explanation": "",
+    "explanation": "Variable resistor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3438,7 +3438,7 @@ export const hamRadioQuestions = [
       "Transformer"
     ],
     "correct": "Transformer",
-    "explanation": "",
+    "explanation": "Transformer",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3452,7 +3452,7 @@ export const hamRadioQuestions = [
       "Variable inductor"
     ],
     "correct": "Variable inductor",
-    "explanation": "",
+    "explanation": "Variable inductor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3466,7 +3466,7 @@ export const hamRadioQuestions = [
       "Ground"
     ],
     "correct": "Antenna",
-    "explanation": "",
+    "explanation": "Antenna",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3480,7 +3480,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Component connections",
-    "explanation": "",
+    "explanation": "Component connections",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3494,7 +3494,7 @@ export const hamRadioQuestions = [
       "Reflector"
     ],
     "correct": "Rectifier",
-    "explanation": "",
+    "explanation": "Rectifier",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3508,7 +3508,7 @@ export const hamRadioQuestions = [
       "A pass transistor"
     ],
     "correct": "An electrically-controlled switch",
-    "explanation": "",
+    "explanation": "An electrically-controlled switch",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3522,7 +3522,7 @@ export const hamRadioQuestions = [
       "To couple the wire to other signals"
     ],
     "correct": "To prevent coupling of unwanted signals to or from the wire",
-    "explanation": "",
+    "explanation": "To prevent coupling of unwanted signals to or from the wire",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3536,7 +3536,7 @@ export const hamRadioQuestions = [
       "Relay"
     ],
     "correct": "Meter",
-    "explanation": "",
+    "explanation": "Meter",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3550,7 +3550,7 @@ export const hamRadioQuestions = [
       "Phase inverter"
     ],
     "correct": "Regulator",
-    "explanation": "",
+    "explanation": "Regulator",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3564,7 +3564,7 @@ export const hamRadioQuestions = [
       "Diode"
     ],
     "correct": "Transformer",
-    "explanation": "",
+    "explanation": "Transformer",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3578,7 +3578,7 @@ export const hamRadioQuestions = [
       "Bipolar transistor"
     ],
     "correct": "LED",
-    "explanation": "",
+    "explanation": "LED",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3592,7 +3592,7 @@ export const hamRadioQuestions = [
       "Capacitor"
     ],
     "correct": "Capacitor",
-    "explanation": "",
+    "explanation": "Capacitor",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3606,7 +3606,7 @@ export const hamRadioQuestions = [
       "Transformer"
     ],
     "correct": "Integrated circuit",
-    "explanation": "",
+    "explanation": "Integrated circuit",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3620,7 +3620,7 @@ export const hamRadioQuestions = [
       "Convert electrical energy into radio waves"
     ],
     "correct": "Control the flow of current",
-    "explanation": "",
+    "explanation": "Control the flow of current",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3634,7 +3634,7 @@ export const hamRadioQuestions = [
       "A circuit designed to provide high-fidelity audio"
     ],
     "correct": "An inductor and a capacitor in series or parallel",
-    "explanation": "",
+    "explanation": "An inductor and a capacitor in series or parallel",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3648,7 +3648,7 @@ export const hamRadioQuestions = [
       "Total Harmonic Distortion"
     ],
     "correct": "Sensitivity",
-    "explanation": "",
+    "explanation": "Sensitivity",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3662,7 +3662,7 @@ export const hamRadioQuestions = [
       "A device for converting receiver and transmitter frequencies to another band"
     ],
     "correct": "A device that combines a receiver and transmitter",
-    "explanation": "",
+    "explanation": "A device that combines a receiver and transmitter",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3676,7 +3676,7 @@ export const hamRadioQuestions = [
       "Amplifier"
     ],
     "correct": "Mixer",
-    "explanation": "",
+    "explanation": "Mixer",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3690,7 +3690,7 @@ export const hamRadioQuestions = [
       "Harmonic distortion"
     ],
     "correct": "Selectivity",
-    "explanation": "",
+    "explanation": "Selectivity",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3704,7 +3704,7 @@ export const hamRadioQuestions = [
       "Oscillator"
     ],
     "correct": "Oscillator",
-    "explanation": "",
+    "explanation": "Oscillator",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3718,7 +3718,7 @@ export const hamRadioQuestions = [
       "Phase converter"
     ],
     "correct": "Transverter",
-    "explanation": "",
+    "explanation": "Transverter",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3732,7 +3732,7 @@ export const hamRadioQuestions = [
       "Input for a preamplifier tuning tone"
     ],
     "correct": "Switches transceiver from receive to transmit when grounded",
-    "explanation": "",
+    "explanation": "Switches transceiver from receive to transmit when grounded",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3746,7 +3746,7 @@ export const hamRadioQuestions = [
       "Low-pass filtering"
     ],
     "correct": "Modulation",
-    "explanation": "",
+    "explanation": "Modulation",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3760,7 +3760,7 @@ export const hamRadioQuestions = [
       "Reduce the received signal noise"
     ],
     "correct": "Set the amplifier for proper operation in the selected mode",
-    "explanation": "",
+    "explanation": "Set the amplifier for proper operation in the selected mode",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3774,7 +3774,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "An RF power amplifier",
-    "explanation": "",
+    "explanation": "An RF power amplifier",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3788,7 +3788,7 @@ export const hamRadioQuestions = [
       "At the output of the receiver audio amplifier"
     ],
     "correct": "Between the antenna and receiver",
-    "explanation": "",
+    "explanation": "Between the antenna and receiver",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3802,7 +3802,7 @@ export const hamRadioQuestions = [
       "Talk farther away from the microphone"
     ],
     "correct": "Talk farther away from the microphone",
-    "explanation": "",
+    "explanation": "Talk farther away from the microphone",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3816,7 +3816,7 @@ export const hamRadioQuestions = [
       "The deviation of an FM transmitter is set too low"
     ],
     "correct": "The receiver is unable to reject strong signals outside the AM or FM band",
-    "explanation": "",
+    "explanation": "The receiver is unable to reject strong signals outside the AM or FM band",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3830,7 +3830,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3844,7 +3844,7 @@ export const hamRadioQuestions = [
       "Ferrite choke"
     ],
     "correct": "Ferrite choke",
-    "explanation": "",
+    "explanation": "Ferrite choke",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3858,7 +3858,7 @@ export const hamRadioQuestions = [
       "Switch the transmitter to a narrow-band mode"
     ],
     "correct": "Block the amateur signal with a filter at the antenna input of the affected receiver",
-    "explanation": "",
+    "explanation": "Block the amateur signal with a filter at the antenna input of the affected receiver",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3872,7 +3872,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Make sure that your station is functioning properly and that it does not cause interference to your own radio or television when it is tuned to the same channel",
-    "explanation": "",
+    "explanation": "Make sure that your station is functioning properly and that it does not cause interference to your own radio or television when it is tuned to the same channel",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3886,7 +3886,7 @@ export const hamRadioQuestions = [
       "Installing a band-reject filter"
     ],
     "correct": "Installing a band-reject filter",
-    "explanation": "",
+    "explanation": "Installing a band-reject filter",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3900,7 +3900,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3914,7 +3914,7 @@ export const hamRadioQuestions = [
       "Be sure all TV feed line coaxial connectors are installed properly"
     ],
     "correct": "Be sure all TV feed line coaxial connectors are installed properly",
-    "explanation": "",
+    "explanation": "Be sure all TV feed line coaxial connectors are installed properly",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3928,7 +3928,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3942,7 +3942,7 @@ export const hamRadioQuestions = [
       "Frequent blowing of power supply fuses"
     ],
     "correct": "Reports of garbled, distorted, or unintelligible voice transmissions",
-    "explanation": "",
+    "explanation": "Reports of garbled, distorted, or unintelligible voice transmissions",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3956,7 +3956,7 @@ export const hamRadioQuestions = [
       "To improve the signal-to-noise ratio of a receiver"
     ],
     "correct": "To prevent transmitting signals over the air when making tests",
-    "explanation": "",
+    "explanation": "To prevent transmitting signals over the air when making tests",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3970,7 +3970,7 @@ export const hamRadioQuestions = [
       "A frequency counter"
     ],
     "correct": "An antenna analyzer",
-    "explanation": "",
+    "explanation": "An antenna analyzer",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3984,7 +3984,7 @@ export const hamRadioQuestions = [
       "A 50-ohm reactance used to terminate a transmission line"
     ],
     "correct": "A non-inductive resistor mounted on a heat sink",
-    "explanation": "",
+    "explanation": "A non-inductive resistor mounted on a heat sink",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -3998,7 +3998,7 @@ export const hamRadioQuestions = [
       "Full Scale"
     ],
     "correct": "1:1",
-    "explanation": "",
+    "explanation": "1:1",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4012,7 +4012,7 @@ export const hamRadioQuestions = [
       "To lower the SWR on the transmission line"
     ],
     "correct": "To protect the output amplifier transistors",
-    "explanation": "",
+    "explanation": "To protect the output amplifier transistors",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4026,7 +4026,7 @@ export const hamRadioQuestions = [
       "Impedance mismatch"
     ],
     "correct": "Impedance mismatch",
-    "explanation": "",
+    "explanation": "Impedance mismatch",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4040,7 +4040,7 @@ export const hamRadioQuestions = [
       "It distorts the signal"
     ],
     "correct": "It is converted into heat",
-    "explanation": "",
+    "explanation": "It is converted into heat",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4054,7 +4054,7 @@ export const hamRadioQuestions = [
       "Directional wattmeter"
     ],
     "correct": "Directional wattmeter",
-    "explanation": "",
+    "explanation": "Directional wattmeter",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4068,7 +4068,7 @@ export const hamRadioQuestions = [
       "Operation at 100% duty cycle for an extended period"
     ],
     "correct": "Moisture contamination",
-    "explanation": "",
+    "explanation": "Moisture contamination",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4082,7 +4082,7 @@ export const hamRadioQuestions = [
       "Ultraviolet light can damage the jacket and allow water to enter the cable"
     ],
     "correct": "Ultraviolet light can damage the jacket and allow water to enter the cable",
-    "explanation": "",
+    "explanation": "Ultraviolet light can damage the jacket and allow water to enter the cable",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4096,7 +4096,7 @@ export const hamRadioQuestions = [
       "It cannot be used at below freezing temperatures"
     ],
     "correct": "It requires special techniques to prevent moisture in the cable",
-    "explanation": "",
+    "explanation": "It requires special techniques to prevent moisture in the cable",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4110,7 +4110,7 @@ export const hamRadioQuestions = [
       "An ohmmeter"
     ],
     "correct": "A voltmeter",
-    "explanation": "",
+    "explanation": "A voltmeter",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4124,7 +4124,7 @@ export const hamRadioQuestions = [
       "In phase"
     ],
     "correct": "In parallel",
-    "explanation": "",
+    "explanation": "In parallel",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4138,7 +4138,7 @@ export const hamRadioQuestions = [
       "In phase"
     ],
     "correct": "In series",
-    "explanation": "",
+    "explanation": "In series",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4152,7 +4152,7 @@ export const hamRadioQuestions = [
       "An ammeter"
     ],
     "correct": "An ammeter",
-    "explanation": "",
+    "explanation": "An ammeter",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4166,7 +4166,7 @@ export const hamRadioQuestions = [
       "Not allowing it to warm up properly"
     ],
     "correct": "Attempting to measure voltage when using the resistance setting",
-    "explanation": "",
+    "explanation": "Attempting to measure voltage when using the resistance setting",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4180,7 +4180,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Voltage and resistance",
-    "explanation": "",
+    "explanation": "Voltage and resistance",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4194,7 +4194,7 @@ export const hamRadioQuestions = [
       "Tin-copper solder"
     ],
     "correct": "Acid-core solder",
-    "explanation": "",
+    "explanation": "Acid-core solder",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4208,7 +4208,7 @@ export const hamRadioQuestions = [
       "Excessive solder"
     ],
     "correct": "A rough or lumpy surface",
-    "explanation": "",
+    "explanation": "A rough or lumpy surface",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4222,7 +4222,7 @@ export const hamRadioQuestions = [
       "Alternating between open and short circuit"
     ],
     "correct": "Increasing resistance with time",
-    "explanation": "",
+    "explanation": "Increasing resistance with time",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4236,7 +4236,7 @@ export const hamRadioQuestions = [
       "Ensure that the circuit is operating at the correct frequency"
     ],
     "correct": "Ensure that the circuit is not powered",
-    "explanation": "",
+    "explanation": "Ensure that the circuit is not powered",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4250,7 +4250,7 @@ export const hamRadioQuestions = [
       "Phase shift keying (PSK)"
     ],
     "correct": "Single sideband",
-    "explanation": "",
+    "explanation": "Single sideband",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4264,7 +4264,7 @@ export const hamRadioQuestions = [
       "PSK"
     ],
     "correct": "FM or PM",
-    "explanation": "",
+    "explanation": "FM or PM",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4278,7 +4278,7 @@ export const hamRadioQuestions = [
       "PM"
     ],
     "correct": "SSB",
-    "explanation": "",
+    "explanation": "SSB",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4292,7 +4292,7 @@ export const hamRadioQuestions = [
       "FM or PM"
     ],
     "correct": "FM or PM",
-    "explanation": "",
+    "explanation": "FM or PM",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4306,7 +4306,7 @@ export const hamRadioQuestions = [
       "Slow-scan TV"
     ],
     "correct": "CW",
-    "explanation": "",
+    "explanation": "CW",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4320,7 +4320,7 @@ export const hamRadioQuestions = [
       "Inverted sideband"
     ],
     "correct": "Upper sideband",
-    "explanation": "",
+    "explanation": "Upper sideband",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4334,7 +4334,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "SSB signals have narrower bandwidth",
-    "explanation": "",
+    "explanation": "SSB signals have narrower bandwidth",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4348,7 +4348,7 @@ export const hamRadioQuestions = [
       "15 kHz"
     ],
     "correct": "3 kHz",
-    "explanation": "",
+    "explanation": "3 kHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4362,7 +4362,7 @@ export const hamRadioQuestions = [
       "Between 50 and 125 kHz"
     ],
     "correct": "Between 10 and 15 kHz",
-    "explanation": "",
+    "explanation": "Between 10 and 15 kHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4376,7 +4376,7 @@ export const hamRadioQuestions = [
       "About 1 MHz"
     ],
     "correct": "About 6 MHz",
-    "explanation": "",
+    "explanation": "About 6 MHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4390,7 +4390,7 @@ export const hamRadioQuestions = [
       "15 kHz"
     ],
     "correct": "150 Hz",
-    "explanation": "",
+    "explanation": "150 Hz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4404,7 +4404,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Only one signal can be received at a time",
-    "explanation": "",
+    "explanation": "Only one signal can be received at a time",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4418,7 +4418,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Health and status of the satellite",
-    "explanation": "",
+    "explanation": "Health and status of the satellite",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4432,7 +4432,7 @@ export const hamRadioQuestions = [
       "Possibility of rebooting the satellite control computer"
     ],
     "correct": "Blocking access by other users",
-    "explanation": "",
+    "explanation": "Blocking access by other users",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4446,7 +4446,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4460,7 +4460,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4474,7 +4474,7 @@ export const hamRadioQuestions = [
       "A transmission from a satellite that contains status information"
     ],
     "correct": "A transmission from a satellite that contains status information",
-    "explanation": "",
+    "explanation": "A transmission from a satellite that contains status information",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4488,7 +4488,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "The Keplerian elements",
-    "explanation": "",
+    "explanation": "The Keplerian elements",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4502,7 +4502,7 @@ export const hamRadioQuestions = [
       "A special digital communications mode for some satellites"
     ],
     "correct": "An observed change in signal frequency caused by relative motion between the satellite and Earth station",
-    "explanation": "",
+    "explanation": "An observed change in signal frequency caused by relative motion between the satellite and Earth station",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4516,7 +4516,7 @@ export const hamRadioQuestions = [
       "The satellite frequencies are usually variable"
     ],
     "correct": "The satellite uplink is in the 70 centimeter band and the downlink is in the 2 meter band",
-    "explanation": "",
+    "explanation": "The satellite uplink is in the 70 centimeter band and the downlink is in the 2 meter band",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4530,7 +4530,7 @@ export const hamRadioQuestions = [
       "Interfering signals within the satellite uplink band"
     ],
     "correct": "Rotation of the satellite and its antennas",
-    "explanation": "",
+    "explanation": "Rotation of the satellite and its antennas",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4544,7 +4544,7 @@ export const hamRadioQuestions = [
       "A satellite in low earth orbit"
     ],
     "correct": "A satellite in low earth orbit",
-    "explanation": "",
+    "explanation": "A satellite in low earth orbit",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4558,7 +4558,7 @@ export const hamRadioQuestions = [
       "A licensed radio amateur who has registered for an access code from AMSAT"
     ],
     "correct": "Anyone",
-    "explanation": "",
+    "explanation": "Anyone",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4572,7 +4572,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Your signal strength on the downlink should be about the same as the beacon",
-    "explanation": "",
+    "explanation": "Your signal strength on the downlink should be about the same as the beacon",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4586,7 +4586,7 @@ export const hamRadioQuestions = [
       "Phase locking"
     ],
     "correct": "Radio direction finding",
-    "explanation": "",
+    "explanation": "Radio direction finding",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4600,7 +4600,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "A directional antenna",
-    "explanation": "",
+    "explanation": "A directional antenna",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4614,7 +4614,7 @@ export const hamRadioQuestions = [
       "Contesting"
     ],
     "correct": "Contesting",
-    "explanation": "",
+    "explanation": "Contesting",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4628,7 +4628,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Send only the minimum information needed for proper identification and the contest exchange",
-    "explanation": "",
+    "explanation": "Send only the minimum information needed for proper identification and the contest exchange",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4642,7 +4642,7 @@ export const hamRadioQuestions = [
       "An instrument for radio direction finding"
     ],
     "correct": "A letter-number designator assigned to a geographic location",
-    "explanation": "",
+    "explanation": "A letter-number designator assigned to a geographic location",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4656,7 +4656,7 @@ export const hamRadioQuestions = [
       "By using CTCSS tone codes"
     ],
     "correct": "By using DTMF signals",
-    "explanation": "",
+    "explanation": "By using DTMF signals",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4670,7 +4670,7 @@ export const hamRadioQuestions = [
       "A method of delivering voice communications over the internet using digital techniques"
     ],
     "correct": "A method of delivering voice communications over the internet using digital techniques",
-    "explanation": "",
+    "explanation": "A method of delivering voice communications over the internet using digital techniques",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4684,7 +4684,7 @@ export const hamRadioQuestions = [
       "A technique for measuring signal strength of an amateur transmitter via the internet"
     ],
     "correct": "A technique to connect amateur radio systems, such as repeaters, via the internet using Voice Over Internet Protocol (VoIP)",
-    "explanation": "",
+    "explanation": "A technique to connect amateur radio systems, such as repeaters, via the internet using Voice Over Internet Protocol (VoIP)",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4698,7 +4698,7 @@ export const hamRadioQuestions = [
       "EchoLink"
     ],
     "correct": "EchoLink",
-    "explanation": "",
+    "explanation": "EchoLink",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4712,7 +4712,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Register your call sign and provide proof of license",
-    "explanation": "",
+    "explanation": "Register your call sign and provide proof of license",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4726,7 +4726,7 @@ export const hamRadioQuestions = [
       "A beacon"
     ],
     "correct": "A gateway",
-    "explanation": "",
+    "explanation": "A gateway",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4740,7 +4740,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4754,7 +4754,7 @@ export const hamRadioQuestions = [
       "A net that meets at a specified time"
     ],
     "correct": "A way for groups of users to share a channel at different times without hearing other users on the channel",
-    "explanation": "",
+    "explanation": "A way for groups of users to share a channel at different times without hearing other users on the channel",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4768,7 +4768,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4782,7 +4782,7 @@ export const hamRadioQuestions = [
       "A frame compression scheme for TV signals"
     ],
     "correct": "An analog fast-scan color TV signal",
-    "explanation": "",
+    "explanation": "An analog fast-scan color TV signal",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4796,7 +4796,7 @@ export const hamRadioQuestions = [
       "Providing information on the number of stations signed into a repeater"
     ],
     "correct": "Providing real-time tactical digital communications in conjunction with a map showing the locations of stations",
-    "explanation": "",
+    "explanation": "Providing real-time tactical digital communications in conjunction with a map showing the locations of stations",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4810,7 +4810,7 @@ export const hamRadioQuestions = [
       "Phased Slide Keying"
     ],
     "correct": "Phase Shift Keying",
-    "explanation": "",
+    "explanation": "Phase Shift Keying",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4824,7 +4824,7 @@ export const hamRadioQuestions = [
       "A digital technique for transmitting on two repeater inputs simultaneously for automatic error correction"
     ],
     "correct": "A technique for time-multiplexing two digital voice signals on a single 12.5 kHz repeater channel",
-    "explanation": "",
+    "explanation": "A technique for time-multiplexing two digital voice signals on a single 12.5 kHz repeater channel",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4838,7 +4838,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4852,7 +4852,7 @@ export const hamRadioQuestions = [
       "Another name for a Morse code transmission"
     ],
     "correct": "Another name for a Morse code transmission",
-    "explanation": "",
+    "explanation": "Another name for a Morse code transmission",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4866,7 +4866,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4880,7 +4880,7 @@ export const hamRadioQuestions = [
       "A method of compressing data using autonomous reiterative Q codes prior to final encoding"
     ],
     "correct": "An error correction method in which the receiving station detects errors and sends a request for retransmission",
-    "explanation": "",
+    "explanation": "An error correction method in which the receiving station detects errors and sends a request for retransmission",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4894,7 +4894,7 @@ export const hamRadioQuestions = [
       "An internet linking protocol used to network repeaters"
     ],
     "correct": "An amateur-radio based data network using commercial Wi-Fi equipment with modified firmware",
-    "explanation": "",
+    "explanation": "An amateur-radio based data network using commercial Wi-Fi equipment with modified firmware",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4908,7 +4908,7 @@ export const hamRadioQuestions = [
       "A digital slow-scan TV mode with forward error correction and automatic color compensation"
     ],
     "correct": "A digital mode capable of low signal-to-noise operation",
-    "explanation": "",
+    "explanation": "A digital mode capable of low signal-to-noise operation",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4922,7 +4922,7 @@ export const hamRadioQuestions = [
       "An antenna that reverses the phase of received signals"
     ],
     "correct": "An antenna that concentrates signals in one direction",
-    "explanation": "",
+    "explanation": "An antenna that concentrates signals in one direction",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4936,7 +4936,7 @@ export const hamRadioQuestions = [
       "Strengthening the radiating elements of a beam antenna to better resist wind damage"
     ],
     "correct": "Electrically lengthening by inserting inductors in radiating elements",
-    "explanation": "",
+    "explanation": "Electrically lengthening by inserting inductors in radiating elements",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4950,7 +4950,7 @@ export const hamRadioQuestions = [
       "A vertically polarized antenna"
     ],
     "correct": "A horizontally polarized antenna",
-    "explanation": "",
+    "explanation": "A horizontally polarized antenna",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4964,7 +4964,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "It has low efficiency",
-    "explanation": "",
+    "explanation": "It has low efficiency",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4978,7 +4978,7 @@ export const hamRadioQuestions = [
       "Adding capacitive loading to the ends of the radiating wires"
     ],
     "correct": "Shortening it",
-    "explanation": "",
+    "explanation": "Shortening it",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -4992,7 +4992,7 @@ export const hamRadioQuestions = [
       "Yagi"
     ],
     "correct": "Yagi",
-    "explanation": "",
+    "explanation": "Yagi",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5006,7 +5006,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Signal strength is reduced due to the shielding effect of the vehicle",
-    "explanation": "",
+    "explanation": "Signal strength is reduced due to the shielding effect of the vehicle",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5020,7 +5020,7 @@ export const hamRadioQuestions = [
       "12"
     ],
     "correct": "19",
-    "explanation": "",
+    "explanation": "19",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5034,7 +5034,7 @@ export const hamRadioQuestions = [
       "236"
     ],
     "correct": "112",
-    "explanation": "",
+    "explanation": "112",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5048,7 +5048,7 @@ export const hamRadioQuestions = [
       "Broadside to the antenna"
     ],
     "correct": "Broadside to the antenna",
-    "explanation": "",
+    "explanation": "Broadside to the antenna",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5062,7 +5062,7 @@ export const hamRadioQuestions = [
       "The increase in impedance on receive or transmit compared to a reference antenna"
     ],
     "correct": "The increase in signal strength in a specified direction compared to a reference antenna",
-    "explanation": "",
+    "explanation": "The increase in signal strength in a specified direction compared to a reference antenna",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5076,7 +5076,7 @@ export const hamRadioQuestions = [
       "It has 10 times the power gain of a 1/4 wavelength whip"
     ],
     "correct": "It has more gain than a 1/4-wavelength antenna",
-    "explanation": "",
+    "explanation": "It has more gain than a 1/4-wavelength antenna",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5090,7 +5090,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Reduced signal loss",
-    "explanation": "",
+    "explanation": "Reduced signal loss",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5104,7 +5104,7 @@ export const hamRadioQuestions = [
       "12 ohms"
     ],
     "correct": "50 ohms",
-    "explanation": "",
+    "explanation": "50 ohms",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5118,7 +5118,7 @@ export const hamRadioQuestions = [
       "It is less expensive than any other type of feed line"
     ],
     "correct": "It is easy to use and requires few special installation considerations",
-    "explanation": "",
+    "explanation": "It is easy to use and requires few special installation considerations",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5132,7 +5132,7 @@ export const hamRadioQuestions = [
       "It automatically selects the proper antenna for the frequency band being used"
     ],
     "correct": "It matches the antenna system impedance to the transceiver's output impedance",
-    "explanation": "",
+    "explanation": "It matches the antenna system impedance to the transceiver's output impedance",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5146,7 +5146,7 @@ export const hamRadioQuestions = [
       "The loss increases"
     ],
     "correct": "The loss increases",
-    "explanation": "",
+    "explanation": "The loss increases",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5160,7 +5160,7 @@ export const hamRadioQuestions = [
       "DB-25"
     ],
     "correct": "Type N",
-    "explanation": "",
+    "explanation": "Type N",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5174,7 +5174,7 @@ export const hamRadioQuestions = [
       "They are a bayonet-type connector"
     ],
     "correct": "They are commonly used at HF and VHF frequencies",
-    "explanation": "",
+    "explanation": "They are commonly used at HF and VHF frequencies",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5188,7 +5188,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5202,7 +5202,7 @@ export const hamRadioQuestions = [
       "Overload from a strong local station"
     ],
     "correct": "Loose connection in the antenna or feed line",
-    "explanation": "",
+    "explanation": "Loose connection in the antenna or feed line",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5216,7 +5216,7 @@ export const hamRadioQuestions = [
       "RG-58 cable can handle higher power levels"
     ],
     "correct": "RG-213 cable has less loss at a given frequency",
-    "explanation": "",
+    "explanation": "RG-213 cable has less loss at a given frequency",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5230,7 +5230,7 @@ export const hamRadioQuestions = [
       "75-ohm flexible coax"
     ],
     "correct": "Air-insulated hardline",
-    "explanation": "",
+    "explanation": "Air-insulated hardline",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5244,7 +5244,7 @@ export const hamRadioQuestions = [
       "An indication of the quality of your station\u2019s ground connection"
     ],
     "correct": "A measure of how well a load is matched to a transmission line",
-    "explanation": "",
+    "explanation": "A measure of how well a load is matched to a transmission line",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5258,7 +5258,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Shorting the terminals can cause burns, fire, or an explosion",
-    "explanation": "",
+    "explanation": "Shorting the terminals can cause burns, fire, or an explosion",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5272,7 +5272,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5286,7 +5286,7 @@ export const hamRadioQuestions = [
       "Black insulation is never used"
     ],
     "correct": "Hot",
-    "explanation": "",
+    "explanation": "Hot",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5300,7 +5300,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "To remove power in case of overload",
-    "explanation": "",
+    "explanation": "To remove power in case of overload",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5314,7 +5314,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Excessive current could cause a fire",
-    "explanation": "",
+    "explanation": "Excessive current could cause a fire",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5328,7 +5328,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5342,7 +5342,7 @@ export const hamRadioQuestions = [
       "On a grounded panel near where feed lines enter the building"
     ],
     "correct": "On a grounded panel near where feed lines enter the building",
-    "explanation": "",
+    "explanation": "On a grounded panel near where feed lines enter the building",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5356,7 +5356,7 @@ export const hamRadioQuestions = [
       "In parallel with the hot and neutral conductors"
     ],
     "correct": "In series with the hot conductor only",
-    "explanation": "",
+    "explanation": "In series with the hot conductor only",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5370,7 +5370,7 @@ export const hamRadioQuestions = [
       "Tune them for resonance on the lowest frequency of operation"
     ],
     "correct": "Bond them together with heavy wire or conductive strap",
-    "explanation": "",
+    "explanation": "Bond them together with heavy wire or conductive strap",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5384,7 +5384,7 @@ export const hamRadioQuestions = [
       "Inverse memory effect"
     ],
     "correct": "Overheating or out-gassing",
-    "explanation": "",
+    "explanation": "Overheating or out-gassing",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5398,7 +5398,7 @@ export const hamRadioQuestions = [
       "Charge stored in filter capacitors"
     ],
     "correct": "Charge stored in filter capacitors",
-    "explanation": "",
+    "explanation": "Charge stored in filter capacitors",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5412,7 +5412,7 @@ export const hamRadioQuestions = [
       "Ensure that the voltmeter is set to the correct frequency"
     ],
     "correct": "Ensure that the voltmeter and leads are rated for use at the voltages to be measured",
-    "explanation": "",
+    "explanation": "Ensure that the voltmeter and leads are rated for use at the voltages to be measured",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5426,7 +5426,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Ensure that connections are short and direct",
-    "explanation": "",
+    "explanation": "Ensure that connections are short and direct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5440,7 +5440,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5454,7 +5454,7 @@ export const hamRadioQuestions = [
       "Never"
     ],
     "correct": "Never",
-    "explanation": "",
+    "explanation": "Never",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5468,7 +5468,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Look for and stay clear of any overhead electrical wires",
-    "explanation": "",
+    "explanation": "Look for and stay clear of any overhead electrical wires",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5482,7 +5482,7 @@ export const hamRadioQuestions = [
       "Provide an ability to measure for proper tensioning"
     ],
     "correct": "Prevent loosening of the turnbuckle from vibration",
-    "explanation": "",
+    "explanation": "Prevent loosening of the turnbuckle from vibration",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5496,7 +5496,7 @@ export const hamRadioQuestions = [
       "Enough so that if the antenna falls, no part of it can come closer than 10 feet to the power wires"
     ],
     "correct": "Enough so that if the antenna falls, no part of it can come closer than 10 feet to the power wires",
-    "explanation": "",
+    "explanation": "Enough so that if the antenna falls, no part of it can come closer than 10 feet to the power wires",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5510,7 +5510,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "This type of tower must not be climbed unless it is retracted, or mechanical safety locking devices have been installed",
-    "explanation": "",
+    "explanation": "This type of tower must not be climbed unless it is retracted, or mechanical safety locking devices have been installed",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5524,7 +5524,7 @@ export const hamRadioQuestions = [
       "Separate eight-foot ground rods for each tower leg, bonded to the tower and each other"
     ],
     "correct": "Separate eight-foot ground rods for each tower leg, bonded to the tower and each other",
-    "explanation": "",
+    "explanation": "Separate eight-foot ground rods for each tower leg, bonded to the tower and each other",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5538,7 +5538,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "The antenna could contact high-voltage power lines",
-    "explanation": "",
+    "explanation": "The antenna could contact high-voltage power lines",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5552,7 +5552,7 @@ export const hamRadioQuestions = [
       "Common grounds must be avoided"
     ],
     "correct": "Sharp bends must be avoided",
-    "explanation": "",
+    "explanation": "Sharp bends must be avoided",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5566,7 +5566,7 @@ export const hamRadioQuestions = [
       "UL recommended practices"
     ],
     "correct": "Local electrical codes",
-    "explanation": "",
+    "explanation": "Local electrical codes",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5580,7 +5580,7 @@ export const hamRadioQuestions = [
       "Non-ionizing radiation"
     ],
     "correct": "Non-ionizing radiation",
-    "explanation": "",
+    "explanation": "Non-ionizing radiation",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5594,7 +5594,7 @@ export const hamRadioQuestions = [
       "1296 MHz"
     ],
     "correct": "50 MHz",
-    "explanation": "",
+    "explanation": "50 MHz",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5608,7 +5608,7 @@ export const hamRadioQuestions = [
       "There is no adjustment allowed for lower duty cycle"
     ],
     "correct": "It increases by a factor of 2",
-    "explanation": "",
+    "explanation": "It increases by a factor of 2",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5622,7 +5622,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5636,7 +5636,7 @@ export const hamRadioQuestions = [
       "The human body absorbs more RF energy at some frequencies than at others"
     ],
     "correct": "The human body absorbs more RF energy at some frequencies than at others",
-    "explanation": "",
+    "explanation": "The human body absorbs more RF energy at some frequencies than at others",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5650,7 +5650,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "All these choices are correct",
-    "explanation": "",
+    "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5664,7 +5664,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "RF burn to skin",
-    "explanation": "",
+    "explanation": "RF burn to skin",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5678,7 +5678,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "Relocate antennas",
-    "explanation": "",
+    "explanation": "Relocate antennas",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5692,7 +5692,7 @@ export const hamRadioQuestions = [
       "All these choices are correct"
     ],
     "correct": "By re-evaluating the station whenever an item in the transmitter or antenna system is changed",
-    "explanation": "",
+    "explanation": "By re-evaluating the station whenever an item in the transmitter or antenna system is changed",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5706,7 +5706,7 @@ export const hamRadioQuestions = [
       "It takes into account the thermal effects of the final amplifier"
     ],
     "correct": "It affects the average exposure to radiation",
-    "explanation": "",
+    "explanation": "It affects the average exposure to radiation",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5720,7 +5720,7 @@ export const hamRadioQuestions = [
       "The percentage of time that a transmitter is not transmitting"
     ],
     "correct": "The percentage of time that a transmitter is transmitting",
-    "explanation": "",
+    "explanation": "The percentage of time that a transmitter is transmitting",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5734,7 +5734,7 @@ export const hamRadioQuestions = [
       "RF radiation is perfectly safe"
     ],
     "correct": "RF radiation does not have sufficient energy to cause chemical changes in cells and damage DNA",
-    "explanation": "",
+    "explanation": "RF radiation does not have sufficient energy to cause chemical changes in cells and damage DNA",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
@@ -5748,7 +5748,7 @@ export const hamRadioQuestions = [
       "The local zoning board"
     ],
     "correct": "The station licensee",
-    "explanation": "",
+    "explanation": "The station licensee",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
