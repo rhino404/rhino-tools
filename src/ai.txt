@@ -1,0 +1,21 @@
+# Allow OpenAI crawlers (used for GPT, ChatGPT, Copilot, etc.)
+User-agent: GPTBot
+Allow: /
+
+# Explicit mention of GitHub Copilot (not enforced but proactive)
+User-agent: GitHubCopilot
+Allow: /
+
+# Allow Perplexity, Google Gemini, and others
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GeminiBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Disallow any unknown AI agents (optional strict rule)
+User-agent: *
+Disallow: /private/

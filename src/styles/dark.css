@@ -79,3 +79,13 @@ body.dark-mode #dark-mode-toggle {
 body.dark-mode footer {
   color: #ccc;
 }
+
+.question {
+  -webkit-text-stroke-width: 1px; /* Sets the width of the stroke */
+  -webkit-text-stroke-color: black; /* Sets the color of the stroke */
+}
+
+.level-btn,
+.category-btn {
+  background: linear-gradient(to right, #1a755e, #198368);
+}
