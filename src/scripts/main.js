@@ -113,7 +113,7 @@ function showQuestion() {
   }
 
   const q = shuffledQuestions[current];
-  questionEl.innerHTML = `<span style="font-size:0.7em;vertical-align:middle;">${getLevelIcon(q.level)} ${getCategoryIcon(q.category)}</span> ${q.question}`;
+  questionEl.innerHTML = `<span>${getLevelIcon(q.level)} ${getCategoryIcon(q.category)}</span> ${q.question}`;
   choicesEl.innerHTML = '';
   explanationEl.textContent = '';
 
