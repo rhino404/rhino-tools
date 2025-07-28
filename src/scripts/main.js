@@ -136,7 +136,7 @@ function checkAnswer(choice, q) {
     showCorrectEffect(explanationEl);
     setTimeout(() => explanationEl.classList.remove('shake'), 400);
   } else {
-    explanationEl.innerHTML = `<span class='incorrect'>❌ Wrong:</span> ${q.explanation}`;
+    explanationEl.innerHTML = `<span class='incorrect'>❌:</span> ${q.explanation}`;
     showIncorrectEffect(explanationEl);
     explanationEl.classList.add('shake');
     setTimeout(() => explanationEl.classList.remove('shake'), 400);

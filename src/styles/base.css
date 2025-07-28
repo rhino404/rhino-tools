@@ -20,11 +20,18 @@ body {
     margin: 0;
     padding: 0.5rem;
     height: 100%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-family: Ubuntu, Roboto, Oxygen, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    background: inherit;
+    width: 100%;
 }
 
 /* Social Links */
@@ -63,15 +70,19 @@ body {
     border-color: black;
     border-width: 0.1em;
     border-style: solid;
+
+    color: black;
+
+    /* Text stroke to create white border around text */
+    -webkit-text-stroke-width: 0.02em;
+    -webkit-text-stroke-color: white;
 }
 
 /* Wrapper to center buttons */
 .button-group {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 0.75em;
-    margin: 1.5em 0;
+    width: 100%;
 }
 
 /* Full-width and centered buttons */
@@ -80,14 +91,11 @@ body {
 .category-btn,
 .dropdown-toggle {
     appearance: none;
-    width: 100%;
-    max-width: 300px;
     margin: 0 auto;
     display: grid;
     place-items: center;
     padding: 0.6em 1.4em;
     font-size: 1em;
-    border-radius: 999px;
     /* pill shape */
     border: none;
     background: linear-gradient(to right, #000, #198368);
@@ -165,6 +173,7 @@ body {
     margin: 2rem 0;
     text-align: center;
     padding: 1rem;
+    /* width: 100%; */
 }
 
 /* Shake Animation */
@@ -201,29 +210,50 @@ footer {
 
 /* Crypto Bar */
 
+#crypto-logo {
+    height: 2rem;
+    /* or any size you want */
+    width: 2rem;
+    /* make width equal to height */
+    border-radius: 50%;
+    /* this creates the circular shape */
+    object-fit: cover;
+    /* ensures the image fills the circle */
+    margin-right: 0.01em;
+    /* spacing from the title */
+}
+
 #crypto-bar {
-    display: flex;
-    justify-content: space-between;
-    /* or space-around/center if you prefer */
-    align-items: center;
-    padding: 0.5em 1em;
-    background: #1a755e;
-    color: #fff;
-    width: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; /* pushes toggle to the far right */
+  gap: 1rem;
+  padding: 0.5em 1em;
+  flex-wrap: nowrap;
+  background-image:
+    linear-gradient(to right, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0.6)),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect width='20' height='20' fill='%231a755e' fill-opacity='0.2'/><rect x='20' y='20' width='20' height='20' fill='%231a755e' fill-opacity='0.2'/></svg>");
+  /* background-size: 40px 40px; */
+  background-color: #181818;
+  /* border-radius: 0.5em; */
+  max-width: 100%;
+  overflow: hidden;
 }
 
 #crypto-bar span {
-    white-space: nowrap;
+    white-space: preserve nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 60%;
+    max-width: 100%;
 }
 
+
 #dark-mode-toggle {
-    background: var(--button-bg, #f0f0f0);
+    background: var(--button-bg, #222);
     /* fallback if var not defined */
     color: var(--button-color, #222);
-    border: 1px solid var(--border-color, #ccc);
+    border: 1px solid var(--border-color, #222);
     padding: 0.4em 0.6em;
     border-radius: 36px;
     cursor: pointer;
