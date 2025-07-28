@@ -355,8 +355,19 @@ footer {
 
 /* Responsive tweaks for small screens */
 @media (min-width: 768px) {
-  #ad-slot ins.adsbygoogle {
+  #ezoic-pub-ad-placeholder-101 {
     max-width: 728px;
-    height: 90px;
+    min-height: 90px; /* optional for horizontal leaderboard */
   }
+}
+
+
+#ezoic-pub-ad-placeholder-101 {
+  margin: 1rem auto;
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 320px; /* for mobile */
+  height: auto;
+  overflow: hidden;
 }
