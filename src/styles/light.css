@@ -75,7 +75,7 @@ footer {
 
 .question {
     color: white;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 0.05em;
     /* Sets the width of the stroke */
     -webkit-text-stroke-color: #fff;
     /* Sets the color of the stroke */
