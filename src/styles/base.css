@@ -227,7 +227,7 @@ footer {
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: space-evenly; /* pushes toggle to the far right */
+  justify-content: space-between; /* pushes toggle to the far right */
   gap: 1rem;
   padding: 0.5em 1em;
   flex-wrap: nowrap;
