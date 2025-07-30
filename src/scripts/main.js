@@ -20,18 +20,33 @@ async function loadQuestions(level, category) {
   } else if (category === "ham-radio") {
     const mod = await import('./questions/ham-radio.js');
     questions = mod.hamRadioQuestions;
+  } else if (category === "docker") {
+    const mod = await import('./questions/docker.js');
+    questions = mod.dockerQuestions;
+  } else if (category === "git") {
+    const mod = await import('./questions/git.js');
+    questions = mod.gitQuestions;
+  } else if (category === "frontend") {
+    const mod = await import('./questions/frontend.js');
+    questions = mod.frontendQuestions;
   } else {
     const py = await import('./questions/python.js');
     const ml = await import('./questions/ml.js');
     const nlp = await import('./questions/nlp.js');
     const mcp = await import('./questions/mcp.js');
     const hamRadio = await import('./questions/ham-radio.js');
+    const docker = await import('./questions/docker.js');
+    const git = await import('./questions/git.js');
+    const frontend = await import('./questions/frontend.js');
     questions = [
       ...py.pythonQuestions,
       ...ml.mlQuestions,
       ...nlp.nlpQuestions,
       ...mcp.mcpQuestions,
-      ...hamRadio.hamRadioQuestions
+      ...hamRadio.hamRadioQuestions,
+      ...frontend.frontendQuestions,
+      ...docker.dockerQuestions,
+      ...git.gitQuestions
     ];
   }
 
