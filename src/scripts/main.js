@@ -100,6 +100,9 @@ function getCategoryIcon(category) {
   if (category === "nlp") return "💬";
   if (category === "mcp") return "🔧";
   if (category === "ham-radio") return "📡";
+  if (category === "docker") return "🐳";
+  if (category === "git") return "🐙";
+  if (category === "frontend") return "🎨";
   return "";
 }
 
