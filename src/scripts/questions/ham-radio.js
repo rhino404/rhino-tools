@@ -3136,20 +3136,6 @@ export const hamRadioQuestions = [
     "type": "multiple-choice"
   },
   {
-    "question": "[T6A] What type of switch is represented by component 3 in figure T-2?",
-    "choices": [
-      "Single-pole single-throw",
-      "Single-pole double-throw",
-      "Double-pole single-throw",
-      "Double-pole double-throw"
-    ],
-    "correct": "Single-pole single-throw",
-    "explanation": "Single-pole single-throw",
-    "level": "beginner",
-    "category": "ham-radio",
-    "type": "multiple-choice"
-  },
-  {
     "question": "[T6B] Which is true about forward voltage drop in a diode?",
     "choices": [
       "It is lower in some diode types than in others",
@@ -3332,146 +3318,6 @@ export const hamRadioQuestions = [
     "type": "multiple-choice"
   },
   {
-    "question": "[T6C] What is component 1 in figure T-1?",
-    "choices": [
-      "Resistor",
-      "Transistor",
-      "Battery",
-      "Connector"
-    ],
-    "correct": "Resistor",
-    "explanation": "Resistor",
-    "level": "beginner",
-    "category": "ham-radio",
-    "type": "multiple-choice"
-  },
-  {
-    "question": "[T6C] What is component 2 in figure T-1?",
-    "choices": [
-      "Resistor",
-      "Transistor",
-      "Indicator lamp",
-      "Connector"
-    ],
-    "correct": "Transistor",
-    "explanation": "Transistor",
-    "level": "beginner",
-    "category": "ham-radio",
-    "type": "multiple-choice"
-  },
-  {
-    "question": "[T6C] What is component 3 in figure T-1?",
-    "choices": [
-      "Resistor",
-      "Transistor",
-      "Lamp",
-      "Ground symbol"
-    ],
-    "correct": "Lamp",
-    "explanation": "Lamp",
-    "level": "beginner",
-    "category": "ham-radio",
-    "type": "multiple-choice"
-  },
-  {
-    "question": "[T6C] What is component 4 in figure T-1?",
-    "choices": [
-      "Resistor",
-      "Transistor",
-      "Ground symbol",
-      "Battery"
-    ],
-    "correct": "Battery",
-    "explanation": "Battery",
-    "level": "beginner",
-    "category": "ham-radio",
-    "type": "multiple-choice"
-  },
-  {
-    "question": "[T6C] What is component 6 in figure T-2?",
-    "choices": [
-      "Resistor",
-      "Capacitor",
-      "Regulator IC",
-      "Transistor"
-    ],
-    "correct": "Capacitor",
-    "explanation": "Capacitor",
-    "level": "beginner",
-    "category": "ham-radio",
-    "type": "multiple-choice"
-  },
-  {
-    "question": "[T6C] What is component 8 in figure T-2?",
-    "choices": [
-      "Resistor",
-      "Inductor",
-      "Regulator IC",
-      "Light emitting diode"
-    ],
-    "correct": "Light emitting diode",
-    "explanation": "Light emitting diode",
-    "level": "beginner",
-    "category": "ham-radio",
-    "type": "multiple-choice"
-  },
-  {
-    "question": "[T6C] What is component 9 in figure T-2?",
-    "choices": [
-      "Variable capacitor",
-      "Variable inductor",
-      "Variable resistor",
-      "Variable transformer"
-    ],
-    "correct": "Variable resistor",
-    "explanation": "Variable resistor",
-    "level": "beginner",
-    "category": "ham-radio",
-    "type": "multiple-choice"
-  },
-  {
-    "question": "[T6C] What is component 4 in figure T-2?",
-    "choices": [
-      "Variable inductor",
-      "Double-pole switch",
-      "Potentiometer",
-      "Transformer"
-    ],
-    "correct": "Transformer",
-    "explanation": "Transformer",
-    "level": "beginner",
-    "category": "ham-radio",
-    "type": "multiple-choice"
-  },
-  {
-    "question": "[T6C] What is component 3 in figure T-3?",
-    "choices": [
-      "Connector",
-      "Meter",
-      "Variable capacitor",
-      "Variable inductor"
-    ],
-    "correct": "Variable inductor",
-    "explanation": "Variable inductor",
-    "level": "beginner",
-    "category": "ham-radio",
-    "type": "multiple-choice"
-  },
-  {
-    "question": "[T6C] What is component 4 in figure T-3?",
-    "choices": [
-      "Antenna",
-      "Transmitter",
-      "Dummy load",
-      "Ground"
-    ],
-    "correct": "Antenna",
-    "explanation": "Antenna",
-    "level": "beginner",
-    "category": "ham-radio",
-    "type": "multiple-choice"
-  },
-  {
     "question": "[T6C] Which of the following is accurately represented in electrical schematics?",
     "choices": [
       "Wire lengths",
@@ -3607,20 +3453,6 @@ export const hamRadioQuestions = [
     ],
     "correct": "Integrated circuit",
     "explanation": "Integrated circuit",
-    "level": "beginner",
-    "category": "ham-radio",
-    "type": "multiple-choice"
-  },
-  {
-    "question": "[T6D] What is the function of component 2 in figure T-1?",
-    "choices": [
-      "Give off light when current flows through it",
-      "Supply electrical energy",
-      "Control the flow of current",
-      "Convert electrical energy into radio waves"
-    ],
-    "correct": "Control the flow of current",
-    "explanation": "Control the flow of current",
     "level": "beginner",
     "category": "ham-radio",
     "type": "multiple-choice"
