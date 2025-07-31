@@ -189,18 +189,22 @@ main#quiz-container,
   -webkit-text-stroke-color: white;
 }
 
-.choice-btn {
-  display: grid;
-  width: 100%;
-  min-height: 30px;
-  font-size: 1em;
-  border-radius: var(--border-radius);
-  margin: 0.25em;
-  padding: 0.8em 1.6em;
-  transition: var(--transition);
-  cursor: pointer;
-  border: 1px solid;
+.choices {
+  max-width: 450px; /* slightly narrower than 500px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5em;   /* optional slight padding on left */
+  padding-right: 0.5em;  /* optional slight padding on right */
   text-align: center;
+}
+
+.choice-btn {
+  padding: 0.8em 1.2em; /* reduce horizontal padding from 1.6em to 1.2em */
+  text-align: center;
+  margin: 0.25em auto; /* auto left/right margin to center */
+  width: 100%; /* or max-width: 95%; to limit full width */
+  display: block; /* if needed, to center and respect width */
+  font-size: 1em;
 }
 
 .choice-btn.correct {
@@ -368,4 +372,30 @@ footer {
   25% { transform: translateX(-5px); }
   50% { transform: translateX(5px); }
   75% { transform: translateX(-5px); }
+}
+
+#installBtn.fab {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #000, #198368);
+  color: white;
+  font-size: 24px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 1000;
+  display: none; /* Hidden by default */
+  transition: background-color 0.2s ease;
+}
+
+#installBtn.fab:hover {
+  background: linear-gradient(to right, #000, #6ca179);
+}
+
+#installBtn:focus {
+  outline: 3px solid rgba(26, 117, 94, 0.5);
 }
