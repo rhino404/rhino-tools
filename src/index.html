@@ -37,6 +37,7 @@
   <link rel="canonical" href="https://rhino.tools/" />
   <title>Rhino Tools | Free Quizzes to Learn Python, AI, Ham Radio & More</title>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="./scripts/installPrompt.js" defer></script>
 </head>
 
 <body class="dark-mode">
@@ -121,10 +122,24 @@
     <br /><br />
     <span id="copyright" style="padding-top: 1em;"></span>
     <br />
+    <button id="installBtn" class="fab" style="display:none;" aria-label="Install Rhino Tools App">📲 Install Rhino Tools App</button>
   </footer>
 
   <script>
     document.getElementById('copyright').textContent = `© ${new Date().getFullYear()} Rhino Tools. All rights reserved.`;
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./scripts/sw.js')
+          .then(reg => {
+            console.log('Service worker registered:', reg.scope);
+          })
+          .catch(err => {
+            console.error('Service worker registration failed:', err);
+          });
+      });
+    }
   </script>
 </body>
 
