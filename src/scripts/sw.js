@@ -1,48 +1,73 @@
-const CACHE_NAME = 'rhino-tools-cache-v1';
-const ASSETS_TO_CACHE = [
+const CACHE_NAME = 'rhino-tools-cache-v2'; // 💡 Update this on deploy
+const OFFLINE_URL = '/offline.html';
+
+// List of core assets to cache
+const ASSETS = [
   '/',
   '/index.html',
   '/styles/base.css',
-  '/styles/light.css',
-  '/styles/dark.css',
   '/scripts/main.js',
-  '/scripts/installPrompt.js',
+  '/manifest.json',
   '/images/rhino404.jpeg',
-  // Add other assets to cache here
+  OFFLINE_URL
 ];
 
+// Install: cache core assets
 self.addEventListener('install', (event) => {
-  console.log('Service Worker installed');
+  console.log('[ServiceWorker] Install');
+  self.skipWaiting(); // Activate immediately
+
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS_TO_CACHE))
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(ASSETS);
+    })
   );
-  self.skipWaiting();
 });
 
+// Activate: clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker activated');
+  console.log('[ServiceWorker] Activate');
   event.waitUntil(
-    // Clean up old caches if needed
-    caches.keys().then(keys => 
+    caches.keys().then((cacheNames) =>
       Promise.all(
-        keys.filter(key => key !== CACHE_NAME)
-            .map(key => caches.delete(key))
+        cacheNames.map((cache) => {
+          if (cache !== CACHE_NAME) {
+            console.log('[ServiceWorker] Deleting old cache:', cache);
+            return caches.delete(cache);
+          }
+        })
       )
-    )
+    ).then(() => self.clients.claim())
   );
-  event.waitUntil(self.clients.claim());
 });
 
+// Fetch: serve from cache, fallback to network, fallback to offline
 self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET') return;
+
   event.respondWith(
-    caches.match(event.request).then(cachedResponse => {
+    caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
         return cachedResponse;
       }
-      return fetch(event.request).then(networkResponse => {
-        // Optionally cache new requests dynamically
-        return networkResponse;
-      });
+
+      return fetch(event.request)
+        .then((networkResponse) => {
+          // Cache new request dynamically (optional)
+          return caches.open(CACHE_NAME).then((cache) => {
+            // Only cache successful responses
+            if (event.request.url.startsWith(self.location.origin)) {
+              cache.put(event.request, networkResponse.clone());
+            }
+            return networkResponse;
+          });
+        })
+        .catch(() => {
+          // Offline fallback for navigation requests
+          if (event.request.mode === 'navigate') {
+            return caches.match(OFFLINE_URL);
+          }
+        });
     })
   );
 });
