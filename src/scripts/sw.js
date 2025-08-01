@@ -1,73 +1,32 @@
-const CACHE_NAME = 'rhino-tools-cache-v2'; // 💡 Update this on deploy
-const OFFLINE_URL = '/offline.html';
-
-// List of core assets to cache
-const ASSETS = [
+const CACHE_NAME = 'rhino-tools-cache-v3'; // bump version each deploy
+const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
-  '/styles/base.css',
-  '/scripts/main.js',
-  '/manifest.json',
-  '/images/rhino404.jpeg',
-  OFFLINE_URL
+  '/main.js?v=20250731',
+  '/base.css?v=20250731',
+  // add other assets you want cached here
 ];
 
-// Install: cache core assets
-self.addEventListener('install', (event) => {
-  console.log('[ServiceWorker] Install');
-  self.skipWaiting(); // Activate immediately
-
+self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS);
-    })
+    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS_TO_CACHE))
   );
 });
 
-// Activate: clean up old caches
-self.addEventListener('activate', (event) => {
-  console.log('[ServiceWorker] Activate');
+self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then((cacheNames) =>
+    caches.keys().then(keys =>
       Promise.all(
-        cacheNames.map((cache) => {
-          if (cache !== CACHE_NAME) {
-            console.log('[ServiceWorker] Deleting old cache:', cache);
-            return caches.delete(cache);
-          }
-        })
+        keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
       )
-    ).then(() => self.clients.claim())
+    )
   );
 });
 
-// Fetch: serve from cache, fallback to network, fallback to offline
-self.addEventListener('fetch', (event) => {
-  if (event.request.method !== 'GET') return;
-
+self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-
-      return fetch(event.request)
-        .then((networkResponse) => {
-          // Cache new request dynamically (optional)
-          return caches.open(CACHE_NAME).then((cache) => {
-            // Only cache successful responses
-            if (event.request.url.startsWith(self.location.origin)) {
-              cache.put(event.request, networkResponse.clone());
-            }
-            return networkResponse;
-          });
-        })
-        .catch(() => {
-          // Offline fallback for navigation requests
-          if (event.request.mode === 'navigate') {
-            return caches.match(OFFLINE_URL);
-          }
-        });
+    caches.match(event.request).then(cachedResponse => {
+      return cachedResponse || fetch(event.request);
     })
   );
 });

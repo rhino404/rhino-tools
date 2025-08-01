@@ -295,3 +295,19 @@ toggleBtn.addEventListener('click', () => {
     }
   });
 });
+
+
+// Auto Reload page
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(reg => {
+    reg.addEventListener('updatefound', () => {
+      const newWorker = reg.installing;
+      newWorker.addEventListener('statechange', () => {
+        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+          // New content available, reload page
+          window.location.reload();
+        }
+      });
+    });
+  });
+}
