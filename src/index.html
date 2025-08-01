@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <script src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
+  <script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
+  <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
   <script>
     window.ezstandalone = window.ezstandalone || {};
     ezstandalone.cmd = ezstandalone.cmd || [];
@@ -88,6 +91,18 @@
     <button class="shuffle" id="shuffle-btn">🔀</button>
   </div>
 
+  <div id="ezoic-pub-ad-placeholder-961"></div>
+  <script>
+      ezstandalone.cmd.push(function () {
+          ezstandalone.showAds(961, {
+              "adType": "incontent",
+              "adSize": "fluid",
+              "adFormat": "auto",
+              "adPosition": "bottom"
+          });
+      });
+  </script>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("dark-mode-toggle").style.visibility = "visible";
@@ -113,7 +128,19 @@
   <script>
     document.getElementById('copyright').textContent = `© ${new Date().getFullYear()} Rhino Tools. All rights reserved.`;
   </script>
-  <div></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./scripts/sw.js')
+          .then(reg => {
+            console.log('Service worker registered:', reg.scope);
+          })
+          .catch(err => {
+            console.error('Service worker registration failed:', err);
+          });
+      });
+    }
+  </script>
 </body>
 
 </html>
