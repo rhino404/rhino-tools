@@ -53,7 +53,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
   padding: 0.5em 1em;
   background-image:
     linear-gradient(to right, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0.6)),
@@ -78,7 +78,7 @@ header {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
 #dark-mode-toggle {
@@ -105,12 +105,19 @@ nav[aria-label="Quiz Filters"] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  width: 100%;
+  text-align: center;
 }
 
 .dropdown {
   display: inline-block;
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   margin: 1em auto;
   position: relative;
   text-align: center;
@@ -122,10 +129,12 @@ nav[aria-label="Quiz Filters"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   padding: 0.6em 1.4em;
   font-size: 1em;
   text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .dropdown-menu {
@@ -170,11 +179,15 @@ nav[aria-label="Quiz Filters"] {
 main#quiz-container,
 .choices,
 .shuffle-wrapper,
-.explanation {
+.explanation,
+.question,
+.button-group {
   margin: 0 auto;
   text-align: center;
   width: 100%;
   max-width: 500px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 .question {
@@ -190,20 +203,16 @@ main#quiz-container,
 }
 
 .choices {
-  max-width: 450px; /* slightly narrower than 500px */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5em;   /* optional slight padding on left */
-  padding-right: 0.5em;  /* optional slight padding on right */
+  max-width: 450px;
   text-align: center;
 }
 
 .choice-btn {
-  padding: 0.8em 1.2em; /* reduce horizontal padding from 1.6em to 1.2em */
+  padding: 0.8em 1.2em;
   text-align: center;
-  margin: 0.25em auto; /* auto left/right margin to center */
-  width: 100%; /* or max-width: 95%; to limit full width */
-  display: block; /* if needed, to center and respect width */
+  margin: 0.25em auto;
+  width: 100%;
+  display: block;
   font-size: 1em;
 }
 
@@ -228,6 +237,9 @@ main#quiz-container,
   padding: 1rem;
   border: 4px solid;
   text-align: center;
+  border-radius: var(--border-radius);
+  background-color: #f9f9f9;
+  color: #222;
 }
 
 /* =========================
@@ -237,8 +249,6 @@ main#quiz-container,
 .button-group {
   display: flex;
   align-items: center;
-  width: 100%;
-  max-width: 500px;
 }
 
 .shuffle,
@@ -308,7 +318,6 @@ main#quiz-container,
   max-width: 100%;
 }
 
-/* Ezoic Standalone Placeholder */
 #ezoic-pub-ad-placeholder-101 {
   margin: 1rem auto;
   padding: 0.5rem;
@@ -388,7 +397,7 @@ footer {
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   cursor: pointer;
   z-index: 1000;
-  display: none; /* Hidden by default */
+  display: none;
   transition: background-color 0.2s ease;
 }
 
