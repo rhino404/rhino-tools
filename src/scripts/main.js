@@ -63,6 +63,7 @@ let currentCategory = "";
 let questions = [];
 let shuffledQuestions = [];
 let current = 0;
+let showingAnswers = false;
 
 // DOM Elements
 const questionEl = document.getElementById('question');
@@ -121,7 +122,7 @@ function getCategoryIcon(category) {
   return "";
 }
 
-// Display a question
+// Show question function (update to add highlighting)
 function showQuestion() {
   if (shuffledQuestions.length === 0) {
     questionEl.textContent = "No questions for this filter!";
@@ -139,6 +140,12 @@ function showQuestion() {
     const btn = document.createElement('button');
     btn.textContent = choice;
     btn.className = 'choice-btn';
+
+    // If showing answers is ON, highlight correct answer automatically
+    if (showingAnswers && choice === q.correct) {
+      btn.classList.add('highlight');
+    }
+
     btn.onclick = () => checkAnswer(choice, q);
     choicesEl.appendChild(btn);
   });
@@ -271,4 +278,20 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(reg => console.log('Service Worker registered:', reg))
       .catch(err => console.error('Service Worker registration failed:', err));
   }
+});
+
+// Toggle Answers Button logic
+const toggleBtn = document.getElementById('toggleAnswers');
+toggleBtn.addEventListener('click', () => {
+  showingAnswers = !showingAnswers;
+
+  // Update button text/icon
+  toggleBtn.textContent = showingAnswers ? '❌' : '✔️';
+
+  // Highlight or remove highlight from the correct choice buttons on current question
+  Array.from(choicesEl.children).forEach(btn => {
+    if (btn.textContent === shuffledQuestions[current]?.correct) {
+      btn.classList.toggle('highlight', showingAnswers);
+    }
+  });
 });

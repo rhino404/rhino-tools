@@ -9,8 +9,8 @@ export function showCorrectEffect(element) {
 
 export function showIncorrectEffect(element) {
   element.style.background = '#f8d7da';
-  element.style.transition = 'background 8s';
+  element.style.transition = 'background 10s';
   setTimeout(() => {
     element.style.background = '';
-  }, 8000);
+  }, 10000);
 }
