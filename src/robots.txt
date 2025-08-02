@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://study.rhino.tools/sitemap.xml
+Sitemap: https://rhino.tools/sitemap.xml
