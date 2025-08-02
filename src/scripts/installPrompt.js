@@ -6,8 +6,7 @@ function shouldShowInstallPrompt() {
   if (!dismissedAt) return true;
 
   const oneDay = 24 * 60 * 60 * 1000;
-  const now = Date.now();
-  return now - parseInt(dismissedAt, 10) > oneDay;
+  return Date.now() - parseInt(dismissedAt, 10) > oneDay;
 }
 
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -29,9 +28,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
       deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the install prompt');
+          console.log('[PWA] Install accepted');
         } else {
-          console.log('User dismissed the install prompt');
+          console.log('[PWA] Install dismissed');
           localStorage.setItem('pwaDismissedAt', Date.now().toString());
           installBtn.style.display = 'none';
         }
@@ -41,3 +40,27 @@ window.addEventListener('beforeinstallprompt', (e) => {
     installBtnClickHandlerAdded = true;
   }
 });
+
+// Optional: Listen for appinstalled event
+window.addEventListener('appinstalled', () => {
+  console.log('[PWA] Installed successfully');
+  localStorage.removeItem('pwaDismissedAt'); // Reset for future flexibility
+});
+
+// Optional: SW auto-reload handler for updates
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/scripts/sw.js').then((reg) => {
+    reg.addEventListener('updatefound', () => {
+      const newWorker = reg.installing;
+      newWorker.addEventListener('statechange', () => {
+        if (
+          newWorker.state === 'installed' &&
+          navigator.serviceWorker.controller
+        ) {
+          console.log('[SW] New version found, reloading');
+          window.location.reload();
+        }
+      });
+    });
+  });
+}

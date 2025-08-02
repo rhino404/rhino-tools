@@ -30,6 +30,7 @@ async function loadQuestions(level, category) {
     const mod = await import('./questions/frontend.js');
     questions = mod.frontendQuestions;
   } else {
+    // All categories combined
     const py = await import('./questions/python.js');
     const ml = await import('./questions/ml.js');
     const nlp = await import('./questions/nlp.js');
@@ -50,8 +51,14 @@ async function loadQuestions(level, category) {
     ];
   }
 
+  // Filter by level if set
   if (level) {
     questions = questions.filter(q => q.level === level);
+  }
+
+  // Filter by category if set
+  if (category) {
+    questions = questions.filter(q => q.category === category);
   }
 
   return questions;
@@ -74,55 +81,7 @@ const levelFilters = document.getElementById('level-filters');
 const categoryFilters = document.getElementById('category-filters');
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 
-// Dark Mode Handler
-function updateDarkModeState() {
-  const isDark = document.body.classList.contains('dark-mode');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  if (darkModeToggle) {
-    darkModeToggle.setAttribute('aria-pressed', isDark.toString());
-    darkModeToggle.innerHTML = isDark ? "☀️" : "🌙";
-  }
-}
-
-// Load preferred theme on page load
-function initializeTheme() {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-  } else {
-    document.body.classList.remove('dark-mode');
-  }
-  updateDarkModeState();
-}
-
-if (darkModeToggle) {
-  darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    updateDarkModeState();
-  });
-}
-
-// Icon helpers
-function getLevelIcon(level) {
-  if (level === "beginner") return "🟢";
-  if (level === "intermediate") return "🟡";
-  if (level === "advanced") return "🔴";
-  return "";
-}
-
-function getCategoryIcon(category) {
-  if (category === "python") return "🐍";
-  if (category === "ml") return "🤖";
-  if (category === "nlp") return "💬";
-  if (category === "mcp") return "🔧";
-  if (category === "ham-radio") return "📡";
-  if (category === "docker") return "🐳";
-  if (category === "git") return "🐙";
-  if (category === "frontend") return "🎨";
-  return "";
-}
-
-// Show question function (update to add highlighting)
+// Show question function with highlight on correct answer if enabled
 function showQuestion() {
   if (shuffledQuestions.length === 0) {
     questionEl.textContent = "No questions for this filter!";
@@ -141,7 +100,6 @@ function showQuestion() {
     btn.textContent = choice;
     btn.className = 'choice-btn';
 
-    // If showing answers is ON, highlight correct answer automatically
     if (showingAnswers && choice === q.correct) {
       btn.classList.add('highlight');
     }
@@ -151,7 +109,7 @@ function showQuestion() {
   });
 }
 
-// Check the selected answer
+// Check answer logic
 function checkAnswer(choice, q) {
   Array.from(choicesEl.children).forEach(btn => btn.disabled = true);
   let transitionTime = 1000;
@@ -159,7 +117,6 @@ function checkAnswer(choice, q) {
   if (choice === q.correct) {
     explanationEl.innerHTML = `<span class='correct'>✅ Correct!</span>`;
     showCorrectEffect(explanationEl);
-    setTimeout(() => explanationEl.classList.remove('shake'), 400);
   } else {
     explanationEl.innerHTML = `<span class='incorrect'>❌:</span> ${q.explanation}`;
     showIncorrectEffect(explanationEl);
@@ -180,7 +137,7 @@ function checkAnswer(choice, q) {
   }, transitionTime);
 }
 
-// Refresh question set
+// Refresh questions and shuffle
 async function updateQuestions() {
   questions = await loadQuestions(currentLevel, currentCategory);
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
@@ -188,7 +145,7 @@ async function updateQuestions() {
   showQuestion();
 }
 
-// Setup filter buttons
+// Setup Level filter buttons (restore original working logic)
 if (levelFilters) {
   Array.from(levelFilters.getElementsByClassName('level-btn')).forEach(btn => {
     btn.onclick = () => {
@@ -205,6 +162,7 @@ if (levelFilters) {
   });
 }
 
+// Setup Category filter buttons (restore original working logic)
 if (categoryFilters) {
   Array.from(categoryFilters.getElementsByClassName('category-btn')).forEach(btn => {
     btn.onclick = () => {
@@ -221,11 +179,12 @@ if (categoryFilters) {
   });
 }
 
+// Shuffle button
 if (shuffleBtn) {
   shuffleBtn.onclick = () => updateQuestions();
 }
 
-// Dropdown Menu Logic
+// Dropdown menus (for level and category)
 function setupDropdown(toggleId, menuId, callback) {
   const toggleBtn = document.getElementById(toggleId);
   const menu = document.getElementById(menuId);
@@ -264,50 +223,94 @@ setupDropdown("category-toggle", "category-options", (category) => {
   updateQuestions();
 });
 
-// Initial load
+// Dark Mode Toggle and Initialization
+function updateDarkModeState() {
+  const isDark = document.body.classList.contains('dark-mode');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  if (darkModeToggle) {
+    darkModeToggle.setAttribute('aria-pressed', isDark.toString());
+    darkModeToggle.innerHTML = isDark ? "🌕" : "🌑";
+  }
+}
+
+function initializeTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+  updateDarkModeState();
+}
+
+if (darkModeToggle) {
+  darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    updateDarkModeState();
+  });
+}
+
+// Show level and category icons helpers
+function getLevelIcon(level) {
+  if (level === "beginner") return "🟢";
+  if (level === "intermediate") return "🟡";
+  if (level === "advanced") return "🔴";
+  return "";
+}
+
+function getCategoryIcon(category) {
+  if (category === "python") return "🐍";
+  if (category === "ml") return "🤖";
+  if (category === "nlp") return "💬";
+  if (category === "mcp") return "🔧";
+  if (category === "ham-radio") return "📡";
+  if (category === "docker") return "🐳";
+  if (category === "git") return "🐙";
+  if (category === "frontend") return "🎨";
+  return "";
+}
+
+// Toggle Answers button logic
+const toggleBtn = document.getElementById('toggleAnswers');
+if (toggleBtn) {
+  toggleBtn.addEventListener('click', () => {
+    showingAnswers = !showingAnswers;
+    toggleBtn.textContent = showingAnswers ? '🙈' : '🫣';
+
+    Array.from(choicesEl.children).forEach(btn => {
+      if (btn.textContent === shuffledQuestions[current]?.correct) {
+        btn.classList.toggle('highlight', showingAnswers);
+      }
+    });
+  });
+}
+
+// Load initial data and setup
 document.addEventListener('DOMContentLoaded', () => {
   initializeTheme();
   updateQuestions();
   loadCryptoPrices();
   setInterval(loadCryptoPrices, 120000);
 
-  // Register Service Worker
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .then(reg => console.log('Service Worker registered:', reg))
-      .catch(err => console.error('Service Worker registration failed:', err));
+    navigator.serviceWorker.register('./scripts/sw.js').then(reg => {
+      console.log('Service Worker registered:', reg);
+
+      reg.addEventListener('updatefound', () => {
+        const newWorker = reg.installing;
+        newWorker.addEventListener('statechange', () => {
+          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+            // Optionally prompt user or auto-reload page
+            window.location.reload();
+          }
+        });
+      });
+    }).catch(err => console.error('Service Worker registration failed:', err));
   }
 });
 
-// Toggle Answers Button logic
-const toggleBtn = document.getElementById('toggleAnswers');
-toggleBtn.addEventListener('click', () => {
-  showingAnswers = !showingAnswers;
-
-  // Update button text/icon
-  toggleBtn.textContent = showingAnswers ? '🙈' : '🫣';
-
-  // Highlight or remove highlight from the correct choice buttons on current question
-  Array.from(choicesEl.children).forEach(btn => {
-    if (btn.textContent === shuffledQuestions[current]?.correct) {
-      btn.classList.toggle('highlight', showingAnswers);
-    }
-  });
+// Listen for service worker controller changes to reload page
+navigator.serviceWorker.addEventListener('controllerchange', () => {
+  console.log('Service worker controller changed. Reloading...');
+  window.location.reload();
 });
-
-
-// Auto Reload page
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').then(reg => {
-    reg.addEventListener('updatefound', () => {
-      const newWorker = reg.installing;
-      newWorker.addEventListener('statechange', () => {
-        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-          // New content available, reload page
-          window.location.reload();
-        }
-      });
-    });
-  });
-}

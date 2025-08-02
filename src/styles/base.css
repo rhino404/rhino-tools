@@ -51,7 +51,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 1.5rem;
+  gap: 1rem;
   padding: 0.5em 1em;
   background: linear-gradient(to right, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0.6)),
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect width='20' height='20' fill='%231a755e' fill-opacity='0.2'/><rect x='20' y='20' width='20' height='20' fill='%231a755e' fill-opacity='0.2'/></svg>");
@@ -68,8 +68,8 @@ header {
 }
 
 #crypto-prices {
-  flex-grow: 1;
-  min-width: 0;
+  flex-grow: 10em;
+  min-width: 10em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: pre-line;
@@ -199,6 +199,13 @@ main#quiz-container,
   padding: 0.8em 1.2em;
   font-size: 1em;
   text-align: center;
+}
+
+.choice-btn:hover,
+.choice-btn:focus {
+  background-color: rgba(61, 61, 61, 0.15);
+  outline: solid 2px black;
+  color: white
 }
 
 .choice-btn.correct {
