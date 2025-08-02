@@ -286,7 +286,7 @@ toggleBtn.addEventListener('click', () => {
   showingAnswers = !showingAnswers;
 
   // Update button text/icon
-  toggleBtn.textContent = showingAnswers ? '❌' : '✔️';
+  toggleBtn.textContent = showingAnswers ? '🙈' : '🫣';
 
   // Highlight or remove highlight from the correct choice buttons on current question
   Array.from(choicesEl.children).forEach(btn => {
