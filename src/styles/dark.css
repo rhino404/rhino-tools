@@ -88,3 +88,8 @@ body.dark-mode .question {
 .category-btn {
   background: linear-gradient(to right, #1a755e, #198368);
 }
+
+.choice-btn:hover,
+.choice-btn:focus {
+  outline: solid 2px white;
+}
