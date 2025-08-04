@@ -1,6 +1,6 @@
 export const hamRadioQuestions = [
   {
-    "question": "[T1A] Which of the following is part of the Basis and Purpose of the Amateur Radio Service?",
+    "question": "Which of the following is part of the Basis and Purpose of the Amateur Radio Service?",
     "choices": [
       "Providing personal radio communications for as many citizens as possible",
       "Providing communications for international non-profit organizations",
@@ -11,10 +11,12 @@ export const hamRadioQuestions = [
     "explanation": "Advancing skills in the technical and communication phases of the radio art",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1A] Which agency regulates and enforces the rules for the Amateur Radio Service in the United States?",
+    "question": "Which agency regulates and enforces the rules for the Amateur Radio Service in the United States?",
     "choices": [
       "FEMA",
       "Homeland Security",
@@ -25,10 +27,12 @@ export const hamRadioQuestions = [
     "explanation": "The FCC",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1A] What do the FCC rules state regarding the use of a phonetic alphabet for station identification in the Amateur Radio Service?",
+    "question": "What do the FCC rules state regarding the use of a phonetic alphabet for station identification in the Amateur Radio Service?",
     "choices": [
       "It is required when transmitting emergency messages",
       "It is encouraged",
@@ -39,10 +43,12 @@ export const hamRadioQuestions = [
     "explanation": "It is encouraged",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1A] How many operator/primary station license grants may be held by any one person?",
+    "question": "How many operator/primary station license grants may be held by any one person?",
     "choices": [
       "One",
       "No more than two",
@@ -53,10 +59,12 @@ export const hamRadioQuestions = [
     "explanation": "One",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1A] What proves that the FCC has issued an operator/primary license grant?",
+    "question": "What proves that the FCC has issued an operator/primary license grant?",
     "choices": [
       "A printed copy of the certificate of successful completion of examination",
       "An email notification from the NCVEC granting the license",
@@ -67,10 +75,12 @@ export const hamRadioQuestions = [
     "explanation": "The license appears in the FCC ULS database",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1A] What is the FCC Part 97 definition of a beacon?",
+    "question": "What is the FCC Part 97 definition of a beacon?",
     "choices": [
       "A government transmitter marking the amateur radio band edges",
       "A bulletin sent by the FCC to announce a national emergency",
@@ -81,10 +91,12 @@ export const hamRadioQuestions = [
     "explanation": "An amateur station transmitting communications for the purposes of observing propagation or related experimental activities",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1A] What is the FCC Part 97 definition of a space station?",
+    "question": "What is the FCC Part 97 definition of a space station?",
     "choices": [
       "Any satellite orbiting Earth",
       "A manned satellite orbiting Earth",
@@ -95,10 +107,12 @@ export const hamRadioQuestions = [
     "explanation": "An amateur station located more than 50 km above Earth's surface",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1A] Which of the following entities recommends transmit/receive channels and other parameters for auxiliary and repeater stations?",
+    "question": "Which of the following entities recommends transmit/receive channels and other parameters for auxiliary and repeater stations?",
     "choices": [
       "Frequency Spectrum Manager appointed by the FCC",
       "Volunteer Frequency Coordinator recognized by local amateurs",
@@ -109,10 +123,12 @@ export const hamRadioQuestions = [
     "explanation": "Volunteer Frequency Coordinator recognized by local amateurs",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1A] Who selects a Frequency Coordinator?",
+    "question": "Who selects a Frequency Coordinator?",
     "choices": [
       "The FCC Office of Spectrum Management and Coordination Policy",
       "The local chapter of the Office of National Council of Independent Frequency Coordinators",
@@ -123,10 +139,12 @@ export const hamRadioQuestions = [
     "explanation": "Amateur operators in a local or regional area whose stations are eligible to be repeater or auxiliary stations",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1A] What is the Radio Amateur Civil Emergency Service (RACES)?",
+    "question": "What is the Radio Amateur Civil Emergency Service (RACES)?",
     "choices": [
       "A radio service using amateur frequencies for emergency management or civil defense communications",
       "A radio service using amateur stations for emergency management or civil defense communications",
@@ -137,10 +155,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1A] When is willful interference to other amateur radio stations permitted?",
+    "question": "When is willful interference to other amateur radio stations permitted?",
     "choices": [
       "To stop another amateur station that is breaking the FCC rules",
       "At no time",
@@ -151,10 +171,12 @@ export const hamRadioQuestions = [
     "explanation": "At no time",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1B] Which of the following frequency ranges are available for phone operation by Technician licensees?",
+    "question": "Which of the following frequency ranges are available for phone operation by Technician licensees?",
     "choices": [
       "28.050 MHz to 28.150 MHz",
       "28.100 MHz to 28.300 MHz",
@@ -165,10 +187,12 @@ export const hamRadioQuestions = [
     "explanation": "28.300 MHz to 28.500 MHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1B] Which amateurs may contact the International Space Station (ISS) on VHF bands?",
+    "question": "Which amateurs may contact the International Space Station (ISS) on VHF bands?",
     "choices": [
       "Any amateur holding a General class or higher license",
       "Any amateur holding a Technician class or higher license",
@@ -179,10 +203,12 @@ export const hamRadioQuestions = [
     "explanation": "Any amateur holding a Technician class or higher license",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1B] Which frequency is in the 6 meter amateur band?",
+    "question": "Which frequency is in the 6 meter amateur band?",
     "choices": [
       "49.00 MHz",
       "52.525 MHz",
@@ -193,10 +219,12 @@ export const hamRadioQuestions = [
     "explanation": "52.525 MHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1B] Which amateur band includes 146.52 MHz?",
+    "question": "Which amateur band includes 146.52 MHz?",
     "choices": [
       "6 meters",
       "20 meters",
@@ -207,10 +235,12 @@ export const hamRadioQuestions = [
     "explanation": "2 meters",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1B] How may amateurs use the 219 to 220 MHz segment of 1.25 meter band?",
+    "question": "How may amateurs use the 219 to 220 MHz segment of 1.25 meter band?",
     "choices": [
       "Spread spectrum only",
       "Fast-scan television only",
@@ -221,10 +251,12 @@ export const hamRadioQuestions = [
     "explanation": "Fixed digital message forwarding systems only",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1B] On which HF bands does a Technician class operator have phone privileges?",
+    "question": "On which HF bands does a Technician class operator have phone privileges?",
     "choices": [
       "None",
       "10 meter band only",
@@ -235,10 +267,12 @@ export const hamRadioQuestions = [
     "explanation": "10 meter band only",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1B] Which of the following VHF/UHF band segments are limited to CW only?",
+    "question": "Which of the following VHF/UHF band segments are limited to CW only?",
     "choices": [
       "50.0 MHz to 50.1 MHz and 144.0 MHz to 144.1 MHz",
       "219 MHz to 220 MHz and 420.0 MHz to 420.1 MHz",
@@ -249,10 +283,12 @@ export const hamRadioQuestions = [
     "explanation": "50.0 MHz to 50.1 MHz and 144.0 MHz to 144.1 MHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1B] How are US amateurs restricted in segments of bands where the Amateur Radio Service is secondary?",
+    "question": "How are US amateurs restricted in segments of bands where the Amateur Radio Service is secondary?",
     "choices": [
       "U.S. amateurs may find non-amateur stations in those segments, and must avoid interfering with them",
       "U.S. amateurs must give foreign amateur stations priority in those segments",
@@ -263,10 +299,12 @@ export const hamRadioQuestions = [
     "explanation": "U.S. amateurs may find non-amateur stations in those segments, and must avoid interfering with them",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1B] Why should you not set your transmit frequency to be exactly at the edge of an amateur band or sub-band?",
+    "question": "Why should you not set your transmit frequency to be exactly at the edge of an amateur band or sub-band?",
     "choices": [
       "To allow for calibration error in the transmitter frequency display",
       "So that modulation sidebands do not extend beyond the band edge",
@@ -277,10 +315,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1B] Where may SSB phone be used in amateur bands above 50 MHz?",
+    "question": "Where may SSB phone be used in amateur bands above 50 MHz?",
     "choices": [
       "Only in sub-bands allocated to General class or higher licensees",
       "Only on repeaters",
@@ -291,10 +331,12 @@ export const hamRadioQuestions = [
     "explanation": "In at least some segment of all these bands",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1B] What is the maximum peak envelope power output for Technician class operators in their HF band segments?",
+    "question": "What is the maximum peak envelope power output for Technician class operators in their HF band segments?",
     "choices": [
       "200 watts",
       "100 watts",
@@ -305,10 +347,12 @@ export const hamRadioQuestions = [
     "explanation": "200 watts",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1B] Except for some specific restrictions, what is the maximum peak envelope power output for Technician class operators using frequencies above 30 MHz?",
+    "question": "Except for some specific restrictions, what is the maximum peak envelope power output for Technician class operators using frequencies above 30 MHz?",
     "choices": [
       "50 watts",
       "100 watts",
@@ -319,10 +363,12 @@ export const hamRadioQuestions = [
     "explanation": "1500 watts",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1C] For which license classes are new licenses currently available from the FCC?",
+    "question": "For which license classes are new licenses currently available from the FCC?",
     "choices": [
       "Novice, Technician, General, Amateur Extra",
       "Technician, Technician Plus, General, Amateur Extra",
@@ -333,10 +379,12 @@ export const hamRadioQuestions = [
     "explanation": "Technician, General, Amateur Extra",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1C] Who may select a desired call sign under the vanity call sign rules?",
+    "question": "Who may select a desired call sign under the vanity call sign rules?",
     "choices": [
       "Only a licensed amateur with a General or Amateur Extra Class license",
       "Only a licensed amateur with an Amateur Extra Class license",
@@ -347,10 +395,12 @@ export const hamRadioQuestions = [
     "explanation": "Any licensed amateur",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1C] What types of international communications are an FCC-licensed amateur radio station permitted to make?",
+    "question": "What types of international communications are an FCC-licensed amateur radio station permitted to make?",
     "choices": [
       "Communications incidental to the purposes of the Amateur Radio Service and remarks of a personal character",
       "Communications incidental to conducting business or remarks of a personal nature",
@@ -361,10 +411,12 @@ export const hamRadioQuestions = [
     "explanation": "Communications incidental to the purposes of the Amateur Radio Service and remarks of a personal character",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1C] What may happen if the FCC is unable to reach you by email?",
+    "question": "What may happen if the FCC is unable to reach you by email?",
     "choices": [
       "Fine and suspension of operator license",
       "Revocation of the station license or suspension of the operator license",
@@ -375,10 +427,12 @@ export const hamRadioQuestions = [
     "explanation": "Revocation of the station license or suspension of the operator license",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1C] Which of the following is a valid Technician class call sign format?",
+    "question": "Which of the following is a valid Technician class call sign format?",
     "choices": [
       "KF1XXX",
       "KA1X",
@@ -389,10 +443,12 @@ export const hamRadioQuestions = [
     "explanation": "KF1XXX",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1C] From which of the following locations may an FCC-licensed amateur station transmit?",
+    "question": "From which of the following locations may an FCC-licensed amateur station transmit?",
     "choices": [
       "From within any country that belongs to the International Telecommunication Union",
       "From within any country that is a member of the United Nations",
@@ -403,10 +459,12 @@ export const hamRadioQuestions = [
     "explanation": "From any vessel or craft located in international waters and documented or registered in the United States",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1C] Which of the following can result in revocation of the station license or suspension of the operator license?",
+    "question": "Which of the following can result in revocation of the station license or suspension of the operator license?",
     "choices": [
       "Failure to inform the FCC of any changes in the amateur station following performance of an RF safety environmental evaluation",
       "Failure to provide and maintain a correct email address with the FCC",
@@ -417,10 +475,12 @@ export const hamRadioQuestions = [
     "explanation": "Failure to provide and maintain a correct email address with the FCC",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1C] What is the normal term for an FCC-issued amateur radio license?",
+    "question": "What is the normal term for an FCC-issued amateur radio license?",
     "choices": [
       "Five years",
       "Life",
@@ -431,10 +491,12 @@ export const hamRadioQuestions = [
     "explanation": "Ten years",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1C] What is the grace period for renewal if an amateur license expires?",
+    "question": "What is the grace period for renewal if an amateur license expires?",
     "choices": [
       "Two years",
       "Three years",
@@ -445,10 +507,12 @@ export const hamRadioQuestions = [
     "explanation": "Two years",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1C] How soon after passing the examination for your first amateur radio license may you transmit on the amateur radio bands?",
+    "question": "How soon after passing the examination for your first amateur radio license may you transmit on the amateur radio bands?",
     "choices": [
       "Immediately on receiving your Certificate of Successful Completion of Examination (CSCE)",
       "As soon as your operator/station license grant appears on the ARRL website",
@@ -459,10 +523,12 @@ export const hamRadioQuestions = [
     "explanation": "As soon as your operator/station license grant appears in the FCC\u2019s license database",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1C] If your license has expired and is still within the allowable grace period, may you continue to transmit on the amateur radio bands?",
+    "question": "If your license has expired and is still within the allowable grace period, may you continue to transmit on the amateur radio bands?",
     "choices": [
       "Yes, for up to two years",
       "Yes, as soon as you apply for renewal",
@@ -473,10 +539,12 @@ export const hamRadioQuestions = [
     "explanation": "No, you must wait until the license has been renewed",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1D] With which countries are FCC-licensed amateur radio stations prohibited from exchanging communications?",
+    "question": "With which countries are FCC-licensed amateur radio stations prohibited from exchanging communications?",
     "choices": [
       "Any country whose administration has notified the International Telecommunication Union (ITU) that it objects to such communications",
       "Any country whose administration has notified the American Radio Relay League (ARRL) that it objects to such communications",
@@ -487,10 +555,12 @@ export const hamRadioQuestions = [
     "explanation": "Any country whose administration has notified the International Telecommunication Union (ITU) that it objects to such communications",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1D] Under which of the following circumstances are one-way transmissions by an amateur station prohibited?",
+    "question": "Under which of the following circumstances are one-way transmissions by an amateur station prohibited?",
     "choices": [
       "In all circumstances",
       "Broadcasting",
@@ -501,10 +571,12 @@ export const hamRadioQuestions = [
     "explanation": "Broadcasting",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1D] When is it permissible to transmit messages encoded to obscure their meaning?",
+    "question": "When is it permissible to transmit messages encoded to obscure their meaning?",
     "choices": [
       "Only during contests",
       "Only when transmitting certain approved digital codes",
@@ -515,10 +587,12 @@ export const hamRadioQuestions = [
     "explanation": "Only when transmitting control commands to space stations or radio control craft",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1D] Under what conditions is an amateur station authorized to transmit music using a phone emission?",
+    "question": "Under what conditions is an amateur station authorized to transmit music using a phone emission?",
     "choices": [
       "When incidental to an authorized retransmission of manned spacecraft communications",
       "When the music produces no spurious emissions",
@@ -529,10 +603,12 @@ export const hamRadioQuestions = [
     "explanation": "When incidental to an authorized retransmission of manned spacecraft communications",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1D] When may amateur radio operators use their stations to notify other amateurs of the availability of equipment for sale or trade?",
+    "question": "When may amateur radio operators use their stations to notify other amateurs of the availability of equipment for sale or trade?",
     "choices": [
       "Never",
       "When the equipment is not the personal property of either the station licensee, or the control operator, or their close relatives",
@@ -543,10 +619,12 @@ export const hamRadioQuestions = [
     "explanation": "When selling amateur radio equipment and not on a regular basis",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1D] What, if any, are the restrictions concerning transmission of language that may be considered indecent or obscene?",
+    "question": "What, if any, are the restrictions concerning transmission of language that may be considered indecent or obscene?",
     "choices": [
       "The FCC maintains a list of words that are not permitted to be used on amateur frequencies",
       "Any such language is prohibited",
@@ -557,10 +635,12 @@ export const hamRadioQuestions = [
     "explanation": "Any such language is prohibited",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1D] What types of amateur stations can automatically retransmit the signals of other amateur stations?",
+    "question": "What types of amateur stations can automatically retransmit the signals of other amateur stations?",
     "choices": [
       "Auxiliary, beacon, or Earth stations",
       "Earth, repeater, or space stations",
@@ -571,10 +651,12 @@ export const hamRadioQuestions = [
     "explanation": "Repeater, auxiliary, or space stations",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1D] In which of the following circumstances may the control operator of an amateur station receive compensation for operating that station?",
+    "question": "In which of the following circumstances may the control operator of an amateur station receive compensation for operating that station?",
     "choices": [
       "When the communication is related to the sale of amateur equipment by the control operator's employer",
       "When the communication is incidental to classroom instruction at an educational institution",
@@ -585,10 +667,12 @@ export const hamRadioQuestions = [
     "explanation": "When the communication is incidental to classroom instruction at an educational institution",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1D] When may amateur stations transmit information in support of broadcasting, program production, or news gathering, assuming no other means is available?",
+    "question": "When may amateur stations transmit information in support of broadcasting, program production, or news gathering, assuming no other means is available?",
     "choices": [
       "When such communications are directly related to the immediate safety of human life or protection of property",
       "When broadcasting communications to or from the space shuttle",
@@ -599,10 +683,12 @@ export const hamRadioQuestions = [
     "explanation": "When such communications are directly related to the immediate safety of human life or protection of property",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1D] How does the FCC define broadcasting for the Amateur Radio Service?",
+    "question": "How does the FCC define broadcasting for the Amateur Radio Service?",
     "choices": [
       "Two-way transmissions by amateur stations",
       "Any transmission made by the licensed station",
@@ -613,10 +699,12 @@ export const hamRadioQuestions = [
     "explanation": "Transmissions intended for reception by the general public",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1D] When may an amateur station transmit without identifying on the air?",
+    "question": "When may an amateur station transmit without identifying on the air?",
     "choices": [
       "When the transmissions are of a brief nature to make station adjustments",
       "When the transmissions are unmodulated",
@@ -627,10 +715,12 @@ export const hamRadioQuestions = [
     "explanation": "When transmitting signals to control model craft",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1E] When may an amateur station transmit without a control operator?",
+    "question": "When may an amateur station transmit without a control operator?",
     "choices": [
       "When using automatic control, such as in the case of a repeater",
       "When the station licensee is away and another licensed amateur is using the station",
@@ -641,10 +731,12 @@ export const hamRadioQuestions = [
     "explanation": "Never",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1E",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1E] Who may be the control operator of a station communicating through an amateur satellite or space station?",
+    "question": "Who may be the control operator of a station communicating through an amateur satellite or space station?",
     "choices": [
       "Only an Amateur Extra Class operator",
       "A General class or higher licensee with a satellite operator certification",
@@ -655,10 +747,12 @@ export const hamRadioQuestions = [
     "explanation": "Any amateur allowed to transmit on the satellite uplink frequency",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1E",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1E] Who must designate the station control operator?",
+    "question": "Who must designate the station control operator?",
     "choices": [
       "The station licensee",
       "The FCC",
@@ -669,10 +763,12 @@ export const hamRadioQuestions = [
     "explanation": "The station licensee",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1E",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1E] What determines the transmitting frequency privileges of an amateur station?",
+    "question": "What determines the transmitting frequency privileges of an amateur station?",
     "choices": [
       "The frequency authorized by the frequency coordinator",
       "The frequencies printed on the license grant",
@@ -683,10 +779,12 @@ export const hamRadioQuestions = [
     "explanation": "The class of operator license held by the control operator",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1E",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1E] What is an amateur station\u2019s control point?",
+    "question": "What is an amateur station\u2019s control point?",
     "choices": [
       "The location of the station\u2019s transmitting antenna",
       "The location of the station\u2019s transmitting apparatus",
@@ -697,10 +795,12 @@ export const hamRadioQuestions = [
     "explanation": "The location at which the control operator function is performed",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1E",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1E] When, under normal circumstances, may a Technician class licensee be the control operator of a station operating in an Amateur Extra Class band segment?",
+    "question": "When, under normal circumstances, may a Technician class licensee be the control operator of a station operating in an Amateur Extra Class band segment?",
     "choices": [
       "At no time",
       "When designated as the control operator by an Amateur Extra Class licensee",
@@ -711,10 +811,12 @@ export const hamRadioQuestions = [
     "explanation": "At no time",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1E",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1E] When the control operator is not the station licensee, who is responsible for the proper operation of the station?",
+    "question": "When the control operator is not the station licensee, who is responsible for the proper operation of the station?",
     "choices": [
       "All licensed amateurs who are present at the operation",
       "Only the station licensee",
@@ -725,10 +827,12 @@ export const hamRadioQuestions = [
     "explanation": "The control operator and the station licensee",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1E",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1E] Which of the following is an example of automatic control?",
+    "question": "Which of the following is an example of automatic control?",
     "choices": [
       "Repeater operation",
       "Controlling a station over the internet",
@@ -739,10 +843,12 @@ export const hamRadioQuestions = [
     "explanation": "Repeater operation",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1E",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1E] Which of the following are required for remote control operation?",
+    "question": "Which of the following are required for remote control operation?",
     "choices": [
       "The control operator must be at the control point",
       "A control operator is required at all times",
@@ -753,10 +859,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1E",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1E] Which of the following is an example of remote control as defined in Part 97?",
+    "question": "Which of the following is an example of remote control as defined in Part 97?",
     "choices": [
       "Repeater operation",
       "Operating the station over the internet",
@@ -767,10 +875,12 @@ export const hamRadioQuestions = [
     "explanation": "Operating the station over the internet",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1E",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1E] Who does the FCC presume to be the control operator of an amateur station, unless documentation to the contrary is in the station records?",
+    "question": "Who does the FCC presume to be the control operator of an amateur station, unless documentation to the contrary is in the station records?",
     "choices": [
       "The station custodian",
       "The third party participant",
@@ -781,10 +891,12 @@ export const hamRadioQuestions = [
     "explanation": "The station licensee",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1E",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1F] When must the station and its records be available for FCC inspection?",
+    "question": "When must the station and its records be available for FCC inspection?",
     "choices": [
       "At any time ten days after notification by the FCC of such an inspection",
       "At any time upon request by an FCC representative",
@@ -795,10 +907,12 @@ export const hamRadioQuestions = [
     "explanation": "At any time upon request by an FCC representative",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1F",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1F] How often must you identify with your FCC-assigned call sign when using tactical call signs such as \u201cRace Headquarters\u201d?",
+    "question": "How often must you identify with your FCC-assigned call sign when using tactical call signs such as \u201cRace Headquarters\u201d?",
     "choices": [
       "Never, the tactical call is sufficient",
       "Once during every hour",
@@ -809,10 +923,12 @@ export const hamRadioQuestions = [
     "explanation": "At the end of each communication and every ten minutes during a communication",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1F",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1F] When are you required to transmit your assigned call sign?",
+    "question": "When are you required to transmit your assigned call sign?",
     "choices": [
       "At the beginning of each contact, and every 10 minutes thereafter",
       "At least once during each transmission",
@@ -823,10 +939,12 @@ export const hamRadioQuestions = [
     "explanation": "At least every 10 minutes during and at the end of a communication",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1F",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1F] What language may you use for identification when operating in a phone sub-band?",
+    "question": "What language may you use for identification when operating in a phone sub-band?",
     "choices": [
       "Any language recognized by the United Nations",
       "Any language recognized by the ITU",
@@ -837,10 +955,12 @@ export const hamRadioQuestions = [
     "explanation": "English",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1F",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1F] What method of call sign identification is required for a station transmitting phone signals?",
+    "question": "What method of call sign identification is required for a station transmitting phone signals?",
     "choices": [
       "Send the call sign followed by the indicator RPT",
       "Send the call sign using a CW or phone emission",
@@ -851,10 +971,12 @@ export const hamRadioQuestions = [
     "explanation": "Send the call sign using a CW or phone emission",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1F",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1F] Which of the following self-assigned indicators are acceptable when using a phone transmission?",
+    "question": "Which of the following self-assigned indicators are acceptable when using a phone transmission?",
     "choices": [
       "KL7CC stroke W3",
       "KL7CC slant W3",
@@ -865,10 +987,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1F",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1F] Which of the following restrictions apply when a non-licensed person is allowed to speak to a foreign station using a station under the control of a licensed amateur operator?",
+    "question": "Which of the following restrictions apply when a non-licensed person is allowed to speak to a foreign station using a station under the control of a licensed amateur operator?",
     "choices": [
       "The person must be a U.S. citizen",
       "The foreign station must be in a country with which the U.S. has a third party agreement",
@@ -879,10 +1003,12 @@ export const hamRadioQuestions = [
     "explanation": "The foreign station must be in a country with which the U.S. has a third party agreement",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1F",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1F] What is the definition of third party communications?",
+    "question": "What is the definition of third party communications?",
     "choices": [
       "A message from a control operator to another amateur station control operator on behalf of another person",
       "Amateur radio communications where three stations are in communications with one another",
@@ -893,10 +1019,12 @@ export const hamRadioQuestions = [
     "explanation": "A message from a control operator to another amateur station control operator on behalf of another person",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1F",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1F] What type of amateur station simultaneously retransmits the signal of another amateur station on a different channel or channels?",
+    "question": "What type of amateur station simultaneously retransmits the signal of another amateur station on a different channel or channels?",
     "choices": [
       "Beacon station",
       "Earth station",
@@ -907,10 +1035,12 @@ export const hamRadioQuestions = [
     "explanation": "Repeater station",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1F",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1F] Who is accountable if a repeater inadvertently retransmits communications that violate the FCC rules?",
+    "question": "Who is accountable if a repeater inadvertently retransmits communications that violate the FCC rules?",
     "choices": [
       "The control operator of the originating station",
       "The control operator of the repeater",
@@ -921,10 +1051,12 @@ export const hamRadioQuestions = [
     "explanation": "The control operator of the originating station",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1F",
     "type": "multiple-choice"
   },
   {
-    "question": "[T1F] Which of the following is a requirement for the issuance of a club station license grant?",
+    "question": "Which of the following is a requirement for the issuance of a club station license grant?",
     "choices": [
       "The trustee must have an Amateur Extra Class operator license grant",
       "The club must have at least four members",
@@ -935,10 +1067,12 @@ export const hamRadioQuestions = [
     "explanation": "The club must have at least four members",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T1F",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2A] What is a common repeater frequency offset in the 2 meter band?",
+    "question": "What is a common repeater frequency offset in the 2 meter band?",
     "choices": [
       "Plus or minus 5 MHz",
       "Plus or minus 600 kHz",
@@ -949,10 +1083,12 @@ export const hamRadioQuestions = [
     "explanation": "Plus or minus 600 kHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2A] What is the national calling frequency for FM simplex operations in the 2 meter band?",
+    "question": "What is the national calling frequency for FM simplex operations in the 2 meter band?",
     "choices": [
       "146.520 MHz",
       "145.000 MHz",
@@ -963,10 +1099,12 @@ export const hamRadioQuestions = [
     "explanation": "146.520 MHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2A] What is a common repeater frequency offset in the 70 cm band?",
+    "question": "What is a common repeater frequency offset in the 70 cm band?",
     "choices": [
       "Plus or minus 5 MHz",
       "Plus or minus 600 kHz",
@@ -977,10 +1115,12 @@ export const hamRadioQuestions = [
     "explanation": "Plus or minus 5 MHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2A] What is an appropriate way to call another station on a repeater if you know the other station's call sign?",
+    "question": "What is an appropriate way to call another station on a repeater if you know the other station's call sign?",
     "choices": [
       "Say \"break, break,\" then say the station's call sign",
       "Say the station's call sign, then identify with your call sign",
@@ -991,10 +1131,12 @@ export const hamRadioQuestions = [
     "explanation": "Say the station's call sign, then identify with your call sign",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2A] How should you respond to a station calling CQ?",
+    "question": "How should you respond to a station calling CQ?",
     "choices": [
       "Transmit \"CQ\" followed by the other station\u2019s call sign",
       "Transmit your call sign followed by the other station\u2019s call sign",
@@ -1005,10 +1147,12 @@ export const hamRadioQuestions = [
     "explanation": "Transmit the other station\u2019s call sign followed by your call sign",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2A] Which of the following is required when making on-the-air test transmissions?",
+    "question": "Which of the following is required when making on-the-air test transmissions?",
     "choices": [
       "Identify the transmitting station",
       "Conduct tests only between 10 p.m. and 6 a.m. local time",
@@ -1019,10 +1163,12 @@ export const hamRadioQuestions = [
     "explanation": "Identify the transmitting station",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2A] What is meant by \"repeater offset\u201d?",
+    "question": "What is meant by \"repeater offset\u201d?",
     "choices": [
       "The difference between a repeater\u2019s transmit and receive frequencies",
       "The repeater has a time delay to prevent interference",
@@ -1033,10 +1179,12 @@ export const hamRadioQuestions = [
     "explanation": "The difference between a repeater\u2019s transmit and receive frequencies",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2A] What is the meaning of the procedural signal \u201cCQ\u201d?",
+    "question": "What is the meaning of the procedural signal \u201cCQ\u201d?",
     "choices": [
       "Call on the quarter hour",
       "Test transmission, no reply expected",
@@ -1047,10 +1195,12 @@ export const hamRadioQuestions = [
     "explanation": "Calling any station",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2A] Which of the following indicates that a station is listening on a repeater and looking for a contact?",
+    "question": "Which of the following indicates that a station is listening on a repeater and looking for a contact?",
     "choices": [
       "\u201cCQ CQ\u201d followed by the repeater\u2019s call sign",
       "The station\u2019s call sign followed by the word \u201cmonitoring\u201d",
@@ -1061,10 +1211,12 @@ export const hamRadioQuestions = [
     "explanation": "The station\u2019s call sign followed by the word \u201cmonitoring\u201d",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2A] What is a band plan, beyond the privileges established by the FCC?",
+    "question": "What is a band plan, beyond the privileges established by the FCC?",
     "choices": [
       "A voluntary guideline for using different modes or activities within an amateur band",
       "A list of operating schedules",
@@ -1075,10 +1227,12 @@ export const hamRadioQuestions = [
     "explanation": "A voluntary guideline for using different modes or activities within an amateur band",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2A] What term describes an amateur station that is transmitting and receiving on the same frequency?",
+    "question": "What term describes an amateur station that is transmitting and receiving on the same frequency?",
     "choices": [
       "Full duplex",
       "Diplex",
@@ -1089,10 +1243,12 @@ export const hamRadioQuestions = [
     "explanation": "Simplex",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2A] What should you do before calling CQ?",
+    "question": "What should you do before calling CQ?",
     "choices": [
       "Listen first to be sure that no one else is using the frequency",
       "Ask if the frequency is in use",
@@ -1103,10 +1259,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] How is a VHF/UHF transceiver\u2019s \u201creverse\u201d function used?",
+    "question": "How is a VHF/UHF transceiver\u2019s \u201creverse\u201d function used?",
     "choices": [
       "To reduce power output",
       "To increase power output",
@@ -1117,10 +1275,12 @@ export const hamRadioQuestions = [
     "explanation": "To listen on a repeater\u2019s input frequency",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] What term describes the use of a sub-audible tone transmitted along with normal voice audio to open the squelch of a receiver?",
+    "question": "What term describes the use of a sub-audible tone transmitted along with normal voice audio to open the squelch of a receiver?",
     "choices": [
       "Carrier squelch",
       "Tone burst",
@@ -1131,10 +1291,12 @@ export const hamRadioQuestions = [
     "explanation": "CTCSS",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] Which of the following describes a linked repeater network?",
+    "question": "Which of the following describes a linked repeater network?",
     "choices": [
       "A network of repeaters in which signals received by one repeater are transmitted by all the repeaters in the network",
       "A single repeater with more than one receiver",
@@ -1145,10 +1307,12 @@ export const hamRadioQuestions = [
     "explanation": "A network of repeaters in which signals received by one repeater are transmitted by all the repeaters in the network",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] Which of the following could be the reason you are unable to access a repeater whose output you can hear?",
+    "question": "Which of the following could be the reason you are unable to access a repeater whose output you can hear?",
     "choices": [
       "Improper transceiver offset",
       "You are using the wrong CTCSS tone",
@@ -1159,10 +1323,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] What would cause your FM transmission audio to be distorted on voice peaks?",
+    "question": "What would cause your FM transmission audio to be distorted on voice peaks?",
     "choices": [
       "Your repeater offset is inverted",
       "You need to talk louder",
@@ -1173,10 +1339,12 @@ export const hamRadioQuestions = [
     "explanation": "You are talking too loudly",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] What type of signaling uses pairs of audio tones?",
+    "question": "What type of signaling uses pairs of audio tones?",
     "choices": [
       "DTMF",
       "CTCSS",
@@ -1187,10 +1355,12 @@ export const hamRadioQuestions = [
     "explanation": "DTMF",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] How can you join a digital repeater\u2019s \u201ctalkgroup\u201d?",
+    "question": "How can you join a digital repeater\u2019s \u201ctalkgroup\u201d?",
     "choices": [
       "Register your radio with the local FCC office",
       "Join the repeater owner\u2019s club",
@@ -1201,10 +1371,12 @@ export const hamRadioQuestions = [
     "explanation": "Program your radio with the group\u2019s ID or code",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] Which of the following applies when two stations transmitting on the same frequency interfere with each other?",
+    "question": "Which of the following applies when two stations transmitting on the same frequency interfere with each other?",
     "choices": [
       "The stations should negotiate continued use of the frequency",
       "Both stations should choose another frequency to avoid conflict",
@@ -1215,10 +1387,12 @@ export const hamRadioQuestions = [
     "explanation": "The stations should negotiate continued use of the frequency",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] Why are simplex channels designated in the VHF/UHF band plans?",
+    "question": "Why are simplex channels designated in the VHF/UHF band plans?",
     "choices": [
       "So stations within range of each other can communicate without tying up a repeater",
       "For contest operation",
@@ -1229,10 +1403,12 @@ export const hamRadioQuestions = [
     "explanation": "So stations within range of each other can communicate without tying up a repeater",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] Which Q signal indicates that you are receiving interference from other stations?",
+    "question": "Which Q signal indicates that you are receiving interference from other stations?",
     "choices": [
       "QRM",
       "QRN",
@@ -1243,10 +1419,12 @@ export const hamRadioQuestions = [
     "explanation": "QRM",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] Which Q signal indicates that you are changing frequency?",
+    "question": "Which Q signal indicates that you are changing frequency?",
     "choices": [
       "QRU",
       "QSY",
@@ -1257,10 +1435,12 @@ export const hamRadioQuestions = [
     "explanation": "QSY",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] What is the purpose of the color code used on DMR repeater systems?",
+    "question": "What is the purpose of the color code used on DMR repeater systems?",
     "choices": [
       "Must match the repeater color code for access",
       "Defines the frequency pair to use",
@@ -1271,10 +1451,12 @@ export const hamRadioQuestions = [
     "explanation": "Must match the repeater color code for access",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2B] What is the purpose of a squelch function?",
+    "question": "What is the purpose of a squelch function?",
     "choices": [
       "Reduce a CW transmitter's key clicks",
       "Mute the receiver audio when a signal is not present",
@@ -1285,10 +1467,12 @@ export const hamRadioQuestions = [
     "explanation": "Mute the receiver audio when a signal is not present",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2C] When do FCC rules NOT apply to the operation of an amateur station?",
+    "question": "When do FCC rules NOT apply to the operation of an amateur station?",
     "choices": [
       "When operating a RACES station",
       "When operating under special FEMA rules",
@@ -1299,10 +1483,12 @@ export const hamRadioQuestions = [
     "explanation": "FCC rules always apply",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2C] Which of the following are typical duties of a Net Control Station?",
+    "question": "Which of the following are typical duties of a Net Control Station?",
     "choices": [
       "Choose the regular net meeting time and frequency",
       "Ensure that all stations checking into the net are properly licensed for operation on the net frequency",
@@ -1313,10 +1499,12 @@ export const hamRadioQuestions = [
     "explanation": "Call the net to order and direct communications between stations checking in",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2C] What technique is used to ensure that voice messages containing unusual words are received correctly?",
+    "question": "What technique is used to ensure that voice messages containing unusual words are received correctly?",
     "choices": [
       "Send the words by voice and Morse code",
       "Speak very loudly into the microphone",
@@ -1327,10 +1515,12 @@ export const hamRadioQuestions = [
     "explanation": "Spell the words using a standard phonetic alphabet",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2C] What is RACES?",
+    "question": "What is RACES?",
     "choices": [
       "An emergency organization combining amateur radio and citizens band operators and frequencies",
       "An international radio experimentation society",
@@ -1341,10 +1531,12 @@ export const hamRadioQuestions = [
     "explanation": "An FCC part 97 amateur radio service for civil defense communications during national emergencies",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2C] What does the term \u201ctraffic\u201d refer to in net operation?",
+    "question": "What does the term \u201ctraffic\u201d refer to in net operation?",
     "choices": [
       "Messages exchanged by net stations",
       "The number of stations checking in and out of a net",
@@ -1355,10 +1547,12 @@ export const hamRadioQuestions = [
     "explanation": "Messages exchanged by net stations",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2C] What is the Amateur Radio Emergency Service (ARES)?",
+    "question": "What is the Amateur Radio Emergency Service (ARES)?",
     "choices": [
       "A group of licensed amateurs who have voluntarily registered their qualifications and equipment for communications duty in the public service",
       "A group of licensed amateurs who are members of the military and who voluntarily agreed to provide message handling services in the case of an emergency",
@@ -1369,10 +1563,12 @@ export const hamRadioQuestions = [
     "explanation": "A group of licensed amateurs who have voluntarily registered their qualifications and equipment for communications duty in the public service",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2C] Which of the following is standard practice when you participate in a net?",
+    "question": "Which of the following is standard practice when you participate in a net?",
     "choices": [
       "When first responding to the net control station, transmit your call sign, name, and address as in the FCC database",
       "Record the time of each of your transmissions",
@@ -1383,10 +1579,12 @@ export const hamRadioQuestions = [
     "explanation": "Unless you are reporting an emergency, transmit only when directed by the net control station",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2C] Which of the following is a characteristic of good traffic handling?",
+    "question": "Which of the following is a characteristic of good traffic handling?",
     "choices": [
       "Passing messages exactly as received",
       "Making decisions as to whether messages are worthy of relay or delivery",
@@ -1397,10 +1595,12 @@ export const hamRadioQuestions = [
     "explanation": "Passing messages exactly as received",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2C] Are amateur station control operators ever permitted to operate outside the frequency privileges of their license class?",
+    "question": "Are amateur station control operators ever permitted to operate outside the frequency privileges of their license class?",
     "choices": [
       "No",
       "Yes, but only when part of a FEMA emergency plan",
@@ -1411,10 +1611,12 @@ export const hamRadioQuestions = [
     "explanation": "Yes, but only in situations involving the immediate safety of human life or protection of property",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2C] What information is contained in the preamble of a formal traffic message?",
+    "question": "What information is contained in the preamble of a formal traffic message?",
     "choices": [
       "The email address of the originating station",
       "The address of the intended recipient",
@@ -1425,10 +1627,12 @@ export const hamRadioQuestions = [
     "explanation": "Information needed to track the message",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T2C] What is meant by \u201ccheck\u201d in a radiogram header?",
+    "question": "What is meant by \u201ccheck\u201d in a radiogram header?",
     "choices": [
       "The number of words or word equivalents in the text portion of the message",
       "The call sign of the originating station",
@@ -1439,10 +1643,12 @@ export const hamRadioQuestions = [
     "explanation": "The number of words or word equivalents in the text portion of the message",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T2C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3A] Why do VHF signal strengths sometimes vary greatly when the antenna is moved only a few feet?",
+    "question": "Why do VHF signal strengths sometimes vary greatly when the antenna is moved only a few feet?",
     "choices": [
       "The signal path encounters different concentrations of water vapor",
       "VHF ionospheric propagation is very sensitive to path length",
@@ -1453,10 +1659,12 @@ export const hamRadioQuestions = [
     "explanation": "Multipath propagation cancels or reinforces signals",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3A] What is the effect of vegetation on UHF and microwave signals?",
+    "question": "What is the effect of vegetation on UHF and microwave signals?",
     "choices": [
       "Knife-edge diffraction",
       "Absorption",
@@ -1467,10 +1675,12 @@ export const hamRadioQuestions = [
     "explanation": "Absorption",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3A] What antenna polarization is normally used for long-distance CW and SSB contacts on the VHF and UHF bands?",
+    "question": "What antenna polarization is normally used for long-distance CW and SSB contacts on the VHF and UHF bands?",
     "choices": [
       "Right-hand circular",
       "Left-hand circular",
@@ -1481,10 +1691,12 @@ export const hamRadioQuestions = [
     "explanation": "Horizontal",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3A] What happens when antennas at opposite ends of a VHF or UHF line of sight radio link are not using the same polarization?",
+    "question": "What happens when antennas at opposite ends of a VHF or UHF line of sight radio link are not using the same polarization?",
     "choices": [
       "The modulation sidebands might become inverted",
       "Received signal strength is reduced",
@@ -1495,10 +1707,12 @@ export const hamRadioQuestions = [
     "explanation": "Received signal strength is reduced",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3A] When using a directional antenna, how might your station be able to communicate with a distant repeater if buildings or obstructions are blocking the direct line of sight path?",
+    "question": "When using a directional antenna, how might your station be able to communicate with a distant repeater if buildings or obstructions are blocking the direct line of sight path?",
     "choices": [
       "Change from vertical to horizontal polarization",
       "Try to find a path that reflects signals to the repeater",
@@ -1509,10 +1723,12 @@ export const hamRadioQuestions = [
     "explanation": "Try to find a path that reflects signals to the repeater",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3A] What is the meaning of the term \u201cpicket fencing\u201d?",
+    "question": "What is the meaning of the term \u201cpicket fencing\u201d?",
     "choices": [
       "Alternating transmissions during a net operation",
       "Rapid flutter on mobile signals due to multipath propagation",
@@ -1523,10 +1739,12 @@ export const hamRadioQuestions = [
     "explanation": "Rapid flutter on mobile signals due to multipath propagation",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3A] What weather condition might decrease range at microwave frequencies?",
+    "question": "What weather condition might decrease range at microwave frequencies?",
     "choices": [
       "High winds",
       "Low barometric pressure",
@@ -1537,10 +1755,12 @@ export const hamRadioQuestions = [
     "explanation": "Precipitation",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3A] What is a likely cause of irregular fading of signals propagated by the ionosphere?",
+    "question": "What is a likely cause of irregular fading of signals propagated by the ionosphere?",
     "choices": [
       "Frequency shift due to Faraday rotation",
       "Interference from thunderstorms",
@@ -1551,10 +1771,12 @@ export const hamRadioQuestions = [
     "explanation": "Random combining of signals arriving via different paths",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3A] Which of the following results from the fact that signals propagated by the ionosphere are elliptically polarized?",
+    "question": "Which of the following results from the fact that signals propagated by the ionosphere are elliptically polarized?",
     "choices": [
       "Digital modes are unusable",
       "Either vertically or horizontally polarized antennas may be used for transmission or reception",
@@ -1565,10 +1787,12 @@ export const hamRadioQuestions = [
     "explanation": "Either vertically or horizontally polarized antennas may be used for transmission or reception",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3A] What effect does multi-path propagation have on data transmissions?",
+    "question": "What effect does multi-path propagation have on data transmissions?",
     "choices": [
       "Transmission rates must be increased by a factor equal to the number of separate paths observed",
       "Transmission rates must be decreased by a factor equal to the number of separate paths observed",
@@ -1579,10 +1803,12 @@ export const hamRadioQuestions = [
     "explanation": "Error rates are likely to increase",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3A] Which region of the atmosphere can refract or bend HF and VHF radio waves?",
+    "question": "Which region of the atmosphere can refract or bend HF and VHF radio waves?",
     "choices": [
       "The stratosphere",
       "The troposphere",
@@ -1593,10 +1819,12 @@ export const hamRadioQuestions = [
     "explanation": "The ionosphere",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3A] What is the effect of fog and rain on signals in the 10 meter and 6 meter bands?",
+    "question": "What is the effect of fog and rain on signals in the 10 meter and 6 meter bands?",
     "choices": [
       "Absorption",
       "There is little effect",
@@ -1607,10 +1835,12 @@ export const hamRadioQuestions = [
     "explanation": "There is little effect",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3B] What is the relationship between the electric and magnetic fields of an electromagnetic wave?",
+    "question": "What is the relationship between the electric and magnetic fields of an electromagnetic wave?",
     "choices": [
       "They travel at different speeds",
       "They are in parallel",
@@ -1621,10 +1851,12 @@ export const hamRadioQuestions = [
     "explanation": "They are at right angles",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3B] What property of a radio wave defines its polarization?",
+    "question": "What property of a radio wave defines its polarization?",
     "choices": [
       "The orientation of the electric field",
       "The orientation of the magnetic field",
@@ -1635,10 +1867,12 @@ export const hamRadioQuestions = [
     "explanation": "The orientation of the electric field",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3B] What are the two components of a radio wave?",
+    "question": "What are the two components of a radio wave?",
     "choices": [
       "Impedance and reactance",
       "Voltage and current",
@@ -1649,10 +1883,12 @@ export const hamRadioQuestions = [
     "explanation": "Electric and magnetic fields",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3B] What is the velocity of a radio wave traveling through free space?",
+    "question": "What is the velocity of a radio wave traveling through free space?",
     "choices": [
       "Speed of light",
       "Speed of sound",
@@ -1663,10 +1899,12 @@ export const hamRadioQuestions = [
     "explanation": "Speed of light",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3B] What is the relationship between wavelength and frequency?",
+    "question": "What is the relationship between wavelength and frequency?",
     "choices": [
       "Wavelength gets longer as frequency increases",
       "Wavelength gets shorter as frequency increases",
@@ -1677,10 +1915,12 @@ export const hamRadioQuestions = [
     "explanation": "Wavelength gets shorter as frequency increases",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3B] What is the formula for converting frequency to approximate wavelength in meters?",
+    "question": "What is the formula for converting frequency to approximate wavelength in meters?",
     "choices": [
       "Wavelength in meters equals frequency in hertz multiplied by 300",
       "Wavelength in meters equals frequency in hertz divided by 300",
@@ -1691,10 +1931,12 @@ export const hamRadioQuestions = [
     "explanation": "Wavelength in meters equals 300 divided by frequency in megahertz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3B] In addition to frequency, which of the following is used to identify amateur radio bands?",
+    "question": "In addition to frequency, which of the following is used to identify amateur radio bands?",
     "choices": [
       "The approximate wavelength in meters",
       "Traditional letter/number designators",
@@ -1705,10 +1947,12 @@ export const hamRadioQuestions = [
     "explanation": "The approximate wavelength in meters",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3B] What frequency range is referred to as VHF?",
+    "question": "What frequency range is referred to as VHF?",
     "choices": [
       "30 kHz to 300 kHz",
       "30 MHz to 300 MHz",
@@ -1719,10 +1963,12 @@ export const hamRadioQuestions = [
     "explanation": "30 MHz to 300 MHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3B] What frequency range is referred to as UHF?",
+    "question": "What frequency range is referred to as UHF?",
     "choices": [
       "30 to 300 kHz",
       "30 to 300 MHz",
@@ -1733,10 +1979,12 @@ export const hamRadioQuestions = [
     "explanation": "300 to 3000 MHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3B] What frequency range is referred to as HF?",
+    "question": "What frequency range is referred to as HF?",
     "choices": [
       "300 to 3000 MHz",
       "30 to 300 MHz",
@@ -1747,10 +1995,12 @@ export const hamRadioQuestions = [
     "explanation": "3 to 30 MHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3B] What is the approximate velocity of a radio wave in free space?",
+    "question": "What is the approximate velocity of a radio wave in free space?",
     "choices": [
       "150,000 meters per second",
       "300,000,000 meters per second",
@@ -1761,10 +2011,12 @@ export const hamRadioQuestions = [
     "explanation": "300,000,000 meters per second",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3C] Why are simplex UHF signals rarely heard beyond their radio horizon?",
+    "question": "Why are simplex UHF signals rarely heard beyond their radio horizon?",
     "choices": [
       "They are too weak to go very far",
       "FCC regulations prohibit them from going more than 50 miles",
@@ -1775,10 +2027,12 @@ export const hamRadioQuestions = [
     "explanation": "UHF signals are usually not propagated by the ionosphere",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3C] What is a characteristic of HF communication compared with communications on VHF and higher frequencies?",
+    "question": "What is a characteristic of HF communication compared with communications on VHF and higher frequencies?",
     "choices": [
       "HF antennas are generally smaller",
       "HF accommodates wider bandwidth signals",
@@ -1789,10 +2043,12 @@ export const hamRadioQuestions = [
     "explanation": "Long-distance ionospheric propagation is far more common on HF",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3C] What is a characteristic of VHF signals received via auroral backscatter?",
+    "question": "What is a characteristic of VHF signals received via auroral backscatter?",
     "choices": [
       "They are often received from 10,000 miles or more",
       "They are distorted and signal strength varies considerably",
@@ -1803,10 +2059,12 @@ export const hamRadioQuestions = [
     "explanation": "They are distorted and signal strength varies considerably",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3C] Which of the following types of propagation is most commonly associated with occasional strong signals on the 10, 6, and 2 meter bands from beyond the radio horizon?",
+    "question": "Which of the following types of propagation is most commonly associated with occasional strong signals on the 10, 6, and 2 meter bands from beyond the radio horizon?",
     "choices": [
       "Backscatter",
       "Sporadic E",
@@ -1817,10 +2075,12 @@ export const hamRadioQuestions = [
     "explanation": "Sporadic E",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3C] Which of the following effects may allow radio signals to travel beyond obstructions between the transmitting and receiving stations?",
+    "question": "Which of the following effects may allow radio signals to travel beyond obstructions between the transmitting and receiving stations?",
     "choices": [
       "Knife-edge diffraction",
       "Faraday rotation",
@@ -1831,10 +2091,12 @@ export const hamRadioQuestions = [
     "explanation": "Knife-edge diffraction",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3C] What type of propagation is responsible for allowing over-the-horizon VHF and UHF communications to ranges of approximately 300 miles on a regular basis?",
+    "question": "What type of propagation is responsible for allowing over-the-horizon VHF and UHF communications to ranges of approximately 300 miles on a regular basis?",
     "choices": [
       "Tropospheric ducting",
       "D region refraction",
@@ -1845,10 +2107,12 @@ export const hamRadioQuestions = [
     "explanation": "Tropospheric ducting",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3C] What band is best suited for communicating via meteor scatter?",
+    "question": "What band is best suited for communicating via meteor scatter?",
     "choices": [
       "33 centimeters",
       "6 meters",
@@ -1859,10 +2123,12 @@ export const hamRadioQuestions = [
     "explanation": "6 meters",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3C] What causes tropospheric ducting?",
+    "question": "What causes tropospheric ducting?",
     "choices": [
       "Discharges of lightning during electrical storms",
       "Sunspots and solar flares",
@@ -1873,10 +2139,12 @@ export const hamRadioQuestions = [
     "explanation": "Temperature inversions in the atmosphere",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3C] What is generally the best time for long-distance 10 meter band propagation via the F region?",
+    "question": "What is generally the best time for long-distance 10 meter band propagation via the F region?",
     "choices": [
       "From dawn to shortly after sunset during periods of high sunspot activity",
       "From shortly after sunset to dawn during periods of high sunspot activity",
@@ -1887,10 +2155,12 @@ export const hamRadioQuestions = [
     "explanation": "From dawn to shortly after sunset during periods of high sunspot activity",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3C] Which of the following bands may provide long-distance communications via the ionosphere\u2019s F region during the peak of the sunspot cycle?",
+    "question": "Which of the following bands may provide long-distance communications via the ionosphere\u2019s F region during the peak of the sunspot cycle?",
     "choices": [
       "6 and 10 meters",
       "23 centimeters",
@@ -1901,10 +2171,12 @@ export const hamRadioQuestions = [
     "explanation": "6 and 10 meters",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T3C] Why is the radio horizon for VHF and UHF signals more distant than the visual horizon?",
+    "question": "Why is the radio horizon for VHF and UHF signals more distant than the visual horizon?",
     "choices": [
       "Radio signals move somewhat faster than the speed of light",
       "Radio waves are not blocked by dust particles",
@@ -1915,10 +2187,12 @@ export const hamRadioQuestions = [
     "explanation": "The atmosphere refracts radio waves slightly",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T3C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4A] Which of the following is an appropriate power supply rating for a typical 50 watt output mobile FM transceiver?",
+    "question": "Which of the following is an appropriate power supply rating for a typical 50 watt output mobile FM transceiver?",
     "choices": [
       "24.0 volts at 4 amperes",
       "13.8 volts at 4 amperes",
@@ -1929,10 +2203,12 @@ export const hamRadioQuestions = [
     "explanation": "13.8 volts at 12 amperes",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4A] Which of the following should be considered when selecting an accessory SWR meter?",
+    "question": "Which of the following should be considered when selecting an accessory SWR meter?",
     "choices": [
       "The frequency and power level at which the measurements will be made",
       "The distance that the meter will be located from the antenna",
@@ -1943,10 +2219,12 @@ export const hamRadioQuestions = [
     "explanation": "The frequency and power level at which the measurements will be made",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4A] Why are short, heavy-gauge wires used for a transceiver\u2019s DC power connection?",
+    "question": "Why are short, heavy-gauge wires used for a transceiver\u2019s DC power connection?",
     "choices": [
       "To minimize voltage drop when transmitting",
       "To provide a good counterpoise for the antenna",
@@ -1957,10 +2235,12 @@ export const hamRadioQuestions = [
     "explanation": "To minimize voltage drop when transmitting",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4A] How are the transceiver audio input and output connected in a station configured to operate using FT8?",
+    "question": "How are the transceiver audio input and output connected in a station configured to operate using FT8?",
     "choices": [
       "To a computer running a terminal program and connected to a terminal node controller unit",
       "To the audio input and output of a computer running WSJT-X software",
@@ -1971,10 +2251,12 @@ export const hamRadioQuestions = [
     "explanation": "To the audio input and output of a computer running WSJT-X software",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4A] Where should an RF power meter be installed?",
+    "question": "Where should an RF power meter be installed?",
     "choices": [
       "In the feed line, between the transmitter and antenna",
       "At the power supply output",
@@ -1985,10 +2267,12 @@ export const hamRadioQuestions = [
     "explanation": "In the feed line, between the transmitter and antenna",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4A] What signals are used in a computer-radio interface for digital mode operation?",
+    "question": "What signals are used in a computer-radio interface for digital mode operation?",
     "choices": [
       "Receive and transmit mode, status, and location",
       "Antenna and RF power",
@@ -1999,10 +2283,12 @@ export const hamRadioQuestions = [
     "explanation": "Receive audio, transmit audio, and transmitter keying",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4A] Which of the following connections is made between a computer and a transceiver to use computer software when operating digital modes?",
+    "question": "Which of the following connections is made between a computer and a transceiver to use computer software when operating digital modes?",
     "choices": [
       "Computer \u201cline out\u201d to transceiver push-to-talk",
       "Computer \u201cline in\u201d to transceiver push-to-talk",
@@ -2013,10 +2299,12 @@ export const hamRadioQuestions = [
     "explanation": "Computer \u201cline in\u201d to transceiver speaker connector",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4A] Which of the following conductors is preferred for bonding at RF?",
+    "question": "Which of the following conductors is preferred for bonding at RF?",
     "choices": [
       "Copper braid removed from coaxial cable",
       "Steel wire",
@@ -2027,10 +2315,12 @@ export const hamRadioQuestions = [
     "explanation": "Flat copper strap",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4A] How can you determine the length of time that equipment can be powered from a battery?",
+    "question": "How can you determine the length of time that equipment can be powered from a battery?",
     "choices": [
       "Divide the watt-hour rating of the battery by the peak power consumption of the equipment",
       "Divide the battery ampere-hour rating by the average current draw of the equipment",
@@ -2041,10 +2331,12 @@ export const hamRadioQuestions = [
     "explanation": "Divide the battery ampere-hour rating by the average current draw of the equipment",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4A] What function is performed with a transceiver and a digital mode hot spot?",
+    "question": "What function is performed with a transceiver and a digital mode hot spot?",
     "choices": [
       "Communication using digital voice or data systems via the internet",
       "FT8 digital communications via AFSK",
@@ -2055,10 +2347,12 @@ export const hamRadioQuestions = [
     "explanation": "Communication using digital voice or data systems via the internet",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4A] Where should the negative power return of a mobile transceiver be connected in a vehicle?",
+    "question": "Where should the negative power return of a mobile transceiver be connected in a vehicle?",
     "choices": [
       "At the 12 volt battery chassis ground",
       "At the antenna mount",
@@ -2069,10 +2363,12 @@ export const hamRadioQuestions = [
     "explanation": "At the 12 volt battery chassis ground",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4A] What is an electronic keyer?",
+    "question": "What is an electronic keyer?",
     "choices": [
       "A device for switching antennas from transmit to receive",
       "A device for voice activated switching from receive to transmit",
@@ -2083,10 +2379,12 @@ export const hamRadioQuestions = [
     "explanation": "A device that assists in manual sending of Morse code",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4B] What is the effect of excessive microphone gain on SSB transmissions?",
+    "question": "What is the effect of excessive microphone gain on SSB transmissions?",
     "choices": [
       "Frequency instability",
       "Distorted transmitted audio",
@@ -2097,10 +2395,12 @@ export const hamRadioQuestions = [
     "explanation": "Distorted transmitted audio",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4B] Which of the following can be used to enter a transceiver\u2019s operating frequency?",
+    "question": "Which of the following can be used to enter a transceiver\u2019s operating frequency?",
     "choices": [
       "The keypad or VFO knob",
       "The CTCSS or DTMF encoder",
@@ -2111,10 +2411,12 @@ export const hamRadioQuestions = [
     "explanation": "The keypad or VFO knob",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4B] How is squelch adjusted so that a weak FM signal can be heard?",
+    "question": "How is squelch adjusted so that a weak FM signal can be heard?",
     "choices": [
       "Set the squelch threshold so that receiver output audio is on all the time",
       "Turn up the audio level until it overcomes the squelch threshold",
@@ -2125,10 +2427,12 @@ export const hamRadioQuestions = [
     "explanation": "Set the squelch threshold so that receiver output audio is on all the time",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4B] What is a way to enable quick access to a favorite frequency or channel on your transceiver?",
+    "question": "What is a way to enable quick access to a favorite frequency or channel on your transceiver?",
     "choices": [
       "Enable the frequency offset",
       "Store it in a memory channel",
@@ -2139,10 +2443,12 @@ export const hamRadioQuestions = [
     "explanation": "Store it in a memory channel",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4B] What does the scanning function of an FM transceiver do?",
+    "question": "What does the scanning function of an FM transceiver do?",
     "choices": [
       "Checks incoming signal deviation",
       "Prevents interference to nearby repeaters",
@@ -2153,10 +2459,12 @@ export const hamRadioQuestions = [
     "explanation": "Tunes through a range of frequencies to check for activity",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4B] Which of the following controls could be used if the voice pitch of a single-sideband signal returning to your CQ call seems too high or low?",
+    "question": "Which of the following controls could be used if the voice pitch of a single-sideband signal returning to your CQ call seems too high or low?",
     "choices": [
       "The AGC or limiter",
       "The bandwidth selection",
@@ -2167,10 +2475,12 @@ export const hamRadioQuestions = [
     "explanation": "The RIT or Clarifier",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4B] What does a DMR \u201ccode plug\u201d contain?",
+    "question": "What does a DMR \u201ccode plug\u201d contain?",
     "choices": [
       "Your call sign in CW for automatic identification",
       "Access information for repeaters and talkgroups",
@@ -2181,10 +2491,12 @@ export const hamRadioQuestions = [
     "explanation": "Access information for repeaters and talkgroups",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4B] What is the advantage of having multiple receive bandwidth choices on a multimode transceiver?",
+    "question": "What is the advantage of having multiple receive bandwidth choices on a multimode transceiver?",
     "choices": [
       "Permits monitoring several modes at once by selecting a separate filter for each mode",
       "Permits noise or interference reduction by selecting a bandwidth matching the mode",
@@ -2195,10 +2507,12 @@ export const hamRadioQuestions = [
     "explanation": "Permits noise or interference reduction by selecting a bandwidth matching the mode",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4B] How is a specific group of stations selected on a digital voice transceiver?",
+    "question": "How is a specific group of stations selected on a digital voice transceiver?",
     "choices": [
       "By retrieving the frequencies from transceiver memory",
       "By enabling the group\u2019s CTCSS tone",
@@ -2209,10 +2523,12 @@ export const hamRadioQuestions = [
     "explanation": "By entering the group\u2019s identification code",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4B] Which of the following receiver filter bandwidths provides the best signal-to-noise ratio for SSB reception?",
+    "question": "Which of the following receiver filter bandwidths provides the best signal-to-noise ratio for SSB reception?",
     "choices": [
       "500 Hz",
       "1000 Hz",
@@ -2223,10 +2539,12 @@ export const hamRadioQuestions = [
     "explanation": "2400 Hz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4B] Which of the following must be programmed into a D-STAR digital transceiver before transmitting?",
+    "question": "Which of the following must be programmed into a D-STAR digital transceiver before transmitting?",
     "choices": [
       "Your call sign",
       "Your output power",
@@ -2237,10 +2555,12 @@ export const hamRadioQuestions = [
     "explanation": "Your call sign",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T4B] What is the result of tuning an FM receiver above or below a signal\u2019s frequency?",
+    "question": "What is the result of tuning an FM receiver above or below a signal\u2019s frequency?",
     "choices": [
       "Change in audio pitch",
       "Sideband inversion",
@@ -2251,10 +2571,12 @@ export const hamRadioQuestions = [
     "explanation": "Distortion of the signal\u2019s audio",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T4B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5A] Electrical current is measured in which of the following units?",
+    "question": "Electrical current is measured in which of the following units?",
     "choices": [
       "Volts",
       "Watts",
@@ -2265,10 +2587,12 @@ export const hamRadioQuestions = [
     "explanation": "Amperes",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5A] Electrical power is measured in which of the following units?",
+    "question": "Electrical power is measured in which of the following units?",
     "choices": [
       "Volts",
       "Watts",
@@ -2279,10 +2603,12 @@ export const hamRadioQuestions = [
     "explanation": "Watts",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5A] What is the name for the flow of electrons in an electric circuit?",
+    "question": "What is the name for the flow of electrons in an electric circuit?",
     "choices": [
       "Voltage",
       "Resistance",
@@ -2293,10 +2619,12 @@ export const hamRadioQuestions = [
     "explanation": "Current",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5A] What are the units of electrical resistance?",
+    "question": "What are the units of electrical resistance?",
     "choices": [
       "Siemens",
       "Mhos",
@@ -2307,10 +2635,12 @@ export const hamRadioQuestions = [
     "explanation": "Ohms",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5A] What is the electrical term for the force that causes electron flow?",
+    "question": "What is the electrical term for the force that causes electron flow?",
     "choices": [
       "Voltage",
       "Ampere-hours",
@@ -2321,10 +2651,12 @@ export const hamRadioQuestions = [
     "explanation": "Voltage",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5A] What is the unit of frequency?",
+    "question": "What is the unit of frequency?",
     "choices": [
       "Hertz",
       "Henry",
@@ -2335,10 +2667,12 @@ export const hamRadioQuestions = [
     "explanation": "Hertz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5A] Why are metals generally good conductors of electricity?",
+    "question": "Why are metals generally good conductors of electricity?",
     "choices": [
       "They have relatively high density",
       "They have many free electrons",
@@ -2349,10 +2683,12 @@ export const hamRadioQuestions = [
     "explanation": "They have many free electrons",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5A] Which of the following is a good electrical insulator?",
+    "question": "Which of the following is a good electrical insulator?",
     "choices": [
       "Copper",
       "Glass",
@@ -2363,10 +2699,12 @@ export const hamRadioQuestions = [
     "explanation": "Glass",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5A] Which of the following describes alternating current?",
+    "question": "Which of the following describes alternating current?",
     "choices": [
       "Current that alternates between a positive direction and zero",
       "Current that alternates between a negative direction and zero",
@@ -2377,10 +2715,12 @@ export const hamRadioQuestions = [
     "explanation": "Current that alternates between positive and negative directions",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5A] Which term describes the rate at which electrical energy is used?",
+    "question": "Which term describes the rate at which electrical energy is used?",
     "choices": [
       "Resistance",
       "Current",
@@ -2391,10 +2731,12 @@ export const hamRadioQuestions = [
     "explanation": "Power",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5A] What type of current flow is opposed by resistance?",
+    "question": "What type of current flow is opposed by resistance?",
     "choices": [
       "Direct current",
       "Alternating current",
@@ -2405,10 +2747,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5A] What describes the number of times per second that an alternating current makes a complete cycle?",
+    "question": "What describes the number of times per second that an alternating current makes a complete cycle?",
     "choices": [
       "Pulse rate",
       "Speed",
@@ -2419,10 +2763,12 @@ export const hamRadioQuestions = [
     "explanation": "Frequency",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] How many milliamperes is 1.5 amperes?",
+    "question": "How many milliamperes is 1.5 amperes?",
     "choices": [
       "15 milliamperes",
       "150 milliamperes",
@@ -2433,10 +2779,12 @@ export const hamRadioQuestions = [
     "explanation": "1500 milliamperes",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] Which is equal to 1,500,000 hertz?",
+    "question": "Which is equal to 1,500,000 hertz?",
     "choices": [
       "1500 kHz",
       "1500 MHz",
@@ -2447,10 +2795,12 @@ export const hamRadioQuestions = [
     "explanation": "1500 kHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] Which is equal to one kilovolt?",
+    "question": "Which is equal to one kilovolt?",
     "choices": [
       "One one-thousandth of a volt",
       "One hundred volts",
@@ -2461,10 +2811,12 @@ export const hamRadioQuestions = [
     "explanation": "One thousand volts",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] Which is equal to one microvolt?",
+    "question": "Which is equal to one microvolt?",
     "choices": [
       "One one-millionth of a volt",
       "One million volts",
@@ -2475,10 +2827,12 @@ export const hamRadioQuestions = [
     "explanation": "One one-millionth of a volt",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] Which is equal to 500 milliwatts?",
+    "question": "Which is equal to 500 milliwatts?",
     "choices": [
       "0.02 watts",
       "0.5 watts",
@@ -2489,10 +2843,12 @@ export const hamRadioQuestions = [
     "explanation": "0.5 watts",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] Which is equal to 3000 milliamperes?",
+    "question": "Which is equal to 3000 milliamperes?",
     "choices": [
       "0.003 amperes",
       "0.3 amperes",
@@ -2503,10 +2859,12 @@ export const hamRadioQuestions = [
     "explanation": "3 amperes",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] Which is equal to 3.525 MHz?",
+    "question": "Which is equal to 3.525 MHz?",
     "choices": [
       "0.003525 kHz",
       "35.25 kHz",
@@ -2517,10 +2875,12 @@ export const hamRadioQuestions = [
     "explanation": "3525 kHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] Which is equal to 1,000,000 picofarads?",
+    "question": "Which is equal to 1,000,000 picofarads?",
     "choices": [
       "0.001 microfarads",
       "1 microfarad",
@@ -2531,10 +2891,12 @@ export const hamRadioQuestions = [
     "explanation": "1 microfarad",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] Which decibel value most closely represents a power increase from 5 watts to 10 watts?",
+    "question": "Which decibel value most closely represents a power increase from 5 watts to 10 watts?",
     "choices": [
       "2 dB",
       "3 dB",
@@ -2545,10 +2907,12 @@ export const hamRadioQuestions = [
     "explanation": "3 dB",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] Which decibel value most closely represents a power decrease from 12 watts to 3 watts?",
+    "question": "Which decibel value most closely represents a power decrease from 12 watts to 3 watts?",
     "choices": [
       "-1 dB",
       "-3 dB",
@@ -2559,10 +2923,12 @@ export const hamRadioQuestions = [
     "explanation": "-6 dB",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] Which decibel value represents a power increase from 20 watts to 200 watts?",
+    "question": "Which decibel value represents a power increase from 20 watts to 200 watts?",
     "choices": [
       "10 dB",
       "12 dB",
@@ -2573,10 +2939,12 @@ export const hamRadioQuestions = [
     "explanation": "10 dB",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] Which is equal to 28400 kHz?",
+    "question": "Which is equal to 28400 kHz?",
     "choices": [
       "28.400 kHz",
       "2.800 MHz",
@@ -2587,10 +2955,12 @@ export const hamRadioQuestions = [
     "explanation": "28.400 MHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5B] Which is equal to 2425 MHz?",
+    "question": "Which is equal to 2425 MHz?",
     "choices": [
       "0.002425 GHz",
       "24.25 GHz",
@@ -2601,10 +2971,12 @@ export const hamRadioQuestions = [
     "explanation": "2.425 GHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] What describes the ability to store energy in an electric field?",
+    "question": "What describes the ability to store energy in an electric field?",
     "choices": [
       "Inductance",
       "Resistance",
@@ -2615,10 +2987,12 @@ export const hamRadioQuestions = [
     "explanation": "Capacitance",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] What is the unit of capacitance?",
+    "question": "What is the unit of capacitance?",
     "choices": [
       "The farad",
       "The ohm",
@@ -2629,10 +3003,12 @@ export const hamRadioQuestions = [
     "explanation": "The farad",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] What describes the ability to store energy in a magnetic field?",
+    "question": "What describes the ability to store energy in a magnetic field?",
     "choices": [
       "Admittance",
       "Capacitance",
@@ -2643,10 +3019,12 @@ export const hamRadioQuestions = [
     "explanation": "Inductance",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] What is the unit of inductance?",
+    "question": "What is the unit of inductance?",
     "choices": [
       "The coulomb",
       "The farad",
@@ -2657,10 +3035,12 @@ export const hamRadioQuestions = [
     "explanation": "The henry",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] What is the unit of impedance?",
+    "question": "What is the unit of impedance?",
     "choices": [
       "The volt",
       "The ampere",
@@ -2671,10 +3051,12 @@ export const hamRadioQuestions = [
     "explanation": "The ohm",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] What does the abbreviation \u201cRF\u201d mean?",
+    "question": "What does the abbreviation \u201cRF\u201d mean?",
     "choices": [
       "Radio frequency signals of all types",
       "The resonant frequency of a tuned circuit",
@@ -2685,10 +3067,12 @@ export const hamRadioQuestions = [
     "explanation": "Radio frequency signals of all types",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] What is the abbreviation for megahertz?",
+    "question": "What is the abbreviation for megahertz?",
     "choices": [
       "MH",
       "mh",
@@ -2699,10 +3083,12 @@ export const hamRadioQuestions = [
     "explanation": "MHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] What is the formula used to calculate electrical power (P) in a DC circuit?",
+    "question": "What is the formula used to calculate electrical power (P) in a DC circuit?",
     "choices": [
       "P = I \u00d7 E",
       "P = E / I",
@@ -2713,10 +3099,12 @@ export const hamRadioQuestions = [
     "explanation": "P = I \u00d7 E",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] How much power is delivered by a voltage of 13.8 volts DC and a current of 10 amperes?",
+    "question": "How much power is delivered by a voltage of 13.8 volts DC and a current of 10 amperes?",
     "choices": [
       "138 watts",
       "0.7 watts",
@@ -2727,10 +3115,12 @@ export const hamRadioQuestions = [
     "explanation": "138 watts",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] How much power is delivered by a voltage of 12 volts DC and a current of 2.5 amperes?",
+    "question": "How much power is delivered by a voltage of 12 volts DC and a current of 2.5 amperes?",
     "choices": [
       "4.8 watts",
       "30 watts",
@@ -2741,10 +3131,12 @@ export const hamRadioQuestions = [
     "explanation": "30 watts",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] How much current is required to deliver 120 watts at a voltage of 12 volts DC?",
+    "question": "How much current is required to deliver 120 watts at a voltage of 12 volts DC?",
     "choices": [
       "0.1 amperes",
       "10 amperes",
@@ -2755,10 +3147,12 @@ export const hamRadioQuestions = [
     "explanation": "10 amperes",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] What is impedance?",
+    "question": "What is impedance?",
     "choices": [
       "The opposition to AC current flow",
       "The inverse of resistance",
@@ -2769,10 +3163,12 @@ export const hamRadioQuestions = [
     "explanation": "The opposition to AC current flow",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5C] What is the abbreviation for kilohertz?",
+    "question": "What is the abbreviation for kilohertz?",
     "choices": [
       "KHZ",
       "khz",
@@ -2783,10 +3179,12 @@ export const hamRadioQuestions = [
     "explanation": "kHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] What formula is used to calculate current in a circuit?",
+    "question": "What formula is used to calculate current in a circuit?",
     "choices": [
       "I = E \u00d7 R",
       "I = E / R",
@@ -2797,10 +3195,12 @@ export const hamRadioQuestions = [
     "explanation": "I = E / R",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] What formula is used to calculate voltage in a circuit?",
+    "question": "What formula is used to calculate voltage in a circuit?",
     "choices": [
       "E = I x R",
       "E = I / R",
@@ -2811,10 +3211,12 @@ export const hamRadioQuestions = [
     "explanation": "E = I x R",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] What formula is used to calculate resistance in a circuit?",
+    "question": "What formula is used to calculate resistance in a circuit?",
     "choices": [
       "R = E x I",
       "R = E / I",
@@ -2825,10 +3227,12 @@ export const hamRadioQuestions = [
     "explanation": "R = E / I",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] What is the resistance of a circuit in which a current of 3 amperes flows when connected to 90 volts?",
+    "question": "What is the resistance of a circuit in which a current of 3 amperes flows when connected to 90 volts?",
     "choices": [
       "3 ohms",
       "30 ohms",
@@ -2839,10 +3243,12 @@ export const hamRadioQuestions = [
     "explanation": "30 ohms",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] What is the resistance of a circuit for which the applied voltage is 12 volts and the current flow is 1.5 amperes?",
+    "question": "What is the resistance of a circuit for which the applied voltage is 12 volts and the current flow is 1.5 amperes?",
     "choices": [
       "18 ohms",
       "0.125 ohms",
@@ -2853,10 +3259,12 @@ export const hamRadioQuestions = [
     "explanation": "8 ohms",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] What is the resistance of a circuit that draws 4 amperes from a 12-volt source?",
+    "question": "What is the resistance of a circuit that draws 4 amperes from a 12-volt source?",
     "choices": [
       "3 ohms",
       "16 ohms",
@@ -2867,10 +3275,12 @@ export const hamRadioQuestions = [
     "explanation": "3 ohms",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] What is the current in a circuit with an applied voltage of 120 volts and a resistance of 80 ohms?",
+    "question": "What is the current in a circuit with an applied voltage of 120 volts and a resistance of 80 ohms?",
     "choices": [
       "9600 amperes",
       "200 amperes",
@@ -2881,10 +3291,12 @@ export const hamRadioQuestions = [
     "explanation": "1.5 amperes",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] What is the current through a 100-ohm resistor connected across 200 volts?",
+    "question": "What is the current through a 100-ohm resistor connected across 200 volts?",
     "choices": [
       "20,000 amperes",
       "0.5 amperes",
@@ -2895,10 +3307,12 @@ export const hamRadioQuestions = [
     "explanation": "2 amperes",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] What is the current through a 24-ohm resistor connected across 240 volts?",
+    "question": "What is the current through a 24-ohm resistor connected across 240 volts?",
     "choices": [
       "24,000 amperes",
       "0.1 amperes",
@@ -2909,10 +3323,12 @@ export const hamRadioQuestions = [
     "explanation": "10 amperes",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] What is the voltage across a 2-ohm resistor if a current of 0.5 amperes flows through it?",
+    "question": "What is the voltage across a 2-ohm resistor if a current of 0.5 amperes flows through it?",
     "choices": [
       "1 volt",
       "0.25 volts",
@@ -2923,10 +3339,12 @@ export const hamRadioQuestions = [
     "explanation": "1 volt",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] What is the voltage across a 10-ohm resistor if a current of 1 ampere flows through it?",
+    "question": "What is the voltage across a 10-ohm resistor if a current of 1 ampere flows through it?",
     "choices": [
       "1 volt",
       "10 volts",
@@ -2937,10 +3355,12 @@ export const hamRadioQuestions = [
     "explanation": "10 volts",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] What is the voltage across a 10-ohm resistor if a current of 2 amperes flows through it?",
+    "question": "What is the voltage across a 10-ohm resistor if a current of 2 amperes flows through it?",
     "choices": [
       "8 volts",
       "0.2 volts",
@@ -2951,10 +3371,12 @@ export const hamRadioQuestions = [
     "explanation": "20 volts",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] In which type of circuit is DC current the same through all components?",
+    "question": "In which type of circuit is DC current the same through all components?",
     "choices": [
       "Series",
       "Parallel",
@@ -2965,10 +3387,12 @@ export const hamRadioQuestions = [
     "explanation": "Series",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T5D] In which type of circuit is voltage the same across all components?",
+    "question": "In which type of circuit is voltage the same across all components?",
     "choices": [
       "Series",
       "Parallel",
@@ -2979,10 +3403,12 @@ export const hamRadioQuestions = [
     "explanation": "Parallel",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T5D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6A] What electrical component opposes the flow of current in a DC circuit?",
+    "question": "What electrical component opposes the flow of current in a DC circuit?",
     "choices": [
       "Inductor",
       "Resistor",
@@ -2993,10 +3419,12 @@ export const hamRadioQuestions = [
     "explanation": "Resistor",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6A] What type of component is often used as an adjustable volume control?",
+    "question": "What type of component is often used as an adjustable volume control?",
     "choices": [
       "Fixed resistor",
       "Power resistor",
@@ -3007,10 +3435,12 @@ export const hamRadioQuestions = [
     "explanation": "Potentiometer",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6A] What electrical parameter is controlled by a potentiometer?",
+    "question": "What electrical parameter is controlled by a potentiometer?",
     "choices": [
       "Inductance",
       "Resistance",
@@ -3021,10 +3451,12 @@ export const hamRadioQuestions = [
     "explanation": "Resistance",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6A] What electrical component stores energy in an electric field?",
+    "question": "What electrical component stores energy in an electric field?",
     "choices": [
       "Varistor",
       "Capacitor",
@@ -3035,10 +3467,12 @@ export const hamRadioQuestions = [
     "explanation": "Capacitor",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6A] What type of electrical component consists of conductive surfaces separated by an insulator?",
+    "question": "What type of electrical component consists of conductive surfaces separated by an insulator?",
     "choices": [
       "Resistor",
       "Potentiometer",
@@ -3049,10 +3483,12 @@ export const hamRadioQuestions = [
     "explanation": "Capacitor",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6A] What type of electrical component stores energy in a magnetic field?",
+    "question": "What type of electrical component stores energy in a magnetic field?",
     "choices": [
       "Varistor",
       "Capacitor",
@@ -3063,10 +3499,12 @@ export const hamRadioQuestions = [
     "explanation": "Inductor",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6A] What electrical component is typically constructed as a coil of wire?",
+    "question": "What electrical component is typically constructed as a coil of wire?",
     "choices": [
       "Switch",
       "Capacitor",
@@ -3077,10 +3515,12 @@ export const hamRadioQuestions = [
     "explanation": "Inductor",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6A] What is the function of an SPDT switch?",
+    "question": "What is the function of an SPDT switch?",
     "choices": [
       "A single circuit is opened or closed",
       "Two circuits are opened or closed",
@@ -3091,10 +3531,12 @@ export const hamRadioQuestions = [
     "explanation": "A single circuit is switched between one of two other circuits",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6A] What electrical component is used to protect other circuit components from current overloads?",
+    "question": "What electrical component is used to protect other circuit components from current overloads?",
     "choices": [
       "Fuse",
       "Thyratron",
@@ -3105,10 +3547,12 @@ export const hamRadioQuestions = [
     "explanation": "Fuse",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6A] Which of the following battery chemistries is rechargeable?",
+    "question": "Which of the following battery chemistries is rechargeable?",
     "choices": [
       "Nickel-metal hydride",
       "Lithium-ion",
@@ -3119,10 +3563,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6A] Which of the following battery chemistries is not rechargeable?",
+    "question": "Which of the following battery chemistries is not rechargeable?",
     "choices": [
       "Nickel-cadmium",
       "Carbon-zinc",
@@ -3133,10 +3579,12 @@ export const hamRadioQuestions = [
     "explanation": "Carbon-zinc",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6B] Which is true about forward voltage drop in a diode?",
+    "question": "Which is true about forward voltage drop in a diode?",
     "choices": [
       "It is lower in some diode types than in others",
       "It is proportional to peak inverse voltage",
@@ -3147,10 +3595,12 @@ export const hamRadioQuestions = [
     "explanation": "It is lower in some diode types than in others",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6B] What electronic component allows current to flow in only one direction?",
+    "question": "What electronic component allows current to flow in only one direction?",
     "choices": [
       "Resistor",
       "Fuse",
@@ -3161,10 +3611,12 @@ export const hamRadioQuestions = [
     "explanation": "Diode",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6B] Which of these components can be used as an electronic switch?",
+    "question": "Which of these components can be used as an electronic switch?",
     "choices": [
       "Varistor",
       "Potentiometer",
@@ -3175,10 +3627,12 @@ export const hamRadioQuestions = [
     "explanation": "Transistor",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6B] Which of the following components can consist of three regions of semiconductor material?",
+    "question": "Which of the following components can consist of three regions of semiconductor material?",
     "choices": [
       "Alternator",
       "Transistor",
@@ -3189,10 +3643,12 @@ export const hamRadioQuestions = [
     "explanation": "Transistor",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6B] What type of transistor has a gate, drain, and source?",
+    "question": "What type of transistor has a gate, drain, and source?",
     "choices": [
       "Varistor",
       "Field-effect",
@@ -3203,10 +3659,12 @@ export const hamRadioQuestions = [
     "explanation": "Field-effect",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6B] How is the cathode lead of a semiconductor diode often marked on the package?",
+    "question": "How is the cathode lead of a semiconductor diode often marked on the package?",
     "choices": [
       "With the word \"cathode\"",
       "With a stripe",
@@ -3217,10 +3675,12 @@ export const hamRadioQuestions = [
     "explanation": "With a stripe",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6B] What causes a light-emitting diode (LED) to emit light?",
+    "question": "What causes a light-emitting diode (LED) to emit light?",
     "choices": [
       "Forward current",
       "Reverse current",
@@ -3231,10 +3691,12 @@ export const hamRadioQuestions = [
     "explanation": "Forward current",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6B] What does the abbreviation FET stand for?",
+    "question": "What does the abbreviation FET stand for?",
     "choices": [
       "Frequency Emission Transmitter",
       "Fast Electron Transistor",
@@ -3245,10 +3707,12 @@ export const hamRadioQuestions = [
     "explanation": "Field Effect Transistor",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6B] What are the names for the electrodes of a diode?",
+    "question": "What are the names for the electrodes of a diode?",
     "choices": [
       "Plus and minus",
       "Source and drain",
@@ -3259,10 +3723,12 @@ export const hamRadioQuestions = [
     "explanation": "Anode and cathode",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6B] Which of the following can provide power gain?",
+    "question": "Which of the following can provide power gain?",
     "choices": [
       "Transformer",
       "Transistor",
@@ -3273,10 +3739,12 @@ export const hamRadioQuestions = [
     "explanation": "Transistor",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6B] What is the term that describes a device's ability to amplify a signal?",
+    "question": "What is the term that describes a device's ability to amplify a signal?",
     "choices": [
       "Gain",
       "Forward resistance",
@@ -3287,10 +3755,12 @@ export const hamRadioQuestions = [
     "explanation": "Gain",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6B] What are the names of the electrodes of a bipolar junction transistor?",
+    "question": "What are the names of the electrodes of a bipolar junction transistor?",
     "choices": [
       "Signal, bias, power",
       "Emitter, base, collector",
@@ -3301,10 +3771,12 @@ export const hamRadioQuestions = [
     "explanation": "Emitter, base, collector",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6C] What is the name of an electrical wiring diagram that uses standard component symbols?",
+    "question": "What is the name of an electrical wiring diagram that uses standard component symbols?",
     "choices": [
       "Bill of materials",
       "Connector pinout",
@@ -3315,10 +3787,12 @@ export const hamRadioQuestions = [
     "explanation": "Schematic",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6C] Which of the following is accurately represented in electrical schematics?",
+    "question": "Which of the following is accurately represented in electrical schematics?",
     "choices": [
       "Wire lengths",
       "Physical appearance of components",
@@ -3329,10 +3803,12 @@ export const hamRadioQuestions = [
     "explanation": "Component connections",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6D] Which of the following devices or circuits changes an alternating current into a varying direct current signal?",
+    "question": "Which of the following devices or circuits changes an alternating current into a varying direct current signal?",
     "choices": [
       "Transformer",
       "Rectifier",
@@ -3343,10 +3819,12 @@ export const hamRadioQuestions = [
     "explanation": "Rectifier",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6D] What is a relay?",
+    "question": "What is a relay?",
     "choices": [
       "An electrically-controlled switch",
       "A current controlled amplifier",
@@ -3357,10 +3835,12 @@ export const hamRadioQuestions = [
     "explanation": "An electrically-controlled switch",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6D] Which of the following is a reason to use shielded wire?",
+    "question": "Which of the following is a reason to use shielded wire?",
     "choices": [
       "To decrease the resistance of DC power connections",
       "To increase the current carrying capability of the wire",
@@ -3371,10 +3851,12 @@ export const hamRadioQuestions = [
     "explanation": "To prevent coupling of unwanted signals to or from the wire",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6D] Which of the following displays an electrical quantity as a numeric value?",
+    "question": "Which of the following displays an electrical quantity as a numeric value?",
     "choices": [
       "Potentiometer",
       "Transistor",
@@ -3385,10 +3867,12 @@ export const hamRadioQuestions = [
     "explanation": "Meter",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6D] What type of circuit controls the amount of voltage from a power supply?",
+    "question": "What type of circuit controls the amount of voltage from a power supply?",
     "choices": [
       "Regulator",
       "Oscillator",
@@ -3399,10 +3883,12 @@ export const hamRadioQuestions = [
     "explanation": "Regulator",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6D] What component changes 120 V AC power to a lower AC voltage for other uses?",
+    "question": "What component changes 120 V AC power to a lower AC voltage for other uses?",
     "choices": [
       "Variable capacitor",
       "Transformer",
@@ -3413,10 +3899,12 @@ export const hamRadioQuestions = [
     "explanation": "Transformer",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6D] Which of the following is commonly used as a visual indicator?",
+    "question": "Which of the following is commonly used as a visual indicator?",
     "choices": [
       "LED",
       "FET",
@@ -3427,10 +3915,12 @@ export const hamRadioQuestions = [
     "explanation": "LED",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6D] Which of the following is combined with an inductor to make a resonant circuit?",
+    "question": "Which of the following is combined with an inductor to make a resonant circuit?",
     "choices": [
       "Resistor",
       "Zener diode",
@@ -3441,10 +3931,12 @@ export const hamRadioQuestions = [
     "explanation": "Capacitor",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6D] What is the name of a device that combines several semiconductors and other components into one package?",
+    "question": "What is the name of a device that combines several semiconductors and other components into one package?",
     "choices": [
       "Transducer",
       "Multi-pole relay",
@@ -3455,10 +3947,12 @@ export const hamRadioQuestions = [
     "explanation": "Integrated circuit",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T6D] Which of the following is a resonant or tuned circuit?",
+    "question": "Which of the following is a resonant or tuned circuit?",
     "choices": [
       "An inductor and a capacitor in series or parallel",
       "A linear voltage regulator",
@@ -3469,10 +3963,12 @@ export const hamRadioQuestions = [
     "explanation": "An inductor and a capacitor in series or parallel",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T6D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7A] Which term describes the ability of a receiver to detect the presence of a signal?",
+    "question": "Which term describes the ability of a receiver to detect the presence of a signal?",
     "choices": [
       "Linearity",
       "Sensitivity",
@@ -3483,10 +3979,12 @@ export const hamRadioQuestions = [
     "explanation": "Sensitivity",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7A] What is a transceiver?",
+    "question": "What is a transceiver?",
     "choices": [
       "A device that combines a receiver and transmitter",
       "A device for matching feed line impedance to 50 ohms",
@@ -3497,10 +3995,12 @@ export const hamRadioQuestions = [
     "explanation": "A device that combines a receiver and transmitter",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7A] Which of the following is used to convert a signal from one frequency to another?",
+    "question": "Which of the following is used to convert a signal from one frequency to another?",
     "choices": [
       "Phase splitter",
       "Mixer",
@@ -3511,10 +4011,12 @@ export const hamRadioQuestions = [
     "explanation": "Mixer",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7A] Which term describes the ability of a receiver to discriminate between multiple signals?",
+    "question": "Which term describes the ability of a receiver to discriminate between multiple signals?",
     "choices": [
       "Discrimination ratio",
       "Sensitivity",
@@ -3525,10 +4027,12 @@ export const hamRadioQuestions = [
     "explanation": "Selectivity",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7A] What is the name of a circuit that generates a signal at a specific frequency?",
+    "question": "What is the name of a circuit that generates a signal at a specific frequency?",
     "choices": [
       "Reactance modulator",
       "Phase modulator",
@@ -3539,10 +4043,12 @@ export const hamRadioQuestions = [
     "explanation": "Oscillator",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7A] What device converts the RF input and output of a transceiver to another band?",
+    "question": "What device converts the RF input and output of a transceiver to another band?",
     "choices": [
       "High-pass filter",
       "Low-pass filter",
@@ -3553,10 +4059,12 @@ export const hamRadioQuestions = [
     "explanation": "Transverter",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7A] What is the function of a transceiver\u2019s PTT input?",
+    "question": "What is the function of a transceiver\u2019s PTT input?",
     "choices": [
       "Input for a key used to send CW",
       "Switches transceiver from receive to transmit when grounded",
@@ -3567,10 +4075,12 @@ export const hamRadioQuestions = [
     "explanation": "Switches transceiver from receive to transmit when grounded",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7A] Which of the following describes combining speech with an RF carrier signal?",
+    "question": "Which of the following describes combining speech with an RF carrier signal?",
     "choices": [
       "Impedance matching",
       "Oscillation",
@@ -3581,10 +4091,12 @@ export const hamRadioQuestions = [
     "explanation": "Modulation",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7A] What is the function of the SSB/CW-FM switch on a VHF power amplifier?",
+    "question": "What is the function of the SSB/CW-FM switch on a VHF power amplifier?",
     "choices": [
       "Change the mode of the transmitted signal",
       "Set the amplifier for proper operation in the selected mode",
@@ -3595,10 +4107,12 @@ export const hamRadioQuestions = [
     "explanation": "Set the amplifier for proper operation in the selected mode",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7A] What device increases the transmitted output power from a transceiver?",
+    "question": "What device increases the transmitted output power from a transceiver?",
     "choices": [
       "A voltage divider",
       "An RF power amplifier",
@@ -3609,10 +4123,12 @@ export const hamRadioQuestions = [
     "explanation": "An RF power amplifier",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7A] Where is an RF preamplifier installed?",
+    "question": "Where is an RF preamplifier installed?",
     "choices": [
       "Between the antenna and receiver",
       "At the output of the transmitter power amplifier",
@@ -3623,10 +4139,12 @@ export const hamRadioQuestions = [
     "explanation": "Between the antenna and receiver",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7B] What can you do if you are told your FM handheld or mobile transceiver is over-deviating?",
+    "question": "What can you do if you are told your FM handheld or mobile transceiver is over-deviating?",
     "choices": [
       "Talk louder into the microphone",
       "Let the transceiver cool off",
@@ -3637,10 +4155,12 @@ export const hamRadioQuestions = [
     "explanation": "Talk farther away from the microphone",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7B] What would cause a broadcast AM or FM radio to receive an amateur radio transmission unintentionally?",
+    "question": "What would cause a broadcast AM or FM radio to receive an amateur radio transmission unintentionally?",
     "choices": [
       "The receiver is unable to reject strong signals outside the AM or FM band",
       "The microphone gain of the transmitter is turned up too high",
@@ -3651,10 +4171,12 @@ export const hamRadioQuestions = [
     "explanation": "The receiver is unable to reject strong signals outside the AM or FM band",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7B] Which of the following can cause radio frequency interference?",
+    "question": "Which of the following can cause radio frequency interference?",
     "choices": [
       "Fundamental overload",
       "Harmonics",
@@ -3665,10 +4187,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7B] Which of the following could you use to cure distorted audio caused by RF current on the shield of a microphone cable?",
+    "question": "Which of the following could you use to cure distorted audio caused by RF current on the shield of a microphone cable?",
     "choices": [
       "Band-pass filter",
       "Low-pass filter",
@@ -3679,10 +4203,12 @@ export const hamRadioQuestions = [
     "explanation": "Ferrite choke",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7B] How can fundamental overload of a non-amateur radio or TV receiver by an amateur signal be reduced or eliminated?",
+    "question": "How can fundamental overload of a non-amateur radio or TV receiver by an amateur signal be reduced or eliminated?",
     "choices": [
       "Block the amateur signal with a filter at the antenna input of the affected receiver",
       "Block the interfering signal with a filter on the amateur transmitter",
@@ -3693,10 +4219,12 @@ export const hamRadioQuestions = [
     "explanation": "Block the amateur signal with a filter at the antenna input of the affected receiver",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7B] Which of the following actions should you take if a neighbor tells you that your station\u2019s transmissions are interfering with their radio or TV reception?",
+    "question": "Which of the following actions should you take if a neighbor tells you that your station\u2019s transmissions are interfering with their radio or TV reception?",
     "choices": [
       "Make sure that your station is functioning properly and that it does not cause interference to your own radio or television when it is tuned to the same channel",
       "Immediately turn off your transmitter and contact the nearest FCC office for assistance",
@@ -3707,10 +4235,12 @@ export const hamRadioQuestions = [
     "explanation": "Make sure that your station is functioning properly and that it does not cause interference to your own radio or television when it is tuned to the same channel",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7B] Which of the following can reduce overload of a VHF transceiver by a nearby commercial FM station?",
+    "question": "Which of the following can reduce overload of a VHF transceiver by a nearby commercial FM station?",
     "choices": [
       "Installing an RF preamplifier",
       "Using double-shielded coaxial cable",
@@ -3721,10 +4251,12 @@ export const hamRadioQuestions = [
     "explanation": "Installing a band-reject filter",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7B] What should you do if something in a neighbor\u2019s home is causing harmful interference to your amateur station?",
+    "question": "What should you do if something in a neighbor\u2019s home is causing harmful interference to your amateur station?",
     "choices": [
       "Work with your neighbor to identify the offending device",
       "Politely inform your neighbor that FCC rules prohibit the use of devices that cause interference",
@@ -3735,10 +4267,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7B] What should be the first step to resolve non-fiber optic cable TV interference caused by your amateur radio transmission?",
+    "question": "What should be the first step to resolve non-fiber optic cable TV interference caused by your amateur radio transmission?",
     "choices": [
       "Add a low-pass filter to the TV antenna input",
       "Add a high-pass filter to the TV antenna input",
@@ -3749,10 +4283,12 @@ export const hamRadioQuestions = [
     "explanation": "Be sure all TV feed line coaxial connectors are installed properly",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7B] What might be a problem if you receive a report that your audio signal through an FM repeater is distorted or unintelligible?",
+    "question": "What might be a problem if you receive a report that your audio signal through an FM repeater is distorted or unintelligible?",
     "choices": [
       "Your transmitter is slightly off frequency",
       "Your batteries are running low",
@@ -3763,10 +4299,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7B] What is a symptom of RF feedback in a transmitter or transceiver?",
+    "question": "What is a symptom of RF feedback in a transmitter or transceiver?",
     "choices": [
       "Excessive SWR at the antenna connection",
       "The transmitter will not stay on the desired frequency",
@@ -3777,10 +4315,12 @@ export const hamRadioQuestions = [
     "explanation": "Reports of garbled, distorted, or unintelligible voice transmissions",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7C] What is the primary purpose of a dummy load?",
+    "question": "What is the primary purpose of a dummy load?",
     "choices": [
       "To prevent transmitting signals over the air when making tests",
       "To prevent over-modulation of a transmitter",
@@ -3791,10 +4331,12 @@ export const hamRadioQuestions = [
     "explanation": "To prevent transmitting signals over the air when making tests",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7C] Which of the following is used to determine if an antenna is resonant at the desired operating frequency?",
+    "question": "Which of the following is used to determine if an antenna is resonant at the desired operating frequency?",
     "choices": [
       "A VTVM",
       "An antenna analyzer",
@@ -3805,10 +4347,12 @@ export const hamRadioQuestions = [
     "explanation": "An antenna analyzer",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7C] What does a dummy load consist of?",
+    "question": "What does a dummy load consist of?",
     "choices": [
       "A high-gain amplifier and a TR switch",
       "A non-inductive resistor mounted on a heat sink",
@@ -3819,10 +4363,12 @@ export const hamRadioQuestions = [
     "explanation": "A non-inductive resistor mounted on a heat sink",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7C] What reading on an SWR meter indicates a perfect impedance match between the antenna and the feed line?",
+    "question": "What reading on an SWR meter indicates a perfect impedance match between the antenna and the feed line?",
     "choices": [
       "50:50",
       "Zero",
@@ -3833,10 +4379,12 @@ export const hamRadioQuestions = [
     "explanation": "1:1",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7C] Why do most solid-state transmitters reduce output power as SWR increases beyond a certain level?",
+    "question": "Why do most solid-state transmitters reduce output power as SWR increases beyond a certain level?",
     "choices": [
       "To protect the output amplifier transistors",
       "To comply with FCC rules on spectral purity",
@@ -3847,10 +4395,12 @@ export const hamRadioQuestions = [
     "explanation": "To protect the output amplifier transistors",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7C] What does an SWR reading of 4:1 indicate?",
+    "question": "What does an SWR reading of 4:1 indicate?",
     "choices": [
       "Loss of -4 dB",
       "Good impedance match",
@@ -3861,10 +4411,12 @@ export const hamRadioQuestions = [
     "explanation": "Impedance mismatch",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7C] What happens to power lost in a feed line?",
+    "question": "What happens to power lost in a feed line?",
     "choices": [
       "It increases the SWR",
       "It is radiated as harmonics",
@@ -3875,10 +4427,12 @@ export const hamRadioQuestions = [
     "explanation": "It is converted into heat",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7C] Which instrument can be used to determine SWR?",
+    "question": "Which instrument can be used to determine SWR?",
     "choices": [
       "Voltmeter",
       "Ohmmeter",
@@ -3889,10 +4443,12 @@ export const hamRadioQuestions = [
     "explanation": "Directional wattmeter",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7C] Which of the following causes failure of coaxial cables?",
+    "question": "Which of the following causes failure of coaxial cables?",
     "choices": [
       "Moisture contamination",
       "Solder flux contamination",
@@ -3903,10 +4459,12 @@ export const hamRadioQuestions = [
     "explanation": "Moisture contamination",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7C] Why should the outer jacket of coaxial cable be resistant to ultraviolet light?",
+    "question": "Why should the outer jacket of coaxial cable be resistant to ultraviolet light?",
     "choices": [
       "Ultraviolet resistant jackets prevent harmonic radiation",
       "Ultraviolet light can increase losses in the cable\u2019s jacket",
@@ -3917,10 +4475,12 @@ export const hamRadioQuestions = [
     "explanation": "Ultraviolet light can damage the jacket and allow water to enter the cable",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7C] What is a disadvantage of air core coaxial cable when compared to foam or solid dielectric types?",
+    "question": "What is a disadvantage of air core coaxial cable when compared to foam or solid dielectric types?",
     "choices": [
       "It has more loss per foot",
       "It cannot be used for VHF or UHF antennas",
@@ -3931,10 +4491,12 @@ export const hamRadioQuestions = [
     "explanation": "It requires special techniques to prevent moisture in the cable",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7D] Which instrument would you use to measure electric potential?",
+    "question": "Which instrument would you use to measure electric potential?",
     "choices": [
       "An ammeter",
       "A voltmeter",
@@ -3945,10 +4507,12 @@ export const hamRadioQuestions = [
     "explanation": "A voltmeter",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7D] How is a voltmeter connected to a component to measure applied voltage?",
+    "question": "How is a voltmeter connected to a component to measure applied voltage?",
     "choices": [
       "In series",
       "In parallel",
@@ -3959,10 +4523,12 @@ export const hamRadioQuestions = [
     "explanation": "In parallel",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7D] When configured to measure current, how is a multimeter connected to a component?",
+    "question": "When configured to measure current, how is a multimeter connected to a component?",
     "choices": [
       "In series",
       "In parallel",
@@ -3973,10 +4539,12 @@ export const hamRadioQuestions = [
     "explanation": "In series",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7D] Which instrument is used to measure electric current?",
+    "question": "Which instrument is used to measure electric current?",
     "choices": [
       "An ohmmeter",
       "An electrometer",
@@ -3987,10 +4555,12 @@ export const hamRadioQuestions = [
     "explanation": "An ammeter",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7D] Which of the following can damage a multimeter?",
+    "question": "Which of the following can damage a multimeter?",
     "choices": [
       "Attempting to measure resistance using the voltage setting",
       "Failing to connect one of the probes to ground",
@@ -4001,10 +4571,12 @@ export const hamRadioQuestions = [
     "explanation": "Attempting to measure voltage when using the resistance setting",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7D] Which of the following measurements are made using a multimeter?",
+    "question": "Which of the following measurements are made using a multimeter?",
     "choices": [
       "Signal strength and noise",
       "Impedance and reactance",
@@ -4015,10 +4587,12 @@ export const hamRadioQuestions = [
     "explanation": "Voltage and resistance",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7D] Which of the following types of solder should not be used for radio and electronic applications?",
+    "question": "Which of the following types of solder should not be used for radio and electronic applications?",
     "choices": [
       "Acid-core solder",
       "Lead-tin solder",
@@ -4029,10 +4603,12 @@ export const hamRadioQuestions = [
     "explanation": "Acid-core solder",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7D] What is the characteristic appearance of a cold tin-lead solder joint?",
+    "question": "What is the characteristic appearance of a cold tin-lead solder joint?",
     "choices": [
       "Dark black spots",
       "A bright or shiny surface",
@@ -4043,10 +4619,12 @@ export const hamRadioQuestions = [
     "explanation": "A rough or lumpy surface",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7D] What reading indicates that an ohmmeter is connected across a large, discharged capacitor?",
+    "question": "What reading indicates that an ohmmeter is connected across a large, discharged capacitor?",
     "choices": [
       "Increasing resistance with time",
       "Decreasing resistance with time",
@@ -4057,10 +4635,12 @@ export const hamRadioQuestions = [
     "explanation": "Increasing resistance with time",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T7D] Which of the following precautions should be taken when measuring in-circuit resistance with an ohmmeter?",
+    "question": "Which of the following precautions should be taken when measuring in-circuit resistance with an ohmmeter?",
     "choices": [
       "Ensure that the applied voltages are correct",
       "Ensure that the circuit is not powered",
@@ -4071,10 +4651,12 @@ export const hamRadioQuestions = [
     "explanation": "Ensure that the circuit is not powered",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T7D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8A] Which of the following is a form of amplitude modulation?",
+    "question": "Which of the following is a form of amplitude modulation?",
     "choices": [
       "Spread spectrum",
       "Packet radio",
@@ -4085,10 +4667,12 @@ export const hamRadioQuestions = [
     "explanation": "Single sideband",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8A] What type of modulation is commonly used for VHF packet radio transmissions?",
+    "question": "What type of modulation is commonly used for VHF packet radio transmissions?",
     "choices": [
       "FM or PM",
       "SSB",
@@ -4099,10 +4683,12 @@ export const hamRadioQuestions = [
     "explanation": "FM or PM",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8A] Which type of voice mode is often used for long-distance (weak signal) contacts on the VHF and UHF bands?",
+    "question": "Which type of voice mode is often used for long-distance (weak signal) contacts on the VHF and UHF bands?",
     "choices": [
       "FM",
       "DRM",
@@ -4113,10 +4699,12 @@ export const hamRadioQuestions = [
     "explanation": "SSB",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8A] Which type of modulation is commonly used for VHF and UHF voice repeaters?",
+    "question": "Which type of modulation is commonly used for VHF and UHF voice repeaters?",
     "choices": [
       "AM",
       "SSB",
@@ -4127,10 +4715,12 @@ export const hamRadioQuestions = [
     "explanation": "FM or PM",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8A] Which of the following types of signal has the narrowest bandwidth?",
+    "question": "Which of the following types of signal has the narrowest bandwidth?",
     "choices": [
       "FM voice",
       "SSB voice",
@@ -4141,10 +4731,12 @@ export const hamRadioQuestions = [
     "explanation": "CW",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8A] Which sideband is normally used for 10 meter HF, VHF, and UHF single-sideband communications?",
+    "question": "Which sideband is normally used for 10 meter HF, VHF, and UHF single-sideband communications?",
     "choices": [
       "Upper sideband",
       "Lower sideband",
@@ -4155,10 +4747,12 @@ export const hamRadioQuestions = [
     "explanation": "Upper sideband",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8A] What is a characteristic of single sideband (SSB) compared to FM?",
+    "question": "What is a characteristic of single sideband (SSB) compared to FM?",
     "choices": [
       "SSB signals are easier to tune in correctly",
       "SSB signals are less susceptible to interference",
@@ -4169,10 +4763,12 @@ export const hamRadioQuestions = [
     "explanation": "SSB signals have narrower bandwidth",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8A] What is the approximate bandwidth of a typical single sideband (SSB) voice signal?",
+    "question": "What is the approximate bandwidth of a typical single sideband (SSB) voice signal?",
     "choices": [
       "1 kHz",
       "3 kHz",
@@ -4183,10 +4779,12 @@ export const hamRadioQuestions = [
     "explanation": "3 kHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8A] What is the approximate bandwidth of a VHF repeater FM voice signal?",
+    "question": "What is the approximate bandwidth of a VHF repeater FM voice signal?",
     "choices": [
       "Less than 500 Hz",
       "About 150 kHz",
@@ -4197,10 +4795,12 @@ export const hamRadioQuestions = [
     "explanation": "Between 10 and 15 kHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8A] What is the approximate bandwidth of AM fast-scan TV transmissions?",
+    "question": "What is the approximate bandwidth of AM fast-scan TV transmissions?",
     "choices": [
       "More than 10 MHz",
       "About 6 MHz",
@@ -4211,10 +4811,12 @@ export const hamRadioQuestions = [
     "explanation": "About 6 MHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8A] What is the approximate bandwidth required to transmit a CW signal?",
+    "question": "What is the approximate bandwidth required to transmit a CW signal?",
     "choices": [
       "2.4 kHz",
       "150 Hz",
@@ -4225,10 +4827,12 @@ export const hamRadioQuestions = [
     "explanation": "150 Hz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8A] Which of the following is a disadvantage of FM compared with single sideband?",
+    "question": "Which of the following is a disadvantage of FM compared with single sideband?",
     "choices": [
       "Voice quality is poorer",
       "Only one signal can be received at a time",
@@ -4239,10 +4843,12 @@ export const hamRadioQuestions = [
     "explanation": "Only one signal can be received at a time",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8B] What telemetry information is typically transmitted by satellite beacons?",
+    "question": "What telemetry information is typically transmitted by satellite beacons?",
     "choices": [
       "The signal strength of received signals",
       "Time of day accurate to plus or minus 1/10 second",
@@ -4253,10 +4859,12 @@ export const hamRadioQuestions = [
     "explanation": "Health and status of the satellite",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8B] What is the impact of using excessive effective radiated power on a satellite uplink?",
+    "question": "What is the impact of using excessive effective radiated power on a satellite uplink?",
     "choices": [
       "Possibility of commanding the satellite to an improper mode",
       "Blocking access by other users",
@@ -4267,10 +4875,12 @@ export const hamRadioQuestions = [
     "explanation": "Blocking access by other users",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8B] Which of the following are provided by satellite tracking programs?",
+    "question": "Which of the following are provided by satellite tracking programs?",
     "choices": [
       "Maps showing the real-time position of the satellite track over Earth",
       "The time, azimuth, and elevation of the start, maximum altitude, and end of a pass",
@@ -4281,10 +4891,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8B] What mode of transmission is commonly used by amateur radio satellites?",
+    "question": "What mode of transmission is commonly used by amateur radio satellites?",
     "choices": [
       "SSB",
       "FM",
@@ -4295,10 +4907,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8B] What is a satellite beacon?",
+    "question": "What is a satellite beacon?",
     "choices": [
       "The primary transmit antenna on the satellite",
       "An indicator light that shows where to point your antenna",
@@ -4309,10 +4923,12 @@ export const hamRadioQuestions = [
     "explanation": "A transmission from a satellite that contains status information",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8B] Which of the following are inputs to a satellite tracking program?",
+    "question": "Which of the following are inputs to a satellite tracking program?",
     "choices": [
       "The satellite transmitted power",
       "The Keplerian elements",
@@ -4323,10 +4939,12 @@ export const hamRadioQuestions = [
     "explanation": "The Keplerian elements",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8B] What is Doppler shift in reference to satellite communications?",
+    "question": "What is Doppler shift in reference to satellite communications?",
     "choices": [
       "A change in the satellite orbit",
       "A mode where the satellite receives signals on one band and transmits on another",
@@ -4337,10 +4955,12 @@ export const hamRadioQuestions = [
     "explanation": "An observed change in signal frequency caused by relative motion between the satellite and Earth station",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8B] What is meant by the statement that a satellite is operating in U/V mode?",
+    "question": "What is meant by the statement that a satellite is operating in U/V mode?",
     "choices": [
       "The satellite uplink is in the 15 meter band and the downlink is in the 10 meter band",
       "The satellite uplink is in the 70 centimeter band and the downlink is in the 2 meter band",
@@ -4351,10 +4971,12 @@ export const hamRadioQuestions = [
     "explanation": "The satellite uplink is in the 70 centimeter band and the downlink is in the 2 meter band",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8B] What causes spin fading of satellite signals?",
+    "question": "What causes spin fading of satellite signals?",
     "choices": [
       "Circular polarized noise interference radiated from the sun",
       "Rotation of the satellite and its antennas",
@@ -4365,10 +4987,12 @@ export const hamRadioQuestions = [
     "explanation": "Rotation of the satellite and its antennas",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8B] What is a LEO satellite?",
+    "question": "What is a LEO satellite?",
     "choices": [
       "A sun synchronous satellite",
       "A highly elliptical orbit satellite",
@@ -4379,10 +5003,12 @@ export const hamRadioQuestions = [
     "explanation": "A satellite in low earth orbit",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8B] Who may receive telemetry from a space station?",
+    "question": "Who may receive telemetry from a space station?",
     "choices": [
       "Anyone",
       "A licensed radio amateur with a transmitter equipped for interrogating the satellite",
@@ -4393,10 +5019,12 @@ export const hamRadioQuestions = [
     "explanation": "Anyone",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8B] Which of the following is a way to determine whether your satellite uplink power is neither too low nor too high?",
+    "question": "Which of the following is a way to determine whether your satellite uplink power is neither too low nor too high?",
     "choices": [
       "Check your signal strength report in the telemetry data",
       "Listen for distortion on your downlink signal",
@@ -4407,10 +5035,12 @@ export const hamRadioQuestions = [
     "explanation": "Your signal strength on the downlink should be about the same as the beacon",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8C] Which of the following methods is used to locate sources of noise interference or jamming?",
+    "question": "Which of the following methods is used to locate sources of noise interference or jamming?",
     "choices": [
       "Echolocation",
       "Doppler radar",
@@ -4421,10 +5051,12 @@ export const hamRadioQuestions = [
     "explanation": "Radio direction finding",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8C] Which of these items would be useful for a hidden transmitter hunt?",
+    "question": "Which of these items would be useful for a hidden transmitter hunt?",
     "choices": [
       "Calibrated SWR meter",
       "A directional antenna",
@@ -4435,10 +5067,12 @@ export const hamRadioQuestions = [
     "explanation": "A directional antenna",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8C] What operating activity involves contacting as many stations as possible during a specified period?",
+    "question": "What operating activity involves contacting as many stations as possible during a specified period?",
     "choices": [
       "Simulated emergency exercises",
       "Net operations",
@@ -4449,10 +5083,12 @@ export const hamRadioQuestions = [
     "explanation": "Contesting",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8C] Which of the following is good procedure when contacting another station in a contest?",
+    "question": "Which of the following is good procedure when contacting another station in a contest?",
     "choices": [
       "Sign only the last two letters of your call if there are many other stations calling",
       "Contact the station twice to be sure that you are in his log",
@@ -4463,10 +5099,12 @@ export const hamRadioQuestions = [
     "explanation": "Send only the minimum information needed for proper identification and the contest exchange",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8C] What is a grid locator?",
+    "question": "What is a grid locator?",
     "choices": [
       "A letter-number designator assigned to a geographic location",
       "A letter-number designator assigned to an azimuth and elevation",
@@ -4477,10 +5115,12 @@ export const hamRadioQuestions = [
     "explanation": "A letter-number designator assigned to a geographic location",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8C] How is over the air access to IRLP nodes accomplished?",
+    "question": "How is over the air access to IRLP nodes accomplished?",
     "choices": [
       "By obtaining a password that is sent via voice to the node",
       "By using DTMF signals",
@@ -4491,10 +5131,12 @@ export const hamRadioQuestions = [
     "explanation": "By using DTMF signals",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8C] What is Voice Over Internet Protocol (VoIP)?",
+    "question": "What is Voice Over Internet Protocol (VoIP)?",
     "choices": [
       "A set of rules specifying how to identify your station when linked over the internet to another station",
       "A technique employed to \u201cspot\u201d DX stations via the internet",
@@ -4505,10 +5147,12 @@ export const hamRadioQuestions = [
     "explanation": "A method of delivering voice communications over the internet using digital techniques",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8C] What is the Internet Radio Linking Project (IRLP)?",
+    "question": "What is the Internet Radio Linking Project (IRLP)?",
     "choices": [
       "A technique to connect amateur radio systems, such as repeaters, via the internet using Voice Over Internet Protocol (VoIP)",
       "A system for providing access to websites via amateur radio",
@@ -4519,10 +5163,12 @@ export const hamRadioQuestions = [
     "explanation": "A technique to connect amateur radio systems, such as repeaters, via the internet using Voice Over Internet Protocol (VoIP)",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8C] Which of the following protocols enables an amateur station to transmit through a repeater without using a radio to initiate the transmission?",
+    "question": "Which of the following protocols enables an amateur station to transmit through a repeater without using a radio to initiate the transmission?",
     "choices": [
       "IRLP",
       "D-STAR",
@@ -4533,10 +5179,12 @@ export const hamRadioQuestions = [
     "explanation": "EchoLink",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8C] What is required before using the EchoLink system?",
+    "question": "What is required before using the EchoLink system?",
     "choices": [
       "Complete the required EchoLink training",
       "Purchase a license to use the EchoLink software",
@@ -4547,10 +5195,12 @@ export const hamRadioQuestions = [
     "explanation": "Register your call sign and provide proof of license",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8C] What is an amateur radio station that connects other amateur stations to the internet?",
+    "question": "What is an amateur radio station that connects other amateur stations to the internet?",
     "choices": [
       "A gateway",
       "A repeater",
@@ -4561,10 +5211,12 @@ export const hamRadioQuestions = [
     "explanation": "A gateway",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] Which of the following is a digital communications mode?",
+    "question": "Which of the following is a digital communications mode?",
     "choices": [
       "Packet radio",
       "IEEE 802.11",
@@ -4575,10 +5227,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] What is a \u201ctalkgroup\u201d on a DMR repeater?",
+    "question": "What is a \u201ctalkgroup\u201d on a DMR repeater?",
     "choices": [
       "A group of operators sharing common interests",
       "A way for groups of users to share a channel at different times without hearing other users on the channel",
@@ -4589,10 +5243,12 @@ export const hamRadioQuestions = [
     "explanation": "A way for groups of users to share a channel at different times without hearing other users on the channel",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] What kind of data can be transmitted by APRS?",
+    "question": "What kind of data can be transmitted by APRS?",
     "choices": [
       "GPS position data",
       "Text messages",
@@ -4603,10 +5259,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] What type of transmission is indicated by the term \"NTSC?\"",
+    "question": "What type of transmission is indicated by the term \"NTSC?\"",
     "choices": [
       "A Normal Transmission mode in Static Circuit",
       "A special mode for satellite uplink",
@@ -4617,10 +5275,12 @@ export const hamRadioQuestions = [
     "explanation": "An analog fast-scan color TV signal",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] Which of the following is an application of APRS?",
+    "question": "Which of the following is an application of APRS?",
     "choices": [
       "Providing real-time tactical digital communications in conjunction with a map showing the locations of stations",
       "Showing automatically the number of packets transmitted via PACTOR during a specific time interval",
@@ -4631,10 +5291,12 @@ export const hamRadioQuestions = [
     "explanation": "Providing real-time tactical digital communications in conjunction with a map showing the locations of stations",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] What does the abbreviation \"PSK\" mean?",
+    "question": "What does the abbreviation \"PSK\" mean?",
     "choices": [
       "Pulse Shift Keying",
       "Phase Shift Keying",
@@ -4645,10 +5307,12 @@ export const hamRadioQuestions = [
     "explanation": "Phase Shift Keying",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] Which of the following describes DMR?",
+    "question": "Which of the following describes DMR?",
     "choices": [
       "A technique for time-multiplexing two digital voice signals on a single 12.5 kHz repeater channel",
       "An automatic position tracking mode for FM mobiles communicating through repeaters",
@@ -4659,10 +5323,12 @@ export const hamRadioQuestions = [
     "explanation": "A technique for time-multiplexing two digital voice signals on a single 12.5 kHz repeater channel",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] Which of the following is included in packet radio transmissions?",
+    "question": "Which of the following is included in packet radio transmissions?",
     "choices": [
       "A check sum that permits error detection",
       "A header that contains the call sign of the station to which the information is being sent",
@@ -4673,10 +5339,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] What is CW?",
+    "question": "What is CW?",
     "choices": [
       "A type of electromagnetic propagation",
       "A digital mode used primarily on 2 meter FM",
@@ -4687,10 +5355,12 @@ export const hamRadioQuestions = [
     "explanation": "Another name for a Morse code transmission",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] Which of the following operating activities is supported by digital mode software in the WSJT-X software suite?",
+    "question": "Which of the following operating activities is supported by digital mode software in the WSJT-X software suite?",
     "choices": [
       "Earth-Moon-Earth",
       "Weak signal propagation beacons",
@@ -4701,10 +5371,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] What is an ARQ transmission system?",
+    "question": "What is an ARQ transmission system?",
     "choices": [
       "A special transmission format limited to video signals",
       "A system used to encrypt command signals to an amateur radio satellite",
@@ -4715,10 +5387,12 @@ export const hamRadioQuestions = [
     "explanation": "An error correction method in which the receiving station detects errors and sends a request for retransmission",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] Which of the following best describes an amateur radio mesh network?",
+    "question": "Which of the following best describes an amateur radio mesh network?",
     "choices": [
       "An amateur-radio based data network using commercial Wi-Fi equipment with modified firmware",
       "A wide-bandwidth digital voice mode employing DMR protocols",
@@ -4729,10 +5403,12 @@ export const hamRadioQuestions = [
     "explanation": "An amateur-radio based data network using commercial Wi-Fi equipment with modified firmware",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T8D] What is FT8?",
+    "question": "What is FT8?",
     "choices": [
       "A wideband FM voice mode",
       "A digital mode capable of low signal-to-noise operation",
@@ -4743,10 +5419,12 @@ export const hamRadioQuestions = [
     "explanation": "A digital mode capable of low signal-to-noise operation",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T8D",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9A] What is a beam antenna?",
+    "question": "What is a beam antenna?",
     "choices": [
       "An antenna built from aluminum I-beams",
       "An omnidirectional antenna invented by Clarence Beam",
@@ -4757,10 +5435,12 @@ export const hamRadioQuestions = [
     "explanation": "An antenna that concentrates signals in one direction",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9A] Which of the following describes a type of antenna loading?",
+    "question": "Which of the following describes a type of antenna loading?",
     "choices": [
       "Electrically lengthening by inserting inductors in radiating elements",
       "Inserting a resistor in the radiating portion of the antenna to make it resonant",
@@ -4771,10 +5451,12 @@ export const hamRadioQuestions = [
     "explanation": "Electrically lengthening by inserting inductors in radiating elements",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9A] Which of the following describes a simple dipole oriented parallel to Earth's surface?",
+    "question": "Which of the following describes a simple dipole oriented parallel to Earth's surface?",
     "choices": [
       "A ground-wave antenna",
       "A horizontally polarized antenna",
@@ -4785,10 +5467,12 @@ export const hamRadioQuestions = [
     "explanation": "A horizontally polarized antenna",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9A] What is a disadvantage of the short, flexible antenna supplied with most handheld radio transceivers, compared to a full-sized quarter-wave antenna?",
+    "question": "What is a disadvantage of the short, flexible antenna supplied with most handheld radio transceivers, compared to a full-sized quarter-wave antenna?",
     "choices": [
       "It has low efficiency",
       "It transmits only circularly polarized signals",
@@ -4799,10 +5483,12 @@ export const hamRadioQuestions = [
     "explanation": "It has low efficiency",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9A] Which of the following increases the resonant frequency of a dipole antenna?",
+    "question": "Which of the following increases the resonant frequency of a dipole antenna?",
     "choices": [
       "Lengthening it",
       "Inserting coils in series with radiating wires",
@@ -4813,10 +5499,12 @@ export const hamRadioQuestions = [
     "explanation": "Shortening it",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9A] Which of the following types of antenna offers the greatest gain?",
+    "question": "Which of the following types of antenna offers the greatest gain?",
     "choices": [
       "5/8 wave vertical",
       "Isotropic",
@@ -4827,10 +5515,12 @@ export const hamRadioQuestions = [
     "explanation": "Yagi",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9A] What is a disadvantage of using a handheld VHF transceiver with a flexible antenna inside a vehicle?",
+    "question": "What is a disadvantage of using a handheld VHF transceiver with a flexible antenna inside a vehicle?",
     "choices": [
       "Signal strength is reduced due to the shielding effect of the vehicle",
       "The bandwidth of the antenna will decrease, increasing SWR",
@@ -4841,10 +5531,12 @@ export const hamRadioQuestions = [
     "explanation": "Signal strength is reduced due to the shielding effect of the vehicle",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9A] What is the approximate length, in inches, of a quarter-wavelength vertical antenna for 146 MHz?",
+    "question": "What is the approximate length, in inches, of a quarter-wavelength vertical antenna for 146 MHz?",
     "choices": [
       "112",
       "50",
@@ -4855,10 +5547,12 @@ export const hamRadioQuestions = [
     "explanation": "19",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9A] What is the approximate length, in inches, of a half-wavelength 6 meter dipole antenna?",
+    "question": "What is the approximate length, in inches, of a half-wavelength 6 meter dipole antenna?",
     "choices": [
       "6",
       "50",
@@ -4869,10 +5563,12 @@ export const hamRadioQuestions = [
     "explanation": "112",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9A] In which direction does a half-wave dipole antenna radiate the strongest signal?",
+    "question": "In which direction does a half-wave dipole antenna radiate the strongest signal?",
     "choices": [
       "Equally in all directions",
       "Off the ends of the antenna",
@@ -4883,10 +5579,12 @@ export const hamRadioQuestions = [
     "explanation": "Broadside to the antenna",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9A] What is antenna gain?",
+    "question": "What is antenna gain?",
     "choices": [
       "The additional power that is added to the transmitter power",
       "The additional power that is required in the antenna when transmitting on a higher frequency",
@@ -4897,10 +5595,12 @@ export const hamRadioQuestions = [
     "explanation": "The increase in signal strength in a specified direction compared to a reference antenna",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9A] What is an advantage of a 5/8 wavelength whip antenna for VHF or UHF mobile service?",
+    "question": "What is an advantage of a 5/8 wavelength whip antenna for VHF or UHF mobile service?",
     "choices": [
       "It has more gain than a 1/4-wavelength antenna",
       "It radiates at a very high angle",
@@ -4911,10 +5611,12 @@ export const hamRadioQuestions = [
     "explanation": "It has more gain than a 1/4-wavelength antenna",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9B] What is a benefit of low SWR?",
+    "question": "What is a benefit of low SWR?",
     "choices": [
       "Reduced television interference",
       "Reduced signal loss",
@@ -4925,10 +5627,12 @@ export const hamRadioQuestions = [
     "explanation": "Reduced signal loss",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9B] What is the most common impedance of coaxial cables used in amateur radio?",
+    "question": "What is the most common impedance of coaxial cables used in amateur radio?",
     "choices": [
       "8 ohms",
       "50 ohms",
@@ -4939,10 +5643,12 @@ export const hamRadioQuestions = [
     "explanation": "50 ohms",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9B] Why is coaxial cable the most common feed line for amateur radio antenna systems?",
+    "question": "Why is coaxial cable the most common feed line for amateur radio antenna systems?",
     "choices": [
       "It is easy to use and requires few special installation considerations",
       "It has less loss than any other type of feed line",
@@ -4953,10 +5659,12 @@ export const hamRadioQuestions = [
     "explanation": "It is easy to use and requires few special installation considerations",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9B] What is the major function of an antenna tuner (antenna coupler)?",
+    "question": "What is the major function of an antenna tuner (antenna coupler)?",
     "choices": [
       "It matches the antenna system impedance to the transceiver's output impedance",
       "It helps a receiver automatically tune in weak stations",
@@ -4967,10 +5675,12 @@ export const hamRadioQuestions = [
     "explanation": "It matches the antenna system impedance to the transceiver's output impedance",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9B] What happens as the frequency of a signal in coaxial cable is increased?",
+    "question": "What happens as the frequency of a signal in coaxial cable is increased?",
     "choices": [
       "The characteristic impedance decreases",
       "The loss decreases",
@@ -4981,10 +5691,12 @@ export const hamRadioQuestions = [
     "explanation": "The loss increases",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9B] Which of the following RF connector types is most suitable for frequencies above 400 MHz?",
+    "question": "Which of the following RF connector types is most suitable for frequencies above 400 MHz?",
     "choices": [
       "UHF (PL-259/SO-239)",
       "Type N",
@@ -4995,10 +5707,12 @@ export const hamRadioQuestions = [
     "explanation": "Type N",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9B] Which of the following is true of PL-259 type coax connectors?",
+    "question": "Which of the following is true of PL-259 type coax connectors?",
     "choices": [
       "They are preferred for microwave operation",
       "They are watertight",
@@ -5009,10 +5723,12 @@ export const hamRadioQuestions = [
     "explanation": "They are commonly used at HF and VHF frequencies",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9B] Which of the following is a source of loss in coaxial feed line?",
+    "question": "Which of the following is a source of loss in coaxial feed line?",
     "choices": [
       "Water intrusion into coaxial connectors",
       "High SWR",
@@ -5023,10 +5739,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9B] What can cause erratic changes in SWR?",
+    "question": "What can cause erratic changes in SWR?",
     "choices": [
       "Local thunderstorm",
       "Loose connection in the antenna or feed line",
@@ -5037,10 +5755,12 @@ export const hamRadioQuestions = [
     "explanation": "Loose connection in the antenna or feed line",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9B] What is the electrical difference between RG-58 and RG-213 coaxial cable?",
+    "question": "What is the electrical difference between RG-58 and RG-213 coaxial cable?",
     "choices": [
       "There is no significant difference between the two types",
       "RG-58 cable has two shields",
@@ -5051,10 +5771,12 @@ export const hamRadioQuestions = [
     "explanation": "RG-213 cable has less loss at a given frequency",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9B] Which of the following types of feed line has the lowest loss at VHF and UHF?",
+    "question": "Which of the following types of feed line has the lowest loss at VHF and UHF?",
     "choices": [
       "50-ohm flexible coax",
       "Multi-conductor unbalanced cable",
@@ -5065,10 +5787,12 @@ export const hamRadioQuestions = [
     "explanation": "Air-insulated hardline",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T9B] What is standing wave ratio (SWR)?",
+    "question": "What is standing wave ratio (SWR)?",
     "choices": [
       "A measure of how well a load is matched to a transmission line",
       "The ratio of amplifier power output to input",
@@ -5079,10 +5803,12 @@ export const hamRadioQuestions = [
     "explanation": "A measure of how well a load is matched to a transmission line",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T9B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0A] Which of the following is a safety hazard of a 12-volt storage battery?",
+    "question": "Which of the following is a safety hazard of a 12-volt storage battery?",
     "choices": [
       "Touching both terminals with the hands can cause electrical shock",
       "Shorting the terminals can cause burns, fire, or an explosion",
@@ -5093,10 +5819,12 @@ export const hamRadioQuestions = [
     "explanation": "Shorting the terminals can cause burns, fire, or an explosion",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0A] What health hazard is presented by electrical current flowing through the body?",
+    "question": "What health hazard is presented by electrical current flowing through the body?",
     "choices": [
       "It may cause injury by heating tissue",
       "It may disrupt the electrical functions of cells",
@@ -5107,10 +5835,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0A] In the United States, what circuit does black wire insulation indicate in a three-wire 120 V cable?",
+    "question": "In the United States, what circuit does black wire insulation indicate in a three-wire 120 V cable?",
     "choices": [
       "Neutral",
       "Hot",
@@ -5121,10 +5851,12 @@ export const hamRadioQuestions = [
     "explanation": "Hot",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0A] What is the purpose of a fuse in an electrical circuit?",
+    "question": "What is the purpose of a fuse in an electrical circuit?",
     "choices": [
       "To prevent power supply ripple from damaging a component",
       "To remove power in case of overload",
@@ -5135,10 +5867,12 @@ export const hamRadioQuestions = [
     "explanation": "To remove power in case of overload",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0A] Why should a 5-ampere fuse never be replaced with a 20-ampere fuse?",
+    "question": "Why should a 5-ampere fuse never be replaced with a 20-ampere fuse?",
     "choices": [
       "The larger fuse would be likely to blow because it is rated for higher current",
       "The power supply ripple would greatly increase",
@@ -5149,10 +5883,12 @@ export const hamRadioQuestions = [
     "explanation": "Excessive current could cause a fire",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0A] What is a good way to guard against electrical shock at your station?",
+    "question": "What is a good way to guard against electrical shock at your station?",
     "choices": [
       "Use three-wire cords and plugs for all AC powered equipment",
       "Connect all AC powered station equipment to a common safety ground",
@@ -5163,10 +5899,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0A] Where should a lightning arrester be installed in a coaxial feed line?",
+    "question": "Where should a lightning arrester be installed in a coaxial feed line?",
     "choices": [
       "At the output connector of a transceiver",
       "At the antenna feed point",
@@ -5177,10 +5915,12 @@ export const hamRadioQuestions = [
     "explanation": "On a grounded panel near where feed lines enter the building",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0A] Where should a fuse or circuit breaker be installed in a 120V AC power circuit?",
+    "question": "Where should a fuse or circuit breaker be installed in a 120V AC power circuit?",
     "choices": [
       "In series with the hot conductor only",
       "In series with the hot and neutral conductors",
@@ -5191,10 +5931,12 @@ export const hamRadioQuestions = [
     "explanation": "In series with the hot conductor only",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0A] What should be done to all external ground rods or earth connections?",
+    "question": "What should be done to all external ground rods or earth connections?",
     "choices": [
       "Waterproof them with silicone caulk or electrical tape",
       "Keep them as far apart as possible",
@@ -5205,10 +5947,12 @@ export const hamRadioQuestions = [
     "explanation": "Bond them together with heavy wire or conductive strap",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0A] What hazard is caused by charging or discharging a battery too quickly?",
+    "question": "What hazard is caused by charging or discharging a battery too quickly?",
     "choices": [
       "Overheating or out-gassing",
       "Excess output ripple",
@@ -5219,10 +5963,12 @@ export const hamRadioQuestions = [
     "explanation": "Overheating or out-gassing",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0A] What hazard exists in a power supply immediately after turning it off?",
+    "question": "What hazard exists in a power supply immediately after turning it off?",
     "choices": [
       "Circulating currents in the dc filter",
       "Leakage flux in the power transformer",
@@ -5233,10 +5979,12 @@ export const hamRadioQuestions = [
     "explanation": "Charge stored in filter capacitors",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0A] Which of the following precautions should be taken when measuring high voltages with a voltmeter?",
+    "question": "Which of the following precautions should be taken when measuring high voltages with a voltmeter?",
     "choices": [
       "Ensure that the voltmeter has very low impedance",
       "Ensure that the voltmeter and leads are rated for use at the voltages to be measured",
@@ -5247,10 +5995,12 @@ export const hamRadioQuestions = [
     "explanation": "Ensure that the voltmeter and leads are rated for use at the voltages to be measured",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0A",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0B] Which of the following is good practice when installing ground wires on a tower for lightning protection?",
+    "question": "Which of the following is good practice when installing ground wires on a tower for lightning protection?",
     "choices": [
       "Put a drip loop in the ground connection to prevent water damage to the ground system",
       "Make sure all ground wire bends are right angles",
@@ -5261,10 +6011,12 @@ export const hamRadioQuestions = [
     "explanation": "Ensure that connections are short and direct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0B] What is required when climbing an antenna tower?",
+    "question": "What is required when climbing an antenna tower?",
     "choices": [
       "Have sufficient training on safe tower climbing techniques",
       "Use appropriate tie-off to the tower at all times",
@@ -5275,10 +6027,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0B] Under what circumstances is it safe to climb a tower without a helper or observer?",
+    "question": "Under what circumstances is it safe to climb a tower without a helper or observer?",
     "choices": [
       "When no electrical work is being performed",
       "When no mechanical work is being performed",
@@ -5289,10 +6043,12 @@ export const hamRadioQuestions = [
     "explanation": "Never",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0B] Which of the following is an important safety precaution to observe when putting up an antenna tower?",
+    "question": "Which of the following is an important safety precaution to observe when putting up an antenna tower?",
     "choices": [
       "Wear a ground strap connected to your wrist at all times",
       "Insulate the base of the tower to avoid lightning strikes",
@@ -5303,10 +6059,12 @@ export const hamRadioQuestions = [
     "explanation": "Look for and stay clear of any overhead electrical wires",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0B] What is the purpose of a safety wire through a turnbuckle used to tension guy lines?",
+    "question": "What is the purpose of a safety wire through a turnbuckle used to tension guy lines?",
     "choices": [
       "Secure the guy line if the turnbuckle breaks",
       "Prevent loosening of the turnbuckle from vibration",
@@ -5317,10 +6075,12 @@ export const hamRadioQuestions = [
     "explanation": "Prevent loosening of the turnbuckle from vibration",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0B] What is the minimum safe distance from a power line to allow when installing an antenna?",
+    "question": "What is the minimum safe distance from a power line to allow when installing an antenna?",
     "choices": [
       "Add the height of the antenna to the height of the power line and multiply by a factor of 1.5",
       "The height of the power line above ground",
@@ -5331,10 +6091,12 @@ export const hamRadioQuestions = [
     "explanation": "Enough so that if the antenna falls, no part of it can come closer than 10 feet to the power wires",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0B] Which of the following is an important safety rule to remember when using a crank-up tower?",
+    "question": "Which of the following is an important safety rule to remember when using a crank-up tower?",
     "choices": [
       "This type of tower must never be painted",
       "This type of tower must never be grounded",
@@ -5345,10 +6107,12 @@ export const hamRadioQuestions = [
     "explanation": "This type of tower must not be climbed unless it is retracted, or mechanical safety locking devices have been installed",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0B] Which is a proper grounding method for a tower?",
+    "question": "Which is a proper grounding method for a tower?",
     "choices": [
       "A single four-foot ground rod, driven into the ground no more than 12 inches from the base",
       "A ferrite-core RF choke connected between the tower and ground",
@@ -5359,10 +6123,12 @@ export const hamRadioQuestions = [
     "explanation": "Separate eight-foot ground rods for each tower leg, bonded to the tower and each other",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0B] Why should you avoid attaching an antenna to a utility pole?",
+    "question": "Why should you avoid attaching an antenna to a utility pole?",
     "choices": [
       "The antenna will not work properly because of induced voltages",
       "The 60 Hz radiations from the feed line may increase the SWR",
@@ -5373,10 +6139,12 @@ export const hamRadioQuestions = [
     "explanation": "The antenna could contact high-voltage power lines",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0B] Which of the following is true when installing grounding conductors used for lightning protection?",
+    "question": "Which of the following is true when installing grounding conductors used for lightning protection?",
     "choices": [
       "Use only non-insulated wire",
       "Wires must be carefully routed with precise right-angle bends",
@@ -5387,10 +6155,12 @@ export const hamRadioQuestions = [
     "explanation": "Sharp bends must be avoided",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0B] Which of the following establishes grounding requirements for an amateur radio tower or antenna?",
+    "question": "Which of the following establishes grounding requirements for an amateur radio tower or antenna?",
     "choices": [
       "FCC Part 97 rules",
       "Local electrical codes",
@@ -5401,10 +6171,12 @@ export const hamRadioQuestions = [
     "explanation": "Local electrical codes",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0B",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] What type of radiation are radio signals?",
+    "question": "What type of radiation are radio signals?",
     "choices": [
       "Gamma radiation",
       "Ionizing radiation",
@@ -5415,10 +6187,12 @@ export const hamRadioQuestions = [
     "explanation": "Non-ionizing radiation",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] At which of the following frequencies does maximum permissible exposure have the lowest value?",
+    "question": "At which of the following frequencies does maximum permissible exposure have the lowest value?",
     "choices": [
       "3.5 MHz",
       "50 MHz",
@@ -5429,10 +6203,12 @@ export const hamRadioQuestions = [
     "explanation": "50 MHz",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] How does the allowable power density for RF safety change if duty cycle changes from 100 percent to 50 percent?",
+    "question": "How does the allowable power density for RF safety change if duty cycle changes from 100 percent to 50 percent?",
     "choices": [
       "It increases by a factor of 3",
       "It decreases by 50 percent",
@@ -5443,10 +6219,12 @@ export const hamRadioQuestions = [
     "explanation": "It increases by a factor of 2",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] What factors affect the RF exposure of people near an amateur station antenna?",
+    "question": "What factors affect the RF exposure of people near an amateur station antenna?",
     "choices": [
       "Frequency and power level of the RF field",
       "Distance from the antenna to a person",
@@ -5457,10 +6235,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] Why do exposure limits vary with frequency?",
+    "question": "Why do exposure limits vary with frequency?",
     "choices": [
       "Lower frequency RF fields have more energy than higher frequency fields",
       "Lower frequency RF fields do not penetrate the human body",
@@ -5471,10 +6251,12 @@ export const hamRadioQuestions = [
     "explanation": "The human body absorbs more RF energy at some frequencies than at others",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] Which of the following is an acceptable method to determine whether your station complies with FCC RF exposure regulations?",
+    "question": "Which of the following is an acceptable method to determine whether your station complies with FCC RF exposure regulations?",
     "choices": [
       "By calculation based on FCC OET Bulletin 65",
       "By calculation based on computer modeling",
@@ -5485,10 +6267,12 @@ export const hamRadioQuestions = [
     "explanation": "All these choices are correct",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] What hazard is created by touching an antenna during a transmission?",
+    "question": "What hazard is created by touching an antenna during a transmission?",
     "choices": [
       "Electrocution",
       "RF burn to skin",
@@ -5499,10 +6283,12 @@ export const hamRadioQuestions = [
     "explanation": "RF burn to skin",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] Which of the following actions can reduce exposure to RF radiation?",
+    "question": "Which of the following actions can reduce exposure to RF radiation?",
     "choices": [
       "Relocate antennas",
       "Relocate the transmitter",
@@ -5513,10 +6299,12 @@ export const hamRadioQuestions = [
     "explanation": "Relocate antennas",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] How can you make sure your station stays in compliance with RF safety regulations?",
+    "question": "How can you make sure your station stays in compliance with RF safety regulations?",
     "choices": [
       "By informing the FCC of any changes made in your station",
       "By re-evaluating the station whenever an item in the transmitter or antenna system is changed",
@@ -5527,10 +6315,12 @@ export const hamRadioQuestions = [
     "explanation": "By re-evaluating the station whenever an item in the transmitter or antenna system is changed",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] Why is duty cycle one of the factors used to determine safe RF radiation exposure levels?",
+    "question": "Why is duty cycle one of the factors used to determine safe RF radiation exposure levels?",
     "choices": [
       "It affects the average exposure to radiation",
       "It affects the peak exposure to radiation",
@@ -5541,10 +6331,12 @@ export const hamRadioQuestions = [
     "explanation": "It affects the average exposure to radiation",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] What is the definition of duty cycle during the averaging time for RF exposure?",
+    "question": "What is the definition of duty cycle during the averaging time for RF exposure?",
     "choices": [
       "The difference between the lowest power output and the highest power output of a transmitter",
       "The difference between the PEP and average power output of a transmitter",
@@ -5555,10 +6347,12 @@ export const hamRadioQuestions = [
     "explanation": "The percentage of time that a transmitter is transmitting",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] How does RF radiation differ from ionizing radiation (radioactivity)?",
+    "question": "How does RF radiation differ from ionizing radiation (radioactivity)?",
     "choices": [
       "RF radiation does not have sufficient energy to cause chemical changes in cells and damage DNA",
       "RF radiation can only be detected with an RF dosimeter",
@@ -5569,10 +6363,12 @@ export const hamRadioQuestions = [
     "explanation": "RF radiation does not have sufficient energy to cause chemical changes in cells and damage DNA",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   },
   {
-    "question": "[T0C] Who is responsible for ensuring that no person is exposed to RF energy above the FCC exposure limits?",
+    "question": "Who is responsible for ensuring that no person is exposed to RF energy above the FCC exposure limits?",
     "choices": [
       "The FCC",
       "The station licensee",
@@ -5583,6 +6379,8 @@ export const hamRadioQuestions = [
     "explanation": "The station licensee",
     "level": "beginner",
     "category": "ham-radio",
+    "subcategory": "technician",
+    "topic": "T0C",
     "type": "multiple-choice"
   }
 ]

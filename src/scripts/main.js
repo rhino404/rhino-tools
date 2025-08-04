@@ -1,8 +1,8 @@
 import { loadCryptoPrices } from './crypto.js';
 import { showCorrectEffect, showIncorrectEffect } from './effects.js';
 
-// Load questions based on level and category
-async function loadQuestions(level, category) {
+// Load questions based on level, category, and subcategory
+async function loadQuestions(level, category, subcategory) {
   let questions = [];
 
   if (category === "python") {
@@ -30,7 +30,6 @@ async function loadQuestions(level, category) {
     const mod = await import('./questions/frontend.js');
     questions = mod.frontendQuestions;
   } else {
-    // All categories combined
     const py = await import('./questions/python.js');
     const ml = await import('./questions/ml.js');
     const nlp = await import('./questions/nlp.js');
@@ -51,14 +50,16 @@ async function loadQuestions(level, category) {
     ];
   }
 
-  // Filter by level if set
   if (level) {
     questions = questions.filter(q => q.level === level);
   }
 
-  // Filter by category if set
   if (category) {
     questions = questions.filter(q => q.category === category);
+  }
+
+  if (subcategory) {
+    questions = questions.filter(q => q.subcategory === subcategory);
   }
 
   return questions;
@@ -67,6 +68,7 @@ async function loadQuestions(level, category) {
 // Globals
 let currentLevel = "";
 let currentCategory = "";
+let currentSubcategory = "";
 let questions = [];
 let shuffledQuestions = [];
 let current = 0;
@@ -81,7 +83,7 @@ const levelFilters = document.getElementById('level-filters');
 const categoryFilters = document.getElementById('category-filters');
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 
-// Show question function with highlight on correct answer if enabled
+// Show question function
 function showQuestion() {
   if (shuffledQuestions.length === 0) {
     questionEl.textContent = "No questions for this filter!";
@@ -137,43 +139,39 @@ function checkAnswer(choice, q) {
   }, transitionTime);
 }
 
-// Refresh questions and shuffle
+// Load & shuffle questions
 async function updateQuestions() {
-  questions = await loadQuestions(currentLevel, currentCategory);
+  questions = await loadQuestions(currentLevel, currentCategory, currentSubcategory);
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   current = 0;
   showQuestion();
 }
 
-// Setup Level filter buttons (restore original working logic)
+// Setup Level filter buttons
 if (levelFilters) {
   Array.from(levelFilters.getElementsByClassName('level-btn')).forEach(btn => {
     btn.onclick = () => {
       currentLevel = btn.getAttribute('data-level');
-
       Array.from(levelFilters.getElementsByClassName('level-btn')).forEach(b => {
         const selected = b === btn;
         b.setAttribute('aria-pressed', selected.toString());
         b.classList.toggle('dimmed', !selected && currentLevel !== "");
       });
-
       updateQuestions();
     };
   });
 }
 
-// Setup Category filter buttons (restore original working logic)
+// Setup Category filter buttons
 if (categoryFilters) {
   Array.from(categoryFilters.getElementsByClassName('category-btn')).forEach(btn => {
     btn.onclick = () => {
       currentCategory = btn.getAttribute('data-category');
-
       Array.from(categoryFilters.getElementsByClassName('category-btn')).forEach(b => {
         const selected = b === btn;
         b.setAttribute('aria-pressed', selected.toString());
         b.classList.toggle('dimmed', !selected && currentCategory !== "");
       });
-
       updateQuestions();
     };
   });
@@ -184,7 +182,7 @@ if (shuffleBtn) {
   shuffleBtn.onclick = () => updateQuestions();
 }
 
-// Dropdown menus (for level and category)
+// Setup dropdowns for level, category, subcategory
 function setupDropdown(toggleId, menuId, callback) {
   const toggleBtn = document.getElementById(toggleId);
   const menu = document.getElementById(menuId);
@@ -199,7 +197,7 @@ function setupDropdown(toggleId, menuId, callback) {
 
   menu?.querySelectorAll("li").forEach(item => {
     item.addEventListener("click", () => {
-      const value = item.dataset.level || item.dataset.category;
+      const value = item.dataset.level || item.dataset.category || item.dataset.subcategory;
       toggleBtn.textContent = item.textContent;
       callback(value);
       wrapper.classList.remove("show");
@@ -207,12 +205,14 @@ function setupDropdown(toggleId, menuId, callback) {
   });
 }
 
+// Close dropdowns on click outside
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".dropdown")) {
     document.querySelectorAll(".dropdown").forEach(drop => drop.classList.remove("show"));
   }
 });
 
+// Hook up dropdown callbacks
 setupDropdown("level-toggle", "level-options", (level) => {
   currentLevel = level;
   updateQuestions();
@@ -223,7 +223,12 @@ setupDropdown("category-toggle", "category-options", (category) => {
   updateQuestions();
 });
 
-// Dark Mode Toggle and Initialization
+setupDropdown("subcategory-toggle", "subcategory-options", (subcategory) => {
+  currentSubcategory = subcategory;
+  updateQuestions();
+});
+
+// Dark mode toggle
 function updateDarkModeState() {
   const isDark = document.body.classList.contains('dark-mode');
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
@@ -250,7 +255,7 @@ if (darkModeToggle) {
   });
 }
 
-// Show level and category icons helpers
+// Level & Category icon helpers
 function getLevelIcon(level) {
   if (level === "beginner") return "🟢";
   if (level === "intermediate") return "🟡";
@@ -270,7 +275,7 @@ function getCategoryIcon(category) {
   return "";
 }
 
-// Toggle Answers button logic
+// Toggle answers
 const toggleBtn = document.getElementById('toggleAnswers');
 if (toggleBtn) {
   toggleBtn.addEventListener('click', () => {
@@ -285,7 +290,7 @@ if (toggleBtn) {
   });
 }
 
-// Load initial data and setup
+// Initialize on load
 document.addEventListener('DOMContentLoaded', () => {
   initializeTheme();
   updateQuestions();
@@ -295,12 +300,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./scripts/sw.js').then(reg => {
       console.log('Service Worker registered:', reg);
-
       reg.addEventListener('updatefound', () => {
         const newWorker = reg.installing;
         newWorker.addEventListener('statechange', () => {
           if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            // Optionally prompt user or auto-reload page
             window.location.reload();
           }
         });
@@ -309,7 +312,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Listen for service worker controller changes to reload page
 navigator.serviceWorker.addEventListener('controllerchange', () => {
   console.log('Service worker controller changed. Reloading...');
   window.location.reload();
