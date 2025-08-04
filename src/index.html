@@ -54,6 +54,7 @@
   </header>
 
   <nav aria-label="Quiz Filters">
+    <!-- Level selection dropdown -->
     <div class="dropdown">
       <button id="level-toggle" class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false"
         aria-controls="level-options">🎚️ Select Level ▾</button>
@@ -64,7 +65,7 @@
         <li role="option" data-level="advanced" tabindex="0">🔴 Advanced</li>
       </ul>
     </div>
-
+    <!-- Category selection dropdown -->
     <div class="dropdown">
       <button id="category-toggle" class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false"
         aria-controls="category-options">📚 Select Category ▾</button>
@@ -80,6 +81,22 @@
         <li role="option" data-category="docker" tabindex="0">🐳 Docker</li>
       </ul>
     </div>
+    <!-- Sub-Category selection dropdown -->
+    <div class="dropdown">
+      <button id="subcategory-toggle" class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false"
+        aria-controls="subcategory-options">📚 Select Sub-Category ▾</button>
+      <ul id="subcategory-options" class="dropdown-menu" role="listbox" tabindex="-1" hidden>
+        <li role="option" data-subcategory="" tabindex="0"> 🌐 All Sub-Categories</li>
+        <!-- <li role="option" data-subcategory="python" tabindex="0">🐍 Python</li>
+        <li role="option" data-subcategory="ml" tabindex="0">🤖 Machine Learning</li>
+        <li role="option" data-subcategory="nlp" tabindex="0">💬 NLP</li>
+        <li role="option" data-subcategory="mcp" tabindex="0">🔧 MCP</li> -->
+        <li role="option" data-subcategory="technician" tabindex="0">📡 Technician</li>
+        <!-- <li role="option" data-subcategory="git" tabindex="0">🐙 Git</li>
+        <li role="option" data-subcategory="frontend" tabindex="0">🎨 Frontend Development</li>
+        <li role="option" data-subcategory="docker" tabindex="0">🐳 Docker</li> -->
+      </ul>
+    </div>
   </nav>
 
   <main id="quiz-container" tabindex="0" aria-live="polite">
@@ -92,17 +109,17 @@
     <button id="toggleAnswers" class="circle-btn" title="Toggle Answers">🫣</button>
     <button id="shuffle-btn" class="circle-btn" title="Shuffle">🔀</button>
   </div>
-  
+
   <div id="ezoic-pub-ad-placeholder-961"></div>
   <script>
-      ezstandalone.cmd.push(function () {
-          ezstandalone.showAds(961, {
-              "adType": "incontent",
-              "adSize": "fluid",
-              "adFormat": "auto",
-              "adPosition": "bottom"
-          });
+    ezstandalone.cmd.push(function () {
+      ezstandalone.showAds(961, {
+        "adType": "incontent",
+        "adSize": "fluid",
+        "adFormat": "auto",
+        "adPosition": "bottom"
       });
+    });
   </script>
 
   <script>
@@ -128,7 +145,7 @@
   </footer>
 
   <script>
-    document.getElementById('copyright').textContent = `© ${new Date().getFullYear()} Rhino Tools. All rights reserved.`;
+    document.getElementById('copyright').textContent = `Copyright © ${new Date().getFullYear()} Rhino Tools. All rights reserved.`;
   </script>
   <script>
     if ('serviceWorker' in navigator) {
