@@ -1,71 +1,50 @@
 import { loadCryptoPrices } from './crypto.js';
 import { showCorrectEffect, showIncorrectEffect } from './effects.js';
+import { quizMeta } from './quizMeta.js';
+import { statsTracker } from './statsTracker.js';
 
-// Load questions based on level, category, and subcategory
+// Category modules for dynamic question loading
+const CATEGORY_MODULES = {
+  'ham-radio': {
+    loader: () => import('./questions/ham-radio.js'),
+    exportName: 'hamRadioQuestions',
+  },
+  // add other categories similarly
+};
+
+// Utility: Get emoji icon for level/category/subcategory
+function getIcon(type, value) {
+  const item = quizMeta[type]?.find(el => el.value === value);
+  if (item?.label) {
+    const emojiMatch = item.label.match(/^(\p{Emoji_Presentation}|\p{Emoji}\uFE0F)/u);
+    return emojiMatch ? emojiMatch[0] : "";
+  }
+  return "";
+}
+
+// Load questions filtered by level, category, and subcategory
 async function loadQuestions(level, category, subcategory) {
   let questions = [];
 
-  if (category === "python") {
-    const mod = await import('./questions/python.js');
-    questions = mod.pythonQuestions;
-  } else if (category === "ml") {
-    const mod = await import('./questions/ml.js');
-    questions = mod.mlQuestions;
-  } else if (category === "nlp") {
-    const mod = await import('./questions/nlp.js');
-    questions = mod.nlpQuestions;
-  } else if (category === "mcp") {
-    const mod = await import('./questions/mcp.js');
-    questions = mod.mcpQuestions;
-  } else if (category === "ham-radio") {
-    const mod = await import('./questions/ham-radio.js');
-    questions = mod.hamRadioQuestions;
-  } else if (category === "docker") {
-    const mod = await import('./questions/docker.js');
-    questions = mod.dockerQuestions;
-  } else if (category === "git") {
-    const mod = await import('./questions/git.js');
-    questions = mod.gitQuestions;
-  } else if (category === "frontend") {
-    const mod = await import('./questions/frontend.js');
-    questions = mod.frontendQuestions;
+  if (category && CATEGORY_MODULES[category]) {
+    const { loader, exportName } = CATEGORY_MODULES[category];
+    const mod = await loader();
+    questions = mod[exportName] || [];
   } else {
-    const py = await import('./questions/python.js');
-    const ml = await import('./questions/ml.js');
-    const nlp = await import('./questions/nlp.js');
-    const mcp = await import('./questions/mcp.js');
-    const hamRadio = await import('./questions/ham-radio.js');
-    const docker = await import('./questions/docker.js');
-    const git = await import('./questions/git.js');
-    const frontend = await import('./questions/frontend.js');
-    questions = [
-      ...py.pythonQuestions,
-      ...ml.mlQuestions,
-      ...nlp.nlpQuestions,
-      ...mcp.mcpQuestions,
-      ...hamRadio.hamRadioQuestions,
-      ...frontend.frontendQuestions,
-      ...docker.dockerQuestions,
-      ...git.gitQuestions
-    ];
+    for (const { loader, exportName } of Object.values(CATEGORY_MODULES)) {
+      const mod = await loader();
+      questions.push(...(mod[exportName] || []));
+    }
   }
 
-  if (level) {
-    questions = questions.filter(q => q.level === level);
-  }
-
-  if (category) {
-    questions = questions.filter(q => q.category === category);
-  }
-
-  if (subcategory) {
-    questions = questions.filter(q => q.subcategory === subcategory);
-  }
+  if (level) questions = questions.filter(q => q.level === level);
+  if (category) questions = questions.filter(q => q.category === category);
+  if (subcategory) questions = questions.filter(q => q.subcategory === subcategory);
 
   return questions;
 }
 
-// Globals
+// App state variables
 let currentLevel = "";
 let currentCategory = "";
 let currentSubcategory = "";
@@ -74,18 +53,15 @@ let shuffledQuestions = [];
 let current = 0;
 let showingAnswers = false;
 
-// DOM Elements
+// DOM elements
 const questionEl = document.getElementById('question');
 const choicesEl = document.getElementById('choices');
 const explanationEl = document.getElementById('explanation');
 const shuffleBtn = document.getElementById('shuffle-btn');
-const levelFilters = document.getElementById('level-filters');
-const categoryFilters = document.getElementById('category-filters');
-const darkModeToggle = document.getElementById('dark-mode-toggle');
 
-// Show question function
+// Display current question and answer choices
 function showQuestion() {
-  if (shuffledQuestions.length === 0) {
+  if (!shuffledQuestions.length) {
     questionEl.textContent = "No questions for this filter!";
     choicesEl.innerHTML = '';
     explanationEl.textContent = '';
@@ -93,7 +69,7 @@ function showQuestion() {
   }
 
   const q = shuffledQuestions[current];
-  questionEl.innerHTML = `<span>${getLevelIcon(q.level)} ${getCategoryIcon(q.category)}</span> ${q.question}`;
+  questionEl.textContent = `${getIcon("levels", q.level)} ${getIcon("categories", q.category)} ${q.question}`;
   choicesEl.innerHTML = '';
   explanationEl.textContent = '';
 
@@ -101,22 +77,21 @@ function showQuestion() {
     const btn = document.createElement('button');
     btn.textContent = choice;
     btn.className = 'choice-btn';
-
-    if (showingAnswers && choice === q.correct) {
-      btn.classList.add('highlight');
-    }
-
+    if (showingAnswers && choice === q.correct) btn.classList.add('highlight');
     btn.onclick = () => checkAnswer(choice, q);
     choicesEl.appendChild(btn);
   });
 }
 
-// Check answer logic
+// Handle user's answer selection
 function checkAnswer(choice, q) {
   Array.from(choicesEl.children).forEach(btn => btn.disabled = true);
   let transitionTime = 1000;
 
-  if (choice === q.correct) {
+  const isCorrect = (choice === q.correct);
+  statsTracker.logAnswer(q, isCorrect);
+
+  if (isCorrect) {
     explanationEl.innerHTML = `<span class='correct'>✅ Correct!</span>`;
     showCorrectEffect(explanationEl);
   } else {
@@ -139,60 +114,73 @@ function checkAnswer(choice, q) {
   }, transitionTime);
 }
 
-// Load & shuffle questions
+// Load and shuffle questions, then show the first
 async function updateQuestions() {
   questions = await loadQuestions(currentLevel, currentCategory, currentSubcategory);
-  shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+  shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
   current = 0;
   showQuestion();
 }
 
-// Setup Level filter buttons
-if (levelFilters) {
-  Array.from(levelFilters.getElementsByClassName('level-btn')).forEach(btn => {
-    btn.onclick = () => {
-      currentLevel = btn.getAttribute('data-level');
-      Array.from(levelFilters.getElementsByClassName('level-btn')).forEach(b => {
-        const selected = b === btn;
-        b.setAttribute('aria-pressed', selected.toString());
-        b.classList.toggle('dimmed', !selected && currentLevel !== "");
-      });
-      updateQuestions();
-    };
+// Shuffle button event
+if (shuffleBtn) shuffleBtn.onclick = () => updateQuestions();
+
+// Populate dropdown menu items from quizMeta
+function populateDropdown(menuId, type) {
+  const menu = document.getElementById(menuId);
+  if (!menu) return;
+  menu.innerHTML = '';
+  quizMeta[type].forEach(item => {
+    const li = document.createElement('li');
+    li.setAttribute('role', 'option');
+    li.setAttribute('tabindex', '0');
+    li.dataset[type.slice(0, -1)] = item.value; // e.g. levels -> level
+    li.textContent = item.label;
+    menu.appendChild(li);
   });
 }
 
-// Setup Category filter buttons
-if (categoryFilters) {
-  Array.from(categoryFilters.getElementsByClassName('category-btn')).forEach(btn => {
-    btn.onclick = () => {
-      currentCategory = btn.getAttribute('data-category');
-      Array.from(categoryFilters.getElementsByClassName('category-btn')).forEach(b => {
-        const selected = b === btn;
-        b.setAttribute('aria-pressed', selected.toString());
-        b.classList.toggle('dimmed', !selected && currentCategory !== "");
-      });
-      updateQuestions();
-    };
-  });
-}
-
-// Shuffle button
-if (shuffleBtn) {
-  shuffleBtn.onclick = () => updateQuestions();
-}
-
-// Setup dropdowns for level, category, subcategory
+// Setup dropdown open/close, keyboard nav, and item select
 function setupDropdown(toggleId, menuId, callback) {
   const toggleBtn = document.getElementById(toggleId);
   const menu = document.getElementById(menuId);
   const wrapper = toggleBtn.closest(".dropdown");
 
+  toggleBtn.setAttribute("aria-expanded", wrapper.classList.contains("show"));
+
   toggleBtn?.addEventListener("click", () => {
+    const isOpen = wrapper.classList.toggle("show");
+    toggleBtn.setAttribute("aria-expanded", isOpen);
+    if (isOpen) {
+      const firstItem = menu.querySelector("li");
+      firstItem?.focus();
+    }
+    // Close other dropdowns
     document.querySelectorAll(".dropdown").forEach(drop => {
-      if (drop !== wrapper) drop.classList.remove("show");
+      if (drop !== wrapper) {
+        drop.classList.remove("show");
+        const btn = drop.querySelector(".dropdown-toggle");
+        btn?.setAttribute("aria-expanded", false);
+      }
     });
-    wrapper.classList.toggle("show");
+  });
+
+  menu?.addEventListener('keydown', e => {
+    const items = Array.from(menu.querySelectorAll('li'));
+    let index = items.findIndex(item => item === document.activeElement);
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      index = (index + 1) % items.length;
+      items[index].focus();
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      index = (index - 1 + items.length) % items.length;
+      items[index].focus();
+    } else if (e.key === "Escape") {
+      wrapper.classList.remove("show");
+      toggleBtn.setAttribute("aria-expanded", false);
+      toggleBtn.focus();
+    }
   });
 
   menu?.querySelectorAll("li").forEach(item => {
@@ -201,87 +189,80 @@ function setupDropdown(toggleId, menuId, callback) {
       toggleBtn.textContent = item.textContent;
       callback(value);
       wrapper.classList.remove("show");
+      toggleBtn.setAttribute("aria-expanded", false);
+      toggleBtn.focus();
     });
   });
 }
 
-// Close dropdowns on click outside
+// Close all dropdowns when clicking outside
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".dropdown")) {
-    document.querySelectorAll(".dropdown").forEach(drop => drop.classList.remove("show"));
+    document.querySelectorAll(".dropdown").forEach(drop => {
+      drop.classList.remove("show");
+      const btn = drop.querySelector(".dropdown-toggle");
+      btn?.setAttribute("aria-expanded", false);
+    });
   }
 });
 
-// Hook up dropdown callbacks
-setupDropdown("level-toggle", "level-options", (level) => {
-  currentLevel = level;
-  updateQuestions();
-});
-
-setupDropdown("category-toggle", "category-options", (category) => {
-  currentCategory = category;
-  updateQuestions();
-});
-
-setupDropdown("subcategory-toggle", "subcategory-options", (subcategory) => {
-  currentSubcategory = subcategory;
-  updateQuestions();
-});
-
-// Dark mode toggle
+// Dark mode toggle helper functions
 function updateDarkModeState() {
   const isDark = document.body.classList.contains('dark-mode');
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
   if (darkModeToggle) {
     darkModeToggle.setAttribute('aria-pressed', isDark.toString());
-    darkModeToggle.innerHTML = isDark ? "🌕" : "🌑";
+    darkModeToggle.textContent = isDark ? "🌕" : "🌑";
   }
 }
 
 function initializeTheme() {
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-  } else {
-    document.body.classList.remove('dark-mode');
-  }
+  document.body.classList.toggle('dark-mode', savedTheme === 'dark');
   updateDarkModeState();
 }
 
-if (darkModeToggle) {
-  darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    updateDarkModeState();
+// Initialize app after DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  populateDropdown("level-options", "levels");
+  populateDropdown("category-options", "categories");
+  populateDropdown("subcategory-options", "subcategories");
+
+  setupDropdown("level-toggle", "level-options", level => {
+    currentLevel = level;
+    updateQuestions();
   });
-}
+  setupDropdown("category-toggle", "category-options", category => {
+    currentCategory = category;
+    updateQuestions();
+  });
+  setupDropdown("subcategory-toggle", "subcategory-options", subcategory => {
+    currentSubcategory = subcategory;
+    updateQuestions();
+  });
 
-// Level & Category icon helpers
-function getLevelIcon(level) {
-  if (level === "beginner") return "🟢";
-  if (level === "intermediate") return "🟡";
-  if (level === "advanced") return "🔴";
-  return "";
-}
+  // Dark mode toggle event listener
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      updateDarkModeState();
+    });
+  }
 
-function getCategoryIcon(category) {
-  if (category === "python") return "🐍";
-  if (category === "ml") return "🤖";
-  if (category === "nlp") return "💬";
-  if (category === "mcp") return "🔧";
-  if (category === "ham-radio") return "📡";
-  if (category === "docker") return "🐳";
-  if (category === "git") return "🐙";
-  if (category === "frontend") return "🎨";
-  return "";
-}
+  initializeTheme();
+  updateQuestions();
+  loadCryptoPrices();
+  setInterval(loadCryptoPrices, 120000);
+});
 
-// Toggle answers
+// Toggle answers button
 const toggleBtn = document.getElementById('toggleAnswers');
 if (toggleBtn) {
   toggleBtn.addEventListener('click', () => {
     showingAnswers = !showingAnswers;
     toggleBtn.textContent = showingAnswers ? '🙈' : '🫣';
-
     Array.from(choicesEl.children).forEach(btn => {
       if (btn.textContent === shuffledQuestions[current]?.correct) {
         btn.classList.toggle('highlight', showingAnswers);
@@ -290,29 +271,10 @@ if (toggleBtn) {
   });
 }
 
-// Initialize on load
-document.addEventListener('DOMContentLoaded', () => {
-  initializeTheme();
-  updateQuestions();
-  loadCryptoPrices();
-  setInterval(loadCryptoPrices, 120000);
-
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./scripts/sw.js').then(reg => {
-      console.log('Service Worker registered:', reg);
-      reg.addEventListener('updatefound', () => {
-        const newWorker = reg.installing;
-        newWorker.addEventListener('statechange', () => {
-          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            window.location.reload();
-          }
-        });
-      });
-    }).catch(err => console.error('Service Worker registration failed:', err));
-  }
-});
-
-navigator.serviceWorker.addEventListener('controllerchange', () => {
-  console.log('Service worker controller changed. Reloading...');
-  window.location.reload();
-});
+// Show stats button (make sure the button exists in your HTML with id="showStatsBtn")
+const showStatsBtn = document.getElementById('showStatsBtn');
+if (showStatsBtn) {
+  showStatsBtn.addEventListener('click', () => {
+    statsTracker.showCard();
+  });
+}

@@ -2,13 +2,6 @@
 <html lang="en">
 
 <head>
-  <script src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
-  <script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
-  <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
-  <script>
-    window.ezstandalone = window.ezstandalone || {};
-    ezstandalone.cmd = ezstandalone.cmd || [];
-  </script>
   <meta charset="UTF-8" />
   <meta name="author" content="Rhino Tools by @rhino404" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -38,7 +31,7 @@
   <title>Rhino Tools | Free Quizzes to Learn Python, AI, Ham Radio & More</title>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="./scripts/installPrompt.js" defer></script>
-  <script src="./scripts/main.js?v=20250803"></script>
+  <script type="module" src="./scripts/main.js?v=20250803"></script>
 </head>
 
 <body class="dark-mode">
@@ -49,7 +42,8 @@
       </a>
       <h3 id="crypto-title">Rhino Tools</h3>
       <span id="crypto-prices">Loading crypto prices...</span>
-      <button id="dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="false">🌙</button>
+      <!-- removed duplicate aria-pressed -->
+      <button id="dark-mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">🌑</button>
     </div>
   </header>
 
@@ -58,44 +52,20 @@
     <div class="dropdown">
       <button id="level-toggle" class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false"
         aria-controls="level-options">🎚️ Select Level ▾</button>
-      <ul id="level-options" class="dropdown-menu" role="listbox" tabindex="-1" hidden>
-        <li role="option" data-level="" tabindex="0"> 🌐 All Levels</li>
-        <li role="option" data-level="beginner" tabindex="0">🟢 Beginner</li>
-        <li role="option" data-level="intermediate" tabindex="0">🟡 Intermediate</li>
-        <li role="option" data-level="advanced" tabindex="0">🔴 Advanced</li>
-      </ul>
+      <!-- Removed tabindex and hidden attributes so JS can control focus & visibility -->
+      <ul id="level-options" class="dropdown-menu" role="listbox"></ul>
     </div>
     <!-- Category selection dropdown -->
     <div class="dropdown">
       <button id="category-toggle" class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false"
         aria-controls="category-options">📚 Select Category ▾</button>
-      <ul id="category-options" class="dropdown-menu" role="listbox" tabindex="-1" hidden>
-        <li role="option" data-category="" tabindex="0"> 🌐 All Categories</li>
-        <li role="option" data-category="python" tabindex="0">🐍 Python</li>
-        <li role="option" data-category="ml" tabindex="0">🤖 Machine Learning</li>
-        <li role="option" data-category="nlp" tabindex="0">💬 NLP</li>
-        <li role="option" data-category="mcp" tabindex="0">🔧 MCP</li>
-        <li role="option" data-category="ham-radio" tabindex="0">📡 Ham Radio</li>
-        <li role="option" data-category="git" tabindex="0">🐙 Git</li>
-        <li role="option" data-category="frontend" tabindex="0">🎨 Frontend Development</li>
-        <li role="option" data-category="docker" tabindex="0">🐳 Docker</li>
-      </ul>
+      <ul id="category-options" class="dropdown-menu" role="listbox"></ul>
     </div>
     <!-- Sub-Category selection dropdown -->
     <div class="dropdown">
       <button id="subcategory-toggle" class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false"
         aria-controls="subcategory-options">📚 Select Sub-Category ▾</button>
-      <ul id="subcategory-options" class="dropdown-menu" role="listbox" tabindex="-1" hidden>
-        <li role="option" data-subcategory="" tabindex="0"> 🌐 All Sub-Categories</li>
-        <!-- <li role="option" data-subcategory="python" tabindex="0">🐍 Python</li>
-        <li role="option" data-subcategory="ml" tabindex="0">🤖 Machine Learning</li>
-        <li role="option" data-subcategory="nlp" tabindex="0">💬 NLP</li>
-        <li role="option" data-subcategory="mcp" tabindex="0">🔧 MCP</li> -->
-        <li role="option" data-subcategory="technician" tabindex="0">📡 Technician</li>
-        <!-- <li role="option" data-subcategory="git" tabindex="0">🐙 Git</li>
-        <li role="option" data-subcategory="frontend" tabindex="0">🎨 Frontend Development</li>
-        <li role="option" data-subcategory="docker" tabindex="0">🐳 Docker</li> -->
-      </ul>
+      <ul id="subcategory-options" class="dropdown-menu" role="listbox"></ul>
     </div>
   </nav>
 
@@ -108,26 +78,14 @@
   <div class="button-group" id="controls">
     <button id="toggleAnswers" class="circle-btn" title="Toggle Answers">🫣</button>
     <button id="shuffle-btn" class="circle-btn" title="Shuffle">🔀</button>
+    <button id="showStatsBtn" class="circle-btn" title="Show Stats">📊</button>
   </div>
-
-  <div id="ezoic-pub-ad-placeholder-961"></div>
-  <script>
-    ezstandalone.cmd.push(function () {
-      ezstandalone.showAds(961, {
-        "adType": "incontent",
-        "adSize": "fluid",
-        "adFormat": "auto",
-        "adPosition": "bottom"
-      });
-    });
-  </script>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("dark-mode-toggle").style.visibility = "visible";
     });
   </script>
-  <script type="module" src="./scripts/main.js"></script>
 
   <footer>
     <div id="social-links">
@@ -146,19 +104,6 @@
 
   <script>
     document.getElementById('copyright').textContent = `Copyright © ${new Date().getFullYear()} Rhino Tools. All rights reserved.`;
-  </script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./scripts/sw.js')
-          .then(reg => {
-            console.log('Service worker registered:', reg.scope);
-          })
-          .catch(err => {
-            console.error('Service worker registration failed:', err);
-          });
-      });
-    }
   </script>
 </body>
 
