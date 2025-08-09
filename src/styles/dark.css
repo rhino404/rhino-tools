@@ -25,6 +25,10 @@ body.dark-mode {
 
 body.dark-mode .question {
   color: #fff;
+
+  /* Text stroke to create white border around text */
+  -webkit-text-stroke-width: 0.05em;
+  -webkit-text-stroke-color: black;
 }
 
 body.dark-mode .choice-btn,
@@ -76,14 +80,6 @@ body.dark-mode footer {
   color: #ccc;
 }
 
-body.dark-mode .question {
-    color: white;
-
-    /* Text stroke to create white border around text */
-    -webkit-text-stroke-width: 0.05em;
-    -webkit-text-stroke-color: black;
-}
-
 .level-btn,
 .category-btn {
   background: linear-gradient(to right, #1a755e, #198368);
@@ -92,4 +88,79 @@ body.dark-mode .question {
 .choice-btn:hover,
 .choice-btn:focus {
   outline: solid 2px white;
+}
+
+body.dark-mode #score-card {
+  background-color: #222;
+  color: #eee;
+  border: 1px solid var(--border-color-dark);
+  box-shadow: 0 0 10px #000;
+}
+
+body.dark-mode #score-card h3 {
+  color: #fff;
+  border-bottom: 1px solid var(--border-color-dark);
+  padding-bottom: 0.3em;
+}
+
+body.dark-mode #score-card ul.score-list li {
+  color: #ccc;
+  border-bottom: 1px dashed #444;
+  padding: 0.2em 0;
+}
+
+body.dark-mode #close-score-card {
+  background-color: #333;
+  color: #ccc;
+  border: 1px solid #555;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+body.dark-mode #close-score-card:hover {
+  background-color: #444;
+}
+
+.score-card {
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.score-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+body.dark-mode .subcategory-header {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #444;
+  margin-top: 1em;
+}
+
+body.dark-mode .progress-bar {
+  background-color: #444;
+  border-radius: 8px;
+  height: 12px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+body.dark-mode .progress-fill {
+  background-color: #76ff7a;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+body.dark-mode .progress-info {
+  font-size: 0.85rem;
+  margin-top: 4px;
+  color: #ccc;
 }
