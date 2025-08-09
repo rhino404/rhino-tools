@@ -388,28 +388,241 @@ footer {
    Install Button (PWA)
 ========================= */
 
-#installBtn.fab {
+#pwaInstallBanner {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  font-size: 24px;
-  background: linear-gradient(to right, #000, #198368);
-  color: white;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Hide initially */
+#pwaInstallBanner.hidden {
+  transform: translateY(100%);
+}
+
+/* Inner layout */
+.pwa-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 600px;
+  width: 100%;
+  padding-inline: 1em;
+}
+
+.pwa-banner-actions {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+/* Buttons */
+#pwaInstallBanner button {
   border: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  padding: 0.5em 1em;
+  border-radius: var(--border-radius);
   cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+/* Dark/light theme detection */
+body.dark-mode #pwaInstallBanner {
+  background: linear-gradient(to right, #111, #1a755e);
+  color: #fff;
+}
+
+body:not(.dark-mode) #pwaInstallBanner {
+  background: linear-gradient(to right, #f5f5f5, #d6eee6);
+  color: #000;
+}
+
+body.dark-mode #pwaInstallBanner button {
+  background: #fff;
+  color: #000;
+}
+
+body:not(.dark-mode) #pwaInstallBanner button {
+  background: #000;
+  color: #fff;
+}
+
+.figure-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1000;
+}
+
+.figure-modal.hidden {
   display: none;
-  transition: background-color 0.2s ease;
 }
 
-#installBtn.fab:hover {
-  background: linear-gradient(to right, #000, #6ca179);
+.figure-content {
+  background: var(--bg);
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 90vw;
+  max-height: 80vh;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  position: relative;
 }
 
-#installBtn:focus {
-  outline: 3px solid rgba(26, 117, 94, 0.5);
+.figure-content img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 4px;
+}
+
+.close-button {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.question-image {
+  cursor: pointer;
+  margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+  margin-inline: auto;
+}
+
+.question-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================
+   Stats Card Styles (base.css)
+============================ */
+
+#score-card {
+  position: fixed;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #111;
+  padding: 1.5em;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  width: 90%;
+  max-width: 400px;
+  font-family: sans-serif;
+}
+
+#score-card h3 {
+  margin-top: 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+.score-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5em;
+}
+
+.score-list li {
+  padding: 0.25em 0;
+}
+
+.score-close {
+  margin-top: 1em;
+  display: block;
+  width: 100%;
+  background: #1a755e;
+  color: #fff;
+  border: none;
+  padding: 0.6em;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.score-close:hover {
+  background: #166b55;
+}
+
+.score-card.hidden {
+  display: none;
+}
+
+.score-card {
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.score-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.subcategory-header {
+    background-color: var(--card-header-bg, #ddd);
+    color: var(--card-header-text, #000);
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    background-color: #ccc;
+    border-radius: 8px;
+    height: 12px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.progress-fill {
+    background-color: #4caf50;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.progress-info {
+    font-size: 0.85rem;
+    margin-top: 4px;
 }

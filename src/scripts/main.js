@@ -1,280 +1,228 @@
+import { DATA_SOURCES } from './dataSources.js';
+import { quizMeta, getCategoryIcon } from './quizMeta.js';
+import { getSubcategoriesForCategory } from './quizMetaUtils.js';
+import { state } from './state.js';
+import { showQuestion } from './questions.js';
+import { initializeTheme } from './theme.js';
 import { loadCryptoPrices } from './crypto.js';
-import { showCorrectEffect, showIncorrectEffect } from './effects.js';
-import { quizMeta } from './quizMeta.js';
-import { statsTracker } from './statsTracker.js';
+import { initPwaInstaller } from './pwaInstaller.js';
 
-// Category modules for dynamic question loading
-const CATEGORY_MODULES = {
-  'ham-radio': {
-    loader: () => import('./questions/ham-radio.js'),
-    exportName: 'hamRadioQuestions',
-  },
-  // add other categories similarly
-};
 
-// Utility: Get emoji icon for level/category/subcategory
-function getIcon(type, value) {
-  const item = quizMeta[type]?.find(el => el.value === value);
-  if (item?.label) {
-    const emojiMatch = item.label.match(/^(\p{Emoji_Presentation}|\p{Emoji}\uFE0F)/u);
-    return emojiMatch ? emojiMatch[0] : "";
-  }
-  return "";
+initPwaInstaller();
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then((reg) => {
+        console.log('[PWA] Service worker registered:', reg.scope);
+      })
+      .catch((err) => {
+        console.error('[PWA] Service worker registration failed:', err);
+      });
+  });
 }
 
-// Load questions filtered by level, category, and subcategory
-async function loadQuestions(level, category, subcategory) {
-  let questions = [];
+function normalize(str = '') {
+  return str.toLowerCase().replace(/\s+/g, '-');
+}
 
-  if (category && CATEGORY_MODULES[category]) {
-    const { loader, exportName } = CATEGORY_MODULES[category];
-    const mod = await loader();
-    questions = mod[exportName] || [];
+async function fetchQuestions(category, subcategory) {
+  if (!category) return [];
+
+  const subData = DATA_SOURCES[category];
+  if (!subData) return [];
+
+  let questionFiles = [];
+
+  if (!subcategory || subcategory === 'all') {
+    questionFiles = Object.values(subData);
   } else {
-    for (const { loader, exportName } of Object.values(CATEGORY_MODULES)) {
-      const mod = await loader();
-      questions.push(...(mod[exportName] || []));
-    }
+    const file = subData[subcategory];
+    if (file) questionFiles = [file];
   }
 
-  if (level) questions = questions.filter(q => q.level === level);
-  if (category) questions = questions.filter(q => q.category === category);
-  if (subcategory) questions = questions.filter(q => q.subcategory === subcategory);
-
+  const questions = [];
+  for (const url of questionFiles) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`Failed to fetch ${url}`);
+      const data = await res.json();
+      questions.push(...(data.questions || data));
+    } catch (err) {
+      console.error(err);
+    }
+  }
   return questions;
 }
 
-// App state variables
-let currentLevel = "";
-let currentCategory = "";
-let currentSubcategory = "";
-let questions = [];
-let shuffledQuestions = [];
-let current = 0;
-let showingAnswers = false;
+async function loadAndShowQuestions() {
+  const { currentCategory, currentSubcategory } = state;
 
-// DOM elements
-const questionEl = document.getElementById('question');
-const choicesEl = document.getElementById('choices');
-const explanationEl = document.getElementById('explanation');
-const shuffleBtn = document.getElementById('shuffle-btn');
-
-// Display current question and answer choices
-function showQuestion() {
-  if (!shuffledQuestions.length) {
-    questionEl.textContent = "No questions for this filter!";
-    choicesEl.innerHTML = '';
-    explanationEl.textContent = '';
+  if (!currentCategory || currentSubcategory === '') {
+    state.questions = [];
+    state.questionEl.textContent = 'Please select a category and subcategory to start.';
+    state.choicesEl.innerHTML = '';
+    state.explanationEl.textContent = '';
     return;
   }
 
-  const q = shuffledQuestions[current];
-  questionEl.textContent = `${getIcon("levels", q.level)} ${getIcon("categories", q.category)} ${q.question}`;
-  choicesEl.innerHTML = '';
-  explanationEl.textContent = '';
+  try {
+    const loadedQuestions = await fetchQuestions(currentCategory, currentSubcategory);
+    state.questions = loadedQuestions;
+  } catch (err) {
+    console.error('Failed to load questions:', err);
+    state.questions = [];
+  }
 
-  q.choices.forEach(choice => {
-    const btn = document.createElement('button');
-    btn.textContent = choice;
-    btn.className = 'choice-btn';
-    if (showingAnswers && choice === q.correct) btn.classList.add('highlight');
-    btn.onclick = () => checkAnswer(choice, q);
-    choicesEl.appendChild(btn);
+  state.currentIndex = 0;
+
+  if (state.questions.length === 0) {
+    state.questionEl.textContent = 'No questions found for the selected filters.';
+    state.choicesEl.innerHTML = '';
+    state.explanationEl.textContent = '';
+    return;
+  }
+
+  showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
+    questionEl: state.questionEl,
+    choicesEl: state.choicesEl,
+    explanationEl: state.explanationEl,
   });
 }
 
-// Handle user's answer selection
-function checkAnswer(choice, q) {
-  Array.from(choicesEl.children).forEach(btn => btn.disabled = true);
-  let transitionTime = 1000;
+function populateDropdown(listEl, options, selectedVal) {
+  listEl.innerHTML = '';
 
-  const isCorrect = (choice === q.correct);
-  statsTracker.logAnswer(q, isCorrect);
-
-  if (isCorrect) {
-    explanationEl.innerHTML = `<span class='correct'>✅ Correct!</span>`;
-    showCorrectEffect(explanationEl);
-  } else {
-    explanationEl.innerHTML = `<span class='incorrect'>❌:</span> ${q.explanation}`;
-    showIncorrectEffect(explanationEl);
-    explanationEl.classList.add('shake');
-    setTimeout(() => explanationEl.classList.remove('shake'), 400);
-    transitionTime = 8000;
-  }
-
-  setTimeout(() => {
-    current++;
-    if (current < shuffledQuestions.length) {
-      showQuestion();
-    } else {
-      questionEl.textContent = "Quiz Complete!";
-      choicesEl.innerHTML = '';
-      explanationEl.textContent = '';
-    }
-  }, transitionTime);
-}
-
-// Load and shuffle questions, then show the first
-async function updateQuestions() {
-  questions = await loadQuestions(currentLevel, currentCategory, currentSubcategory);
-  shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
-  current = 0;
-  showQuestion();
-}
-
-// Shuffle button event
-if (shuffleBtn) shuffleBtn.onclick = () => updateQuestions();
-
-// Populate dropdown menu items from quizMeta
-function populateDropdown(menuId, type) {
-  const menu = document.getElementById(menuId);
-  if (!menu) return;
-  menu.innerHTML = '';
-  quizMeta[type].forEach(item => {
+  options.forEach(opt => {
     const li = document.createElement('li');
     li.setAttribute('role', 'option');
-    li.setAttribute('tabindex', '0');
-    li.dataset[type.slice(0, -1)] = item.value; // e.g. levels -> level
-    li.textContent = item.label;
-    menu.appendChild(li);
-  });
-}
-
-// Setup dropdown open/close, keyboard nav, and item select
-function setupDropdown(toggleId, menuId, callback) {
-  const toggleBtn = document.getElementById(toggleId);
-  const menu = document.getElementById(menuId);
-  const wrapper = toggleBtn.closest(".dropdown");
-
-  toggleBtn.setAttribute("aria-expanded", wrapper.classList.contains("show"));
-
-  toggleBtn?.addEventListener("click", () => {
-    const isOpen = wrapper.classList.toggle("show");
-    toggleBtn.setAttribute("aria-expanded", isOpen);
-    if (isOpen) {
-      const firstItem = menu.querySelector("li");
-      firstItem?.focus();
+    li.dataset.value = opt.value;
+    li.innerHTML = `${opt.icon ? `${opt.icon} ` : ''}${opt.label}`;
+    if (opt.value === selectedVal) {
+      li.classList.add('selected');
     }
-    // Close other dropdowns
-    document.querySelectorAll(".dropdown").forEach(drop => {
-      if (drop !== wrapper) {
-        drop.classList.remove("show");
-        const btn = drop.querySelector(".dropdown-toggle");
-        btn?.setAttribute("aria-expanded", false);
-      }
-    });
-  });
-
-  menu?.addEventListener('keydown', e => {
-    const items = Array.from(menu.querySelectorAll('li'));
-    let index = items.findIndex(item => item === document.activeElement);
-    if (e.key === "ArrowDown") {
-      e.preventDefault();
-      index = (index + 1) % items.length;
-      items[index].focus();
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      index = (index - 1 + items.length) % items.length;
-      items[index].focus();
-    } else if (e.key === "Escape") {
-      wrapper.classList.remove("show");
-      toggleBtn.setAttribute("aria-expanded", false);
-      toggleBtn.focus();
-    }
-  });
-
-  menu?.querySelectorAll("li").forEach(item => {
-    item.addEventListener("click", () => {
-      const value = item.dataset.level || item.dataset.category || item.dataset.subcategory;
-      toggleBtn.textContent = item.textContent;
-      callback(value);
-      wrapper.classList.remove("show");
-      toggleBtn.setAttribute("aria-expanded", false);
-      toggleBtn.focus();
-    });
+    listEl.appendChild(li);
   });
 }
 
-// Close all dropdowns when clicking outside
-document.addEventListener("click", (e) => {
-  if (!e.target.closest(".dropdown")) {
-    document.querySelectorAll(".dropdown").forEach(drop => {
-      drop.classList.remove("show");
-      const btn = drop.querySelector(".dropdown-toggle");
-      btn?.setAttribute("aria-expanded", false);
-    });
-  }
-});
+function setupDropdown(toggleBtn, optionsEl, optionsArray, filterKey) {
+  populateDropdown(optionsEl, optionsArray, state[filterKey]);
 
-// Dark mode toggle helper functions
-function updateDarkModeState() {
-  const isDark = document.body.classList.contains('dark-mode');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  const darkModeToggle = document.getElementById('dark-mode-toggle');
-  if (darkModeToggle) {
-    darkModeToggle.setAttribute('aria-pressed', isDark.toString());
-    darkModeToggle.textContent = isDark ? "🌕" : "🌑";
-  }
-}
-
-function initializeTheme() {
-  const savedTheme = localStorage.getItem('theme');
-  document.body.classList.toggle('dark-mode', savedTheme === 'dark');
-  updateDarkModeState();
-}
-
-// Initialize app after DOM ready
-document.addEventListener('DOMContentLoaded', () => {
-  populateDropdown("level-options", "levels");
-  populateDropdown("category-options", "categories");
-  populateDropdown("subcategory-options", "subcategories");
-
-  setupDropdown("level-toggle", "level-options", level => {
-    currentLevel = level;
-    updateQuestions();
-  });
-  setupDropdown("category-toggle", "category-options", category => {
-    currentCategory = category;
-    updateQuestions();
-  });
-  setupDropdown("subcategory-toggle", "subcategory-options", subcategory => {
-    currentSubcategory = subcategory;
-    updateQuestions();
-  });
-
-  // Dark mode toggle event listener
-  const darkModeToggle = document.getElementById('dark-mode-toggle');
-  if (darkModeToggle) {
-    darkModeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      updateDarkModeState();
-    });
-  }
-
-  initializeTheme();
-  updateQuestions();
-  loadCryptoPrices();
-  setInterval(loadCryptoPrices, 120000);
-});
-
-// Toggle answers button
-const toggleBtn = document.getElementById('toggleAnswers');
-if (toggleBtn) {
   toggleBtn.addEventListener('click', () => {
-    showingAnswers = !showingAnswers;
-    toggleBtn.textContent = showingAnswers ? '🙈' : '🫣';
-    Array.from(choicesEl.children).forEach(btn => {
-      if (btn.textContent === shuffledQuestions[current]?.correct) {
-        btn.classList.toggle('highlight', showingAnswers);
-      }
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', String(!expanded));
+    toggleBtn.parentElement.classList.toggle('show', !expanded);
+  });
+
+  optionsEl.addEventListener('click', e => {
+    if (e.target.tagName !== 'LI') return;
+    const val = e.target.dataset.value;
+    if (val === state[filterKey]) return;
+
+    state[filterKey] = val;
+
+    if (filterKey === 'currentCategory') {
+      const icon = getCategoryIcon[val] || '';
+      const label = quizMeta.categories.find(o => o.value === val)?.label || '';
+      toggleBtn.innerHTML = `${icon} ${label} ▾`;
+
+      const subcategories = getSubcategoriesForCategory(val);
+      const subcatOptions = [
+        { label: 'All Subcategories', value: 'all', icon: '🌐' },
+        ...subcategories
+      ];
+      state.currentSubcategory = 'all';
+      state.subcategoryToggle.parentElement.style.display = 'block';
+      populateDropdown(state.subcategoryOptions, subcatOptions, state.currentSubcategory);
+
+      state.subcategoryToggle.innerHTML = `🌐 All Subcategories ▾`;
+
+      // ✅ Notify statsTracker of selected category
+      import('./statsTracker.js').then(({ statsTracker }) => {
+        statsTracker.setCategory(val);
+      });
+
+      loadAndShowQuestions();
+    } else if (filterKey === 'currentSubcategory') {
+      const label = optionsEl.querySelector(`li[data-value="${val}"]`)?.textContent || 'Select';
+      toggleBtn.textContent = `${label} ▾`;
+      loadAndShowQuestions();
+    }
+
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    optionsEl.parentElement.classList.remove('show');
+  });
+}
+
+function setupButtons() {
+  state.shuffleBtn.addEventListener('click', () => {
+    if (!state.questions.length) return;
+
+    for (let i = state.questions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [state.questions[i], state.questions[j]] = [state.questions[j], state.questions[i]];
+    }
+
+    state.currentIndex = 0;
+    showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
+      questionEl: state.questionEl,
+      choicesEl: state.choicesEl,
+      explanationEl: state.explanationEl,
+    });
+  });
+
+  state.toggleAnswersBtn.addEventListener('click', () => {
+    state.showingAnswers = !state.showingAnswers;
+    showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
+      questionEl: state.questionEl,
+      choicesEl: state.choicesEl,
+      explanationEl: state.explanationEl,
+    });
+  });
+
+  state.showStatsBtn.addEventListener('click', () => {
+    import('./statsTracker.js').then(({ statsTracker }) => {
+      statsTracker.showCard();
     });
   });
 }
 
-// Show stats button (make sure the button exists in your HTML with id="showStatsBtn")
-const showStatsBtn = document.getElementById('showStatsBtn');
-if (showStatsBtn) {
-  showStatsBtn.addEventListener('click', () => {
-    statsTracker.showCard();
-  });
-}
+document.addEventListener('DOMContentLoaded', () => {
+  initializeTheme();
+
+  state.questionEl = document.getElementById('question');
+  state.choicesEl = document.getElementById('choices');
+  state.explanationEl = document.getElementById('explanation');
+
+  state.categoryToggle = document.getElementById('category-toggle');
+  state.categoryOptions = document.getElementById('category-options');
+  state.subcategoryToggle = document.getElementById('subcategory-toggle');
+  state.subcategoryOptions = document.getElementById('subcategory-options');
+
+  state.shuffleBtn = document.getElementById('shuffle-btn');
+  state.toggleAnswersBtn = document.getElementById('toggleAnswers');
+  state.showStatsBtn = document.getElementById('showStatsBtn');
+
+  state.subcategoryToggle.parentElement.style.display = 'none';
+  state.currentCategory = '';
+  state.currentSubcategory = '';
+  state.showingAnswers = false;
+
+  const categoryOptionsWithIcons = quizMeta.categories.map(cat => ({
+    ...cat,
+    icon: getCategoryIcon[cat.value] || ''
+  }));
+
+  setupDropdown(state.categoryToggle, state.categoryOptions, categoryOptionsWithIcons, 'currentCategory');
+  setupDropdown(state.subcategoryToggle, state.subcategoryOptions, [], 'currentSubcategory');
+
+  state.categoryToggle.textContent = 'Select Category ▾';
+  state.subcategoryToggle.textContent = 'Select Subcategory ▾';
+
+  setupButtons();
+  loadCryptoPrices();
+
+  state.questionEl.textContent = 'Please select a category to start.';
+  state.choicesEl.innerHTML = '';
+  state.explanationEl.textContent = '';
+});

@@ -14,7 +14,7 @@ body {
     background-color: var(--primary-bg);
     color: var(--text-color);
     background-image: linear-gradient(rgba(24, 24, 24, 0.8),
-            rgba(255, 255, 255, 0.8)), url(../images/rhino404.jpeg);
+            rgba(255, 255, 255, 0.8)), url(/images/rhino404.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center left;
@@ -60,4 +60,16 @@ footer {
     color: #fff;
 }
 
+
+.score-card {
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.score-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
 

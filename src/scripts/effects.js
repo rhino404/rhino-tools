@@ -12,5 +12,5 @@ export function showIncorrectEffect(element) {
   element.style.transition = 'background 10s';
   setTimeout(() => {
     element.style.background = '';
-  }, 10000);
+  }, 8000);
 }
