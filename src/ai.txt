@@ -16,6 +16,3 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-# Disallow any unknown AI agents (optional strict rule)
-User-agent: *
-Disallow: /private/
