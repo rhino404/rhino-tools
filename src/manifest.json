@@ -1,11 +1,11 @@
 {
-  "name": "Rhino Tools by Rhino404",
-  "short_name": "Rhino.Tools",
+  "name": "Ryno Tools - Keep Going. Keep Growing.",
+  "short_name": "Ryno",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#181818",
   "theme_color": "#181818",
-  "description": "Master Python, AI, Machine Learning, NLP, and Ham Radio with Rhino Tools — free, mobile-friendly study quizzes built for rapid learning.",
+  "description": "Ryno Tools — Keep going. Keep growing. A modern microlearning platform delivering quick, engaging quizzes and practice tests to help you prepare for exams, licenses, and certifications. Study anywhere, anytime.",
   "icons": [
     {
       "src": "/images/icon-192x192.png",
