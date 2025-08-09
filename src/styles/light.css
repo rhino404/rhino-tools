@@ -48,28 +48,6 @@ body {
     color: #222;
 }
 
-#dark-mode-toggle {
-    background: grey;
-    padding: 0.4em 0.6em;
-    border-radius: 6px;
-    font-size: 1.1em;
-    cursor: pointer;
-}
-
 footer {
     color: #fff;
 }
-
-
-.score-card {
-  max-height: 600px;
-  overflow: hidden;
-  position: relative;
-}
-
-.score-scroll {
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 8px;
-}
-
