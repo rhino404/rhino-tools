@@ -158,12 +158,21 @@ function setupButtons() {
   state.shuffleBtn.addEventListener('click', () => {
     if (!state.questions.length) return;
 
-    for (let i = state.questions.length - 1; i > 0; i--) {
+    const start = state.currentIndex; // First unanswered question
+    const remaining = state.questions.slice(start);
+
+    // Fisher–Yates shuffle on remaining questions
+    for (let i = remaining.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [state.questions[i], state.questions[j]] = [state.questions[j], state.questions[i]];
+      [remaining[i], remaining[j]] = [remaining[j], remaining[i]];
     }
 
-    state.currentIndex = 0;
+    // Merge back: answered stay first, remaining shuffled
+    state.questions = [
+      ...state.questions.slice(0, start),
+      ...remaining
+    ];
+
     showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
       questionEl: state.questionEl,
       choicesEl: state.choicesEl,
