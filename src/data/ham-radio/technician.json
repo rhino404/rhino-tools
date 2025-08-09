@@ -98,12 +98,12 @@
     "question": "Which of the following services are protected from interference by amateur signals under all circumstances?",
     "choices": [
       "Citizens Radio Service",
-      "B. Broadcast Service",
+      "Broadcast Service",
       "Land Mobile Radio Service",
-      "D. Radionavigation Service"
+      "Radionavigation Service"
     ],
-    "correct": "D. Radionavigation Service",
-    "explanation": "D. Radionavigation Service",
+    "correct": "Radionavigation Service",
+    "explanation": "Radionavigation Service",
     "category": "ham-radio",
     "subcategory": "Technician",
     "topic_id": "T1A",
@@ -477,7 +477,7 @@
   {
     "question": "Why are frequency assignments for U.S. stations operating maritime mobile not the same everywhere in the world?",
     "choices": [
-      "A. Amateur maritime mobile stations in international waters must conform to the frequency assignments of the country nearest to their vessel",
+      "Amateur maritime mobile stations in international waters must conform to the frequency assignments of the country nearest to their vessel",
       "Amateur frequency assignments can vary among the three ITU regions",
       "Frequency assignments are determined by the captain of the vessel",
       "Amateur frequency assignments are different in each of the 90 ITU zones"
@@ -5132,13 +5132,13 @@
   {
     "question": "Which term describes the ability of a receiver to detect the presence of a signal?",
     "choices": [
-      "A. Linearity",
-      "B. Sensitivity",
+      "Linearity",
+      "Sensitivity",
       "Selectivity",
       "Total Harmonic Distortion"
     ],
-    "correct": "B. Sensitivity",
-    "explanation": "B. Sensitivity",
+    "correct": "Sensitivity",
+    "explanation": "Sensitivity",
     "category": "ham-radio",
     "subcategory": "Technician",
     "topic_id": "T7A",
