@@ -3,60 +3,97 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="author" content="Rhino Tools by @rhino404" />
+  <meta name="author" content="Ryno Tools by @rhino404" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- SEO: Optimized description and keywords -->
   <meta name="description"
-    content="Master Python, AI, Machine Learning, NLP, and Ham Radio with Rhino Tools — free, mobile-friendly study quizzes built for rapid learning." />
-  <meta name="keywords" content="quiz, study, python, machine learning, ai, nlp, coding, education, ham radio" />
+    content="Ryno Tools — From zero to skilled — faster. Learn coding and AI with a system built for modern learners. Free, mobile-friendly quizzes to master Python, AI, Machine Learning, NLP, and Ham Radio. Powered by Skill Torque to accelerate your skills." />
+  <meta name="keywords"
+    content="Ryno Tools, Skill Torque, quiz app, Python quizzes, AI learning, machine learning quizzes, NLP practice, ham radio exam, coding practice, study tools, learning platform, online quizzes" />
+
+  <!-- Google AdSense -->
   <meta name="google-adsense-account" content="ca-pub-5854133806080130">
-  <meta property="og:title" content="Rhino Tools – Free Study Quizzes for Python, AI, Ham Radio & More" />
+
+  <!-- Open Graph (Facebook/LinkedIn) -->
+  <meta property="og:title" content="Ryno Tools – From Zero to Skilled — Faster" />
   <meta property="og:description"
-    content="Mobile-friendly quizzes to learn Python, Machine Learning, AI, NLP, and Ham Radio." />
+    content="From zero to skilled — faster. Learn coding and AI with a system built for modern learners. Take free quizzes in Python, Machine Learning, AI, NLP, and Ham Radio." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rhino.tools/" />
   <meta property="og:image" content="https://rhino.tools/images/rhino404.jpeg" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rhino Tools – Free Study Quizzes for Python, AI, Ham Radio & More" />
+  <meta name="twitter:title" content="Ryno Tools – From Zero to Skilled — Faster" />
   <meta name="twitter:description"
-    content="Test your knowledge on Python, ML, NLP, and more with mobile-optimized study tools." />
+    content="From zero to skilled — faster. Learn coding and AI with a system built for modern learners. Try free quizzes in Python, AI, NLP, and Ham Radio." />
   <meta name="twitter:image" content="https://rhino.tools/images/rhino404.jpeg" />
-  <meta name="robots" content="index, follow" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- Favicons -->
   <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
   <link rel="shortcut icon" href="/images/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Rhino.Tools" />
+  <meta name="apple-mobile-web-app-title" content="Ryno Tools" />
+
+  <!-- Manifest -->
   <link rel="manifest" href="manifest.json?v=20250803" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="./styles/base.css?v=20250803" />
   <link rel="stylesheet" href="./styles/light.css?v=20250803" />
   <link rel="stylesheet" href="./styles/dark.css?v=20250803" />
+
+  <!-- Canonical URL -->
   <link rel="canonical" href="https://rhino.tools/" />
-  <title>Rhino Tools | Free Quizzes to Learn Python, AI, Ham Radio & More</title>
+
+  <!-- Title -->
+  <title>Ryno Tools | Powered by Skill Torque – From Zero to Skilled — Faster</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Main Script -->
   <script type="module" src="./scripts/main.js?v=20250803"></script>
+
+  <!-- Structured Data for Brand -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ryno Tools",
+    "url": "https://rhino.tools/",
+    "logo": "https://rhino.tools/images/rhino404.jpeg",
+    "description": "Ryno Tools — From zero to skilled — faster. Learn coding and AI with a system built for modern learners. Free, mobile-friendly quizzes for Python, AI, NLP, and Ham Radio. Powered by Skill Torque.",
+    "sameAs": [
+      "https://github.com/rhino404"
+    ]
+  }
+  </script>
 </head>
 
 <body class="dark-mode">
   <header>
     <div id="crypto-bar">
       <a href="/" aria-label="Home">
-        <img src="./images/rhino404.jpeg" alt="Rhino Logo" id="crypto-logo" />
+        <img src="./images/rhino404.jpeg" alt="Ryno Tools Rhino Logo" id="crypto-logo" />
       </a>
-      <h3 id="crypto-title">Rhino Tools</h3>
+      <h3 id="crypto-title">Ryno Tools</h3>
       <span id="crypto-prices">Loading crypto prices...</span>
-      <!-- removed duplicate aria-pressed -->
-      <button id="dark-mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">🌑</button>
+      <span id="dark-mode-toggle" class="clickable-icon" role="button" aria-label="Toggle dark mode">🌑</span>
     </div>
   </header>
 
   <nav aria-label="Quiz Filters">
-    <!-- Category selection dropdown -->
     <div class="dropdown">
       <button id="category-toggle" class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false"
         aria-controls="category-options">🗃️ Select Category ▾</button>
       <ul id="category-options" class="dropdown-menu" role="listbox"></ul>
     </div>
-    <!-- Sub-Category selection dropdown -->
     <div class="dropdown">
       <button id="subcategory-toggle" class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false"
         aria-controls="subcategory-options">🗂️ Select Sub-Category ▾</button>
@@ -85,7 +122,7 @@
   <footer>
     <div id="social-links">
       <a href="https://github.com/rhino404" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <img src="https://github.githubassets.com/favicon.ico" alt="GitHub">
+        <img src="https://github.githubassets.com/favicon.ico" alt="GitHub Logo">
       </a>
     </div>
     <a href="./pages/privacy.html" style="color:inherit; text-decoration:underline;">Privacy Policy</a>
@@ -96,7 +133,7 @@
     <br />
     <div id="pwaInstallBanner" class="hidden">
       <div class="pwa-banner-content">
-        <span>📱 Install Rhino Tools</span>
+        <span>📱 Install Ryno Tools - Powered by Skill Torque</span>
         <div class="pwa-banner-actions">
           <button id="installBtn">Install</button>
           <button id="dismissInstallBtn" class="dismiss-inside" aria-label="Dismiss">✖</button>
@@ -106,7 +143,7 @@
   </footer>
 
   <script>
-    document.getElementById('copyright').textContent = `Copyright © ${new Date().getFullYear()} Rhino Tools. All rights reserved.`;
+    document.getElementById('copyright').textContent = `Copyright © ${new Date().getFullYear()} Ryno Tools. All rights reserved.`;
   </script>
   <script type="module" src="./scripts/pwaInstaller.js"></script>
 </body>

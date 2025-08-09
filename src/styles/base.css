@@ -53,18 +53,17 @@ header {
   justify-content: space-evenly;
   gap: 1rem;
   padding: 0.5em 1em;
-  background: linear-gradient(to right, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0.6)),
+  background: linear-gradient(to right, rgba(24, 24, 24, 1), rgba(26, 117, 94, 0.6)),
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect width='20' height='20' fill='%231a755e' fill-opacity='0.2'/><rect x='20' y='20' width='20' height='20' fill='%231a755e' fill-opacity='0.2'/></svg>");
-  background-color: #181818;
   height: 5em;
 }
 
 #crypto-logo {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 10%;
   object-fit: cover;
-  margin-right: 0.5em;
+  /* margin-right: 0.25em; */
 }
 
 #crypto-prices {
@@ -75,21 +74,21 @@ header {
   white-space: pre-line;
 }
 
-#dark-mode-toggle {
-  background: var(--button-bg, #222);
-  color: var(--button-color, #222);
-  border: 1px solid var(--border-color, #222);
-  padding: 0.4em 0.6em;
-  border-radius: 36px;
+/* Base clickable icon style */
+.clickable-icon {
   cursor: pointer;
-  font-size: 1.1em;
-  flex-shrink: 0;
-  margin: 0.5em 0;
-  transition: filter 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem; /* adjust icon size */
+  line-height: 1;
+  user-select: none;
+  transition: color 0.3s ease, -webkit-text-stroke-color 0.3s ease;
 }
 
-#dark-mode-toggle:hover {
-  filter: brightness(1.2);
+/* Optional hover effect */
+.clickable-icon:hover {
+  opacity: 0.85;
 }
 
 /* =========================
@@ -263,7 +262,7 @@ main#quiz-container,
   border: none;
   font-size: 1.2em;
   font-weight: bold;
-  background: linear-gradient(to right, #000, #198368);
+  background: linear-gradient(to right, #242424, #1a755e);
   color: white;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
@@ -288,7 +287,7 @@ main#quiz-container,
   font-weight: 600;
   border: none;
   width: 100%;
-  background: linear-gradient(to right, #000, #198368);
+  background: linear-gradient(to right, #242424, #1a755e);
   color: #000;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -448,7 +447,7 @@ footer {
 
 /* Dark/light theme detection */
 body.dark-mode #pwaInstallBanner {
-  background: linear-gradient(to right, #111, #1a755e);
+  background: linear-gradient(to right, #242424, #1a755e);
   color: #fff;
 }
 
@@ -535,7 +534,9 @@ body:not(.dark-mode) #pwaInstallBanner button {
   top: 10vh;
   left: 50%;
   transform: translateX(-50%);
-  background: #fff;
+  background: #808080;
+  /* background-image: linear-gradient(rgba(24, 24, 24, 0.8),
+            rgba(255, 255, 255, 0.8)), url(/images/rhino404.jpeg); */
   color: #111;
   padding: 1.5em;
   border: 1px solid #ccc;
@@ -564,6 +565,7 @@ body:not(.dark-mode) #pwaInstallBanner button {
   padding: 0.25em 0;
 }
 
+.score-clear,
 .score-close {
   margin-top: 1em;
   display: block;
@@ -577,6 +579,7 @@ body:not(.dark-mode) #pwaInstallBanner button {
   cursor: pointer;
 }
 
+.score-clear,
 .score-close:hover {
   background: #166b55;
 }
@@ -586,7 +589,7 @@ body:not(.dark-mode) #pwaInstallBanner button {
 }
 
 .score-card {
-  max-height: 600px;
+  max-height: 90vh; /* scales with screen height instead of fixed pixels */
   overflow: hidden;
   position: relative;
 }
@@ -625,4 +628,52 @@ body:not(.dark-mode) #pwaInstallBanner button {
 .progress-info {
     font-size: 0.85rem;
     margin-top: 4px;
+}
+
+.custom-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.custom-modal {
+  background: #fff;
+  color: #111;
+  padding: 1.5em;
+  border-radius: 12px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.custom-modal p {
+  margin-bottom: 1em;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.modal-confirm {
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-cancel {
+  background: #7f8c8d;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  cursor: pointer;
 }
