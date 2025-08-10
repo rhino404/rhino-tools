@@ -4,6 +4,7 @@ import { showCorrectEffect, showIncorrectEffect } from './effects.js';
 import { getIcon } from './utils.js';
 
 const ANSWERED_KEY = 'rhinoToolsAnsweredQuestions'; // unified key name
+const CURRENT_INDEX_KEY = 'rhinoToolsCurrentQuestionIndex'; // ✅ new key to persist current index
 
 // ✅ Load answered questions from localStorage
 function getAnsweredQuestions() {
@@ -22,6 +23,7 @@ function saveAnsweredQuestion(id) {
 // ✅ Allow clearing answered questions (e.g., on reset)
 export function clearAnsweredQuestions() {
   localStorage.removeItem(ANSWERED_KEY);
+  localStorage.removeItem(CURRENT_INDEX_KEY); // ✅ clear current index too
 }
 
 // ✅ Filter out answered questions
@@ -37,8 +39,18 @@ export function filterUnansweredQuestions(questions) {
   return unanswered;
 }
 
+// ✅ Save and load current question index for persistence
+function saveCurrentIndex(index) {
+  localStorage.setItem(CURRENT_INDEX_KEY, index);
+}
+function getCurrentIndex() {
+  return parseInt(localStorage.getItem(CURRENT_INDEX_KEY), 10) || 0;
+}
+
 // ✅ Show a question and render choices
 export function showQuestion(current, questions, showingAnswers, { questionEl, choicesEl, explanationEl }) {
+  saveCurrentIndex(current); // ✅ persist index whenever question is shown
+
   if (!questions.length || !questions[current]) {
     questionEl.textContent = "No questions for this filter!";
     choicesEl.innerHTML = '';
@@ -134,6 +146,12 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
       questionEl.textContent = "Quiz Complete!";
       choicesEl.innerHTML = '';
       explanationEl.textContent = '';
+      localStorage.removeItem(CURRENT_INDEX_KEY); // ✅ remove index when quiz ends
     }
   }, transitionTime);
+}
+
+// ✅ New helper to restore last question after reload
+export function getStartingIndex() {
+  return getCurrentIndex();
 }

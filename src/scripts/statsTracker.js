@@ -40,6 +40,9 @@ class StatsTracker {
     }
 
     reset() {
+        // preserve the selected category so the UI doesn't demand re-selection after clearing
+        const preservedCategory = this.stats && this.stats.category ? this.stats.category : null;
+
         this.stats = {
             totalQuestions: 0,
             correctAnswers: 0,
@@ -51,6 +54,11 @@ class StatsTracker {
             topics: {},
             category: null,
         };
+
+        if (preservedCategory) {
+            this.stats.category = preservedCategory;
+        }
+
         this.save();
     }
 
@@ -225,13 +233,27 @@ class StatsTracker {
         this.card.querySelector('#close-score-card')
             .addEventListener('click', () => this.hideCard());
 
+        // When clearing stats we want the card to disappear completely (not show default state)
         this.card.querySelector('#clear-score-card')
             .addEventListener('click', () => {
                 showConfirm('Clear all stats? This cannot be undone.', () => {
                     this.reset();
-                    this.renderCard();
+                    // remove the card from DOM so it does not display a default/empty state
+                    this.removeCard();
                 });
             });
+    }
+
+    // Remove the existing card from the DOM and clear the reference so it can be recreated later
+    removeCard() {
+        try {
+            if (this.card && this.card.parentElement) {
+                this.card.parentElement.removeChild(this.card);
+            }
+        } catch (e) {
+            // ignore removal errors
+        }
+        this.card = null;
     }
 
     async renderCard() {
@@ -323,6 +345,10 @@ class StatsTracker {
         if (!this.stats.category) {
             showMessage('Please choose a category first to view your stats.');
             return;
+        }
+        // if the card was removed by a previous clear action, recreate it
+        if (!this.card) {
+            this.initCard();
         }
         await this.renderCard();
         this.card.classList.remove('hidden');

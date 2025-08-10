@@ -1,4 +1,5 @@
 import { DATA_SOURCES } from './dataSources.js';
+import { filterUnansweredQuestions } from './questions.js'; // ✅ import filter
 
 export async function loadQuestions({ level, category, subcategory }) {
   let questions = [];
@@ -43,6 +44,19 @@ export async function loadQuestions({ level, category, subcategory }) {
   if (level && level !== 'all') {
     questions = questions.filter(q => q.level.toLowerCase() === level.toLowerCase());
     console.log(`Filtered questions by level "${level}": ${questions.length} remaining`);
+  }
+
+  // ✅ Filter out already answered questions
+  questions = filterUnansweredQuestions(questions);
+
+  // ✅ Keep the current question after a refresh
+  const currentQuestionId = localStorage.getItem('currentQuestionId');
+  if (currentQuestionId) {
+    const currentQuestion = questions.find(q => String(q.id) === String(currentQuestionId));
+    if (currentQuestion) {
+      // Move the current question to the start of the array
+      questions = [currentQuestion, ...questions.filter(q => String(q.id) !== String(currentQuestionId))];
+    }
   }
 
   return questions;
