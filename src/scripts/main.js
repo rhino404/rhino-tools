@@ -22,18 +22,24 @@ if ('serviceWorker' in navigator) {
 }
 
 // --- Session persistence helpers ---
-const SESSION_KEY = 'rhinoToolsUserSession';
+const SESSION_KEY = 'rynoToolsUserSession';
 const SESSION_EXPIRY_HOURS = 12; // expiry window
 
 function saveSession() {
   try {
     const now = Date.now();
+    // include the currently-displayed question id so we can reliably restore the same unanswered item
+    const currentQuestionId = (state.questions && state.questions[state.currentIndex] && state.questions[state.currentIndex].topic_id != null)
+      ? state.questions[state.currentIndex].topic_id
+      : null;
+
     localStorage.setItem(SESSION_KEY, JSON.stringify({
       category: state.currentCategory,
       subcategory: state.currentSubcategory,
       currentIndex: state.currentIndex,
       showingAnswers: state.showingAnswers,
       questions: state.questions,
+      currentQuestionId, // newly persisted field
       timestamp: now
     }));
   } catch (err) {
@@ -65,6 +71,8 @@ function loadSession() {
 
 export function clearSession() {
   localStorage.removeItem(SESSION_KEY);
+  // also remove the explicit question pointer when clearing session
+  try { localStorage.removeItem('currentQuestionId'); } catch (e) { /* ignore */ }
 }
 
 // allow other modules to trigger a save without importing main (avoids circular imports)
@@ -79,9 +87,61 @@ document.addEventListener('session:save', (ev) => {
   saveSession();
 });
 
+// Save when a question is answered (other modules can dispatch this)
+document.addEventListener('question:answered', (ev) => {
+  try {
+    const newIndex = ev?.detail?.currentIndex;
+    if (typeof newIndex === 'number') state.currentIndex = newIndex;
+  } catch (e) {
+    // ignore
+  }
+  saveSession();
+});
+
+// Save when a question is reset (hard reset) — keeps the same question present after refresh
+document.addEventListener('question:reset', (ev) => {
+  try {
+    const newIndex = ev?.detail?.currentIndex;
+    if (typeof newIndex === 'number') state.currentIndex = newIndex;
+  } catch (e) {
+    // ignore
+  }
+  saveSession();
+});
+
+// save on visibility change / unload to persist latest state (fixes hard-refresh race)
+document.addEventListener('visibilitychange', () => {
+  try {
+    if (document.hidden) saveSession();
+  } catch (e) {
+    // ignore
+  }
+});
+window.addEventListener('beforeunload', () => {
+  try {
+    saveSession();
+  } catch (e) {
+    // ignore
+  }
+});
+
 // --- Wrap showQuestion so it auto-saves ---
+// small addition: persist the currently shown question's topic_id into localStorage
 function showQuestion(index, questions, showingAnswers, els) {
   originalShowQuestion(index, questions, showingAnswers, els);
+
+  try {
+    const q = questions && questions[index];
+    if (q && q.topic_id != null) {
+      localStorage.setItem('currentQuestionId', String(q.topic_id));
+    } else {
+      // if nothing to show, remove the pointer
+      localStorage.removeItem('currentQuestionId');
+    }
+  } catch (e) {
+    // ignore storage errors
+  }
+
   saveSession();
 }
 
@@ -199,6 +259,8 @@ async function loadAndShowQuestions(restoringSession = false) {
     state.questionEl.textContent = 'Please select a category and subcategory to start.';
     state.choicesEl.innerHTML = '';
     state.explanationEl.textContent = '';
+    // ensure we don't keep a stale pointer
+    try { localStorage.removeItem('currentQuestionId'); } catch (e) { /* ignore */ }
     return;
   }
 
@@ -221,7 +283,31 @@ async function loadAndShowQuestions(restoringSession = false) {
     state.questions = [];
   }
 
-  if (!restoringSession) {
+  // When restoring, prefer mapping to the last shown question id so indexing doesn't shift.
+  if (restoringSession) {
+    try {
+      const storedId = localStorage.getItem('currentQuestionId');
+      const savedSession = loadSession(); // fallback info if needed
+      if (storedId) {
+        const idx = state.questions.findIndex(q => String(q.topic_id) === String(storedId));
+        if (idx !== -1) {
+          state.currentIndex = idx;
+        } else if (savedSession && typeof savedSession.currentIndex === 'number') {
+          // fallback to saved index if id no longer present
+          state.currentIndex = savedSession.currentIndex || 0;
+        } else {
+          state.currentIndex = 0;
+        }
+      } else if (savedSession && typeof savedSession.currentIndex === 'number') {
+        state.currentIndex = savedSession.currentIndex || 0;
+      } else {
+        state.currentIndex = 0;
+      }
+    } catch (e) {
+      // fallback defensively
+      if (typeof state.currentIndex !== 'number') state.currentIndex = 0;
+    }
+  } else {
     state.currentIndex = 0;
   }
 
@@ -229,6 +315,8 @@ async function loadAndShowQuestions(restoringSession = false) {
     state.questionEl.textContent = 'No questions found for the selected filters.';
     state.choicesEl.innerHTML = '';
     state.explanationEl.textContent = '';
+    // clear pointer if no questions
+    try { localStorage.removeItem('currentQuestionId'); } catch (e) { /* ignore */ }
     return;
   }
 
@@ -313,6 +401,15 @@ function setupDropdown(toggleBtn, optionsEl, optionsArray, filterKey) {
 
       // startQuiz will fetch and filter unanswered for current category + selected subcategory
       startQuiz(state.currentCategory, val);
+
+      // Auto-close the subcategory dropdown after selection to improve UX.
+      // (closeDropdown already ran at the top of this handler but call again defensively
+      // to ensure the UI is collapsed across DOM variants.)
+      try {
+        closeDropdown(toggleBtn, optionsEl);
+      } catch (e) {
+        // ignore
+      }
     }
 
     saveSession();
