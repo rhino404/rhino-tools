@@ -3,17 +3,15 @@ let deferredPrompt = null;
 
 export function initPwaInstaller({
   installBtnId = 'installBtn',
-  dismissBtnId = 'dismissInstallBtn',
   popupId = 'pwaInstallBanner',
 } = {}) {
   if (initialized) return;
   initialized = true;
 
   const installBtn = document.getElementById(installBtnId);
-  const dismissBtn = document.getElementById(dismissBtnId);
   const popup = document.getElementById(popupId);
 
-  if (!installBtn || !dismissBtn || !popup) {
+  if (!installBtn || !popup) {
     console.warn('[PWA] Install popup or buttons not found');
     return;
   }
