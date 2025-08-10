@@ -242,10 +242,10 @@ class StatsTracker {
         const topicEl = this.card.querySelector('#topic-breakdown');
         const activityEl = this.card.querySelector('#activity-summary');
 
-        const displayCategory = this.stats.category || 'Quiz';
+        const displayCategory = this.stats.category || 'Default';
         const formattedCategory = displayCategory.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-        const icon = getCategoryIcon[this.stats.category] || '📊';
-        titleEl.textContent = `Stats: ${formattedCategory} ${icon}`;
+        const icon = getCategoryIcon[this.stats.category || ''];
+        titleEl.textContent = `📊: ${formattedCategory} ${icon}`;
 
         summaryEl.textContent = `Correct: ${stats.correctAnswers}/${stats.totalQuestions} (${stats.percentCorrect}%)`;
         streakEl.textContent = `Streak: 🔥 ${stats.currentStreak}  | Best: 🏆 ${stats.bestStreak}`;

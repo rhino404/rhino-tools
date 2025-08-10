@@ -3,29 +3,63 @@ import { statsTracker } from './statsTracker.js';
 import { showCorrectEffect, showIncorrectEffect } from './effects.js';
 import { getIcon } from './utils.js';
 
+const ANSWERED_KEY = 'rhinoToolsAnsweredQuestions'; // unified key name
+
+// ✅ Load answered questions from localStorage
+function getAnsweredQuestions() {
+  return JSON.parse(localStorage.getItem(ANSWERED_KEY)) || [];
+}
+
+// ✅ Save a question ID as answered (persists across sessions)
+function saveAnsweredQuestion(id) {
+  const answered = getAnsweredQuestions();
+  if (!answered.includes(id)) {
+    answered.push(id);
+    localStorage.setItem(ANSWERED_KEY, JSON.stringify(answered));
+  }
+}
+
+// ✅ Allow clearing answered questions (e.g., on reset)
+export function clearAnsweredQuestions() {
+  localStorage.removeItem(ANSWERED_KEY);
+}
+
+// ✅ Filter out answered questions
+export function filterUnansweredQuestions(questions) {
+  const answered = getAnsweredQuestions();
+  const unanswered = questions.filter(q => !answered.includes(q.topic_id));
+
+  // If everything has been answered, return all (reset cycle)
+  if (unanswered.length === 0) {
+    clearAnsweredQuestions();
+    return questions;
+  }
+  return unanswered;
+}
+
+// ✅ Show a question and render choices
 export function showQuestion(current, questions, showingAnswers, { questionEl, choicesEl, explanationEl }) {
   if (!questions.length || !questions[current]) {
     questionEl.textContent = "No questions for this filter!";
     choicesEl.innerHTML = '';
-    
-    // ✅ Also remove leftover image if present
+
+    // Remove leftover image if present
     const existingImage = document.getElementById('questionImage');
     if (existingImage) existingImage.remove();
-
     return;
   }
 
   const q = questions[current];
 
-  // Update the question text (category icon + question text)
+  // Render question text
   questionEl.innerHTML = `${getIcon("categories", q.category)} ${q.question}`;
   choicesEl.innerHTML = '';
 
-  // ✅ Remove any previous image
+  // Remove any previous image
   const existingImage = document.getElementById('questionImage');
   if (existingImage) existingImage.remove();
 
-  // ✅ Safely check and show image if valid
+  // Show image if valid
   if (
     typeof q.image === 'string' &&
     q.image.trim() !== '' &&
@@ -39,7 +73,7 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
 
     img.onerror = () => {
       console.warn(`Image failed to load: ${img.src}`);
-      img.remove(); // completely remove the broken image
+      img.remove();
     };
 
     questionEl.after(img);
@@ -63,12 +97,17 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
   });
 }
 
-
+// ✅ Check the user's answer
 export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl }) {
   Array.from(choicesEl.children).forEach(btn => btn.disabled = true);
   let transitionTime = 1000;
 
   const isCorrect = (choice === q.correct);
+
+  // ✅ Persist answered question across sessions
+  saveAnsweredQuestion(q.topic_id);
+
+  // ✅ Log to stats tracker without duplication
   statsTracker.logAnswer({
     ...q,
     category: q.category,
