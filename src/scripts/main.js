@@ -2,11 +2,10 @@ import { DATA_SOURCES } from './dataSources.js';
 import { quizMeta, getCategoryIcon } from './quizMeta.js';
 import { getSubcategoriesForCategory } from './quizMetaUtils.js';
 import { state } from './state.js';
-import { showQuestion } from './questions.js';
+import { showQuestion as originalShowQuestion, filterUnansweredQuestions } from './questions.js';
 import { initializeTheme } from './theme.js';
 import { loadCryptoPrices } from './crypto.js';
 import { initPwaInstaller } from './pwaInstaller.js';
-
 
 initPwaInstaller();
 
@@ -22,10 +21,81 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-function normalize(str = '') {
-  return str.toLowerCase().replace(/\s+/g, '-');
+// --- Session persistence helpers ---
+const SESSION_KEY = 'rhinoToolsUserSession';
+const SESSION_EXPIRY_HOURS = 12; // expiry window
+
+function saveSession() {
+  try {
+    const now = Date.now();
+    localStorage.setItem(SESSION_KEY, JSON.stringify({
+      category: state.currentCategory,
+      subcategory: state.currentSubcategory,
+      currentIndex: state.currentIndex,
+      showingAnswers: state.showingAnswers,
+      questions: state.questions,
+      timestamp: now
+    }));
+  } catch (err) {
+    console.error('[Session] Failed to save:', err);
+  }
 }
 
+function loadSession() {
+  try {
+    const saved = localStorage.getItem(SESSION_KEY);
+    if (!saved) return null;
+    const parsed = JSON.parse(saved);
+
+    if (!parsed.timestamp) return parsed;
+
+    const ageHours = (Date.now() - parsed.timestamp) / (1000 * 60 * 60);
+    if (ageHours > SESSION_EXPIRY_HOURS) {
+      console.log('[Session] Expired session cleared.');
+      clearSession();
+      return null;
+    }
+
+    return parsed;
+  } catch (err) {
+    console.error('[Session] Failed to load:', err);
+    return null;
+  }
+}
+
+export function clearSession() {
+  localStorage.removeItem(SESSION_KEY);
+}
+
+// allow other modules to trigger a save without importing main (avoids circular imports)
+document.addEventListener('session:save', (ev) => {
+  // optional detail.currentIndex can be used to update state before saving
+  try {
+    const newIndex = ev?.detail?.currentIndex;
+    if (typeof newIndex === 'number') state.currentIndex = newIndex;
+  } catch (e) {
+    // ignore
+  }
+  saveSession();
+});
+
+// --- Wrap showQuestion so it auto-saves ---
+function showQuestion(index, questions, showingAnswers, els) {
+  originalShowQuestion(index, questions, showingAnswers, els);
+  saveSession();
+}
+
+// small helper to close dropdowns
+function closeDropdown(toggleBtn, optionsEl) {
+  try {
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    optionsEl.parentElement.classList.remove('show');
+  } catch (e) {
+    // ignore if elements missing
+  }
+}
+
+// --- Fetch and load ---
 async function fetchQuestions(category, subcategory) {
   if (!category) return [];
 
@@ -55,7 +125,73 @@ async function fetchQuestions(category, subcategory) {
   return questions;
 }
 
-async function loadAndShowQuestions() {
+/**
+ * Start quiz helper — fetches questions, filters unanswered, updates UI and state.
+ * Keep this separate from loadAndShowQuestions so category/subcategory clicks always use filtering.
+ */
+async function startQuiz(category, subcategory) {
+  // set state filters immediately so UI updates reflect selection
+  state.currentCategory = category;
+  state.currentSubcategory = subcategory || 'all';
+
+  // update visible toggles (if present)
+  try {
+    const icon = getCategoryIcon[category] || '';
+    const label = quizMeta.categories.find(o => o.value === category)?.label || 'Select Category';
+    if (state.categoryToggle) state.categoryToggle.innerHTML = `${icon} ${label} ▾`;
+  } catch (e) {
+    // ignore UI update failures
+  }
+
+  // populate subcategory toggle for the selected category
+  try {
+    const subcategories = getSubcategoriesForCategory(category) || [];
+    const subcatOptions = [
+      { label: 'All Subcategories', value: 'all', icon: '🌐' },
+      ...subcategories
+    ];
+    populateDropdown(state.subcategoryOptions, subcatOptions, state.currentSubcategory);
+    state.subcategoryToggle.parentElement.style.display = 'block';
+
+    const subLabel = subcatOptions.find(s => s.value === state.currentSubcategory)?.label || 'Select Subcategory';
+    const subIcon = subcatOptions.find(s => s.value === state.currentSubcategory)?.icon || '';
+    state.subcategoryToggle.innerHTML = `${subIcon} ${subLabel} ▾`;
+  } catch (e) {
+    // ignore
+  }
+
+  // notify statsTracker of selection
+  import('./statsTracker.js').then(({ statsTracker }) => {
+    try {
+      statsTracker.setCategory(category);
+    } catch (e) {
+      console.warn('[Session] failed to set statsTracker category:', e);
+    }
+  });
+
+  // fetch, then filter unanswered questions
+  let questions = await fetchQuestions(category, state.currentSubcategory);
+  try {
+    questions = filterUnansweredQuestions(questions);
+  } catch (e) {
+    console.warn('[startQuiz] filterUnansweredQuestions failed:', e);
+  }
+
+  state.questions = questions || [];
+  state.currentIndex = 0;
+
+  // show first question (wrapped showQuestion saves session)
+  showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
+    questionEl: state.questionEl,
+    choicesEl: state.choicesEl,
+    explanationEl: state.explanationEl,
+  });
+
+  // ensure session saved
+  saveSession();
+}
+
+async function loadAndShowQuestions(restoringSession = false) {
   const { currentCategory, currentSubcategory } = state;
 
   if (!currentCategory || currentSubcategory === '') {
@@ -68,19 +204,36 @@ async function loadAndShowQuestions() {
 
   try {
     const loadedQuestions = await fetchQuestions(currentCategory, currentSubcategory);
-    state.questions = loadedQuestions;
+    // when restoring session we should avoid re-showing already-answered items;
+    // apply unanswered filter during restore to prevent duplicate stats counting.
+    if (restoringSession) {
+      try {
+        state.questions = filterUnansweredQuestions(loadedQuestions);
+      } catch (e) {
+        console.warn('[loadAndShowQuestions] filterUnansweredQuestions failed:', e);
+        state.questions = loadedQuestions;
+      }
+    } else {
+      state.questions = loadedQuestions;
+    }
   } catch (err) {
     console.error('Failed to load questions:', err);
     state.questions = [];
   }
 
-  state.currentIndex = 0;
+  if (!restoringSession) {
+    state.currentIndex = 0;
+  }
 
   if (state.questions.length === 0) {
     state.questionEl.textContent = 'No questions found for the selected filters.';
     state.choicesEl.innerHTML = '';
     state.explanationEl.textContent = '';
     return;
+  }
+
+  if (state.currentIndex >= state.questions.length) {
+    state.currentIndex = 0;
   }
 
   showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
@@ -108,15 +261,26 @@ function populateDropdown(listEl, options, selectedVal) {
 function setupDropdown(toggleBtn, optionsEl, optionsArray, filterKey) {
   populateDropdown(optionsEl, optionsArray, state[filterKey]);
 
-  toggleBtn.addEventListener('click', () => {
+  // toggle click should not let the outside-click handler close it immediately
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
     toggleBtn.setAttribute('aria-expanded', String(!expanded));
     toggleBtn.parentElement.classList.toggle('show', !expanded);
   });
 
-  optionsEl.addEventListener('click', e => {
-    if (e.target.tagName !== 'LI') return;
+  optionsEl.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (e.target.tagName !== 'LI') {
+      // click inside options but not an LI - ignore
+      return;
+    }
     const val = e.target.dataset.value;
+
+    // Always close dropdown immediately for snappy UX
+    closeDropdown(toggleBtn, optionsEl);
+
+    // If they clicked the same value, just close and exit (no reload)
     if (val === state[filterKey]) return;
 
     state[filterKey] = val;
@@ -137,37 +301,46 @@ function setupDropdown(toggleBtn, optionsEl, optionsArray, filterKey) {
 
       state.subcategoryToggle.innerHTML = `🌐 All Subcategories ▾`;
 
-      // ✅ Notify statsTracker of selected category
       import('./statsTracker.js').then(({ statsTracker }) => {
         statsTracker.setCategory(val);
       });
 
-      loadAndShowQuestions();
+      // startQuiz will fetch and filter unanswered questions for the chosen category
+      startQuiz(val, 'all');
     } else if (filterKey === 'currentSubcategory') {
       const label = optionsEl.querySelector(`li[data-value="${val}"]`)?.textContent || 'Select';
       toggleBtn.textContent = `${label} ▾`;
-      loadAndShowQuestions();
+
+      // startQuiz will fetch and filter unanswered for current category + selected subcategory
+      startQuiz(state.currentCategory, val);
     }
 
-    toggleBtn.setAttribute('aria-expanded', 'false');
-    optionsEl.parentElement.classList.remove('show');
+    saveSession();
   });
+
+  // Close on outside click (add handler once per toggleBtn)
+  if (!toggleBtn._outsideHandlerAdded) {
+    document.addEventListener('click', (e) => {
+      if (!toggleBtn.parentElement.contains(e.target)) {
+        closeDropdown(toggleBtn, optionsEl);
+      }
+    });
+    toggleBtn._outsideHandlerAdded = true;
+  }
 }
 
 function setupButtons() {
   state.shuffleBtn.addEventListener('click', () => {
     if (!state.questions.length) return;
 
-    const start = state.currentIndex; // First unanswered question
+    const start = state.currentIndex;
     const remaining = state.questions.slice(start);
 
-    // Fisher–Yates shuffle on remaining questions
     for (let i = remaining.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [remaining[i], remaining[j]] = [remaining[j], remaining[i]];
     }
 
-    // Merge back: answered stay first, remaining shuffled
     state.questions = [
       ...state.questions.slice(0, start),
       ...remaining
@@ -196,6 +369,7 @@ function setupButtons() {
   });
 }
 
+// --- Startup ---
 document.addEventListener('DOMContentLoaded', () => {
   initializeTheme();
 
@@ -212,26 +386,90 @@ document.addEventListener('DOMContentLoaded', () => {
   state.toggleAnswersBtn = document.getElementById('toggleAnswers');
   state.showStatsBtn = document.getElementById('showStatsBtn');
 
-  state.subcategoryToggle.parentElement.style.display = 'none';
-  state.currentCategory = '';
-  state.currentSubcategory = '';
-  state.showingAnswers = false;
-
-  const categoryOptionsWithIcons = quizMeta.categories.map(cat => ({
-    ...cat,
-    icon: getCategoryIcon[cat.value] || ''
-  }));
-
-  setupDropdown(state.categoryToggle, state.categoryOptions, categoryOptionsWithIcons, 'currentCategory');
-  setupDropdown(state.subcategoryToggle, state.subcategoryOptions, [], 'currentSubcategory');
-
-  state.categoryToggle.textContent = 'Select Category ▾';
-  state.subcategoryToggle.textContent = 'Select Subcategory ▾';
-
   setupButtons();
   loadCryptoPrices();
 
-  state.questionEl.textContent = 'Please select a category to start.';
-  state.choicesEl.innerHTML = '';
-  state.explanationEl.textContent = '';
+  // Load session and validate restored filters
+  let saved = loadSession();
+  if (saved && saved.category) {
+    // validate category exists in current quizMeta
+    const catExists = quizMeta.categories && quizMeta.categories.find(c => c.value === saved.category);
+    if (!catExists) {
+      console.warn('[Session] saved category not present anymore, clearing saved session.');
+      clearSession();
+      saved = null;
+    }
+  }
+
+  if (saved && saved.category) {
+    console.log('[Session] Restoring previous session...');
+    state.currentCategory = saved.category;
+    // validate subcategory for that category; fallback to 'all' if invalid
+    const availableSubcats = getSubcategoriesForCategory(state.currentCategory) || [];
+    const subValues = availableSubcats.map(s => s.value);
+    state.currentSubcategory = subValues.includes(saved.subcategory) ? saved.subcategory : 'all';
+
+    state.currentIndex = saved.currentIndex || 0;
+    state.showingAnswers = !!saved.showingAnswers;
+
+    // don't blindly trust saved.questions (they may include already-answered items);
+    // fetch fresh and filter unanswered during restore to avoid double-counting stats.
+    state.questions = [];
+
+    const categoryOptionsWithIcons = quizMeta.categories.map(cat => ({
+      ...cat,
+      icon: getCategoryIcon[cat.value] || ''
+    }));
+    setupDropdown(state.categoryToggle, state.categoryOptions, categoryOptionsWithIcons, 'currentCategory');
+
+    // set visible toggle text to restored cat
+    const catLabel = quizMeta.categories.find(c => c.value === state.currentCategory)?.label || 'Select Category';
+    const catIcon = getCategoryIcon[state.currentCategory] || '';
+    state.categoryToggle.innerHTML = `${catIcon} ${catLabel} ▾`;
+
+    const subcategories = getSubcategoriesForCategory(state.currentCategory);
+    const subcatOptions = [
+      { label: 'All Subcategories', value: 'all', icon: '🌐' },
+      ...subcategories
+    ];
+    setupDropdown(state.subcategoryToggle, state.subcategoryOptions, subcatOptions, 'currentSubcategory');
+    state.subcategoryToggle.parentElement.style.display = 'block';
+
+    // set visible toggle text to restored subcat
+    const subLabel = subcatOptions.find(s => s.value === state.currentSubcategory)?.label || 'Select Subcategory';
+    const subIcon = subcatOptions.find(s => s.value === state.currentSubcategory)?.icon || '';
+    state.subcategoryToggle.innerHTML = `${subIcon} ${subLabel} ▾`;
+
+    // --- NEW: ensure statsTracker knows the restored category immediately ---
+    import('./statsTracker.js').then(({ statsTracker }) => {
+      try {
+        statsTracker.setCategory(state.currentCategory);
+      } catch (e) {
+        console.warn('[Session] failed to set statsTracker category:', e);
+      }
+    });
+
+    // fetch and filter unanswered while restoring to avoid showing already-answered questions
+    loadAndShowQuestions(true);
+
+  } else {
+    state.subcategoryToggle.parentElement.style.display = 'none';
+    state.currentCategory = '';
+    state.currentSubcategory = '';
+    state.showingAnswers = false;
+
+    const categoryOptionsWithIcons = quizMeta.categories.map(cat => ({
+      ...cat,
+      icon: getCategoryIcon[cat.value] || ''
+    }));
+    setupDropdown(state.categoryToggle, state.categoryOptions, categoryOptionsWithIcons, 'currentCategory');
+    setupDropdown(state.subcategoryToggle, state.subcategoryOptions, [], 'currentSubcategory');
+
+    state.categoryToggle.textContent = 'Select Category ▾';
+    state.subcategoryToggle.textContent = 'Select Subcategory ▾';
+
+    state.questionEl.textContent = 'Please select a category to start.';
+    state.choicesEl.innerHTML = '';
+    state.explanationEl.textContent = '';
+  }
 });
