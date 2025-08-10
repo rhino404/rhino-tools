@@ -35,14 +35,14 @@
   ],
   "screenshots": [
     {
-      "src": "/images/screenshot1.png",
-      "sizes": "800x600",
+      "src": "/images/questions.png",
+      "sizes": "430x900",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
-      "src": "/images/screenshot2.png",
-      "sizes": "400x600",
+      "src": "/images/stats.png",
+      "sizes": "400x900",
       "type": "image/png",
       "form_factor": "narrow"
     }
