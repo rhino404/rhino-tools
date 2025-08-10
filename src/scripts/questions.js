@@ -3,15 +3,16 @@ import { statsTracker } from './statsTracker.js';
 import { showCorrectEffect, showIncorrectEffect } from './effects.js';
 import { getIcon } from './utils.js';
 
-const ANSWERED_KEY = 'rhinoToolsAnsweredQuestions'; // unified key name
-const CURRENT_INDEX_KEY = 'rhinoToolsCurrentQuestionIndex'; // ✅ new key to persist current index
+const ANSWERED_KEY = 'rhinoToolsAnsweredQuestions';
+const CURRENT_INDEX_KEY = 'rhinoToolsCurrentQuestionIndex';
+const JUST_ANSWERED_KEY = 'rhinoToolsJustAnsweredFlag';
 
 // ✅ Load answered questions from localStorage
 function getAnsweredQuestions() {
   return JSON.parse(localStorage.getItem(ANSWERED_KEY)) || [];
 }
 
-// ✅ Save a question ID as answered (persists across sessions)
+// ✅ Save a question ID as answered
 function saveAnsweredQuestion(id) {
   const answered = getAnsweredQuestions();
   if (!answered.includes(id)) {
@@ -20,10 +21,11 @@ function saveAnsweredQuestion(id) {
   }
 }
 
-// ✅ Allow clearing answered questions (e.g., on reset)
+// ✅ Allow clearing answered questions and session data
 export function clearAnsweredQuestions() {
   localStorage.removeItem(ANSWERED_KEY);
-  localStorage.removeItem(CURRENT_INDEX_KEY); // ✅ clear current index too
+  localStorage.removeItem(CURRENT_INDEX_KEY);
+  localStorage.removeItem(JUST_ANSWERED_KEY);
 }
 
 // ✅ Filter out answered questions
@@ -31,7 +33,7 @@ export function filterUnansweredQuestions(questions) {
   const answered = getAnsweredQuestions();
   const unanswered = questions.filter(q => !answered.includes(q.topic_id));
 
-  // If everything has been answered, return all (reset cycle)
+  // Reset cycle if all answered
   if (unanswered.length === 0) {
     clearAnsweredQuestions();
     return questions;
@@ -39,39 +41,37 @@ export function filterUnansweredQuestions(questions) {
   return unanswered;
 }
 
-// ✅ Save and load current question index for persistence
+// ✅ Save and load current question index
 function saveCurrentIndex(index) {
-  localStorage.setItem(CURRENT_INDEX_KEY, index);
+  localStorage.setItem(CURRENT_INDEX_KEY, String(index));
 }
 function getCurrentIndex() {
   return parseInt(localStorage.getItem(CURRENT_INDEX_KEY), 10) || 0;
 }
 
-// ✅ Show a question and render choices
+// ✅ Render a question
 export function showQuestion(current, questions, showingAnswers, { questionEl, choicesEl, explanationEl }) {
-  saveCurrentIndex(current); // ✅ persist index whenever question is shown
-
   if (!questions.length || !questions[current]) {
     questionEl.textContent = "No questions for this filter!";
     choicesEl.innerHTML = '';
-
-    // Remove leftover image if present
     const existingImage = document.getElementById('questionImage');
     if (existingImage) existingImage.remove();
     return;
   }
 
+  const justAnswered = localStorage.getItem(JUST_ANSWERED_KEY) === 'true';
+  if (!justAnswered) {
+    saveCurrentIndex(current);
+  }
+
   const q = questions[current];
 
-  // Render question text
   questionEl.innerHTML = `${getIcon("categories", q.category)} ${q.question}`;
   choicesEl.innerHTML = '';
 
-  // Remove any previous image
   const existingImage = document.getElementById('questionImage');
   if (existingImage) existingImage.remove();
 
-  // Show image if valid
   if (
     typeof q.image === 'string' &&
     q.image.trim() !== '' &&
@@ -87,11 +87,9 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
       console.warn(`Image failed to load: ${img.src}`);
       img.remove();
     };
-
     questionEl.after(img);
   }
 
-  // Render choices
   q.choices.forEach(choice => {
     const btn = document.createElement('button');
     btn.textContent = choice;
@@ -109,17 +107,15 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
   });
 }
 
-// ✅ Check the user's answer
+// ✅ Handle answer checking
 export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl }) {
   Array.from(choicesEl.children).forEach(btn => btn.disabled = true);
   let transitionTime = 1000;
 
   const isCorrect = (choice === q.correct);
 
-  // ✅ Persist answered question across sessions
   saveAnsweredQuestion(q.topic_id);
 
-  // ✅ Log to stats tracker without duplication
   statsTracker.logAnswer({
     ...q,
     category: q.category,
@@ -140,18 +136,25 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
   setTimeout(() => {
     currentIndex++;
     if (currentIndex < questions.length) {
+      localStorage.setItem(JUST_ANSWERED_KEY, 'true');
+      saveCurrentIndex(currentIndex);
+
       explanationEl.textContent = '';
       showQuestion(currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl });
+
+      setTimeout(() => {
+        localStorage.removeItem(JUST_ANSWERED_KEY);
+      }, 100);
     } else {
       questionEl.textContent = "Quiz Complete!";
       choicesEl.innerHTML = '';
       explanationEl.textContent = '';
-      localStorage.removeItem(CURRENT_INDEX_KEY); // ✅ remove index when quiz ends
+      clearAnsweredQuestions(); // ✅ Clean end-of-session reset
     }
   }, transitionTime);
 }
 
-// ✅ New helper to restore last question after reload
+// ✅ Restore last position after reload
 export function getStartingIndex() {
   return getCurrentIndex();
 }
