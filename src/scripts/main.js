@@ -25,23 +25,30 @@ if ('serviceWorker' in navigator) {
 const SESSION_KEY = 'rynoToolsUserSession';
 const SESSION_EXPIRY_HOURS = 12; // expiry window
 
+// these are the per-questions index keys we look for (legacy and current)
+const QUESTIONS_INDEX_KEYS = [
+  'rhinoToolsCurrentQuestionIndex', // existing key used by questions.js in some versions
+  'rynoToolsCurrentQuestionIndex'   // potential future/alternate key
+];
+
 function saveSession() {
   try {
     const now = Date.now();
-    // include the currently-displayed question id so we can reliably restore the same unanswered item
-    const currentQuestionId = (state.questions && state.questions[state.currentIndex] && state.questions[state.currentIndex].topic_id != null)
-      ? state.questions[state.currentIndex].topic_id
-      : null;
-
     localStorage.setItem(SESSION_KEY, JSON.stringify({
       category: state.currentCategory,
       subcategory: state.currentSubcategory,
       currentIndex: state.currentIndex,
       showingAnswers: state.showingAnswers,
       questions: state.questions,
-      currentQuestionId, // newly persisted field
       timestamp: now
     }));
+
+    // Keep per-questions index in sync as well (write under both index keys).
+    // This helps ensure the questions module's authoritative index and main session
+    // are consistent across reloads.
+    for (const key of QUESTIONS_INDEX_KEYS) {
+      localStorage.setItem(key, String(state.currentIndex ?? 0));
+    }
   } catch (err) {
     console.error('[Session] Failed to save:', err);
   }
@@ -71,8 +78,22 @@ function loadSession() {
 
 export function clearSession() {
   localStorage.removeItem(SESSION_KEY);
-  // also remove the explicit question pointer when clearing session
-  try { localStorage.removeItem('currentQuestionId'); } catch (e) { /* ignore */ }
+  // remove question index keys too (both variants)
+  for (const key of QUESTIONS_INDEX_KEYS) {
+    localStorage.removeItem(key);
+  }
+}
+
+// Read per-questions index from localStorage (prefer stable per-questions key)
+function getQuestionIndexFromStorage() {
+  for (const key of QUESTIONS_INDEX_KEYS) {
+    const v = localStorage.getItem(key);
+    if (v != null) {
+      const n = parseInt(v, 10);
+      if (!Number.isNaN(n)) return n;
+    }
+  }
+  return null;
 }
 
 // allow other modules to trigger a save without importing main (avoids circular imports)
@@ -125,23 +146,15 @@ window.addEventListener('beforeunload', () => {
   }
 });
 
-// --- Wrap showQuestion so it auto-saves ---
-// small addition: persist the currently shown question's topic_id into localStorage
+// --- Wrap showQuestion so it auto-saves (main wrapper uses originalShowQuestion imported from questions.js) ---
 function showQuestion(index, questions, showingAnswers, els) {
   originalShowQuestion(index, questions, showingAnswers, els);
-
+  // keep state.currentIndex in sync and persist session
   try {
-    const q = questions && questions[index];
-    if (q && q.topic_id != null) {
-      localStorage.setItem('currentQuestionId', String(q.topic_id));
-    } else {
-      // if nothing to show, remove the pointer
-      localStorage.removeItem('currentQuestionId');
-    }
+    state.currentIndex = index;
   } catch (e) {
-    // ignore storage errors
+    // ignore
   }
-
   saveSession();
 }
 
@@ -259,8 +272,6 @@ async function loadAndShowQuestions(restoringSession = false) {
     state.questionEl.textContent = 'Please select a category and subcategory to start.';
     state.choicesEl.innerHTML = '';
     state.explanationEl.textContent = '';
-    // ensure we don't keep a stale pointer
-    try { localStorage.removeItem('currentQuestionId'); } catch (e) { /* ignore */ }
     return;
   }
 
@@ -283,31 +294,7 @@ async function loadAndShowQuestions(restoringSession = false) {
     state.questions = [];
   }
 
-  // When restoring, prefer mapping to the last shown question id so indexing doesn't shift.
-  if (restoringSession) {
-    try {
-      const storedId = localStorage.getItem('currentQuestionId');
-      const savedSession = loadSession(); // fallback info if needed
-      if (storedId) {
-        const idx = state.questions.findIndex(q => String(q.topic_id) === String(storedId));
-        if (idx !== -1) {
-          state.currentIndex = idx;
-        } else if (savedSession && typeof savedSession.currentIndex === 'number') {
-          // fallback to saved index if id no longer present
-          state.currentIndex = savedSession.currentIndex || 0;
-        } else {
-          state.currentIndex = 0;
-        }
-      } else if (savedSession && typeof savedSession.currentIndex === 'number') {
-        state.currentIndex = savedSession.currentIndex || 0;
-      } else {
-        state.currentIndex = 0;
-      }
-    } catch (e) {
-      // fallback defensively
-      if (typeof state.currentIndex !== 'number') state.currentIndex = 0;
-    }
-  } else {
+  if (!restoringSession) {
     state.currentIndex = 0;
   }
 
@@ -315,12 +302,11 @@ async function loadAndShowQuestions(restoringSession = false) {
     state.questionEl.textContent = 'No questions found for the selected filters.';
     state.choicesEl.innerHTML = '';
     state.explanationEl.textContent = '';
-    // clear pointer if no questions
-    try { localStorage.removeItem('currentQuestionId'); } catch (e) { /* ignore */ }
     return;
   }
 
-  if (state.currentIndex >= state.questions.length) {
+  // Clamp index into bounds (defensive)
+  if (state.currentIndex >= state.questions.length || state.currentIndex < 0) {
     state.currentIndex = 0;
   }
 
@@ -506,7 +492,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const subValues = availableSubcats.map(s => s.value);
     state.currentSubcategory = subValues.includes(saved.subcategory) ? saved.subcategory : 'all';
 
-    state.currentIndex = saved.currentIndex || 0;
+    // Prefer the per-questions saved index (if present) — this avoids the "auto-advance then save" race.
+    const storedQIndex = getQuestionIndexFromStorage();
+    if (typeof storedQIndex === 'number' && !Number.isNaN(storedQIndex)) {
+      state.currentIndex = storedQIndex;
+    } else {
+      state.currentIndex = saved.currentIndex || 0;
+    }
+
     state.showingAnswers = !!saved.showingAnswers;
 
     // don't blindly trust saved.questions (they may include already-answered items);
@@ -554,6 +547,7 @@ document.addEventListener('DOMContentLoaded', () => {
     state.currentCategory = '';
     state.currentSubcategory = '';
     state.showingAnswers = false;
+    state.currentIndex = 0;
 
     const categoryOptionsWithIcons = quizMeta.categories.map(cat => ({
       ...cat,
@@ -568,5 +562,8 @@ document.addEventListener('DOMContentLoaded', () => {
     state.questionEl.textContent = 'Please select a category to start.';
     state.choicesEl.innerHTML = '';
     state.explanationEl.textContent = '';
+
+    // persist initial empty session
+    saveSession();
   }
 });
