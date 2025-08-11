@@ -1,7 +1,7 @@
 // questions.js
 import { statsTracker } from './statsTracker.js';
 import { showCorrectEffect, showIncorrectEffect } from './effects.js';
-import { getIcon } from './utils.js';
+import { getIcon } from '../utils/utils.js';
 
 const ANSWERED_KEY = 'rhinoToolsAnsweredQuestions';
 const CURRENT_INDEX_KEY = 'rhinoToolsCurrentQuestionIndex';

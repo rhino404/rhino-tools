@@ -1,4 +1,6 @@
-import { quizMeta } from './quizMeta.js';
+//quizMetaUtils.js
+
+import { quizMeta } from '../data/quizMeta.js';
 
 export function getSubcategoriesForCategory(categoryValue) {
   if (!categoryValue) return [];

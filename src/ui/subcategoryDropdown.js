@@ -1,5 +1,5 @@
 // subcategoryDropdown.js
-import { quizMeta } from './quizMeta.js';
+import { quizMeta } from '../data/quizMeta.js';
 
 function normalizeKey(key) {
   return key.toLowerCase().replace(/\s+/g, '-');
