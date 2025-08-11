@@ -1,6 +1,12 @@
 let initialized = false;
 let deferredPrompt = null;
 
+// Capture any early beforeinstallprompt events
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+});
+
 export function initPwaInstaller({
   installBtnId = 'installBtn',
   popupId = 'pwaInstallBanner',
@@ -12,16 +18,11 @@ export function initPwaInstaller({
   const popup = document.getElementById(popupId);
 
   if (!installBtn || !popup) {
-    console.warn('[PWA] Install popup or buttons not found');
+    console.warn('[PWA] Install popup or button not found');
     return;
   }
 
-  function showPopup() {
-    popup.classList.remove('hidden');
-    gtagReport('pwa_install_prompt_shown');
-  }
-
-  function gtagReport(eventName) {
+  const gtagReport = (eventName) => {
     if (typeof gtag === 'function') {
       gtag('event', eventName, {
         event_category: 'PWA',
@@ -29,7 +30,12 @@ export function initPwaInstaller({
         non_interaction: true,
       });
     }
-  }
+  };
+
+  const showPopup = () => {
+    popup.classList.remove('hidden');
+    gtagReport('pwa_install_prompt_shown');
+  };
 
   installBtn.addEventListener('click', async () => {
     if (!deferredPrompt) return;
@@ -39,9 +45,6 @@ export function initPwaInstaller({
       if (outcome === 'accepted') {
         gtagReport('pwa_install_accepted');
         popup.classList.add('hidden'); // only hide if installed
-      } else {
-        gtagReport('pwa_install_dismissed');
-        // Banner stays visible
       }
       deferredPrompt = null;
     } catch (err) {
@@ -49,12 +52,12 @@ export function initPwaInstaller({
     }
   });
 
-  // Dismiss button does nothing but maybe track analytics
-  dismissBtn.addEventListener('click', () => {
-    gtagReport('pwa_install_dismissed');
-    // No hide — persistent banner
-  });
+  // If beforeinstallprompt has already fired, show the popup immediately
+  if (deferredPrompt) {
+    showPopup();
+  }
 
+  // Listen for future beforeinstallprompt events
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
