@@ -99,6 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==== Other UI ====
     state.shuffleBtn = document.getElementById('shuffle-btn');
     state.toggleAnswersBtn = document.getElementById('toggle-answers-btn');
+    const toggleBtn = document.getElementById('toggle-answers-btn');
+    toggleBtn.addEventListener('click', () => {
+        toggleBtn.classList.toggle('active');
+    });
+
     state.showStatsBtn = document.getElementById('show-stats-btn');
 
     // Add these three so showQuestion() has real elements

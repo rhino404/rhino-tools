@@ -275,6 +275,11 @@ main#quiz-container,
   background-color: #145a47;
 }
 
+.circle-btn.active {
+  border: 2px solid rgb(39, 255, 39);  /* green outline when active */
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.5); /* subtle glow (optional) */
+}
+
 .level-btn,
 .category-btn,
 .dropdown-toggle {
