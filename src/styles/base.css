@@ -400,6 +400,13 @@ footer {
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   animation: slideUp 0.4s ease-out;
+  flex-wrap: wrap;
+  background: var(--color-primary); /* make sure it's visible */
+}
+
+/* Reserve space so banner doesn't cover footer */
+body.banner-visible {
+  padding-bottom: 80px; /* match banner height */
 }
 
 /* Slide-up animation */
@@ -433,6 +440,19 @@ footer {
   display: flex;
   gap: 0.5em;
   align-items: center;
+}
+
+/* Center layout on small screens */
+@media (max-width: 600px) {
+  .pwa-banner-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .pwa-banner-actions {
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 /* Buttons */

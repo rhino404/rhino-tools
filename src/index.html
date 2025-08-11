@@ -140,19 +140,21 @@
     <a href="./pages/terms.html" style="color:inherit; text-decoration:underline;">Terms of Service</a>
     <br /><br />
     <span id="copyright" style="padding-top: 1em;"></span>
-    <br />
-    <div id="pwaInstallBanner" class="hidden">
-      <div class="pwa-banner-content">
-        <span>📱 Install Ryno Tools - <i>Keep going. Keep growing.</i></span>
-        <div class="pwa-banner-actions">
-          <button id="installBtn">Install</button>
-        </div>
-      </div>
-    </div>
   </footer>
 
+  <!-- Install banner -->
+  <div id="pwaInstallBanner" class="hidden">
+    <div class="pwa-banner-content">
+      <span>📱 Install Ryno Tools - <i>Keep going. Keep growing.</i></span>
+      <div class="pwa-banner-actions">
+        <button id="installBtn">Install</button>
+      </div>
+    </div>
+  </div>
+
   <script>
-    document.getElementById('copyright').innerHTML = `Copyright © ${new Date().getFullYear()} Ryno Tools - <i>Keep going. Keep growing.</i> All rights reserved.`;
+    document.getElementById('copyright').innerHTML =
+      `Copyright © ${new Date().getFullYear()} Ryno Tools - <i>Keep going. Keep growing.</i> All rights reserved.`;
   </script>
   <script type="module" src="./scripts/pwaInstaller.js"></script>
 </body>
