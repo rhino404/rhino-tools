@@ -1,15 +1,13 @@
-// sw.js — PWA auto cache-busting + optional migration helper
+// sw.js — PWA auto cache-busting + offline + instant update + optional migration
 
 // Use build timestamp as cache version (forces update on each deploy)
-const BUILD_TIMESTAMP = self.registration?.active?.scriptURL
-  ? new Date().toISOString()
-  : 'dev'; // fallback in dev
+const BUILD_TIMESTAMP = new Date().toISOString();
 const CACHE_NAME = `ryno-cache-${BUILD_TIMESTAMP}`;
 const NEW_DOMAIN = null; // e.g., 'https://ryno.tools/' — set to null to disable migration
 
 // List of core files to cache for offline use
 const CORE_ASSETS = [
-  '/',                // root
+  '/',
   '/index.html',
   '/base.css',
   '/dark.css',
@@ -27,12 +25,13 @@ self.addEventListener('install', (event) => {
       .then(cache => cache.addAll(CORE_ASSETS))
       .catch(err => console.error('[SW] Cache addAll failed:', err))
   );
-  self.skipWaiting();
+  self.skipWaiting(); // Activate immediately after install
 });
 
 self.addEventListener('activate', (event) => {
   console.log('[SW] Activating — build:', BUILD_TIMESTAMP);
   event.waitUntil(
+    // Delete old caches
     caches.keys().then(keys =>
       Promise.all(
         keys
@@ -42,9 +41,20 @@ self.addEventListener('activate', (event) => {
             return caches.delete(key);
           })
       )
-    )
+    ).then(() => {
+      // Take control immediately
+      return self.clients.claim();
+    }).then(() => {
+      // 🔥 Reload all open app windows so they use the new SW
+      return self.clients.matchAll({ type: 'window', includeUncontrolled: true })
+        .then(clientsArr => {
+          clientsArr.forEach(client => {
+            console.log('[SW] Reloading client:', client.url);
+            client.navigate(client.url);
+          });
+        });
+    })
   );
-  event.waitUntil(clients.claim());
 });
 
 self.addEventListener('fetch', (event) => {
@@ -55,7 +65,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Cache-first strategy
+  // Cache-first strategy (offline friendly)
   event.respondWith(
     caches.match(event.request).then(cachedResponse => {
       if (cachedResponse) return cachedResponse;
@@ -70,6 +80,9 @@ self.addEventListener('fetch', (event) => {
           });
         }
         return networkResponse;
+      }).catch(err => {
+        console.warn('[SW] Fetch failed; returning offline cache if available.', err);
+        return caches.match('/index.html'); // fallback
       });
     })
   );
