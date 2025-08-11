@@ -1,5 +1,5 @@
 import { DATA_SOURCES } from './dataSources.js';
-import { filterUnansweredQuestions } from './questions.js'; // ✅ import filter
+import { filterUnansweredQuestions } from '../ui/questions.js'; // ✅ import filter
 
 export async function loadQuestions({ level, category, subcategory }) {
   let questions = [];
@@ -43,7 +43,6 @@ export async function loadQuestions({ level, category, subcategory }) {
 
   if (level && level !== 'all') {
     questions = questions.filter(q => q.level.toLowerCase() === level.toLowerCase());
-    console.log(`Filtered questions by level "${level}": ${questions.length} remaining`);
   }
 
   // ✅ Filter out already answered questions

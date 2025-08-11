@@ -1,5 +1,5 @@
 // utils.js
-import { quizMeta } from './quizMeta.js';
+import { quizMeta } from '../data/quizMeta.js';
 
 export function getIcon(type, value) {
   const item = quizMeta[type]?.find(el => el.value === value);

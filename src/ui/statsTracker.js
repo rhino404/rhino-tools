@@ -1,4 +1,6 @@
-import { getCategoryIcon } from './quizMeta.js';
+//statsTracker.js
+
+import { getCategoryIcon } from '../data/quizMeta.js';
 
 const STORAGE_KEY = 'rhinoToolsUserStats';
 const TOTALS_CACHE_TTL = 5 * 60 * 1000; // 5 minutes
@@ -70,6 +72,7 @@ class StatsTracker {
         this.save();
     }
 
+
     logAnswer(question, isCorrect) {
         const { stats } = this;
 
@@ -136,7 +139,7 @@ class StatsTracker {
         }
 
         try {
-            const mod = await import('./dataSources.js');
+            const mod = await import('../core/dataSources.js');
             const DATA_SOURCES = mod.DATA_SOURCES;
             const subData = DATA_SOURCES?.[category];
             if (!subData || typeof subData !== 'object') {
@@ -399,3 +402,12 @@ function showConfirm(message, onConfirm) {
 }
 
 export const statsTracker = new StatsTracker();
+
+export default {
+  setCategory: statsTracker.setCategory.bind(statsTracker),
+  updateStats: statsTracker.logAnswer.bind(statsTracker),
+  resetStats: statsTracker.reset.bind(statsTracker),
+  initStatsCard: statsTracker.initCard.bind(statsTracker),
+  loadStats: statsTracker.load.bind(statsTracker),
+  saveStats: statsTracker.save.bind(statsTracker)
+};
