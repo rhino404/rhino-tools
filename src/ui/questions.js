@@ -1,7 +1,7 @@
-// questions.js
 import { statsTracker } from './statsTracker.js';
 import { showCorrectEffect, showIncorrectEffect } from './effects.js';
 import { getIcon } from '../utils/utils.js';
+import { updateTagFilter } from '../core/quizLoader.js'; // ✅ added for tag filter
 
 const ANSWERED_KEY = 'rhinoToolsAnsweredQuestions';
 const CURRENT_INDEX_KEY = 'rhinoToolsCurrentQuestionIndex';
@@ -157,4 +157,110 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
 // ✅ Restore last position after reload
 export function getStartingIndex() {
   return getCurrentIndex();
+}
+
+// ===============================
+// ✅ Render Tag Filter UI
+// ===============================
+export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
+  if (!containerEl) return;
+
+  containerEl.innerHTML = '';
+
+  const title = document.createElement('div');
+  title.className = 'tag-filter-title';
+  // title.textContent = 'Filter by Tags:';
+  containerEl.appendChild(title);
+
+  const tagList = document.createElement('div');
+  tagList.className = 'tag-filter-list';
+
+  availableTags.forEach(tag => {
+    const btn = document.createElement('button');
+    btn.textContent = tag;
+    btn.className = 'tag-filter-btn';
+    if (selectedTags.includes(tag)) {
+      btn.classList.add('active');
+    }
+
+    btn.onclick = () => {
+      // ------------------------------
+      // NEW: Single-select toggle mode
+      // ------------------------------
+      if (selectedTags.includes(tag)) {
+        // Clicking the same active tag → clear all
+        selectedTags = [];
+        Array.from(tagList.children).forEach(b => b.classList.remove('active'));
+      } else {
+        // Clicking a different tag → activate only that one
+        selectedTags = [tag];
+        Array.from(tagList.children).forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+
+      // ✅ Call quizLoader to update filtering
+      updateTagFilter(selectedTags);
+
+      /* 
+      -----------------------------------------
+      PREVIOUS MULTI-SELECT LOGIC (for reference)
+      Uncomment if to get multi-select back.
+      -----------------------------------------
+      if (selectedTags.includes(tag)) {
+        selectedTags = selectedTags.filter(t => t !== tag);
+        btn.classList.remove('active');
+      } else {
+        selectedTags.push(tag);
+        btn.classList.add('active');
+      }
+      updateTagFilter(selectedTags);
+      */
+    };
+
+    tagList.appendChild(btn);
+  });
+
+  containerEl.appendChild(tagList);
+}
+
+
+
+// ===============================
+// ✅ Horizontal Tag Scroll
+// ===============================
+function enableHorizontalScroll(container) {
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  container.addEventListener('mousedown', e => {
+    isDown = true;
+    container.classList.add('dragging');
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+  });
+
+  container.addEventListener('mouseleave', () => {
+    isDown = false;
+    container.classList.remove('dragging');
+  });
+
+  container.addEventListener('mouseup', () => {
+    isDown = false;
+    container.classList.remove('dragging');
+  });
+
+  container.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 1; // scroll speed
+    container.scrollLeft = scrollLeft - walk;
+  });
+}
+
+// After rendering the tag filter:
+const tagList = document.querySelector('.tag-filter-list');
+if (tagList) {
+  enableHorizontalScroll(tagList);
 }

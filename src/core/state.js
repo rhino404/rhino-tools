@@ -8,6 +8,8 @@ export const state = {
   currentIndex: 0,
   showingAnswers: false,
 
+  selectedTags: [],
+
   // DOM elements will be cached on DOMContentLoaded
   questionEl: null,
   choicesEl: null,

@@ -16,7 +16,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "On which of the following bands is phone operation prohibited?",
@@ -35,7 +38,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "On which of the following bands is image transmission prohibited?",
@@ -54,7 +60,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following amateur bands is restricted to communication on only specific channels, rather than frequency ranges?",
@@ -73,7 +82,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "Which of the following frequencies is in the General Class portion of the 40-meter band?",
@@ -92,7 +104,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following frequencies is within the General Class portion of the 75-meter phone band?",
@@ -111,7 +126,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following frequencies is within the General Class portion of the 20-meter phone band?",
@@ -130,7 +148,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following frequencies is within the General Class portion of the 80-meter band?",
@@ -149,7 +170,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following frequencies is within the General Class portion of the 15-meter band?",
@@ -168,7 +192,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following frequencies is available to a control operator holding a General Class license?",
@@ -187,7 +214,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "When General Class licensees are not permitted to use the entire voice portion of a particular band, which portion of the voice segment is generally available to them?",
@@ -206,7 +236,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "Which of the following applies when the FCC rules designate the Amateur Service as a secondary user on a band?",
@@ -225,7 +258,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "What is the appropriate action if, when operating on either the 30-meter or 60-meter bands, a station in the primary service interferes with your contact?",
@@ -244,7 +280,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "In what ITU region is operation in the 7.175 to 7.300 MHz band permitted for a control operator holding an FCC issued General Class license?",
@@ -263,7 +302,10 @@
     "topic": "General class control operator frequency privileges; primary and secondary allocations",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the maximum height above ground to which an antenna structure may be erected without requiring notification to the FAA and registration with the FCC, provided it is not at or near a public use airport?",
@@ -282,7 +324,10 @@
     "topic": "Antenna structure limitations; good engineering and good amateur practice; beacon operation; prohibited transmissions; retransmitting radio signals",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "With which of the following conditions must beacon stations comply?",
@@ -301,7 +346,10 @@
     "topic": "Antenna structure limitations; good engineering and good amateur practice; beacon operation; prohibited transmissions; retransmitting radio signals",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following is a purpose of a beacon station as identified in the FCC rules?",
@@ -320,7 +368,10 @@
     "topic": "Antenna structure limitations; good engineering and good amateur practice; beacon operation; prohibited transmissions; retransmitting radio signals",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following must be true before amateur stations may provide communications to broadcasters for dissemination to the public?",
@@ -339,7 +390,10 @@
     "topic": "Antenna structure limitations; good engineering and good amateur practice; beacon operation; prohibited transmissions; retransmitting radio signals",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "When may music be transmitted by an amateur station?",
@@ -358,7 +412,10 @@
     "topic": "Antenna structure limitations; good engineering and good amateur practice; beacon operation; prohibited transmissions; retransmitting radio signals",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "When is an amateur station permitted to transmit secret codes?",
@@ -377,7 +434,10 @@
     "topic": "Antenna structure limitations; good engineering and good amateur practice; beacon operation; prohibited transmissions; retransmitting radio signals",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What are the restrictions on the use of abbreviations or procedural signals in the Amateur Service?",
@@ -396,7 +456,10 @@
     "topic": "Antenna structure limitations; good engineering and good amateur practice; beacon operation; prohibited transmissions; retransmitting radio signals",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "When choosing a transmitting frequency, what should you do to comply with good amateur practice?",
@@ -415,7 +478,10 @@
     "topic": "Antenna structure limitations; good engineering and good amateur practice; beacon operation; prohibited transmissions; retransmitting radio signals",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "When may an amateur station transmit communications in which the licensee or control operator has a pecuniary (monetary) interest?",
@@ -434,7 +500,10 @@
     "topic": "Antenna structure limitations; good engineering and good amateur practice; beacon operation; prohibited transmissions; retransmitting radio signals",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is the power limit for beacon stations?",
@@ -453,7 +522,10 @@
     "topic": "Antenna structure limitations; good engineering and good amateur practice; beacon operation; prohibited transmissions; retransmitting radio signals",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "How does the FCC require an amateur station to be operated in all respects not specifically covered by the Part 97 rules?",
@@ -472,7 +544,10 @@
     "topic": "Antenna structure limitations; good engineering and good amateur practice; beacon operation; prohibited transmissions; retransmitting radio signals",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Who or what determines \"good engineering and good amateur practice\" as applied to the operation of an amateur station in all respects not covered by the Part 97 rules?",
@@ -491,7 +566,10 @@
     "topic": "Antenna structure limitations; good engineering and good amateur practice; beacon operation; prohibited transmissions; retransmitting radio signals",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "What is the maximum transmitting power an amateur station may use on 10.140 MHz?",
@@ -510,7 +588,10 @@
     "topic": "Transmitter power regulations; data emission standards; 60-meter operation requirements",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What is the maximum transmitting power an amateur station may use on the 12-meter band?",
@@ -529,7 +610,10 @@
     "topic": "Transmitter power regulations; data emission standards; 60-meter operation requirements",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What is the maximum bandwidth permitted by FCC rules for Amateur Radio stations transmitting on USB frequencies in the 60-meter band?",
@@ -548,7 +632,10 @@
     "topic": "Transmitter power regulations; data emission standards; 60-meter operation requirements",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following limitations apply to transmitter power on every amateur band?",
@@ -567,7 +654,10 @@
     "topic": "Transmitter power regulations; data emission standards; 60-meter operation requirements",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "Which of the following is a limitation on transmitter power on the 28 MHz band for a General Class control operator?",
@@ -586,7 +676,10 @@
     "topic": "Transmitter power regulations; data emission standards; 60-meter operation requirements",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following is a limitation on transmitter power on the 1.8 MHz band?",
@@ -605,7 +698,10 @@
     "topic": "Transmitter power regulations; data emission standards; 60-meter operation requirements",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is the maximum symbol rate permitted for RTTY or data emission transmission on the 20-meter band?",
@@ -624,7 +720,10 @@
     "topic": "Transmitter power regulations; data emission standards; 60-meter operation requirements",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the maximum symbol rate permitted for RTTY or data emission transmitted at frequencies below 28 MHz?",
@@ -643,7 +742,10 @@
     "topic": "Transmitter power regulations; data emission standards; 60-meter operation requirements",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the maximum symbol rate permitted for RTTY or data emission transmitted on the 1.25-meter and 70-centimeter bands?",
@@ -662,7 +764,10 @@
     "topic": "Transmitter power regulations; data emission standards; 60-meter operation requirements",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the maximum symbol rate permitted for RTTY or data emission transmissions on the 10-meter band?",
@@ -681,7 +786,10 @@
     "topic": "Transmitter power regulations; data emission standards; 60-meter operation requirements",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the maximum symbol rate permitted for RTTY or data emission transmissions on the 2-meter band?",
@@ -700,7 +808,10 @@
     "topic": "Transmitter power regulations; data emission standards; 60-meter operation requirements",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Who may receive credit for the elements represented by an expired amateur radio license?",
@@ -719,7 +830,10 @@
     "topic": "Volunteer Examiners and Volunteer Examiner Coordinators; temporary identification; element credit; remote operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What license examinations may you administer when you are an accredited VE holding a General Class operator license?",
@@ -738,7 +852,10 @@
     "topic": "Volunteer Examiners and Volunteer Examiner Coordinators; temporary identification; element credit; remote operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "privileges"
+    ]
   },
   {
     "question": "On which of the following band segments may you operate if you are a Technician Class operator and have a CSCE for General Class privileges?",
@@ -757,7 +874,10 @@
     "topic": "Volunteer Examiners and Volunteer Examiner Coordinators; temporary identification; element credit; remote operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following is a requirement for administering a Technician Class license examination?",
@@ -776,7 +896,10 @@
     "topic": "Volunteer Examiners and Volunteer Examiner Coordinators; temporary identification; element credit; remote operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following must a person have before they can be an administering VE for a Technician Class license examination?",
@@ -795,7 +918,10 @@
     "topic": "Volunteer Examiners and Volunteer Examiner Coordinators; temporary identification; element credit; remote operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "When must you add the special identifier \"AG\" after your call sign if you are a Technician Class licensee and have a CSCE for General Class operator privileges, but the FCC has not yet posted your upgrade on its website ?",
@@ -814,7 +940,10 @@
     "topic": "Volunteer Examiners and Volunteer Examiner Coordinators; temporary identification; element credit; remote operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "Volunteer Examiners are accredited by what organization?",
@@ -833,14 +962,17 @@
     "topic": "Volunteer Examiners and Volunteer Examiner Coordinators; temporary identification; element credit; remote operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following criteria must be met for a non-U.S. citizen to be an accredited Volunteer Examiner?",
     "choices": [
       "The person must be a resident of the U.S. for a minimum of 5 years",
       "The person must hold an FCC granted Amateur Radio license of General Class or above",
-      "The person’s home citizenship must be in ITU region 2",
+      "The person\u2019s home citizenship must be in ITU region 2",
       "None of these choices is correct; a non-U.S. citizen cannot be a Volunteer Examiner"
     ],
     "correct": "The person must hold an FCC granted Amateur Radio license of General Class or above",
@@ -852,7 +984,10 @@
     "topic": "Volunteer Examiners and Volunteer Examiner Coordinators; temporary identification; element credit; remote operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "How long is a Certificate of Successful Completion of Examination (CSCE) valid for exam element credit?",
@@ -871,7 +1006,10 @@
     "topic": "Volunteer Examiners and Volunteer Examiner Coordinators; temporary identification; element credit; remote operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What is the minimum age that one must be to qualify as an accredited Volunteer Examiner?",
@@ -890,7 +1028,10 @@
     "topic": "Volunteer Examiners and Volunteer Examiner Coordinators; temporary identification; element credit; remote operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "If a person has an expired FCC issued amateur radio license of General Class or higher, what is required before they can receive a new license?",
@@ -909,18 +1050,21 @@
     "topic": "Volunteer Examiners and Volunteer Examiner Coordinators; temporary identification; element credit; remote operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "Which of the following would disqualify a third party from participating in stating a message over an amateur station?",
     "choices": [
-      "The third party’s amateur license has been revoked and not reinstated ",
+      "The third party\u2019s amateur license has been revoked and not reinstated ",
       "The third party is not a U.S. citizen",
       "The third party is a licensed amateur",
       "The third party is speaking in a language other than English"
     ],
-    "correct": "The third party’s amateur license has been revoked and not reinstated ",
-    "explanation": "The third party’s amateur license has been revoked and not reinstated ",
+    "correct": "The third party\u2019s amateur license has been revoked and not reinstated ",
+    "explanation": "The third party\u2019s amateur license has been revoked and not reinstated ",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G1E",
@@ -928,7 +1072,10 @@
     "topic": "Control categories; repeater regulations; third-party rules; ITU regions; automatically controlled digital station",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "When may a 10-meter repeater retransmit the 2-meter signal from a station having a Technician Class control operator?",
@@ -947,7 +1094,10 @@
     "topic": "Control categories; repeater regulations; third-party rules; ITU regions; automatically controlled digital station",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following conditions require a licensed Amateur Radio operator to take specific steps to avoid harmful interference to other users or facilities?",
@@ -966,7 +1116,10 @@
     "topic": "Control categories; repeater regulations; third-party rules; ITU regions; automatically controlled digital station",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "What types of messages for a third party in another country may be transmitted by an amateur station?",
@@ -985,7 +1138,10 @@
     "topic": "Control categories; repeater regulations; third-party rules; ITU regions; automatically controlled digital station",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following applies in the event of interference between a coordinated repeater and an uncoordinated repeater?",
@@ -1004,7 +1160,10 @@
     "topic": "Control categories; repeater regulations; third-party rules; ITU regions; automatically controlled digital station",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "With which foreign countries is third party traffic prohibited, except for messages directly involving emergencies or disaster relief communications?",
@@ -1023,7 +1182,10 @@
     "topic": "Control categories; repeater regulations; third-party rules; ITU regions; automatically controlled digital station",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "privileges"
+    ]
   },
   {
     "question": "Which of the following is a requirement for a non-licensed person to communicate with a foreign Amateur Radio station from a station with an FCC-granted license at which an FCC licensed control operator is present?",
@@ -1042,7 +1204,10 @@
     "topic": "Control categories; repeater regulations; third-party rules; ITU regions; automatically controlled digital station",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "What language must be used when identifying your station if you are using a language other than English in making a contact using phone emission?",
@@ -1061,7 +1226,10 @@
     "topic": "Control categories; repeater regulations; third-party rules; ITU regions; automatically controlled digital station",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What portion of the 10-meter band is available for repeater use?",
@@ -1080,7 +1248,10 @@
     "topic": "Unknown Topic",
     "total_topic_questions": 2,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following is the FCC term for an unattended digital station that transfers messages to and from the Internet?",
@@ -1099,7 +1270,10 @@
     "topic": "Control categories; repeater regulations; third-party rules; ITU regions; automatically controlled digital station",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "data"
+    ]
   },
   {
     "question": "Under what circumstances are messages that are sent via digital modes exempt from Part 97 third party rules that apply to other modes of communication?",
@@ -1118,7 +1292,10 @@
     "topic": "Control categories; repeater regulations; third-party rules; ITU regions; automatically controlled digital station",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "On what bands may automatically controlled stations transmitting RTTY or data emissions communicate with other automatically controlled digital stations?",
@@ -1137,7 +1314,10 @@
     "topic": "Control categories; repeater regulations; third-party rules; ITU regions; automatically controlled digital station",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which sideband is most commonly used for voice communications on frequencies of 14 MHz or higher?",
@@ -1156,7 +1336,10 @@
     "topic": "Phone operating procedures: USB/LSB conventions, breaking into a contact, transmitter setup for voice operation; answering DX stations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Which of the following modes is most commonly used for voice communications on the 160-meter, 75-meter, and 40-meter bands?",
@@ -1175,7 +1358,10 @@
     "topic": "Phone operating procedures: USB/LSB conventions, breaking into a contact, transmitter setup for voice operation; answering DX stations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Which of the following is most commonly used for SSB voice communications in the VHF and UHF bands?",
@@ -1194,7 +1380,10 @@
     "topic": "Phone operating procedures: USB/LSB conventions, breaking into a contact, transmitter setup for voice operation; answering DX stations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which mode is most commonly used for voice communications on the 17-meter and 12-meter bands?",
@@ -1213,7 +1402,10 @@
     "topic": "Phone operating procedures: USB/LSB conventions, breaking into a contact, transmitter setup for voice operation; answering DX stations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Which mode of voice communication is most commonly used on the HF amateur bands?",
@@ -1232,7 +1424,10 @@
     "topic": "Phone operating procedures: USB/LSB conventions, breaking into a contact, transmitter setup for voice operation; answering DX stations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Which of the following is an advantage when using single sideband as compared to other analog voice modes on the HF amateur bands?",
@@ -1251,7 +1446,10 @@
     "topic": "Phone operating procedures: USB/LSB conventions, breaking into a contact, transmitter setup for voice operation; answering DX stations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Which of the following statements is true of the single sideband voice mode?",
@@ -1270,7 +1468,10 @@
     "topic": "Phone operating procedures: USB/LSB conventions, breaking into a contact, transmitter setup for voice operation; answering DX stations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Which of the following is a recommended way to break into a contact when using phone?",
@@ -1289,7 +1490,10 @@
     "topic": "Phone operating procedures: USB/LSB conventions, breaking into a contact, transmitter setup for voice operation; answering DX stations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Why do most amateur stations use lower sideband on the 160-meter, 75-meter and 40-meter bands?",
@@ -1308,7 +1512,10 @@
     "topic": "Phone operating procedures: USB/LSB conventions, breaking into a contact, transmitter setup for voice operation; answering DX stations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following statements is true of voice VOX operation versus PTT operation?",
@@ -1327,7 +1534,10 @@
     "topic": "Phone operating procedures: USB/LSB conventions, breaking into a contact, transmitter setup for voice operation; answering DX stations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What does the expression \"CQ DX\" usually indicate?",
@@ -1346,7 +1556,10 @@
     "topic": "Phone operating procedures: USB/LSB conventions, breaking into a contact, transmitter setup for voice operation; answering DX stations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following is true concerning access to frequencies in non-emergency situations?",
@@ -1365,7 +1578,10 @@
     "topic": "Operating effectively; band plans; drills and emergencies; RACES operation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the first thing you should do if you are communicating with another amateur station and hear a station in distress break in?",
@@ -1384,7 +1600,10 @@
     "topic": "Operating effectively; band plans; drills and emergencies; RACES operation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "If propagation changes during your contact and you notice increasing interference from other activity on the same frequency, what should you do?",
@@ -1403,7 +1622,10 @@
     "topic": "Operating effectively; band plans; drills and emergencies; RACES operation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "When selecting a CW transmitting frequency, what minimum separation should be used to minimize interference to stations on adjacent frequencies?",
@@ -1422,7 +1644,10 @@
     "topic": "Operating effectively; band plans; drills and emergencies; RACES operation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the customary minimum frequency separation between SSB signals under normal conditions?",
@@ -1441,7 +1666,10 @@
     "topic": "Operating effectively; band plans; drills and emergencies; RACES operation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is a practical way to avoid harmful interference on an apparently clear frequency before calling CQ on CW or phone?",
@@ -1460,7 +1688,10 @@
     "topic": "Operating effectively; band plans; drills and emergencies; RACES operation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following complies with good amateur practice when choosing a frequency on which to initiate a call?",
@@ -1479,7 +1710,10 @@
     "topic": "Operating effectively; band plans; drills and emergencies; RACES operation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "What is the \"DX window\" in a voluntary band plan?",
@@ -1498,7 +1732,10 @@
     "topic": "Operating effectively; band plans; drills and emergencies; RACES operation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Who may be the control operator of an amateur station transmitting in RACES to assist relief operations during a disaster?",
@@ -1517,7 +1754,10 @@
     "topic": "Operating effectively; band plans; drills and emergencies; RACES operation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "privileges"
+    ]
   },
   {
     "question": "When may the FCC restrict normal frequency operations of amateur stations participating in RACES?",
@@ -1525,10 +1765,10 @@
       "When they declare a temporary state of communication emergency",
       "When they seize your equipment for use in disaster communications",
       "Only when all amateur stations are instructed to stop transmitting",
-      "When the President’s War Emergency Powers have been invoked"
+      "When the President\u2019s War Emergency Powers have been invoked"
     ],
-    "correct": "When the President’s War Emergency Powers have been invoked",
-    "explanation": "When the President’s War Emergency Powers have been invoked",
+    "correct": "When the President\u2019s War Emergency Powers have been invoked",
+    "explanation": "When the President\u2019s War Emergency Powers have been invoked",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G2B",
@@ -1536,7 +1776,10 @@
     "topic": "Operating effectively; band plans; drills and emergencies; RACES operation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What frequency should be used to send a distress call?",
@@ -1555,7 +1798,10 @@
     "topic": "Operating effectively; band plans; drills and emergencies; RACES operation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "When is an amateur station allowed to use any means at its disposal to assist another station in distress?",
@@ -1574,7 +1820,10 @@
     "topic": "Operating effectively; band plans; drills and emergencies; RACES operation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following describes full break-in telegraphy (QSK)?",
@@ -1593,7 +1842,10 @@
     "topic": "CW operating procedures and procedural signals; Q signals; full break-in",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What should you do if a CW station sends \"QRS\"?",
@@ -1612,7 +1864,10 @@
     "topic": "CW operating procedures and procedural signals; Q signals; full break-in",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What does it mean when a CW operator sends \"KN\" at the end of a transmission?",
@@ -1631,7 +1886,10 @@
     "topic": "CW operating procedures and procedural signals; Q signals; full break-in",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What does the Q signal \"QRL?\" mean?",
@@ -1650,7 +1908,10 @@
     "topic": "CW operating procedures and procedural signals; Q signals; full break-in",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the best speed to use when answering a CQ in Morse code?",
@@ -1669,7 +1930,10 @@
     "topic": "CW operating procedures and procedural signals; Q signals; full break-in",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What does the term \"zero beat\" mean in CW operation?",
@@ -1688,7 +1952,10 @@
     "topic": "CW operating procedures and procedural signals; Q signals; full break-in",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "When sending CW, what does a \"C\" mean when added to the RST report?",
@@ -1707,7 +1974,10 @@
     "topic": "CW operating procedures and procedural signals; Q signals; full break-in",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What prosign is sent to indicate the end of a formal message when using CW?",
@@ -1726,7 +1996,10 @@
     "topic": "CW operating procedures and procedural signals; Q signals; full break-in",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What does the Q signal \"QSL\" mean?",
@@ -1745,7 +2018,10 @@
     "topic": "CW operating procedures and procedural signals; Q signals; full break-in",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What does the Q signal \"QRN\" mean?",
@@ -1764,7 +2040,10 @@
     "topic": "CW operating procedures and procedural signals; Q signals; full break-in",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What does the Q signal \"QRV\" mean?",
@@ -1783,7 +2062,10 @@
     "topic": "CW operating procedures and procedural signals; Q signals; full break-in",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the Amateur Auxiliary to the FCC?",
@@ -1802,7 +2084,10 @@
     "topic": "Volunteer Monitor Program; HF operations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following are objectives of the Amateur Auxiliary?",
@@ -1821,7 +2106,10 @@
     "topic": "Volunteer Monitor Program; HF operations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What skills learned during hidden transmitter hunts are of help to the Amateur Auxiliary?",
@@ -1840,7 +2128,10 @@
     "topic": "Volunteer Monitor Program; HF operations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following describes an azimuthal projection map?",
@@ -1859,7 +2150,10 @@
     "topic": "Volunteer Monitor Program; HF operations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "When is it permissible to communicate with amateur stations in countries outside the areas administered by the Federal Communications Commission?",
@@ -1878,7 +2172,10 @@
     "topic": "Volunteer Monitor Program; HF operations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "How is a directional antenna pointed when making a \"long-path\" contact with another station?",
@@ -1897,7 +2194,10 @@
     "topic": "Volunteer Monitor Program; HF operations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following is required by the FCC rules when operating in the 60-meter band?",
@@ -1916,7 +2216,10 @@
     "topic": "Volunteer Monitor Program; HF operations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is a reason why many amateurs keep a station log?",
@@ -1935,7 +2238,10 @@
     "topic": "Volunteer Monitor Program; HF operations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "What information is traditionally contained in a station log?",
@@ -1954,7 +2260,10 @@
     "topic": "Volunteer Monitor Program; HF operations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is QRP operation?",
@@ -1973,7 +2282,10 @@
     "topic": "Volunteer Monitor Program; HF operations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which HF antenna would be the best to use for minimizing interference?",
@@ -1992,7 +2304,10 @@
     "topic": "Volunteer Monitor Program; HF operations",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which mode is normally used when sending an RTTY signal via AFSK with an SSB transmitter?",
@@ -2011,7 +2326,10 @@
     "topic": "Digital mode operating procedures",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "How can a PACTOR modem or controller be used to determine if the channel is in use by other PACTOR stations?",
@@ -2030,7 +2348,10 @@
     "topic": "Digital mode operating procedures",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What symptoms may result from other signals interfering with a PACTOR or WINMOR transmission?",
@@ -2049,7 +2370,10 @@
     "topic": "Digital mode operating procedures",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What segment of the 20-meter band is most often used for digital transmissions?",
@@ -2068,7 +2392,10 @@
     "topic": "Digital mode operating procedures",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is the standard sideband used to generate a JT65 or JT9 digital signal when using AFSK in any amateur band?",
@@ -2087,7 +2414,10 @@
     "topic": "Digital mode operating procedures",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the most common frequency shift for RTTY emissions in the amateur HF bands?",
@@ -2106,18 +2436,21 @@
     "topic": "Digital mode operating procedures",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What segment of the 80-meter band is most commonly used for digital transmissions?",
     "choices": [
-      "3570 – 3600 kHz",
-      "3500 – 3525 kHz",
-      "3700 – 3750 kHz",
-      "3775 – 3825 kHz"
+      "3570 \u2013 3600 kHz",
+      "3500 \u2013 3525 kHz",
+      "3700 \u2013 3750 kHz",
+      "3775 \u2013 3825 kHz"
     ],
-    "correct": "3570 – 3600 kHz",
-    "explanation": "3570 – 3600 kHz",
+    "correct": "3570 \u2013 3600 kHz",
+    "explanation": "3570 \u2013 3600 kHz",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G2E",
@@ -2125,7 +2458,10 @@
     "topic": "Digital mode operating procedures",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "In what segment of the 20-meter band are most PSK31 operations commonly found?",
@@ -2144,7 +2480,10 @@
     "topic": "Digital mode operating procedures",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following is a way to establish contact with a digital messaging system gateway station?",
@@ -2152,10 +2491,10 @@
       "Send an email to the system control operator ",
       "Send QRL in Morse code ",
       "Respond when the station broadcasts its SSID ",
-      "Transmit a connect message on the station’s published frequency "
+      "Transmit a connect message on the station\u2019s published frequency "
     ],
-    "correct": "Transmit a connect message on the station’s published frequency ",
-    "explanation": "Transmit a connect message on the station’s published frequency ",
+    "correct": "Transmit a connect message on the station\u2019s published frequency ",
+    "explanation": "Transmit a connect message on the station\u2019s published frequency ",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G2E",
@@ -2163,7 +2502,10 @@
     "topic": "Digital mode operating procedures",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is indicated on a waterfall display by one or more vertical lines adjacent to a PSK31 signal?",
@@ -2182,7 +2524,10 @@
     "topic": "Digital mode operating procedures",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Which of the following describes a waterfall display?",
@@ -2201,7 +2546,10 @@
     "topic": "Digital mode operating procedures",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Which communication system sometimes uses the Internet to transfer messages?",
@@ -2220,18 +2568,21 @@
     "topic": "Digital mode operating procedures",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the significance of the sunspot number with regard to HF propagation?",
     "choices": [
-      "A.  Higher sunspot numbers generally indicate a greater probability of good propagation at higher frequencies",
-      "B.  Lower sunspot numbers generally indicate greater probability of sporadic E propagation",
-      "C.  A zero sunspot number indicate radio propagation is not possible on any band",
-      "D.  All of these choices are correct."
+      "A.\u00a0 Higher sunspot numbers generally indicate a greater probability of good propagation at higher frequencies",
+      "B.\u00a0 Lower sunspot numbers generally indicate greater probability of sporadic E propagation",
+      "C.\u00a0 A zero sunspot number indicate radio propagation is not possible on any band",
+      "D.\u00a0 All of these choices are correct."
     ],
-    "correct": "A.  Higher sunspot numbers generally indicate a greater probability of good propagation at higher frequencies",
-    "explanation": "A.  Higher sunspot numbers generally indicate a greater probability of good propagation at higher frequencies",
+    "correct": "A.\u00a0 Higher sunspot numbers generally indicate a greater probability of good propagation at higher frequencies",
+    "explanation": "A.\u00a0 Higher sunspot numbers generally indicate a greater probability of good propagation at higher frequencies",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G3A",
@@ -2239,7 +2590,13 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "significance",
+      "communication",
+      "radiation",
+      "stability"
+    ]
   },
   {
     "question": "What effect does a Sudden Ionospheric Disturbance have on the daytime ionospheric propagation of HF radio waves?",
@@ -2258,7 +2615,10 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Approximately how long does it take the increased ultraviolet and X-ray radiation from solar flares to affect radio propagation on the Earth?",
@@ -2277,7 +2637,10 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "Which of the following are least reliable for long distance communications during periods of low solar activity?",
@@ -2296,7 +2659,13 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "distance",
+      "communication",
+      "period",
+      "radiation"
+    ]
   },
   {
     "question": "What is the solar flux index?",
@@ -2315,7 +2684,13 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "flux",
+      "index",
+      "communication",
+      "radiation"
+    ]
   },
   {
     "question": "What is a geomagnetic storm?",
@@ -2334,7 +2709,13 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "storm",
+      "communication",
+      "radiation",
+      "stability"
+    ]
   },
   {
     "question": "At what point in the solar cycle does the 20-meter band usually support worldwide propagation during daylight hours?",
@@ -2353,7 +2734,10 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following effects can a geomagnetic storm have on radio propagation?",
@@ -2372,7 +2756,10 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "What effect does a high sunspot number have on radio communications?",
@@ -2391,18 +2778,21 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "What causes HF propagation conditions to vary periodically in a 28 day cycle?",
     "choices": [
       "Long term oscillations in the upper atmosphere",
-      "Cyclic variation in the Earth’s radiation belts",
-      "The Sun’s rotation on its axis",
+      "Cyclic variation in the Earth\u2019s radiation belts",
+      "The Sun\u2019s rotation on its axis",
       "The position of the Moon in its orbit"
     ],
-    "correct": "The Sun’s rotation on its axis",
-    "explanation": "The Sun’s rotation on its axis",
+    "correct": "The Sun\u2019s rotation on its axis",
+    "explanation": "The Sun\u2019s rotation on its axis",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G3A",
@@ -2410,7 +2800,13 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "communication",
+      "condition",
+      "radiation",
+      "stability"
+    ]
   },
   {
     "question": "Approximately how long is the typical sunspot cycle?",
@@ -2429,18 +2825,24 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "communication",
+      "radiation",
+      "stability",
+      "index"
+    ]
   },
   {
     "question": "What does the K-index indicate?",
     "choices": [
       "The relative position of sunspots on the surface of the Sun",
-      "The short term stability of the Earth’s magnetic field",
+      "The short term stability of the Earth\u2019s magnetic field",
       "The stability of the Sun's magnetic field",
       "The solar radio flux at Boulder, Colorado"
     ],
-    "correct": "The short term stability of the Earth’s magnetic field",
-    "explanation": "The short term stability of the Earth’s magnetic field",
+    "correct": "The short term stability of the Earth\u2019s magnetic field",
+    "explanation": "The short term stability of the Earth\u2019s magnetic field",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G3A",
@@ -2448,18 +2850,24 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "index",
+      "communication",
+      "radiation",
+      "stability"
+    ]
   },
   {
     "question": "What does the A-index indicate?",
     "choices": [
       "The relative position of sunspots on the surface of the Sun ",
       "The amount of polarization of the Sun's electric field",
-      "The long term stability of the Earth’s geomagnetic field",
+      "The long term stability of the Earth\u2019s geomagnetic field",
       "The solar radio flux at Boulder, Colorado"
     ],
-    "correct": "The long term stability of the Earth’s geomagnetic field",
-    "explanation": "The long term stability of the Earth’s geomagnetic field",
+    "correct": "The long term stability of the Earth\u2019s geomagnetic field",
+    "explanation": "The long term stability of the Earth\u2019s geomagnetic field",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G3A",
@@ -2467,7 +2875,13 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "index",
+      "communication",
+      "radiation",
+      "stability"
+    ]
   },
   {
     "question": "How are radio communications usually affected by the charged particles that reach the Earth from solar coronal holes?",
@@ -2486,7 +2900,13 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "communication",
+      "particle",
+      "radiation",
+      "stability"
+    ]
   },
   {
     "question": "How long does it take charged particles from coronal mass ejections to affect radio propagation on the Earth?",
@@ -2505,7 +2925,10 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "What is a possible benefit to radio communications resulting from periods of high geomagnetic activity?",
@@ -2524,7 +2947,13 @@
     "topic": "Sunspots and solar radiation; geomagnetic field and stability indices",
     "total_topic_questions": 16,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "benefit",
+      "communication",
+      "period",
+      "radiation"
+    ]
   },
   {
     "question": "How might a sky-wave signal sound if it arrives at your receiver by both short path and long path propagation?",
@@ -2543,7 +2972,10 @@
     "topic": "Maximum Usable Frequency; Lowest Usable Frequency; short path and long path propagation; determining propagation conditions; ionospheric refraction",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following is a good indicator of the possibility of sky-wave propagation on the 6-meter band?",
@@ -2562,7 +2994,10 @@
     "topic": "Maximum Usable Frequency; Lowest Usable Frequency; short path and long path propagation; determining propagation conditions; ionospheric refraction",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following applies when selecting a frequency for lowest attenuation when transmitting on HF?",
@@ -2581,7 +3016,10 @@
     "topic": "Maximum Usable Frequency; Lowest Usable Frequency; short path and long path propagation; determining propagation conditions; ionospheric refraction",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is a reliable way to determine if the MUF is high enough to support skip propagation between your station and a distant location on frequencies between 14 and 30 MHz?",
@@ -2600,7 +3038,10 @@
     "topic": "Maximum Usable Frequency; Lowest Usable Frequency; short path and long path propagation; determining propagation conditions; ionospheric refraction",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What usually happens to radio waves with frequencies below the MUF and above the LUF when they are sent into the ionosphere?",
@@ -2619,7 +3060,10 @@
     "topic": "Maximum Usable Frequency; Lowest Usable Frequency; short path and long path propagation; determining propagation conditions; ionospheric refraction",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What usually happens to radio waves with frequencies below the LUF?",
@@ -2638,7 +3082,10 @@
     "topic": "Maximum Usable Frequency; Lowest Usable Frequency; short path and long path propagation; determining propagation conditions; ionospheric refraction",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What does LUF stand for?",
@@ -2657,7 +3104,10 @@
     "topic": "Maximum Usable Frequency; Lowest Usable Frequency; short path and long path propagation; determining propagation conditions; ionospheric refraction",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What does MUF stand for?",
@@ -2676,7 +3126,10 @@
     "topic": "Maximum Usable Frequency; Lowest Usable Frequency; short path and long path propagation; determining propagation conditions; ionospheric refraction",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the approximate maximum distance along the Earth's surface that is normally covered in one hop using the F2 region?",
@@ -2695,7 +3148,10 @@
     "topic": "Maximum Usable Frequency; Lowest Usable Frequency; short path and long path propagation; determining propagation conditions; ionospheric refraction",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the approximate maximum distance along the Earth's surface that is normally covered in one hop using the E region?",
@@ -2714,7 +3170,10 @@
     "topic": "Maximum Usable Frequency; Lowest Usable Frequency; short path and long path propagation; determining propagation conditions; ionospheric refraction",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What happens to HF propagation when the LUF exceeds the MUF?",
@@ -2733,7 +3192,10 @@
     "topic": "Maximum Usable Frequency; Lowest Usable Frequency; short path and long path propagation; determining propagation conditions; ionospheric refraction",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What factor or factors affect the MUF?",
@@ -2752,7 +3214,10 @@
     "topic": "Maximum Usable Frequency; Lowest Usable Frequency; short path and long path propagation; determining propagation conditions; ionospheric refraction",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which ionospheric layer is closest to the surface of the Earth?",
@@ -2771,7 +3236,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Where on the Earth do ionospheric layers reach their maximum height?",
@@ -2790,7 +3258,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Why is the F2 region mainly responsible for the longest distance radio wave propagation?",
@@ -2809,7 +3280,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "What does the term \"critical angle\" mean as used in radio wave propagation?",
@@ -2828,7 +3302,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Why is long distance communication on the 40-meter, 60-meter, 80-meter and 160-meter bands more difficult during the day?",
@@ -2847,7 +3324,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is a characteristic of HF scatter signals?",
@@ -2866,7 +3346,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What makes HF scatter signals often sound distorted?",
@@ -2885,7 +3368,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Why are HF scatter signals in the skip zone usually weak?",
@@ -2904,7 +3390,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What type of radio wave propagation allows a signal to be detected at a distance too far for ground wave propagation but too near for normal sky-wave propagation?",
@@ -2923,7 +3412,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "Which of the following might be an indication that signals heard on the HF bands are being received via scatter propagation?",
@@ -2942,7 +3434,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following antenna types will be most effective for skip communications on 40-meters during the day?",
@@ -2961,7 +3456,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which ionospheric layer is the most absorbent of long skip signals during daylight hours on frequencies below 10 MHz?",
@@ -2980,7 +3478,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is Near Vertical Incidence Sky-wave (NVIS) propagation?",
@@ -2999,7 +3500,10 @@
     "topic": "Ionospheric regions; critical angle and frequency; HF scatter; near vertical incidence skywave (NVIS)",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the purpose of the \"notch filter\" found on many HF transceivers?",
@@ -3018,7 +3522,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is one advantage of selecting the opposite or \"reverse\" sideband when receiving CW signals on a typical HF transceiver?",
@@ -3037,7 +3544,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is normally meant by operating a transceiver in \"split\" mode?",
@@ -3056,7 +3566,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What reading on the plate current meter of a vacuum tube RF power amplifier indicates correct adjustment of the plate tuning control?",
@@ -3075,7 +3588,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is a reason to use Automatic Level Control (ALC) with an RF power amplifier?",
@@ -3094,7 +3610,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What type of device is often used to match transmitter output impedance to an impedance not equal to 50 ohms?",
@@ -3113,7 +3632,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What condition can lead to permanent damage to a solid-state RF power amplifier?",
@@ -3132,7 +3654,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What is the correct adjustment for the load or coupling control of a vacuum tube RF power amplifier?",
@@ -3151,7 +3676,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "Why is a time delay sometimes included in a transmitter keying circuit?",
@@ -3170,7 +3698,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is the purpose of an electronic keyer?",
@@ -3189,7 +3720,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following is a use for the IF shift control on a receiver?",
@@ -3208,7 +3742,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following is a common use for the dual VFO feature on a transceiver?",
@@ -3227,7 +3764,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is one reason to use the attenuator function that is present on many HF transceivers?",
@@ -3246,10 +3786,13 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
-    "question": "What is likely to happen if a transceiver’s ALC system is not set properly when transmitting AFSK signals with the radio using single sideband mode?",
+    "question": "What is likely to happen if a transceiver\u2019s ALC system is not set properly when transmitting AFSK signals with the radio using single sideband mode?",
     "choices": [
       "ALC will invert the modulation of the AFSK mode",
       "Improper action of ALC distorts the signal and can cause spurious emissions",
@@ -3265,7 +3808,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following can be a symptom of transmitted RF being picked up by an audio cable carrying AFSK data signals between a computer and a transceiver?",
@@ -3284,7 +3830,10 @@
     "topic": "Station configuration and operation",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What item of test equipment contains horizontal and vertical channel amplifiers?",
@@ -3303,7 +3852,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following is an advantage of an oscilloscope versus a digital voltmeter?",
@@ -3322,7 +3874,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following is the best instrument to use when checking the keying waveform of a CW transmitter?",
@@ -3341,7 +3896,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What signal source is connected to the vertical input of an oscilloscope when checking the RF envelope pattern of a transmitted signal?",
@@ -3360,7 +3918,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Why is high input impedance desirable for a voltmeter?",
@@ -3379,7 +3940,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is an advantage of a digital voltmeter as compared to an analog voltmeter?",
@@ -3398,7 +3962,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "analog"
+    ]
   },
   {
     "question": "What signals are used to conduct a two-tone test?",
@@ -3417,7 +3984,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following instruments may be used to monitor relative RF output when making antenna and transmitter adjustments?",
@@ -3436,7 +4006,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following can be determined with a field strength meter?",
@@ -3455,7 +4028,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following can be determined with a directional wattmeter?",
@@ -3474,7 +4050,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following must be connected to an antenna analyzer when it is being used for SWR measurements?",
@@ -3493,7 +4072,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What problem can occur when making measurements on an antenna system with an antenna analyzer?",
@@ -3512,7 +4094,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What is a use for an antenna analyzer other than measuring the SWR of an antenna system?",
@@ -3531,7 +4116,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is an instance in which the use of an instrument with analog readout may be preferred over an instrument with a digital readout?",
@@ -3550,7 +4138,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What type of transmitter performance does a two-tone test analyze?",
@@ -3569,7 +4160,10 @@
     "topic": "Tests and test equipment",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Which of the following might be useful in reducing RF interference to audio frequency devices?",
@@ -3588,7 +4182,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following could be a cause of interference covering a wide range of frequencies?",
@@ -3607,7 +4204,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What sound is heard from an audio device or telephone if there is interference from a nearby single sideband phone transmitter?",
@@ -3626,7 +4226,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the effect on an audio device or telephone system if there is interference from a nearby CW transmitter?",
@@ -3645,7 +4248,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What might be the problem if you receive an RF burn when touching your equipment while transmitting on an HF band, assuming the equipment is connected to a ground rod?",
@@ -3664,7 +4270,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What effect can be caused by a resonant ground connection?",
@@ -3683,7 +4292,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is one good way to avoid unwanted effects of stray RF energy in an amateur station?",
@@ -3702,7 +4314,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following would reduce RF interference caused by common-mode current on an audio cable?",
@@ -3721,7 +4336,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "How can a ground loop be avoided?",
@@ -3740,7 +4358,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What could be a symptom of a ground loop somewhere in your station?",
@@ -3759,7 +4380,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following is a function of a digital signal processor?",
@@ -3778,7 +4402,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following is an advantage of a receiver DSP IF filter as compared to an analog filter?",
@@ -3797,7 +4424,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following can perform automatic notching of interfering carriers?",
@@ -3816,7 +4446,10 @@
     "topic": "Interference to consumer electronics; grounding and bonding",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the purpose of a speech processor as used in a modern transceiver?",
@@ -3835,7 +4468,10 @@
     "topic": "Speech processors; S meters; sideband operation near band edges",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following describes how a speech processor affects a transmitted single sideband phone signal?",
@@ -3854,7 +4490,10 @@
     "topic": "Speech processors; S meters; sideband operation near band edges",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Which of the following can be the result of an incorrectly adjusted speech processor?",
@@ -3873,7 +4512,10 @@
     "topic": "Speech processors; S meters; sideband operation near band edges",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What does an S meter measure?",
@@ -3892,7 +4534,10 @@
     "topic": "Speech processors; S meters; sideband operation near band edges",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "How does a signal that reads 20 dB over S9 compare to one that reads S9 on a receiver, assuming a properly calibrated S meter?",
@@ -3911,7 +4556,10 @@
     "topic": "Speech processors; S meters; sideband operation near band edges",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Where is an S meter found?",
@@ -3930,7 +4578,10 @@
     "topic": "Speech processors; S meters; sideband operation near band edges",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What frequency range is occupied by a 3 kHz LSB signal when the displayed carrier frequency is set to 7.178 MHz?",
@@ -3949,7 +4600,10 @@
     "topic": "Speech processors; S meters; sideband operation near band edges",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What frequency range is occupied by a 3 kHz USB signal with the displayed carrier frequency set to 14.347 MHz?",
@@ -3968,10 +4622,13 @@
     "topic": "Speech processors; S meters; sideband operation near band edges",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
-    "question": "How close to the lower edge of the 40-meter General Class phone segment should your displayed carrier frequency be when using 3 kHz wide LSB?",
+    "question": "How close to the lower\u00a0edge of the 40-meter General Class phone segment should your displayed carrier frequency be when using 3 kHz wide\u00a0LSB?",
     "choices": [
       "At least 3 kHz above the edge of the segment",
       "At least 3 kHz below the edge of the segment",
@@ -3987,10 +4644,13 @@
     "topic": "Speech processors; S meters; sideband operation near band edges",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
-    "question": "How close to the upper edge of the 20-meter General Class band should your displayed carrier frequency be when using 3 kHz wide USB?",
+    "question": "How close to the upper edge of the 20-meter General Class band should your displayed carrier frequency be when using 3 kHz wide\u00a0USB?",
     "choices": [
       "At least 3 kHz above the edge of the band",
       "At least 3 kHz below the edge of the band",
@@ -4006,7 +4666,10 @@
     "topic": "Speech processors; S meters; sideband operation near band edges",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is the purpose of a capacitance hat on a mobile antenna?",
@@ -4025,7 +4688,10 @@
     "topic": "Mobile and portable HF stations; alternative energy source operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What is the purpose of a corona ball on a HF mobile antenna?",
@@ -4044,7 +4710,10 @@
     "topic": "Mobile and portable HF stations; alternative energy source operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following direct, fused power connections would be the best for a 100 watt HF mobile installation?",
@@ -4063,10 +4732,13 @@
     "topic": "Mobile and portable HF stations; alternative energy source operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
-    "question": "Why is it best NOT to draw the DC power for a 100 watt HF transceiver from a vehicle’s auxiliary power socket?",
+    "question": "Why is it best NOT to draw the DC power for a 100 watt HF transceiver from a vehicle\u2019s auxiliary power socket?",
     "choices": [
       "The socket is not wired with an RF-shielded power cable",
       "The socket's wiring may be inadequate for the current drawn by the transceiver",
@@ -4082,7 +4754,10 @@
     "topic": "Mobile and portable HF stations; alternative energy source operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "Which of the following most limits the effectiveness of an HF mobile transceiver operating in the 75-meter band?",
@@ -4101,7 +4776,10 @@
     "topic": "Mobile and portable HF stations; alternative energy source operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is one disadvantage of using a shortened mobile antenna as opposed to a full size antenna?",
@@ -4120,7 +4798,10 @@
     "topic": "Mobile and portable HF stations; alternative energy source operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following may cause interference to be heard in the receiver of an HF radio installed in a recent model vehicle?",
@@ -4139,7 +4820,10 @@
     "topic": "Mobile and portable HF stations; alternative energy source operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is the name of the process by which sunlight is changed directly into electricity?",
@@ -4158,7 +4842,10 @@
     "topic": "Mobile and portable HF stations; alternative energy source operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the approximate open-circuit voltage from a fully illuminated silicon photovoltaic cell?",
@@ -4177,7 +4864,10 @@
     "topic": "Mobile and portable HF stations; alternative energy source operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the reason that a series diode is connected between a solar panel and a storage battery that is being charged by the panel?",
@@ -4196,7 +4886,10 @@
     "topic": "Mobile and portable HF stations; alternative energy source operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following is a disadvantage of using wind as the primary source of power for an emergency station?",
@@ -4215,7 +4908,10 @@
     "topic": "Mobile and portable HF stations; alternative energy source operation",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What is impedance?",
@@ -4234,7 +4930,10 @@
     "topic": "Reactance; inductance; capacitance; impedance; impedance transformation; resonance",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following causes opposition to the flow of alternating current in an inductor?",
@@ -4253,7 +4952,10 @@
     "topic": "Reactance; inductance; capacitance; impedance; impedance transformation; resonance",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following causes opposition to the flow of alternating current in a capacitor?",
@@ -4272,7 +4974,10 @@
     "topic": "Reactance; inductance; capacitance; impedance; impedance transformation; resonance",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "How does an inductor react to AC?",
@@ -4291,7 +4996,10 @@
     "topic": "Reactance; inductance; capacitance; impedance; impedance transformation; resonance",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "How does a capacitor react to AC?",
@@ -4310,7 +5018,10 @@
     "topic": "Reactance; inductance; capacitance; impedance; impedance transformation; resonance",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What happens when the impedance of an electrical load is equal to the output impedance of a power source, assuming both impedances are resistive?",
@@ -4329,7 +5040,10 @@
     "topic": "Reactance; inductance; capacitance; impedance; impedance transformation; resonance",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Why is impedance matching important?",
@@ -4348,7 +5062,10 @@
     "topic": "Reactance; inductance; capacitance; impedance; impedance transformation; resonance",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What unit is used to measure reactance?",
@@ -4367,7 +5084,10 @@
     "topic": "Reactance; inductance; capacitance; impedance; impedance transformation; resonance",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What unit is used to measure impedance?",
@@ -4386,7 +5106,10 @@
     "topic": "Reactance; inductance; capacitance; impedance; impedance transformation; resonance",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following describes one method of impedance matching between two AC circuits?",
@@ -4405,7 +5128,10 @@
     "topic": "Reactance; inductance; capacitance; impedance; impedance transformation; resonance",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is one reason to use an impedance matching transformer?",
@@ -4424,7 +5150,10 @@
     "topic": "Reactance; inductance; capacitance; impedance; impedance transformation; resonance",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following devices can be used for impedance matching at radio frequencies?",
@@ -4443,7 +5172,10 @@
     "topic": "Reactance; inductance; capacitance; impedance; impedance transformation; resonance",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What dB change represents a two-times increase or decrease in power?",
@@ -4462,7 +5194,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "How does the total current relate to the individual currents in each branch of a purely resistive parallel circuit?",
@@ -4481,7 +5216,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "current"
+    ]
   },
   {
     "question": "How many watts of electrical power are used if 400 VDC is supplied to an 800 ohm load?",
@@ -4500,7 +5238,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "How many watts of electrical power are used by a 12 VDC light bulb that draws 0.2 amperes?",
@@ -4519,7 +5260,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "How many watts are dissipated when a current of 7.0 milliamperes flows through 1.25 kilohms resistance?",
@@ -4538,7 +5282,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What is the output PEP from a transmitter if an oscilloscope measures 200 volts peak-to-peak across a 50 ohm dummy load connected to the transmitter output?",
@@ -4557,7 +5304,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What value of an AC signal produces the same power dissipation in a resistor as a DC voltage of the same value?",
@@ -4576,7 +5326,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the peak-to-peak voltage of a sine wave that has an RMS voltage of 120 volts?",
@@ -4595,7 +5348,10 @@
     "topic": "Unknown Topic",
     "total_topic_questions": 2,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "voltage"
+    ]
   },
   {
     "question": "What is the RMS voltage of a sine wave with a value of 17 volts peak?",
@@ -4614,7 +5370,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "voltage"
+    ]
   },
   {
     "question": "What percentage of power loss would result from a transmission line loss of 1 dB?",
@@ -4633,7 +5392,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What is the ratio of peak envelope power to average power for an unmodulated carrier?",
@@ -4652,7 +5414,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What would be the RMS voltage across a 50 ohm dummy load dissipating 1200 watts?",
@@ -4671,7 +5436,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "resistance"
+    ]
   },
   {
     "question": "What is the output PEP of an unmodulated carrier if an average reading wattmeter connected to the transmitter output indicates 1060 watts?",
@@ -4690,7 +5458,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the output PEP from a transmitter if an oscilloscope measures 500 volts peak-to-peak across a 50 ohm resistive load connected to the transmitter output?",
@@ -4709,7 +5480,10 @@
     "topic": "The decibel; current and voltage dividers; electrical power calculations; sine wave root-mean-square (RMS) values; PEP calculations",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What causes a voltage to appear across the secondary winding of a transformer when an AC voltage source is connected across its primary winding?",
@@ -4728,7 +5502,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "voltage"
+    ]
   },
   {
     "question": "What happens if you reverse the primary and secondary windings of a 4:1 voltage step down transformer?",
@@ -4747,7 +5524,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following components should be added to an existing resistor to increase the resistance?",
@@ -4766,7 +5546,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the total resistance of three 100 ohm resistors in parallel?",
@@ -4785,7 +5568,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "resistance"
+    ]
   },
   {
     "question": "If three equal value resistors in series produce 450 ohms, what is the value of each resistor?",
@@ -4804,7 +5590,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the RMS voltage across a 500-turn secondary winding in a transformer if the 2250-turn primary is connected to 120 VAC?",
@@ -4823,7 +5612,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "voltage"
+    ]
   },
   {
     "question": "What is the turns ratio of a transformer used to match an audio amplifier having 600 ohm output impedance to a speaker having 4 ohm impedance?",
@@ -4842,7 +5634,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What is the equivalent capacitance of two 5.0 nanofarad capacitors and one 750 picofarad capacitor connected in parallel?",
@@ -4861,7 +5656,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the capacitance of three 100 microfarad capacitors connected in series?",
@@ -4880,7 +5678,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the inductance of three 10 millihenry inductors connected in parallel?",
@@ -4899,7 +5700,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "inductance"
+    ]
   },
   {
     "question": "What is the inductance of a 20 millihenry inductor connected in series with a 50 millihenry inductor?",
@@ -4918,7 +5722,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "inductance"
+    ]
   },
   {
     "question": "What is the capacitance of a 20 microfarad capacitor connected in series with a 50 microfarad capacitor?",
@@ -4937,7 +5744,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following components should be added to a capacitor to increase the capacitance?",
@@ -4956,7 +5766,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following components should be added to an inductor to increase the inductance?",
@@ -4975,7 +5788,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the total resistance of a 10 ohm, a 20 ohm, and a 50 ohm resistor connected in parallel?",
@@ -4994,7 +5810,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "resistance"
+    ]
   },
   {
     "question": "Why is the conductor of the primary winding of many voltage step up transformers larger in diameter than the conductor of the secondary winding?",
@@ -5013,18 +5832,21 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the value in nanofarads (nF) of a 22,000 pF capacitor?",
     "choices": [
-      "0.22 nF          ",
-      "2.2 nF         ",
-      "22 nF            ",
-      "220 nF        "
+      "0.22 nF \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 ",
+      "2.2 nF \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 ",
+      "22 nF \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 ",
+      "220 nF \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 "
     ],
-    "correct": "22 nF            ",
-    "explanation": "22 nF            ",
+    "correct": "22 nF \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 ",
+    "explanation": "22 nF \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 ",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G5C",
@@ -5032,18 +5854,21 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the value in microfarads of a 4700 nanofarad (nF) capacitor?",
     "choices": [
-      "47 µF",
-      "0.47 µF",
-      "47,000 µF ",
-      "4.7 µF"
+      "47 \u00b5F",
+      "0.47 \u00b5F",
+      "47,000 \u00b5F ",
+      "4.7 \u00b5F"
     ],
-    "correct": "4.7 µF",
-    "explanation": "4.7 µF",
+    "correct": "4.7 \u00b5F",
+    "explanation": "4.7 \u00b5F",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G5C",
@@ -5051,7 +5876,10 @@
     "topic": "Resistors, capacitors, and inductors in series and parallel; transformers",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the minimum allowable discharge voltage for maximum life of a standard 12 volt lead acid battery?",
@@ -5070,7 +5898,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "voltage"
+    ]
   },
   {
     "question": "What is an advantage of the low internal resistance of nickel-cadmium batteries?",
@@ -5089,7 +5920,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "resistance"
+    ]
   },
   {
     "question": "What is the approximate junction threshold voltage of a germanium diode?",
@@ -5108,7 +5942,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "voltage"
+    ]
   },
   {
     "question": "When is it acceptable to recharge a carbon-zinc primary cell?",
@@ -5127,7 +5964,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the approximate junction threshold voltage of a conventional silicon diode?",
@@ -5146,7 +5986,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "voltage"
+    ]
   },
   {
     "question": "Which of the following is an advantage of using a Schottky diode in an RF switching circuit rather than a standard silicon diode?",
@@ -5165,7 +6008,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What are the stable operating points for a bipolar transistor used as a switch in a logic circuit?",
@@ -5184,7 +6030,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Why must the cases of some large power transistors be insulated from ground?",
@@ -5203,7 +6052,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "Which of the following describes the construction of a MOSFET?",
@@ -5222,7 +6074,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which element of a triode vacuum tube is used to regulate the flow of electrons between cathode and plate?",
@@ -5241,7 +6096,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following solid state devices is most like a vacuum tube in its general operating characteristics?",
@@ -5260,7 +6118,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the primary purpose of a screen grid in a vacuum tube?",
@@ -5279,7 +6140,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Why is the polarity of applied voltages important for polarized capacitors?",
@@ -5298,7 +6162,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "voltage"
+    ]
   },
   {
     "question": "Which of the following is an advantage of ceramic capacitors as compared to other types of capacitors?",
@@ -5317,12 +6184,15 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What will happen to the resistance if the temperature of a resistor is increased?",
     "choices": [
-      "It will change depending on the resistor’s reactance coefficient",
+      "It will change depending on the resistor\u2019s reactance coefficient",
       "It will stay the same",
       "It will change depending on the resistor's temperature coefficient",
       "It will become time dependent"
@@ -5336,7 +6206,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "resistance"
+    ]
   },
   {
     "question": "Which of the following is a reason not to use wire-wound resistors in an RF circuit?",
@@ -5355,7 +6228,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is an advantage of using a ferrite core toroidal inductor?",
@@ -5374,7 +6250,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "How should the winding axes of two solenoid inductors be oriented to minimize their mutual inductance?",
@@ -5393,7 +6272,10 @@
     "topic": "Resistors; capacitors; inductors; rectifiers; solid-state diodes and transistors; vacuum tubes; batteries",
     "total_topic_questions": 19,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following is an analog integrated circuit?",
@@ -5412,7 +6294,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "analog"
+    ]
   },
   {
     "question": "What is meant by the term MMIC?",
@@ -5431,7 +6316,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "analog"
+    ]
   },
   {
     "question": "Which of the following is an advantage of CMOS integrated circuits compared to TTL integrated circuits?",
@@ -5450,7 +6338,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is meant by the term ROM?",
@@ -5469,7 +6360,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "analog"
+    ]
   },
   {
     "question": "What is meant when memory is characterized as non-volatile?",
@@ -5488,7 +6382,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "analog"
+    ]
   },
   {
     "question": "What kind of device is an integrated circuit operational amplifier?",
@@ -5507,7 +6404,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following is an advantage of an LED indicator compared to an incandescent indicator?",
@@ -5526,7 +6426,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "analog"
+    ]
   },
   {
     "question": "How is an LED biased when emitting light?",
@@ -5545,7 +6448,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "analog"
+    ]
   },
   {
     "question": "Which of the following is a characteristic of a liquid crystal display?",
@@ -5564,7 +6470,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What two devices in an Amateur Radio station might be connected using a USB interface?",
@@ -5583,7 +6492,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "What is a microprocessor?",
@@ -5602,7 +6514,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "analog"
+    ]
   },
   {
     "question": "Which of the following connectors would be a good choice for a serial data port?",
@@ -5621,7 +6536,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of these connector types is commonly used for RF connections at frequencies up to 150 MHz?",
@@ -5640,7 +6558,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of these connector types is commonly used for audio signals in Amateur Radio stations?",
@@ -5659,7 +6580,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the main reason to use keyed connectors instead of non-keyed types?",
@@ -5678,7 +6602,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following describes a type N connector?",
@@ -5697,7 +6624,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the general description of a DIN type connector?",
@@ -5716,7 +6646,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is a type SMA connector?",
@@ -5735,7 +6668,10 @@
     "topic": "Analog and digital integrated circuits (ICs); microwave ICs (MMICs); display devices; RF connectors; ferrite cores",
     "total_topic_questions": 18,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What useful feature does a power supply bleeder resistor provide?",
@@ -5754,7 +6690,10 @@
     "topic": "Power supplies; schematic symbols",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "Which of the following components are used in a power supply filter network?",
@@ -5773,7 +6712,10 @@
     "topic": "Power supplies; schematic symbols",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the peak-inverse-voltage across the rectifiers in a full-wave bridge power supply?",
@@ -5792,7 +6734,10 @@
     "topic": "Power supplies; schematic symbols",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "voltage"
+    ]
   },
   {
     "question": "What is the peak-inverse-voltage across the rectifier in a half-wave power supply?",
@@ -5811,7 +6756,10 @@
     "topic": "Power supplies; schematic symbols",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "voltage"
+    ]
   },
   {
     "question": "What portion of the AC cycle is converted to DC by a half-wave rectifier?",
@@ -5830,7 +6778,10 @@
     "topic": "Power supplies; schematic symbols",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What portion of the AC cycle is converted to DC by a full-wave rectifier?",
@@ -5849,7 +6800,10 @@
     "topic": "Power supplies; schematic symbols",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What is the output waveform of an unfiltered full-wave rectifier connected to a resistive load?",
@@ -5868,7 +6822,10 @@
     "topic": "Power supplies; schematic symbols",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "Which symbol in figure G7-1 represents a field effect transistor?",
@@ -5887,7 +6844,10 @@
     "topic": "Power supplies; schematic symbols",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": "./images/ham-radio/G7-1.png"
+    "image": "./images/ham-radio/G7-1.png",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which symbol in figure G7-1 represents a Zener diode?",
@@ -5906,7 +6866,10 @@
     "topic": "Power supplies; schematic symbols",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": "./images/ham-radio/G7-1.png"
+    "image": "./images/ham-radio/G7-1.png",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which symbol in figure G7-1 represents an NPN junction transistor?",
@@ -5925,7 +6888,10 @@
     "topic": "Power supplies; schematic symbols",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": "./images/ham-radio/G7-1.png"
+    "image": "./images/ham-radio/G7-1.png",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which symbol in Figure G7-1 represents a multiple-winding transformer?",
@@ -5944,7 +6910,10 @@
     "topic": "Power supplies; schematic symbols",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": "./images/ham-radio/G7-1.png"
+    "image": "./images/ham-radio/G7-1.png",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "Which symbol in Figure G7-1 represents a tapped inductor?",
@@ -5963,7 +6932,10 @@
     "topic": "Power supplies; schematic symbols",
     "total_topic_questions": 13,
     "type": "multiple",
-    "image": "./images/ham-radio/G7-1.png"
+    "image": "./images/ham-radio/G7-1.png",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Complex digital circuitry can often be replaced by what type of integrated circuit?",
@@ -5982,7 +6954,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following is an advantage of using the binary system when processing digital signals?",
@@ -6001,7 +6976,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following describes the function of a two input AND gate?",
@@ -6020,7 +6998,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following describes the function of a two input NOR gate?",
@@ -6039,7 +7020,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "How many states does a 3-bit binary counter have?",
@@ -6058,7 +7042,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "data"
+    ]
   },
   {
     "question": "What is a shift register?",
@@ -6077,7 +7064,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What are the basic components of virtually all sine wave oscillators?",
@@ -6096,7 +7086,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "How is the efficiency of an RF power amplifier determined?",
@@ -6115,7 +7108,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What determines the frequency of an LC oscillator?",
@@ -6134,7 +7130,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following is a characteristic of a Class A amplifier?",
@@ -6153,7 +7152,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "For which of the following modes is a Class C power stage appropriate for amplifying a modulated signal?",
@@ -6172,7 +7174,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Which of these classes of amplifiers has the highest efficiency?",
@@ -6191,7 +7196,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is the reason for neutralizing the final amplifier stage of a transmitter?",
@@ -6210,7 +7218,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following describes a linear amplifier?",
@@ -6229,7 +7240,10 @@
     "topic": "Digital circuits; amplifiers and oscillators",
     "total_topic_questions": 14,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following is used to process signals from the balanced modulator then send them to the mixer in some single sideband phone transmitters?",
@@ -6248,7 +7262,10 @@
     "topic": "Transceiver design; filters; oscillators; digital signal processing (DSP)",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which circuit is used to combine signals from the carrier oscillator and speech amplifier then send the result to the filter in some single sideband phone transmitters?",
@@ -6267,7 +7284,10 @@
     "topic": "Transceiver design; filters; oscillators; digital signal processing (DSP)",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What circuit is used to process signals from the RF amplifier and local oscillator then send the result to the IF filter in a superheterodyne receiver?",
@@ -6286,7 +7306,10 @@
     "topic": "Transceiver design; filters; oscillators; digital signal processing (DSP)",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What circuit is used to combine signals from the IF amplifier and BFO and send the result to the AF amplifier in some single sideband receivers?",
@@ -6305,7 +7328,10 @@
     "topic": "Transceiver design; filters; oscillators; digital signal processing (DSP)",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following is an advantage of a transceiver controlled by a direct digital synthesizer (DDS)?",
@@ -6324,7 +7350,10 @@
     "topic": "Transceiver design; filters; oscillators; digital signal processing (DSP)",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What should be the impedance of a low-pass filter as compared to the impedance of the transmission line into which it is inserted?",
@@ -6343,7 +7372,10 @@
     "topic": "Transceiver design; filters; oscillators; digital signal processing (DSP)",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the simplest combination of stages that implement a superheterodyne receiver?",
@@ -6362,7 +7394,10 @@
     "topic": "Transceiver design; filters; oscillators; digital signal processing (DSP)",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What type of circuit is used in many FM receivers to convert signals coming from the IF amplifier to audio?",
@@ -6381,7 +7416,10 @@
     "topic": "Transceiver design; filters; oscillators; digital signal processing (DSP)",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following is needed for a Digital Signal Processor IF filter?",
@@ -6400,7 +7438,10 @@
     "topic": "Transceiver design; filters; oscillators; digital signal processing (DSP)",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "How is Digital Signal Processor filtering accomplished?",
@@ -6419,7 +7460,10 @@
     "topic": "Transceiver design; filters; oscillators; digital signal processing (DSP)",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is meant by the term \"software defined radio\" (SDR)?",
@@ -6438,18 +7482,21 @@
     "topic": "Transceiver design; filters; oscillators; digital signal processing (DSP)",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "How is an FSK signal generated?",
     "choices": [
       "By keying an FM transmitter with a sub-audible tone",
-      "By changing an oscillator’s frequency directly with a digital control signal",
-      "By using a transceiver’s computer data interface protocol to change frequencies",
+      "By changing an oscillator\u2019s frequency directly with a digital control signal",
+      "By using a transceiver\u2019s computer data interface protocol to change frequencies",
       "By reconfiguring the CW keying input to act as a tone generator"
     ],
-    "correct": "By changing an oscillator’s frequency directly with a digital control signal",
-    "explanation": "By changing an oscillator’s frequency directly with a digital control signal",
+    "correct": "By changing an oscillator\u2019s frequency directly with a digital control signal",
+    "explanation": "By changing an oscillator\u2019s frequency directly with a digital control signal",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G8A",
@@ -6457,7 +7504,10 @@
     "topic": "Carriers and modulation: AM, FM, and single sideband; modulation envelope; digital modulation; overmodulation; link budgets and link margins",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the name of the process that changes the phase angle of an RF wave to convey information?",
@@ -6476,7 +7526,10 @@
     "topic": "Carriers and modulation: AM, FM, and single sideband; modulation envelope; digital modulation; overmodulation; link budgets and link margins",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the name of the process that changes the instantaneous frequency of an RF wave to convey information?",
@@ -6495,7 +7548,10 @@
     "topic": "Carriers and modulation: AM, FM, and single sideband; modulation envelope; digital modulation; overmodulation; link budgets and link margins",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What emission is produced by a reactance modulator connected to a transmitter RF amplifier stage?",
@@ -6514,7 +7570,10 @@
     "topic": "Carriers and modulation: AM, FM, and single sideband; modulation envelope; digital modulation; overmodulation; link budgets and link margins",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What type of modulation varies the instantaneous power level of the RF signal?",
@@ -6533,7 +7592,10 @@
     "topic": "Carriers and modulation: AM, FM, and single sideband; modulation envelope; digital modulation; overmodulation; link budgets and link margins",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is one advantage of carrier suppression in a single sideband phone transmission versus full carrier amplitude modulation?",
@@ -6552,7 +7614,10 @@
     "topic": "Carriers and modulation: AM, FM, and single sideband; modulation envelope; digital modulation; overmodulation; link budgets and link margins",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following phone emissions uses the narrowest bandwidth?",
@@ -6571,7 +7636,10 @@
     "topic": "Carriers and modulation: AM, FM, and single sideband; modulation envelope; digital modulation; overmodulation; link budgets and link margins",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "Which of the following is an effect of overmodulation?",
@@ -6590,7 +7658,10 @@
     "topic": "Carriers and modulation: AM, FM, and single sideband; modulation envelope; digital modulation; overmodulation; link budgets and link margins",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What control is typically adjusted for proper ALC setting on an amateur single sideband transceiver?",
@@ -6609,7 +7680,10 @@
     "topic": "Carriers and modulation: AM, FM, and single sideband; modulation envelope; digital modulation; overmodulation; link budgets and link margins",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is meant by the term flat-topping when referring to a single sideband phone transmission?",
@@ -6628,7 +7702,10 @@
     "topic": "Carriers and modulation: AM, FM, and single sideband; modulation envelope; digital modulation; overmodulation; link budgets and link margins",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the modulation envelope of an AM signal?",
@@ -6647,7 +7724,10 @@
     "topic": "Carriers and modulation: AM, FM, and single sideband; modulation envelope; digital modulation; overmodulation; link budgets and link margins",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What receiver stage combines a 14.250 MHz input signal with a 13.795 MHz oscillator signal to produce a 455 kHz intermediate frequency (IF) signal?",
@@ -6666,7 +7746,10 @@
     "topic": "Frequency changing; bandwidths of various modes; deviation; intermodulation",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "If a receiver mixes a 13.800 MHz VFO with a 14.255 MHz received signal to produce a 455 kHz intermediate frequency (IF) signal, what type of interference will a 13.345 MHz signal produce in the receiver?",
@@ -6685,7 +7768,10 @@
     "topic": "Frequency changing; bandwidths of various modes; deviation; intermodulation",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is another term for the mixing of two RF signals?",
@@ -6704,7 +7790,10 @@
     "topic": "Frequency changing; bandwidths of various modes; deviation; intermodulation",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the stage in a VHF FM transmitter that generates a harmonic of a lower frequency signal to reach the desired operating frequency?",
@@ -6723,7 +7812,10 @@
     "topic": "Frequency changing; bandwidths of various modes; deviation; intermodulation",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What is the approximate bandwidth of a PACTOR3 signal at maximum data rate?",
@@ -6742,7 +7834,10 @@
     "topic": "Frequency changing; bandwidths of various modes; deviation; intermodulation",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the total bandwidth of an FM phone transmission having 5 kHz deviation and 3 kHz modulating frequency?",
@@ -6761,7 +7856,10 @@
     "topic": "Frequency changing; bandwidths of various modes; deviation; intermodulation",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the frequency deviation for a 12.21 MHz reactance modulated oscillator in a 5 kHz deviation, 146.52 MHz FM phone transmitter?",
@@ -6780,7 +7878,10 @@
     "topic": "Frequency changing; bandwidths of various modes; deviation; intermodulation",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Why is it important to know the duty cycle of the mode you are using when transmitting?",
@@ -6799,7 +7900,10 @@
     "topic": "Frequency changing; bandwidths of various modes; deviation; intermodulation",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "privileges"
+    ]
   },
   {
     "question": "Why is it good to match receiver bandwidth to the bandwidth of the operating mode?",
@@ -6818,7 +7922,10 @@
     "topic": "Frequency changing; bandwidths of various modes; deviation; intermodulation",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is the relationship between transmitted symbol rate and bandwidth?",
@@ -6837,7 +7944,10 @@
     "topic": "Frequency changing; bandwidths of various modes; deviation; intermodulation",
     "total_topic_questions": 10,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following digital modes is designed to operate at extremely low signal strength on the HF bands?",
@@ -6856,7 +7966,10 @@
     "topic": "Digital emission modes",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What part of a data packet contains the routing and handling information?",
@@ -6875,7 +7988,10 @@
     "topic": "Digital emission modes",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "data"
+    ]
   },
   {
     "question": "Which of the following describes Baudot code?",
@@ -6894,7 +8010,10 @@
     "topic": "Digital emission modes",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "In the PACTOR protocol, what is meant by an NAK response to a transmitted packet?",
@@ -6913,7 +8032,10 @@
     "topic": "Digital emission modes",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "data"
+    ]
   },
   {
     "question": "What action results from a failure to exchange information due to excessive transmission attempts when using PACTOR or WINMOR?",
@@ -6932,7 +8054,10 @@
     "topic": "Digital emission modes",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "How does the receiving station respond to an ARQ data mode packet containing errors?",
@@ -6951,7 +8076,10 @@
     "topic": "Digital emission modes",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following statements is true about PSK31?",
@@ -6970,7 +8098,10 @@
     "topic": "Digital emission modes",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "What does the number 31 represent in \"PSK31\"?",
@@ -6989,7 +8120,10 @@
     "topic": "Digital emission modes",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "modulation"
+    ]
   },
   {
     "question": "How does forward error correction (FEC) allow the receiver to correct errors in received data packets?",
@@ -7008,7 +8142,10 @@
     "topic": "Digital emission modes",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "How are the two separate frequencies of a Frequency Shift Keyed (FSK) signal identified?",
@@ -7027,7 +8164,10 @@
     "topic": "Digital emission modes",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which type of code is used for sending characters in a PSK31 signal?",
@@ -7046,7 +8186,10 @@
     "topic": "Digital emission modes",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following factors determine the characteristic impedance of a parallel conductor antenna feed line?",
@@ -7065,7 +8208,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What are the typical characteristic impedances of coaxial cables used for antenna feed lines at amateur stations?",
@@ -7084,7 +8230,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the characteristic impedance of flat ribbon TV type twinlead?",
@@ -7103,7 +8252,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What might cause reflected power at the point where a feed line connects to an antenna?",
@@ -7122,7 +8274,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "How does the attenuation of coaxial cable change as the frequency of the signal it is carrying increases?",
@@ -7141,7 +8296,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "In what units is RF feed line loss usually expressed?",
@@ -7160,7 +8318,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What must be done to prevent standing waves on an antenna feed line?",
@@ -7179,7 +8340,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "If the SWR on an antenna feed line is 5 to 1, and a matching network at the transmitter end of the feed line is adjusted to 1 to 1 SWR, what is the resulting SWR on the feed line?",
@@ -7198,7 +8362,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What standing wave ratio will result when connecting a 50 ohm feed line to a non-reactive load having 200 ohm impedance?",
@@ -7217,7 +8384,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What standing wave ratio will result when connecting a 50 ohm feed line to a non-reactive load having 10 ohm impedance?",
@@ -7236,7 +8406,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What standing wave ratio will result when connecting a 50 ohm feed line to a non-reactive load having 50 ohm impedance?",
@@ -7255,7 +8428,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What standing wave ratio will result when connecting a 50 ohm feed line to a non-reactive load having 25 ohm impedance?",
@@ -7274,7 +8450,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What standing wave ratio will result when connecting a 50 ohm feed line to an antenna that has a purely resistive 300 ohm feed point impedance?",
@@ -7293,7 +8472,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What is the interaction between high standing wave ratio (SWR) and transmission line loss?",
@@ -7312,7 +8494,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the effect of transmission line loss on SWR measured at the input to the line?",
@@ -7331,7 +8516,10 @@
     "topic": "Feed lines: characteristic impedance and attenuation; standing wave ratio (SWR) calculation, measurement, and effects; antenna feed point matching",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is one disadvantage of a directly fed random-wire HF antenna?",
@@ -7350,7 +8538,10 @@
     "topic": "Basic dipole and monopole antennas",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following is a common way to adjust the feed point impedance of a quarter wave ground plane vertical antenna to be approximately 50 ohms?",
@@ -7369,7 +8560,10 @@
     "topic": "Basic dipole and monopole antennas",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What happens to the feed point impedance of a ground plane antenna when its radials are changed from horizontal to sloping downward?",
@@ -7388,7 +8582,10 @@
     "topic": "Basic dipole and monopole antennas",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the radiation pattern of a dipole antenna in free space in the plane of the conductor?",
@@ -7407,7 +8604,10 @@
     "topic": "Basic dipole and monopole antennas",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "How does antenna height affect the horizontal (azimuthal) radiation pattern of a horizontal dipole HF antenna?",
@@ -7426,7 +8626,10 @@
     "topic": "Basic dipole and monopole antennas",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Where should the radial wires of a ground-mounted vertical antenna system be placed?",
@@ -7445,7 +8648,10 @@
     "topic": "Basic dipole and monopole antennas",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "How does the feed point impedance of a 1/2 wave dipole antenna change as the antenna is lowered below 1/4 wave above ground?",
@@ -7464,7 +8670,10 @@
     "topic": "Basic dipole and monopole antennas",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "How does the feed point impedance of a 1/2 wave dipole change as the feed point is moved from the center toward the ends?",
@@ -7483,7 +8692,10 @@
     "topic": "Basic dipole and monopole antennas",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Which of the following is an advantage of a horizontally polarized as compared to a vertically polarized HF antenna?",
@@ -7502,7 +8714,10 @@
     "topic": "Basic dipole and monopole antennas",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the approximate length for a 1/2 wave dipole antenna cut for 14.250 MHz?",
@@ -7521,7 +8736,10 @@
     "topic": "Basic dipole and monopole antennas",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What is the approximate length for a 1/2 wave dipole antenna cut for 3.550 MHz?",
@@ -7540,7 +8758,10 @@
     "topic": "Basic dipole and monopole antennas",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What is the approximate length for a 1/4 wave vertical antenna cut for 28.5 MHz?",
@@ -7559,7 +8780,10 @@
     "topic": "Basic dipole and monopole antennas",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following would increase the bandwidth of a Yagi antenna?",
@@ -7578,7 +8802,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "What is the approximate length of the driven element of a Yagi antenna?",
@@ -7597,7 +8824,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which statement about a three-element, single-band Yagi antenna is true?",
@@ -7616,7 +8846,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which statement about a three-element, single-band Yagi antenna is true?",
@@ -7635,7 +8868,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "How does increasing boom length and adding directors affect a Yagi antenna?",
@@ -7654,7 +8890,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What configuration of the loops of a two-element quad antenna must be used for the antenna to operate as a beam antenna, assuming one of the elements is used as a reflector?",
@@ -7673,7 +8912,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What does \"front-to-back ratio\" mean in reference to a Yagi antenna?",
@@ -7692,7 +8934,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What is meant by the \"main lobe\" of a directive antenna?",
@@ -7711,7 +8956,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "How does the gain of two 3-element horizontally polarized Yagi antennas spaced vertically 1/2 wavelength apart typically compare to the gain of a single 3-element Yagi?",
@@ -7730,7 +8978,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "Which of the following is a Yagi antenna design variable that could be adjusted to optimize forward gain, front-to-back ratio, or SWR bandwidth?",
@@ -7749,7 +9000,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What is the purpose of a gamma match used with Yagi antennas?",
@@ -7768,7 +9022,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following is an advantage of using a gamma match for impedance matching of a Yagi antenna to 50 ohm coax feed line?",
@@ -7787,7 +9044,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "Approximately how long is each side of the driven element of a quad antenna?",
@@ -7806,7 +9066,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "How does the forward gain of a two-element quad antenna compare to the forward gain of a three-element Yagi antenna?",
@@ -7825,7 +9088,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "Approximately how long is each side of the reflector element of a quad antenna?",
@@ -7844,7 +9110,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "How does the gain of a two-element delta-loop beam compare to the gain of a two-element quad antenna?",
@@ -7863,7 +9132,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "Approximately how long is each leg of a symmetrical delta-loop antenna?",
@@ -7882,7 +9154,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What happens when the feed point of a quad antenna of any shape is moved from the midpoint of the top or bottom to the midpoint of either side?",
@@ -7901,7 +9176,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "How does antenna gain stated in dBi compare to gain stated in dBd for the same antenna?",
@@ -7920,7 +9198,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What is meant by the terms dBi and dBd when referring to antenna gain?",
@@ -7939,7 +9220,10 @@
     "topic": "Directional antennas",
     "total_topic_questions": 20,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What does the term NVIS mean as related to antennas?",
@@ -7958,7 +9242,10 @@
     "topic": "Specialized antenna types and applications",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following is an advantage of an NVIS antenna?",
@@ -7977,7 +9264,10 @@
     "topic": "Specialized antenna types and applications",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "At what height above ground is an NVIS antenna typically installed?",
@@ -7996,7 +9286,10 @@
     "topic": "Specialized antenna types and applications",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What is the primary purpose of antenna traps?",
@@ -8015,7 +9308,10 @@
     "topic": "Specialized antenna types and applications",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What is an advantage of vertical stacking of horizontally polarized Yagi antennas?",
@@ -8034,7 +9330,10 @@
     "topic": "Specialized antenna types and applications",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following is an advantage of a log periodic antenna?",
@@ -8053,7 +9352,10 @@
     "topic": "Specialized antenna types and applications",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following describes a log periodic antenna?",
@@ -8072,7 +9374,10 @@
     "topic": "Specialized antenna types and applications",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Why is a Beverage antenna not used for transmitting?",
@@ -8091,7 +9396,10 @@
     "topic": "Specialized antenna types and applications",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following is an application for a Beverage antenna?",
@@ -8110,7 +9418,10 @@
     "topic": "Specialized antenna types and applications",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following describes a Beverage antenna?",
@@ -8129,7 +9440,10 @@
     "topic": "Specialized antenna types and applications",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which of the following is a disadvantage of multiband antennas?",
@@ -8148,7 +9462,10 @@
     "topic": "Specialized antenna types and applications",
     "total_topic_questions": 11,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What is one way that RF energy can affect human body tissue?",
@@ -8167,7 +9484,10 @@
     "topic": "RF safety principles, rules, and guidelines; routine station evaluation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following properties is important in estimating whether an RF signal exceeds the maximum permissible exposure (MPE)?",
@@ -8186,7 +9506,10 @@
     "topic": "RF safety principles, rules, and guidelines; routine station evaluation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "frequency"
+    ]
   },
   {
     "question": "How can you determine that your station complies with FCC RF exposure regulations?",
@@ -8205,7 +9528,10 @@
     "topic": "RF safety principles, rules, and guidelines; routine station evaluation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What does \"time averaging\" mean in reference to RF radiation exposure?",
@@ -8224,7 +9550,10 @@
     "topic": "RF safety principles, rules, and guidelines; routine station evaluation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What must you do if an evaluation of your station shows RF energy radiated from your station exceeds permissible limits?",
@@ -8243,7 +9572,10 @@
     "topic": "RF safety principles, rules, and guidelines; routine station evaluation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What precaution should be taken when installing a ground-mounted antenna?",
@@ -8262,7 +9594,10 @@
     "topic": "RF safety principles, rules, and guidelines; routine station evaluation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What effect does transmitter duty cycle have when evaluating RF exposure?",
@@ -8281,7 +9616,10 @@
     "topic": "RF safety principles, rules, and guidelines; routine station evaluation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "privileges"
+    ]
   },
   {
     "question": "Which of the following steps must an amateur operator take to ensure compliance with RF safety regulations when transmitter power exceeds levels specified in FCC Part 97.13?",
@@ -8300,7 +9638,10 @@
     "topic": "RF safety principles, rules, and guidelines; routine station evaluation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "amateur"
+    ]
   },
   {
     "question": "What type of instrument can be used to accurately measure an RF field?",
@@ -8319,7 +9660,10 @@
     "topic": "RF safety principles, rules, and guidelines; routine station evaluation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is one thing that can be done if evaluation shows that a neighbor might receive more than the allowable limit of RF exposure from the main lobe of a directional antenna?",
@@ -8338,7 +9682,10 @@
     "topic": "RF safety principles, rules, and guidelines; routine station evaluation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "What precaution should you take if you install an indoor transmitting antenna?",
@@ -8357,7 +9704,10 @@
     "topic": "RF safety principles, rules, and guidelines; routine station evaluation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What precaution should you take whenever you make adjustments or repairs to an antenna?",
@@ -8376,7 +9726,10 @@
     "topic": "RF safety principles, rules, and guidelines; routine station evaluation",
     "total_topic_questions": 12,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "antennas"
+    ]
   },
   {
     "question": "Which wire or wires in a four-conductor connection should be attached to fuses or circuit breakers in a device operated from a 240 VAC single phase source?",
@@ -8395,7 +9748,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "What is the minimum wire size that may be safely used for a circuit that draws up to 20 amperes of continuous current?",
@@ -8414,7 +9770,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which size of fuse or circuit breaker would be appropriate to use with a circuit that uses AWG number 14 wiring?",
@@ -8433,7 +9792,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following is a primary reason for not placing a gasoline-fueled generator inside an occupied area?",
@@ -8452,7 +9814,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "Which of the following conditions will cause a Ground Fault Circuit Interrupter (GFCI) to disconnect the 120 or 240 Volt AC line power to a device?",
@@ -8471,7 +9836,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Why must the metal enclosure of every item of station equipment be grounded?",
@@ -8490,7 +9858,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of these choices should be observed when climbing a tower using a safety belt or harness?",
@@ -8509,7 +9880,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What should be done by any person preparing to climb a tower that supports electrically powered devices?",
@@ -8528,7 +9902,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Why should soldered joints not be used with the wires that connect the base of a tower to a system of ground rods?",
@@ -8547,7 +9924,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following is a danger from lead-tin solder?",
@@ -8566,7 +9946,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "Which of the following is good practice for lightning protection grounds?",
@@ -8585,12 +9968,15 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "equipment"
+    ]
   },
   {
     "question": "What is the purpose of a power supply interlock?",
     "choices": [
-      "To prevent unauthorized changes to the circuit that would void the manufacturer’s warranty",
+      "To prevent unauthorized changes to the circuit that would void the manufacturer\u2019s warranty",
       "To shut down the unit if it becomes too hot",
       "To ensure that dangerous voltages are removed if the cabinet is opened",
       "To shut off the power supply if too much voltage is produced"
@@ -8604,7 +9990,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "What must you do when powering your house from an emergency generator?",
@@ -8623,7 +10012,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   },
   {
     "question": "Which of the following is covered by the National Electrical Code?",
@@ -8642,7 +10034,10 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "component"
+    ]
   },
   {
     "question": "Which of the following is true of an emergency generator installation?",
@@ -8661,6 +10056,9 @@
     "topic": "Station safety: electrical shock, grounding, fusing, interlocks, and wiring; antenna and tower safety",
     "total_topic_questions": 15,
     "type": "multiple",
-    "image": ""
+    "image": "",
+    "tags": [
+      "power"
+    ]
   }
 ]
