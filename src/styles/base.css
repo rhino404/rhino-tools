@@ -320,6 +320,49 @@ main#quiz-container,
 }
 
 /* =========================
+   Tag Filter
+========================= */
+
+.tag-filter-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.tag-filter-list {
+  display: flex;
+  flex-wrap: nowrap;       /* single row for scrolling */
+  gap: 6px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  width: 100%;              /* match dropdown width */
+  max-width: 300px;         /* <-- match your dropdown width */
+  margin: 0 auto;           /* center it */
+}
+.tag-filter-list::-webkit-scrollbar {
+  display: none;
+}
+
+.tag-filter-btn {
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Optional: drag feedback for desktop */
+.tag-filter-list.dragging {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+
+/* =========================
    Ad Placements
 ========================= */
 

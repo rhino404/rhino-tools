@@ -55,3 +55,23 @@ footer {
 .social-icon {
   color: black;
 }
+
+.tag-filter-title {
+  color: #333;
+}
+
+.tag-filter-btn {
+  background: linear-gradient(145deg, #f0f0f0, #dcdcdc);
+  color: #333;
+}
+
+.tag-filter-btn:hover {
+  background: linear-gradient(145deg, #e0e0e0, #cfcfcf);
+  /* box-shadow: 0 0 6px rgba(0, 128, 128, 0.2); */
+}
+
+.tag-filter-btn.active {
+  background: #008080;
+  color: #000;
+  /* box-shadow: 0 0 6px rgba(0, 128, 128, 0.5); */
+}

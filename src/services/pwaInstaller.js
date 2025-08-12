@@ -1,6 +1,10 @@
 let initialized = false;
 let deferredPrompt = null;
 
+const PWA_DISMISS_KEY = 'pwa_install_dismissed_at'; // for hourly reappearance
+const PWA_SESSION_KEY = 'pwa_install_dismissed_session'; // for per-session reappearance
+const REAPPEAR_DELAY = 60 * 60 * 1000; // 1 hour in ms
+
 // Capture any early beforeinstallprompt events
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
@@ -17,7 +21,6 @@ export function initPwaInstaller({
   const installBtn = document.getElementById(installBtnId);
   const popup = document.getElementById(popupId);
 
-  // Ensure we never break execution if elements aren't present
   if (!installBtn || !popup) {
     console.warn(`[PWA] Install popup (${popupId}) or button (${installBtnId}) not found. Skipping PWA installer initialization.`);
     return;
@@ -30,15 +33,30 @@ export function initPwaInstaller({
         event_label: 'Ryno Tools',
         non_interaction: true,
       });
-    } else {
-      console.debug(`[PWA] gtag not defined, skipping event: ${eventName}`);
     }
+  };
+
+  const canShowPopup = () => {
+    // Don't show again if dismissed this session
+    if (sessionStorage.getItem(PWA_SESSION_KEY)) return false;
+
+    // Don't show if dismissed within last hour
+    const lastDismiss = localStorage.getItem(PWA_DISMISS_KEY);
+    if (!lastDismiss) return true;
+    return (Date.now() - parseInt(lastDismiss, 10)) >= REAPPEAR_DELAY;
   };
 
   const showPopup = () => {
     if (!popup) return;
+    if (!canShowPopup()) return;
     popup.classList.remove('hidden');
     gtagReport('pwa_install_prompt_shown');
+  };
+
+  const dismissPopup = () => {
+    popup.classList.add('hidden');
+    localStorage.setItem(PWA_DISMISS_KEY, Date.now().toString());
+    sessionStorage.setItem(PWA_SESSION_KEY, '1'); // mark dismissed this session
   };
 
   installBtn.addEventListener('click', async () => {
@@ -51,9 +69,10 @@ export function initPwaInstaller({
       const { outcome } = await deferredPrompt.userChoice;
       if (outcome === 'accepted') {
         gtagReport('pwa_install_accepted');
-        if (popup) popup.classList.add('hidden'); // only hide if installed
+        popup.classList.add('hidden');
       } else {
         gtagReport('pwa_install_dismissed');
+        dismissPopup();
       }
       deferredPrompt = null;
     } catch (err) {
@@ -61,22 +80,27 @@ export function initPwaInstaller({
     }
   });
 
-  // If beforeinstallprompt has already fired, show the popup immediately
   if (deferredPrompt) {
     showPopup();
   }
 
-  // Listen for future beforeinstallprompt events
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
     showPopup();
   });
 
-  // Handle successful installation
   window.addEventListener('appinstalled', () => {
     gtagReport('pwa_installed');
-    if (popup) popup.classList.add('hidden');
-    console.info('[PWA] App successfully installed.');
+    popup.classList.add('hidden');
   });
+
+  // OPTIONAL: add a close/dismiss button in your popup markup
+  const closeBtn = popup.querySelector('#pwa-dismiss-btn');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      gtagReport('pwa_install_dismissed_manual');
+      dismissPopup();
+    });
+  }
 }

@@ -13,6 +13,7 @@ import { statsTracker } from './ui/statsTracker.js'; // import the named export
 import { categories, getCategoryIcon } from './data/quizMeta.js';
 import { state } from './core/state.js';
 import { getSubcategoriesForCategory } from './utils/quizMetaUtils.js';
+import { renderTagFilter } from './ui/questions.js'; // ✅ add this import
 
 // =========================
 // Service Worker Registration
@@ -46,7 +47,7 @@ setupSessionEvents(state);
 // =========================
 // DOM Ready Initialization
 // =========================
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const session = loadSession() || {};
 
     // ==== Setup Category Dropdown ====
@@ -86,14 +87,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setupDropdowns(subcategoryToggle, subcategoryOptionsEl, subcatOptions, 'currentSubcategory', state);
 
+    // ==== Set question-related elements BEFORE starting quiz ====
+    state.questionEl = document.getElementById('question');
+    state.choicesEl = document.getElementById('choices');
+    state.explanationEl = document.getElementById('explanation');
+
     // ==== Restore or Start Quiz ====
-    if (session.category && session.subcategory) {
-        statsTracker.setCategory(session.category);
-        loadAndShowQuestions(session.category, session.subcategory, session.questionIndex, session.showAnswers);
-    } else {
-        const defaultCategory = state.currentCategory;
-        statsTracker.setCategory(defaultCategory);
-        startQuiz(defaultCategory, state.currentSubcategory, state);
+    let questions;
+    try {
+        if (session.category && session.subcategory) {
+            statsTracker.setCategory(session.category);
+            questions = await loadAndShowQuestions(session.category, session.subcategory, session.questionIndex, session.showAnswers);
+        } else {
+            const defaultCategory = state.currentCategory;
+            statsTracker.setCategory(defaultCategory);
+            questions = await startQuiz(defaultCategory, state.currentSubcategory, state);
+        }
+    } catch (err) {
+        console.error('[index] Failed to load questions:', err);
+        questions = []; // fallback so later code doesn't throw
+    }
+
+    // ✅ Render Tag Filter after we have the questions
+    const tagFilterEl = document.getElementById('tag-filter');
+    if (tagFilterEl && questions && questions.length) {
+        const availableTags = [...new Set(questions.flatMap(q => q.tags || []))].sort();
+        state.selectedTags = state.selectedTags || [];
+        renderTagFilter(tagFilterEl, availableTags, state.selectedTags);
     }
 
     // ==== Other UI ====
@@ -105,11 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     state.showStatsBtn = document.getElementById('show-stats-btn');
-
-    // Add these three so showQuestion() has real elements
-    state.questionEl = document.getElementById('question');
-    state.choicesEl = document.getElementById('choices');
-    state.explanationEl = document.getElementById('explanation');
 
     setupButtons(state);
 });

@@ -226,7 +226,7 @@ class StatsTracker {
         <ul id="activity-summary" class="score-list"></ul>
         </div>
         <div class="score-card-buttons">
-            <button id="close-score-card" class="score-close">Dismiss</button>
+            <button id="close-score-card" class="score-close">Close</button>
             <button id="clear-score-card" class="score-clear">Clear Stats</button>
         </div>
     `;
