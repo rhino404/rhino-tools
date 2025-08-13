@@ -331,22 +331,22 @@ main#quiz-container,
 
 .tag-filter-list {
   display: flex;
-  flex-wrap: nowrap;       /* single row for scrolling */
+  flex-wrap: nowrap;        /* single row for horizontal scroll */
   gap: 6px;
   overflow-x: auto;
   overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch; /* smooth on iOS */
+  scrollbar-width: none;    /* hide scrollbar in Firefox */
   width: 100%;              /* match dropdown width */
-  max-width: 300px;         /* <-- match your dropdown width */
-  margin: 0 auto;           /* center it */
+  max-width: 300px;         /* adjust to your dropdown width */
+  margin: 0 auto;           /* center container */
 }
 .tag-filter-list::-webkit-scrollbar {
-  display: none;
+  display: none; /* hide scrollbar in Chrome/Safari */
 }
 
 .tag-filter-btn {
-  flex: 0 0 auto;
+  flex: 0 0 auto;           /* prevent shrinking */
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -355,10 +355,19 @@ main#quiz-container,
   user-select: none;
 }
 
-/* Optional: drag feedback for desktop */
+/* Optional: dragging feedback */
 .tag-filter-list.dragging {
   cursor: grabbing;
   cursor: -webkit-grabbing;
+}
+
+/* Desktop: show all tags without scrolling */
+@media (min-width: 768px) {
+  .tag-filter-list {
+    flex-wrap: wrap;        /* allow wrapping to multiple rows */
+    overflow-x: visible;    /* no scrollbars */
+    max-width: none;        /* remove dropdown width limit */
+  }
 }
 
 

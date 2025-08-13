@@ -226,41 +226,35 @@ export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
 
 
 // ===============================
-// ✅ Horizontal Tag Scroll
+// ✅ Tag Filter Scroll (Mobile-first)
 // ===============================
-function enableHorizontalScroll(container) {
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+// - Mobile (<768px): horizontal touch scrolling via native CSS
+// - Desktop (≥768px): tags wrap to multiple rows, no scroll logic needed
+// ===============================
 
-  container.addEventListener('mousedown', e => {
-    isDown = true;
-    container.classList.add('dragging');
-    startX = e.pageX - container.offsetLeft;
-    scrollLeft = container.scrollLeft;
+document.addEventListener('DOMContentLoaded', () => {
+  const tagList = document.querySelector('.tag-filter-list');
+  if (!tagList) return;
+
+  // Only enable wheel-to-horizontal mapping on mobile viewports
+  function handleWheel(e) {
+    // Prevent this logic from running on desktop
+    if (window.innerWidth >= 768) return;
+
+    if (e.deltaY !== 0) {
+      e.preventDefault(); // stop page from scrolling vertically
+      tagList.scrollLeft += e.deltaY; // scroll sideways instead
+    }
+  }
+
+  // Attach event listener (passive: false to allow preventDefault)
+  tagList.addEventListener('wheel', handleWheel, { passive: false });
+
+  // Optional: re-check on resize in case the user rotates their phone/tablet
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      // On desktop, reset any scroll position just in case
+      tagList.scrollLeft = 0;
+    }
   });
-
-  container.addEventListener('mouseleave', () => {
-    isDown = false;
-    container.classList.remove('dragging');
-  });
-
-  container.addEventListener('mouseup', () => {
-    isDown = false;
-    container.classList.remove('dragging');
-  });
-
-  container.addEventListener('mousemove', e => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - container.offsetLeft;
-    const walk = (x - startX) * 1; // scroll speed
-    container.scrollLeft = scrollLeft - walk;
-  });
-}
-
-// After rendering the tag filter:
-const tagList = document.querySelector('.tag-filter-list');
-if (tagList) {
-  enableHorizontalScroll(tagList);
-}
+});
