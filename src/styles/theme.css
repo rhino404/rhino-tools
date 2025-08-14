@@ -68,15 +68,32 @@ code, pre {
     0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.question {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.4em;
-  line-height: 1.5;
-  text-align: center;
-  padding: 0.5em 1em;
-  margin: 0 auto;
-  max-width: 90%;
-  word-wrap: break-word;
+/* Light mode */
+body.light-mode .question {
+  border: 2px solid var(--color-neutral-dark-alt);
+  background-color: rgba(0, 0, 0, 0.05); /* subtle light overlay */
+  color: var(--color-neutral-dark);
+}
+
+/* Dark mode */
+body.dark-mode .question {
+  border: 2px solid var(--color-neutral-light);
+  background-color: rgba(255, 255, 255, 0.05); /* subtle dark overlay */
+  color: #fff;
+}
+
+body.light-mode .tag-filter-list,
+body.dark-mode .tag-filter-list {
+  padding: 0.4em;
+  border-radius: var(--border-radius);
+}
+
+body.light-mode .tag-filter-list {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .tag-filter-list {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* =========================

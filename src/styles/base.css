@@ -153,10 +153,21 @@ main#quiz-container,
 }
 
 .question {
-  font-size: 1.5rem;
-  padding: 0.8em 1.6em;
-  margin: 1em auto;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.4em;
+  line-height: 1.5;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  max-width: 100%;
+  word-wrap: break-word;
+
+  /* === Structured box layout === */
   border-radius: var(--border-radius);
+  min-height: 4.5em; /* keeps height consistent across questions */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .choices {
@@ -248,44 +259,43 @@ main#quiz-container,
    Tag Filter
 ========================= */
 
-.tag-filter-title {
-  font-weight: bold;
-  margin-bottom: 6px;
-  font-size: 0.9rem;
+/* Base layout for tag filters */
+.tag-filter {
+  width: 100%;
+  max-width: 100%; /* No hard lock */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+.tag-filter::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
+/* Inner flex list */
 .tag-filter-list {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 6px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
+  gap: 0.5em;
+  padding: 0 0.5em; /* breathing room left/right */
+  flex-wrap: nowrap; /* force single row on mobile */
+  margin-bottom: 1em;
 }
-.tag-filter-list::-webkit-scrollbar {
-  display: none;
+
+/* Allow wrap on desktop */
+@media (min-width: 769px) {
+  .tag-filter-list {
+    flex-wrap: wrap;
+    justify-content: center; /* center pills when wrapping */
+  }
 }
 
 .tag-filter-btn {
-  flex: 0 0 auto;
+  flex: 0 0 auto; /* don’t shrink */
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.8rem;
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
-}
-
-@media (min-width: 768px) {
-  .tag-filter-list {
-    flex-wrap: wrap;
-    overflow-x: visible;
-    max-width: none;
-  }
 }
 
 /* =========================
