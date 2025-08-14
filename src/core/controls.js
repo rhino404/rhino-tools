@@ -1,8 +1,7 @@
-//controls.js
-
 import { showQuestion as originalShowQuestion } from '../ui/questions.js';
 
 export function setupButtons(state) {
+  // Shuffle questions
   state.shuffleBtn.addEventListener('click', () => {
     if (!state.questions.length) return;
 
@@ -23,18 +22,31 @@ export function setupButtons(state) {
       questionEl: state.questionEl,
       choicesEl: state.choicesEl,
       explanationEl: state.explanationEl,
+      state
     });
   });
 
+  // Toggle highlight correct answers
   state.toggleAnswersBtn.addEventListener('click', () => {
     state.showingAnswers = !state.showingAnswers;
     originalShowQuestion(state.currentIndex, state.questions, state.showingAnswers, {
       questionEl: state.questionEl,
       choicesEl: state.choicesEl,
       explanationEl: state.explanationEl,
+      state
     });
   });
 
+  // ✅ Hide explanations on wrong answers toggle
+  state.hideAnswersBtn.addEventListener('click', () => {
+    state.hideAnswers = !state.hideAnswers;
+    state.hideAnswersBtn.classList.toggle('active', state.hideAnswers);
+    state.hideAnswersBtn.title = state.hideAnswers
+      ? 'Show explanations when wrong'
+      : 'Hide explanations when wrong';
+  });
+
+  // Show stats card
   state.showStatsBtn.addEventListener('click', () => {
     import('../ui/statsTracker.js').then(({ statsTracker }) => {
       statsTracker.showCard();

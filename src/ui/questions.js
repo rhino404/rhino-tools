@@ -50,7 +50,7 @@ function getCurrentIndex() {
 }
 
 // ✅ Render a question
-export function showQuestion(current, questions, showingAnswers, { questionEl, choicesEl, explanationEl }) {
+export function showQuestion(current, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state }) {
   if (!questions.length || !questions[current]) {
     questionEl.textContent = "No questions for this filter!";
     choicesEl.innerHTML = '';
@@ -95,20 +95,21 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
     btn.textContent = choice;
     btn.className = 'choice-btn';
     if (showingAnswers && choice === q.correct) {
-      btn.classList.add('highlight');
+      btn.classList.add('correct');
     }
     btn.onclick = () =>
       checkAnswer(choice, q, current, questions, showingAnswers, {
         questionEl,
         choicesEl,
-        explanationEl
+        explanationEl,
+        state // ✅ pass state to checkAnswer
       });
     choicesEl.appendChild(btn);
   });
 }
 
 // ✅ Handle answer checking
-export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl }) {
+export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state }) {
   Array.from(choicesEl.children).forEach(btn => btn.disabled = true);
   let transitionTime = 1000;
 
@@ -126,11 +127,16 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
     explanationEl.innerHTML = `<span class='correct'>✅ Correct!</span>`;
     showCorrectEffect(explanationEl);
   } else {
-    explanationEl.innerHTML = `<span class='incorrect'>❌: ${q.explanation}</span>`;
+    if (state && !state.hideAnswers) {
+      explanationEl.innerHTML = `<span class='incorrect'>❌: ${q.explanation}</span>`;
+      transitionTime = 8000; // longer delay if explanation shown
+    } else {
+      explanationEl.innerHTML = `<span class='incorrect'>❌ Incorrect!</span>`;
+      transitionTime = 1000;
+    }
     showIncorrectEffect(explanationEl);
     explanationEl.classList.add('shake');
     setTimeout(() => explanationEl.classList.remove('shake'), 400);
-    transitionTime = 8000;
   }
 
   setTimeout(() => {
@@ -140,7 +146,7 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
       saveCurrentIndex(currentIndex);
 
       explanationEl.textContent = '';
-      showQuestion(currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl });
+      showQuestion(currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state });
 
       setTimeout(() => {
         localStorage.removeItem(JUST_ANSWERED_KEY);
@@ -169,7 +175,6 @@ export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
 
   const title = document.createElement('div');
   title.className = 'tag-filter-title';
-  // title.textContent = 'Filter by Tags:';
   containerEl.appendChild(title);
 
   const tagList = document.createElement('div');
@@ -224,7 +229,6 @@ export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
 }
 
 
-
 // ===============================
 // ✅ Tag Filter Scroll (Mobile-first)
 // ===============================
@@ -247,13 +251,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Attach event listener (passive: false to allow preventDefault)
   tagList.addEventListener('wheel', handleWheel, { passive: false });
 
-  // Optional: re-check on resize in case the user rotates their phone/tablet
   window.addEventListener('resize', () => {
     if (window.innerWidth >= 768) {
-      // On desktop, reset any scroll position just in case
       tagList.scrollLeft = 0;
     }
   });

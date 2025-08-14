@@ -1,0 +1,815 @@
+/* =========================
+   Shared Theme Styles
+   Applies to both dark & light
+========================= */
+
+:root {
+  /* ===== Primary Colors ===== */
+  --color-primary: #1a755e; /* Deep Green */
+  --color-primary-hover: #209173; /* Hover */
+  --color-primary-light: #3ba78c; /* Lighter variant */
+  --color-primary-dark: #145a47; /* Darker variant */
+
+  /* ===== Accent Colors ===== */
+  --color-accent-yellow: #fcd34d; /* Electric Yellow */
+  --color-accent-yellow-light: #fde68a;
+  --color-accent-yellow-dark: #d97706;
+
+  --color-accent-orange: #f97316; /* Bright Orange */
+  --color-accent-orange-light: #fb923c;
+  --color-accent-orange-dark: #c2410c;
+
+  /* ===== Neutrals ===== */
+  --color-neutral-dark: #111827; /* Dark Charcoal */
+  --color-neutral-dark-alt: #1f2937;
+  --color-neutral-light: #e5e7eb; /* Soft Grey */
+  --color-neutral-light-alt: #f3f4f6;
+
+  /* ===== Overlays ===== */
+  --overlay-dark: rgba(17, 24, 39, 0.6);
+  --overlay-light: rgba(255, 255, 255, 0.6);
+
+  /* ===== Gradients ===== */
+  --gradient-green-torque: linear-gradient(135deg, #1a755e, #166b55);
+  --gradient-power-boost: linear-gradient(135deg, #f97316, #fcd34d);
+
+  /* ===== Typography ===== */
+  --font-headline: 'Montserrat', 'Exo 2', 'Orbitron', sans-serif;
+  --font-body: 'Inter', 'Roboto', sans-serif;
+  --font-code: 'Fira Code', 'Source Code Pro', monospace;
+
+  /* ===== Sizing ===== */
+  --border-radius: 8px;
+}
+
+/* =========================
+   Typography
+========================= */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+}
+
+body, p, li, span, div {
+  font-family: var(--font-body);
+}
+
+code, pre {
+  font-family: var(--font-code);
+}
+
+/* =========================
+   Layout / Containers
+========================= */
+.card {
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.4em;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 0 auto;
+  max-width: 90%;
+  word-wrap: break-word;
+}
+
+/* =========================
+   Theme Transition Effect
+========================= */
+body.theme-transition {
+  transition: 
+    background-color 0.4s ease,
+    color 0.4s ease,
+    background-image 0.4s ease;
+}
+
+/* =========================
+   Install Button (PWA) - Theme Styles Only
+========================= */
+
+/* Dark mode */
+body.dark-mode #pwaInstallBanner {
+  background-color: var(--button-color-dark);
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 20px,
+      transparent 20px,
+      transparent 40px
+    );
+  color: white;
+}
+body.dark-mode #pwaInstallBanner button {
+  background: var(--color-accent-orange);
+  color: white;
+}
+body.dark-mode #pwaInstallBanner button:hover {
+  background: var(--color-accent-orange-light);
+}
+
+/* Light mode */
+body.light-mode #pwaInstallBanner {
+  background-color: var(--button-color-dark);
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 20px,
+      transparent 20px,
+      transparent 40px
+    );
+  color: white;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+body.light-mode #pwaInstallBanner button {
+  background: var(--color-accent-orange);
+  color: white;
+}
+body.light-mode #pwaInstallBanner button:hover {
+  background: var(--color-accent-orange-light);
+}
+
+/* =========================
+   Buttons - Unified Shape
+========================= */
+.btn,
+button,
+.level-btn,
+.category-btn,
+.dropdown-toggle {
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+/* Primary */
+.btn-primary,
+button,
+.level-btn,
+.category-btn,
+.dropdown-toggle {
+  background: var(--color-primary);
+  color: white;
+}
+.btn-primary:hover,
+button:hover,
+.level-btn:hover,
+.category-btn:hover,
+.dropdown-toggle:hover {
+  background: var(--color-primary-hover);
+}
+
+/* Accent */
+.btn-accent,
+button.accent,
+.level-btn.accent,
+.category-btn.accent {
+  background: var(--color-accent-orange);
+  color: white;
+}
+.btn-accent:hover,
+button.accent:hover,
+.level-btn.accent:hover,
+.category-btn.accent:hover {
+  background: var(--color-accent-orange-light);
+}
+
+/* Outline */
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* =========================
+   Circle Control Buttons
+   (toggle, shuffle, hide, stats)
+========================= */
+.circle-btn,
+#shuffle-btn,
+#toggle-answers-btn,
+#hide-answers-btn,
+#show-stats-btn {
+  display: grid;
+  place-items: center;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.circle-btn:hover,
+#shuffle-btn:hover,
+#toggle-answers-btn:hover,
+#hide-answers-btn:hover,
+#show-stats-btn:hover {
+  transform: scale(1.05);
+}
+.circle-btn.active,
+#shuffle-btn.active,
+#toggle-answers-btn.active,
+#hide-answers-btn.active,
+#show-stats-btn.active {
+  border: 2px solid var(--color-accent-orange);
+  box-shadow: 0 0 8px var(--color-accent-orange);
+}
+
+/* =========================
+   Dropdown Menu
+========================= */
+.dropdown-menu {
+  border-radius: 6px;
+}
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+  transition: background 0.15s;
+}
+
+/* =========================
+   Progress Bars
+========================= */
+.progress-bar {
+  border-radius: 8px;
+  height: 12px;
+  width: 100%;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* =========================
+   Tag Filter
+========================= */
+.tag-filter-btn {
+  border-radius: var(--border-radius);
+  padding: 0.4em 0.8em;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* =========================
+   Social Icons
+========================= */
+#social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+#social-links a:hover {
+  transform: scale(1.1);
+}
+#social-links .social-icon {
+  width: 24px;
+  height: 24px;
+  color: inherit;
+}
+
+/* =========================
+   Correct Answer Highlight
+========================= */
+.choice-btn.correct {
+  border: 3px solid var(--color-neutral-dark);
+  box-shadow: 0 0 8px var(--color-neutral-dark);
+}
+
+
+/* Shared checkered crypto bar base */
+#crypto-bar {
+  background-size: 40px 40px;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 20px,
+      transparent 20px,
+      transparent 40px
+    );
+  color: white;
+}
+
+/* Dark mode variant */
+body.dark-mode #crypto-bar {
+  background-color: transparent;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 20px,
+      transparent 20px,
+      transparent 40px
+    ),
+    var(--gradient-green-torque);
+}
+
+/* Light mode variant */
+body #crypto-bar {
+  background-color: transparent;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.05) 0px,
+      rgba(0, 0, 0, 0.05) 20px,
+      transparent 20px,
+      transparent 40px
+    ),
+    var(--gradient-green-torque);
+}
+
+/* =========================
+   Light Theme (light.css)
+   Improved for branding & usability
+   Works when body has .light-mode class
+========================= */
+
+body.light-mode {
+  background-color: var(--color-neutral-light);
+  color: var(--color-neutral-dark);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.85)
+  ),
+  url(../images/rhino404.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  background-attachment: fixed;
+}
+
+/* =========================
+   Buttons
+   Uses brand green as base, consistent radius
+========================= */
+body.light-mode button,
+body.light-mode .level-btn,
+body.light-mode .category-btn,
+body.light-mode .dropdown-toggle {
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  background: var(--color-primary);
+  color: white;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+body.light-mode button:hover,
+body.light-mode .level-btn:hover,
+body.light-mode .category-btn:hover,
+body.light-mode .dropdown-toggle:hover {
+  background: var(--color-primary-hover); /* lighter green */
+  transform: scale(1.03);
+}
+
+body.light-mode .level-btn[aria-pressed="true"],
+body.light-mode .category-btn[aria-pressed="true"] {
+  border: 2px solid var(--color-accent-orange);
+  font-weight: bold;
+}
+
+/* =========================
+   Dropdown Menu
+========================= */
+body.light-mode .dropdown-menu {
+  background: white;
+  color: var(--color-neutral-dark);
+  border: 1px solid #ccc;
+}
+
+body.light-mode .dropdown-menu li:hover {
+  background: var(--color-accent-yellow);
+  color: var(--color-neutral-dark);
+}
+
+/* =========================
+   Cards & Panels
+========================= */
+body.light-mode .card,
+body.light-mode #score-card,
+body.light-mode .explanation {
+  background: white;
+  color: var(--color-neutral-dark);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* light shadow for separation */
+}
+
+/* =========================
+   Progress Bars
+========================= */
+body.light-mode .progress-bar {
+  background-color: #ddd;
+}
+
+body.light-mode .progress-fill {
+  background: var(--color-primary);
+}
+
+/* =========================
+   Footer
+========================= */
+body.light-mode footer {
+  color: var(--color-neutral-dark);
+}
+
+body.light-mode #brand-tagline h3,
+body.light-mode #brand-tagline p,
+body.light-mode #copyright {
+  color: var(--color-neutral-dark);
+}
+
+/* =========================
+   Misc (Ad Slot)
+========================= */
+body.light-mode #ad-slot {
+  background: #f0f0f0;
+  color: var(--color-neutral-dark);
+}
+
+/* =========================
+   Circle Control Buttons - Light Theme
+   (toggle, shuffle, hide, stats)
+========================= */
+body.light-mode .circle-btn,
+body.light-mode #shuffle-btn,
+body.light-mode #toggle-answers-btn,
+body.light-mode #hide-answers-btn,
+body.light-mode #show-stats-btn {
+  display: grid;
+  place-items: center;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(145deg, #ffffff, #f2f2f2); /* soft gradient */
+  color: var(--color-neutral-dark);
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+body.light-mode .circle-btn:hover,
+body.light-mode #shuffle-btn:hover,
+body.light-mode #toggle-answers-btn:hover,
+body.light-mode #hide-answers-btn:hover,
+body.light-mode #show-stats-btn:hover {
+  background: linear-gradient(145deg, #f5f5f5, #e8e8e8);
+  transform: scale(1.05);
+}
+
+body.light-mode .circle-btn.active,
+body.light-mode #shuffle-btn.active,
+body.light-mode #toggle-answers-btn.active,
+body.light-mode #hide-answers-btn.active,
+body.light-mode #show-stats-btn.active {
+  border: 2px solid var(--color-accent-orange);
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.6); /* soft orange glow */
+}
+
+/* =========================
+   Question Text
+========================= */
+body.light-mode .question {
+  color: var(--color-neutral-dark);
+  -webkit-text-stroke: none; /* keep clean text */
+}
+
+/* =========================
+   Social Icons
+========================= */
+body.light-mode #social-links a {
+  color: #000; /* base black */
+}
+
+body.light-mode #social-links a:hover {
+  color: var(--color-primary); /* brand green */
+}
+
+/* =========================
+   Tag Filter - Light Mode
+   Matches circle-btn style
+========================= */
+body.light-mode .tag-filter-title {
+  color: var(--color-neutral-dark);
+}
+
+body.light-mode .tag-filter-btn {
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  color: var(--color-neutral-dark);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  padding: 0.4em 0.8em;
+  transition: background 0.2s, color 0.2s;
+}
+
+body.light-mode .tag-filter-btn:hover {
+  background: var(--color-primary-hover);
+  color: #fff;
+}
+
+body.light-mode .tag-filter-btn.active {
+  background: var(--color-accent-orange);
+  color: #fff;
+  border-color: var(--color-accent-orange);
+}
+
+
+/* =========================
+   Dark Theme (dark.css)
+   Updated for brand consistency
+========================= */
+
+:root {
+  --primary-bg: #181818;
+  --button-bg-dark: #222;
+  --button-color-dark: #1a755e;
+  --text-color-dark: #eee;
+  --border-color-dark: #444;
+}
+
+/* =========================
+   Body & Background
+========================= */
+body.dark-mode {
+  background-color: var(--primary-bg);
+  color: var(--text-color-dark);
+  background-image: linear-gradient(
+      rgba(17, 24, 39, 0.95), 
+      rgba(17, 24, 39, 0.95)
+    ),
+    url(../images/rhino404.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  background-attachment: fixed;
+}
+
+body.dark-mode .question {
+  color: #fff;
+  -webkit-text-stroke-width: 0.05em;
+  -webkit-text-stroke-color: black;
+}
+
+/* =========================
+   Buttons (dark-specific fill)
+========================= */
+body.dark-mode .choice-btn,
+body.dark-mode .level-btn,
+body.dark-mode .category-btn,
+body.dark-mode .shuffle,
+body.dark-mode .show-answers-btn,
+body.dark-mode .dropdown-toggle {
+  background: linear-gradient(145deg, #1f1f1f, #2d2d2d);
+  color: white;
+  border: 1px solid var(--border-color-dark);
+}
+
+body.dark-mode .choice-btn:hover,
+body.dark-mode .level-btn:hover,
+body.dark-mode .category-btn:hover,
+body.dark-mode .shuffle:hover,
+body.dark-mode .show-answers-btn:hover,
+body.dark-mode .dropdown-toggle:hover {
+  background: var(--button-color-dark);
+}
+
+/* Active state overrides for dark */
+body.dark-mode .shuffle.active,
+body.dark-mode .show-answers-btn.active,
+body.dark-mode .level-btn[aria-pressed="true"],
+body.dark-mode .category-btn[aria-pressed="true"] {
+  border: 2px solid var(--color-accent-orange);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* =========================
+   Correct/Incorrect States
+========================= */
+
+body.dark-mode .choice-btn.correct {
+  border: 2px solid var(--color-accent-orange); /* Bright orange border */
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 8px var(--color-accent-orange);
+}
+
+body.dark-mode .choice-btn.incorrect {
+  background: #5c2222;
+  border-color: red;
+  color: #fff;
+}
+
+/* =========================
+   Dropdown Menu
+========================= */
+body.dark-mode .dropdown-menu {
+  background-color: #1f2937;
+  color: white;
+  border: 1px solid var(--border-color-dark);
+}
+
+body.dark-mode .dropdown-menu li:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* =========================
+   Explanation Panel
+========================= */
+body.dark-mode .explanation {
+  background: #222;
+  border-color: var(--border-color-dark);
+}
+
+/* =========================
+   Ad Slot
+========================= */
+body.dark-mode #ad-slot {
+  background: #222;
+  color: #ccc;
+}
+
+/* =========================
+   Footer
+========================= */
+body.dark-mode footer {
+  color: #ccc;
+}
+
+/* =========================
+   Score Card
+========================= */
+body.dark-mode #score-card {
+  background-color: #222;
+  color: #eee;
+  border: 1px solid var(--border-color-dark);
+  box-shadow: 0 0 10px #000;
+}
+
+body.dark-mode #score-card h3 {
+  color: #fff;
+  border-bottom: 1px solid var(--border-color-dark);
+  padding-bottom: 0.3em;
+}
+
+body.dark-mode #score-card ul.score-list li {
+  color: #ccc;
+  border-bottom: 1px dashed #444;
+  padding: 0.2em 0;
+}
+
+body.dark-mode #close-score-card,
+body.dark-mode #clear-score-card {
+  background-color: #333;
+  color: #ccc;
+  border: 1px solid #555;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+body.dark-mode #close-score-card:hover,
+body.dark-mode #clear-score-card:hover {
+  background-color: #444;
+}
+
+/* =========================
+   Subcategory Headers
+========================= */
+body.dark-mode .subcategory-header {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #444;
+  margin-top: 1em;
+}
+
+/* =========================
+   Progress Bars
+========================= */
+body.dark-mode .progress-bar {
+  background-color: #444;
+}
+
+body.dark-mode .progress-fill {
+  background-color: #76ff7a;
+}
+
+/* =========================
+   Modal
+========================= */
+.custom-modal {
+  background: #222;
+  color: #fff;
+}
+
+.modal-confirm {
+  background: #e74c3c;
+}
+
+.modal-cancel {
+  background: #555;
+}
+
+/* =========================
+   Social Icons
+========================= */
+body.dark-mode #social-links a {
+  color: #fff;
+}
+
+body.dark-mode #social-links a:hover {
+  color: var(--color-primary);
+}
+
+/* =========================
+   Tag Filter
+========================= */
+.tag-filter-title {
+  color: #ccc;
+}
+
+.tag-filter-btn {
+  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+  color: #ccc;
+}
+
+.tag-filter-btn:hover {
+  background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+}
+
+.tag-filter-btn.active {
+  background: #00c896;
+  color: #000;
+}
+
+/* =========================
+   Branding Footer Text
+========================= */
+#brand-tagline h3,
+#brand-tagline p,
+#copyright {
+  color: #aaa;
+}
+
+
+/* =========================
+   Circle Control Buttons
+   (toggle, shuffle, hide, stats)
+========================= */
+.circle-btn,
+#shuffle-btn,
+#toggle-answers-btn,
+#hide-answers-btn,
+#show-stats-btn {
+  display: grid;
+  place-items: center;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(145deg, #1f1f1f, #2d2d2d);
+  color: #fff;
+  border: 1px solid var(--color-neutral-dark-alt);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.circle-btn:hover,
+#shuffle-btn:hover,
+#toggle-answers-btn:hover,
+#hide-answers-btn:hover,
+#show-stats-btn:hover {
+  /* background: var(--color-primary); */
+  transform: scale(1.05);
+}
+
+.circle-btn.active,
+#shuffle-btn.active,
+#toggle-answers-btn.active,
+#hide-answers-btn.active,
+#show-stats-btn.active {
+  border: 2px solid var(--color-accent-orange);
+  box-shadow: 0 0 8px var(--color-accent-orange);
+}

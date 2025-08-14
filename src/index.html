@@ -8,7 +8,7 @@
 
   <!-- SEO: Optimized description and keywords -->
   <meta name="description"
-    content="Ryno Tools — Keep going. Keep growing. A modern microlearning platform delivering quick, engaging quizzes and practice tests to help you prepare for exams, licenses, and certifications. Study anywhere, anytime." />
+    content="Ryno Tools — Build Momentum. A modern microlearning platform delivering quick, engaging quizzes and practice tests to help you prepare for exams, licenses, and certifications. Study anywhere, anytime." />
   <meta name="keywords"
     content="Ryno Tools, learning platform, microlearning, quick quizzes, burst learning, practice tests, exam prep, license preparation, study cards, flashcards, card engine" />
 
@@ -16,18 +16,18 @@
   <meta name="google-adsense-account" content="ca-pub-5854133806080130">
 
   <!-- Open Graph (Facebook/LinkedIn) -->
-  <meta property="og:title" content="Ryno Tools – Keep going. Keep growing." />
+  <meta property="og:title" content="Ryno Tools – Build Momentum." />
   <meta property="og:description"
-    content="Microlearning quizzes, flashcards, and practice tests for quick skill building and exam preparation. Keep going. Keep growing." />
+    content="Microlearning quizzes, flashcards, and practice tests for quick skill building and exam preparation. Build Momentum." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ryno.tools/" />
   <meta property="og:image" content="https://ryno.tools/images/rhino404.jpeg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ryno Tools – Keep going. Keep growing." />
+  <meta name="twitter:title" content="Ryno Tools – Build Momentum." />
   <meta name="twitter:description"
-    content="A microlearning platform with quick quizzes and practice tests to help you master skills and prepare for certifications. Keep going. Keep growing." />
+    content="A microlearning platform with quick quizzes and practice tests to help you master skills and prepare for certifications. Build Momentum." />
   <meta name="twitter:image" content="https://ryno.tools/images/rhino404.jpeg" />
 
   <!-- Robots -->
@@ -44,15 +44,14 @@
   <link rel="manifest" href="manifest.json?v=20250803" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="./styles/base.css?v=20250803" />
-  <link rel="stylesheet" href="./styles/light.css?v=20250803" />
-  <link rel="stylesheet" href="./styles/dark.css?v=20250803" />
+  <link rel="stylesheet" href="./styles/base.css?v=20250813" />
+  <link rel="stylesheet" href="./styles/theme.css?v=20250813">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://ryno.tools/" />
 
   <!-- Title -->
-  <title>Ryno Tools | Keep going. Keep growing.</title>
+  <title>Ryno Tools | Build Momentum.</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
@@ -68,7 +67,7 @@
     "name": "Ryno Tools",
     "url": "https://ryno.tools/",
     "logo": "https://ryno.tools/images/rhino404.jpeg",
-    "description": "Ryno Tools — Keep going. Keep growing. A microlearning platform offering quick quizzes, flashcards, and practice tests for exams and licenses.",
+    "description": "Ryno Tools — Build Momentum. A microlearning platform offering quick quizzes, flashcards, and practice tests for exams and licenses.",
     "sameAs": [
       "https://github.com/rhino404"
     ]
@@ -121,6 +120,7 @@
   <div class="button-group" id="controls">
     <button id="toggle-answers-btn" class="circle-btn" title="Toggle Answers">🫣</button>
     <button id="shuffle-btn" class="circle-btn" title="Shuffle">🔀</button>
+    <button id="hide-answers-btn" class="circle-btn" title="Hide Answers">🙈</button>
     <button id="show-stats-btn" class="circle-btn" title="Show Stats">📊</button>
   </div>
 
@@ -148,17 +148,22 @@
   <!-- Install banner -->
   <div id="pwaInstallBanner" class="hidden">
     <div class="pwa-banner-content">
-      <span>📱 Install Ryno Tools - <i>Keep going. Keep growing.</i></span>
+      <span>📱 <i>Ryno Tools - Build Momentum</i></span>
       <div class="pwa-banner-actions">
         <button id="installBtn">Install</button>
         <button id="pwa-dismiss-btn">Dismiss</button>
       </div>
     </div>
   </div>
+  <div id="brand-tagline">
+      <h3>Ryno Tools</h3>
+      <p><i>Build Momentum</i></p>
+  </div>
+  <div id="copyright"></div>
 
   <script>
     document.getElementById('copyright').innerHTML =
-      `Copyright © ${new Date().getFullYear()} Ryno Tools - <i>Keep going. Keep growing.</i> All rights reserved.`;
+      `Copyright © ${new Date().getFullYear()} All rights reserved.`;
   </script>
   <script type="module" src="./services/pwaInstaller.js"></script>
 </body>
