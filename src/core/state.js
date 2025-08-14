@@ -25,4 +25,5 @@ export const state = {
   shuffleBtn: null,
   toggleAnswersBtn: null,
   showStatsBtn: null,
+  hideAnswersBtn: false
 };

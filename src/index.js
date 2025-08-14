@@ -123,6 +123,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     toggleBtn.addEventListener('click', () => {
         toggleBtn.classList.toggle('active');
     });
+    state.hideAnswersBtn = document.getElementById('hide-answers-btn');
+    const hideBtn = document.getElementById('hide-answers-btn');
+    hideBtn.addEventListener('click', () => {
+        hideBtn.classList.toggle('active');
+    });
 
     state.showStatsBtn = document.getElementById('show-stats-btn');
 
