@@ -109,7 +109,13 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
 }
 
 // ✅ Handle answer checking
-export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state }) {
+export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state } = {}) {
+  // ✅ Ensure state always exists
+  if (!state) state = {};
+  if (typeof state.hideAnswers === 'undefined') {
+    state.hideAnswers = false;
+  }
+
   Array.from(choicesEl.children).forEach(btn => btn.disabled = true);
   let transitionTime = 1000;
 
@@ -127,9 +133,10 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
     explanationEl.innerHTML = `<span class='correct'>✅ Correct!</span>`;
     showCorrectEffect(explanationEl);
   } else {
-    if (state && !state.hideAnswers) {
+    // ✅ Always default to showing explanation unless explicitly hidden
+    if (!state.hideAnswers) {
       explanationEl.innerHTML = `<span class='incorrect'>❌: ${q.explanation}</span>`;
-      transitionTime = 8000; // longer delay if explanation shown
+      transitionTime = 8000;
     } else {
       explanationEl.innerHTML = `<span class='incorrect'>❌ Incorrect!</span>`;
       transitionTime = 1000;
@@ -155,7 +162,7 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
       questionEl.textContent = "Quiz Complete!";
       choicesEl.innerHTML = '';
       explanationEl.textContent = '';
-      clearAnsweredQuestions(); // ✅ Clean end-of-session reset
+      clearAnsweredQuestions();
     }
   }, transitionTime);
 }
