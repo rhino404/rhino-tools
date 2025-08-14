@@ -3,9 +3,8 @@ import { showCorrectEffect, showIncorrectEffect } from './effects.js';
 import { getIcon } from '../utils/utils.js';
 import { updateTagFilter } from '../core/quizLoader.js'; // ✅ added for tag filter
 
-const ANSWERED_KEY = 'rhinoToolsAnsweredQuestions';
-const CURRENT_INDEX_KEY = 'rhinoToolsCurrentQuestionIndex';
-const JUST_ANSWERED_KEY = 'rhinoToolsJustAnsweredFlag';
+const ANSWERED_KEY = 'rynoToolsAnsweredQuestions';
+const CURRENT_INDEX_KEY = 'rynoToolsCurrentQuestionIndex';
 
 // ✅ Load answered questions from localStorage
 function getAnsweredQuestions() {
@@ -25,7 +24,6 @@ function saveAnsweredQuestion(id) {
 export function clearAnsweredQuestions() {
   localStorage.removeItem(ANSWERED_KEY);
   localStorage.removeItem(CURRENT_INDEX_KEY);
-  localStorage.removeItem(JUST_ANSWERED_KEY);
 }
 
 // ✅ Filter out answered questions
@@ -33,7 +31,6 @@ export function filterUnansweredQuestions(questions) {
   const answered = getAnsweredQuestions();
   const unanswered = questions.filter(q => !answered.includes(q.topic_id));
 
-  // Reset cycle if all answered
   if (unanswered.length === 0) {
     clearAnsweredQuestions();
     return questions;
@@ -59,12 +56,13 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
     return;
   }
 
-  const justAnswered = localStorage.getItem(JUST_ANSWERED_KEY) === 'true';
-  if (!justAnswered) {
-    saveCurrentIndex(current);
-  }
+  saveCurrentIndex(current);
 
   const q = questions[current];
+
+  // 🛡 Ensure state always exists
+  if (!state) state = {};
+  state.currentIndex = current; // ✅ sync state
 
   questionEl.innerHTML = `${getIcon("categories", q.category)} ${q.question}`;
   choicesEl.innerHTML = '';
@@ -72,11 +70,7 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
   const existingImage = document.getElementById('questionImage');
   if (existingImage) existingImage.remove();
 
-  if (
-    typeof q.image === 'string' &&
-    q.image.trim() !== '' &&
-    /\.(png|jpe?g|gif|svg)$/i.test(q.image.trim())
-  ) {
+  if (typeof q.image === 'string' && q.image.trim() !== '' && /\.(png|jpe?g|gif|svg)$/i.test(q.image.trim())) {
     const img = document.createElement('img');
     img.id = 'questionImage';
     img.src = q.image.trim();
@@ -98,11 +92,11 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
       btn.classList.add('correct');
     }
     btn.onclick = () =>
-      checkAnswer(choice, q, current, questions, showingAnswers, {
+      checkAnswer(choice, q, state.currentIndex, questions, showingAnswers, {
         questionEl,
         choicesEl,
         explanationEl,
-        state // ✅ pass state to checkAnswer
+        state
       });
     choicesEl.appendChild(btn);
   });
@@ -110,11 +104,8 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
 
 // ✅ Handle answer checking
 export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state } = {}) {
-  // ✅ Ensure state always exists
   if (!state) state = {};
-  if (typeof state.hideAnswers === 'undefined') {
-    state.hideAnswers = false;
-  }
+  if (typeof state.hideAnswers === 'undefined') state.hideAnswers = false;
 
   Array.from(choicesEl.children).forEach(btn => btn.disabled = true);
   let transitionTime = 1000;
@@ -123,17 +114,12 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
 
   saveAnsweredQuestion(q.topic_id);
 
-  statsTracker.logAnswer({
-    ...q,
-    category: q.category,
-    subcategory: q.subcategory
-  }, isCorrect);
+  statsTracker.logAnswer({ ...q, category: q.category, subcategory: q.subcategory }, isCorrect);
 
   if (isCorrect) {
     explanationEl.innerHTML = `<span class='correct'>✅ Correct!</span>`;
     showCorrectEffect(explanationEl);
   } else {
-    // ✅ Always default to showing explanation unless explicitly hidden
     if (!state.hideAnswers) {
       explanationEl.innerHTML = `<span class='incorrect'>❌: ${q.explanation}</span>`;
       transitionTime = 8000;
@@ -147,17 +133,12 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
   }
 
   setTimeout(() => {
-    currentIndex++;
-    if (currentIndex < questions.length) {
-      localStorage.setItem(JUST_ANSWERED_KEY, 'true');
-      saveCurrentIndex(currentIndex);
+    state.currentIndex = currentIndex + 1;
+    if (state.currentIndex < questions.length) {
+      saveCurrentIndex(state.currentIndex);
 
       explanationEl.textContent = '';
-      showQuestion(currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state });
-
-      setTimeout(() => {
-        localStorage.removeItem(JUST_ANSWERED_KEY);
-      }, 100);
+      showQuestion(state.currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state });
     } else {
       questionEl.textContent = "Quiz Complete!";
       choicesEl.innerHTML = '';
@@ -171,6 +152,7 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
 export function getStartingIndex() {
   return getCurrentIndex();
 }
+
 
 // ===============================
 // ✅ Render Tag Filter UI

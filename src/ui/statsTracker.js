@@ -2,7 +2,7 @@
 
 import { getCategoryIcon } from '../data/quizMeta.js';
 
-const STORAGE_KEY = 'rhinoToolsUserStats';
+const STORAGE_KEY = 'rynoToolsUserStats';
 const TOTALS_CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
 class StatsTracker {
