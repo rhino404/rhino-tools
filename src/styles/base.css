@@ -261,6 +261,7 @@ main#quiz-container,
 
 /* Base layout for tag filters */
 .tag-filter {
+  position: relative; /* Needed for fade overlay positioning */
   width: 100%;
   max-width: 100%; /* No hard lock */
   overflow-x: auto;
@@ -269,6 +270,12 @@ main#quiz-container,
 }
 .tag-filter::-webkit-scrollbar {
   display: none; /* Chrome/Safari */
+}
+
+.tag-filter,
+.tag-filter-list {
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 /* Inner flex list */
@@ -297,6 +304,7 @@ main#quiz-container,
   cursor: pointer;
   user-select: none;
 }
+
 
 /* =========================
    Ad Placements
