@@ -1,6 +1,19 @@
 import { showQuestion as originalShowQuestion } from '../ui/questions.js';
 
 export function setupButtons(state) {
+  // 🛡 Always reset stale state at startup
+  state.currentIndex = state.currentIndex || 0;
+  state.hideAnswers = state.hideAnswers || false;
+  state.showingAnswers = state.showingAnswers || false;
+
+  // Sync hideAnswers button UI
+  if (state.hideAnswersBtn) {
+    state.hideAnswersBtn.classList.toggle('active', state.hideAnswers);
+    state.hideAnswersBtn.title = state.hideAnswers
+      ? 'Show explanations when wrong'
+      : 'Hide explanations when wrong';
+  }
+
   // Shuffle questions
   state.shuffleBtn.addEventListener('click', () => {
     if (!state.questions.length) return;
@@ -29,6 +42,8 @@ export function setupButtons(state) {
   // Toggle highlight correct answers
   state.toggleAnswersBtn.addEventListener('click', () => {
     state.showingAnswers = !state.showingAnswers;
+
+    // Render at currentIndex without rewind
     originalShowQuestion(state.currentIndex, state.questions, state.showingAnswers, {
       questionEl: state.questionEl,
       choicesEl: state.choicesEl,
