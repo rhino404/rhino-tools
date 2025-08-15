@@ -83,13 +83,20 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
   choicesEl.innerHTML = '';
 
   // ------------------------
-  // Sync hideAnswers button UI dynamically
+  // Sync hideAnswers and toggleAnswers buttons dynamically
   // ------------------------
   if (state.hideAnswersBtn) {
     state.hideAnswersBtn.classList.toggle('active', state.hideAnswers);
     state.hideAnswersBtn.title = state.hideAnswers
       ? 'Show explanations when wrong'
       : 'Hide explanations when wrong';
+  }
+
+  if (state.toggleAnswersBtn) {
+    state.toggleAnswersBtn.classList.toggle('active', state.showingAnswers);
+    state.toggleAnswersBtn.title = state.showingAnswers
+      ? 'Hide correct answers'
+      : 'Show correct answers';
   }
 
   // ------------------------
@@ -257,12 +264,14 @@ document.addEventListener('DOMContentLoaded', () => {
 // ===== Setup Quiz Buttons =======
 // ===============================
 export function setupButtons(state) {
-  // default state safeguards
+  // Default state safeguards
   state.currentIndex = state.currentIndex || 0;
   state.hideAnswers = state.hideAnswers || false;
   state.showingAnswers = state.showingAnswers || false;
 
-  // helper: attach click safely
+  // ------------------------
+  // Helper: attach click safely
+  // ------------------------
   function safeClick(btn, handler) {
     if (btn && !btn.dataset.listenerAttached) {
       btn.addEventListener('click', handler);
@@ -270,7 +279,9 @@ export function setupButtons(state) {
     }
   }
 
-  // helper: cache DOM elements in state
+  // ------------------------
+  // Helper: cache DOM elements in state
+  // ------------------------
   function cacheElement(key, selector) {
     if (!state[key]) state[key] = document.querySelector(selector);
     return state[key];
@@ -278,10 +289,12 @@ export function setupButtons(state) {
 
   cacheElement('hideAnswersBtn', '#hideAnswersBtn');
   cacheElement('shuffleBtn', '#shuffleBtn');
-  cacheElement('toggleAnswersBtn', '#toggleAnswersBtn');
-  cacheElement('showStatsBtn', '#showStatsBtn');
+  cacheElement('toggleAnswersBtn', '#toggle-answers-btn');
+  cacheElement('showStatsBtn', '#show-stats-btn');
 
+  // ------------------------
   // Update hide answers button UI
+  // ------------------------
   function updateHideAnswersBtnUI() {
     if (!state.hideAnswersBtn) return;
     state.hideAnswersBtn.classList.toggle('active', state.hideAnswers);
@@ -292,12 +305,17 @@ export function setupButtons(state) {
 
   updateHideAnswersBtnUI();
 
-  // ===== Event handlers =====
+  // ------------------------
+  // Event: Hide Answers Button
+  // ------------------------
   safeClick(state.hideAnswersBtn, () => {
     state.hideAnswers = !state.hideAnswers;
     updateHideAnswersBtnUI();
   });
 
+  // ------------------------
+  // Event: Shuffle Button
+  // ------------------------
   safeClick(state.shuffleBtn, () => {
     if (!state.questions?.length) return;
     const start = state.currentIndex;
@@ -321,8 +339,19 @@ export function setupButtons(state) {
     updateHideAnswersBtnUI();
   });
 
+  // ------------------------
+  // Event: Toggle Answers Button
+  // ------------------------
   safeClick(state.toggleAnswersBtn, () => {
     state.showingAnswers = !state.showingAnswers;
+
+    // Update active class & tooltip
+    if (state.toggleAnswersBtn) {
+      state.toggleAnswersBtn.classList.toggle('active', state.showingAnswers);
+      state.toggleAnswersBtn.title = state.showingAnswers
+        ? 'Hide correct answers'
+        : 'Show correct answers';
+    }
 
     showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
       questionEl: state.questionEl,
@@ -330,11 +359,13 @@ export function setupButtons(state) {
       explanationEl: state.explanationEl,
       state
     });
-
-    updateHideAnswersBtnUI();
   });
 
+  // ------------------------
+  // Event: Show Stats Button
+  // ------------------------
   safeClick(state.showStatsBtn, () => {
     import('../ui/statsTracker.js').then(({ statsTracker }) => statsTracker.showCard());
   });
 }
+
