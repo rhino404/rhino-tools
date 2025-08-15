@@ -2,28 +2,26 @@
 // ======== questions.js =========
 // ===============================
 
-import { statsTracker } from './statsTracker.js';
-import { showCorrectEffect, showIncorrectEffect } from './effects.js';
+import { statsTracker } from '../ui/statsTracker.js';
+import { showCorrectEffect, showIncorrectEffect } from '../ui/effects.js';
 import { getIcon } from '../utils/utils.js';
-import { updateTagFilter } from '../core/quizLoader.js'; // ✅ For tag filtering
+import { updateTagFilter } from '../core/quizLoader.js'; // ✅ for tag filtering
 
-// ------------------------
-// LocalStorage Keys
-// ------------------------
+// ===============================
+// ===== LocalStorage Keys =======
+// ===============================
 const ANSWERED_KEY = 'rynoToolsAnsweredQuestions';
 const CURRENT_INDEX_KEY = 'rynoToolsCurrentQuestionIndex';
+const HIDE_ANSWERS_KEY = 'rynoToolsHideAnswers'; // ✅ persist hideAnswers
 
-// ------------------------
-// LocalStorage Helpers
-// ------------------------
-
-// Get answered questions from storage
+// ===============================
+// ===== LocalStorage Helpers ====
+// ===============================
 function getAnsweredQuestions() {
   return JSON.parse(localStorage.getItem(ANSWERED_KEY)) || [];
 }
 
-// Save a question as answered
-function saveAnsweredQuestion(id) {
+export function saveAnsweredQuestion(id) {
   const answered = getAnsweredQuestions();
   if (!answered.includes(id)) {
     answered.push(id);
@@ -31,46 +29,50 @@ function saveAnsweredQuestion(id) {
   }
 }
 
-// Save current quiz index to storage
-function saveCurrentIndex(index) {
+export function saveCurrentIndex(index) {
   localStorage.setItem(CURRENT_INDEX_KEY, String(index));
 }
 
-// Get last saved quiz index
-function getCurrentIndex() {
+export function getCurrentIndex() {
   return parseInt(localStorage.getItem(CURRENT_INDEX_KEY), 10) || 0;
 }
 
-// Clear answered questions and index
 export function clearAnsweredQuestions() {
   localStorage.removeItem(ANSWERED_KEY);
   localStorage.removeItem(CURRENT_INDEX_KEY);
 }
 
-// Export helpers optionally for other modules
-export { saveCurrentIndex, getCurrentIndex };
+// Small helpers to persist / read hideAnswers
+function readHideAnswersFromStorage() {
+  return localStorage.getItem(HIDE_ANSWERS_KEY) === 'true';
+}
+function persistHideAnswersToStorage(value) {
+  localStorage.setItem(HIDE_ANSWERS_KEY, String(Boolean(value)));
+  // optional: data-flag for CSS hooks if desired
+  document.body.dataset.hideAnswers = String(Boolean(value));
+}
 
-// ------------------------
-// Shared Quiz State
-// ------------------------
+// ===============================
+// ===== Shared Quiz State =======
+// ===============================
 export const quizState = {
   currentIndex: 0,
-  hideAnswers: false // synced with buttons
+  hideAnswers: readHideAnswersFromStorage(), // ✅ hydrate from storage
+  showingAnswers: false,
+  questions: [],
+  questionEl: null,
+  choicesEl: null,
+  explanationEl: null,
+  hideAnswersBtn: null,
+  shuffleBtn: null,
+  toggleAnswersBtn: null,
+  showStatsBtn: null
 };
 
 // ===============================
-// Question Rendering
+// ===== Show a Question =========
 // ===============================
-
-/**
- * Renders a question and its choices
- * @param {number} current - current index
- * @param {Array} questions - all questions
- * @param {boolean} showingAnswers - highlight correct answers
- * @param {Object} elements - DOM elements and state
- */
 export function showQuestion(current, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state }) {
-  // Guard against empty questions
   if (!questions.length || !questions[current]) {
     questionEl.textContent = "No questions for this filter!";
     choicesEl.innerHTML = '';
@@ -79,26 +81,44 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
     return;
   }
 
+  // Save progress and prime state
   saveCurrentIndex(current);
   const q = questions[current];
   if (!state) state = {};
   state.currentIndex = current;
 
+  // ✅ Rehydrate hideAnswers each render in case another part of the app changed it
+  const storedHide = readHideAnswersFromStorage();
+  if (typeof state.hideAnswers !== 'boolean' || state.hideAnswers !== storedHide) {
+    state.hideAnswers = storedHide;
+  }
+
   // Render question text with category icon
   questionEl.innerHTML = `${getIcon("categories", q.category)} ${q.question}`;
   choicesEl.innerHTML = '';
 
-  // Sync hideAnswers button dynamically
+  // ------------------------
+  // Sync buttons dynamically
+  // ------------------------
   if (state.hideAnswersBtn) {
     state.hideAnswersBtn.classList.toggle('active', state.hideAnswers);
     state.hideAnswersBtn.title = state.hideAnswers
       ? 'Show explanations when wrong'
       : 'Hide explanations when wrong';
   }
+  if (state.toggleAnswersBtn) {
+    state.toggleAnswersBtn.classList.toggle('active', state.showingAnswers);
+    state.toggleAnswersBtn.title = state.showingAnswers
+      ? 'Hide correct answers'
+      : 'Show correct answers';
+  }
 
+  // ------------------------
   // Render question image
+  // ------------------------
   const existingImage = document.getElementById('questionImage');
   if (existingImage) existingImage.remove();
+
   if (typeof q.image === 'string' && q.image.trim() !== '' && /\.(png|jpe?g|gif|svg)$/i.test(q.image.trim())) {
     const img = document.createElement('img');
     img.id = 'questionImage';
@@ -109,12 +129,13 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
     questionEl.after(img);
   }
 
-  // Render choice buttons
+  // ------------------------
+  // Render choices
+  // ------------------------
   q.choices.forEach(choice => {
     const btn = document.createElement('button');
     btn.textContent = choice;
     btn.className = 'choice-btn';
-
     if (showingAnswers && choice === q.correct) btn.classList.add('correct');
 
     btn.onclick = () =>
@@ -125,34 +146,30 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
 }
 
 // ===============================
-// Answer Handling
+// ===== Check Answer ============
 // ===============================
-
-/**
- * Handles user answer selection
- */
 export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state } = {}) {
   if (!state) state = {};
-  state.hideAnswers = state.hideAnswers || false;
 
-  // Disable all choice buttons
-  Array.from(choicesEl.children).forEach(btn => btn.disabled = true);
+  // ✅ Resolve hide flag robustly (state → storage fallback)
+  const hideFlag = (typeof state.hideAnswers === 'boolean')
+    ? state.hideAnswers
+    : readHideAnswersFromStorage();
 
+  // Disable choices to prevent double clicks
+  Array.from(choicesEl.children).forEach(btn => (btn.disabled = true));
   let transitionTime = 1000;
+
   const isCorrect = choice === q.correct;
-
-  // Save question as answered
   saveAnsweredQuestion(q.topic_id);
-
-  // Log answer in stats
   statsTracker.logAnswer({ ...q, category: q.category, subcategory: q.subcategory }, isCorrect);
 
-  // Feedback UI
+  // Display feedback
   if (isCorrect) {
     explanationEl.innerHTML = `<span class='correct'>✅ Correct!</span>`;
     showCorrectEffect(explanationEl);
   } else {
-    if (!state.hideAnswers) {
+    if (!hideFlag) {
       explanationEl.innerHTML = `<span class='incorrect'>❌: ${q.explanation}</span>`;
       transitionTime = 8000;
     } else {
@@ -160,13 +177,11 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
       transitionTime = 1000;
     }
     showIncorrectEffect(explanationEl);
-
-    // Small shake animation
     explanationEl.classList.add('shake');
     setTimeout(() => explanationEl.classList.remove('shake'), 400);
   }
 
-  // Move to next question after delay
+  // Move to next question
   setTimeout(() => {
     state.currentIndex = currentIndex + 1;
     if (state.currentIndex < questions.length) {
@@ -183,10 +198,8 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
 }
 
 // ===============================
-// Question Filtering
+// ===== Filter Unanswered =======
 // ===============================
-
-// Filter out answered questions, reset if all answered
 export function filterUnansweredQuestions(questions) {
   const answered = getAnsweredQuestions();
   const unanswered = questions.filter(q => !answered.includes(q.topic_id));
@@ -198,13 +211,15 @@ export function filterUnansweredQuestions(questions) {
   return unanswered;
 }
 
-// Restore last position
+// ===============================
+// ===== Restore last index ======
+// ===============================
 export function getStartingIndex() {
   return getCurrentIndex();
 }
 
 // ===============================
-// Tag Filter UI
+// ===== Render Tag Filter =======
 // ===============================
 export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
   if (!containerEl) return;
@@ -225,7 +240,6 @@ export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
     if (selectedTags.includes(tag)) btn.classList.add('active');
 
     btn.onclick = () => {
-      // Single-select toggle mode
       if (selectedTags.includes(tag)) {
         selectedTags = [];
         Array.from(tagList.children).forEach(b => b.classList.remove('active'));
@@ -234,7 +248,6 @@ export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
         Array.from(tagList.children).forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
       }
-
       updateTagFilter(selectedTags);
     };
 
@@ -245,14 +258,14 @@ export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
 }
 
 // ===============================
-// Tag Filter Scroll (Mobile-first)
+// ===== Tag Filter Scroll =======
 // ===============================
 document.addEventListener('DOMContentLoaded', () => {
   const tagList = document.querySelector('.tag-filter-list');
   if (!tagList) return;
 
   function handleWheel(e) {
-    if (window.innerWidth >= 768) return; // Desktop does not scroll horizontally
+    if (window.innerWidth >= 768) return; // Desktop no scroll mapping
     if (e.deltaY !== 0) {
       e.preventDefault();
       tagList.scrollLeft += e.deltaY;
@@ -265,3 +278,109 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth >= 768) tagList.scrollLeft = 0;
   });
 });
+
+// ===============================
+// ===== Setup Quiz Buttons =======
+// ===============================
+export function setupButtons(state) {
+  // Default state safeguards
+  state.currentIndex = state.currentIndex || 0;
+
+  // ✅ Hydrate hide flag on setup
+  state.hideAnswers = typeof state.hideAnswers === 'boolean'
+    ? state.hideAnswers
+    : readHideAnswersFromStorage();
+
+  state.showingAnswers = state.showingAnswers || false;
+
+  // Helpers
+  function safeClick(btn, handler) {
+    if (btn && !btn.dataset.listenerAttached) {
+      btn.addEventListener('click', handler);
+      btn.dataset.listenerAttached = 'true';
+    }
+  }
+  function cacheElement(key, selector) {
+    if (!state[key]) state[key] = document.querySelector(selector);
+    return state[key];
+  }
+
+  // ✅ IDs aligned with index.html usage
+  cacheElement('hideAnswersBtn', '#hide-answers-btn');
+  cacheElement('shuffleBtn', '#shuffle-btn');
+  cacheElement('toggleAnswersBtn', '#toggle-answers-btn');
+  cacheElement('showStatsBtn', '#show-stats-btn');
+
+  // UI sync helpers
+  function updateHideAnswersBtnUI() {
+    if (!state.hideAnswersBtn) return;
+    state.hideAnswersBtn.classList.toggle('active', state.hideAnswers);
+    state.hideAnswersBtn.title = state.hideAnswers
+      ? 'Show explanations when wrong'
+      : 'Hide explanations when wrong';
+  }
+  function updateToggleAnswersBtnUI() {
+    if (!state.toggleAnswersBtn) return;
+    state.toggleAnswersBtn.classList.toggle('active', state.showingAnswers);
+    state.toggleAnswersBtn.title = state.showingAnswers
+      ? 'Hide correct answers'
+      : 'Show correct answers';
+  }
+  function syncAllButtonsUI() {
+    updateHideAnswersBtnUI();
+    updateToggleAnswersBtnUI();
+  }
+
+  // Initial sync
+  persistHideAnswersToStorage(state.hideAnswers);
+  syncAllButtonsUI();
+
+  // ---- Hide Answers ----
+  safeClick(state.hideAnswersBtn, () => {
+    state.hideAnswers = !state.hideAnswers;
+    persistHideAnswersToStorage(state.hideAnswers); // ✅ persist so checkAnswer always sees it
+    updateHideAnswersBtnUI();
+  });
+
+  // ---- Shuffle ----
+  safeClick(state.shuffleBtn, () => {
+    if (!state.questions?.length) return;
+    const start = state.currentIndex;
+    const remaining = state.questions.slice(start);
+
+    // Fisher-Yates shuffle
+    for (let i = remaining.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [remaining[i], remaining[j]] = [remaining[j], remaining[i]];
+    }
+
+    state.questions = [...state.questions.slice(0, start), ...remaining];
+
+    showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
+      questionEl: state.questionEl,
+      choicesEl: state.choicesEl,
+      explanationEl: state.explanationEl,
+      state
+    });
+
+    syncAllButtonsUI();
+  });
+
+  // ---- Toggle Correct Answers ----
+  safeClick(state.toggleAnswersBtn, () => {
+    state.showingAnswers = !state.showingAnswers;
+    updateToggleAnswersBtnUI();
+
+    showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
+      questionEl: state.questionEl,
+      choicesEl: state.choicesEl,
+      explanationEl: state.explanationEl,
+      state
+    });
+  });
+
+  // ---- Show Stats ----
+  safeClick(state.showStatsBtn, () => {
+    import('../ui/statsTracker.js').then(({ statsTracker }) => statsTracker.showCard());
+  });
+}

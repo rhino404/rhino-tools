@@ -293,7 +293,7 @@ export function setupButtons(state) {
   cacheElement('showStatsBtn', '#show-stats-btn');
 
   // ------------------------
-  // Update hide answers button UI
+  // UI Sync helpers
   // ------------------------
   function updateHideAnswersBtnUI() {
     if (!state.hideAnswersBtn) return;
@@ -303,14 +303,36 @@ export function setupButtons(state) {
       : 'Hide explanations when wrong';
   }
 
-  updateHideAnswersBtnUI();
+  function updateToggleAnswersBtnUI() {
+    if (!state.toggleAnswersBtn) return;
+    state.toggleAnswersBtn.classList.toggle('active', state.showingAnswers);
+    state.toggleAnswersBtn.title = state.showingAnswers
+      ? 'Hide correct answers'
+      : 'Show correct answers';
+  }
+
+  function syncAllButtonsUI() {
+    updateHideAnswersBtnUI();
+    updateToggleAnswersBtnUI();
+  }
+
+  // Initial sync
+  syncAllButtonsUI();
 
   // ------------------------
   // Event: Hide Answers Button
   // ------------------------
   safeClick(state.hideAnswersBtn, () => {
     state.hideAnswers = !state.hideAnswers;
-    updateHideAnswersBtnUI();
+    syncAllButtonsUI();
+
+    // 🔑 Force re-render so explanation logic updates immediately
+    showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
+      questionEl: state.questionEl,
+      choicesEl: state.choicesEl,
+      explanationEl: state.explanationEl,
+      state
+    });
   });
 
   // ------------------------
@@ -336,7 +358,7 @@ export function setupButtons(state) {
       state
     });
 
-    updateHideAnswersBtnUI();
+    syncAllButtonsUI();
   });
 
   // ------------------------
@@ -344,14 +366,7 @@ export function setupButtons(state) {
   // ------------------------
   safeClick(state.toggleAnswersBtn, () => {
     state.showingAnswers = !state.showingAnswers;
-
-    // Update active class & tooltip
-    if (state.toggleAnswersBtn) {
-      state.toggleAnswersBtn.classList.toggle('active', state.showingAnswers);
-      state.toggleAnswersBtn.title = state.showingAnswers
-        ? 'Hide correct answers'
-        : 'Show correct answers';
-    }
+    syncAllButtonsUI();
 
     showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
       questionEl: state.questionEl,
