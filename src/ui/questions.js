@@ -1,17 +1,28 @@
+// ===============================
+// ======== questions.js =========
+// ===============================
+
 import { statsTracker } from './statsTracker.js';
 import { showCorrectEffect, showIncorrectEffect } from './effects.js';
 import { getIcon } from '../utils/utils.js';
-import { updateTagFilter } from '../core/quizLoader.js'; // ✅ added for tag filter
+import { updateTagFilter } from '../core/quizLoader.js'; // ✅ For tag filtering
 
+// ------------------------
+// LocalStorage Keys
+// ------------------------
 const ANSWERED_KEY = 'rynoToolsAnsweredQuestions';
 const CURRENT_INDEX_KEY = 'rynoToolsCurrentQuestionIndex';
 
-// ✅ Load answered questions from localStorage
+// ------------------------
+// LocalStorage Helpers
+// ------------------------
+
+// Get answered questions from storage
 function getAnsweredQuestions() {
   return JSON.parse(localStorage.getItem(ANSWERED_KEY)) || [];
 }
 
-// ✅ Save a question ID as answered
+// Save a question as answered
 function saveAnsweredQuestion(id) {
   const answered = getAnsweredQuestions();
   if (!answered.includes(id)) {
@@ -20,34 +31,46 @@ function saveAnsweredQuestion(id) {
   }
 }
 
-// ✅ Allow clearing answered questions and session data
+// Save current quiz index to storage
+function saveCurrentIndex(index) {
+  localStorage.setItem(CURRENT_INDEX_KEY, String(index));
+}
+
+// Get last saved quiz index
+function getCurrentIndex() {
+  return parseInt(localStorage.getItem(CURRENT_INDEX_KEY), 10) || 0;
+}
+
+// Clear answered questions and index
 export function clearAnsweredQuestions() {
   localStorage.removeItem(ANSWERED_KEY);
   localStorage.removeItem(CURRENT_INDEX_KEY);
 }
 
-// ✅ Filter out answered questions
-export function filterUnansweredQuestions(questions) {
-  const answered = getAnsweredQuestions();
-  const unanswered = questions.filter(q => !answered.includes(q.topic_id));
+// Export helpers optionally for other modules
+export { saveCurrentIndex, getCurrentIndex };
 
-  if (unanswered.length === 0) {
-    clearAnsweredQuestions();
-    return questions;
-  }
-  return unanswered;
-}
+// ------------------------
+// Shared Quiz State
+// ------------------------
+export const quizState = {
+  currentIndex: 0,
+  hideAnswers: false // synced with buttons
+};
 
-// ✅ Save and load current question index
-function saveCurrentIndex(index) {
-  localStorage.setItem(CURRENT_INDEX_KEY, String(index));
-}
-function getCurrentIndex() {
-  return parseInt(localStorage.getItem(CURRENT_INDEX_KEY), 10) || 0;
-}
+// ===============================
+// Question Rendering
+// ===============================
 
-// ✅ Render a question
+/**
+ * Renders a question and its choices
+ * @param {number} current - current index
+ * @param {Array} questions - all questions
+ * @param {boolean} showingAnswers - highlight correct answers
+ * @param {Object} elements - DOM elements and state
+ */
 export function showQuestion(current, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state }) {
+  // Guard against empty questions
   if (!questions.length || !questions[current]) {
     questionEl.textContent = "No questions for this filter!";
     choicesEl.innerHTML = '';
@@ -57,65 +80,74 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
   }
 
   saveCurrentIndex(current);
-
   const q = questions[current];
-
-  // 🛡 Ensure state always exists
   if (!state) state = {};
-  state.currentIndex = current; // ✅ sync state
+  state.currentIndex = current;
 
+  // Render question text with category icon
   questionEl.innerHTML = `${getIcon("categories", q.category)} ${q.question}`;
   choicesEl.innerHTML = '';
 
+  // Sync hideAnswers button dynamically
+  if (state.hideAnswersBtn) {
+    state.hideAnswersBtn.classList.toggle('active', state.hideAnswers);
+    state.hideAnswersBtn.title = state.hideAnswers
+      ? 'Show explanations when wrong'
+      : 'Hide explanations when wrong';
+  }
+
+  // Render question image
   const existingImage = document.getElementById('questionImage');
   if (existingImage) existingImage.remove();
-
   if (typeof q.image === 'string' && q.image.trim() !== '' && /\.(png|jpe?g|gif|svg)$/i.test(q.image.trim())) {
     const img = document.createElement('img');
     img.id = 'questionImage';
     img.src = q.image.trim();
     img.alt = 'Figure for this question';
     img.classList.add('question-image');
-
-    img.onerror = () => {
-      console.warn(`Image failed to load: ${img.src}`);
-      img.remove();
-    };
+    img.onerror = () => img.remove();
     questionEl.after(img);
   }
 
+  // Render choice buttons
   q.choices.forEach(choice => {
     const btn = document.createElement('button');
     btn.textContent = choice;
     btn.className = 'choice-btn';
-    if (showingAnswers && choice === q.correct) {
-      btn.classList.add('correct');
-    }
+
+    if (showingAnswers && choice === q.correct) btn.classList.add('correct');
+
     btn.onclick = () =>
-      checkAnswer(choice, q, state.currentIndex, questions, showingAnswers, {
-        questionEl,
-        choicesEl,
-        explanationEl,
-        state
-      });
+      checkAnswer(choice, q, state.currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state });
+
     choicesEl.appendChild(btn);
   });
 }
 
-// ✅ Handle answer checking
+// ===============================
+// Answer Handling
+// ===============================
+
+/**
+ * Handles user answer selection
+ */
 export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state } = {}) {
   if (!state) state = {};
-  if (typeof state.hideAnswers === 'undefined') state.hideAnswers = false;
+  state.hideAnswers = state.hideAnswers || false;
 
+  // Disable all choice buttons
   Array.from(choicesEl.children).forEach(btn => btn.disabled = true);
+
   let transitionTime = 1000;
+  const isCorrect = choice === q.correct;
 
-  const isCorrect = (choice === q.correct);
-
+  // Save question as answered
   saveAnsweredQuestion(q.topic_id);
 
+  // Log answer in stats
   statsTracker.logAnswer({ ...q, category: q.category, subcategory: q.subcategory }, isCorrect);
 
+  // Feedback UI
   if (isCorrect) {
     explanationEl.innerHTML = `<span class='correct'>✅ Correct!</span>`;
     showCorrectEffect(explanationEl);
@@ -128,15 +160,17 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
       transitionTime = 1000;
     }
     showIncorrectEffect(explanationEl);
+
+    // Small shake animation
     explanationEl.classList.add('shake');
     setTimeout(() => explanationEl.classList.remove('shake'), 400);
   }
 
+  // Move to next question after delay
   setTimeout(() => {
     state.currentIndex = currentIndex + 1;
     if (state.currentIndex < questions.length) {
       saveCurrentIndex(state.currentIndex);
-
       explanationEl.textContent = '';
       showQuestion(state.currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state });
     } else {
@@ -148,14 +182,29 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
   }, transitionTime);
 }
 
-// ✅ Restore last position after reload
+// ===============================
+// Question Filtering
+// ===============================
+
+// Filter out answered questions, reset if all answered
+export function filterUnansweredQuestions(questions) {
+  const answered = getAnsweredQuestions();
+  const unanswered = questions.filter(q => !answered.includes(q.topic_id));
+
+  if (unanswered.length === 0) {
+    clearAnsweredQuestions();
+    return questions;
+  }
+  return unanswered;
+}
+
+// Restore last position
 export function getStartingIndex() {
   return getCurrentIndex();
 }
 
-
 // ===============================
-// ✅ Render Tag Filter UI
+// Tag Filter UI
 // ===============================
 export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
   if (!containerEl) return;
@@ -173,42 +222,20 @@ export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
     const btn = document.createElement('button');
     btn.textContent = tag;
     btn.className = 'tag-filter-btn';
-    if (selectedTags.includes(tag)) {
-      btn.classList.add('active');
-    }
+    if (selectedTags.includes(tag)) btn.classList.add('active');
 
     btn.onclick = () => {
-      // ------------------------------
-      // NEW: Single-select toggle mode
-      // ------------------------------
+      // Single-select toggle mode
       if (selectedTags.includes(tag)) {
-        // Clicking the same active tag → clear all
         selectedTags = [];
         Array.from(tagList.children).forEach(b => b.classList.remove('active'));
       } else {
-        // Clicking a different tag → activate only that one
         selectedTags = [tag];
         Array.from(tagList.children).forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
       }
 
-      // ✅ Call quizLoader to update filtering
       updateTagFilter(selectedTags);
-
-      /* 
-      -----------------------------------------
-      PREVIOUS MULTI-SELECT LOGIC (for reference)
-      Uncomment if to get multi-select back.
-      -----------------------------------------
-      if (selectedTags.includes(tag)) {
-        selectedTags = selectedTags.filter(t => t !== tag);
-        btn.classList.remove('active');
-      } else {
-        selectedTags.push(tag);
-        btn.classList.add('active');
-      }
-      updateTagFilter(selectedTags);
-      */
     };
 
     tagList.appendChild(btn);
@@ -217,34 +244,24 @@ export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
   containerEl.appendChild(tagList);
 }
 
-
 // ===============================
-// ✅ Tag Filter Scroll (Mobile-first)
+// Tag Filter Scroll (Mobile-first)
 // ===============================
-// - Mobile (<768px): horizontal touch scrolling via native CSS
-// - Desktop (≥768px): tags wrap to multiple rows, no scroll logic needed
-// ===============================
-
 document.addEventListener('DOMContentLoaded', () => {
   const tagList = document.querySelector('.tag-filter-list');
   if (!tagList) return;
 
-  // Only enable wheel-to-horizontal mapping on mobile viewports
   function handleWheel(e) {
-    // Prevent this logic from running on desktop
-    if (window.innerWidth >= 768) return;
-
+    if (window.innerWidth >= 768) return; // Desktop does not scroll horizontally
     if (e.deltaY !== 0) {
-      e.preventDefault(); // stop page from scrolling vertically
-      tagList.scrollLeft += e.deltaY; // scroll sideways instead
+      e.preventDefault();
+      tagList.scrollLeft += e.deltaY;
     }
   }
 
   tagList.addEventListener('wheel', handleWheel, { passive: false });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth >= 768) {
-      tagList.scrollLeft = 0;
-    }
+    if (window.innerWidth >= 768) tagList.scrollLeft = 0;
   });
 });
