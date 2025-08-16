@@ -172,13 +172,13 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
     if (!hideFlag) {
       explanationEl.innerHTML = `<span class='incorrect'>❌: ${q.explanation}</span>`;
       transitionTime = 8000;
+      showIncorrectEffect(explanationEl);
+      explanationEl.classList.add('shake');
+      setTimeout(() => explanationEl.classList.remove('shake'), 500);
     } else {
       explanationEl.innerHTML = `<span class='incorrect'>❌ Incorrect!</span>`;
-      transitionTime = 1000;
+      transitionTime = 500;
     }
-    showIncorrectEffect(explanationEl);
-    explanationEl.classList.add('shake');
-    setTimeout(() => explanationEl.classList.remove('shake'), 400);
   }
 
   // Move to next question

@@ -214,13 +214,12 @@ button.accent:hover,
 
 /* =========================
    Circle Control Buttons
-   (toggle, shuffle, hide, stats)
+   (toggle, shuffle, hide)
 ========================= */
 .circle-btn,
 #shuffle-btn,
 #toggle-answers-btn,
-#hide-answers-btn,
-#show-stats-btn {
+#hide-answers-btn {
   display: grid;
   place-items: center;
   width: 3em;
@@ -234,15 +233,13 @@ button.accent:hover,
 .circle-btn:hover,
 #shuffle-btn:hover,
 #toggle-answers-btn:hover,
-#hide-answers-btn:hover,
-#show-stats-btn:hover {
+#hide-answers-btn:hover {
   transform: scale(1.05);
 }
 .circle-btn.active,
 #shuffle-btn.active,
 #toggle-answers-btn.active,
-#hide-answers-btn.active,
-#show-stats-btn.active {
+#hide-answers-btn.active {
   border: 2px solid var(--color-accent-orange);
   box-shadow: 0 0 8px var(--color-accent-orange);
 }
@@ -279,6 +276,20 @@ button.accent:hover,
   border-radius: var(--border-radius);
   padding: 0.4em 0.8em;
   transition: background 0.2s, color 0.2s;
+}
+
+
+/* ============================
+   Correct & Incorrect Effects
+============================ */
+.correct-effect {
+  background-color: var(--color-primary-light); /* lighter green for correct */
+  transition: background 0.4s;
+}
+
+.incorrect-effect {
+  background-color: var(--color-accent-orange-light); /* lighter orange for incorrect */
+  transition: background 0.4s;
 }
 
 /* =========================
@@ -460,13 +471,12 @@ body.light-mode #ad-slot {
 
 /* =========================
    Circle Control Buttons - Light Theme
-   (toggle, shuffle, hide, stats)
+   (toggle, shuffle, hide)
 ========================= */
 body.light-mode .circle-btn,
 body.light-mode #shuffle-btn,
 body.light-mode #toggle-answers-btn,
-body.light-mode #hide-answers-btn,
-body.light-mode #show-stats-btn {
+body.light-mode #hide-answers-btn {
   display: grid;
   place-items: center;
   width: 3em;
@@ -485,8 +495,7 @@ body.light-mode #show-stats-btn {
 body.light-mode .circle-btn:hover,
 body.light-mode #shuffle-btn:hover,
 body.light-mode #toggle-answers-btn:hover,
-body.light-mode #hide-answers-btn:hover,
-body.light-mode #show-stats-btn:hover {
+body.light-mode #hide-answers-btn:hover {
   background: linear-gradient(145deg, #f5f5f5, #e8e8e8);
   transform: scale(1.05);
 }
@@ -494,8 +503,7 @@ body.light-mode #show-stats-btn:hover {
 body.light-mode .circle-btn.active,
 body.light-mode #shuffle-btn.active,
 body.light-mode #toggle-answers-btn.active,
-body.light-mode #hide-answers-btn.active,
-body.light-mode #show-stats-btn.active {
+body.light-mode #hide-answers-btn.active {
   border: 2px solid var(--color-accent-orange);
   box-shadow: 0 0 8px rgba(249, 115, 22, 0.6); /* soft orange glow */
 }
@@ -792,13 +800,12 @@ body.dark-mode #social-links a:hover {
 
 /* =========================
    Circle Control Buttons
-   (toggle, shuffle, hide, stats)
+   (toggle, shuffle, hide)
 ========================= */
 .circle-btn,
 #shuffle-btn,
 #toggle-answers-btn,
-#hide-answers-btn,
-#show-stats-btn {
+#hide-answers-btn {
   display: grid;
   place-items: center;
   width: 3em;
@@ -816,8 +823,7 @@ body.dark-mode #social-links a:hover {
 .circle-btn:hover,
 #shuffle-btn:hover,
 #toggle-answers-btn:hover,
-#hide-answers-btn:hover,
-#show-stats-btn:hover {
+#hide-answers-btn:hover {
   /* background: var(--color-primary); */
   transform: scale(1.05);
 }
@@ -825,8 +831,7 @@ body.dark-mode #social-links a:hover {
 .circle-btn.active,
 #shuffle-btn.active,
 #toggle-answers-btn.active,
-#hide-answers-btn.active,
-#show-stats-btn.active {
+#hide-answers-btn.active {
   border: 2px solid var(--color-accent-orange);
   box-shadow: 0 0 8px var(--color-accent-orange);
 }
