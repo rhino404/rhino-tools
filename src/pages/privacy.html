@@ -3,36 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <title>Privacy Policy</title>
-  <style>
-    body { font-family: sans-serif; max-width: 700px; margin: 2rem auto; padding: 1rem; color: #222; }
-    h1 { font-size: 2em; margin-bottom: 1rem; }
-    p { margin-bottom: 1em; }
-  </style>
+  <link rel="stylesheet" href="../css/theme.css?v=20250815">
+  <link rel="stylesheet" href="../css/legal.css?v=20250816">
+  <link rel="shortcut icon" href="/images/favicon.ico" />
 </head>
-<body>
-  <h1>Privacy Policy</h1>
-  <p>
-    This site does not collect personal information such as your name, email address, or location.
-  </p>
-  <p>
-    <strong>Cookies & Analytics:</strong> We may use cookies or third-party analytics (such as Google Analytics) to improve site performance and user experience. These tools may collect non-personal data such as browser type, device, and usage statistics.
-  </p>
-  <p>
-    <strong>Advertising:</strong> If ads are displayed (e.g., via Google AdSense), third-party vendors may use cookies to serve ads based on your prior visits to this or other websites.
-  </p>
-  <p>
-    <strong>Your Choices:</strong> You can disable cookies in your browser settings. For more information on managing cookies and privacy, please refer to your browser’s help documentation.
-  </p>
-  <p>
-    <strong>Contact:</strong> If you have any questions about this privacy policy, please contact us at rhino404[@]pm.me.
-  </p>
-  <p>
-    This policy may be updated from time to time. Please check back for updates.
-  </p>
-  <div id="back-link" style="margin-top: 2em; text-align: center;">
-    <p>
-      <a href="../index.html">Back</a>
-    </p>
-  </div>
+<body class="legal-page">
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: August 16, 2025</p>
+
+    <section>
+      <p>This site does not collect personal information such as your name, email address, or location.</p>
+    </section>
+
+    <section>
+      <h2>Cookies &amp; Analytics</h2>
+      <p>We may use cookies or third-party analytics (such as Google Analytics) to improve site performance and user experience. These tools may collect non-personal data such as browser type, device, and usage statistics.</p>
+    </section>
+
+    <section>
+      <h2>Advertising</h2>
+      <p>If ads are displayed (e.g., via Google AdSense), third-party vendors may use cookies to serve ads based on your prior visits to this or other websites.</p>
+    </section>
+
+    <section>
+      <h2>Your Choices</h2>
+      <p>You can disable cookies in your browser settings. For more information on managing cookies and privacy, please refer to your browser’s help documentation.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>If you have any questions about this privacy policy, please contact us at <a href="mailto:rhino404@pm.me">rhino404@pm.me</a>.</p>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>This policy may be updated from time to time. Please check back for updates.</p>
+    </section>
+
+    <div id="back-link">
+      <p><a href="../index.html" class="back-button">🔙</a></p>
+    </div>
+  </main>
+  <script>
+    (function() {
+      const storedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+      document.body.classList.toggle('dark', theme === 'dark');
+      document.body.classList.add('ready'); // fade in after theme applied
+    })();
+  </script>
 </body>
 </html>

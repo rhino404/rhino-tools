@@ -1,0 +1,106 @@
+/* =========================
+   Legal Pages (Privacy / Terms)
+   Inherits from theme.css
+========================= */
+
+body {
+  opacity: 0; /* Prevent flash of wrong theme */
+  transition: opacity 0.25s ease-in-out;
+}
+
+body.ready {
+  opacity: 1;
+}
+
+.legal-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  line-height: 1.6;
+  font-size: 1rem;
+  background-color: var(--color-neutral-light-alt);
+  color: var(--color-neutral-dark);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Dark theme works whether .dark is on <html> or <body> */
+.dark .legal-page,
+.legal-page.dark {
+  background-color: var(--color-neutral-dark-alt);
+  color: var(--color-neutral-light-alt);
+}
+
+/* Headings */
+.legal-page h1 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+  color: var(--color-primary-dark);
+}
+
+.dark .legal-page h1,
+.legal-page.dark h1 {
+  color: var(--color-primary-light);
+}
+
+.legal-page h2 {
+  font-size: 1.25em;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--color-primary);
+}
+
+.dark .legal-page h2,
+.legal-page.dark h2 {
+  color: var(--color-primary-light);
+}
+
+/* Last updated text */
+.legal-page .last-updated {
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: var(--color-neutral-dark);
+}
+
+.dark .legal-page .last-updated,
+.legal-page.dark .last-updated {
+  color: var(--color-neutral-light);
+}
+
+/* Links */
+.legal-page a {
+  color: var(--color-accent-orange);
+  text-decoration: underline;
+}
+
+.dark .legal-page a,
+.legal-page.dark a {
+  color: var(--color-accent-yellow);
+}
+
+/* Back button */
+.legal-page #back-link {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.legal-page .back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;               /* circle width */
+  height: 8rem;              /* circle height */
+  font-size: 4.4rem;         /* emoji size */
+  line-height: 1;             /* centers emoji vertically */
+  background: var(--color-accent-orange); /* orange accent */
+  color: white;
+  border-radius: 50%;         /* circular shape */
+  text-decoration: none;
+  transition: background 0.2s ease-in-out;
+  margin: 2rem auto;          /* centers horizontally */
+}
+
+.legal-page .back-button:hover {
+  background: var(--color-accent-orange-light); /* lighter on hover */
+}
+
