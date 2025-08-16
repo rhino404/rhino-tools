@@ -362,7 +362,7 @@ class StatsTracker {
     }
 }
 
-// Shared modal builder
+// Shared modal builder - Clear Stats
 function showModal({ message, confirmText = 'OK', cancelText = null, onConfirm = null }) {
   const modal = document.createElement('div');
   modal.className = 'custom-modal-overlay';
