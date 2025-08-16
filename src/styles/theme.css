@@ -709,6 +709,7 @@ body.dark-mode #clear-score-card {
   padding: 0.5em 1em;
   margin-top: 1em;
   cursor: pointer;
+  border: 2px solid var(--color-accent-orange)
 }
 
 body.dark-mode #close-score-card:hover,
@@ -741,19 +742,105 @@ body.dark-mode .progress-fill {
 }
 
 /* =========================
-   Modal
+   Modal - Light Mode
 ========================= */
 .custom-modal {
-  background: #222;
-  color: #fff;
+  background-color: var(--color-neutral-light);   /* modal background */
+  color: var(--color-neutral-dark);              /* modal text */
+  padding: 1.5em;
+  border-radius: 8px;
+  max-width: 320px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+/* Confirm button */
 .modal-confirm {
-  background: #e74c3c;
+  background-color: var(--color-primary) !important;
+  color: white !important;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
+.modal-confirm:hover {
+  background-color: var(--color-primary-hover) !important;
+}
+
+/* Cancel button */
 .modal-cancel {
-  background: #555;
+  background-color: var(--color-neutral-dark) !important;      /* dark gray */
+  color: var(--color-neutral-light-alt) !important;           /* light text */
+  border: 1px solid var(--color-neutral-light-alt) !important;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-cancel:hover {
+  background-color: var(--color-neutral-dark-alt) !important;  /* slightly lighter */
+}
+
+/* Overlay */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   Modal - Dark Mode
+========================= */
+.dark-mode .custom-modal {
+  background-color: var(--color-neutral-dark-alt); /* dark modal background */
+  color: var(--color-neutral-light-alt);           /* light text */
+  padding: 1.5em;
+  border-radius: 8px;
+  max-width: 320px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Confirm button */
+.dark-mode .modal-confirm {
+  background-color: var(--color-primary-dark);
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dark-mode .modal-confirm:hover {
+  background-color: var(--color-primary);
+}
+
+/* Cancel button */
+.dark-mode .modal-cancel {
+  background-color: var(--color-neutral-dark);
+  color: var(--color-neutral-light-alt);
+  border: 1px solid var(--color-neutral-light-alt);
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dark-mode .modal-cancel:hover {
+  background-color: var(--color-neutral-dark-alt);
+}
+
+/* Overlay */
+.dark-mode .custom-modal-overlay {
+  background: rgba(17, 24, 39, 0.8); /* slightly darker overlay */
 }
 
 /* =========================
