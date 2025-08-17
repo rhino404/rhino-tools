@@ -4,6 +4,7 @@ import { getSubcategoriesForCategory } from '../utils/quizMetaUtils.js';
 import { filterUnansweredQuestions, showQuestion as originalShowQuestion } from '../ui/questions.js';
 import { saveSession } from './sessionManager.js';
 import { state } from './state.js';
+import { statsTracker } from '../ui/statsTracker.js';
 
 function showQuestion(index, questions, showingAnswers, els, state) {
     originalShowQuestion(index, questions, showingAnswers, els);
@@ -138,24 +139,49 @@ export function updateTagFilter(newTags) {
 // Load and Show Questions
 // =========================
 export function loadAndShowQuestions(category, subcategory, startIndex = 0, showAnswers = false) {
+    // Determine category object
     const categoryObj = (typeof category === 'string')
         ? categories.find(c => c.value === category || c.id === category)
         : category;
 
+    // Handle missing/invalid category: show placeholder
     if (!categoryObj) {
+        if (state.categoryToggle) state.categoryToggle.innerHTML = '👉 Select Category ▾';
+        if (state.subcategoryToggle) state.subcategoryToggle.innerHTML = '🌐 All Subcategories ▾';
         console.error(`[QuizLoader] Invalid category:`, category);
         return [];
     }
 
-    const validSubcats = getSubcategoriesForCategory(categoryObj.value);
+    // Get valid subcategories for this category
+    const validSubcats = getSubcategoriesForCategory(categoryObj.value) || [];
     let chosenSubcategory = subcategory;
+
+    // Default subcategory to 'all' if invalid or missing
     if (typeof chosenSubcategory !== 'string' ||
         (chosenSubcategory !== 'all' && !validSubcats.some(sc => sc.value === chosenSubcategory))) {
         console.warn(`[QuizLoader] Invalid or missing subcategory, defaulting to 'all'`);
         chosenSubcategory = 'all';
     }
 
-    // ✅ Return so index.js gets questions
+    // Update toggles to display current selection
+    if (state.categoryToggle) {
+        const icon = getCategoryIcon[categoryObj.value] || '';
+        const label = categoryObj.label || 'Select Category';
+        state.categoryToggle.innerHTML = `${icon} ${label} ▾`;
+    }
+
+    if (state.subcategoryToggle) {
+        const subcatOptions = [
+            { label: 'All Subcategories', value: 'all', icon: '🌐' },
+            ...validSubcats
+        ];
+        const subLabel = subcatOptions.find(s => s.value === chosenSubcategory)?.label || 'All Subcategories';
+        const subIcon = subcatOptions.find(s => s.value === chosenSubcategory)?.icon || '';
+        state.subcategoryToggle.innerHTML = `${subIcon} ${subLabel} ▾`;
+        state.subcategoryToggle.parentElement.style.display = 'block';
+    }
+
+    // ✅ Start the quiz
     return startQuiz(categoryObj.value, chosenSubcategory, state);
 }
 
@@ -166,4 +192,52 @@ export function applyTagFilter(selectedTags) {
     state.selectedTags = selectedTags;
     // Reload the quiz with updated tag filter
     startQuiz(state.currentCategory, state.currentSubcategory, state);
+}
+
+
+// =========================
+// Reset Quiz
+// =========================
+export function resetQuiz() {
+  // Clear state
+  state.currentCategory = null;
+  state.currentSubcategory = null;
+  state.selectedTags = [];
+
+  // Reset dropdown displays
+  if (state.categoryToggle) {
+    state.categoryToggle.innerHTML = '👉 Select Category ▾';
+  }
+  if (state.subcategoryToggle) {
+    state.subcategoryToggle.innerHTML = '🌐 All Subcategories ▾';
+    state.subcategoryToggle.parentElement.style.display = 'none';
+  }
+
+  // Clear stats tracker category
+  try {
+    statsTracker.setCategory(null);
+  } catch (e) {
+    console.warn('[resetQuiz] failed to reset statsTracker:', e);
+  }
+
+  // Clear questions
+  state.questions = [];
+  state.allQuestions = [];
+  state.currentIndex = 0;
+
+  // Clear quiz display
+  if (state.questionEl) state.questionEl.innerHTML = '';
+  if (state.choicesEl) state.choicesEl.innerHTML = '';
+  if (state.explanationEl) state.explanationEl.innerHTML = '';
+
+  // Clear tag filter UI
+  const tagFilterEl = document.getElementById('tag-filter');
+  if (tagFilterEl) {
+    tagFilterEl.innerHTML = '';
+  }
+
+  // Optionally, save cleared session
+  try {
+    import('./sessionManager.js').then(({ saveSession }) => saveSession(state));
+  } catch {}
 }

@@ -6,5 +6,8 @@ export const DATA_SOURCES = {
     "general": "./datasets/ham-radio/general.json",
     "extra": "./datasets/ham-radio/extra.json",
   },
+  "cybersecurity": {
+    "security+ sy0-701": "./datasets/cybersecurity/sy0701.json"
+  }
   // add other categories as needed...
 };
