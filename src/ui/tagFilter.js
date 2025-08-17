@@ -1,59 +1,70 @@
-export function renderTagFilter(containerEl, availableTags, selectedTags = null, options = { multiSelect: false }) {
+import { applyTagFilter } from '../core/quizLoader.js';
+import { state } from '../core/state.js';
+
+/**
+ * Render a tag filter UI inside a container.
+ * @param {HTMLElement} containerEl - Container element for tags
+ * @param {string[]} availableTags - List of all possible tags
+ * @param {string[]} selectedTags - Tags initially selected
+ */
+export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
   if (!containerEl) return;
 
-  // ===== Clear previous buttons and reset selection =====
-  containerEl.innerHTML = ''; 
-  containerEl.style.display = 'flex';
-
-  if (!availableTags || availableTags.length === 0) {
+  // 🚫 Don’t show tags until a category is chosen
+  if (!state.currentCategory) {
+    containerEl.innerHTML = '';
     containerEl.style.display = 'none';
     return;
   }
 
-  // Normalize selection — start fresh for new category
-  let selectedSet = new Set();
-  if (options.multiSelect) {
-    if (Array.isArray(selectedTags)) selectedSet = new Set(selectedTags);
-  } else {
-    if (typeof selectedTags === 'string' && selectedTags) selectedSet.add(selectedTags);
-  }
-  // If no selectedTags passed, this creates an empty set => old tags cleared
+  // ✅ Show container when category is set
+  containerEl.style.display = 'block';
+  containerEl.innerHTML = '';
+
+  const title = document.createElement('div');
+  title.className = 'tag-filter-title';
+  title.textContent = "Filter by Tag"; // optional label
+  containerEl.appendChild(title);
+
+  const tagList = document.createElement('div');
+  tagList.className = 'tag-filter-list';
 
   availableTags.forEach(tag => {
     const btn = document.createElement('button');
-    btn.className = 'tag-filter-btn';
-    btn.dataset.value = tag;
     btn.textContent = tag;
+    btn.className = 'tag-filter-btn';
+    if (selectedTags.includes(tag)) btn.classList.add('active');
 
-    if (selectedSet.has(tag)) btn.classList.add('active');
-
-    btn.addEventListener('click', () => {
-      let newSelected = [];
-
-      if (options.multiSelect) {
-        if (btn.classList.contains('active')) {
-          btn.classList.remove('active');
-          selectedSet.delete(tag);
-        } else {
-          btn.classList.add('active');
-          selectedSet.add(tag);
-        }
-        newSelected = [...selectedSet];
+    btn.onclick = () => {
+      if (selectedTags.includes(tag)) {
+        selectedTags = [];
+        Array.from(tagList.children).forEach(b => b.classList.remove('active'));
       } else {
-        if (btn.classList.contains('active')) {
-          btn.classList.remove('active');
-          newSelected = [];
-        } else {
-          containerEl.querySelectorAll('.tag-filter-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          newSelected = [tag];
-        }
+        selectedTags = [tag];
+        Array.from(tagList.children).forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
       }
 
-      containerEl.dispatchEvent(new CustomEvent('tagsChanged', { detail: newSelected }));
-    });
+      state.selectedTags = selectedTags;
+      applyTagFilter(selectedTags);
+    };
 
-    containerEl.appendChild(btn);
+    tagList.appendChild(btn);
+  });
+
+  containerEl.appendChild(tagList);
+
+  function handleWheel(e) {
+    if (window.innerWidth >= 768) return;
+    if (e.deltaY !== 0) {
+      e.preventDefault();
+      tagList.scrollLeft += e.deltaY;
+    }
+  }
+
+  tagList.addEventListener('wheel', handleWheel, { passive: false });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) tagList.scrollLeft = 0;
   });
 }
 

@@ -4,17 +4,26 @@ import { getSubcategoriesForCategory } from '../utils/quizMetaUtils.js';
 import { filterUnansweredQuestions, showQuestion as originalShowQuestion } from '../ui/questions.js';
 import { saveSession } from './sessionManager.js';
 import { state } from './state.js';
-import { statsTracker } from '../ui/statsTracker.js';
 
-function showQuestion(index, questions, showingAnswers, els, state) {
-    originalShowQuestion(index, questions, showingAnswers, els);
-    state.currentIndex = index;
-    saveSession(state);
+// =========================
+// Show question helper
+// =========================
+function showQuestion(index, questions, showingAnswers, els, stateObj) {
+    if (!stateObj) throw new Error('State object is required for showQuestion');
+    if (!els || !els.questionEl || !els.choicesEl || !els.explanationEl) {
+        console.warn('[showQuestion] Missing elements:', els);
+        return;
+    }
+    originalShowQuestion(index, questions, showingAnswers, { ...els, state: stateObj });
+    stateObj.currentIndex = index;
+    saveSession(stateObj);
 }
 
+// =========================
+// Fetch Questions
+// =========================
 async function fetchQuestions(category, subcategory) {
     if (!category) return [];
-
     const subData = DATA_SOURCES[category];
     if (!subData) return [];
 
@@ -40,7 +49,9 @@ async function fetchQuestions(category, subcategory) {
     return questions;
 }
 
-// ✅ Tag filter helper
+// =========================
+// Tag filter helper
+// =========================
 function filterByTags(questions, selectedTags) {
     if (!selectedTags || selectedTags.length === 0) return questions;
     return questions.filter(q =>
@@ -48,46 +59,44 @@ function filterByTags(questions, selectedTags) {
     );
 }
 
-export async function startQuiz(category, subcategory, state) {
-    // ===== Clear old tag selections for new category =====
-    state.selectedTags = []; // <-- discard old tags when switching categories
+// =========================
+// Start Quiz
+// =========================
+export async function startQuiz(category, subcategory, stateObj) {
+    if (!stateObj) throw new Error('State object is required for startQuiz');
 
-    state.currentCategory = category;
-    state.currentSubcategory = subcategory || 'all';
+    stateObj.currentCategory = category;
+    stateObj.currentSubcategory = subcategory || 'all';
 
+    // Update category UI
     try {
         const icon = getCategoryIcon[category] || '';
         const label = quizMeta.categories.find(o => o.value === category)?.label || 'Select Category';
-        if (state.categoryToggle) state.categoryToggle.innerHTML = `${icon} ${label} ▾`;
-    } catch { }
+        if (stateObj.categoryToggle) stateObj.categoryToggle.innerHTML = `${icon} ${label} ▾`;
+    } catch {}
 
+    // Update subcategory UI
     try {
         const subcategories = getSubcategoriesForCategory(category) || [];
         const subcatOptions = [
             { label: 'All Subcategories', value: 'all', icon: '🌐' },
             ...subcategories
         ];
-        state.subcategoryToggle.parentElement.style.display = 'block';
-        const subLabel = subcatOptions.find(s => s.value === state.currentSubcategory)?.label || 'Select Subcategory';
-        const subIcon = subcatOptions.find(s => s.value === state.currentSubcategory)?.icon || '';
-        state.subcategoryToggle.innerHTML = `${subIcon} ${subLabel} ▾`;
-    } catch { }
+        if (stateObj.subcategoryToggle?.parentElement) stateObj.subcategoryToggle.parentElement.style.display = 'block';
+        const subLabel = subcatOptions.find(s => s.value === stateObj.currentSubcategory)?.label || 'Select Subcategory';
+        const subIcon = subcatOptions.find(s => s.value === stateObj.currentSubcategory)?.icon || '';
+        if (stateObj.subcategoryToggle) stateObj.subcategoryToggle.innerHTML = `${subIcon} ${subLabel} ▾`;
+    } catch {}
 
     import('../ui/statsTracker.js').then(({ statsTracker }) => {
-        try {
-            statsTracker.setCategory(category);
-        } catch (e) {
-            console.warn('[Session] failed to set statsTracker category:', e);
-        }
+        try { statsTracker.setCategory(category); }
+        catch (e) { console.warn('[Session] failed to set statsTracker category:', e); }
     });
 
-    let questions = await fetchQuestions(category, state.currentSubcategory);
-
-    // ✅ Store unfiltered list for tag changes
-    state.allQuestions = [...questions];
-
-    // ✅ Apply tag filtering (now will always start empty)
-    questions = filterByTags(state.allQuestions, state.selectedTags);
+    // Fetch and store questions
+    let questions = await fetchQuestions(category, stateObj.currentSubcategory);
+    stateObj.allQuestions = [...questions]; // store unfiltered list
+    questions = filterByTags(stateObj.allQuestions, stateObj.selectedTags);
 
     try {
         questions = filterUnansweredQuestions(questions);
@@ -95,46 +104,45 @@ export async function startQuiz(category, subcategory, state) {
         console.warn('[startQuiz] filterUnansweredQuestions failed:', e);
     }
 
-    state.questions = questions || [];
-    state.currentIndex = 0;
+    stateObj.questions = questions || [];
+    stateObj.currentIndex = 0;
 
-    showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
-        questionEl: state.questionEl,
-        choicesEl: state.choicesEl,
-        explanationEl: state.explanationEl,
-    }, state);
+    showQuestion(stateObj.currentIndex, stateObj.questions, stateObj.showingAnswers, {
+        questionEl: stateObj.questionEl,
+        choicesEl: stateObj.choicesEl,
+        explanationEl: stateObj.explanationEl,
+    }, stateObj);
 
-    saveSession(state);
-
-    // ✅ Return questions so index.js can render tag filter
-    return state.questions;
+    saveSession(stateObj);
+    return stateObj.questions;
 }
 
+// =========================
+// Apply Tag Filter mid-quiz
+// =========================
+export function applyTagFilter(newTags) {
+    state.selectedTags = Array.isArray(newTags) ? newTags : [];
 
-// ✅ Allow dynamic tag updates mid-quiz (preserves index)
-export function updateTagFilter(newTags) {
-    state.selectedTags = newTags;
-
-    // ✅ Always filter from unfiltered base list
-    let filteredQuestions = filterByTags(state.allQuestions || [], newTags);
-
-    // ✅ Keep unanswered filtering logic
+    let filteredQuestions = filterByTags(state.allQuestions || [], state.selectedTags);
     filteredQuestions = filterUnansweredQuestions(filteredQuestions);
 
-    // ✅ Preserve current index if possible
     let newIndex = state.currentIndex || 0;
-    if (newIndex >= filteredQuestions.length) {
-        newIndex = Math.max(filteredQuestions.length - 1, 0);
-    }
+    if (newIndex >= filteredQuestions.length) newIndex = Math.max(filteredQuestions.length - 1, 0);
 
     state.questions = filteredQuestions;
     state.currentIndex = newIndex;
 
-    showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
-        questionEl: state.questionEl,
-        choicesEl: state.choicesEl,
-        explanationEl: state.explanationEl,
-    }, state);
+    showQuestion(
+        state.currentIndex,
+        state.questions,
+        state.showingAnswers,
+        {
+            questionEl: state.questionEl,
+            choicesEl: state.choicesEl,
+            explanationEl: state.explanationEl,
+        },
+        state
+    );
 
     saveSession(state);
 }
@@ -143,103 +151,43 @@ export function updateTagFilter(newTags) {
 // Load and Show Questions
 // =========================
 export function loadAndShowQuestions(category, subcategory, startIndex = 0, showAnswers = false) {
-    // Determine category object
     const categoryObj = (typeof category === 'string')
         ? categories.find(c => c.value === category || c.id === category)
         : category;
 
-    // Handle missing/invalid category: show placeholder
     if (!categoryObj) {
-        if (state.categoryToggle) state.categoryToggle.innerHTML = '👉 Select Category ▾';
-        if (state.subcategoryToggle) state.subcategoryToggle.innerHTML = '🌐 All Subcategories ▾';
         console.error(`[QuizLoader] Invalid category:`, category);
         return [];
     }
 
-    // Get valid subcategories for this category
     const validSubcats = getSubcategoriesForCategory(categoryObj.value) || [];
     let chosenSubcategory = subcategory;
-
-    // Default subcategory to 'all' if invalid or missing
     if (typeof chosenSubcategory !== 'string' ||
         (chosenSubcategory !== 'all' && !validSubcats.some(sc => sc.value === chosenSubcategory))) {
         console.warn(`[QuizLoader] Invalid or missing subcategory, defaulting to 'all'`);
         chosenSubcategory = 'all';
     }
 
-    // Update toggles to display current selection
-    if (state.categoryToggle) {
-        const icon = getCategoryIcon[categoryObj.value] || '';
-        const label = categoryObj.label || 'Select Category';
-        state.categoryToggle.innerHTML = `${icon} ${label} ▾`;
-    }
-
-    if (state.subcategoryToggle) {
-        const subcatOptions = [
-            { label: 'All Subcategories', value: 'all', icon: '🌐' },
-            ...validSubcats
-        ];
-        const subLabel = subcatOptions.find(s => s.value === chosenSubcategory)?.label || 'All Subcategories';
-        const subIcon = subcatOptions.find(s => s.value === chosenSubcategory)?.icon || '';
-        state.subcategoryToggle.innerHTML = `${subIcon} ${subLabel} ▾`;
-        state.subcategoryToggle.parentElement.style.display = 'block';
-    }
-
-    // ✅ Start the quiz
     return startQuiz(categoryObj.value, chosenSubcategory, state);
 }
 
-// =========================
-// ✅ Apply Tag Filter
-// =========================
-export function applyTagFilter(selectedTags) {
-    state.selectedTags = selectedTags;
-    // Reload the quiz with updated tag filter
-    startQuiz(state.currentCategory, state.currentSubcategory, state);
-}
-
-
-// =========================
-// Reset Quiz 
-// =========================
 export function resetQuiz() {
-  // Clear state
   state.currentCategory = null;
   state.currentSubcategory = null;
+  state.questions = [];
   state.selectedTags = [];
 
-  // Reset dropdown displays
-  if (state.categoryToggle) {
-    state.categoryToggle.innerHTML = '👉 Select Category ▾';
-  }
+  // Reset UI
+  if (state.categoryToggle) state.categoryToggle.innerHTML = '👉 Select Category ▾';
   if (state.subcategoryToggle) {
     state.subcategoryToggle.innerHTML = '🌐 All Subcategories ▾';
-    state.subcategoryToggle.parentElement.style.display = 'none'; // hide until category selected
+    state.subcategoryToggle.parentElement.style.display = 'none';
   }
-
-  // Clear stats tracker category
-  try {
-    statsTracker.setCategory(null);
-  } catch (e) {
-    console.warn('[resetQuiz] failed to reset statsTracker:', e);
-  }
-
-  // Clear questions
-  state.questions = [];
-  state.allQuestions = [];
-  state.currentIndex = 0;
-
-  // Clear quiz display
-  if (state.questionEl) state.questionEl.innerHTML = '';
-  if (state.choicesEl) state.choicesEl.innerHTML = '';
-  if (state.explanationEl) state.explanationEl.innerHTML = '';
-
-  // Clear tag filter UI
   const tagFilterEl = document.getElementById('tag-filter');
-  if (tagFilterEl) {
-    tagFilterEl.innerHTML = '';
-  }
+  if (tagFilterEl) tagFilterEl.innerHTML = '';
+  if (state.questionEl) state.questionEl.textContent = '';
+  if (state.choicesEl) state.choicesEl.innerHTML = '';
+  if (state.explanationEl) state.explanationEl.textContent = '';
 
-  // Optionally, save cleared session
-  import('./sessionManager.js').then(({ saveSession }) => saveSession(state));
+  import('../ui/statsTracker.js').then(({ statsTracker }) => statsTracker.setCategory(null));
 }

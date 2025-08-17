@@ -82,19 +82,6 @@ body.dark-mode .question {
   color: #fff;
 }
 
-body.light-mode .tag-filter-list,
-body.dark-mode .tag-filter-list {
-  padding: 0.4em;
-  border-radius: var(--border-radius);
-}
-
-body.light-mode .tag-filter-list {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-body.dark-mode .tag-filter-list {
-  background-color: rgba(255, 255, 255, 0.05);
-}
 
 /* =========================
    Theme Transition Effect
@@ -256,12 +243,6 @@ button.accent:hover,
   transition: background 0.15s;
 }
 
-/* .dropdown-menu li:hover {
-  padding: 0.5rem 1rem;
-  transition: background 0.15s;
-  background: var(--color-accent-orange);
-} */
-
 /* =========================
    Progress Bars
 ========================= */
@@ -284,6 +265,63 @@ button.accent:hover,
   padding: 0.4em 0.8em;
   transition: background 0.2s, color 0.2s;
 }
+
+body.light-mode .tag-filter-list,
+body.dark-mode .tag-filter-list {
+  padding: 0.4em;
+  border-radius: var(--border-radius);
+}
+
+body.light-mode .tag-filter-list {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .tag-filter-list {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   Tag Filter
+========================= */
+.tag-filter-title {
+  color: #ccc;
+}
+
+/* DARK MODE base */
+body.dark-mode .tag-filter-btn {
+  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+  color: #ccc;
+}
+body.dark-mode .tag-filter-btn:hover {
+  background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+}
+body.dark-mode .tag-filter-btn.active {
+  background: #00c896;
+  color: #000;
+}
+
+/* =========================
+   Tag Filter - Light Mode
+   Matches circle-btn style
+========================= */
+body.light-mode .tag-filter-title {
+  color: var(--color-neutral-dark);
+}
+body.light-mode .tag-filter-btn {
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  color: var(--color-neutral-dark);
+  border: 1px solid #ccc;
+}
+body.light-mode .tag-filter-btn:hover {
+  background: var(--color-primary-hover);
+  color: #fff;
+}
+body.light-mode .tag-filter-btn.active {
+  background: var(--color-accent-orange);
+  color: #fff;
+  border-color: var(--color-accent-orange);
+}
+
 
 
 /* ============================
@@ -533,35 +571,6 @@ body.light-mode #social-links a {
 body.light-mode #social-links a:hover {
   color: var(--color-primary); /* brand green */
 }
-
-/* =========================
-   Tag Filter - Light Mode
-   Matches circle-btn style
-========================= */
-body.light-mode .tag-filter-title {
-  color: var(--color-neutral-dark);
-}
-
-body.light-mode .tag-filter-btn {
-  background: linear-gradient(145deg, #ffffff, #f5f5f5);
-  color: var(--color-neutral-dark);
-  border: 1px solid #ccc;
-  border-radius: var(--border-radius);
-  padding: 0.4em 0.8em;
-  transition: background 0.2s, color 0.2s;
-}
-
-body.light-mode .tag-filter-btn:hover {
-  background: var(--color-primary-hover);
-  color: #fff;
-}
-
-body.light-mode .tag-filter-btn.active {
-  background: var(--color-accent-orange);
-  color: #fff;
-  border-color: var(--color-accent-orange);
-}
-
 
 /* =========================
    Dark Theme (dark.css)
@@ -861,26 +870,6 @@ body.dark-mode #social-links a:hover {
   color: var(--color-primary);
 }
 
-/* =========================
-   Tag Filter
-========================= */
-.tag-filter-title {
-  color: #ccc;
-}
-
-.tag-filter-btn {
-  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
-  color: #ccc;
-}
-
-.tag-filter-btn:hover {
-  background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
-}
-
-.tag-filter-btn.active {
-  background: #00c896;
-  color: #000;
-}
 
 /* =========================
    Branding Footer Text

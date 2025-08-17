@@ -27,3 +27,16 @@ export const state = {
   showStatsBtn: null,
   hideAnswersBtn: null
 };
+
+// Exported setter functions
+export async function setCategory(category) {
+    state.currentCategory = category;
+    // Optional: reset subcategory when category changes
+    state.currentSubcategory = null;
+    // Add any additional logic here if needed
+}
+
+export async function setSubcategory(subcategory) {
+    state.currentSubcategory = subcategory;
+    // Add any additional logic here if needed
+}
