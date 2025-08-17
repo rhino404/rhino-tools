@@ -1,14 +1,11 @@
-// ===============================
-// ======== questions.js =========
-// ===============================
-
 import { statsTracker } from '../ui/statsTracker.js';
 import { showCorrectEffect, showIncorrectEffect } from '../ui/effects.js';
 import { getIcon } from '../utils/utils.js';
-import { updateTagFilter } from '../core/quizLoader.js'; // ✅ for tag filtering
+import { renderTagFilter } from '../ui/tagFilter.js';
+import { applyTagFilter } from '../core/quizLoader.js'; // ✅ for tag filtering
 
 // ===============================
-// ===== LocalStorage Keys =======
+// ======== questions.js =========
 // ===============================
 const ANSWERED_KEY = 'rynoToolsAnsweredQuestions';
 const CURRENT_INDEX_KEY = 'rynoToolsCurrentQuestionIndex';
@@ -46,16 +43,17 @@ export function clearAnsweredQuestions() {
 // ===============================
 export const quizState = {
   currentIndex: 0,
-  hideAnswers: false,     // Tracks whether explanations should be hidden
-  showingAnswers: false,  // Tracks whether to show correct answers
-  questions: [],          // Holds current question set
+  hideAnswers: false,
+  showingAnswers: false,
+  questions: [],
   questionEl: null,
   choicesEl: null,
   explanationEl: null,
   hideAnswersBtn: null,
   shuffleBtn: null,
   toggleAnswersBtn: null,
-  showStatsBtn: null
+  showStatsBtn: null,
+  selectedTags: []
 };
 
 // ===============================
@@ -70,21 +68,14 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
     return;
   }
 
-  // Save progress
   saveCurrentIndex(current);
-
   const q = questions[current];
-
-  if (!state) state = {};
+  if (!state) state = quizState;
   state.currentIndex = current;
 
-  // Render question text with category icon
   questionEl.innerHTML = `${getIcon("categories", q.category)} ${q.question}`;
   choicesEl.innerHTML = '';
 
-  // ------------------------
-  // Sync hideAnswers and toggleAnswers buttons dynamically
-  // ------------------------
   if (state.hideAnswersBtn) {
     state.hideAnswersBtn.classList.toggle('active', state.hideAnswers);
     state.hideAnswersBtn.title = state.hideAnswers
@@ -99,9 +90,6 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
       : 'Show correct answers';
   }
 
-  // ------------------------
-  // Render question image
-  // ------------------------
   const existingImage = document.getElementById('questionImage');
   if (existingImage) existingImage.remove();
 
@@ -115,9 +103,6 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
     questionEl.after(img);
   }
 
-  // ------------------------
-  // Render choices
-  // ------------------------
   q.choices.forEach(choice => {
     const btn = document.createElement('button');
     btn.textContent = choice;
@@ -135,7 +120,7 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
 // ===== Check Answer ============
 // ===============================
 export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state } = {}) {
-  if (!state) state = {};
+  if (!state) state = quizState;
   state.hideAnswers = state.hideAnswers || false;
 
   Array.from(choicesEl.children).forEach(btn => btn.disabled = true);
@@ -200,42 +185,28 @@ export function getStartingIndex() {
 }
 
 // ===============================
-// ===== Render Tag Filter =======
+// ===== Render Quiz Tag Filter ====
 // ===============================
-export function renderTagFilter(containerEl, availableTags, selectedTags = []) {
-  if (!containerEl) return;
+export function renderQuizTagFilter(containerEl, availableTags, state) {
+  if (!containerEl || !state) return;
+  console.log(containerEl)
+  console.log(availableTags)
+  console.log(state)
 
-  containerEl.innerHTML = '';
+  const selectedTags = state.selectedTags || [];
 
-  const title = document.createElement('div');
-  title.className = 'tag-filter-title';
-  containerEl.appendChild(title);
+  renderTagFilter(containerEl, availableTags, selectedTags, {
+    multiSelect: true,
+    onChange: (newSelected) => {
+      state.selectedTags = Array.isArray(newSelected) ? newSelected : [];
+      applyTagFilter(state.selectedTags);
 
-  const tagList = document.createElement('div');
-  tagList.className = 'tag-filter-list';
-
-  availableTags.forEach(tag => {
-    const btn = document.createElement('button');
-    btn.textContent = tag;
-    btn.className = 'tag-filter-btn';
-    if (selectedTags.includes(tag)) btn.classList.add('active');
-
-    btn.onclick = () => {
-      if (selectedTags.includes(tag)) {
-        selectedTags = [];
-        Array.from(tagList.children).forEach(b => b.classList.remove('active'));
-      } else {
-        selectedTags = [tag];
-        Array.from(tagList.children).forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      }
-      updateTagFilter(selectedTags);
-    };
-
-    tagList.appendChild(btn);
+      // Sync tag button UI
+      Array.from(containerEl.querySelectorAll('.tag-filter-btn')).forEach(btn => {
+        btn.classList.toggle('active', state.selectedTags.includes(btn.dataset.value));
+      });
+    }
   });
-
-  containerEl.appendChild(tagList);
 }
 
 // ===============================
@@ -264,14 +235,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // ===== Setup Quiz Buttons =======
 // ===============================
 export function setupButtons(state) {
-  // Default state safeguards
   state.currentIndex = state.currentIndex || 0;
   state.hideAnswers = state.hideAnswers || false;
   state.showingAnswers = state.showingAnswers || false;
 
-  // ------------------------
-  // Helper: attach click safely
-  // ------------------------
   function safeClick(btn, handler) {
     if (btn && !btn.dataset.listenerAttached) {
       btn.addEventListener('click', handler);
@@ -279,9 +246,6 @@ export function setupButtons(state) {
     }
   }
 
-  // ------------------------
-  // Helper: cache DOM elements in state
-  // ------------------------
   function cacheElement(key, selector) {
     if (!state[key]) state[key] = document.querySelector(selector);
     return state[key];
@@ -292,9 +256,6 @@ export function setupButtons(state) {
   cacheElement('toggleAnswersBtn', '#toggle-answers-btn');
   cacheElement('showStatsBtn', '#show-stats-btn');
 
-  // ------------------------
-  // UI Sync helpers
-  // ------------------------
   function updateHideAnswersBtnUI() {
     if (!state.hideAnswersBtn) return;
     state.hideAnswersBtn.classList.toggle('active', state.hideAnswers);
@@ -316,17 +277,12 @@ export function setupButtons(state) {
     updateToggleAnswersBtnUI();
   }
 
-  // Initial sync
   syncAllButtonsUI();
 
-  // ------------------------
-  // Event: Hide Answers Button
-  // ------------------------
   safeClick(state.hideAnswersBtn, () => {
     state.hideAnswers = !state.hideAnswers;
     syncAllButtonsUI();
 
-    // 🔑 Force re-render so explanation logic updates immediately
     showQuestion(state.currentIndex, state.questions, state.showingAnswers, {
       questionEl: state.questionEl,
       choicesEl: state.choicesEl,
@@ -335,15 +291,11 @@ export function setupButtons(state) {
     });
   });
 
-  // ------------------------
-  // Event: Shuffle Button
-  // ------------------------
   safeClick(state.shuffleBtn, () => {
     if (!state.questions?.length) return;
     const start = state.currentIndex;
     const remaining = state.questions.slice(start);
 
-    // Fisher-Yates shuffle
     for (let i = remaining.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [remaining[i], remaining[j]] = [remaining[j], remaining[i]];
@@ -361,9 +313,6 @@ export function setupButtons(state) {
     syncAllButtonsUI();
   });
 
-  // ------------------------
-  // Event: Toggle Answers Button
-  // ------------------------
   safeClick(state.toggleAnswersBtn, () => {
     state.showingAnswers = !state.showingAnswers;
     syncAllButtonsUI();
@@ -376,11 +325,7 @@ export function setupButtons(state) {
     });
   });
 
-  // ------------------------
-  // Event: Show Stats Button
-  // ------------------------
   safeClick(state.showStatsBtn, () => {
     import('../ui/statsTracker.js').then(({ statsTracker }) => statsTracker.showCard());
   });
 }
-

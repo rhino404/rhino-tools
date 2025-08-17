@@ -255,14 +255,21 @@ main#quiz-container,
 .tag-filter {
   position: relative; /* Needed for fade overlay positioning */
   width: 100%;
-  max-width: 100%; /* No hard lock */
+  max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
   margin-bottom: 1em;
+  cursor: grab;
+  user-select: none;
 }
 .tag-filter::-webkit-scrollbar {
   display: none; /* Chrome/Safari */
+}
+
+#tag-filter.active-drag {
+  cursor: grabbing;
 }
 
 .tag-filter,
@@ -275,7 +282,7 @@ main#quiz-container,
 .tag-filter-list {
   display: flex;
   gap: 0.5em;
-  padding: 0 0.5em; /* breathing room left/right */
+  padding: 0 0.5em;
   flex-wrap: nowrap; /* force single row on mobile */
   margin-bottom: 1em;
 }
@@ -284,19 +291,36 @@ main#quiz-container,
 @media (min-width: 769px) {
   .tag-filter-list {
     flex-wrap: wrap;
-    justify-content: center; /* center pills when wrapping */
+    justify-content: center;
   }
 }
 
+/* Tag button */
 .tag-filter-btn {
-  flex: 0 0 auto; /* don’t shrink */
+  flex: 0 0 auto;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.8rem;
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
+  border: 1px solid #888;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
+
+/* Active tag style */
+.tag-filter-btn.active {
+  background-color: #4caf50; /* Green highlight */
+  color: #fff;
+  border-color: #388e3c;
+}
+
+/* Optional hover effect */
+.tag-filter-btn:hover {
+  background-color: #dcdcdc;
+}
+
 
 
 /* =========================
