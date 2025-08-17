@@ -196,7 +196,7 @@ export function applyTagFilter(selectedTags) {
 
 
 // =========================
-// Reset Quiz
+// Reset Quiz 
 // =========================
 export function resetQuiz() {
   // Clear state
@@ -210,7 +210,7 @@ export function resetQuiz() {
   }
   if (state.subcategoryToggle) {
     state.subcategoryToggle.innerHTML = '🌐 All Subcategories ▾';
-    state.subcategoryToggle.parentElement.style.display = 'none';
+    state.subcategoryToggle.parentElement.style.display = 'none'; // hide until category selected
   }
 
   // Clear stats tracker category
@@ -237,7 +237,5 @@ export function resetQuiz() {
   }
 
   // Optionally, save cleared session
-  try {
-    import('./sessionManager.js').then(({ saveSession }) => saveSession(state));
-  } catch {}
+  import('./sessionManager.js').then(({ saveSession }) => saveSession(state));
 }
