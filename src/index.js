@@ -59,36 +59,45 @@ document.addEventListener('DOMContentLoaded', async () => {
     icon: getCategoryIcon[c.value] || ''
   }));
 
-  // Restore session category or fallback to first
-  state.currentCategory = session.currentCategory || categories[0].value;
-  session.currentCategory = state.currentCategory; // keep session in sync
+  // Restore session category or fallback to null for reset
+  state.currentCategory = session.currentCategory ?? null;
+  state.currentSubcategory = session.currentSubcategory ?? null;
+
   state.categoryToggle = categoryToggle;
   state.categoryOptions = categoryOptionsEl;
+  state.subcategoryToggle = document.getElementById('subcategory-toggle');
+  state.subcategoryOptions = document.getElementById('subcategory-options');
 
-  // Safe setup for dropdown
-  if (categoryToggle && categoryOptionsEl) {
-    setupDropdowns(categoryToggle, categoryOptionsEl, categoryList, 'currentCategory', state);
-  } else {
-    console.warn('[index] Category dropdown elements missing.');
+  // Update category toggle display
+  if (state.categoryToggle) {
+    const label = state.currentCategory
+      ? categories.find(c => c.value === state.currentCategory)?.label || 'Select Category'
+      : '👉 Select Category ▾';
+    const icon = state.currentCategory ? getCategoryIcon[state.currentCategory] || '' : '';
+    state.categoryToggle.innerHTML = `${icon} ${label}`;
   }
 
   // ------------------------
   // Subcategory Dropdown Setup
   // ------------------------
-  const subcategoryToggle = document.getElementById('subcategory-toggle');
-  const subcategoryOptionsEl = document.getElementById('subcategory-options');
-  const subcategories = getSubcategoriesForCategory(state.currentCategory);
+  const subcategories = getSubcategoriesForCategory(state.currentCategory) || [];
   const subcatOptions = [{ label: 'All Subcategories', value: 'all', icon: '🌐' }, ...subcategories];
 
-  state.currentSubcategory = session.currentSubcategory || 'all';
-  session.currentSubcategory = state.currentSubcategory; // keep session in sync
-  state.subcategoryToggle = subcategoryToggle;
-  state.subcategoryOptions = subcategoryOptionsEl;
+  if (state.subcategoryToggle) {
+    const subLabel = state.currentSubcategory
+      ? subcategories.find(s => s.value === state.currentSubcategory)?.label || 'All Subcategories'
+      : '🌐 All Subcategories ▾';
+    const subIcon = state.currentSubcategory ? '' : '🌐';
+    state.subcategoryToggle.innerHTML = `${subIcon} ${subLabel}`;
+    state.subcategoryToggle.parentElement.style.display = state.currentCategory ? 'block' : 'none';
+  }
 
-  if (subcategoryToggle && subcategoryOptionsEl) {
-    setupDropdowns(subcategoryToggle, subcategoryOptionsEl, subcatOptions, 'currentSubcategory', state);
-  } else {
-    console.warn('[index] Subcategory dropdown elements missing.');
+  // Setup dropdowns safely
+  if (categoryToggle && categoryOptionsEl) {
+    setupDropdowns(categoryToggle, categoryOptionsEl, categoryList, 'currentCategory', state);
+  }
+  if (state.subcategoryToggle && state.subcategoryOptions) {
+    setupDropdowns(state.subcategoryToggle, state.subcategoryOptions, subcatOptions, 'currentSubcategory', state);
   }
 
   // ------------------------
@@ -111,10 +120,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         session.questionIndex,
         session.showAnswers
       );
-    } else {
-      const defaultCategory = state.currentCategory;
-      statsTracker.setCategory(defaultCategory);
-      questions = await startQuiz(defaultCategory, state.currentSubcategory, state);
+    } else if (state.currentCategory) {
+      // Only start quiz if category selected
+      statsTracker.setCategory(state.currentCategory);
+      questions = await startQuiz(state.currentCategory, state.currentSubcategory, state);
     }
   } catch (err) {
     console.error('[index] Failed to load questions:', err);
@@ -142,6 +151,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ------------------------
   // Setup Buttons (centralized)
   // ------------------------
-  // Handles hide/show answers, shuffle, toggle answers, and stats card
   setupButtons(state);
+
+  // ------------------------
+  // Logo Reset Click Handler
+  // ------------------------
+  const logoEl = document.getElementById('logo'); // adjust ID if needed
+  if (logoEl) {
+    logoEl.addEventListener('click', () => {
+      import('./core/quizLoader.js').then(({ resetQuiz }) => resetQuiz());
+    });
+  }
 });
