@@ -1,9 +1,10 @@
-//dropdowns.js
+// dropdowns.js
 
 import { quizMeta, getCategoryIcon } from '../data/quizMeta.js';
 import { getSubcategoriesForCategory } from '../utils/quizMetaUtils.js';
 import { startQuiz } from './quizLoader.js';
 import { saveSession } from './sessionManager.js';
+import { renderTagFilter } from '../ui/tagFilter.js';
 
 export function closeDropdown(toggleBtn, optionsEl) {
   try {
@@ -29,6 +30,14 @@ export function populateDropdown(listEl, options, selectedVal) {
 export function setupDropdowns(toggleBtn, optionsEl, optionsArray, filterKey, state) {
   populateDropdown(optionsEl, optionsArray, state[filterKey]);
 
+  // Fresh start for category dropdown
+  if (filterKey === 'currentCategory' && !state[filterKey]) {
+    toggleBtn.innerHTML = `👉 Select Category ▾`;
+  }
+
+  // ------------------------
+  // Toggle button click
+  // ------------------------
   toggleBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
@@ -36,9 +45,13 @@ export function setupDropdowns(toggleBtn, optionsEl, optionsArray, filterKey, st
     toggleBtn.parentElement.classList.toggle('show', !expanded);
   });
 
-  optionsEl.addEventListener('click', (e) => {
+  // ------------------------
+  // Dropdown option click
+  // ------------------------
+  optionsEl.addEventListener('click', async (e) => {
     e.stopPropagation();
     if (e.target.tagName !== 'LI') return;
+
     const val = e.target.dataset.value;
     closeDropdown(toggleBtn, optionsEl);
     if (val === state[filterKey]) return;
@@ -50,6 +63,7 @@ export function setupDropdowns(toggleBtn, optionsEl, optionsArray, filterKey, st
       const label = quizMeta.categories.find(o => o.value === val)?.label || '';
       toggleBtn.innerHTML = `${icon} ${label} ▾`;
 
+      // Reset subcategory
       const subcategories = getSubcategoriesForCategory(val);
       const subcatOptions = [
         { label: 'All Subcategories', value: 'all', icon: '🌐' },
@@ -64,17 +78,39 @@ export function setupDropdowns(toggleBtn, optionsEl, optionsArray, filterKey, st
         statsTracker.setCategory(val);
       });
 
-      startQuiz(val, 'all', state);
+      // Load questions for category
+      const questions = await startQuiz(val, 'all', state);
+
+      // Render tags
+      const tagFilterEl = document.getElementById('tag-filter');
+      if (tagFilterEl) {
+        state.selectedTags = [];
+        renderTagFilter(tagFilterEl, [...new Set(questions.flatMap(q => q.tags || []))].sort(), null);
+      }
+
     } else if (filterKey === 'currentSubcategory') {
       const label = optionsEl.querySelector(`li[data-value="${val}"]`)?.textContent || 'Select';
       toggleBtn.textContent = `${label} ▾`;
-      startQuiz(state.currentCategory, val, state);
+
+      // Load questions for subcategory
+      const questions = await startQuiz(state.currentCategory, val, state);
+
+      // Render tags
+      const tagFilterEl = document.getElementById('tag-filter');
+      if (tagFilterEl) {
+        state.selectedTags = [];
+        renderTagFilter(tagFilterEl, [...new Set(questions.flatMap(q => q.tags || []))].sort(), null);
+      }
+
       try { closeDropdown(toggleBtn, optionsEl); } catch {}
     }
 
     saveSession(state);
   });
 
+  // ------------------------
+  // Click outside closes dropdown
+  // ------------------------
   if (!toggleBtn._outsideHandlerAdded) {
     document.addEventListener('click', (e) => {
       if (!toggleBtn.parentElement.contains(e.target)) {
@@ -82,5 +118,22 @@ export function setupDropdowns(toggleBtn, optionsEl, optionsArray, filterKey, st
       }
     });
     toggleBtn._outsideHandlerAdded = true;
+  }
+
+  // ------------------------
+  // Tag Filter Listener (single attach, future-proof for multi-tag)
+  // ------------------------
+  const tagFilterEl = document.getElementById('tag-filter');
+  if (tagFilterEl && !tagFilterEl._listenerAdded) {
+    tagFilterEl.addEventListener('tagsChanged', async (e) => {
+      const selectedTag = e.detail; // string or null
+      state.selectedTags = selectedTag ? [selectedTag] : [];
+
+      const currentCategory = state.currentCategory;
+      const currentSubcategory = state.currentSubcategory || 'all';
+
+      await startQuiz(currentCategory, currentSubcategory, state, selectedTag);
+    });
+    tagFilterEl._listenerAdded = true;
   }
 }
