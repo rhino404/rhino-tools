@@ -102,20 +102,12 @@ nav[aria-label="Quiz Filters"] {
   text-align: center;
 }
 
-.dropdown-toggle {
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 0.6em 1.4em;
-  width: 100%;
-  text-align: left;
-}
-
 .dropdown-menu {
   display: none;
-  position: absolute;
-  border-radius: 5px;
+  position: center;
+  border-radius: 8px;
   list-style: none;
-  padding: 0.5em 0;
+  padding: 0;
   margin: 0;
   min-width: 180px;
   max-height: 250px;
@@ -128,7 +120,7 @@ nav[aria-label="Quiz Filters"] {
 .dropdown-menu li {
   padding: 0.5em 1em;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
 }
 
 .dropdown.show .dropdown-menu {

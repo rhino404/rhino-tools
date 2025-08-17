@@ -41,9 +41,20 @@ export function setupDropdowns(toggleBtn, optionsEl, optionsArray, filterKey, st
   toggleBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+
+    // Close all other dropdowns before opening this one
+    document.querySelectorAll('.dropdown.show').forEach(drop => {
+      if (drop !== toggleBtn.parentElement) {
+        const otherToggle = drop.querySelector('button');
+        const otherOptions = drop.querySelector('ul');
+        closeDropdown(otherToggle, otherOptions);
+      }
+    });
+
     toggleBtn.setAttribute('aria-expanded', String(!expanded));
     toggleBtn.parentElement.classList.toggle('show', !expanded);
   });
+
 
   // ------------------------
   // Dropdown option click
@@ -126,13 +137,15 @@ export function setupDropdowns(toggleBtn, optionsEl, optionsArray, filterKey, st
   const tagFilterEl = document.getElementById('tag-filter');
   if (tagFilterEl && !tagFilterEl._listenerAdded) {
     tagFilterEl.addEventListener('tagsChanged', async (e) => {
-      const selectedTag = e.detail; // string or null
-      state.selectedTags = selectedTag ? [selectedTag] : [];
+      // Always treat detail as an array (future-proof for multi-tag)
+      const selectedTags = Array.isArray(e.detail) ? e.detail : [];
+      state.selectedTags = selectedTags;
 
       const currentCategory = state.currentCategory;
       const currentSubcategory = state.currentSubcategory || 'all';
 
-      await startQuiz(currentCategory, currentSubcategory, state, selectedTag);
+      // Load questions filtered by selected tags
+      await startQuiz(currentCategory, currentSubcategory, state, selectedTags);
     });
     tagFilterEl._listenerAdded = true;
   }
