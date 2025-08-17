@@ -250,10 +250,17 @@ button.accent:hover,
 .dropdown-menu {
   border-radius: 6px;
 }
+
 .dropdown-menu li {
   padding: 0.5rem 1rem;
   transition: background 0.15s;
 }
+
+/* .dropdown-menu li:hover {
+  padding: 0.5rem 1rem;
+  transition: background 0.15s;
+  background: var(--color-accent-orange);
+} */
 
 /* =========================
    Progress Bars

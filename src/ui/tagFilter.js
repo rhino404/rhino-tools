@@ -1,28 +1,23 @@
-/**
- * Render tag filter buttons.
- * @param {HTMLElement} containerEl - The container for the tags.
- * @param {string[]} availableTags - Array of tag strings.
- * @param {string|string[]} selectedTags - Currently selected tag(s). Can be a string (single-select) or array (multi-select).
- * @param {Object} options - Optional settings, e.g., { multiSelect: false }
- */
 export function renderTagFilter(containerEl, availableTags, selectedTags = null, options = { multiSelect: false }) {
   if (!containerEl) return;
-  containerEl.innerHTML = '';
+
+  // ===== Clear previous buttons and reset selection =====
+  containerEl.innerHTML = ''; 
+  containerEl.style.display = 'flex';
 
   if (!availableTags || availableTags.length === 0) {
     containerEl.style.display = 'none';
     return;
   }
 
-  containerEl.style.display = 'flex';
-
-  // Normalize selectedTags for multi/single mode
+  // Normalize selection — start fresh for new category
   let selectedSet = new Set();
   if (options.multiSelect) {
     if (Array.isArray(selectedTags)) selectedSet = new Set(selectedTags);
   } else {
     if (typeof selectedTags === 'string' && selectedTags) selectedSet.add(selectedTags);
   }
+  // If no selectedTags passed, this creates an empty set => old tags cleared
 
   availableTags.forEach(tag => {
     const btn = document.createElement('button');
@@ -33,10 +28,9 @@ export function renderTagFilter(containerEl, availableTags, selectedTags = null,
     if (selectedSet.has(tag)) btn.classList.add('active');
 
     btn.addEventListener('click', () => {
-      let newSelected = null;
+      let newSelected = [];
 
       if (options.multiSelect) {
-        // Multi-select logic
         if (btn.classList.contains('active')) {
           btn.classList.remove('active');
           selectedSet.delete(tag);
@@ -46,14 +40,13 @@ export function renderTagFilter(containerEl, availableTags, selectedTags = null,
         }
         newSelected = [...selectedSet];
       } else {
-        // Single-select logic
         if (btn.classList.contains('active')) {
-          btn.classList.remove('active'); // deselect
-          newSelected = null;
+          btn.classList.remove('active');
+          newSelected = [];
         } else {
           containerEl.querySelectorAll('.tag-filter-btn').forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          newSelected = tag;
+          newSelected = [tag];
         }
       }
 
@@ -63,3 +56,4 @@ export function renderTagFilter(containerEl, availableTags, selectedTags = null,
     containerEl.appendChild(btn);
   });
 }
+

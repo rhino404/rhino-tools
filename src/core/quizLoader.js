@@ -49,6 +49,9 @@ function filterByTags(questions, selectedTags) {
 }
 
 export async function startQuiz(category, subcategory, state) {
+    // ===== Clear old tag selections for new category =====
+    state.selectedTags = []; // <-- discard old tags when switching categories
+
     state.currentCategory = category;
     state.currentSubcategory = subcategory || 'all';
 
@@ -83,7 +86,7 @@ export async function startQuiz(category, subcategory, state) {
     // ✅ Store unfiltered list for tag changes
     state.allQuestions = [...questions];
 
-    // ✅ Apply tag filtering
+    // ✅ Apply tag filtering (now will always start empty)
     questions = filterByTags(state.allQuestions, state.selectedTags);
 
     try {
@@ -106,6 +109,7 @@ export async function startQuiz(category, subcategory, state) {
     // ✅ Return questions so index.js can render tag filter
     return state.questions;
 }
+
 
 // ✅ Allow dynamic tag updates mid-quiz (preserves index)
 export function updateTagFilter(newTags) {
