@@ -1,6 +1,8 @@
 //statsTracker.js
 
 import { getCategoryIcon } from '../data/quizMeta.js';
+import { showConfirm, showStatusModal } from './modal.js';
+
 
 const STORAGE_KEY = 'rynoToolsUserStats';
 const TOTALS_CACHE_TTL = 5 * 60 * 1000; // 5 minutes
@@ -346,7 +348,7 @@ class StatsTracker {
 
     async showCard() {
         if (!this.stats.category) {
-            showMessage('Please choose a category first to view your stats.');
+            showStatusModal('Select a category to view stats.');
             return;
         }
         // if the card was removed by a previous clear action, recreate it
@@ -362,52 +364,13 @@ class StatsTracker {
     }
 }
 
-// Shared modal builder - Clear Stats
-function showModal({ message, confirmText = 'OK', cancelText = null, onConfirm = null }) {
-  const modal = document.createElement('div');
-  modal.className = 'custom-modal-overlay';
-
-  let buttonsHTML = `<button class="modal-confirm">${confirmText}</button>`;
-  if (cancelText) {
-    buttonsHTML += `<button class="modal-cancel">${cancelText}</button>`;
-  }
-
-  modal.innerHTML = `
-    <div class="custom-modal">
-      <p>${message}</p>
-      <div class="modal-buttons">
-        ${buttonsHTML}
-      </div>
-    </div>
-  `;
-
-  document.body.appendChild(modal);
-
-  modal.querySelector('.modal-confirm').addEventListener('click', () => {
-    if (onConfirm) onConfirm();
-    modal.remove();
-  });
-
-  if (cancelText) {
-    modal.querySelector('.modal-cancel').addEventListener('click', () => modal.remove());
-  }
-}
-
-function showMessage(message) {
-  showModal({ message });
-}
-
-function showConfirm(message, onConfirm) {
-  showModal({ message, confirmText: 'Yes', cancelText: 'Cancel', onConfirm });
-}
-
 export const statsTracker = new StatsTracker();
 
 export default {
-  setCategory: statsTracker.setCategory.bind(statsTracker),
-  updateStats: statsTracker.logAnswer.bind(statsTracker),
-  resetStats: statsTracker.reset.bind(statsTracker),
-  initStatsCard: statsTracker.initCard.bind(statsTracker),
-  loadStats: statsTracker.load.bind(statsTracker),
-  saveStats: statsTracker.save.bind(statsTracker)
+    setCategory: statsTracker.setCategory.bind(statsTracker),
+    updateStats: statsTracker.logAnswer.bind(statsTracker),
+    resetStats: statsTracker.reset.bind(statsTracker),
+    initStatsCard: statsTracker.initCard.bind(statsTracker),
+    loadStats: statsTracker.load.bind(statsTracker),
+    saveStats: statsTracker.save.bind(statsTracker)
 };

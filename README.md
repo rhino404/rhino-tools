@@ -7,7 +7,7 @@
 
 **Ryno.Tools**: A high-octane microlearning platform that supercharges your mastery of Ham Radio, Cybersecurity, and more. Crush your goals with bite-sized quizzes, adaptive tracking, and a sleek, browser-based interface.
 
-👉 **Unleash Your Potential** — [ryno.tools](https://ryno.tools)
+👉 **Build Your Momentum** @ [ryno.tools](https://ryno.tools)
 
 ---
 
