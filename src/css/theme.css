@@ -5,24 +5,32 @@
 
 :root {
   /* ===== Primary Colors ===== */
-  --color-primary: #1a755e; /* Deep Green */
-  --color-primary-hover: #209173; /* Hover */
-  --color-primary-light: #3ba78c; /* Lighter variant */
-  --color-primary-dark: #145a47; /* Darker variant */
+  --color-primary: #1a755e;
+  /* Deep Green */
+  --color-primary-hover: #209173;
+  /* Hover */
+  --color-primary-light: #3ba78c;
+  /* Lighter variant */
+  --color-primary-dark: #145a47;
+  /* Darker variant */
 
   /* ===== Accent Colors ===== */
-  --color-accent-yellow: #fcd34d; /* Electric Yellow */
+  --color-accent-yellow: #fcd34d;
+  /* Electric Yellow */
   --color-accent-yellow-light: #fde68a;
   --color-accent-yellow-dark: #d97706;
 
-  --color-accent-orange: #f97316; /* Bright Orange */
+  --color-accent-orange: #f97316;
+  /* Bright Orange */
   --color-accent-orange-light: #fb923c;
   --color-accent-orange-dark: #c2410c;
 
   /* ===== Neutrals ===== */
-  --color-neutral-dark: #111827; /* Dark Charcoal */
+  --color-neutral-dark: #111827;
+  /* Dark Charcoal */
   --color-neutral-dark-alt: #1f2937;
-  --color-neutral-light: #e5e7eb; /* Soft Grey */
+  --color-neutral-light: #e5e7eb;
+  /* Soft Grey */
   --color-neutral-light-alt: #f3f4f6;
 
   /* ===== Overlays ===== */
@@ -45,15 +53,25 @@
 /* =========================
    Typography
 ========================= */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-headline);
 }
 
-body, p, li, span, div {
+body,
+p,
+li,
+span,
+div {
   font-family: var(--font-body);
 }
 
-code, pre {
+code,
+pre {
   font-family: var(--font-code);
 }
 
@@ -71,14 +89,16 @@ code, pre {
 /* Light mode */
 body.light-mode .question {
   border: 2px solid var(--color-neutral-dark-alt);
-  background-color: rgba(0, 0, 0, 0.05); /* subtle light overlay */
+  background-color: rgba(0, 0, 0, 0.05);
+  /* subtle light overlay */
   color: var(--color-neutral-dark);
 }
 
 /* Dark mode */
 body.dark-mode .question {
   border: 2px solid var(--color-neutral-light);
-  background-color: rgba(255, 255, 255, 0.05); /* subtle dark overlay */
+  background-color: rgba(255, 255, 255, 0.05);
+  /* subtle dark overlay */
   color: #fff;
 }
 
@@ -87,7 +107,7 @@ body.dark-mode .question {
    Theme Transition Effect
 ========================= */
 body.theme-transition {
-  transition: 
+  transition:
     background-color 0.4s ease,
     color 0.4s ease,
     background-image 0.4s ease;
@@ -101,19 +121,19 @@ body.theme-transition {
 body.dark-mode #pwaInstallBanner {
   background-color: var(--button-color-dark);
   background-image:
-    repeating-linear-gradient(
-      45deg,
+    repeating-linear-gradient(45deg,
       rgba(255, 255, 255, 0.05) 0px,
       rgba(255, 255, 255, 0.05) 20px,
       transparent 20px,
-      transparent 40px
-    );
+      transparent 40px);
   color: white;
 }
+
 body.dark-mode #pwaInstallBanner button {
   background: var(--color-accent-orange);
   color: white;
 }
+
 body.dark-mode #pwaInstallBanner button:hover {
   background: var(--color-accent-orange-light);
 }
@@ -122,20 +142,20 @@ body.dark-mode #pwaInstallBanner button:hover {
 body.light-mode #pwaInstallBanner {
   background-color: var(--button-color-dark);
   background-image:
-    repeating-linear-gradient(
-      45deg,
+    repeating-linear-gradient(45deg,
       rgba(255, 255, 255, 0.05) 0px,
       rgba(255, 255, 255, 0.05) 20px,
       transparent 20px,
-      transparent 40px
-    );
+      transparent 40px);
   color: white;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
+
 body.light-mode #pwaInstallBanner button {
   background: var(--color-accent-orange);
   color: white;
 }
+
 body.light-mode #pwaInstallBanner button:hover {
   background: var(--color-accent-orange-light);
 }
@@ -165,6 +185,7 @@ button,
   background: var(--color-primary);
   color: white;
 }
+
 .btn-primary:hover,
 button:hover,
 .level-btn:hover,
@@ -181,6 +202,7 @@ button.accent,
   background: var(--color-accent-orange);
   color: white;
 }
+
 .btn-accent:hover,
 button.accent:hover,
 .level-btn.accent:hover,
@@ -194,6 +216,7 @@ button.accent:hover,
   border: 2px solid var(--color-primary);
   color: var(--color-primary);
 }
+
 .btn-outline:hover {
   background: var(--color-primary);
   color: white;
@@ -217,12 +240,14 @@ button.accent:hover,
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
+
 .circle-btn:hover,
 #shuffle-btn:hover,
 #toggle-answers-btn:hover,
 #hide-answers-btn:hover {
   transform: scale(1.05);
 }
+
 .circle-btn.active,
 #shuffle-btn.active,
 #toggle-answers-btn.active,
@@ -252,6 +277,7 @@ button.accent:hover,
   width: 100%;
   overflow: hidden;
 }
+
 .progress-fill {
   height: 100%;
   transition: width 0.3s ease;
@@ -292,9 +318,11 @@ body.dark-mode .tag-filter-btn {
   background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
   color: #ccc;
 }
+
 body.dark-mode .tag-filter-btn:hover {
   background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
 }
+
 body.dark-mode .tag-filter-btn.active {
   background: #00c896;
   color: #000;
@@ -307,15 +335,18 @@ body.dark-mode .tag-filter-btn.active {
 body.light-mode .tag-filter-title {
   color: var(--color-neutral-dark);
 }
+
 body.light-mode .tag-filter-btn {
   background: linear-gradient(145deg, #ffffff, #f5f5f5);
   color: var(--color-neutral-dark);
   border: 1px solid #ccc;
 }
+
 body.light-mode .tag-filter-btn:hover {
   background: var(--color-primary-hover);
   color: #fff;
 }
+
 body.light-mode .tag-filter-btn.active {
   background: var(--color-accent-orange);
   color: #fff;
@@ -328,12 +359,14 @@ body.light-mode .tag-filter-btn.active {
    Correct & Incorrect Effects
 ============================ */
 .correct-effect {
-  background-color: var(--color-primary-light); /* lighter green for correct */
+  background-color: var(--color-primary-light);
+  /* lighter green for correct */
   transition: background 0.4s;
 }
 
 .incorrect-effect {
-  background-color: var(--color-accent-orange-light); /* lighter orange for incorrect */
+  background-color: var(--color-accent-orange-light);
+  /* lighter orange for incorrect */
   transition: background 0.4s;
 }
 
@@ -346,9 +379,11 @@ body.light-mode .tag-filter-btn.active {
   justify-content: center;
   transition: color 0.2s ease, transform 0.2s ease;
 }
+
 #social-links a:hover {
   transform: scale(1.1);
 }
+
 #social-links .social-icon {
   width: 24px;
   height: 24px;
@@ -368,13 +403,11 @@ body.light-mode .tag-filter-btn.active {
 #crypto-bar {
   background-size: 40px 40px;
   background-image:
-    repeating-linear-gradient(
-      45deg,
+    repeating-linear-gradient(45deg,
       rgba(255, 255, 255, 0.05) 0px,
       rgba(255, 255, 255, 0.05) 20px,
       transparent 20px,
-      transparent 40px
-    );
+      transparent 40px);
   color: white;
 }
 
@@ -382,13 +415,11 @@ body.light-mode .tag-filter-btn.active {
 body.dark-mode #crypto-bar {
   background-color: transparent;
   background-image:
-    repeating-linear-gradient(
-      45deg,
+    repeating-linear-gradient(45deg,
       rgba(255, 255, 255, 0.05) 0px,
       rgba(255, 255, 255, 0.05) 20px,
       transparent 20px,
-      transparent 40px
-    ),
+      transparent 40px),
     var(--gradient-green-torque);
 }
 
@@ -396,13 +427,11 @@ body.dark-mode #crypto-bar {
 body #crypto-bar {
   background-color: transparent;
   background-image:
-    repeating-linear-gradient(
-      45deg,
+    repeating-linear-gradient(45deg,
       rgba(0, 0, 0, 0.05) 0px,
       rgba(0, 0, 0, 0.05) 20px,
       transparent 20px,
-      transparent 40px
-    ),
+      transparent 40px),
     var(--gradient-green-torque);
 }
 
@@ -415,11 +444,9 @@ body #crypto-bar {
 body.light-mode {
   background-color: var(--color-neutral-light);
   color: var(--color-neutral-dark);
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0.85),
-    rgba(255, 255, 255, 0.85)
-  ),
-  url(../images/rhino404.jpeg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)),
+    url(../images/rhino404.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center left;
@@ -445,7 +472,8 @@ body.light-mode button:hover,
 body.light-mode .level-btn:hover,
 body.light-mode .category-btn:hover,
 body.light-mode .dropdown-toggle:hover {
-  background: var(--color-primary-hover); /* lighter green */
+  background: var(--color-primary-hover);
+  /* lighter green */
   transform: scale(1.03);
 }
 
@@ -479,7 +507,8 @@ body.light-mode .explanation {
   color: var(--color-neutral-dark);
   border: 1px solid #ccc;
   border-radius: var(--border-radius);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* light shadow for separation */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  /* light shadow for separation */
 }
 
 /* =========================
@@ -530,10 +559,11 @@ body.light-mode #hide-answers-btn {
   font-size: 1.2em;
   font-weight: bold;
   cursor: pointer;
-  background: linear-gradient(145deg, #ffffff, #f2f2f2); /* soft gradient */
+  background: linear-gradient(145deg, #ffffff, #f2f2f2);
+  /* soft gradient */
   color: var(--color-neutral-dark);
   border: 1px solid #ccc;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
   transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
@@ -550,7 +580,8 @@ body.light-mode #shuffle-btn.active,
 body.light-mode #toggle-answers-btn.active,
 body.light-mode #hide-answers-btn.active {
   border: 2px solid var(--color-accent-orange);
-  box-shadow: 0 0 8px rgba(249, 115, 22, 0.6); /* soft orange glow */
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
+  /* soft orange glow */
 }
 
 /* =========================
@@ -558,18 +589,21 @@ body.light-mode #hide-answers-btn.active {
 ========================= */
 body.light-mode .question {
   color: var(--color-neutral-dark);
-  -webkit-text-stroke: none; /* keep clean text */
+  -webkit-text-stroke: none;
+  /* keep clean text */
 }
 
 /* =========================
    Social Icons
 ========================= */
 body.light-mode #social-links a {
-  color: #000; /* base black */
+  color: #000;
+  /* base black */
 }
 
 body.light-mode #social-links a:hover {
-  color: var(--color-primary); /* brand green */
+  color: var(--color-primary);
+  /* brand green */
 }
 
 /* =========================
@@ -591,10 +625,8 @@ body.light-mode #social-links a:hover {
 body.dark-mode {
   background-color: var(--primary-bg);
   color: var(--text-color-dark);
-  background-image: linear-gradient(
-      rgba(17, 24, 39, 0.95), 
-      rgba(17, 24, 39, 0.95)
-    ),
+  background-image: linear-gradient(rgba(17, 24, 39, 0.95),
+      rgba(17, 24, 39, 0.95)),
     url(../images/rhino404.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -646,7 +678,8 @@ body.dark-mode .category-btn[aria-pressed="true"] {
 ========================= */
 
 body.dark-mode .choice-btn.correct {
-  border: 2px solid var(--color-accent-orange); /* Bright orange border */
+  border: 2px solid var(--color-accent-orange);
+  /* Bright orange border */
   color: #fff;
   font-weight: bold;
   box-shadow: 0 0 8px var(--color-accent-orange);
@@ -757,107 +790,6 @@ body.dark-mode .progress-fill {
   background-color: #76ff7a;
 }
 
-/* =========================
-   Modal - Light Mode
-========================= */
-.custom-modal {
-  background-color: var(--color-neutral-light);   /* modal background */
-  color: var(--color-neutral-dark);              /* modal text */
-  padding: 1.5em;
-  border-radius: 8px;
-  max-width: 320px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* Confirm button */
-.modal-confirm {
-  background-color: var(--color-primary) !important;
-  color: white !important;
-  border: none;
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.modal-confirm:hover {
-  background-color: var(--color-primary-hover) !important;
-}
-
-/* Cancel button */
-.modal-cancel {
-  background-color: var(--color-neutral-dark) !important;      /* dark gray */
-  color: var(--color-neutral-light-alt) !important;           /* light text */
-  border: 1px solid var(--color-neutral-light-alt) !important;
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.modal-cancel:hover {
-  background-color: var(--color-neutral-dark-alt) !important;  /* slightly lighter */
-}
-
-/* Overlay */
-.custom-modal-overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* =========================
-   Modal - Dark Mode
-========================= */
-.dark-mode .custom-modal {
-  background-color: var(--color-neutral-dark-alt); /* dark modal background */
-  color: var(--color-neutral-light-alt);           /* light text */
-  padding: 1.5em;
-  border-radius: 8px;
-  max-width: 320px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
-
-/* Confirm button */
-.dark-mode .modal-confirm {
-  background-color: var(--color-primary-dark);
-  color: white;
-  border: none;
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.dark-mode .modal-confirm:hover {
-  background-color: var(--color-primary);
-}
-
-/* Cancel button */
-.dark-mode .modal-cancel {
-  background-color: var(--color-neutral-dark);
-  color: var(--color-neutral-light-alt);
-  border: 1px solid var(--color-neutral-light-alt);
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.dark-mode .modal-cancel:hover {
-  background-color: var(--color-neutral-dark-alt);
-}
-
-/* Overlay */
-.dark-mode .custom-modal-overlay {
-  background: rgba(17, 24, 39, 0.8); /* slightly darker overlay */
-}
 
 /* =========================
    Social Icons
@@ -917,4 +849,131 @@ body.dark-mode #social-links a:hover {
 #hide-answers-btn.active {
   border: 2px solid var(--color-accent-orange);
   box-shadow: 0 0 8px var(--color-accent-orange);
+}
+
+/* =========================
+   Modal - Light Mode
+========================= */
+.custom-modal {
+  background-color: var(--color-neutral-light);
+  /* modal background */
+  color: var(--color-neutral-dark);
+  /* modal text */
+  padding: 1.5em;
+  border-radius: 8px;
+  max-width: 320px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Confirm button */
+.modal-confirm {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-confirm:hover {
+  background-color: var(--color-primary-hover) !important;
+}
+
+/* Cancel button */
+.modal-cancel {
+  background-color: var(--color-neutral-dark) !important;
+  /* dark gray */
+  color: var(--color-neutral-light-alt) !important;
+  /* light text */
+  border: 1px solid var(--color-neutral-light-alt) !important;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-cancel:hover {
+  background-color: var(--color-neutral-dark-alt) !important;
+  /* slightly lighter */
+}
+
+/* Overlay */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   Modal - Dark Mode
+========================= */
+.dark-mode .custom-modal {
+  background-color: var(--color-neutral-dark-alt);
+  /* dark modal background */
+  color: var(--color-neutral-light-alt);
+  /* light text */
+  padding: 1.5em;
+  border-radius: 8px;
+  max-width: 320px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Confirm button */
+.dark-mode .modal-confirm {
+  background-color: var(--color-primary-dark);
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dark-mode .modal-confirm:hover {
+  background-color: var(--color-primary);
+}
+
+/* Cancel button */
+.dark-mode .modal-cancel {
+  background-color: var(--color-neutral-dark);
+  color: var(--color-neutral-light-alt);
+  border: 1px solid var(--color-neutral-light-alt);
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dark-mode .modal-cancel:hover {
+  background-color: var(--color-neutral-dark-alt);
+}
+
+/* Overlay */
+.dark-mode .custom-modal-overlay {
+  background: rgba(17, 24, 39, 0.8);
+  /* slightly darker overlay */
+}
+
+body.dark .custom-modal {
+  background: var(--color-neutral-dark-alt);
+  color: var(--color-accent-yellow-light);
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
+}
+
+.modal-backdrop {
+  background: var(--overlay-light);
+}
+
+body.dark .modal-backdrop {
+  background: var(--overlay-dark);
 }

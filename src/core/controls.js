@@ -3,6 +3,7 @@ import { showCorrectEffect, showIncorrectEffect } from '../ui/effects.js';
 import { getIcon } from '../utils/utils.js';
 import { renderTagFilter } from '../ui/tagFilter.js';
 import { applyTagFilter } from '../core/quizLoader.js'; // ✅ for tag filtering
+import { showStatusModal } from '../ui/modal.js';
 
 // ===============================
 // ======== questions.js =========
@@ -189,9 +190,6 @@ export function getStartingIndex() {
 // ===============================
 export function renderQuizTagFilter(containerEl, availableTags, state) {
   if (!containerEl || !state) return;
-  console.log(containerEl)
-  console.log(availableTags)
-  console.log(state)
 
   const selectedTags = state.selectedTags || [];
 
@@ -279,6 +277,7 @@ export function setupButtons(state) {
 
   syncAllButtonsUI();
 
+  // === Hide Answers Button ===
   safeClick(state.hideAnswersBtn, () => {
     state.hideAnswers = !state.hideAnswers;
     syncAllButtonsUI();
@@ -289,9 +288,17 @@ export function setupButtons(state) {
       explanationEl: state.explanationEl,
       state
     });
+
+    showStatusModal(`Answers Hidden: ${state.hideAnswers ? 'ON' : 'OFF'}`);
   });
 
+  // === Shuffle Button ===
   safeClick(state.shuffleBtn, () => {
+    if (!state.currentCategory) {
+      showStatusModal('A category must be selected.');
+      return;
+    }
+
     if (!state.questions?.length) return;
     const start = state.currentIndex;
     const remaining = state.questions.slice(start);
@@ -311,8 +318,12 @@ export function setupButtons(state) {
     });
 
     syncAllButtonsUI();
+
+    showStatusModal('Questions Shuffled');
   });
 
+
+  // === Toggle Answers Button ===
   safeClick(state.toggleAnswersBtn, () => {
     state.showingAnswers = !state.showingAnswers;
     syncAllButtonsUI();
@@ -323,9 +334,13 @@ export function setupButtons(state) {
       explanationEl: state.explanationEl,
       state
     });
+
+    showStatusModal(`Answer Toggle: ${state.showingAnswers ? 'ON' : 'OFF'}`);
   });
 
+  // === Stats Button ===
   safeClick(state.showStatsBtn, () => {
-    import('../ui/statsTracker.js').then(({ statsTracker }) => statsTracker.showCard());
+    // Use the existing imported statsTracker instance instead of dynamic import
+    statsTracker.showCard();
   });
 }

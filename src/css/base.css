@@ -13,7 +13,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -156,7 +157,8 @@ main#quiz-container,
 
   /* === Structured box layout === */
   border-radius: var(--border-radius);
-  min-height: 4.5em; /* keeps height consistent across questions */
+  min-height: 4.5em;
+  /* keeps height consistent across questions */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -253,19 +255,23 @@ main#quiz-container,
 
 /* Base layout for tag filters */
 .tag-filter {
-  position: relative; /* Needed for fade overlay positioning */
+  position: relative;
+  /* Needed for fade overlay positioning */
   width: 100%;
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
   scroll-behavior: smooth;
   margin-bottom: 1em;
   cursor: grab;
   user-select: none;
 }
+
 .tag-filter::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
+  /* Chrome/Safari */
 }
 
 #tag-filter.active-drag {
@@ -283,7 +289,8 @@ main#quiz-container,
   display: flex;
   gap: 0.5em;
   padding: 0 0.5em;
-  flex-wrap: nowrap; /* force single row on mobile */
+  flex-wrap: nowrap;
+  /* force single row on mobile */
   margin-bottom: 1em;
 }
 
@@ -311,7 +318,8 @@ main#quiz-container,
 
 /* Active tag style */
 .tag-filter-btn.active {
-  background-color: #4caf50; /* Green highlight */
+  background-color: #4caf50;
+  /* Green highlight */
   color: #fff;
   border-color: #388e3c;
 }
@@ -388,10 +396,23 @@ footer {
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
 }
 
 /* =========================
@@ -418,8 +439,13 @@ body.banner-visible {
 }
 
 @keyframes slideUp {
-  from { transform: translateY(100%); }
-  to { transform: translateY(0); }
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 #pwaInstallBanner.hidden {
@@ -449,6 +475,7 @@ body.banner-visible {
     align-items: center;
     text-align: center;
   }
+
   .pwa-banner-actions {
     justify-content: center;
     width: 100%;
@@ -463,58 +490,6 @@ body.banner-visible {
   font-weight: bold;
 }
 
-/* =========================
-   Modal
-========================= */
-
-.figure-modal {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.figure-modal.hidden {
-  display: none;
-}
-
-.figure-content {
-  padding: 1rem;
-  border-radius: 8px;
-  max-width: 90vw;
-  max-height: 80vh;
-  position: relative;
-}
-
-.figure-content img {
-  max-width: 100%;
-  max-height: 70vh;
-  border-radius: 4px;
-}
-
-.close-button {
-  position: absolute;
-  top: 0.25rem;
-  right: 0.5rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.question-image {
-  cursor: pointer;
-  margin-top: 1rem;
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--border-radius);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: block;
-  margin-inline: auto;
-}
 
 /* ============================
    Stats Card Styles (base.css)
@@ -605,6 +580,74 @@ body.banner-visible {
   margin-top: 4px;
 }
 
+
+/* Stats Bar */
+#statsBar {
+  margin: 2em auto 0;
+  /* space above + center horizontally */
+  text-align: center;
+  max-width: 150px;
+  height: 5em;
+  padding-inline: 0.5em;
+  border-radius: 8px;
+}
+
+/* =========================
+   Status Modal (Base Layout)
+========================= */
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+
+  min-width: 240px;
+  max-width: 400px;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.custom-modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Overlay behind modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  z-index: 1999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Content wrapper */
+.custom-modal .modal-content {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
 .custom-modal-overlay {
   position: fixed;
   inset: 0;
@@ -612,13 +655,6 @@ body.banner-visible {
   align-items: center;
   justify-content: center;
   z-index: 10000;
-}
-
-.custom-modal {
-  padding: 1.5em;
-  border-radius: 12px;
-  max-width: 300px;
-  text-align: center;
 }
 
 .custom-modal p {
@@ -639,12 +675,53 @@ body.banner-visible {
   cursor: pointer;
 }
 
-/* Stats Bar */
-#statsBar {
-  margin: 2em auto 0;     /* space above + center horizontally */
-  text-align: center;
-  max-width: 150px;
-  height: 5em;
-  padding-inline: 0.5em;
+.figure-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.figure-modal.hidden {
+  display: none;
+}
+
+.figure-content {
+  padding: 1rem;
   border-radius: 8px;
+  max-width: 90vw;
+  max-height: 80vh;
+  position: relative;
+}
+
+.figure-content img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 4px;
+}
+
+.close-button {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.question-image {
+  cursor: pointer;
+  margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+  margin-inline: auto;
 }
