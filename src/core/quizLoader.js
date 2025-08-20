@@ -65,17 +65,23 @@ function filterByTags(questions, selectedTags) {
 export async function startQuiz(category, subcategory, stateObj) {
     if (!stateObj) throw new Error('State object is required for startQuiz');
 
+    // --- Update state ---
     stateObj.currentCategory = category;
     stateObj.currentSubcategory = subcategory || 'all';
 
-    // Update category UI
+    // --- Clear tag filter when switching categories ---
+    stateObj.selectedTags = [];
+    const tagFilterEl = document.getElementById('tag-filter');
+    if (tagFilterEl) tagFilterEl.innerHTML = '';
+
+    // --- Update category UI ---
     try {
         const icon = getCategoryIcon[category] || '';
         const label = quizMeta.categories.find(o => o.value === category)?.label || 'Select Category';
         if (stateObj.categoryToggle) stateObj.categoryToggle.innerHTML = `${icon} ${label} ▾`;
     } catch {}
 
-    // Update subcategory UI
+    // --- Update subcategory UI ---
     try {
         const subcategories = getSubcategoriesForCategory(category) || [];
         const subcatOptions = [
@@ -88,13 +94,38 @@ export async function startQuiz(category, subcategory, stateObj) {
         if (stateObj.subcategoryToggle) stateObj.subcategoryToggle.innerHTML = `${subIcon} ${subLabel} ▾`;
     } catch {}
 
+    // --- Set statsTracker category ---
     import('../ui/statsTracker.js').then(({ statsTracker }) => {
         try { statsTracker.setCategory(category); }
         catch (e) { console.warn('[Session] failed to set statsTracker category:', e); }
     });
 
-    // Fetch and store questions
-    let questions = await fetchQuestions(category, stateObj.currentSubcategory);
+    // --- Fetch and filter questions ---
+    const subData = DATA_SOURCES[category] || {};
+    let questions = [];
+
+    if (!stateObj.currentSubcategory || stateObj.currentSubcategory === 'all') {
+        // Flatten all files across all subcategories
+        const allFiles = Object.values(subData).flatMap(fileRef => {
+            if (Array.isArray(fileRef)) return fileRef;
+            if (typeof fileRef === 'string') return [fileRef];
+            return [];
+        });
+
+        questions = await Promise.all(allFiles.map(async url => {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) return [];
+                const data = await res.json();
+                return data.questions || data || [];
+            } catch {
+                return [];
+            }
+        })).then(arr => arr.flat());
+    } else {
+        questions = await fetchQuestions(category, stateObj.currentSubcategory);
+    }
+
     stateObj.allQuestions = [...questions]; // store unfiltered list
     questions = filterByTags(stateObj.allQuestions, stateObj.selectedTags);
 
@@ -116,6 +147,7 @@ export async function startQuiz(category, subcategory, stateObj) {
     saveSession(stateObj);
     return stateObj.questions;
 }
+
 
 // =========================
 // Apply Tag Filter mid-quiz
@@ -160,6 +192,7 @@ export function loadAndShowQuestions(category, subcategory, startIndex = 0, show
         return [];
     }
 
+    // --- Ensure subcategory is valid ---
     const validSubcats = getSubcategoriesForCategory(categoryObj.value) || [];
     let chosenSubcategory = subcategory;
     if (typeof chosenSubcategory !== 'string' ||
@@ -168,16 +201,25 @@ export function loadAndShowQuestions(category, subcategory, startIndex = 0, show
         chosenSubcategory = 'all';
     }
 
+    // --- Reset tag filter UI when switching category ---
+    if (state.tagFilterEl) state.tagFilterEl.innerHTML = '';
+    state.selectedTags = [];
+
+    // --- Start quiz with refreshed state ---
     return startQuiz(categoryObj.value, chosenSubcategory, state);
 }
 
+// =========================
+// Reset Quiz
+// =========================
 export function resetQuiz() {
+  // --- Reset state ---
   state.currentCategory = null;
   state.currentSubcategory = null;
   state.questions = [];
   state.selectedTags = [];
 
-  // Reset UI
+  // --- Reset UI ---
   if (state.categoryToggle) state.categoryToggle.innerHTML = '👉 Select Category ▾';
   if (state.subcategoryToggle) {
     state.subcategoryToggle.innerHTML = '🌐 All Subcategories ▾';
@@ -189,5 +231,10 @@ export function resetQuiz() {
   if (state.choicesEl) state.choicesEl.innerHTML = '';
   if (state.explanationEl) state.explanationEl.textContent = '';
 
+  // --- Clear session & local storage for quiz progress ---
+  sessionStorage.removeItem('rynoToolsAnsweredQuestions');
+  sessionStorage.removeItem('rynoToolsCurrentQuestion');
+
+  // --- Reset stats ---
   import('../ui/statsTracker.js').then(({ statsTracker }) => statsTracker.setCategory(null));
 }

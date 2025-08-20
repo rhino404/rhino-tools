@@ -242,9 +242,9 @@ class StatsTracker {
         this.card.querySelector('#clear-score-card')
             .addEventListener('click', () => {
                 showConfirm('Clear all stats? This cannot be undone.', () => {
-                    this.reset();
-                    // remove the card from DOM so it does not display a default/empty state
-                    this.removeCard();
+                    this.reset(); // clear stats in localStorage
+                    import('../core/quizLoader.js').then(({ resetQuiz }) => resetQuiz()); // reset quiz state/session
+                    this.removeCard(); // remove card from DOM
                 });
             });
     }

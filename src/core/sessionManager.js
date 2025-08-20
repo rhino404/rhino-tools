@@ -78,29 +78,18 @@ export function setupSessionEvents(state) {
     return;
   }
 
-  document.addEventListener('session:save', (ev) => {
+  // helper for repeated event detail handling
+  const persistIndexFromEvent = (ev) => {
     try {
       const newIndex = ev?.detail?.currentIndex;
       if (typeof newIndex === 'number') state.currentIndex = newIndex;
     } catch {}
     saveSession(state);
-  });
+  };
 
-  document.addEventListener('question:answered', (ev) => {
-    try {
-      const newIndex = ev?.detail?.currentIndex;
-      if (typeof newIndex === 'number') state.currentIndex = newIndex;
-    } catch {}
-    saveSession(state);
-  });
-
-  document.addEventListener('question:reset', (ev) => {
-    try {
-      const newIndex = ev?.detail?.currentIndex;
-      if (typeof newIndex === 'number') state.currentIndex = newIndex;
-    } catch {}
-    saveSession(state);
-  });
+  document.addEventListener('session:save', persistIndexFromEvent);
+  document.addEventListener('question:answered', persistIndexFromEvent);
+  document.addEventListener('question:reset', persistIndexFromEvent);
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) saveSession(state);

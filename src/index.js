@@ -20,32 +20,23 @@ import { renderTagFilter } from './ui/tagFilter.js'; // ✅ Correct import
 // Service Worker Registration
 // =========================
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker
-    .register('/src/service-worker/service-worker.js', { scope: '/src/' })
-    .then(reg => console.log('SW registered with scope:', reg.scope))
-    .catch(err => console.error('SW registration failed:', err));
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/service-worker.js') // root path preferred
+      .then(reg => console.log('[SW] Registered with scope:', reg.scope))
+      .catch(err => console.error('[SW] Registration failed:', err));
+  });
 }
-
-// =========================
-// Theme & PWA Initialization
-// =========================
-initializeTheme();
-initPwaInstaller();
-
-// =========================
-// Load Crypto Prices
-// =========================
-loadCryptoPrices();
-
-// =========================
-// Session Event Setup
-// =========================
-setupSessionEvents(state);
 
 // =========================
 // DOM Ready Initialization
 // =========================
 document.addEventListener('DOMContentLoaded', async () => {
+  initializeTheme();
+  initPwaInstaller(); // ensure popup elements exist
+
+  loadCryptoPrices();
+  setupSessionEvents(state);
   const session = loadSession() || {};
 
   // ------------------------

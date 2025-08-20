@@ -1,106 +1,107 @@
 let initialized = false;
 let deferredPrompt = null;
 
-const PWA_DISMISS_KEY = 'pwa_install_dismissed_at'; // for hourly reappearance
-const PWA_SESSION_KEY = 'pwa_install_dismissed_session'; // for per-session reappearance
-const REAPPEAR_DELAY = 60 * 60 * 1000; // 1 hour in ms
-
-// Capture any early beforeinstallprompt events
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-});
+const PWA_DISMISS_KEY = 'pwa_install_dismissed_at';
+const PWA_SESSION_KEY = 'pwa_install_dismissed_session';
+const REAPPEAR_DELAY = 60 * 60 * 1000; // 1 hour
 
 export function initPwaInstaller({
-  installBtnId = 'installBtn',
   popupId = 'pwaInstallBanner',
+  installBtnId = 'installBtn',
+  dismissBtnId = 'pwa-dismiss-btn',
 } = {}) {
   if (initialized) return;
   initialized = true;
 
-  const installBtn = document.getElementById(installBtnId);
   const popup = document.getElementById(popupId);
+  const installBtn = document.getElementById(installBtnId);
+  const dismissBtn = document.getElementById(dismissBtnId);
 
-  if (!installBtn || !popup) {
-    console.warn(`[PWA] Install popup (${popupId}) or button (${installBtnId}) not found. Skipping PWA installer initialization.`);
+  if (!popup || !installBtn) {
+    console.warn('[PWA] Popup or install button not found, skipping initialization.');
     return;
   }
 
   const gtagReport = (eventName) => {
     if (typeof gtag === 'function') {
-      gtag('event', eventName, {
-        event_category: 'PWA',
-        event_label: 'Ryno Tools',
-        non_interaction: true,
-      });
+      gtag('event', eventName, { event_category: 'PWA', event_label: 'Ryno Tools', non_interaction: true });
     }
   };
 
   const canShowPopup = () => {
-    // Don't show again if dismissed this session
     if (sessionStorage.getItem(PWA_SESSION_KEY)) return false;
-
-    // Don't show if dismissed within last hour
     const lastDismiss = localStorage.getItem(PWA_DISMISS_KEY);
-    if (!lastDismiss) return true;
-    return (Date.now() - parseInt(lastDismiss, 10)) >= REAPPEAR_DELAY;
+    return !lastDismiss || (Date.now() - parseInt(lastDismiss, 10)) >= REAPPEAR_DELAY;
   };
 
-  const showPopup = () => {
-    if (!popup) return;
+  const showPopup = (mode = 'install') => {
     if (!canShowPopup()) return;
     popup.classList.remove('hidden');
-    gtagReport('pwa_install_prompt_shown');
+    popup.dataset.mode = mode; // save current mode
+    installBtn.textContent = mode === 'install' ? 'Install App' : 'Update Available';
+    gtagReport(mode === 'install' ? 'pwa_install_prompt_shown' : 'pwa_update_available');
   };
 
   const dismissPopup = () => {
     popup.classList.add('hidden');
     localStorage.setItem(PWA_DISMISS_KEY, Date.now().toString());
-    sessionStorage.setItem(PWA_SESSION_KEY, '1'); // mark dismissed this session
+    sessionStorage.setItem(PWA_SESSION_KEY, '1');
   };
 
+  // --- Update click logic ---
   installBtn.addEventListener('click', async () => {
-    if (!deferredPrompt) {
-      console.debug('[PWA] No deferredPrompt available — cannot trigger install prompt.');
-      return;
-    }
-    try {
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') {
-        gtagReport('pwa_install_accepted');
-        popup.classList.add('hidden');
-      } else {
-        gtagReport('pwa_install_dismissed');
-        dismissPopup();
+    if (deferredPrompt) {
+      // Standard install flow
+      try {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+          gtagReport('pwa_install_accepted');
+          popup.classList.add('hidden');
+        } else {
+          gtagReport('pwa_install_dismissed');
+          dismissPopup();
+        }
+        deferredPrompt = null;
+      } catch (err) {
+        console.error('[PWA] Install prompt failed:', err);
       }
-      deferredPrompt = null;
-    } catch (err) {
-      console.error('[PWA] Install prompt failed:', err);
+    } else if (popup.dataset.mode === 'update') {
+      // Update flow: reload only after user clicks
+      popup.classList.add('hidden');
+      window.location.reload(); // refresh to get latest SW
     }
   });
 
-  if (deferredPrompt) {
-    showPopup();
+
+  // --- Manual dismiss ---
+  if (dismissBtn) {
+    dismissBtn.addEventListener('click', () => {
+      gtagReport('pwa_install_dismissed_manual');
+      dismissPopup();
+    });
   }
 
+  // --- Before install prompt ---
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    showPopup();
+    showPopup('install');
   });
 
+  // --- App installed ---
   window.addEventListener('appinstalled', () => {
     gtagReport('pwa_installed');
     popup.classList.add('hidden');
   });
 
-  // OPTIONAL: add a close/dismiss button in your popup markup
-  const closeBtn = popup.querySelector('#pwa-dismiss-btn');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      gtagReport('pwa_install_dismissed_manual');
-      dismissPopup();
+  // --- SW message listener for updates ---
+  if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      if (event.data?.type === 'NEW_VERSION_AVAILABLE') {
+        console.log('[PWA] New version available.');
+        showPopup('update');
+      }
     });
   }
 }
