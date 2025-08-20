@@ -5346,7 +5346,7 @@
     ]
   },
   {
-    "question": "What at are the three electrodes of a field effect transistor?",
+    "question": "What are the three electrodes of a field effect transistor?",
     "choices": [
       "Emitter, base, and collector",
       "Source, gate, and drain",
@@ -6094,7 +6094,7 @@
     ]
   },
   {
-    "question": "Which of the following describes combining speech with an RF carrier signal?-",
+    "question": "Which of the following describes combining speech with an RF carrier signal?",
     "choices": [
       "Impedance matching",
       "Oscillation",

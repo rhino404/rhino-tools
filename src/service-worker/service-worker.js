@@ -1,8 +1,13 @@
 // service-worker.js
 
+// ===============================
+// PWA Service Worker — Optimized
+// ===============================
+
 // Use build timestamp as cache version (forces update on each deploy)
 const BUILD_TIMESTAMP = new Date().toISOString();
-const CACHE_NAME = `ryno-cache-${BUILD_TIMESTAMP}`;
+const CORE_CACHE = `ryno-core-${BUILD_TIMESTAMP}`;     // Core app shell (HTML, JS, CSS)
+const CONTENT_CACHE = `ryno-content`;                 // Dynamic assets (images, optional resources)
 
 // Optional: set to new domain for migration, or null to disable
 const NEW_DOMAIN = null; // e.g., 'https://ryno.tools/'
@@ -22,23 +27,29 @@ const CORE_ASSETS = [
   `${BASE_PATH}/manifest.json`,
 ];
 
+// ===============================
+// Install Event — Cache Core Assets
+// ===============================
 self.addEventListener('install', (event) => {
   console.log('[SW] Installing — build:', BUILD_TIMESTAMP, 'Scope:', self.registration.scope);
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(CORE_CACHE)
       .then(cache => cache.addAll(CORE_ASSETS))
       .catch(err => console.error('[SW] Cache addAll failed:', err))
   );
   self.skipWaiting(); // Activate immediately after install
 });
 
+// ===============================
+// Activate Event — Clean Old Caches
+// ===============================
 self.addEventListener('activate', (event) => {
   console.log('[SW] Activating — build:', BUILD_TIMESTAMP);
   event.waitUntil(
     caches.keys().then(keys =>
       Promise.all(
         keys
-          .filter(key => key.startsWith('ryno-cache-') && key !== CACHE_NAME)
+          .filter(key => (key.startsWith('ryno-core-') || key.startsWith('ryno-content')) && ![CORE_CACHE, CONTENT_CACHE].includes(key))
           .map(key => {
             console.log('[SW] Deleting old cache:', key);
             return caches.delete(key);
@@ -46,44 +57,58 @@ self.addEventListener('activate', (event) => {
       )
     ).then(() => self.clients.claim())
     .then(() => {
-      // 🔥 Reload all open app windows so they use the new SW immediately
+      // 📢 Notify all clients that a new version is available
       return self.clients.matchAll({ type: 'window', includeUncontrolled: true })
         .then(clientsArr => {
           clientsArr.forEach(client => {
-            console.log('[SW] Reloading client:', client.url);
-            client.navigate(client.url);
+            client.postMessage({ type: 'NEW_VERSION_AVAILABLE' });
           });
         });
     })
   );
 });
 
+// ===============================
+// Fetch Event — Cache-First + Stale-While-Revalidate
+// ===============================
 self.addEventListener('fetch', (event) => {
+  const req = event.request;
+
   // Optional migration redirect — only for navigations
-  if (NEW_DOMAIN && event.request.mode === 'navigate') {
+  if (NEW_DOMAIN && req.mode === 'navigate') {
     console.log('[SW] Redirecting to new domain:', NEW_DOMAIN);
     event.respondWith(Response.redirect(NEW_DOMAIN));
     return;
   }
 
-  // Cache-first strategy (offline friendly)
-  event.respondWith(
-    caches.match(event.request).then(cachedResponse => {
-      if (cachedResponse) return cachedResponse;
+  // Only handle GET requests for caching
+  if (req.method !== 'GET') return;
 
-      return fetch(event.request).then(networkResponse => {
-        if (
-          event.request.method === 'GET' &&
-          event.request.url.startsWith(self.location.origin)
-        ) {
-          caches.open(CACHE_NAME).then(cache => {
-            cache.put(event.request, networkResponse.clone());
-          });
+  event.respondWith(
+    caches.match(req).then(cachedResponse => {
+      // Serve cached response immediately if available
+      if (cachedResponse) {
+        // Update cache in background (stale-while-revalidate)
+        fetch(req).then(networkResp => {
+          if (networkResp.ok) {
+            const cacheToUse = CORE_ASSETS.includes(req.url.replace(location.origin, BASE_PATH)) ? CORE_CACHE : CONTENT_CACHE;
+            caches.open(cacheToUse).then(cache => cache.put(req, networkResp.clone()));
+          }
+        }).catch(() => {});
+        return cachedResponse;
+      }
+
+      // If not cached, fetch from network
+      return fetch(req).then(networkResp => {
+        // Cache dynamically for future
+        if (networkResp.ok) {
+          caches.open(CONTENT_CACHE).then(cache => cache.put(req, networkResp.clone()));
         }
-        return networkResponse;
+        return networkResp;
       }).catch(err => {
         console.warn('[SW] Fetch failed; returning offline cache if available.', err);
-        return caches.match(`${BASE_PATH}/index.html`); // fallback to app shell
+        // fallback to app shell for navigations
+        if (req.mode === 'navigate') return caches.match(`${BASE_PATH}/index.html`);
       });
     })
   );

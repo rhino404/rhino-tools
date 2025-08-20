@@ -117,48 +117,99 @@ body.theme-transition {
    Install Button (PWA) - Theme Styles Only
 ========================= */
 
-/* Dark mode */
+/* -------------------------
+   Dark Mode
+------------------------- */
 body.dark-mode #pwaInstallBanner {
   background-color: var(--button-color-dark);
-  background-image:
-    repeating-linear-gradient(45deg,
-      rgba(255, 255, 255, 0.05) 0px,
-      rgba(255, 255, 255, 0.05) 20px,
-      transparent 20px,
-      transparent 40px);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 20px,
+    transparent 20px,
+    transparent 40px
+  );
   color: white;
 }
 
-body.dark-mode #pwaInstallBanner button {
+body.dark-mode #pwaInstallBanner button#installBtn {
   background: var(--color-accent-orange);
   color: white;
 }
 
-body.dark-mode #pwaInstallBanner button:hover {
+body.dark-mode #pwaInstallBanner button#installBtn:hover {
   background: var(--color-accent-orange-light);
 }
 
-/* Light mode */
+/* Update mode button in dark mode */
+body.dark-mode #pwaInstallBanner[data-mode="update"] button#installBtn {
+  background: var(--color-accent-green);
+  color: white;
+}
+
+body.dark-mode #pwaInstallBanner[data-mode="update"] button#installBtn:hover {
+  background: var(--color-accent-green-light);
+}
+
+/* Dismiss button dark mode */
+body.dark-mode #pwaInstallBanner button#pwa-dismiss-btn {
+  background: none;
+  color: inherit;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+body.dark-mode #pwaInstallBanner button#pwa-dismiss-btn:hover {
+  opacity: 1;
+}
+
+/* -------------------------
+   Light Mode
+------------------------- */
 body.light-mode #pwaInstallBanner {
   background-color: var(--button-color-dark);
-  background-image:
-    repeating-linear-gradient(45deg,
-      rgba(255, 255, 255, 0.05) 0px,
-      rgba(255, 255, 255, 0.05) 20px,
-      transparent 20px,
-      transparent 40px);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 20px,
+    transparent 20px,
+    transparent 40px
+  );
   color: white;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
 
-body.light-mode #pwaInstallBanner button {
+body.light-mode #pwaInstallBanner button#installBtn {
   background: var(--color-accent-orange);
   color: white;
 }
 
-body.light-mode #pwaInstallBanner button:hover {
+body.light-mode #pwaInstallBanner button#installBtn:hover {
   background: var(--color-accent-orange-light);
 }
+
+/* Update mode button in light mode */
+body.light-mode #pwaInstallBanner[data-mode="update"] button#installBtn {
+  background: var(--color-accent-green);
+  color: white;
+}
+
+body.light-mode #pwaInstallBanner[data-mode="update"] button#installBtn:hover {
+  background: var(--color-accent-green-light);
+}
+
+/* Dismiss button light mode */
+body.light-mode #pwaInstallBanner button#pwa-dismiss-btn {
+  background: none;
+  color: inherit;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+body.light-mode #pwaInstallBanner button#pwa-dismiss-btn:hover {
+  opacity: 1;
+}
+
 
 /* =========================
    Buttons - Unified Shape
