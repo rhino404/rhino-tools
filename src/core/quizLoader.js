@@ -6,6 +6,24 @@ import { saveSession } from './sessionManager.js';
 import { state } from './state.js';
 
 // =========================
+// Helper Function to Shuffle an Array
+// =========================
+/**
+ * Shuffles an array in place and returns it.
+ * Uses the Fisher-Yates (aka Knuth) Shuffle algorithm.
+ * @param {Array} array The array to shuffle.
+ * @returns {Array} The shuffled array.
+ */
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+  }
+  return array;
+}
+
+
+// =========================
 // Show question helper
 // =========================
 function showQuestion(index, questions, showingAnswers, els, stateObj) {
@@ -125,6 +143,13 @@ export async function startQuiz(category, subcategory, stateObj) {
     } else {
         questions = await fetchQuestions(category, stateObj.currentSubcategory);
     }
+    
+    // *** NEW: Shuffle choices for every question right after fetching ***
+    questions.forEach(question => {
+        if (question.choices && Array.isArray(question.choices)) {
+            shuffleArray(question.choices);
+        }
+    });
 
     stateObj.allQuestions = [...questions]; // store unfiltered list
     questions = filterByTags(stateObj.allQuestions, stateObj.selectedTags);
