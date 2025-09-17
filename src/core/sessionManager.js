@@ -1,18 +1,15 @@
-// --- Session persistence helpers ---
+// src/core/sessionManager.js
 const SESSION_KEY = 'rynoToolsUserSession';
-const SESSION_EXPIRY_HOURS = 12; // expiry window
+const SESSION_EXPIRY_HOURS = 12;
 
-// these are the per-questions index keys we look for (legacy and current)
 const QUESTIONS_INDEX_KEYS = [
-  'rhinoToolsCurrentQuestionIndex', // existing key used by questions.js in some versions
-  'rynoToolsCurrentQuestionIndex'   // potential future/alternate key
+  'rhinoToolsCurrentQuestionIndex',
+  'rynoToolsCurrentQuestionIndex'
 ];
 
 export function saveSession(state) {
-  if (!state) {
-    console.warn('[Session] No state object passed to saveSession.');
-    return;
-  }
+  if (!state) return console.warn('[Session] No state object passed.');
+
   try {
     const now = Date.now();
     localStorage.setItem(SESSION_KEY, JSON.stringify({
@@ -20,6 +17,7 @@ export function saveSession(state) {
       subcategory: state.currentSubcategory ?? null,
       currentIndex: state.currentIndex ?? 0,
       showingAnswers: state.showingAnswers ?? false,
+      examMode: state.examMode ?? false,
       questions: state.questions ?? [],
       timestamp: now
     }));
@@ -46,6 +44,10 @@ export function loadSession() {
       return null;
     }
 
+    parsed.examMode = parsed.examMode ?? false;
+    parsed.questions = parsed.questions ?? [];
+    parsed.currentIndex = parsed.currentIndex ?? 0;
+
     return parsed;
   } catch (err) {
     console.error('[Session] Failed to load:', err);
@@ -55,9 +57,7 @@ export function loadSession() {
 
 export function clearSession() {
   localStorage.removeItem(SESSION_KEY);
-  for (const key of QUESTIONS_INDEX_KEYS) {
-    localStorage.removeItem(key);
-  }
+  for (const key of QUESTIONS_INDEX_KEYS) localStorage.removeItem(key);
 }
 
 export function getQuestionIndexFromStorage() {
@@ -71,14 +71,9 @@ export function getQuestionIndexFromStorage() {
   return null;
 }
 
-// Event listeners for session saving
 export function setupSessionEvents(state) {
-  if (!state) {
-    console.warn('[Session] No state object passed to setupSessionEvents.');
-    return;
-  }
+  if (!state) return console.warn('[Session] No state object passed.');
 
-  // helper for repeated event detail handling
   const persistIndexFromEvent = (ev) => {
     try {
       const newIndex = ev?.detail?.currentIndex;

@@ -44,8 +44,9 @@
   <link rel="manifest" href="manifest.json?v=20250803" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="./css/base.css?v=20250815" />
-  <link rel="stylesheet" href="./css/theme.css?v=20250815">
+  <link rel="stylesheet" href="./css/base.css?v=20250915" />
+  <link rel="stylesheet" href="./css/theme.css?v=20250915">
+  <link rel="stylesheet" href="./css/modal.css?v=20250915">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://ryno.tools/" />
@@ -111,6 +112,12 @@
     <div id="tag-filter" class="tag-filter"></div>
   </nav>
 
+  <div id="exam-progress-container">
+      <div id="exam-progress-bar">
+          <span id="exam-progress-label"></span>
+      </div>
+  </div>
+
   <main id="quiz-container" tabindex="0" aria-live="polite">
     <h2 class="question" id="question"></h2>
     <div class="choices centered" id="choices"></div>
@@ -119,8 +126,8 @@
 
   <div class="button-group" id="controls">
     <button id="toggle-answers-btn" class="circle-btn" title="Toggle Answers">🫣</button>
-    <button id="shuffle-btn" class="circle-btn" title="Shuffle">🔀</button>
     <button id="hide-answers-btn" class="circle-btn" title="Hide Answers">🙈</button>
+    <button id="exam-btn" class="circle-btn" title="Start Exam">📝</button>
   </div>
 
   <div id="statsBar">
