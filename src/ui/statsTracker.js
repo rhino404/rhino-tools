@@ -1,7 +1,5 @@
-//statsTracker.js
-
 import { getCategoryIcon } from '../data/quizMeta.js';
-import { showConfirm, showStatusModal } from './modal.js';
+import { showConfirmModal, showStatusModal } from './modal.js';
 
 
 const STORAGE_KEY = 'rynoToolsUserStats';
@@ -88,43 +86,42 @@ class StatsTracker {
             stats.currentStreak = 0;
         }
 
-        // Track by topic_id
-        const key = question.topic_id || (question.topic_label ? `${question.topic_label}` : 'unknown');
+        // Use examTopicLabel if present, else fallback
+        const key = question.examTopicLabel || question.topic_id || (question.topic_label ? `${question.topic_label}` : 'unknown');
+
         if (!stats.topics[key]) {
             stats.topics[key] = {
                 correct: 0,
                 incorrect: 0,
                 topic: question.topic || '',
-                topic_label: question.topic_label || '',
+                topic_label: question.topic_label || key,
                 topic_id: question.topic_id || key,
+                examTopicLabel: question.examTopicLabel || null,
                 subcategory: question.subcategory || 'Uncategorized',
                 category: question.category || this.stats.category || 'unknown',
                 total_topic_questions: question.total_topic_questions || 0,
                 total_subcategory_questions: question.total_subcategory_questions || 0,
             };
         }
+
         if (isCorrect) stats.topics[key].correct++;
         else stats.topics[key].incorrect++;
 
-        // Track daily
+        // Daily tracking
         const today = new Date().toISOString().split('T')[0];
-        if (!stats.last7Days[today]) {
-            stats.last7Days[today] = { correct: 0, incorrect: 0 };
-        }
+        if (!stats.last7Days[today]) stats.last7Days[today] = { correct: 0, incorrect: 0 };
         if (isCorrect) stats.last7Days[today].correct++;
         else stats.last7Days[today].incorrect++;
 
-        // Clean up older entries beyond 7 days
+        // Keep only last 7 days
         const cutoff = new Date();
         cutoff.setDate(cutoff.getDate() - 6);
         for (const date in stats.last7Days) {
             if (new Date(date) < cutoff) delete stats.last7Days[date];
         }
 
-        // maintain topic-level previous accuracy tracking
-        if (stats.topics[key].accuracy !== undefined) {
-            stats.topics[key].previousAccuracy = stats.topics[key].accuracy;
-        }
+        // Maintain topic-level previous accuracy tracking
+        if (stats.topics[key].accuracy !== undefined) stats.topics[key].previousAccuracy = stats.topics[key].accuracy;
         const total = stats.topics[key].correct + stats.topics[key].incorrect;
         stats.topics[key].accuracy = total ? stats.topics[key].correct / total : 0;
 
@@ -187,21 +184,19 @@ class StatsTracker {
 
         const groupedTopics = {};
 
-        Object.entries(topics || {}).forEach(([key, data]) => {
-            if (!data.subcategory || !data.topic) return;
+        Object.values(topics || {}).forEach(data => {
+            // Use examTopicLabel if present
+            const groupKey = data.examTopicLabel || data.subcategory || 'Uncategorized';
+
+            if (!groupedTopics[groupKey]) groupedTopics[groupKey] = [];
 
             const total = (data.correct || 0) + (data.incorrect || 0);
             const accuracy = total ? (data.correct / total) : 0;
 
-            if (!groupedTopics[data.subcategory]) groupedTopics[data.subcategory] = [];
-
-            groupedTopics[data.subcategory].push({
-                ...data,
-                total,
-                accuracy,
-            });
+            groupedTopics[groupKey].push({ ...data, total, accuracy });
         });
 
+        // Sort each group by total attempts
         Object.values(groupedTopics).forEach(arr => arr.sort((a, b) => b.total - a.total));
 
         return {
@@ -238,14 +233,27 @@ class StatsTracker {
         this.card.querySelector('#close-score-card')
             .addEventListener('click', () => this.hideCard());
 
-        // When clearing stats we want the card to disappear completely (not show default state)
+        // CORRECTED: Use .then() to handle the promise from showConfirmModal
         this.card.querySelector('#clear-score-card')
             .addEventListener('click', () => {
-                showConfirm('Clear all stats? This cannot be undone.', () => {
-                    this.reset(); // clear stats in localStorage
-                    import('../core/quizLoader.js').then(({ resetQuiz }) => resetQuiz()); // reset quiz state/session
-                    this.removeCard(); // remove card from DOM
-                });
+                showConfirmModal('Clear all stats? This cannot be undone.')
+                    .then(confirmed => {
+                        if (confirmed) {
+                            // 1. Clear stats from localStorage
+                            this.reset();
+
+                            // 2. Clear quiz session data (e.g., current question index)
+                            import('../core/quizLoader.js').then(({ resetQuiz }) => {
+                                if (resetQuiz) resetQuiz();
+                            });
+
+                            // 3. Inform the user and reload for a completely fresh state
+                            showStatusModal('Stats cleared. Reloading...');
+                            setTimeout(() => {
+                                window.location.reload();
+                            }, 1500);
+                        }
+                    });
             });
     }
 
@@ -282,6 +290,29 @@ class StatsTracker {
         topicEl.innerHTML = '';
 
         const grouped = stats.groupedTopics || {};
+
+        // ===== Strongest / Weakest T0–T9 =====
+        const examTopics = Object.entries(grouped)
+            .filter(([k]) => k.startsWith('T'))
+            .flatMap(([_, topics]) => topics);
+
+        let strongest = null, weakest = null;
+        if (examTopics.length) {
+            strongest = examTopics.reduce((a, b) => (a.accuracy > b.accuracy ? a : b));
+            weakest = examTopics.reduce((a, b) => (a.accuracy < b.accuracy ? a : b));
+        }
+
+        if (strongest || weakest) {
+            topicEl.innerHTML += `
+                <div class="exam-summary">
+                    ${strongest ? `🏆 Strongest: ${strongest.examTopicLabel} (${(strongest.accuracy*100).toFixed(1)}%)` : ''}
+                    ${weakest ? `⚠️ Weakest: ${weakest.examTopicLabel} (${(weakest.accuracy*100).toFixed(1)}%)` : ''}
+                </div>
+                <hr>
+            `;
+        }
+
+        // ===== Per-Topic Breakdown =====
         for (const [subcategory, topicList] of Object.entries(grouped)) {
             let totalAvailable = 0;
             if (totalsMap && Object.keys(totalsMap).length) {
@@ -301,13 +332,12 @@ class StatsTracker {
             const progressPct = totalAvailable ? Math.round((totalAnswered / totalAvailable) * 100) : 0;
 
             topicEl.innerHTML += `
-        <div class="subcategory-header">
-          <strong>${subcategory}</strong>
-          <div class="progress-info">Progress: ${totalAnswered} of ${totalAvailable} (${progressPct}%)</div>
-          <div class="progress-bar"><div class="progress-fill" style="width:${progressPct}%"></div></div>
-        </div>
-        <ul class="score-list">
-      `;
+                <div class="subcategory-header">
+                <strong>${subcategory.startsWith('T') ? 'Exam Topic ' + subcategory : subcategory}</strong>
+                <div class="progress-info">Progress: ${totalAnswered} of ${totalAvailable} (${progressPct}%)</div>
+                <div class="progress-bar"><div class="progress-fill" style="width:${progressPct}%"></div></div>
+                </div>
+            `;
 
             const answeredTopics = topicList.filter(t => (t.total || 0) > 0);
             let strongest = null, weakest = null;

@@ -11402,28 +11402,6 @@
     ]
   },
   {
-    "question": "What magnitude of voltage gain can be expected from the circuit in Figure E7-4 when R1 is 10 ohms and RF is 470 ohms?",
-    "choices": [
-      "0.21",
-      "94",
-      "47",
-      "24"
-    ],
-    "correct": "47",
-    "explanation": "47",
-    "category": "ham-radio",
-    "subcategory": "Extra",
-    "topic_id": "E7G",
-    "topic_label": "E7",
-    "topic": "Operational amplifiers: characteristics and applications",
-    "total_topic_questions": 12,
-    "type": "multiple",
-    "image": "./images/ham-radio/E7-4.png",
-    "tags": [
-      "voltage"
-    ]
-  },
-  {
     "question": "How does the gain of an ideal operational amplifier vary with frequency?",
     "choices": [
       "It increases linearly with increasing frequency",

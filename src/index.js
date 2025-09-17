@@ -7,14 +7,14 @@ import { initializeTheme } from './ui/theme.js';
 import { initPwaInstaller } from './services/pwaInstaller.js';
 import { loadCryptoPrices } from './services/cryptoPrices.js';
 import { loadSession, setupSessionEvents } from './core/sessionManager.js';
-import { startQuiz } from './core/quizLoader.js';
+import { startQuiz, restoreSession, loadAndShowQuestions } from './core/quizLoader.js';
 import { setupDropdowns } from './core/dropdowns.js';
-import { setupButtons } from './core/controls.js'; // ✅ Handles quiz buttons centrally
+import { setupButtons } from './core/controls.js';
 import { statsTracker } from './ui/statsTracker.js';
 import { categories, getCategoryIcon } from './data/quizMeta.js';
 import { state } from './core/state.js';
 import { getSubcategoriesForCategory } from './utils/quizMetaUtils.js';
-import { renderTagFilter } from './ui/tagFilter.js'; // ✅ Correct import
+import { renderTagFilter } from './ui/tagFilter.js';
 
 // =========================
 // Service Worker Registration
@@ -22,7 +22,7 @@ import { renderTagFilter } from './ui/tagFilter.js'; // ✅ Correct import
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
-      .register('/service-worker.js') // root path preferred
+      .register('/service-worker.js')
       .then(reg => console.log('[SW] Registered with scope:', reg.scope))
       .catch(err => console.error('[SW] Registration failed:', err));
   });
@@ -33,25 +33,53 @@ if ('serviceWorker' in navigator) {
 // =========================
 document.addEventListener('DOMContentLoaded', async () => {
   initializeTheme();
-  initPwaInstaller(); // ensure popup elements exist
-
+  initPwaInstaller();
   loadCryptoPrices();
   setupSessionEvents(state);
   const session = loadSession() || {};
 
   // ------------------------
+  // Quiz Question Elements
+  // ------------------------
+  state.questionEl = document.getElementById('question');
+  state.choicesEl = document.getElementById('choices');
+  state.explanationEl = document.getElementById('explanation');
+
+  // ------------------------
+  // Button Elements
+  // ------------------------
+  state.toggleAnswersBtn = document.getElementById('toggle-answers-btn');
+  state.hideAnswersBtn = document.getElementById('hide-answers-btn');
+  state.showStatsBtn = document.getElementById('show-stats-btn');
+  state.startExamBtn = document.getElementById('exam-btn');
+
+  // ------------------------
+  // Setup Buttons (centralized)
+  // ------------------------
+  await setupButtons(state);
+
+  // ------------------------
   // Category & Subcategory Elements
   // ------------------------
-  const categoryToggle = document.getElementById('category-toggle');
-  const categoryOptionsEl = document.getElementById('category-options');
-  const subcategoryToggle = document.getElementById('subcategory-toggle');
-  const subcategoryOptionsEl = document.getElementById('subcategory-options');
-  const tagFilterEl = document.getElementById('tag-filter');
+  state.categoryToggle = document.getElementById('category-toggle');
+  state.categoryOptions = document.getElementById('category-options');
+  state.subcategoryToggle = document.getElementById('subcategory-toggle');
+  state.subcategoryOptions = document.getElementById('subcategory-options');
+  state.tagFilterEl = document.getElementById('tag-filter');
 
-  state.categoryToggle = categoryToggle;
-  state.categoryOptions = categoryOptionsEl;
-  state.subcategoryToggle = subcategoryToggle;
-  state.subcategoryOptions = subcategoryOptionsEl;
+  // ------------------------
+  // Restore session if available
+  // ------------------------
+  let restored = false;
+  if (restoreSession(state)) {
+    // If session restored, load and show questions at saved position
+    await loadAndShowQuestions(state.currentCategory, state.currentSubcategory, state.currentIndex);
+    restored = true;
+  } else {
+    // If not restored, use session manager fallback
+    state.currentCategory = session.currentCategory ?? null;
+    state.currentSubcategory = session.currentSubcategory ?? null;
+  }
 
   // ------------------------
   // Category Dropdown Setup
@@ -61,18 +89,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     value: c.value,
     icon: getCategoryIcon[c.value] || ''
   }));
-
-  // Restore session category or start fresh
-  state.currentCategory = session.currentCategory ?? null;
-  state.currentSubcategory = session.currentSubcategory ?? null;
-
-  // Update category toggle display
-  if (categoryToggle) {
-    const catLabel = state.currentCategory
-      ? categories.find(c => c.value === state.currentCategory)?.label || 'Select Category'
-      : '👉 Select Category ▾';
-    const catIcon = state.currentCategory ? getCategoryIcon[state.currentCategory] || '' : '';
-    categoryToggle.innerHTML = `${catIcon} ${catLabel}`;
+  if (state.categoryToggle && state.categoryOptions) {
+    setupDropdowns(state.categoryToggle, state.categoryOptions, categoryList, 'currentCategory', state);
   }
 
   // ------------------------
@@ -83,47 +101,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     : [];
   const subcatOptions = [{ label: 'All Subcategories', value: 'all', icon: '🌐' }, ...currentSubcategories];
 
-  if (subcategoryToggle) {
-    // Ensure currentSubcategory is valid
+  if (state.subcategoryToggle && state.subcategoryOptions) {
     const validSubcat = currentSubcategories.find(s => s.value === state.currentSubcategory);
     state.currentSubcategory = validSubcat ? state.currentSubcategory : 'all';
     const subLabel = validSubcat ? validSubcat.label : 'All Subcategories';
     const subIcon = validSubcat ? '' : '🌐';
-    subcategoryToggle.innerHTML = `${subIcon} ${subLabel}`;
-    subcategoryToggle.parentElement.style.display = state.currentCategory ? 'block' : 'none';
-  }
-
-  // Setup dropdowns
-  if (categoryToggle && categoryOptionsEl) {
-    setupDropdowns(categoryToggle, categoryOptionsEl, categoryList, 'currentCategory', state);
-  }
-  if (subcategoryToggle && subcategoryOptionsEl) {
-    setupDropdowns(subcategoryToggle, subcategoryOptionsEl, subcatOptions, 'currentSubcategory', state);
+    state.subcategoryToggle.innerHTML = `${subIcon} ${subLabel}`;
+    state.subcategoryToggle.parentElement.style.display = state.currentCategory ? 'block' : 'none';
+    setupDropdowns(state.subcategoryToggle, state.subcategoryOptions, subcatOptions, 'currentSubcategory', state);
   }
 
   // ------------------------
-  // Quiz Question Elements
-  // ------------------------
-  state.questionEl = document.getElementById('question') || null;
-  state.choicesEl = document.getElementById('choices') || null;
-  state.explanationEl = document.getElementById('explanation') || null;
-
-  // ------------------------
-  // Load Questions & Render Tags
+  // Load Questions & Render Tags (if not restored)
   // ------------------------
   let questions = [];
   try {
-    if (state.currentCategory) {
-      // Use saved category/subcategory or defaults
+    if (!restored && state.currentCategory) {
       const subcat = state.currentSubcategory || 'all';
       statsTracker.setCategory(state.currentCategory);
       questions = await startQuiz(state.currentCategory, subcat, state);
 
-      // Render tag filter
-      if (tagFilterEl && questions.length) {
+      if (state.tagFilterEl && questions.length) {
         const availableTags = [...new Set(questions.flatMap(q => q.tags || []))].sort();
         state.selectedTags = state.selectedTags || [];
-        renderTagFilter(tagFilterEl, availableTags, state.selectedTags);
+        renderTagFilter(state.tagFilterEl, availableTags, state.selectedTags);
       }
     }
   } catch (err) {
@@ -132,22 +133,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   // ------------------------
-  // Assign Button Elements
-  // ------------------------
-  state.shuffleBtn = document.getElementById('shuffle-btn') || null;
-  state.toggleAnswersBtn = document.getElementById('toggle-answers-btn') || null;
-  state.hideAnswersBtn = document.getElementById('hide-answers-btn') || null;
-  state.showStatsBtn = document.getElementById('show-stats-btn') || null;
-
-  // ------------------------
-  // Setup Buttons (centralized)
-  // ------------------------
-  setupButtons(state);
-
-  // ------------------------
   // Logo Reset Click Handler
   // ------------------------
-  const logoEl = document.getElementById('logo'); // adjust ID if needed
+  const logoEl = document.getElementById('logo');
   if (logoEl) {
     logoEl.addEventListener('click', () => {
       import('./core/quizLoader.js').then(({ resetQuiz }) => resetQuiz());

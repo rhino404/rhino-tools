@@ -503,7 +503,7 @@ body.banner-visible {
   padding: 1.5em;
   border: 1px solid;
   border-radius: 12px;
-  z-index: 9999;
+  z-index: 1000;
   width: 90%;
   max-width: 400px;
   font-family: sans-serif;
@@ -592,129 +592,7 @@ body.banner-visible {
   border-radius: 8px;
 }
 
-/* =========================
-   Status Modal (Base Layout)
-========================= */
-.custom-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2000;
-
-  min-width: 240px;
-  max-width: 400px;
-  padding: 1rem 2rem;
-  border-radius: 12px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.custom-modal.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Overlay behind modal */
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(6px);
-  z-index: 1999;
-
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.modal-backdrop.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Content wrapper */
-.custom-modal .modal-content {
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.custom-modal-overlay {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-}
-
-.custom-modal p {
-  margin-bottom: 1em;
-}
-
-.modal-buttons {
-  display: flex;
-  gap: 0.5em;
-  justify-content: center;
-}
-
-.modal-confirm,
-.modal-cancel {
-  border: none;
-  padding: 0.5em 1em;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.figure-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.figure-modal.hidden {
-  display: none;
-}
-
-.figure-content {
-  padding: 1rem;
-  border-radius: 8px;
-  max-width: 90vw;
-  max-height: 80vh;
-  position: relative;
-}
-
-.figure-content img {
-  max-width: 100%;
-  max-height: 70vh;
-  border-radius: 4px;
-}
-
-.close-button {
-  position: absolute;
-  top: 0.25rem;
-  right: 0.5rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
+/* Question with image */
 .question-image {
   cursor: pointer;
   margin-top: 1rem;
@@ -724,4 +602,102 @@ body.banner-visible {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: block;
   margin-inline: auto;
+}
+
+
+/* === Results Specific (Structure) === */
+.result-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.result-status {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.result-score {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.result-counts {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+}
+
+.result-counts span {
+  font-size: 1.1rem;
+}
+
+/* === Topic Progress Bars (Structure) === */
+.topic-progress {
+  margin-bottom: 1rem;
+}
+
+.topic-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar-fg {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* =========================
+   Exam Progress Bar Base Styles
+========================= */
+
+#exam-progress-container {
+    height: 20px;
+    background: var(--progress-bg, #eee); /* Default, themed later */
+    border-radius: var(--border-radius);
+    margin-bottom: 12px;
+    display: none;
+    position: relative;
+    overflow: hidden;
+    /* Match width of quiz container */
+    width: 100%;
+    max-width: 90%; /* optional: same as question container max width */
+    margin: 0 auto 0.75rem auto; /* center it with bottom spacing */
+}
+
+#exam-progress-bar {
+    max-width: 500px;
+    height: 100%;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--progress-label, #fff);
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+/* Label stays centered over the bar */
+#exam-progress-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.85rem;
+    font-weight: 600;
+    pointer-events: none;
 }

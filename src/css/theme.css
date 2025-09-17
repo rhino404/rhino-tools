@@ -274,13 +274,51 @@ button.accent:hover,
 }
 
 /* =========================
-   Circle Control Buttons
-   (toggle, shuffle, hide)
+   Buttons (Regular & Circle) - Light & Dark Mode
 ========================= */
-.circle-btn,
-#shuffle-btn,
-#toggle-answers-btn,
-#hide-answers-btn {
+
+/* -------------------------
+   Light Mode Buttons
+------------------------- */
+body.light-mode button,
+body.light-mode .choice-btn,
+body.light-mode .level-btn,
+body.light-mode .category-btn,
+body.light-mode .dropdown-toggle,
+body.light-mode .show-answers-btn,
+body.light-mode .exam-btn {
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  background: var(--color-primary);
+  color: white;
+  font-weight: normal;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+body.light-mode button:hover,
+body.light-mode .choice-btn:hover,
+body.light-mode .level-btn:hover,
+body.light-mode .category-btn:hover,
+body.light-mode .dropdown-toggle:hover,
+body.light-mode .show-answers-btn:hover,
+body.light-mode .exam-btn:hover {
+  background: var(--color-primary-hover);
+  transform: scale(1.03);
+}
+
+body.light-mode .level-btn[aria-pressed="true"],
+body.light-mode .category-btn[aria-pressed="true"] {
+  border: 2px solid var(--color-accent-orange);
+  font-weight: bold;
+}
+
+/* Circle Buttons - Light Mode */
+body.light-mode .circle-btn,
+body.light-mode #exam-btn,
+body.light-mode #shuffle-btn,
+body.light-mode #toggle-answers-btn,
+body.light-mode #hide-answers-btn {
   display: grid;
   place-items: center;
   width: 3em;
@@ -289,23 +327,123 @@ button.accent:hover,
   font-size: 1.2em;
   font-weight: bold;
   cursor: pointer;
+  background: linear-gradient(145deg, #ffffff, #f2f2f2);
+  color: var(--color-neutral-dark);
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
   transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
-.circle-btn:hover,
-#shuffle-btn:hover,
-#toggle-answers-btn:hover,
-#hide-answers-btn:hover {
+body.light-mode .circle-btn:hover,
+body.light-mode #exam-btn:hover,
+body.light-mode #shuffle-btn:hover,
+body.light-mode #toggle-answers-btn:hover,
+body.light-mode #hide-answers-btn:hover {
+  background: linear-gradient(145deg, #f5f5f5, #e8e8e8);
   transform: scale(1.05);
 }
 
-.circle-btn.active,
-#shuffle-btn.active,
-#toggle-answers-btn.active,
-#hide-answers-btn.active {
+body.light-mode .circle-btn.active,
+body.light-mode #exam-btn.active,
+body.light-mode #shuffle-btn.active,
+body.light-mode #toggle-answers-btn.active,
+body.light-mode #hide-answers-btn.active {
+  border: 2px solid var(--color-accent-orange);
+  box-shadow: 0 0 8px rgba(249,115,22,0.6);
+}
+
+body.light-mode .circle-btn.active:hover,
+body.light-mode #exam-btn
+body.light-mode #shuffle-btn.active:hover,
+body.light-mode #toggle-answers-btn.active:hover,
+body.light-mode #hide-answers-btn.active:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(249,115,22,0.7);
+}
+
+/* -------------------------
+   Dark Mode Buttons
+------------------------- */
+body.dark-mode button,
+body.dark-mode .choice-btn,
+body.dark-mode .level-btn,
+body.dark-mode .category-btn,
+body.dark-mode .dropdown-toggle,
+body.dark-mode .show-answers-btn,
+body.dark-mode .exam-btn {
+  background: linear-gradient(145deg, #1f1f1f, #2d2d2d);
+  color: white;
+  border: 1px solid var(--border-color-dark);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s ease, border-color 0.2s;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .choice-btn:hover,
+body.dark-mode .level-btn:hover,
+body.dark-mode .category-btn:hover,
+body.dark-mode .dropdown-toggle:hover,
+body.dark-mode .show-answers-btn:hover,
+body.dark-mode .exam-btn:hover {
+  background: var(--button-color-dark);
+  transform: scale(1.03);
+}
+
+body.dark-mode .shuffle.active,
+body.dark-mode .show-answers-btn.active,
+body.dark-mode .level-btn[aria-pressed="true"],
+body.dark-mode .category-btn[aria-pressed="true"] {
+  border: 2px solid var(--color-accent-orange);
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Circle Buttons - Dark Mode */
+body.dark-mode .circle-btn,
+body.dark-mode #exam-btn,
+body.dark-mode #shuffle-btn,
+body.dark-mode #toggle-answers-btn,
+body.dark-mode #hide-answers-btn {
+  display: grid;
+  place-items: center;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(145deg, #1f1f1f, #2d2d2d);
+  color: #fff;
+  border: 1px solid var(--color-neutral-dark-alt);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+body.dark-mode .circle-btn:hover,
+body.dark-mode #exam-btn:hover,
+body.dark-mode #shuffle-btn:hover,
+body.dark-mode #toggle-answers-btn:hover,
+body.dark-mode #hide-answers-btn:hover {
+  transform: scale(1.05);
+}
+
+body.dark-mode .circle-btn.active,
+body.dark-mode #exam-btn.active,
+body.dark-mode #shuffle-btn.active,
+body.dark-mode #toggle-answers-btn.active,
+body.dark-mode #hide-answers-btn.active {
   border: 2px solid var(--color-accent-orange);
   box-shadow: 0 0 8px var(--color-accent-orange);
 }
+
+body.dark-mode .circle-btn.active:hover,
+body.dark-mode #exam-btn.active:hover,
+body.dark-mode #shuffle-btn.active:hover,
+body.dark-mode #toggle-answers-btn.active:hover,
+body.dark-mode #hide-answers-btn.active:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px var(--color-accent-orange);
+}
+
 
 /* =========================
    Dropdown Menu
@@ -505,36 +643,6 @@ body.light-mode {
 }
 
 /* =========================
-   Buttons
-   Uses brand green as base, consistent radius
-========================= */
-body.light-mode button,
-body.light-mode .level-btn,
-body.light-mode .category-btn,
-body.light-mode .dropdown-toggle {
-  border: 1px solid #ccc;
-  border-radius: var(--border-radius);
-  background: var(--color-primary);
-  color: white;
-  transition: background 0.2s ease, transform 0.15s ease;
-}
-
-body.light-mode button:hover,
-body.light-mode .level-btn:hover,
-body.light-mode .category-btn:hover,
-body.light-mode .dropdown-toggle:hover {
-  background: var(--color-primary-hover);
-  /* lighter green */
-  transform: scale(1.03);
-}
-
-body.light-mode .level-btn[aria-pressed="true"],
-body.light-mode .category-btn[aria-pressed="true"] {
-  border: 2px solid var(--color-accent-orange);
-  font-weight: bold;
-}
-
-/* =========================
    Dropdown Menu
 ========================= */
 body.light-mode .dropdown-menu {
@@ -595,47 +703,6 @@ body.light-mode #ad-slot {
 }
 
 /* =========================
-   Circle Control Buttons - Light Theme
-   (toggle, shuffle, hide)
-========================= */
-body.light-mode .circle-btn,
-body.light-mode #shuffle-btn,
-body.light-mode #toggle-answers-btn,
-body.light-mode #hide-answers-btn {
-  display: grid;
-  place-items: center;
-  width: 3em;
-  height: 3em;
-  border-radius: 50%;
-  font-size: 1.2em;
-  font-weight: bold;
-  cursor: pointer;
-  background: linear-gradient(145deg, #ffffff, #f2f2f2);
-  /* soft gradient */
-  color: var(--color-neutral-dark);
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-}
-
-body.light-mode .circle-btn:hover,
-body.light-mode #shuffle-btn:hover,
-body.light-mode #toggle-answers-btn:hover,
-body.light-mode #hide-answers-btn:hover {
-  background: linear-gradient(145deg, #f5f5f5, #e8e8e8);
-  transform: scale(1.05);
-}
-
-body.light-mode .circle-btn.active,
-body.light-mode #shuffle-btn.active,
-body.light-mode #toggle-answers-btn.active,
-body.light-mode #hide-answers-btn.active {
-  border: 2px solid var(--color-accent-orange);
-  box-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
-  /* soft orange glow */
-}
-
-/* =========================
    Question Text
 ========================= */
 body.light-mode .question {
@@ -689,39 +756,6 @@ body.dark-mode .question {
   color: #fff;
   -webkit-text-stroke-width: 0.05em;
   -webkit-text-stroke-color: black;
-}
-
-/* =========================
-   Buttons (dark-specific fill)
-========================= */
-body.dark-mode .choice-btn,
-body.dark-mode .level-btn,
-body.dark-mode .category-btn,
-body.dark-mode .shuffle,
-body.dark-mode .show-answers-btn,
-body.dark-mode .dropdown-toggle {
-  background: linear-gradient(145deg, #1f1f1f, #2d2d2d);
-  color: white;
-  border: 1px solid var(--border-color-dark);
-}
-
-body.dark-mode .choice-btn:hover,
-body.dark-mode .level-btn:hover,
-body.dark-mode .category-btn:hover,
-body.dark-mode .shuffle:hover,
-body.dark-mode .show-answers-btn:hover,
-body.dark-mode .dropdown-toggle:hover {
-  background: var(--button-color-dark);
-}
-
-/* Active state overrides for dark */
-body.dark-mode .shuffle.active,
-body.dark-mode .show-answers-btn.active,
-body.dark-mode .level-btn[aria-pressed="true"],
-body.dark-mode .category-btn[aria-pressed="true"] {
-  border: 2px solid var(--color-accent-orange);
-  color: #fff;
-  font-weight: bold;
 }
 
 /* =========================
@@ -841,7 +875,6 @@ body.dark-mode .progress-fill {
   background-color: #76ff7a;
 }
 
-
 /* =========================
    Social Icons
 ========================= */
@@ -853,7 +886,6 @@ body.dark-mode #social-links a:hover {
   color: var(--color-primary);
 }
 
-
 /* =========================
    Branding Footer Text
 ========================= */
@@ -863,168 +895,42 @@ body.dark-mode #social-links a:hover {
   color: #aaa;
 }
 
-
 /* =========================
-   Circle Control Buttons
-   (toggle, shuffle, hide)
+   Exam Progress Bar Themed Gradient Animation
 ========================= */
-.circle-btn,
-#shuffle-btn,
-#toggle-answers-btn,
-#hide-answers-btn {
-  display: grid;
-  place-items: center;
-  width: 3em;
-  height: 3em;
-  border-radius: 50%;
-  font-size: 1.2em;
-  font-weight: bold;
-  cursor: pointer;
-  background: linear-gradient(145deg, #1f1f1f, #2d2d2d);
-  color: #fff;
-  border: 1px solid var(--color-neutral-dark-alt);
-  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+
+/* Light Mode */
+body.light-mode #exam-progress-bar {
+    background: linear-gradient(
+        90deg,
+        var(--color-primary) 0%,
+        var(--color-primary-light) 50%,
+        var(--color-primary) 100%
+    );
+    background-size: 200% 100%;
+    animation: progress-bar-animation 2s linear infinite;
+    color: var(--color-neutral-light);
 }
 
-.circle-btn:hover,
-#shuffle-btn:hover,
-#toggle-answers-btn:hover,
-#hide-answers-btn:hover {
-  /* background: var(--color-primary); */
-  transform: scale(1.05);
+/* Dark Mode */
+body.dark-mode #exam-progress-bar {
+    background: linear-gradient(
+        90deg,
+        var(--color-primary-light) 0%,
+        var(--color-primary) 50%,
+        var(--color-primary-light) 100%
+    );
+    background-size: 200% 100%;
+    animation: progress-bar-animation 2s linear infinite;
+    color: var(--color-neutral-light);
 }
 
-.circle-btn.active,
-#shuffle-btn.active,
-#toggle-answers-btn.active,
-#hide-answers-btn.active {
-  border: 2px solid var(--color-accent-orange);
-  box-shadow: 0 0 8px var(--color-accent-orange);
-}
-
-/* =========================
-   Modal - Light Mode
-========================= */
-.custom-modal {
-  background-color: var(--color-neutral-light);
-  /* modal background */
-  color: var(--color-neutral-dark);
-  /* modal text */
-  padding: 1.5em;
-  border-radius: 8px;
-  max-width: 320px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Confirm button */
-.modal-confirm {
-  background-color: var(--color-primary) !important;
-  color: white !important;
-  border: none;
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.modal-confirm:hover {
-  background-color: var(--color-primary-hover) !important;
-}
-
-/* Cancel button */
-.modal-cancel {
-  background-color: var(--color-neutral-dark) !important;
-  /* dark gray */
-  color: var(--color-neutral-light-alt) !important;
-  /* light text */
-  border: 1px solid var(--color-neutral-light-alt) !important;
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.modal-cancel:hover {
-  background-color: var(--color-neutral-dark-alt) !important;
-  /* slightly lighter */
-}
-
-/* Overlay */
-.custom-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* =========================
-   Modal - Dark Mode
-========================= */
-.dark-mode .custom-modal {
-  background-color: var(--color-neutral-dark-alt);
-  /* dark modal background */
-  color: var(--color-neutral-light-alt);
-  /* light text */
-  padding: 1.5em;
-  border-radius: 8px;
-  max-width: 320px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-/* Confirm button */
-.dark-mode .modal-confirm {
-  background-color: var(--color-primary-dark);
-  color: white;
-  border: none;
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.dark-mode .modal-confirm:hover {
-  background-color: var(--color-primary);
-}
-
-/* Cancel button */
-.dark-mode .modal-cancel {
-  background-color: var(--color-neutral-dark);
-  color: var(--color-neutral-light-alt);
-  border: 1px solid var(--color-neutral-light-alt);
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.dark-mode .modal-cancel:hover {
-  background-color: var(--color-neutral-dark-alt);
-}
-
-/* Overlay */
-.dark-mode .custom-modal-overlay {
-  background: rgba(17, 24, 39, 0.8);
-  /* slightly darker overlay */
-}
-
-body.dark .custom-modal {
-  background: var(--color-neutral-dark-alt);
-  color: var(--color-accent-yellow-light);
-  border: 2px solid var(--color-primary);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
-}
-
-.modal-backdrop {
-  background: var(--overlay-light);
-}
-
-body.dark .modal-backdrop {
-  background: var(--overlay-dark);
+/* Animation Keyframes */
+@keyframes progress-bar-animation {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
 }

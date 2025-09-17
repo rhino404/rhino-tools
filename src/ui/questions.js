@@ -1,7 +1,10 @@
+// src/ui/questions.js
 import { statsTracker } from './statsTracker.js';
 import { showCorrectEffect, showIncorrectEffect } from './effects.js';
 import { getIcon } from '../utils/utils.js';
+import { recordExamAnswer, endExam } from '../core/examManager.js';
 import { applyTagFilter } from '../core/quizLoader.js';
+import { isAnswerCorrect } from '../utils/answerUtils.js';
 
 const ANSWERED_KEY = 'rynoToolsAnsweredQuestions';
 const CURRENT_INDEX_KEY = 'rynoToolsCurrentQuestionIndex';
@@ -36,6 +39,7 @@ export function filterUnansweredQuestions(questions) {
 function saveCurrentIndex(index) {
   localStorage.setItem(CURRENT_INDEX_KEY, String(index));
 }
+
 function getCurrentIndex() {
   return parseInt(localStorage.getItem(CURRENT_INDEX_KEY), 10) || 0;
 }
@@ -74,27 +78,42 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
     const btn = document.createElement('button');
     btn.textContent = choice;
     btn.className = 'choice-btn';
-    if (showingAnswers && choice === q.correct) btn.classList.add('correct');
-    btn.onclick = () =>
-      checkAnswer(choice, q, state.currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state });
+
+    if (showingAnswers && choice === q.correct) {
+      btn.classList.add('correct');
+    }
+
+    btn.setAttribute('data-question-id', q.id);
+    btn.setAttribute('data-value', choice); // <-- ADD THIS LINE
+
+    btn.onclick = () => {
+      const value = btn.getAttribute('data-value'); // <-- USE THIS VALUE
+      if (state.examMode) {
+        // Only record and advance via examManager in exam mode
+        recordExamAnswer(q.id, value);
+      } else {
+        // Only handle check/advance in study mode
+        checkAnswer(
+          value,
+          q,
+          state.currentIndex,
+          questions,
+          showingAnswers,
+          { questionEl, choicesEl, explanationEl, state }
+        );
+      }
+    };
+
     choicesEl.appendChild(btn);
   });
 }
 
-export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state } = {}) {
-  if (!state) state = {};
-  if (typeof state.hideAnswers === 'undefined') state.hideAnswers = false;
 
-  Array.from(choicesEl.children).forEach(btn => btn.disabled = true);
+export function showAnswerFeedback(isCorrect, q, explanationEl, state = {}) {
   let transitionTime = 1000;
-  const isCorrect = (choice === q.correct);
-
-  saveAnsweredQuestion(q.topic_id);
-  statsTracker.logAnswer({ ...q, category: q.category, subcategory: q.subcategory }, isCorrect);
-
   if (isCorrect) {
     explanationEl.innerHTML = `<span class='correct'>✅ Correct!</span>`;
-    showCorrectEffect(explanationEl);
+    if (typeof showCorrectEffect === 'function') showCorrectEffect(explanationEl);
   } else {
     if (!state.hideAnswers) {
       explanationEl.innerHTML = `<span class='incorrect'>❌: ${q.explanation}</span>`;
@@ -102,22 +121,59 @@ export function checkAnswer(choice, q, currentIndex, questions, showingAnswers, 
     } else {
       explanationEl.innerHTML = `<span class='incorrect'>❌ Incorrect!</span>`;
     }
-    showIncorrectEffect(explanationEl);
+    if (typeof showIncorrectEffect === 'function') showIncorrectEffect(explanationEl);
     explanationEl.classList.add('shake');
     setTimeout(() => explanationEl.classList.remove('shake'), 400);
   }
+  return transitionTime;
+}
 
+export function checkAnswer(
+  choice,
+  q,
+  currentIndex,
+  questions,
+  showingAnswers,
+  { questionEl, choicesEl, explanationEl, state } = {}
+) {
+  if (!state) state = {};
+  if (typeof state.hideAnswers === 'undefined') state.hideAnswers = false;
+
+  Array.from(choicesEl.children).forEach(btn => (btn.disabled = true));
+  const isCorrect = isAnswerCorrect(choice, q.correct); // <-- Move this line up
+  let transitionTime = showAnswerFeedback(isCorrect, q, explanationEl, state); // <-- Then use it here
+
+  // ✅ Only log stats in study mode
+  if (!state.examMode) {
+    saveAnsweredQuestion(q.topic_id);
+    statsTracker.logAnswer(
+      { ...q, category: q.category, subcategory: q.subcategory },
+      isCorrect
+    );
+  }
+
+  // Advance or end exam
   setTimeout(() => {
     state.currentIndex = currentIndex + 1;
+
     if (state.currentIndex < questions.length) {
       saveCurrentIndex(state.currentIndex);
       explanationEl.textContent = '';
-      showQuestion(state.currentIndex, questions, showingAnswers, { questionEl, choicesEl, explanationEl, state });
+      showQuestion(state.currentIndex, questions, showingAnswers, {
+        questionEl,
+        choicesEl,
+        explanationEl,
+        state,
+      });
     } else {
-      questionEl.textContent = "Quiz Complete!";
-      choicesEl.innerHTML = '';
-      explanationEl.textContent = '';
-      clearAnsweredQuestions();
+      if (state.examMode) {
+        endExam();
+      } else {
+        questionEl.textContent = 'Quiz Complete!';
+        choicesEl.innerHTML = '';
+        explanationEl.textContent = '';
+        clearAnsweredQuestions();
+      }
     }
   }, transitionTime);
 }
