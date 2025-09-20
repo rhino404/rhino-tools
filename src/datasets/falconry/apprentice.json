@@ -1,0 +1,2904 @@
+[
+  {
+    "question": "Hawks in the genus Accipiter are traditionally called what in falconry?",
+    "choices": [
+      "Broadwings",
+      "Shortwings",
+      "Longwings",
+      "All of these choices are correct"
+    ],
+    "correct": "Shortwings",
+    "explanation": "Accipiters (e.g., goshawk, Cooper’s, sharp‑shinned) are the classic shortwings; falcons are longwings; broadwings refers to buteos.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "Which statement about male raptors is generally true?",
+    "choices": [
+      "They often return to the breeding area first",
+      "They help select / defend the nesting territory",
+      "They provide most food early after hatching",
+      "All of these choices are correct"
+    ],
+    "correct": "All of these choices are correct",
+    "explanation": "In many species males arrive first, secure the territory, and provision the incubating female and young early in the season.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "A young raptor typically reaches full body size by what time?",
+    "choices": [
+      "At one year of age",
+      "Around fledging (when it leaves the nest)",
+      "At six months of age",
+      "At five years of age"
+    ],
+    "correct": "Around fledging (when it leaves the nest)",
+    "explanation": "Structural growth is essentially complete at fledging; later changes are conditioning, molt and maturity.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Which raptor listed does NOT show sexual size dimorphism (female larger)?",
+    "choices": [
+      "American Kestrel",
+      "Red-tailed Hawk",
+      "Peregrine Falcon",
+      "None of these choices are correct"
+    ],
+    "correct": "None of these choices are correct",
+    "explanation": "All listed species show reversed sexual size dimorphism typical of most raptors (female larger).",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Other Falconry Birds"
+    ],
+    "topic_label": "F2",
+    "topic": "Other Falconry Birds"
+  },
+  {
+    "question": "A relaxed hawk is likely to:",
+    "choices": [
+      "Preen",
+      "Stand on one foot",
+      "Rouse",
+      "All of these choices are correct"
+    ],
+    "correct": "All of these choices are correct",
+    "explanation": "Preening, standing on one foot, and rousing indicate relaxation and comfort.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "Which of the following is NOT part of a raptor’s wing?",
+    "choices": [
+      "Coverts",
+      "Alula",
+      "Cere",
+      "Secondaries"
+    ],
+    "correct": "Cere",
+    "explanation": "The cere is soft tissue at the base of the beak, not a wing structure.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "Which term does NOT match the others?",
+    "choices": [
+      "Talon",
+      "Tarsus",
+      "Hallux",
+      "Train"
+    ],
+    "correct": "Train",
+    "explanation": "Talon, tarsus, and hallux are foot / toe related; train refers to the tail.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "What is the most important factor in choosing a first falconry species?",
+    "choices": [
+      "Housing aesthetics",
+      "Availability of suitable local prey",
+      "Proximity to other falconers with that species",
+      "None of these choices are correct"
+    ],
+    "correct": "Availability of suitable local prey",
+    "explanation": "Consistent access to appropriate wild quarry is critical for training, fitness, and success.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "The terms passage, imprint, and chamber describe:",
+    "choices": [
+      "Falconer license classes",
+      "Facility design",
+      "How the bird was obtained/raised",
+      "A bird’s breeding status"
+    ],
+    "correct": "How the bird was obtained/raised",
+    "explanation": "They refer to origin: wild‑caught immature (passage), human‑imprinted, or captive parent‑raised (chamber).",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Raptors include members of which orders?",
+    "choices": [
+      "Strigiformes",
+      "Falconiformes / Accipitriformes",
+      "Passeriformes",
+      "Both a and b"
+    ],
+    "correct": "Both a and b",
+    "explanation": "Owls (Strigiformes) and diurnal birds of prey (Falconiformes/Accipitriformes) are raptors; passerines are not.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "Nest desertion by adult raptors due to disturbance is most likely:",
+    "choices": [
+      "Just before or at early egg laying",
+      "Late incubation",
+      "During hatching",
+      "Just prior to fledging"
+    ],
+    "correct": "Just before or at early egg laying",
+    "explanation": "Adults are most sensitive before and very early in incubation; commitment increases later.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "If a first clutch is lost early, many hawks and falcons will lay a replacement clutch.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "True",
+    "explanation": "Double clutching is common if loss occurs early; late losses usually are not replaced.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Rules and Regulations"
+    ],
+    "topic_label": "F6",
+    "topic": "Rules and Regulations"
+  },
+  {
+    "question": "In New York a falconer is most likely to see a brancher (recently fledged young) in:",
+    "choices": [
+      "January",
+      "March",
+      "June",
+      "October"
+    ],
+    "correct": "June",
+    "explanation": "Most local hawks and falcons fledge late spring to early summer; June is typical.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Young falcons sometimes initially take larger prey than adults mainly because:",
+    "choices": [
+      "They are still growing",
+      "They are stronger than adults",
+      "Smaller agile prey require more refined skill",
+      "All of these choices are correct"
+    ],
+    "correct": "Smaller agile prey require more refined skill",
+    "explanation": "Early in hunting experience they more easily subdue slower, larger quarry than highly agile small birds.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Which bird is most likely to breed successfully in captivity?",
+    "choices": [
+      "A passage (wild‑caught) bird just trapped",
+      "An imprint eyas with behavioral issues",
+      "A parent‑raised (chamber) eyas",
+      "All equally likely"
+    ],
+    "correct": "A parent‑raised (chamber) eyas",
+    "explanation": "Parent‑raised captive birds show more normal courtship and breeding behavior than imprints or recent wild captures.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Male vs. female raptors are most reliably distinguished (externally) by:",
+    "choices": [
+      "Faster females",
+      "Faster males",
+      "Larger females",
+      "Larger males"
+    ],
+    "correct": "Larger females",
+    "explanation": "Reversed sexual size dimorphism: females are larger in most raptor species.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "Compared to adults, fledged juvenile falcons appear:",
+    "choices": [
+      "Smaller",
+      "Larger (longer-winged/tailed)",
+      "Same size",
+      "Randomly larger or smaller"
+    ],
+    "correct": "Larger (longer-winged/tailed)",
+    "explanation": "Juveniles often have slightly longer, narrower feathers aiding early flight, giving a larger look.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "In Buteo, Parabuteo, and Accipiter the primary molt sequence usually:",
+    "choices": [
+      "Starts at inner primary (1) outward to 10",
+      "Starts at outer primary (10) inward to 1",
+      "Starts near P4 and proceeds both directions",
+      "Is random but symmetrical"
+    ],
+    "correct": "Starts at inner primary (1) outward to 10",
+    "explanation": "Most hawks replace primaries proximally to distally; falcons often start nearer the middle (e.g., P4).",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Why are adult (haggard) raptors generally not taken for falconry?",
+    "choices": [
+      "They may soon die of old age",
+      "They are impossible to train",
+      "They are valuable breeding stock",
+      "They only take one prey type"
+    ],
+    "correct": "They are valuable breeding stock",
+    "explanation": "Conservation ethics favor leaving proven breeders; passage birds face higher natural mortality.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Rules and Regulations"
+    ],
+    "topic_label": "F6",
+    "topic": "Rules and Regulations"
+  },
+  {
+    "question": "Hawks and falcons rely primarily on vision and hearing rather than smell when hunting.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "True",
+    "explanation": "Olfaction is limited; raptors depend on acute vision (and some hearing in owls).",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Where is the cere located?",
+    "choices": [
+      "At the base of the beak",
+      "On the feet",
+      "On the wing",
+      "On the breast"
+    ],
+    "correct": "At the base of the beak",
+    "explanation": "The cere is the soft tissue housing the nares just above the bill tip.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "The tarsus is part of the raptor’s:",
+    "choices": [
+      "Wing",
+      "Leg",
+      "Tail",
+      "Head"
+    ],
+    "correct": "Leg",
+    "explanation": "The tarsus is the lower leg segment where jesses/bewits are placed.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "A bird’s “train” refers to its:",
+    "choices": [
+      "Head",
+      "Wing",
+      "Foot",
+      "Tail"
+    ],
+    "correct": "Tail",
+    "explanation": "Train is the falconry term for the tail.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Deck feathers are:",
+    "choices": [
+      "The central pair of tail feathers",
+      "The plume on a hood",
+      "Feathers kept for imping",
+      "Coverts over primaries"
+    ],
+    "correct": "The central pair of tail feathers",
+    "explanation": "The two central rectrices are the decks.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Hard‑penned (full summed) means:",
+    "choices": [
+      "Feathers fully grown and blood withdrawn",
+      "Actively growing feathers full of blood",
+      "Soft quills easily bent",
+      "A damaged feather edge"
+    ],
+    "correct": "Feathers fully grown and blood withdrawn",
+    "explanation": "Once blood recedes the new feathers harden— termed hard‑penned or full summed.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "A bird is most likely to mantle when:",
+    "choices": [
+      "Chasing quarry",
+      "Standing over food/quarry",
+      "Bathing",
+      "Sleeping"
+    ],
+    "correct": "Standing over food/quarry",
+    "explanation": "Mantling spreads wings/tail over food defensively (also a stretch context, but over quarry here).",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "After a full meal a comfortable hawk is likely to:",
+    "choices": [
+      "Gorge again immediately",
+      "Hack",
+      "Rouse",
+      "Rangle"
+    ],
+    "correct": "Rouse",
+    "explanation": "A rouse (full-body feather shake) is a sign of contentment; rangle are small stones once given historically.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "A bird commonly preens:",
+    "choices": [
+      "After bathing",
+      "When content",
+      "Both of the above",
+      "Neither of the above"
+    ],
+    "correct": "Both of the above",
+    "explanation": "Relaxed or post‑bath birds often preen to realign and condition feathers.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "In falconry the word “cast” can mean:",
+    "choices": [
+      "A regurgitated pellet",
+      "Two birds flown together",
+      "To restrain a bird",
+      "All of these choices are correct"
+    ],
+    "correct": "All of these choices are correct",
+    "explanation": "Cast = pellet; a pair flown; or to physically restrain.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Historically a falconer ‘enseamed’ a hawk primarily when it was:",
+    "choices": [
+      "Hood shy",
+      "Just captured",
+      "Overweight",
+      "Sharp-set"
+    ],
+    "correct": "Overweight",
+    "explanation": "Enseaming referred to slimming methods (now replaced by controlled diet/exercise).",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "A hawk ‘puts over’ its crop:",
+    "choices": [
+      "Before stooping",
+      "While entering new quarry",
+      "Just before eating",
+      "After eating (moving food from crop to stomach)"
+    ],
+    "correct": "After eating (moving food from crop to stomach)",
+    "explanation": "Putting over is transferring food from crop to proventriculus for digestion.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "A bird typically feaks:",
+    "choices": [
+      "Before a kill",
+      "Right after a bath",
+      "After a meal",
+      "Before leaving the fist"
+    ],
+    "correct": "After a meal",
+    "explanation": "Feaking is wiping the beak clean on a surface after feeding.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "The term “austringer” refers to a person who flies accipiters.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "True",
+    "explanation": "Austringer = handler of shortwings (accipiters).",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Other Falconry Birds"
+    ],
+    "topic_label": "F2",
+    "topic": "Other Falconry Birds"
+  },
+  {
+    "question": "A passage hawk is:",
+    "choices": [
+      "Any migrating raptor (any age)",
+      "A first‑year migrant (immature)",
+      "Any captive intermewed raptor",
+      "None of these choices are correct"
+    ],
+    "correct": "A first‑year migrant (immature)",
+    "explanation": "Passage = wild, first‑year bird taken on its initial migration or before first molt.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "It is desirable for your bird to crab after striking quarry.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "False",
+    "explanation": "Crabbing is fighting between raptors—undesirable and risky.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "In falconry ‘strike’ can mean:",
+    "choices": [
+      "Impact with quarry or lure",
+      "Loosen hood braces / remove hood",
+      "Both of the above",
+      "Neither of the above"
+    ],
+    "correct": "Both of the above",
+    "explanation": "Strike = contact; also ‘strike the braces/hood’ in hooding context.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "‘Rake away’ means:",
+    "choices": [
+      "Abort and veer off a flight",
+      "Low contour pursuit",
+      "A goshawk’s slashing pass",
+      "None of these choices are correct"
+    ],
+    "correct": "Abort and veer off a flight",
+    "explanation": "Raking away is breaking off and turning away from intended line of flight.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "‘Intermewed’ means a bird has completed a molt in captivity (kept a full year).",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "True",
+    "explanation": "Intermewed = retained through molt season in the mews.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Drinking water is also called:",
+    "choices": [
+      "Yarak",
+      "Bowsing",
+      "Warbling",
+      "Carrying"
+    ],
+    "correct": "Bowsing",
+    "explanation": "Bowsing = drinking; yarak = intense hunting readiness; warbling = vocalizing; carrying = flying off with food.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "A bird that is ‘keen’ is:",
+    "choices": [
+      "Hungry",
+      "Sharp-set",
+      "Ready to kill",
+      "All of these choices are correct"
+    ],
+    "correct": "All of these choices are correct",
+    "explanation": "Keen = optimal hunger/drive state for hunting.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "A ‘slip’ is:",
+    "choices": [
+      "An opportunity at quarry",
+      "Releasing a shortwing after quarry",
+      "The ensuing flight at quarry",
+      "All of these choices are correct"
+    ],
+    "correct": "All of these choices are correct",
+    "explanation": "Slip can reference the chance, the release, or the actual flight contextually.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Which falcon shows clear plumage sexual dimorphism (color/pattern) as well as size?",
+    "choices": [
+      "Peregrine Falcon",
+      "American Kestrel",
+      "Gyrfalcon",
+      "None of these choices are correct"
+    ],
+    "correct": "American Kestrel",
+    "explanation": "Adult male and female American Kestrels differ noticeably in coloration/pattern; others mainly size.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Which species lacks a distinctly different juvenile body plumage compared to adults?",
+    "choices": [
+      "Northern Goshawk",
+      "Red-tailed Hawk",
+      "Merlin",
+      "American Kestrel"
+    ],
+    "correct": "American Kestrel",
+    "explanation": "American Kestrels show minimal juvenile/adult body plumage difference; others have distinct juvenile plumage.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "The American Kestrel is closely related to the Eurasian Sparrowhawk.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "False",
+    "explanation": "Kestrel is a falcon; Eurasian Sparrowhawk is an accipiter.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Other Falconry Birds"
+    ],
+    "topic_label": "F2",
+    "topic": "Other Falconry Birds"
+  },
+  {
+    "question": "Tail pumping, head bobbing, and hovering are classic field marks of a:",
+    "choices": [
+      "Sharp-shinned Hawk",
+      "American Kestrel",
+      "Broad-winged Hawk",
+      "Northern Harrier"
+    ],
+    "correct": "American Kestrel",
+    "explanation": "These conspicuous behaviors are typical of kestrels hunting insects and small vertebrates.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Other Falconry Birds"
+    ],
+    "topic_label": "F2",
+    "topic": "Other Falconry Birds"
+  },
+  {
+    "question": "A very small raptor hovering 6–10 m (≈20–30 ft) above a field is most likely:",
+    "choices": [
+      "Sharp-shinned Hawk",
+      "American Kestrel",
+      "Merlin",
+      "Cooper's Hawk"
+    ],
+    "correct": "American Kestrel",
+    "explanation": "Frequent stationary hovering is characteristic of kestrels; accipiters rarely hover so steadily.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Summer kestrels often hunt insects and rodents; in winter many shift to more small birds.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "True",
+    "explanation": "Diet broadens seasonally; more avian prey in colder months when insects decline.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Which species is most sensitive to weight fluctuation due to high metabolism?",
+    "choices": [
+      "Gyrfalcon",
+      "Red-tailed Hawk",
+      "Peregrine Falcon",
+      "American Kestrel"
+    ],
+    "correct": "American Kestrel",
+    "explanation": "Small body mass + high metabolism = rapid weight changes; requires close monitoring.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "It is good practice to have an American Kestrel strongly conditioned to the lure before free flight.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "True",
+    "explanation": "Lure response aids control, conditioning, and recovery with a small, mobile species.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Special husbandry concerns with American Kestrels include:",
+    "choices": [
+      "Precise weight management",
+      "Protection from larger avian predators",
+      "Preventing injury from bating",
+      "All of these choices are correct"
+    ],
+    "correct": "All of these choices are correct",
+    "explanation": "Their small size elevates risk from weight swings, predators, and trauma.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Health"
+    ],
+    "topic_label": "F5",
+    "topic": "Health"
+  },
+  {
+    "question": "A common wild behavior of American Kestrels that can become a vice in falconry is:",
+    "choices": [
+      "Soaring",
+      "Warbling",
+      "Carrying",
+      "Bowsing"
+    ],
+    "correct": "Carrying",
+    "explanation": "Kestrels readily fly off with prey (carrying); training mitigates this tendency.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Which traditional falconry equipment items are NOT routinely used with American Kestrels?",
+    "choices": [
+      "Bells",
+      "Hood",
+      "Traditional jesses",
+      "All of these choices are correct choices are correct"
+    ],
+    "correct": "All of these choices are correct choices are correct",
+    "explanation": "Kestrels are seldom hooded (small head, little benefit), bells add unnecessary weight, and traditional flying jesses are not used; lightweight field jesses or none are preferred.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Rules and Regulations"
+    ],
+    "topic_label": "F6",
+    "topic": "Rules and Regulations"
+  },
+  {
+    "question": "Red-tailed Hawks never take game birds or passerines in the wild.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "False",
+    "explanation": "They primarily eat mammals but will take birds (including game birds and passerines) when available.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Rules and Regulations"
+    ],
+    "topic_label": "F6",
+    "topic": "Rules and Regulations"
+  },
+  {
+    "question": "The sex of Red-tailed Hawks is most often (imperfectly) estimated by:",
+    "choices": [
+      "Weight and overall size",
+      "Eye color",
+      "Plumage color",
+      "None of these choices are correct"
+    ],
+    "correct": "Weight and overall size",
+    "explanation": "Females average larger and heavier, though there is overlap; weight is the best field indicator.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "There is no sexual dimorphism in Red-tailed Hawks.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "False",
+    "explanation": "Females are generally larger with heavier feet and broader build.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Red-tailed Hawks only nest in trees.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "False",
+    "explanation": "They may also nest on cliffs, cacti, and buildings.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "In New York State, Red-tailed Hawks usually lay eggs in:",
+    "choices": [
+      "February–March",
+      "March–April",
+      "April–May",
+      "May–June"
+    ],
+    "correct": "March–April",
+    "explanation": "Egg laying typically occurs in March or early April; incubation is about 30 days.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "When a human climbs toward an active Red-tailed Hawk nest, the adults usually:",
+    "choices": [
+      "Attack the intruder",
+      "Desert permanently",
+      "Call repeatedly from a distance",
+      "Remain silently on the nest"
+    ],
+    "correct": "Call repeatedly from a distance",
+    "explanation": "They most often circle or perch nearby and vocalize rather than attack.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "In the wild, Red-tailed Hawks generally fledge how many young?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": "2",
+    "explanation": "Average successful brood size is about two fledglings.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "A Red-tailed Hawk nestling (eyas) typically first leaves the nest at about:",
+    "choices": [
+      "2 weeks",
+      "4 weeks",
+      "6 weeks",
+      "8 weeks"
+    ],
+    "correct": "6 weeks",
+    "explanation": "First flights occur near 42–48 days (about 6 weeks).",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Best site to trap a migrating passage Red-tailed Hawk in New York during fall:",
+    "choices": [
+      "A ridge aligned NE–SW",
+      "A ridge aligned E–W",
+      "An agricultural valley",
+      "Beach strand"
+    ],
+    "correct": "A ridge aligned NE–SW",
+    "explanation": "They follow ridge updrafts that align with typical migration path orientation.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "There are many geographic variants (subspecies) of Red-tailed Hawks in North America.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "True",
+    "explanation": "Multiple subspecies (e.g., Krider’s, Harlan’s) and broad individual variation exist.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Apprentice Birds"
+    ],
+    "topic_label": "F1",
+    "topic": "Apprentice Birds"
+  },
+  {
+    "question": "Which species is best suited for taking rabbits?",
+    "choices": [
+      "Merlin",
+      "Red-tailed Hawk",
+      "Peregrine Falcon",
+      "All of these choices are correct"
+    ],
+    "correct": "Red-tailed Hawk",
+    "explanation": "Red-tailed Hawks specialize in ground mammals like rabbits; the others focus mainly on birds.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Best overall conditioning method for a Red-tailed Hawk:",
+    "choices": [
+      "Let it bate repeatedly while tied",
+      "Repeated lure stoops only",
+      "Multiple creance recalls only",
+      "Regular hunting/field flying"
+    ],
+    "correct": "Regular hunting/field flying",
+    "explanation": "Active hunting flights build fitness more effectively than stationary or repetitive drills alone.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Rules and Regulations"
+    ],
+    "topic_label": "F6",
+    "topic": "Rules and Regulations"
+  },
+  {
+    "question": "Which species most notably shows increased aggression if taken as an eyas and imprinted poorly?",
+    "choices": [
+      "Goshawk",
+      "Harris’s Hawk",
+      "Red-tailed Hawk",
+      "Prairie Falcon"
+    ],
+    "correct": "Red-tailed Hawk",
+    "explanation": "Imprinted Red-tailed Hawks can develop territorial or misdirected aggression on maturity.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "In an emergency, your imprint Red-tailed Hawk is firmly bound to a person and causing injury. Best immediate action:",
+    "choices": [
+      "Pull each rear talon back and slide feet forward",
+      "Pour water on the hawk",
+      "Throw a garnished lure or pigeon",
+      "Secure the hawk’s head firmly to make it release"
+    ],
+    "correct": "Secure the hawk’s head firmly to make it release",
+    "explanation": "Controlling the head often causes release; then safely remove talons. Use only in true emergencies.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Health"
+    ],
+    "topic_label": "F5",
+    "topic": "Health"
+  },
+  {
+    "question": "Punitive discipline (pain/threat) is effective for training a misbehaving Red-tailed Hawk.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "False",
+    "explanation": "Raptors learn via positive reinforcement and weight/food management, not punishment.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Aggression by an imprinted Red-tailed Hawk may not appear until its second or third year.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "True",
+    "explanation": "Sexual maturity can trigger new territorial or aggressive behaviors.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Which passage raptor is generally considered the easiest to man?",
+    "choices": [
+      "Goshawk",
+      "Prairie Falcon",
+      "Red-tailed Hawk",
+      "Sharp-shinned Hawk"
+    ],
+    "correct": "Red-tailed Hawk",
+    "explanation": "Passage Red-tailed Hawks usually settle more readily than the others listed.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Other Falconry Birds"
+    ],
+    "topic_label": "F2",
+    "topic": "Other Falconry Birds"
+  },
+  {
+    "question": "Reasons to choose an American Kestrel over a Red-tailed Hawk as a first bird:",
+    "choices": [
+      "Needs less frequent feeding",
+      "Less likely to carry",
+      "Easier to keep healthy",
+      "None of these choices are correct"
+    ],
+    "correct": "None of these choices are correct",
+    "explanation": "Kestrels are delicate; a Red-tailed Hawk is usually more forgiving for beginners.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Apprentice Birds"
+    ],
+    "topic_label": "F1",
+    "topic": "Apprentice Birds"
+  },
+  {
+    "question": "Which bird listed is most cold-tolerant?",
+    "choices": [
+      "Red-tailed Hawk",
+      "Harris’s Hawk",
+      "Aplomado Falcon",
+      "None of these choices are correct"
+    ],
+    "correct": "Red-tailed Hawk",
+    "explanation": "Red-tailed Hawks occupy cold northern ranges; Harris’s and Aplomado prefer warmer climates.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Apprentice Birds"
+    ],
+    "topic_label": "F1",
+    "topic": "Apprentice Birds"
+  },
+  {
+    "question": "The typical hunting style of a wild Red-tailed Hawk is:",
+    "choices": [
+      "Waiting-on at height",
+      "High attacks from above in long stoops",
+      "Perch-and-wait (sit-and-watch)",
+      "None of these choices are correct"
+    ],
+    "correct": "Perch-and-wait (sit-and-watch)",
+    "explanation": "They commonly hunt from elevated perches scanning for ground prey.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Taking an eyas Red-tailed Hawk is preferred over trapping a passage bird.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "False",
+    "explanation": "Passage birds already know how to hunt and usually avoid imprint behavioral issues.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Red-tailed Hawks are commonly trained using:",
+    "choices": [
+      "Operant conditioning (positive reinforcement)",
+      "Repeated lure stoops as sole method",
+      "Primarily for quail hunting",
+      "None of these choices are correct"
+    ],
+    "correct": "Operant conditioning (positive reinforcement)",
+    "explanation": "Modern falconry relies on operant conditioning and weight management principles.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "The hunting style of an American Kestrel most closely resembles which listed species?",
+    "choices": [
+      "Goshawk",
+      "Peregrine Falcon",
+      "Gyrfalcon",
+      "Merlin"
+    ],
+    "correct": "Merlin",
+    "explanation": "Both are small falcons pursuing small birds with fast direct flight (though kestrels also hover).",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Reasons male Red-tailed Hawks are preferred over females:",
+    "choices": [
+      "Females are too clumsy for squirrels",
+      "Males take jackrabbits more easily",
+      "Males are easier to man",
+      "None of these choices are correct"
+    ],
+    "correct": "None of these choices are correct",
+    "explanation": "Females often handle larger prey; preference depends on quarry and falconer goals.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Rules and Regulations"
+    ],
+    "topic_label": "F6",
+    "topic": "Rules and Regulations"
+  },
+  {
+    "question": "Your American Kestrel is best suited to hunt which of the following?",
+    "choices": [
+      "Quail",
+      "European Starlings",
+      "House (English) Sparrows",
+      "Starlings and House Sparrows"
+    ],
+    "correct": "Starlings and House (English) Sparrows",
+    "explanation": "Kestrels commonly take small birds like starlings and sparrows; quail are generally too large.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Field marks/behaviors useful for identifying an American Kestrel include:",
+    "choices": [
+      "Hovering",
+      "Head bobbing",
+      "Tail pumping on landing",
+      "All of these choices are correct choices are correct"
+    ],
+    "correct": "All of these choices are correct choices are correct",
+    "explanation": "All three behaviors are characteristic of kestrels.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Apprentice Birds"
+    ],
+    "topic_label": "F1",
+    "topic": "Apprentice Birds"
+  },
+  {
+    "question": "Which listed raptor most typically kills prey with powerful sustained grip pressure?",
+    "choices": [
+      "Male Merlin (jack)",
+      "Male Gyrfalcon (jerkin)",
+      "Red-tailed Hawk",
+      "American Kestrel"
+    ],
+    "correct": "Red-tailed Hawk",
+    "explanation": "Buteos often dispatch prey through crushing grip; large falcons rely more on impact and neck bite.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Apprentice Birds"
+    ],
+    "topic_label": "F1",
+    "topic": "Apprentice Birds"
+  },
+  {
+    "question": "A defining characteristic of true falcons (genus Falco) is:",
+    "choices": [
+      "Heavy crushing feet",
+      "A notched (toothed) beak",
+      "Strictly avian diet",
+      "Greatest maneuverability of all raptors"
+    ],
+    "correct": "A notched (toothed) beak",
+    "explanation": "Falcons possess tomial ‘teeth’ used to sever vertebrae of prey.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "Large falcons kill prey primarily by foot pressure alone.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "False",
+    "explanation": "They usually stun/strike and finish with a neck/spinal bite using the tomial tooth.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "Raptors that typically sever the spinal cord of vertebrate prey with the beak are:",
+    "choices": [
+      "Falcons",
+      "Buteos",
+      "Accipiters",
+      "Eagles"
+    ],
+    "correct": "Falcons",
+    "explanation": "Falcons use tomial teeth to quickly dispatch prey by neck bite.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "Which species is least likely to ‘slice’ (project mutes horizontally)?",
+    "choices": [
+      "Peregrine Falcon",
+      "Red-tailed Hawk",
+      "Golden Eagle",
+      "Goshawk"
+    ],
+    "correct": "Peregrine Falcon",
+    "explanation": "Falcons generally drop mutes vertically; Accipiters, Buteos, and eagles slice.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Other Falconry Birds"
+    ],
+    "topic_label": "F2",
+    "topic": "Other Falconry Birds"
+  },
+  {
+    "question": "Stick nests are NOT built by:",
+    "choices": [
+      "Accipiters",
+      "True falcons",
+      "Buteos",
+      "Eagles"
+    ],
+    "correct": "True falcons",
+    "explanation": "Falcons use ledges or existing sites rather than building stick nests (except caracaras, etc., outside genus Falco).",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "In most large falcons, the male does most hunting for roughly the first two weeks after hatching.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "True",
+    "explanation": "The female broods early; as demands grow she also hunts.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Which species listed typically defends the largest territory?",
+    "choices": [
+      "Gyrfalcon",
+      "Northern Harrier",
+      "Cooper's Hawk",
+      "American Kestrel"
+    ],
+    "correct": "Gyrfalcon",
+    "explanation": "Large arctic falcons range widely requiring extensive territories.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "The largest bird listed is the:",
+    "choices": [
+      "Jerkin (male Gyrfalcon)",
+      "Jack Merlin (male Merlin)",
+      "Peregrine Falcon (female)",
+      "Peregrine tiercel (male)"
+    ],
+    "correct": "Jerkin (male Gyrfalcon)",
+    "explanation": "Male Gyrfalcons average larger than female Peregrines; the others are smaller.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Other Falconry Birds"
+    ],
+    "topic_label": "F2",
+    "topic": "Other Falconry Birds"
+  },
+  {
+    "question": "The Peregrine Falcon:",
+    "choices": [
+      "Occurs on all continents except Antarctica",
+      "Has the largest clutch of all raptors",
+      "Preys on every other raptor species",
+      "Has no competition except humans"
+    ],
+    "correct": "Occurs on all continents except Antarctica",
+    "explanation": "It is the most widespread falcon; the other statements are incorrect or exaggerated.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "A malar stripe (dark facial 'mustache') is characteristic of a:",
+    "choices": [
+      "Peregrine Falcon",
+      "Ptarmigan",
+      "Mollen hood",
+      "Ornate Hawk-Eagle"
+    ],
+    "correct": "Peregrine Falcon",
+    "explanation": "The bold malar stripe is a key Peregrine field mark; other options are unrelated items/species.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "Adult Prairie and Peregrine Falcons have different soft part coloration (feet, cere, eyelids) than first-year birds.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "True",
+    "explanation": "Immatures show bluish tones; adults are yellow in these areas.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+  {
+    "question": "The Peregrine Falcon’s tail is proportionally longer than that of the Prairie Falcon and Gyrfalcon.",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "correct": "False",
+    "explanation": "Peregrines have a relatively shorter tail; Prairie Falcons and Gyrfalcons proportionally longer.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "boolean",
+    "image": "",
+    "tags": [
+      "Other Falconry Birds"
+    ],
+    "topic_label": "F2",
+    "topic": "Other Falconry Birds"
+  },
+  {
+    "question": "Incubation period for Peregrine Falcon eggs:",
+    "choices": [
+      "21 days",
+      "24 days",
+      "33–34 days",
+      "40–45 days"
+    ],
+    "correct": "33–34 days",
+    "explanation": "Normal incubation is about 33–34 days under natural conditions.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Rules and Regulations"
+    ],
+    "topic_label": "F6",
+    "topic": "Rules and Regulations"
+  },
+  {
+    "question": "The large dark maritime Peregrine of the Pacific Northwest is the:",
+    "choices": [
+      "American Peregrine (F. p. anatum)",
+      "Peale’s Peregrine (F. p. pealei)",
+      "Tundra Peregrine (F. p. tundrius)",
+      "European Peregrine (F. p. peregrinus)"
+    ],
+    "correct": "Peale’s Peregrine (F. p. pealei)",
+    "explanation": "Peale’s is the dark coastal subspecies from Washington to the Aleutians.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Other Falconry Birds"
+    ],
+    "topic_label": "F2",
+    "topic": "Other Falconry Birds"
+  },
+  {
+    "question": "Assateague Island is significant to North American falconers because it is:",
+    "choices": [
+      "A silk used to cover a hawk’s eyes",
+      "An iron deficiency sign in mutes",
+      "A major Tundra Peregrine migration concentration point",
+      "A Native term for young Prairie Falcon"
+    ],
+    "correct": "A major Tundra Peregrine migration concentration point",
+    "explanation": "Barrier islands like Assateague historically yielded many migrating tundra Peregrines.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Other Falconry Birds"
+    ],
+    "topic_label": "F2",
+    "topic": "Other Falconry Birds"
+  },
+  {
+    "question": "A Peregrine Falcon is best known in falconry for:",
+    "choices": [
+      "Short low flush pursuits",
+      "Waiting-on (high altitude stooping flights)",
+      "Multi-mile tail chases",
+      "Crashing into brush from tree perches"
+    ],
+    "correct": "Waiting-on (high altitude stooping flights)",
+    "explanation": "Classic peregrine flights involve ringing up and stooping from height.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "A Prairie Falcon is best described as:",
+    "choices": [
+      "Smaller than a Merlin",
+      "Delicate and cold-sensitive",
+      "A coastal migrant",
+      "More difficult to man than some other large falcons"
+    ],
+    "correct": "More difficult to man than some other large falcons",
+    "explanation": "Prairie Falcons can be nervous and take longer to settle compared to some Peregrines.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Other Falconry Birds"
+    ],
+    "topic_label": "F2",
+    "topic": "Other Falconry Birds"
+  },
+  {
+    "question": "Large falcons may capture prey by:",
+    "choices": [
+      "Binding",
+      "Striking",
+      "Both",
+      "Neither method"
+    ],
+    "correct": "Both",
+    "explanation": "They may seize (bind) or strike to stun/kill before grabbing.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "General"
+    ],
+    "topic_label": "F0",
+    "topic": "General"
+  },
+  {
+    "question": "Cooper’s Hawks are best suited for hunting:",
+    "choices": [
+      "Ducks",
+      "Quail",
+      "Jackrabbits",
+      "Pheasants"
+    ],
+    "correct": "Quail",
+    "explanation": "Medium Accipiters excel on small to medium upland birds like quail.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Parabuteo (Harris’s Hawk) use in falconry:",
+    "choices": [
+      "Best for arctic hare in severe cold",
+      "May be flown cooperatively in groups",
+      "Avoided due to manning difficulty",
+      "None of these choices are correct"
+    ],
+    "correct": "May be flown cooperatively in groups",
+    "explanation": "Harris’s Hawks exhibit social hunting and can be flown in casts.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "Male Sharp-shinned Hawks are well suited for hunting:",
+    "choices": [
+      "Quail",
+      "House (English) Sparrows",
+      "Rabbits",
+      "Pheasants"
+    ],
+    "correct": "House (English) Sparrows",
+    "explanation": "Small accipiters excel on very small birds like sparrows and starlings.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Hunting and Training Techniques"
+    ],
+    "topic_label": "F3",
+    "topic": "Hunting and Training Techniques"
+  },
+  {
+    "question": "The raptor most commonly used by European falconers in the sixteenth century was the:",
+    "choices": [
+      "Red-tailed Hawk",
+      "Harris’s Hawk",
+      "Cooper’s Hawk",
+      "Peregrine Falcon"
+    ],
+    "correct": "Peregrine Falcon",
+    "explanation": "The peregrine was prized for noble status and impressive flight style.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Other Falconry Birds"
+    ],
+    "topic_label": "F2",
+    "topic": "Other Falconry Birds"
+  },
+  {
+    "question": "A wild haggard falcon (adult) typically:",
+    "choices": [
+      "Represents wild breeding stock",
+      "Is harder to train than a passage bird",
+      "Both",
+      "Neither"
+    ],
+    "correct": "Both",
+    "explanation": "Adults have established behaviors and reproductive value; passage birds adapt more readily.",
+    "category": "falconry",
+    "subcategory": "apprentice",
+    "type": "multiple",
+    "image": "",
+    "tags": [
+      "Care and Maintenance"
+    ],
+    "topic_label": "F4",
+    "topic": "Care and Maintenance"
+  },
+    {
+        "question": "Which statement about the Ferruginous Hawk (Buteo regalis) is correct?",
+        "choices": [
+            "It is larger than a Red-tailed Hawk",
+            "It will not defend its nest",
+            "It belongs to the genus Parabuteo",
+            "It is smaller than an American Kestrel"
+        ],
+        "correct": "It is larger than a Red-tailed Hawk",
+        "explanation": "Ferruginous Hawks are the largest North American Buteo and vigorously defend nests.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "Which term does not fit with the others (all are traditional names for male falcons)?",
+        "choices": [
+            "Jack",
+            "Jerkin",
+            "Musket",
+            "Tiercel"
+        ],
+        "correct": "Musket",
+        "explanation": "Musket refers to a male Sparrowhawk (an accipiter); the others are for male falcons.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["General"],
+        "topic_label": "F0",
+        "topic": "General"
+    },
+    {
+        "question": "Which raptor is least likely to build its own nest?",
+        "choices": [
+            "Merlin",
+            "Red-tailed Hawk",
+            "Northern Harrier",
+            "American Kestrel"
+        ],
+        "correct": "Merlin",
+        "explanation": "Merlins usually reuse old corvid or raptor nests instead of building their own.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "Which raptor is least likely to nest on a cliff?",
+        "choices": [
+            "Gyrfalcon",
+            "Golden Eagle",
+            "Prairie Falcon",
+            "Merlin"
+        ],
+        "correct": "Merlin",
+        "explanation": "Merlins typically use tree nests or occasionally ground sites; the others often use cliffs.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "A young Peregrine Falcon usually fledges at what age?",
+        "choices": [
+            "6–7 weeks",
+            "2–3 months",
+            "12–14 weeks",
+            "4 weeks"
+        ],
+        "correct": "6–7 weeks",
+        "explanation": "Normal peregrine fledging age is roughly 42–46 days (about 6–7 weeks).",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "Where is a Northern Goshawk nest most likely encountered?",
+        "choices": [
+            "Suburban woodlots",
+            "Woodlot edge near meadows",
+            "Mature coniferous or mixed forest",
+            "Cliff ledges"
+        ],
+        "correct": "Mature coniferous or mixed forest",
+        "explanation": "Goshawks favor large tracts of mature forest with interior structure for nesting.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "Which species typically undertakes the longest migration?",
+        "choices": [
+            "Merlin",
+            "Prairie Falcon",
+            "Northern Goshawk",
+            "Gyrfalcon"
+        ],
+        "correct": "Merlin",
+        "explanation": "Taiga Merlins migrate long distances; Gyrfalcons and Goshawks are mostly resident or short-distance migrants.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Other Falconry Birds"],
+        "topic_label": "F2",
+        "topic": "Other Falconry Birds"
+    },
+    {
+        "question": "A black, raven-sized raptor with chestnut shoulders and a white tail base band is a:",
+        "choices": [
+            "Cooper’s Hawk",
+            "Red-shouldered Hawk",
+            "Harris’s Hawk",
+            "Broad-winged Hawk"
+        ],
+        "correct": "Harris’s Hawk",
+        "explanation": "Harris’s Hawks show dark chocolate plumage, rufous shoulders, and a white tail base and tip.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "Which statements about age terms are correct?",
+        "choices": [
+            "A haggard (adult) was once an eyas",
+            "A passage bird was once an eyas",
+            "Both",
+            "Neither"
+        ],
+        "correct": "Both",
+        "explanation": "All birds were nestlings (eyases); passage birds are in their first year; haggards are fully adult.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "When a falconer is calling a bird, a visitor should not:",
+        "choices": [
+            "Stay back and still",
+            "Avoid standing between falconer and bird",
+            "Walk toward the bird",
+            "Be polite and quiet"
+        ],
+        "correct": "Walk toward the bird",
+        "explanation": "Movement or blocking the line can distract or deter the bird from returning.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["General"],
+        "topic_label": "F0",
+        "topic": "General"
+    },
+    {
+        "question": "In falconry terminology, drinking water taken by a raptor is called:",
+        "choices": [
+            "Yarak",
+            "Bowsing",
+            "Warbling",
+            "Carrying"
+        ],
+        "correct": "Bowsing",
+        "explanation": "Bowsing = drinking; yarak = intense hunting condition; warbling = vocalizing; carrying = flying off with prey.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["General"],
+        "topic_label": "F0",
+        "topic": "General"
+    },
+    {
+        "question": "Best initial manning method for a newly trapped Red-tailed Hawk:",
+        "choices": [
+            "Keep it outdoors from day one",
+            "Rapidly starve off weight",
+            "Use food to encourage response",
+            "Feed full crops daily"
+        ],
+        "correct": "Use food to encourage response",
+        "explanation": "Positive food association builds trust safely; extreme weight loss is unsafe.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "Benefits of hunting a bird frequently include:",
+        "choices": [
+            "Natural varied diet",
+            "Excellent exercise",
+            "Strengthened bond and response",
+            "All of the above"
+        ],
+        "correct": "All of the above",
+        "explanation": "Frequent hunting improves condition, diet quality, and responsiveness.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "After a new Red-tailed Hawk stops bating and sits quietly, the next training goal is:",
+        "choices": [
+            "Enter it on wild game",
+            "Begin lure work",
+            "Get it to feed calmly on the fist",
+            "Tie it to a block perch all day"
+        ],
+        "correct": "Get it to feed calmly on the fist",
+        "explanation": "Feeding on the fist cements trust and begins response training.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "In falconry, hacking a bird refers to:",
+        "choices": [
+            "Introducing it directly to quarry",
+            "Letting a young bird fly free daily with controlled feeding support",
+            "Keeping it in a darkened box to calm it",
+            "Flying a passage bird unrestrained permanently"
+        ],
+        "correct": "Letting a young bird fly free daily with controlled feeding support",
+        "explanation": "Hacking gives young birds exercise and development before formal training.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["General"],
+        "topic_label": "F0",
+        "topic": "General"
+    },
+    {
+        "question": "A hawk described as keen is:",
+        "choices": [
+            "Hungry",
+            "Sharp-set",
+            "Ready to take quarry",
+            "All of the above"
+        ],
+        "correct": "All of the above",
+        "explanation": "Keen indicates a strong hunting edge driven by appropriate hunger and focus.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["General"],
+        "topic_label": "F0",
+        "topic": "General"
+    },
+    {
+        "question": "Your new Red-tailed Hawk seems unusually tame after one day. You should:",
+        "choices": [
+            "Frighten it to reset",
+            "Consult your sponsor",
+            "Immediately hunt it",
+            "Release and trap another"
+        ],
+        "correct": "Consult your sponsor",
+        "explanation": "Sponsor guidance prevents mistakes during early manning assessment.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Rules and Regulations"],
+        "topic_label": "F6",
+        "topic": "Rules and Regulations"
+    },
+    {
+        "question": "A lure is especially useful:",
+        "choices": [
+            "During training",
+            "For rapid recall",
+            "At long distance recall",
+            "All of the above"
+        ],
+        "correct": "All of the above",
+        "explanation": "Lures build conditioned recall and can reinforce fitness and response.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "If a Red-tailed Hawk appears excessively keen (over-hungry), you should:",
+        "choices": [
+            "Give rangle",
+            "Use a halsband while hunting",
+            "Tame-hack it",
+            "Adjust future feeding slightly upward to stabilize weight"
+        ],
+        "correct": "Adjust future feeding slightly upward to stabilize weight",
+        "explanation": "Slight ration adjustment corrects over-keenness; the other actions are unsuitable.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "When is a Red-tailed Hawk generally safe for first free flight?",
+        "choices": [
+            "After 10 ft to fist response",
+            "After 10 ft to lure response",
+            "After 50 ft to lure response",
+            "After rapid, reliable 50 yards to fist response"
+        ],
+        "correct": "After rapid, reliable 50 yards to fist response",
+        "explanation": "Extended distance, prompt fist response shows readiness and bond.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "To reduce carrying tendencies in an American Kestrel you can:",
+        "choices": [
+            "Use a very light lure line",
+            "Only fly at peak yarak",
+            "Use a weighted lure line",
+            "Avoid lure use entirely"
+        ],
+        "correct": "Use a weighted lure line",
+        "explanation": "Weighted lines discourage flying off with the lure while maintaining control.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "To help a Peregrine develop pitch you should not use:",
+        "choices": [
+            "A kite",
+            "Homing pigeons",
+            "Only ground quarry",
+            "A balloon"
+        ],
+        "correct": "Both",
+        "explanation": "Kite and pigeon work encourage vertical climbing and controlled stoops.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Rules and Regulations"],
+        "topic_label": "F6",
+        "topic": "Rules and Regulations"
+    },
+    {
+        "question": "Why can April flights be risky for some hawks?",
+        "choices": [
+            "Electrocution risk peaks",
+            "Migratory restlessness returns",
+            "They begin warbling",
+            "Game becomes unattainable"
+        ],
+        "correct": "Migratory restlessness returns",
+        "explanation": "Spring migration urge can trigger wandering or loss.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["General"],
+        "topic_label": "F0",
+        "topic": "General"
+    },
+    {
+        "question": "On first free flight your Red-tailed Hawk stays out overnight. Best action:",
+        "choices": [
+            "Arrive before dawn to recover and call your sponsor for advice",
+            "Wait until midday when the bird is active",
+            "Leave food out overnight and hope the hawk returns",
+            "Ignore the bird and resume training later"
+        ],
+        "correct": "Arrive before dawn to recover and call your sponsor for advice",
+        "explanation": "Early morning retrieval plus sponsor guidance maximize recovery odds.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "A lost passage Red-tailed Hawk is most likely to:",
+        "choices": [
+            "Seek new humans",
+            "Return to the mews",
+            "Revert rapidly to the wild",
+            "Starve quickly"
+        ],
+        "correct": "Revert rapidly to the wild",
+        "explanation": "Passage birds retain strong survival instincts and resume wild behavior rapidly.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "Which statement about lure flying is most accurate?",
+        "choices": [
+            "It is obsolete",
+            "It conditions any hawk equally well",
+            "It is especially useful for conditioning falcons",
+            "It prevents fist response in Red-tailed Hawks"
+        ],
+        "correct": "It is especially useful for conditioning falcons",
+        "explanation": "Lure work suits longwings for fitness and recall; broadwings benefit less routinely.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "Which is an example of operant conditioning in falconry?",
+        "choices": [
+            "Pinching toes after refusal",
+            "Jump-ups with variable food reward",
+            "Withholding all food after refusal",
+            "None of these"
+        ],
+        "correct": "Jump-ups with variable food reward",
+        "explanation": "Variable reinforcement strengthens desired responses without punishment.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "Primary goal when training a hawk:",
+        "choices": [
+            "Create a responsive hunting partner",
+            "Make it a pet",
+            "Show affection so it 'likes' you",
+            "Establish ownership dominance"
+        ],
+        "correct": "Create a responsive hunting partner",
+        "explanation": "Effective falconry relies on reliable response and hunting performance, not pet-like tameness.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "Keeping a Red-tailed Hawk through the molt, you should:",
+        "choices": [
+            "Keep it sharp-set",
+            "Enseam continuously",
+            "Increase weight about 20% over flying weight",
+            "Free-feed unlimited daily"
+        ],
+        "correct": "Increase weight about 20% over flying weight",
+        "explanation": "Moderate weight gain supports feather growth without obesity.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Rules and Regulations"],
+        "topic_label": "F6",
+        "topic": "Rules and Regulations"
+    },
+    {
+        "question": "Which raptors start the primary molt with the outermost primary and proceed inward?",
+        "choices": [
+            "Falcons",
+            "Buteos",
+            "Accipiters",
+            "None of these"
+        ],
+        "correct": "None of these",
+        "explanation": "Normal sequence begins at the innermost primary (P1) moving outward in these groups.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "When hooding a first Red-tailed Hawk your approach should be:",
+        "choices": [
+            "Patient, calm, methodical effort",
+            "Use only a giant hood",
+            "Accept hood-shyness without trying",
+            "Avoid handling until seasons end"
+        ],
+        "correct": "Patient, calm, methodical effort",
+        "explanation": "Gentle consistent introduction reduces stress and builds acceptance.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Care and Maintenance"],
+        "topic_label": "F4",
+        "topic": "Care and Maintenance"
+    },
+    {
+        "question": "Acceptable early quarry for a new Red-tailed Hawk may include:",
+        "choices": [
+            "Squirrel",
+            "Rabbit",
+            "Quail",
+            "All of the above"
+        ],
+        "correct": "All of the above",
+        "explanation": "These are common, traditional quarry once the bird is properly conditioned and safe.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "When selecting a duck flight for a new falcon you would ideally:",
+        "choices": [
+            "Fly large open water first",
+            "Target a single or small group",
+            "Encourage taking sitting ducks",
+            "Ignore wind direction"
+        ],
+        "correct": "Target a single or small group",
+        "explanation": "Small, manageable groups improve early success and control.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Rules and Regulations"],
+        "topic_label": "F6",
+        "topic": "Rules and Regulations"
+    },
+    {
+        "question": "A Red-tailed Hawk often increases success when hunting from:",
+        "choices": [
+            "Perches (trees/poles/T-Perch)",
+            "Only the fist",
+            "Ground pursuit only",
+            "Flying directly from the glove"
+        ],
+        "correct": "Perches (trees/poles/T-Perch)",
+        "explanation": "Elevated vantage points improve spotting and pitch opportunities.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "Which raptor most often uses ringing (spiraling pursuit) flight to take prey?",
+        "choices": [
+            "Goshawk",
+            "Merlin",
+            "American Kestrel",
+            "Red-tailed Hawk"
+        ],
+        "correct": "Merlin",
+        "explanation": "Merlins frequently ring up after small birds during pursuit flights.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "Use of a live lure (live tethered prey) is:",
+        "choices": [
+            "Always required with a goshawk",
+            "Always required with a Red-tailed Hawk",
+            "Never appropriate",
+            "Reserved only for true emergencies"
+        ],
+        "correct": "Reserved only for true emergencies",
+        "explanation": "Live lures are rarely used and only for critical recovery situations where legal and ethical.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "A key benefit of using a lure with any falcon is:",
+        "choices": [
+            "It encourages tail-chasing",
+            "It carries no disease risk ever",
+            "There is no benefit",
+            "It provides safe, controlled recall and conditioning"
+        ],
+        "correct": "It provides safe, controlled recall and conditioning",
+        "explanation": "Lure work builds fitness and reinforces response under handler control.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "Why are male Red-tailed Hawks not generally preferred over females?",
+        "choices": [
+            "Females are too clumsy for squirrels",
+            "Males take jackrabbits more easily",
+            "Males are far easier to man",
+            "None of these statements are correct"
+        ],
+        "correct": "None of these statements are correct",
+        "explanation": "Females are larger and capable; preference depends on falconer goals, not myths.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Rules and Regulations"],
+        "topic_label": "F6",
+        "topic": "Rules and Regulations"
+    },
+    {
+        "question": "Making in to a Red-tailed Hawk on its first kill should be:",
+        "choices": [
+            "Deliberate and cautious",
+            "Avoided until it is full",
+            "Very quick to remove prey immediately",
+            "Left entirely to sponsor without observation"
+        ],
+        "correct": "Deliberate and cautious",
+        "explanation": "Calm approach builds trust and prevents the bird from dragging or carrying.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Rules and Regulations"],
+        "topic_label": "F6",
+        "topic": "Rules and Regulations"
+    },
+    {
+        "question": "A kestrel is especially suited to hunt:",
+        "choices": [
+            "Quail only",
+            "Pigeons only",
+            "Rabbits only",
+            "Starlings and House (English) Sparrows"
+        ],
+        "correct": "Starlings and House (English) Sparrows",
+        "explanation": "Small invasive passerines like starlings and sparrows are typical kestrel quarry.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "Best way to take a starling with an American Kestrel:",
+        "choices": [
+            "From a high waiting-on pitch",
+            "Via prolonged ringing flights",
+            "From close range while the flock is distracted (e.g., bathing)",
+            "Impossible with a kestrel"
+        ],
+        "correct": "From close range while the flock is distracted (e.g., bathing)",
+        "explanation": "Opportunistic short fast stoops at distracted birds suit kestrel flight style.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "Jackrabbits are difficult quarry for Red-tailed Hawks because they:",
+        "choices": [
+            "Hide only in dense cover",
+            "Are fast and evasive",
+            "Are armored",
+            "Seldom run"
+        ],
+        "correct": "Are fast and evasive",
+        "explanation": "Speed, stamina, and jinking make jackrabbits challenging.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "Cooper’s Hawks are most commonly hunted:",
+        "choices": [
+            "From power poles",
+            "From a high waiting-on pitch",
+            "From the fist",
+            "Only from a drone"
+        ],
+        "correct": "From the fist",
+        "explanation": "Shortwings like Cooper’s often launch pursuit directly from the fist in falconry.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["General"],
+        "topic_label": "F0",
+        "topic": "General"
+    },
+    {
+        "question": "Hunting upland game with a goshawk is aided by:",
+        "choices": [
+            "A steady pointing dog and a good flushing dog",
+            "Large disorganized beaters only",
+            "A single gunner only",
+            "Hunting at night only"
+        ],
+        "correct": "A steady pointing dog and a good flushing dog",
+        "explanation": "Pointing or flushing dogs present controlled slips to the goshawk.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "Bagged quarry (pre-captured release) is:",
+        "choices": [
+            "Essential for a new Red-tailed Hawk",
+            "Required to train a longwing",
+            "Necessary to teach an eyas to kill",
+            "Generally optional and used sparingly"
+        ],
+        "correct": "Generally optional and used sparingly",
+        "explanation": "Bagged quarry is a limited tool; wild slips are preferred when safe and ethical.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "Entering a new bird refers to:",
+        "choices": [
+            "Feeding pigeons to a falcon daily",
+            "Providing an easy first opportunity at a new quarry species",
+            "Ending its hunting career",
+            "Skipping quarry introduction"
+        ],
+        "correct": "Providing an easy first opportunity at a new quarry species",
+        "explanation": "Entering builds confidence by ensuring an early successful experience.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "A slip is:",
+        "choices": [
+            "An opportunity at quarry",
+            "The release after quarry appears",
+            "The ensuing pursuit",
+            "All of the above"
+        ],
+        "correct": "All of the above",
+        "explanation": "Slip broadly covers opportunity, release, and immediate chase context.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "After striking (without binding) a falcon typically:",
+        "choices": [
+            "Rakes away low",
+            "Throws up (climbs to regain pitch)",
+            "Casts a pellet",
+            "Stoops again instantly without climbing"
+        ],
+        "correct": "Throws up (climbs to regain pitch)",
+        "explanation": "A miss or glancing strike is followed by a climb (throwing up) to set another stoop.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "Female American Kestrels are preferred over males because they:",
+        "choices": [
+            "Train much easier",
+            "Handle English Sparrows better",
+            "Hunt better universally",
+            "None of these"
+        ],
+        "correct": "None of these",
+        "explanation": "Sex choice depends on size preference and quarry; performance varies individually.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    },
+    {
+        "question": "A pheasant is most often taken by a goshawk:",
+        "choices": [
+            "On first flush",
+            "Only at dawn",
+            "On a reflush",
+            "After sunset"
+        ],
+        "correct": "On a reflush",
+        "explanation": "Repeated flushing tires pheasants, improving interception chances.",
+        "category": "falconry",
+        "subcategory": "apprentice",
+        "type": "multiple",
+        "image": "",
+        "tags": ["Hunting and Training Techniques"],
+        "topic_label": "F3",
+        "topic": "Hunting and Training Techniques"
+    }
+]

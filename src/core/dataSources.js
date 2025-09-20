@@ -8,6 +8,9 @@ export const DATA_SOURCES = {
   },
   "cybersecurity": {
     "security+ sy0-701": "./datasets/cybersecurity/sy0701.json"
-  }
+  },
+  "falconry": {
+    "apprentice": "./datasets/falconry/apprentice.json"
+  },
   // add other categories as needed...
 };
