@@ -10,7 +10,6 @@ import { loadSession, setupSessionEvents } from './core/sessionManager.js';
 import { startQuiz, restoreSession, loadAndShowQuestions } from './core/quizLoader.js';
 import { setupDropdowns } from './core/dropdowns.js';
 import { setupButtons } from './core/controls.js';
-import { statsTracker } from './ui/statsTracker.js';
 import { categories, getCategoryIcon } from './data/quizMeta.js';
 import { state } from './core/state.js';
 import { getSubcategoriesForCategory } from './utils/quizMetaUtils.js';
@@ -50,7 +49,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ------------------------
   state.toggleAnswersBtn = document.getElementById('toggle-answers-btn');
   state.hideAnswersBtn = document.getElementById('hide-answers-btn');
-  state.showStatsBtn = document.getElementById('show-stats-btn');
   state.startExamBtn = document.getElementById('exam-btn');
 
   // ------------------------
@@ -118,7 +116,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     if (!restored && state.currentCategory) {
       const subcat = state.currentSubcategory || 'all';
-      statsTracker.setCategory(state.currentCategory);
       questions = await startQuiz(state.currentCategory, subcat, state);
 
       if (state.tagFilterEl && questions.length) {

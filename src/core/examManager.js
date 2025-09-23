@@ -1,6 +1,5 @@
 import { state } from './state.js';
 import { fetchAllQuestions, shuffleArray, showQuestion } from './quizLoader.js';
-import { statsTracker } from '../ui/statsTracker.js';
 import { createComplexModal } from '../ui/modal.js';
 import { isAnswerCorrect } from '../utils/answerUtils.js';
 import { showAnswerFeedback } from '../ui/questions.js';
@@ -325,7 +324,6 @@ export function endExam() {
         };
     });
     examResults.show(resultsData, state.exam.passingScore);
-    if (statsTracker?.recordExamResult) statsTracker.recordExamResult(resultsData);
     state.examMode = false;
     state.exam = null;
     if (state._preExamState) restorePreExamState();

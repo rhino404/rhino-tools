@@ -131,12 +131,6 @@ export async function startQuiz(category, subcategory, stateObj) {
         if (stateObj.subcategoryToggle) stateObj.subcategoryToggle.innerHTML = `${subIcon} ${subLabel} ▾`;
     } catch {}
 
-    // Set statsTracker category (optional, study mode only)
-    import('../ui/statsTracker.js').then(({ statsTracker }) => {
-        try { statsTracker.setCategory(category); }
-        catch (e) { console.warn('[Session] failed to set statsTracker category:', e); }
-    });
-
     // Fetch questions
     let questions = await fetchAllQuestions(category, stateObj.currentSubcategory);
     questions = shuffleArray(questions); // <-- Shuffle questions order
@@ -254,7 +248,6 @@ export function resetQuiz() {
     sessionStorage.removeItem('rynoToolsAnsweredQuestions');
     sessionStorage.removeItem('rynoToolsCurrentQuestion');
 
-    import('../ui/statsTracker.js').then(({ statsTracker }) => statsTracker.setCategory(null));
 }
 
 // =========================
