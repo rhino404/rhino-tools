@@ -180,14 +180,14 @@
     "topic": "Care and Maintenance"
   },
   {
-    "question": "Raptors include members of which orders?",
+    "question": "Which order does not include members of the raptors?",
     "choices": [
       "Strigiformes",
-      "Falconiformes / Accipitriformes",
+      "Falconiformes",
       "Passeriformes",
-      "Both a and b"
+      "Accipitriformes"
     ],
-    "correct": "Both a and b",
+    "correct": "Passeriformes",
     "explanation": "Owls (Strigiformes) and diurnal birds of prey (Falconiformes/Accipitriformes) are raptors; passerines are not.",
     "category": "falconry",
     "subcategory": "apprentice",
@@ -540,10 +540,10 @@
     "choices": [
       "After bathing",
       "When content",
-      "Both of the above",
-      "Neither of the above"
+      "Both choices are correct",
+      "Neither choice are correct"
     ],
-    "correct": "Both of the above",
+    "correct": "Both choices are correct",
     "explanation": "Relaxed or post‑bath birds often preen to realign and condition feathers.",
     "category": "falconry",
     "subcategory": "apprentice",
@@ -696,10 +696,10 @@
     "choices": [
       "Impact with quarry or lure",
       "Loosen hood braces / remove hood",
-      "Both of the above",
-      "Neither of the above"
+      "Both choices are correct",
+      "Neither choice are correct"
     ],
-    "correct": "Both of the above",
+    "correct": "Both choices are correct",
     "explanation": "Strike = contact; also ‘strike the braces/hood’ in hooding context.",
     "category": "falconry",
     "subcategory": "apprentice",
@@ -1458,7 +1458,7 @@
       "Merlin"
     ],
     "correct": "Merlin",
-    "explanation": "Both are small falcons pursuing small birds with fast direct flight (though kestrels also hover).",
+    "explanation": "Merlins are small falcons pursuing small birds with fast direct flight (though kestrels also hover).",
     "category": "falconry",
     "subcategory": "apprentice",
     "type": "multiple",
@@ -1886,10 +1886,10 @@
     "choices": [
       "Binding",
       "Striking",
-      "Both",
-      "Neither method"
+      "Both choices are correct",
+      "Neither choice are correct"
     ],
-    "correct": "Both",
+    "correct": "Both choices are correct",
     "explanation": "They may seize (bind) or strike to stun/kill before grabbing.",
     "category": "falconry",
     "subcategory": "apprentice",
@@ -1986,8 +1986,8 @@
     "choices": [
       "Represents wild breeding stock",
       "Is harder to train than a passage bird",
-      "Both",
-      "Neither"
+      "Both choices are correct",
+      "Neither choice are correct"
     ],
     "correct": "Both",
     "explanation": "Adults have established behaviors and reproductive value; passage birds adapt more readily.",
@@ -2150,10 +2150,10 @@
         "choices": [
             "A haggard (adult) was once an eyas",
             "A passage bird was once an eyas",
-            "Both",
-            "Neither"
+            "Both choices are correct",
+            "Neither choice are correct"
         ],
-        "correct": "Both",
+        "correct": "Both choices are correct",
         "explanation": "All birds were nestlings (eyases); passage birds are in their first year; haggards are fully adult.",
         "category": "falconry",
         "subcategory": "apprentice",
@@ -2387,8 +2387,8 @@
             "Only ground quarry",
             "A balloon"
         ],
-        "correct": "Both",
-        "explanation": "Kite and pigeon work encourage vertical climbing and controlled stoops.",
+        "correct": "Only ground quarry",
+        "explanation": "Using just ground quarry limits the Peregrine's ability to practice and refine its pitch.",
         "category": "falconry",
         "subcategory": "apprentice",
         "type": "multiple",
