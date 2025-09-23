@@ -2,14 +2,12 @@ import { syncAllButtonsUI } from '../ui/updateButton.js';
 import { showStatusModal } from '../ui/modal.js';
 import { hideAnswers } from '../handlers/hideAnswers.js';
 import { toggleAnswers } from '../handlers/toggleAnswers.js';
-import { showStats } from '../handlers/showStats.js';
 import { startExam } from '../handlers/startExam.js';
 
 // Centralized handler definitions
 const handlers = [
   { key: 'hideAnswersBtn', selector: '#hide-answers-btn', handler: hideAnswers },
   { key: 'toggleAnswersBtn', selector: '#toggle-answers-btn', handler: toggleAnswers },
-  { key: 'showStatsBtn', selector: '#show-stats-btn', handler: showStats },
   { key: 'examBtn', selector: '#exam-btn', handler: startExam }
 ];
 

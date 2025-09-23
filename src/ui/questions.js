@@ -1,5 +1,4 @@
 // src/ui/questions.js
-import { statsTracker } from './statsTracker.js';
 import { showCorrectEffect, showIncorrectEffect } from './effects.js';
 import { getIcon } from '../utils/utils.js';
 import { recordExamAnswer, endExam } from '../core/examManager.js';
@@ -142,15 +141,6 @@ export function checkAnswer(
   Array.from(choicesEl.children).forEach(btn => (btn.disabled = true));
   const isCorrect = isAnswerCorrect(choice, q.correct); // <-- Move this line up
   let transitionTime = showAnswerFeedback(isCorrect, q, explanationEl, state); // <-- Then use it here
-
-  // ✅ Only log stats in study mode
-  if (!state.examMode) {
-    saveAnsweredQuestion(q.topic_id);
-    statsTracker.logAnswer(
-      { ...q, category: q.category, subcategory: q.subcategory },
-      isCorrect
-    );
-  }
 
   // Advance or end exam
   setTimeout(() => {

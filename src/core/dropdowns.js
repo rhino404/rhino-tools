@@ -69,8 +69,6 @@ export function setupDropdowns(toggleBtn, optionsEl, optionsArray, filterKey, st
                 state.subcategoryToggle.innerHTML = '🌐 All Subcategories ▾';
             }
 
-            import('../ui/statsTracker.js').then(({ statsTracker }) => statsTracker.setCategory(val));
-
             startQuiz(val, 'all', state).then(() => {
                 const tagFilterEl = document.getElementById('tag-filter');
                 if (tagFilterEl) {
