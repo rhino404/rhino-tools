@@ -65,9 +65,9 @@
       "American Kestrel",
       "Red-tailed Hawk",
       "Peregrine Falcon",
-      "None of these choices are correct choices are correct"
+      "None of these choices are correct"
     ],
-    "correct": "None of these choices are correct choices are correct",
+    "correct": "None of these choices are correct",
     "explanation": "All listed species show reversed sexual size dimorphism typical of most raptors (female larger).",
     "category": "falconry",
     "subcategory": "apprentice",
@@ -145,7 +145,7 @@
       "Housing aesthetics",
       "Availability of suitable local prey",
       "Proximity to other falconers with that species",
-      "None of these choices are correct choices are correct"
+      "None of these choices are correct"
     ],
     "correct": "Availability of suitable local prey",
     "explanation": "Consistent access to appropriate wild quarry is critical for training, fitness, and success.",
@@ -639,7 +639,7 @@
       "Any migrating raptor (any age)",
       "A first‑year migrant (immature)",
       "Any captive intermewed raptor",
-      "None of these choices are correct choices are correct"
+      "None of these choices are correct"
     ],
     "correct": "A first‑year migrant (immature)",
     "explanation": "Passage = wild, first‑year bird taken on its initial migration or before first molt.",
@@ -697,7 +697,7 @@
       "Abort and veer off a flight",
       "Low contour pursuit",
       "A goshawk’s slashing pass",
-      "None of these choices are correct choices are correct"
+      "None of these choices are correct"
     ],
     "correct": "Abort and veer off a flight",
     "explanation": "Raking away is breaking off and turning away from intended line of flight.",
@@ -795,7 +795,7 @@
       "Peregrine Falcon",
       "American Kestrel",
       "Gyrfalcon",
-      "None of these choices are correct choices are correct"
+      "None of these choices are correct"
     ],
     "correct": "American Kestrel",
     "explanation": "Adult male and female American Kestrels differ noticeably in coloration/pattern; others mainly size.",
@@ -1027,7 +1027,7 @@
       "Weight and overall size",
       "Eye color",
       "Plumage color",
-      "None of these choices are correct choices are correct"
+      "None of these choices are correct"
     ],
     "correct": "Weight and overall size",
     "explanation": "Females average larger and heavier, though there is overlap; weight is the best field indicator.",
@@ -1297,9 +1297,9 @@
       "Needs less frequent feeding",
       "Less likely to carry",
       "Easier to keep healthy",
-      "None of these choices are correct choices are correct"
+      "None of these choices are correct"
     ],
-    "correct": "None of these choices are correct choices are correct",
+    "correct": "None of these choices are correct",
     "explanation": "Kestrels are delicate; a Red-tailed Hawk is usually more forgiving for beginners.",
     "category": "falconry",
     "subcategory": "apprentice",
@@ -1317,7 +1317,7 @@
       "Red-tailed Hawk",
       "Harris’s Hawk",
       "Aplomado Falcon",
-      "None of these choices are correct choices are correct"
+      "None of these choices are correct"
     ],
     "correct": "Red-tailed Hawk",
     "explanation": "Red-tailed Hawks occupy cold northern ranges; Harris’s and Aplomado prefer warmer climates.",
@@ -1337,7 +1337,7 @@
       "Waiting-on at height",
       "High attacks from above in long stoops",
       "Perch-and-wait (sit-and-watch)",
-      "None of these choices are correct choices are correct"
+      "None of these choices are correct"
     ],
     "correct": "Perch-and-wait (sit-and-watch)",
     "explanation": "They commonly hunt from elevated perches scanning for ground prey.",
@@ -1375,7 +1375,7 @@
       "Operant conditioning (positive reinforcement)",
       "Repeated lure stoops as sole method",
       "Primarily for quail hunting",
-      "None of these choices are correct choices are correct"
+      "None of these choices are correct"
     ],
     "correct": "Operant conditioning (positive reinforcement)",
     "explanation": "Modern falconry relies on operant conditioning and weight management principles.",
@@ -1415,9 +1415,9 @@
       "Females are too clumsy for squirrels",
       "Males take jackrabbits more easily",
       "Males are easier to man",
-      "None of these choices are correct choices are correct"
+      "None of these choices are correct"
     ],
-    "correct": "None of these choices are correct choices are correct",
+    "correct": "None of these choices are correct",
     "explanation": "Females often handle larger prey; preference depends on quarry and falconer goals.",
     "category": "falconry",
     "subcategory": "apprentice",
@@ -1867,7 +1867,7 @@
       "Best for arctic hare in severe cold",
       "May be flown cooperatively in groups",
       "Avoided due to manning difficulty",
-      "None of these choices are correct choices are correct"
+      "None of these choices are correct"
     ],
     "correct": "May be flown cooperatively in groups",
     "explanation": "Harris’s Hawks exhibit social hunting and can be flown in casts.",
@@ -2687,9 +2687,9 @@
       "Females are too clumsy for squirrels",
       "Males take jackrabbits more easily",
       "Males are far easier to man",
-      "None of these choices are correct statements are correct"
+      "None of these choices are correct"
     ],
-    "correct": "None of these choices are correct statements are correct",
+    "correct": "None of these choices are correct",
     "explanation": "Females are larger and capable; preference depends on falconer goals, not myths.",
     "category": "falconry",
     "subcategory": "apprentice",
@@ -3574,9 +3574,9 @@
       "They dislike bathing",
       "They do not drink water",
       "It causes sour crop",
-      "None of these"
+      "None of these choices are correct"
     ],
-    "correct": "None of these",
+    "correct": "None of these choices are correct",
     "explanation": "Daily access to clean water for drinking and bathing supports health and plumage.",
     "category": "falconry",
     "subcategory": "apprentice",
@@ -4844,9 +4844,9 @@
       "Bal-chatri",
       "Dho-gazza",
       "Phai-trap",
-      "None of these"
+      "None of these choices are correct"
     ],
-    "correct": "None of these",
+    "correct": "None of these choices are correct",
     "explanation": "Mist net differs from dho‑gazza, bal‑chatri, and phai trap designs.",
     "category": "falconry",
     "subcategory": "apprentice",
