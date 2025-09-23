@@ -59,13 +59,10 @@
         "totalQuestions": 80,
         "passingScore": 60,
         "distribution": {
-          "F0": 6,
-          "F1": 6,
-          "F2": 6,
-          "F3": 25,
-          "F4": 12,
-          "F5": 13,
-          "F6": 12
+          "Raptor Biology": 18,
+          "Falconry Practices": 25,
+          "Health & Maintenance": 25,
+          "Regulations": 12
         }
       }
     }
