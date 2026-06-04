@@ -50,6 +50,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ryno.tools/" />
   <meta property="og:image" content="https://ryno.tools/images/rhino404.jpeg" />
+  <meta property="og:image:alt" content="Ryno Tools rhino logo — microlearning for Ham Radio, Falconry, and Security+ exam prep" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter -->
@@ -98,11 +99,6 @@
         "url":"https://ryno.tools/",
         "name":"Ryno Tools",
         "publisher":{"@id":"https://ryno.tools/#org"},
-        "potentialAction":{
-          "@type":"SearchAction",
-          "target":"https://ryno.tools/?q={search_term_string}",
-          "query-input":"required name=search_term_string"
-        },
         "inLanguage":"en"
       },
       {
@@ -147,6 +143,96 @@
   }
   </script>
 
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Is Ryno Tools free to use?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. Ryno Tools is completely free. There is no account, subscription, or paywall. All quizzes, timed exam simulations, and explanations are available immediately with no login required."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What ham radio license exams does Ryno Tools cover?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Ryno Tools covers all three FCC amateur radio license levels: Technician Class (500+ questions), General Class (450+ questions), and Amateur Extra Class (800+ questions). Questions include explanations and are tagged by topic."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Does Ryno Tools work offline?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. Ryno Tools is a Progressive Web App (PWA). After the first visit, the service worker caches all quizzes and app assets. You can study without an internet connection. It can also be installed on your phone or desktop like a native app."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What is on the falconry apprentice exam?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"The falconry apprentice exam is required in all U.S. states to legally practice falconry. It is typically 100 multiple-choice questions covering raptor biology, species identification, housing standards (mews design, perches), nutrition and health care, federal and state hunting regulations, and ethical hunting practices. A passing score of 80% is required in most states."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Which CompTIA Security+ exam version does Ryno Tools cover?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Ryno Tools covers CompTIA Security+ SY0-701, the current active exam version as of 2026, with 400+ practice questions aligned to the official exam objectives. SY0-701 covers threats and vulnerabilities, cryptography, access control, network security, incident response, and governance. CompTIA is expected to release SY0-801 in late 2026."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Quiz / LearningResource -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Quiz",
+    "name":"Ham Radio Technician License Practice Quiz",
+    "description":"Practice questions for the FCC Amateur Radio Technician Class license exam.",
+    "educationalLevel":"beginner",
+    "about":{
+      "@type":"Thing",
+      "name":"FCC Amateur Radio Technician License"
+    },
+    "provider":{
+      "@type":"Organization",
+      "name":"Ryno Tools",
+      "url":"https://ryno.tools"
+    },
+    "hasPart":[
+      {
+        "@type":"Question",
+        "eduQuestionType":"Multiple choice",
+        "text":"Which frequency is within the 2-meter band?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"146.52 MHz"
+        }
+      },
+      {
+        "@type":"Question",
+        "eduQuestionType":"Multiple choice",
+        "text":"What is the maximum transmitter power an amateur station may use on 10 meters in the Technician band?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"200 watts PEP output"
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Structured Data: Course ItemList -->
   <script type="application/ld+json">
   {
@@ -157,37 +243,67 @@
       {
         "@type":"ListItem",
         "position":1,
-        "name":"Ham Radio Technician",
-        "url":"https://ryno.tools/",
-        "description":"500+ FCC Technician license practice questions"
+        "item":{
+          "@type":"Course",
+          "name":"Ham Radio Technician Class License Prep",
+          "description":"500+ FCC Technician license practice questions covering regulations, operating procedures, and electronics fundamentals.",
+          "url":"https://ryno.tools/",
+          "provider":{"@type":"Organization","name":"Ryno Tools","sameAs":"https://ryno.tools"},
+          "educationalLevel":"beginner",
+          "about":"FCC Amateur Radio Technician License"
+        }
       },
       {
         "@type":"ListItem",
         "position":2,
-        "name":"Ham Radio General Class",
-        "url":"https://ryno.tools/",
-        "description":"450+ FCC General class questions"
+        "item":{
+          "@type":"Course",
+          "name":"Ham Radio General Class License Prep",
+          "description":"450+ FCC General Class questions on HF propagation, antenna theory, regulations, and advanced operating.",
+          "url":"https://ryno.tools/",
+          "provider":{"@type":"Organization","name":"Ryno Tools","sameAs":"https://ryno.tools"},
+          "educationalLevel":"intermediate",
+          "about":"FCC Amateur Radio General Class License"
+        }
       },
       {
         "@type":"ListItem",
         "position":3,
-        "name":"Ham Radio Amateur Extra",
-        "url":"https://ryno.tools/",
-        "description":"800+ FCC Amateur Extra questions"
+        "item":{
+          "@type":"Course",
+          "name":"Ham Radio Amateur Extra Class License Prep",
+          "description":"800+ FCC Amateur Extra questions on advanced regulations, EMI, and theoretical concepts.",
+          "url":"https://ryno.tools/",
+          "provider":{"@type":"Organization","name":"Ryno Tools","sameAs":"https://ryno.tools"},
+          "educationalLevel":"advanced",
+          "about":"FCC Amateur Radio Amateur Extra Class License"
+        }
       },
       {
         "@type":"ListItem",
         "position":4,
-        "name":"Falconry Apprentice Exam",
-        "url":"https://ryno.tools/",
-        "description":"350+ questions on raptor biology and regulations"
+        "item":{
+          "@type":"Course",
+          "name":"Falconry Apprentice Exam Prep",
+          "description":"350+ questions on raptor biology, species identification, housing standards, federal/state hunting regulations, and ethical practices.",
+          "url":"https://ryno.tools/",
+          "provider":{"@type":"Organization","name":"Ryno Tools","sameAs":"https://ryno.tools"},
+          "educationalLevel":"beginner",
+          "about":"Falconry Apprentice License"
+        }
       },
       {
         "@type":"ListItem",
         "position":5,
-        "name":"CompTIA Security+ SY0-701",
-        "url":"https://ryno.tools/",
-        "description":"400+ practice questions for CompTIA Security+ certification"
+        "item":{
+          "@type":"Course",
+          "name":"CompTIA Security+ SY0-701 Exam Prep",
+          "description":"400+ practice questions aligned to CompTIA Security+ SY0-701 objectives: threats, cryptography, access control, network security, and incident response.",
+          "url":"https://ryno.tools/",
+          "provider":{"@type":"Organization","name":"Ryno Tools","sameAs":"https://ryno.tools"},
+          "educationalLevel":"intermediate",
+          "about":"CompTIA Security+ Certification"
+        }
       }
     ]
   }

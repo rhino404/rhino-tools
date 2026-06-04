@@ -1,7 +1,9 @@
 {
+  "id": "/",
+  "scope": "/",
   "name": "Ryno Tools - Keep Going. Keep Growing.",
   "short_name": "Ryno",
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#181818",
   "theme_color": "#181818",
