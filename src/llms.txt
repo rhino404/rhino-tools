@@ -1,6 +1,7 @@
 # Ryno Tools
 
 > Ryno Tools is a free, offline-capable microlearning platform for certification exam prep.
+> Last updated: 2026-06-03. No login, no paywall — all content is freely accessible.
 > Study ham radio (Technician, General, Extra class), falconry apprentice licensing,
 > and CompTIA Security+ SY0-701 through adaptive flashcard quizzes and timed exam simulations.
 > No login required. Works offline as a Progressive Web App.

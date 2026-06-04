@@ -1,5 +1,7 @@
 # Ryno Tools — Full Content Guide
 
+Last updated: 2026-06-03
+
 Ryno Tools is a free, offline-capable Progressive Web App for certification exam preparation. No login required, no paywalls, no tracking.
 
 ## Overview
