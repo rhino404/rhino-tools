@@ -1,0 +1,102 @@
+# Ryno Tools — Full Content Guide
+
+Ryno Tools is a free, offline-capable Progressive Web App for certification exam preparation. No login required, no paywalls, no tracking.
+
+## Overview
+
+The platform provides adaptive microlearning through flashcard quizzes and timed exam simulations across five certification domains:
+
+### Ham Radio Licensing (FCC)
+
+The FCC administers three levels of amateur radio (ham radio) licenses in the United States:
+
+- **Technician Class** (500+ questions): Entry-level license covering basic regulations, safety, operating procedures, and electronics fundamentals. Required for VHF/UHF access. ~15 hours study time.
+- **General Class** (450+ questions): Intermediate license enabling HF band access. Tests on propagation, antenna theory, regulations, and advanced operating procedures. ~25 hours study time.
+- **Amateur Extra Class** (800+ questions): Advanced license requiring mastery of EMI, advanced regulations, and theoretical concepts. ~50 hours study time.
+
+Each question includes regulations reference, explanation, and category tags (e.g., "safety", "operating-procedures", "electronics").
+
+### Falconry Apprenticeship
+
+**Falconry Apprentice** (350+ questions): Preparation for the falconry apprenticeship exam, a requirement in all U.S. states to legally practice falconry. Tests cover:
+- Raptor biology, species identification, and behavior
+- Housing standards (mews design, perches, netting)
+- Health, nutrition, and veterinary care
+- Federal and state hunting regulations
+- Ethical practices and field techniques
+
+Questions span regulation text, practical husbandry, species-specific care, and hunting law.
+
+### CompTIA Security+
+
+**CompTIA Security+ SY0-701** (400+ questions): Industry-standard IT security certification exam. Coverage includes:
+- Threats, vulnerabilities, and risk management
+- Cryptography and PKI
+- Access control and identity management
+- Network security and architecture
+- Incident response and business continuity
+- Governance, compliance, and organizational security
+
+Questions align with the official CompTIA exam objectives.
+
+## How the App Works
+
+### Study Mode
+
+Users select a quiz category and subcategory (e.g., "Ham Radio" → "Technician"). Questions appear one at a time. Users can:
+- Select an answer and get instant feedback
+- Filter questions by tag (e.g., show only "safety" questions)
+- Review explanations after answering
+- Track personal progress (questions answered, percentage correct)
+- Toggle between light and dark mode
+- Pause and resume at any time
+
+State is saved in browser session storage; progress persists across browser sessions.
+
+### Exam Mode
+
+Timed exam simulation with random question selection and scoring:
+- Time limit and question count set per exam specification
+- No pausing or reviewing during the exam
+- Pass/fail result shown with score breakdown by topic
+- Detailed performance report (questions answered, time per question)
+
+### Question Schema
+
+Each question includes:
+```
+{
+  "question": "question text",
+  "choices": ["choice A", "choice B", "choice C", "choice D"],
+  "correct": "choice A",
+  "explanation": "detailed explanation",
+  "category": "ham-radio",
+  "subcategory": "technician",
+  "topic_label": "Operating Procedures",
+  "topic_id": "OP.2",
+  "type": "multiple",
+  "tags": ["safety", "operating-procedures"],
+  "image": "" // optional image URL
+}
+```
+
+## Technology
+
+**Client-side only**: Ryno Tools is a static Progressive Web App (PWA) built with vanilla ES6 JavaScript. No backend server, no database, no API calls (except optional crypto price widget).
+
+**Offline capable**: The service worker caches the app shell and all datasets. Users can study without internet after the first visit.
+
+**Installation**: Users can install as a native-like app on mobile and desktop via their browser's PWA menu.
+
+**Storage**: Session state stored in browser sessionStorage; theme preference in localStorage.
+
+**Privacy**: No user accounts, no analytics beyond what's set in Google Analytics, no cookies for tracking. All study happens locally in the browser.
+
+## Legal
+
+- **Privacy Policy**: https://ryno.tools/pages/privacy.html
+- **Terms of Service**: https://ryno.tools/pages/terms.html
+
+## Feedback & Contact
+
+For questions, bug reports, or dataset corrections, visit the GitHub repository: https://github.com/rhino404/rhino-tools

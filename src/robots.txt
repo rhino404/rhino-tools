@@ -1,4 +1,21 @@
 User-agent: *
 Allow: /
 
+# AI / LLM crawlers — welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleExtendedBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://ryno.tools/sitemap.xml
+LLMs: https://ryno.tools/llms.txt
