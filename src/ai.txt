@@ -1,18 +1,33 @@
-# Allow OpenAI crawlers (used for GPT, ChatGPT, Copilot, etc.)
+# AI crawler access directives for Ryno Tools
+# Training crawlers (allowed — free educational content, no paywalls)
 User-agent: GPTBot
 Allow: /
 
-# Explicit mention of GitHub Copilot (not enforced but proactive)
-User-agent: GitHubCopilot
+User-agent: ClaudeBot
 Allow: /
 
-# Allow Perplexity, Google Gemini, and others
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Live retrieval crawlers (citation traffic)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeWeb
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: GeminiBot
+User-agent: YouBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: GitHubCopilot
 Allow: /
 
