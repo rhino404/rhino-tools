@@ -17,3 +17,18 @@ pyproject.toml
 
 # Folders
 local/
+
+# OS / editor
+.DS_Store
+*.log
+
+# Node
+node_modules/
+
+# Test / coverage caches
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+playwright-report/
+test-results/
