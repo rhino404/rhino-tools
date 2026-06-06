@@ -42,9 +42,11 @@
         "passingScore": 26
       },
       "pool": {
-        "version": null,
-        "effectiveDate": null,
-        "expiryDate": null
+        "version": "2022-2026",
+        "effectiveDate": "2022-07-01",
+        "expiryDate": "2026-06-30",
+        "source": "NCVEC",
+        "sourceUrl": "https://www.ncvec.org/"
       }
     },
     {
@@ -100,9 +102,11 @@
         "passingScore": 26
       },
       "pool": {
-        "version": null,
-        "effectiveDate": null,
-        "expiryDate": null
+        "version": "2023-2027",
+        "effectiveDate": "2023-07-01",
+        "expiryDate": "2027-06-30",
+        "source": "NCVEC",
+        "sourceUrl": "https://www.ncvec.org/"
       }
     },
     {
@@ -150,9 +154,11 @@
         "passingScore": 37
       },
       "pool": {
-        "version": null,
-        "effectiveDate": null,
-        "expiryDate": null
+        "version": "2024-2028",
+        "effectiveDate": "2024-07-01",
+        "expiryDate": "2028-06-30",
+        "source": "NCVEC",
+        "sourceUrl": "https://www.ncvec.org/"
       }
     },
     {
@@ -185,9 +191,11 @@
       "sha256": "8ede87753801f9a5bb0afea93aca1a90f59f0471047b092fecc094ce66bd181f",
       "exam": null,
       "pool": {
-        "version": null,
-        "effectiveDate": null,
-        "expiryDate": null
+        "version": "SY0-701",
+        "effectiveDate": "2023-11-07",
+        "expiryDate": null,
+        "source": "CompTIA exam objectives (authored; CompTIA does not publish a public item pool)",
+        "sourceUrl": "https://www.comptia.org/certifications/security"
       }
     },
     {
@@ -220,7 +228,9 @@
       "pool": {
         "version": null,
         "effectiveDate": null,
-        "expiryDate": null
+        "expiryDate": null,
+        "source": "U.S. state apprentice falconry exams (no national pool)",
+        "sourceUrl": null
       }
     }
   ]

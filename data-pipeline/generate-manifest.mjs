@@ -25,6 +25,9 @@ const OUT = path.join(SRC, 'datasets', 'index.json');
 const { DATA_SOURCES } = await import(pathToFileURL(path.join(SRC, 'core', 'dataSources.js')).href);
 const { quizMeta } = await import(pathToFileURL(path.join(SRC, 'data', 'quizMeta.js')).href);
 const examDefs = JSON.parse(fs.readFileSync(path.join(SRC, 'datasets', 'exam.json'), 'utf8'));
+const poolsPath = path.join(__dirname, 'pools.json');
+const pools = fs.existsSync(poolsPath) ? JSON.parse(fs.readFileSync(poolsPath, 'utf8')).pools : {};
+const EMPTY_POOL = { version: null, effectiveDate: null, expiryDate: null, source: null, sourceUrl: null };
 
 const labelFor = (sub) => quizMeta.subcategories.find((s) => s.value === sub)?.label || sub;
 const examFor = (cat, sub) => {
@@ -53,7 +56,7 @@ for (const [category, subs] of Object.entries(DATA_SOURCES)) {
       tags,
       sha256: crypto.createHash('sha256').update(raw).digest('hex'),
       exam: examFor(category, subcategory),
-      pool: { version: null, effectiveDate: null, expiryDate: null },
+      pool: pools[`${category}/${subcategory}`] || EMPTY_POOL,
     });
     totalQuestions += data.length;
   }
