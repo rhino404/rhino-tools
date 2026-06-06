@@ -1,5 +1,6 @@
 [
   {
+    "id": "extra-a95c5cd097",
     "question": "When using a transceiver that displays the carrier frequency of phone signals, which of the following displayed frequencies represents the highest frequency at which a properly adjusted USB emission will be totally within the band?",
     "choices": [
       "The exact upper band edge",
@@ -22,6 +23,7 @@
     ]
   },
   {
+    "id": "extra-a63a49be27",
     "question": "When using a transceiver that displays the carrier frequency of phone signals, which of the following displayed frequencies represents the lowest frequency at which a properly adjusted LSB emission will be totally within the band?",
     "choices": [
       "The exact lower band edge",
@@ -44,6 +46,7 @@
     ]
   },
   {
+    "id": "extra-3b5af3f4ac",
     "question": "With your transceiver displaying the carrier frequency of phone signals, you hear a station calling CQ on 14.349 MHz USB. Is it legal to return the call using upper sideband on the same frequency?",
     "choices": [
       "Yes, because you were not the station calling CQ",
@@ -66,6 +69,7 @@
     ]
   },
   {
+    "id": "extra-dfb1e92cf6",
     "question": "With your transceiver displaying the carrier frequency of phone signals, you hear a DX station calling CQ on 3.601 MHz LSB. Is it legal to return the call using lower sideband on the same frequency?",
     "choices": [
       "Yes, because the DX station initiated the contact",
@@ -88,6 +92,7 @@
     ]
   },
   {
+    "id": "extra-2932a3f9d0",
     "question": "What is the maximum power output permitted on the 60 meter band?",
     "choices": [
       "50 watts PEP effective radiated power relative to an isotropic radiator",
@@ -110,6 +115,7 @@
     ]
   },
   {
+    "id": "extra-cff1962343",
     "question": "Where must the carrier frequency of a CW signal be set to comply with FCC rules for 60 meter operation?",
     "choices": [
       "At the lowest frequency of the channel",
@@ -132,6 +138,7 @@
     ]
   },
   {
+    "id": "extra-f11627fd41",
     "question": "Which amateur band requires transmission on specific channels rather than on a range of frequencies?",
     "choices": [
       "12 meter band",
@@ -154,6 +161,7 @@
     ]
   },
   {
+    "id": "extra-c39a916fd6",
     "question": "If a station in a message forwarding system inadvertently forwards a message that is in violation of FCC rules, who is primarily accountable for the rules violation?",
     "choices": [
       "The control operator of the packet bulletin board station",
@@ -176,6 +184,7 @@
     ]
   },
   {
+    "id": "extra-ca43b129a0",
     "question": "What is the first action you should take if your digital message forwarding station inadvertently forwards a communication that violates FCC rules?",
     "choices": [
       "Discontinue forwarding the communication as soon as you become aware of it",
@@ -198,6 +207,7 @@
     ]
   },
   {
+    "id": "extra-10659a2f2f",
     "question": "If an amateur station is installed aboard a ship or aircraft, what condition must be met before the station is operated?",
     "choices": [
       "Its operation must be approved by the master of the ship or the pilot in command of the aircraft",
@@ -220,6 +230,7 @@
     ]
   },
   {
+    "id": "extra-f467885843",
     "question": "Which of the following describes authorization or licensing required when operating an amateur station aboard a U.S.-registered vessel in international waters?",
     "choices": [
       "Any amateur license with an FCC Marine or Aircraft endorsement",
@@ -242,6 +253,7 @@
     ]
   },
   {
+    "id": "extra-f819cd6389",
     "question": "With your transceiver displaying the carrier frequency of CW signals, you hear a DX station's CQ on 3.500 MHz. Is it legal to return the call using CW on the same frequency?",
     "choices": [
       "Yes, the DX station initiated the contact",
@@ -264,6 +276,7 @@
     ]
   },
   {
+    "id": "extra-98b75c118b",
     "question": "Who must be in physical control of the station apparatus of an amateur station aboard any vessel or craft that is documented or registered in the United States?",
     "choices": [
       "Only a person with an FCC Marine Radio",
@@ -286,6 +299,7 @@
     ]
   },
   {
+    "id": "extra-9e7a4a28df",
     "question": "What is the maximum bandwidth for a data emission on 60 meters?",
     "choices": [
       "60 Hz",
@@ -308,6 +322,7 @@
     ]
   },
   {
+    "id": "extra-23a9e701d9",
     "question": "Which of the following constitutes a spurious emission?",
     "choices": [
       "An amateur station transmission made at random without the proper call sign identification",
@@ -330,6 +345,7 @@
     ]
   },
   {
+    "id": "extra-39ddacbc63",
     "question": "Which of the following factors might cause the physical location of an amateur station apparatus or antenna structure to be restricted?",
     "choices": [
       "The location is near an area of political conflict",
@@ -352,6 +368,7 @@
     ]
   },
   {
+    "id": "extra-3045593906",
     "question": "Within what distance must an amateur station protect an FCC monitoring facility from harmful interference?",
     "choices": [
       "1 mile",
@@ -374,6 +391,7 @@
     ]
   },
   {
+    "id": "extra-8053307e96",
     "question": "What must be done before placing an amateur station within an officially designated wilderness area or wildlife preserve, or an area listed in the National Register of Historical Places?",
     "choices": [
       "A proposal must be submitted to the National Park Service",
@@ -396,6 +414,7 @@
     ]
   },
   {
+    "id": "extra-cc6fdb3b1a",
     "question": "What is the National Radio Quiet Zone?",
     "choices": [
       "An area in Puerto Rico surrounding the Arecibo Radio Telescope",
@@ -418,6 +437,7 @@
     ]
   },
   {
+    "id": "extra-0c2d214704",
     "question": "Which of the following additional rules apply if you are installing an amateur station antenna at a site at or near a public use airport?",
     "choices": [
       "You may have to notify the Federal Aviation Administration and register it with the FCC as required by Part 17 of FCC rules",
@@ -440,6 +460,7 @@
     ]
   },
   {
+    "id": "extra-d96c7871cd",
     "question": "What is the highest modulation index permitted at the highest modulation frequency for angle modulation below 29.0 MHz?",
     "choices": [
       "0.5",
@@ -462,6 +483,7 @@
     ]
   },
   {
+    "id": "extra-b5f999f3ed",
     "question": "What limitations may the FCC place on an amateur station if its signal causes interference to domestic broadcast reception, assuming that the receivers involved are of good engineering design?",
     "choices": [
       "The amateur station must cease operation",
@@ -484,6 +506,7 @@
     ]
   },
   {
+    "id": "extra-a9490b62e3",
     "question": "Which amateur stations may be operated under RACES rules?",
     "choices": [
       "Only those club stations licensed to Amateur Extra class operators",
@@ -506,6 +529,7 @@
     ]
   },
   {
+    "id": "extra-e309f68e48",
     "question": "What frequencies are authorized to an amateur station operating under RACES rules?",
     "choices": [
       "All amateur service frequencies authorized to the control operator",
@@ -528,6 +552,7 @@
     ]
   },
   {
+    "id": "extra-942a07c541",
     "question": "What is the permitted mean power of any spurious emission relative to the mean power of the fundamental emission from a station transmitter or external RF amplifier installed after January 1, 2003 and transmitting on a frequency below 30 MHZ?",
     "choices": [
       "At least 43 dB below",
@@ -550,6 +575,7 @@
     ]
   },
   {
+    "id": "extra-310a2b62bd",
     "question": "What is a remotely controlled station?",
     "choices": [
       "A station operated away from its regular home location",
@@ -572,6 +598,7 @@
     ]
   },
   {
+    "id": "extra-3c62ea981f",
     "question": "What is meant by automatic control of a station?",
     "choices": [
       "The use of devices and procedures for control so that the control operator does not have to be present at a control point",
@@ -594,6 +621,7 @@
     ]
   },
   {
+    "id": "extra-84bb976c1b",
     "question": "How do the control operator responsibilities of a station under automatic control differ from one under local control?",
     "choices": [
       "Under local control there is no control operator",
@@ -616,6 +644,7 @@
     ]
   },
   {
+    "id": "extra-dc82fdcf73",
     "question": "What is meant by IARP?",
     "choices": [
       "An international amateur radio permit that allows U.S. amateurs to operate in certain countries of the Americas",
@@ -638,6 +667,7 @@
     ]
   },
   {
+    "id": "extra-49f58cbf66",
     "question": "When may an automatically controlled station originate third party communications?",
     "choices": [
       "Never",
@@ -660,6 +690,7 @@
     ]
   },
   {
+    "id": "extra-635b6d9de0",
     "question": "Which of the following statements concerning remotely controlled amateur stations is true?",
     "choices": [
       "Only Extra Class operators may be the control operator of a remote station",
@@ -682,6 +713,7 @@
     ]
   },
   {
+    "id": "extra-065389528d",
     "question": "What is meant by local control?",
     "choices": [
       "Controlling a station through a local auxiliary link",
@@ -704,6 +736,7 @@
     ]
   },
   {
+    "id": "extra-98e3eaa3a5",
     "question": "What is the maximum permissible duration of a remotely controlled station\u2019s transmissions if its control link malfunctions?",
     "choices": [
       "30 seconds",
@@ -726,6 +759,7 @@
     ]
   },
   {
+    "id": "extra-c7334c30ef",
     "question": "Which of these ranges of frequencies is available for an automatically controlled repeater operating below 30 MHz?",
     "choices": [
       "18.110 MHz - 18.168 MHz",
@@ -748,6 +782,7 @@
     ]
   },
   {
+    "id": "extra-6d32915524",
     "question": "What types of amateur stations may automatically retransmit the radio signals of other amateur stations?",
     "choices": [
       "Only beacon, repeater or space stations",
@@ -770,6 +805,7 @@
     ]
   },
   {
+    "id": "extra-bbdc05f7a1",
     "question": "Which of the following operating arrangements allows an FCC-licensed U.S. citizen to operate in many European countries, and alien amateurs from many European countries to operate in the U.S.?",
     "choices": [
       "CEPT agreement",
@@ -792,6 +828,7 @@
     ]
   },
   {
+    "id": "extra-f480abf33e",
     "question": "What types of communications may be transmitted to amateur stations in foreign countries?",
     "choices": [
       "Business-related messages for non-profit organizations",
@@ -814,6 +851,7 @@
     ]
   },
   {
+    "id": "extra-8fc28f3245",
     "question": "Which of the following is required in order to operate in accordance with CEPT rules in foreign countries where permitted?",
     "choices": [
       "You must identify in the official language of the country in which you are operating",
@@ -836,6 +874,7 @@
     ]
   },
   {
+    "id": "extra-7ca310a7f1",
     "question": "What is the definition of the term telemetry?",
     "choices": [
       "One-way transmission of measurements at a distance from the measuring instrument",
@@ -858,6 +897,7 @@
     ]
   },
   {
+    "id": "extra-c702a8dd87",
     "question": "What is the amateur satellite service?",
     "choices": [
       "A radio navigation service using satellites for the purpose of self training, intercommunication and technical studies carried out by amateurs",
@@ -880,6 +920,7 @@
     ]
   },
   {
+    "id": "extra-d8fc2d0e1b",
     "question": "What is a telecommand station in the amateur satellite service?",
     "choices": [
       "An amateur station located on the Earth\u2019s surface for communication with other Earth stations by means of Earth satellites",
@@ -902,6 +943,7 @@
     ]
   },
   {
+    "id": "extra-c905fdbd20",
     "question": "What is an Earth station in the amateur satellite service?",
     "choices": [
       "An amateur station within 50 km of the Earth's surface intended for communications with amateur stations by means of objects in space",
@@ -924,6 +966,7 @@
     ]
   },
   {
+    "id": "extra-53fc7be26f",
     "question": "What class of licensee is authorized to be the control operator of a space station?",
     "choices": [
       "All except Technician Class",
@@ -946,6 +989,7 @@
     ]
   },
   {
+    "id": "extra-f3361029b9",
     "question": "Which of the following is a requirement of a space station?",
     "choices": [
       "The space station must be capable of terminating transmissions by telecommand when directed by the FCC",
@@ -968,6 +1012,7 @@
     ]
   },
   {
+    "id": "extra-62b1f89629",
     "question": "Which amateur service HF bands have frequencies authorized for space stations?",
     "choices": [
       "Only the 40 m, 20 m, 17 m, 15 m, 12 m and 10 m bands",
@@ -990,6 +1035,7 @@
     ]
   },
   {
+    "id": "extra-c1e48368d8",
     "question": "Which VHF amateur service bands have frequencies available for space stations?",
     "choices": [
       "6 meters and 2 meters",
@@ -1012,6 +1058,7 @@
     ]
   },
   {
+    "id": "extra-ec7e70d0ef",
     "question": "Which UHF amateur service bands have frequencies available for a space station?",
     "choices": [
       "70 cm only",
@@ -1034,6 +1081,7 @@
     ]
   },
   {
+    "id": "extra-bacdbc9b48",
     "question": "Which amateur stations are eligible to be telecommand stations?",
     "choices": [
       "Any amateur station designated by NASA",
@@ -1056,6 +1104,7 @@
     ]
   },
   {
+    "id": "extra-81808a595e",
     "question": "Which amateur stations are eligible to operate as Earth stations?",
     "choices": [
       "Any amateur station whose licensee has filed a pre-space notification with the FCC's International Bureau",
@@ -1078,6 +1127,7 @@
     ]
   },
   {
+    "id": "extra-8558990546",
     "question": "What is the minimum number of qualified VEs required to administer an Element 4 amateur operator license examination?",
     "choices": [
       "5",
@@ -1100,6 +1150,7 @@
     ]
   },
   {
+    "id": "extra-719acf2e56",
     "question": "Where are the questions for all written U.S. amateur license examinations listed?",
     "choices": [
       "In FCC Part 97",
@@ -1122,6 +1173,7 @@
     ]
   },
   {
+    "id": "extra-a2a4eb126b",
     "question": "What is a Volunteer Examiner Coordinator?",
     "choices": [
       "A person who has volunteered to administer amateur operator license examinations",
@@ -1146,6 +1198,7 @@
     ]
   },
   {
+    "id": "extra-1252b7cd41",
     "question": "Which of the following best describes the Volunteer Examiner accreditation process?",
     "choices": [
       "Each General, Advanced and Amateur Extra Class operator is automatically accredited as a VE when the license is granted",
@@ -1170,6 +1223,7 @@
     ]
   },
   {
+    "id": "extra-c5296abe0d",
     "question": "What is the minimum passing score on amateur operator license examinations?",
     "choices": [
       "Minimum passing score of 70%",
@@ -1192,6 +1246,7 @@
     ]
   },
   {
+    "id": "extra-2ef0daac45",
     "question": "Who is responsible for the proper conduct and necessary supervision during an amateur operator license examination session?",
     "choices": [
       "The VEC coordinating the session",
@@ -1214,6 +1269,7 @@
     ]
   },
   {
+    "id": "extra-6511500163",
     "question": "What should a VE do if a candidate fails to comply with the examiner\u2019s instructions during an amateur operator license examination?",
     "choices": [
       "Warn the candidate that continued failure to comply will result in termination of the examination",
@@ -1236,6 +1292,7 @@
     ]
   },
   {
+    "id": "extra-659a60132f",
     "question": "To which of the following examinees may a VE not administer an examination?",
     "choices": [
       "Employees of the VE",
@@ -1260,6 +1317,7 @@
     ]
   },
   {
+    "id": "extra-f79bf50c2f",
     "question": "What may be the penalty for a VE who fraudulently administers or certifies an examination?",
     "choices": [
       "Revocation of the VE's amateur station license grant and the suspension of the VE's amateur operator license grant",
@@ -1284,6 +1342,7 @@
     ]
   },
   {
+    "id": "extra-b50f15865c",
     "question": "What must the administering VEs do after the administration of a successful examination for an amateur operator license?",
     "choices": [
       "They must collect and send the documents to the NCVEC for grading",
@@ -1306,6 +1365,7 @@
     ]
   },
   {
+    "id": "extra-59d3ab055e",
     "question": "What must the VE team do if an examinee scores a passing grade on all examination elements needed for an upgrade or new license?",
     "choices": [
       "Photocopy all examination documents and forward them to the FCC for processing",
@@ -1328,6 +1388,7 @@
     ]
   },
   {
+    "id": "extra-2815d16de5",
     "question": "What must the VE team do with the application form if the examinee does not pass the exam?",
     "choices": [
       "Return the application document to the examinee",
@@ -1352,6 +1413,7 @@
     ]
   },
   {
+    "id": "extra-f5cea90102",
     "question": "For which types of out-of-pocket expenses do the Part 97 rules state that VEs and VECs may be reimbursed?",
     "choices": [
       "Preparing, processing, administering and coordinating an examination for an amateur radio license",
@@ -1376,6 +1438,7 @@
     ]
   },
   {
+    "id": "extra-2b691bb74f",
     "question": "On what frequencies are spread spectrum transmissions permitted?",
     "choices": [
       "Only on amateur frequencies above 50 MHz",
@@ -1398,6 +1461,7 @@
     ]
   },
   {
+    "id": "extra-3608557d83",
     "question": "What privileges are authorized in the U.S. to persons holding an amateur service license granted by the Government of Canada?",
     "choices": [
       "None, they must obtain a U.S. license",
@@ -1420,6 +1484,7 @@
     ]
   },
   {
+    "id": "extra-b574699d97",
     "question": "Under what circumstances may a dealer sell an external RF power amplifier capable of operation below 144 MHz if it has not been granted FCC certification?",
     "choices": [
       "It was purchased in used condition from an amateur operator and is sold to another amateur operator for use at that operator's station",
@@ -1442,6 +1507,7 @@
     ]
   },
   {
+    "id": "extra-c097bcde7e",
     "question": "Which of the following geographic descriptions approximately describes \"Line A\"?",
     "choices": [
       "A line roughly parallel to and south of the U.S.-Canadian border",
@@ -1464,6 +1530,7 @@
     ]
   },
   {
+    "id": "extra-0ec51fbb78",
     "question": "Amateur stations may not transmit in which of the following frequency segments if they are located in the contiguous 48 states and north of Line A?",
     "choices": [
       "440 MHz - 450 MHz",
@@ -1486,6 +1553,7 @@
     ]
   },
   {
+    "id": "extra-fe75c7f309",
     "question": "Under what circumstances might the FCC issue a Special Temporary Authority (STA) to an amateur station?",
     "choices": [
       "To provide for experimental amateur communications",
@@ -1508,6 +1576,7 @@
     ]
   },
   {
+    "id": "extra-18450e832d",
     "question": "When may an amateur station send a message to a business?",
     "choices": [
       "When the total money involved does not exceed $25",
@@ -1530,6 +1599,7 @@
     ]
   },
   {
+    "id": "extra-c1a17f904e",
     "question": "Which of the following types of amateur station communications are prohibited?",
     "choices": [
       "Communications transmitted for hire or material compensation, except as otherwise provided in the rules",
@@ -1552,6 +1622,7 @@
     ]
   },
   {
+    "id": "extra-b2b678037c",
     "question": "Which of the following conditions apply when transmitting spread spectrum emission?",
     "choices": [
       "A station transmitting SS emission must not cause harmful interference to other stations employing other authorized emissions",
@@ -1574,6 +1645,7 @@
     ]
   },
   {
+    "id": "extra-0f054ab2cc",
     "question": "What is the maximum permitted transmitter peak envelope power for an amateur station transmitting spread spectrum communications?",
     "choices": [
       "1 W",
@@ -1596,6 +1668,7 @@
     ]
   },
   {
+    "id": "extra-49d5b43628",
     "question": "Which of the following best describes one of the standards that must be met by an external RF power amplifier if it is to qualify for a grant of FCC certification?",
     "choices": [
       "It must produce full legal output when driven by not more than 5 watts of mean RF input power",
@@ -1618,6 +1691,7 @@
     ]
   },
   {
+    "id": "extra-6139879e20",
     "question": "Who may be the control operator of an auxiliary station?",
     "choices": [
       "Any licensed amateur operator",
@@ -1640,6 +1714,7 @@
     ]
   },
   {
+    "id": "extra-2e6869ecac",
     "question": "What is the direction of an ascending pass for an amateur satellite?",
     "choices": [
       "From west to east",
@@ -1662,6 +1737,7 @@
     ]
   },
   {
+    "id": "extra-d8c75a192f",
     "question": "What is the direction of a descending pass for an amateur satellite?",
     "choices": [
       "From north to south",
@@ -1684,6 +1760,7 @@
     ]
   },
   {
+    "id": "extra-adb75f4d8d",
     "question": "What is the orbital period of an Earth satellite?",
     "choices": [
       "The point of maximum height of a satellite's orbit",
@@ -1706,6 +1783,7 @@
     ]
   },
   {
+    "id": "extra-052e3d7434",
     "question": "What is meant by the term mode as applied to an amateur radio satellite?",
     "choices": [
       "The type of signals that can be relayed through the satellite",
@@ -1728,6 +1806,7 @@
     ]
   },
   {
+    "id": "extra-02ee739947",
     "question": "What do the letters in a satellite's mode designator specify?",
     "choices": [
       "Power limits for uplink and downlink transmissions",
@@ -1750,6 +1829,7 @@
     ]
   },
   {
+    "id": "extra-c9dbecd619",
     "question": "On what band would a satellite receive signals if it were operating in mode U/V?",
     "choices": [
       "435 MHz - 438 MHz",
@@ -1772,6 +1852,7 @@
     ]
   },
   {
+    "id": "extra-052879bcea",
     "question": "Which of the following types of signals can be relayed through a linear transponder?",
     "choices": [
       "FM and CW",
@@ -1794,6 +1875,7 @@
     ]
   },
   {
+    "id": "extra-854934a6f1",
     "question": "Why should effective radiated power to a satellite which uses a linear transponder be limited?",
     "choices": [
       "To prevent creating errors in the satellite telemetry",
@@ -1816,6 +1898,7 @@
     ]
   },
   {
+    "id": "extra-a020a8d9a3",
     "question": "What do the terms L band and S band specify with regard to satellite communications?",
     "choices": [
       "The 23 centimeter and 13 centimeter bands",
@@ -1838,6 +1921,7 @@
     ]
   },
   {
+    "id": "extra-9cc2825b1b",
     "question": "Why may the received signal from an amateur satellite exhibit a rapidly repeating fading effect?",
     "choices": [
       "Because the satellite is spinning",
@@ -1860,6 +1944,7 @@
     ]
   },
   {
+    "id": "extra-efa129bdbc",
     "question": "What type of antenna can be used to minimize the effects of spin modulation and Faraday rotation?",
     "choices": [
       "A linearly polarized antenna",
@@ -1882,6 +1967,7 @@
     ]
   },
   {
+    "id": "extra-ac5606ffcf",
     "question": "What is one way to predict the location of a satellite at a given time?",
     "choices": [
       "By means of the Doppler data for the specified satellite",
@@ -1904,6 +1990,7 @@
     ]
   },
   {
+    "id": "extra-abf3dd966d",
     "question": "What type of satellite appears to stay in one position in the sky?",
     "choices": [
       "HEO",
@@ -1926,6 +2013,7 @@
     ]
   },
   {
+    "id": "extra-5e534ba97a",
     "question": "What technology is used to track, in real time, balloons carrying amateur radio transmitters?",
     "choices": [
       "Radar",
@@ -1948,6 +2036,7 @@
     ]
   },
   {
+    "id": "extra-017d8dd1b0",
     "question": "How many times per second is a new frame transmitted in a fast-scan (NTSC) television system?",
     "choices": [
       "30",
@@ -1970,6 +2059,7 @@
     ]
   },
   {
+    "id": "extra-524f6301eb",
     "question": "How many horizontal lines make up a fast-scan (NTSC) television frame?",
     "choices": [
       "30",
@@ -1992,6 +2082,7 @@
     ]
   },
   {
+    "id": "extra-35369dfe9b",
     "question": "What is blanking in a video signal?",
     "choices": [
       "Synchronization of the horizontal and vertical sync pulses",
@@ -2014,6 +2105,7 @@
     ]
   },
   {
+    "id": "extra-eded6a5e95",
     "question": "Which of the following is an advantage of using vestigial sideband for standard fast- scan TV transmissions?",
     "choices": [
       "The vestigial sideband carries the audio information",
@@ -2036,6 +2128,7 @@
     ]
   },
   {
+    "id": "extra-d8b5b31602",
     "question": "What is vestigial sideband modulation?",
     "choices": [
       "Amplitude modulation in which one complete sideband and a portion of the other are transmitted",
@@ -2058,6 +2151,7 @@
     ]
   },
   {
+    "id": "extra-0cec3fee74",
     "question": "What is the name of the signal component that carries color information in NTSC video?",
     "choices": [
       "Luminance",
@@ -2080,6 +2174,7 @@
     ]
   },
   {
+    "id": "extra-5b8d82a4c3",
     "question": "Which of the following is a common method of transmitting accompanying audio with amateur fast-scan television?",
     "choices": [
       "Frequency-modulated sub-carrier",
@@ -2102,6 +2197,7 @@
     ]
   },
   {
+    "id": "extra-921a13d9a4",
     "question": "What hardware, other than a receiver with SSB capability and a suitable computer, is needed to decode SSTV using Digital Radio Mondiale (DRM)?",
     "choices": [
       "A special IF converter",
@@ -2124,6 +2220,7 @@
     ]
   },
   {
+    "id": "extra-9677be26b3",
     "question": "Which of the following is an acceptable bandwidth for Digital Radio Mondiale (DRM) based voice or SSTV digital transmissions made on the HF amateur bands?",
     "choices": [
       "3 KHz",
@@ -2146,6 +2243,7 @@
     ]
   },
   {
+    "id": "extra-c597cd90e5",
     "question": "What is the function of the Vertical Interval Signaling (VIS) code sent as part of an SSTV transmission?",
     "choices": [
       "To lock the color burst oscillator in color SSTV images",
@@ -2168,6 +2266,7 @@
     ]
   },
   {
+    "id": "extra-b7867d6f60",
     "question": "How are analog SSTV images typically transmitted on the HF bands?",
     "choices": [
       "Video is converted to equivalent Baudot representation",
@@ -2190,6 +2289,7 @@
     ]
   },
   {
+    "id": "extra-249501089b",
     "question": "How many lines are commonly used in each frame of an amateur slow-scan color television picture?",
     "choices": [
       "30 or 60",
@@ -2212,6 +2312,7 @@
     ]
   },
   {
+    "id": "extra-62b3d7d7cc",
     "question": "What aspect of an amateur slow-scan television signal encodes the brightness of the picture?",
     "choices": [
       "Tone frequency",
@@ -2234,6 +2335,7 @@
     ]
   },
   {
+    "id": "extra-6dbc6c7055",
     "question": "What signals SSTV receiving equipment to begin a new picture line?",
     "choices": [
       "Specific tone frequencies",
@@ -2256,6 +2358,7 @@
     ]
   },
   {
+    "id": "extra-9570b6cc36",
     "question": "Which is a video standard used by North American Fast Scan ATV stations?",
     "choices": [
       "PAL",
@@ -2278,6 +2381,7 @@
     ]
   },
   {
+    "id": "extra-7b9c121ba8",
     "question": "What is the approximate bandwidth of a slow-scan TV signal?",
     "choices": [
       "600 Hz",
@@ -2300,6 +2404,7 @@
     ]
   },
   {
+    "id": "extra-366d91c42d",
     "question": "On which of the following frequencies is one likely to find FM ATV transmissions?",
     "choices": [
       "14.230 MHz",
@@ -2322,6 +2427,7 @@
     ]
   },
   {
+    "id": "extra-e8bcb43fcf",
     "question": "What special operating frequency restrictions are imposed on slow scan TV transmissions?",
     "choices": [
       "None; they are allowed on all amateur frequencies",
@@ -2344,6 +2450,7 @@
     ]
   },
   {
+    "id": "extra-e06f0dff4d",
     "question": "Which of the following is true about contest operating?",
     "choices": [
       "Operators are permitted to make contacts even if they do not submit a log",
@@ -2366,6 +2473,7 @@
     ]
   },
   {
+    "id": "extra-e5a0cd0fc1",
     "question": "Which of the following best describes the term self-spotting in regards to HF contest operating?",
     "choices": [
       "The generally prohibited practice of posting one\u2019s own call sign and frequency on a spotting network",
@@ -2388,6 +2496,7 @@
     ]
   },
   {
+    "id": "extra-52ab2b8c4a",
     "question": "From which of the following bands is amateur radio contesting generally excluded?",
     "choices": [
       "30 m",
@@ -2410,6 +2519,7 @@
     ]
   },
   {
+    "id": "extra-180abf8673",
     "question": "What type of transmission is most often used for a ham radio mesh network?",
     "choices": [
       "Spread spectrum in the 2.4 GHz band",
@@ -2432,6 +2542,7 @@
     ]
   },
   {
+    "id": "extra-7dfb1e58ce",
     "question": "What is the function of a DX QSL Manager?",
     "choices": [
       "To allocate frequencies for DXpeditions",
@@ -2454,6 +2565,7 @@
     ]
   },
   {
+    "id": "extra-e1c5b6f5fe",
     "question": "During a VHF/UHF contest, in which band segment would you expect to find the highest level of activity?",
     "choices": [
       "At the top of each band, usually in a segment reserved for contests",
@@ -2476,6 +2588,7 @@
     ]
   },
   {
+    "id": "extra-d177268d85",
     "question": "What is the Cabrillo format?",
     "choices": [
       "A standard for submission of electronic contest logs",
@@ -2498,6 +2611,7 @@
     ]
   },
   {
+    "id": "extra-5250e79665",
     "question": "Which of the following contacts may be confirmed through the U.S. QSL bureau system?",
     "choices": [
       "Special event contacts between stations in the U.S.",
@@ -2520,6 +2634,7 @@
     ]
   },
   {
+    "id": "extra-d355b3c9ff",
     "question": "What type of equipment is commonly used to implement a ham radio mesh network?",
     "choices": [
       "A 2 meter VHF transceiver with a 1200 baud modem",
@@ -2542,6 +2657,7 @@
     ]
   },
   {
+    "id": "extra-ce9b298130",
     "question": "Why might a DX station state that they are listening on another frequency?",
     "choices": [
       "Because the DX station may be transmitting on a frequency that is prohibited to some responding stations",
@@ -2564,6 +2680,7 @@
     ]
   },
   {
+    "id": "extra-eff62560a9",
     "question": "How should you generally identify your station when attempting to contact a DX station during a contest or in a pileup?",
     "choices": [
       "Send your full call sign once or twice",
@@ -2586,6 +2703,7 @@
     ]
   },
   {
+    "id": "extra-12355afc53",
     "question": "What might help to restore contact when DX signals become too weak to copy across an entire HF band a few hours after sunset?",
     "choices": [
       "Switch to a higher frequency HF band",
@@ -2608,6 +2726,7 @@
     ]
   },
   {
+    "id": "extra-5e1e5c1d91",
     "question": "What indicator is required to be used by U.S.-licensed operators when operating a station via remote control where the transmitter is located in the U.S.?",
     "choices": [
       "/ followed by the USPS two letter abbreviation for the state in which the remote station is located",
@@ -2630,6 +2749,7 @@
     ]
   },
   {
+    "id": "extra-4e546b259b",
     "question": "Which of the following digital modes is especially designed for use for meteor scatter signals?",
     "choices": [
       "WSPR",
@@ -2652,6 +2772,7 @@
     ]
   },
   {
+    "id": "extra-21b1bfd6f4",
     "question": "Which of the following is a good technique for making meteor scatter contacts?",
     "choices": [
       "15 second timed transmission sequences with stations alternating based on location",
@@ -2674,6 +2795,7 @@
     ]
   },
   {
+    "id": "extra-38842f6ee3",
     "question": "Which of the following digital modes is especially useful for EME communications?",
     "choices": [
       "FSK441",
@@ -2696,6 +2818,7 @@
     ]
   },
   {
+    "id": "extra-eb4f7bc376",
     "question": "What is the purpose of digital store-and-forward functions on an Amateur Radio satellite?",
     "choices": [
       "To upload operational software for the transponder",
@@ -2718,6 +2841,7 @@
     ]
   },
   {
+    "id": "extra-dd7972ee26",
     "question": "Which of the following techniques is normally used by low Earth orbiting digital satellites to relay messages around the world?",
     "choices": [
       "Digipeating",
@@ -2740,6 +2864,7 @@
     ]
   },
   {
+    "id": "extra-1f9f5f9a50",
     "question": "Which of the following describes a method of establishing EME contacts?",
     "choices": [
       "Time synchronous transmissions alternately from each station",
@@ -2762,6 +2887,7 @@
     ]
   },
   {
+    "id": "extra-963cadd128",
     "question": "What digital protocol is used by APRS?",
     "choices": [
       "PACTOR",
@@ -2784,6 +2910,7 @@
     ]
   },
   {
+    "id": "extra-c88520ae40",
     "question": "What type of packet frame is used to transmit APRS beacon data?",
     "choices": [
       "Unnumbered Information",
@@ -2806,6 +2933,7 @@
     ]
   },
   {
+    "id": "extra-bfafcd4a4d",
     "question": "Which of these digital modes has the fastest data throughput under clear communication conditions?",
     "choices": [
       "AMTOR",
@@ -2828,6 +2956,7 @@
     ]
   },
   {
+    "id": "extra-a10ead94c4",
     "question": "How can an APRS station be used to help support a public service communications activity?",
     "choices": [
       "An APRS station with an emergency medical technician can automatically transmit medical data to the nearest hospital",
@@ -2850,6 +2979,7 @@
     ]
   },
   {
+    "id": "extra-846cdeff10",
     "question": "Which of the following data are used by the APRS network to communicate your location?",
     "choices": [
       "Polar coordinates",
@@ -2872,6 +3002,7 @@
     ]
   },
   {
+    "id": "extra-242f0acaa4",
     "question": "How does JT65 improve EME communications?",
     "choices": [
       "It can decode signals many dB below the noise floor using FEC",
@@ -2894,6 +3025,7 @@
     ]
   },
   {
+    "id": "extra-e660ecc43c",
     "question": "What type of modulation is used for JT65 contacts?",
     "choices": [
       "Multi-tone AFSK",
@@ -2916,6 +3048,7 @@
     ]
   },
   {
+    "id": "extra-6a762e3eea",
     "question": "What is one advantage of using JT65 coding?",
     "choices": [
       "Uses only a 65 Hz bandwidth",
@@ -2938,6 +3071,7 @@
     ]
   },
   {
+    "id": "extra-a87d82b1c0",
     "question": "Which type of modulation is common for data emissions below 30 MHz?",
     "choices": [
       "DTMF tones modulating an FM signal",
@@ -2960,6 +3094,7 @@
     ]
   },
   {
+    "id": "extra-dacc2ef1c7",
     "question": "What do the letters FEC mean as they relate to digital operation?",
     "choices": [
       "Forward Error Correction",
@@ -2982,6 +3117,7 @@
     ]
   },
   {
+    "id": "extra-4deea44a55",
     "question": "How is the timing of JT65 contacts organized?",
     "choices": [
       "By exchanging ACK/NAK packets",
@@ -3004,6 +3140,7 @@
     ]
   },
   {
+    "id": "extra-8d5ca18b54",
     "question": "What is indicated when one of the ellipses in an FSK crossed-ellipse display suddenly disappears?",
     "choices": [
       "Selective fading has occurred",
@@ -3026,6 +3163,7 @@
     ]
   },
   {
+    "id": "extra-a4dc127fd4",
     "question": "Which type of digital mode does not support keyboard-to-keyboard operation?",
     "choices": [
       "Winlink",
@@ -3048,6 +3186,7 @@
     ]
   },
   {
+    "id": "extra-72941de4f2",
     "question": "What is the most common data rate used for HF packet?",
     "choices": [
       "48 baud",
@@ -3070,6 +3209,7 @@
     ]
   },
   {
+    "id": "extra-b1daf43f21",
     "question": "What is the typical bandwidth of a properly modulated MFSK16 signal?",
     "choices": [
       "31 Hz",
@@ -3092,6 +3232,7 @@
     ]
   },
   {
+    "id": "extra-fb96bf4da6",
     "question": "Which of the following HF digital modes can be used to transfer binary files?",
     "choices": [
       "Hellschreiber",
@@ -3114,6 +3255,7 @@
     ]
   },
   {
+    "id": "extra-cca41b3e00",
     "question": "Which of the following HF digital modes uses variable-length coding for bandwidth efficiency?",
     "choices": [
       "RTTY",
@@ -3136,6 +3278,7 @@
     ]
   },
   {
+    "id": "extra-bd1bfe0430",
     "question": "Which of these digital modes has the narrowest bandwidth?",
     "choices": [
       "MFSK16",
@@ -3158,6 +3301,7 @@
     ]
   },
   {
+    "id": "extra-bbc028ce20",
     "question": "What is the difference between direct FSK and audio FSK?",
     "choices": [
       "Direct FSK applies the data signal to the transmitter VFO",
@@ -3180,6 +3324,7 @@
     ]
   },
   {
+    "id": "extra-b3784faada",
     "question": "Which type of control is used by stations using the Automatic Link Enable (ALE) protocol?",
     "choices": [
       "Local",
@@ -3202,6 +3347,7 @@
     ]
   },
   {
+    "id": "extra-ab1158ac8d",
     "question": "Which of the following is a possible reason that attempts to initiate contact with a digital station on a clear frequency are unsuccessful?",
     "choices": [
       "Your transmit frequency is incorrect",
@@ -3224,6 +3370,7 @@
     ]
   },
   {
+    "id": "extra-d357584dfd",
     "question": "What is the approximate maximum separation measured along the surface of the Earth between two stations communicating by Moon bounce?",
     "choices": [
       "500 miles, if the Moon is at perigee",
@@ -3246,6 +3393,7 @@
     ]
   },
   {
+    "id": "extra-1196aaa850",
     "question": "What characterizes libration fading of an EME signal?",
     "choices": [
       "A slow change in the pitch of the CW signal",
@@ -3268,6 +3416,7 @@
     ]
   },
   {
+    "id": "extra-c711e796a3",
     "question": "When scheduling EME contacts, which of these conditions will generally result in the least path loss?",
     "choices": [
       "When the Moon is at perigee",
@@ -3290,6 +3439,7 @@
     ]
   },
   {
+    "id": "extra-5cbf07d1fb",
     "question": "What do Hepburn maps predict?",
     "choices": [
       "Sporadic E propagation",
@@ -3312,6 +3462,7 @@
     ]
   },
   {
+    "id": "extra-6651a6ac91",
     "question": "Tropospheric propagation of microwave signals often occurs along what weather related structure?",
     "choices": [
       "Gray-line",
@@ -3334,6 +3485,7 @@
     ]
   },
   {
+    "id": "extra-66c4f61eb4",
     "question": "Which of the following is required for microwave propagation via rain scatter?",
     "choices": [
       "Rain droplets must be electrically charged",
@@ -3356,6 +3508,7 @@
     ]
   },
   {
+    "id": "extra-1f1e1d17bd",
     "question": "Atmospheric ducts capable of propagating microwave signals often form over what geographic feature?",
     "choices": [
       "Mountain ranges",
@@ -3378,6 +3531,7 @@
     ]
   },
   {
+    "id": "extra-74975e5e54",
     "question": "When a meteor strikes the Earth's atmosphere, a cylindrical region of free electrons is formed at what layer of the ionosphere?",
     "choices": [
       "The E layer",
@@ -3400,6 +3554,7 @@
     ]
   },
   {
+    "id": "extra-cb7fe3b071",
     "question": "Which of the following frequency range is most suited for meteor scatter communications?",
     "choices": [
       "1.8 MHz - 1.9 MHz",
@@ -3422,6 +3577,7 @@
     ]
   },
   {
+    "id": "extra-f3dbaf6d13",
     "question": "Which type of atmospheric structure can create a path for microwave propagation?",
     "choices": [
       "The jet stream",
@@ -3444,6 +3600,7 @@
     ]
   },
   {
+    "id": "extra-d09305bbe8",
     "question": "What is a typical range for tropospheric propagation of microwave signals?",
     "choices": [
       "10 miles to 50 miles",
@@ -3466,6 +3623,7 @@
     ]
   },
   {
+    "id": "extra-b305549f57",
     "question": "What is the cause of auroral activity?",
     "choices": [
       "The interaction in the F2 layer between the solar wind and the Van Allen belt",
@@ -3488,6 +3646,7 @@
     ]
   },
   {
+    "id": "extra-825057a744",
     "question": "Which emission mode is best for aurora propagation?",
     "choices": [
       "CW",
@@ -3510,6 +3669,7 @@
     ]
   },
   {
+    "id": "extra-2f443c6dc1",
     "question": "From the contiguous 48 states, in which approximate direction should an antenna be pointed to take maximum advantage of aurora propagation?",
     "choices": [
       "South",
@@ -3532,6 +3692,7 @@
     ]
   },
   {
+    "id": "extra-b1ddc3c239",
     "question": "What is an electromagnetic wave?",
     "choices": [
       "A wave of alternating current, in the core of an electromagnet",
@@ -3554,6 +3715,7 @@
     ]
   },
   {
+    "id": "extra-2f7da4a64c",
     "question": "Which of the following best describes electromagnetic waves traveling in free space?",
     "choices": [
       "Electric and magnetic fields become aligned as they travel",
@@ -3576,6 +3738,7 @@
     ]
   },
   {
+    "id": "extra-c3627ba94d",
     "question": "What is meant by circularly polarized electromagnetic waves?",
     "choices": [
       "Waves with an electric field bent into a circular shape",
@@ -3598,6 +3761,7 @@
     ]
   },
   {
+    "id": "extra-8f91a50157",
     "question": "What is transequatorial propagation?",
     "choices": [
       "Propagation between two mid-latitude points at approximately the same distance north and south of the magnetic equator",
@@ -3620,6 +3784,7 @@
     ]
   },
   {
+    "id": "extra-9666e11522",
     "question": "What is the approximate maximum range for signals using transequatorial propagation?",
     "choices": [
       "1000 miles",
@@ -3642,6 +3807,7 @@
     ]
   },
   {
+    "id": "extra-c24406cfcb",
     "question": "What is the best time of day for transequatorial propagation?",
     "choices": [
       "Morning",
@@ -3664,6 +3830,7 @@
     ]
   },
   {
+    "id": "extra-5abc7095fd",
     "question": "What is meant by the terms extraordinary and ordinary waves?",
     "choices": [
       "Extraordinary waves describe rare long skip propagation compared to ordinary waves which travel shorter distances",
@@ -3686,6 +3853,7 @@
     ]
   },
   {
+    "id": "extra-fbae5a6e59",
     "question": "Which amateur bands typically support long-path propagation?",
     "choices": [
       "160 meters to 40 meters",
@@ -3708,6 +3876,7 @@
     ]
   },
   {
+    "id": "extra-1be2070dc0",
     "question": "Which of the following amateur bands most frequently provides long-path propagation?",
     "choices": [
       "80 meters",
@@ -3730,6 +3899,7 @@
     ]
   },
   {
+    "id": "extra-52538c354c",
     "question": "Which of the following could account for hearing an echo on the received signal of a distant station?",
     "choices": [
       "High D layer absorption",
@@ -3752,6 +3922,7 @@
     ]
   },
   {
+    "id": "extra-bc877e1259",
     "question": "What type of HF propagation is probably occurring if radio signals travel along the terminator between daylight and darkness?",
     "choices": [
       "Transequatorial",
@@ -3774,6 +3945,7 @@
     ]
   },
   {
+    "id": "extra-d402e32a8f",
     "question": "At what time of year is Sporadic E propagation most likely to occur?",
     "choices": [
       "Around the solstices, especially the summer solstice",
@@ -3796,6 +3968,7 @@
     ]
   },
   {
+    "id": "extra-5867dd470c",
     "question": "What is the cause of gray-line propagation?",
     "choices": [
       "At midday, the Sun super heats the ionosphere causing increased refraction of radio waves",
@@ -3818,6 +3991,7 @@
     ]
   },
   {
+    "id": "extra-01ac3619ca",
     "question": "At what time of day is Sporadic-E propagation most likely to occur?",
     "choices": [
       "Around sunset",
@@ -3840,6 +4014,7 @@
     ]
   },
   {
+    "id": "extra-cc728646c7",
     "question": "What is the primary characteristic of chordal hop propagation?",
     "choices": [
       "Propagation away from the great circle bearing between stations",
@@ -3862,6 +4037,7 @@
     ]
   },
   {
+    "id": "extra-b64636f862",
     "question": "Why is chordal hop propagation desirable?",
     "choices": [
       "The signal experiences less loss along the path compared to normal skip propagation",
@@ -3884,6 +4060,7 @@
     ]
   },
   {
+    "id": "extra-b3fe9e51f8",
     "question": "What happens to linearly polarized radio waves that split into ordinary and extraordinary waves in the ionosphere?",
     "choices": [
       "They are bent toward the magnetic poles",
@@ -3906,6 +4083,7 @@
     ]
   },
   {
+    "id": "extra-256c3bc2f0",
     "question": "What does the term ray tracing describe in regard to radio communications?",
     "choices": [
       "The process in which an electronic display presents a pattern",
@@ -3928,6 +4106,7 @@
     ]
   },
   {
+    "id": "extra-95ca04c62e",
     "question": "What is indicated by a rising A or K index?",
     "choices": [
       "Increasing disruption of the geomagnetic field",
@@ -3950,6 +4129,7 @@
     ]
   },
   {
+    "id": "extra-8a92cfe308",
     "question": "Which of the following signal paths is most likely to experience high levels of absorption when the A index or K index is elevated?",
     "choices": [
       "Transequatorial propagation",
@@ -3972,6 +4152,7 @@
     ]
   },
   {
+    "id": "extra-0441256789",
     "question": "What does the value of Bz (B sub Z) represent?",
     "choices": [
       "Geomagnetic field stability",
@@ -3994,6 +4175,7 @@
     ]
   },
   {
+    "id": "extra-8526d662e8",
     "question": "What orientation of Bz (B sub z) increases the likelihood that incoming particles from the Sun will cause disturbed conditions?",
     "choices": [
       "Southward",
@@ -4016,6 +4198,7 @@
     ]
   },
   {
+    "id": "extra-f362d10941",
     "question": "By how much does the VHF/UHF radio horizon distance exceed the geometric horizon?",
     "choices": [
       "By approximately 15 percent of the distance",
@@ -4038,6 +4221,7 @@
     ]
   },
   {
+    "id": "extra-fa30851640",
     "question": "Which of the following descriptors indicates the greatest solar flare intensity?",
     "choices": [
       "Class A",
@@ -4060,6 +4244,7 @@
     ]
   },
   {
+    "id": "extra-4039c7c88d",
     "question": "What does the space weather term G5 mean?",
     "choices": [
       "An extreme geomagnetic storm",
@@ -4082,6 +4267,7 @@
     ]
   },
   {
+    "id": "extra-8f1664bdbe",
     "question": "How does the intensity of an X3 flare compare to that of an X2 flare?",
     "choices": [
       "10 percent greater",
@@ -4104,6 +4290,7 @@
     ]
   },
   {
+    "id": "extra-7359bfb194",
     "question": "What does the 304A solar parameter measure?",
     "choices": [
       "The ratio of X-Ray flux to radio flux, correlated to sunspot number",
@@ -4126,6 +4313,7 @@
     ]
   },
   {
+    "id": "extra-8b390b31f9",
     "question": "What does VOACAP software model?",
     "choices": [
       "AC voltage and impedance",
@@ -4148,6 +4336,7 @@
     ]
   },
   {
+    "id": "extra-8a8acc7933",
     "question": "How does the maximum distance of ground-wave propagation change when the signal frequency is increased?",
     "choices": [
       "It stays the same",
@@ -4170,6 +4359,7 @@
     ]
   },
   {
+    "id": "extra-518314ced8",
     "question": "What type of polarization is best for ground-wave propagation?",
     "choices": [
       "Vertical",
@@ -4192,6 +4382,7 @@
     ]
   },
   {
+    "id": "extra-2369f87053",
     "question": "Why does the radio-path horizon distance exceed the geometric horizon?",
     "choices": [
       "E-region skip",
@@ -4214,6 +4405,7 @@
     ]
   },
   {
+    "id": "extra-c1d8eed8ac",
     "question": "What might a sudden rise in radio background noise indicate?",
     "choices": [
       "A meteor ping",
@@ -4236,6 +4428,7 @@
     ]
   },
   {
+    "id": "extra-c9812c1429",
     "question": "Which of the following parameter determines the bandwidth of a digital or computer-based oscilloscope?",
     "choices": [
       "Input capacitance",
@@ -4258,6 +4451,7 @@
     ]
   },
   {
+    "id": "extra-c629920a46",
     "question": "Which of the following parameters would a spectrum analyzer display on the vertical and horizontal axes?",
     "choices": [
       "RF amplitude and time",
@@ -4280,6 +4474,7 @@
     ]
   },
   {
+    "id": "extra-25fae87ea9",
     "question": "Which of the following test instrument is used to display spurious signals and/or intermodulation distortion products in an SSB transmitter?",
     "choices": [
       "A wattmeter",
@@ -4302,6 +4497,7 @@
     ]
   },
   {
+    "id": "extra-3e623226bc",
     "question": "What determines the upper frequency limit for a computer soundcard-based oscilloscope program?",
     "choices": [
       "Analog-to-digital conversion speed of the soundcard",
@@ -4324,6 +4520,7 @@
     ]
   },
   {
+    "id": "extra-866383bdd3",
     "question": "What might be an advantage of a digital vs an analog oscilloscope?",
     "choices": [
       "Automatic amplitude and frequency numerical readout",
@@ -4346,6 +4543,7 @@
     ]
   },
   {
+    "id": "extra-acd11c8c76",
     "question": "What is the effect of aliasing in a digital or computer-based oscilloscope?",
     "choices": [
       "False signals are displayed",
@@ -4368,6 +4566,7 @@
     ]
   },
   {
+    "id": "extra-414ff207fb",
     "question": "Which of the following is an advantage of using an antenna analyzer compared to an SWR bridge to measure antenna SWR?",
     "choices": [
       "Antenna analyzers automatically tune your antenna for resonance",
@@ -4390,6 +4589,7 @@
     ]
   },
   {
+    "id": "extra-d32ec27c86",
     "question": "Which of the following instrument would be best for measuring the SWR of a beam antenna?",
     "choices": [
       "A spectrum analyzer",
@@ -4412,6 +4612,7 @@
     ]
   },
   {
+    "id": "extra-589ef5da63",
     "question": "When using a computer\u2019s soundcard input to digitize signals, what is the highest frequency signal that can be digitized without aliasing?",
     "choices": [
       "The same as the sample rate",
@@ -4434,6 +4635,7 @@
     ]
   },
   {
+    "id": "extra-966a5b0ee3",
     "question": "Which of the following displays multiple digital signal states simultaneously?",
     "choices": [
       "Network analyzer",
@@ -4456,6 +4658,7 @@
     ]
   },
   {
+    "id": "extra-bdfe167a2d",
     "question": "Which of the following is good practice when using an oscilloscope probe?",
     "choices": [
       "Keep the signal ground connection of the probe as short as possible",
@@ -4478,6 +4681,7 @@
     ]
   },
   {
+    "id": "extra-1f3035082a",
     "question": "Which of the following procedures is an important precaution to follow when connecting a spectrum analyzer to a transmitter output?",
     "choices": [
       "Use high quality double shielded coaxial cables to reduce signal losses",
@@ -4500,6 +4704,7 @@
     ]
   },
   {
+    "id": "extra-23b178a6e8",
     "question": "How is the compensation of an oscilloscope probe typically adjusted?",
     "choices": [
       "A square wave is displayed and the probe is adjusted until the horizontal portions of the displayed wave are as nearly flat as possible",
@@ -4522,6 +4727,7 @@
     ]
   },
   {
+    "id": "extra-b0794b9141",
     "question": "What is the purpose of the prescaler function on a frequency counter?",
     "choices": [
       "It amplifies low level signals for more accurate counting",
@@ -4544,6 +4750,7 @@
     ]
   },
   {
+    "id": "extra-d22f6fa3ec",
     "question": "What is an advantage of a period-measuring frequency counter over a direct-count type?",
     "choices": [
       "It can run on battery power for remote measurements",
@@ -4566,6 +4773,7 @@
     ]
   },
   {
+    "id": "extra-59282dcf6c",
     "question": "Which of the following factors most affects the accuracy of a frequency counter?",
     "choices": [
       "Input attenuator accuracy",
@@ -4588,6 +4796,7 @@
     ]
   },
   {
+    "id": "extra-621dcc2555",
     "question": "What is an advantage of using a bridge circuit to measure impedance?",
     "choices": [
       "It provides an excellent match under all conditions",
@@ -4610,6 +4819,7 @@
     ]
   },
   {
+    "id": "extra-4dd5ffb56d",
     "question": "If a frequency counter with a specified accuracy of +/- 1.0 ppm reads 146,520,000 Hz, what is the most the actual frequency being measured could differ from the reading?",
     "choices": [
       "165.2 Hz",
@@ -4632,6 +4842,7 @@
     ]
   },
   {
+    "id": "extra-f1be575988",
     "question": "If a frequency counter with a specified accuracy of +/- 0.1 ppm reads 146,520,000 Hz, what is the most the actual frequency being measured could differ from the reading?",
     "choices": [
       "14.652 Hz",
@@ -4654,6 +4865,7 @@
     ]
   },
   {
+    "id": "extra-316c40ee52",
     "question": "If a frequency counter with a specified accuracy of +/- 10 ppm reads 146,520,000 Hz, what is the most the actual frequency being measured could differ from the reading?",
     "choices": [
       "146.52 Hz",
@@ -4676,6 +4888,7 @@
     ]
   },
   {
+    "id": "extra-73328b2cc0",
     "question": "How much power is being absorbed by the load when a directional power meter connected between a transmitter and a terminating load reads 100 watts forward power and 25 watts reflected power?",
     "choices": [
       "100 watts",
@@ -4698,6 +4911,7 @@
     ]
   },
   {
+    "id": "extra-9b77670c22",
     "question": "What do the subscripts of S parameters represent?",
     "choices": [
       "The port or ports at which measurements are made",
@@ -4720,6 +4934,7 @@
     ]
   },
   {
+    "id": "extra-bec8846b2e",
     "question": "Which of the following is a characteristic of a good DC voltmeter?",
     "choices": [
       "High reluctance input",
@@ -4742,6 +4957,7 @@
     ]
   },
   {
+    "id": "extra-23f93f236b",
     "question": "What is indicated if the current reading on an RF ammeter placed in series with the antenna feed line of a transmitter increases as the transmitter is tuned to resonance?",
     "choices": [
       "There is possibly a short to ground in the feed line",
@@ -4764,6 +4980,7 @@
     ]
   },
   {
+    "id": "extra-283da9f930",
     "question": "Which of the following describes a method to measure intermodulation distortion in an SSB transmitter?",
     "choices": [
       "Modulate the transmitter with two non-harmonically related radio frequencies and observe the RF output with a spectrum analyzer",
@@ -4786,6 +5003,7 @@
     ]
   },
   {
+    "id": "extra-752ef0c7d4",
     "question": "How should an antenna analyzer be connected when measuring antenna resonance and feed point impedance?",
     "choices": [
       "Loosely couple the analyzer near the antenna base",
@@ -4808,6 +5026,7 @@
     ]
   },
   {
+    "id": "extra-b740006184",
     "question": "What is the significance of voltmeter sensitivity expressed in ohms per volt?",
     "choices": [
       "The full scale reading of the voltmeter multiplied by its ohms per volt rating will indicate the input impedance of the voltmeter",
@@ -4830,6 +5049,7 @@
     ]
   },
   {
+    "id": "extra-5c67310266",
     "question": "Which S parameter is equivalent to forward gain?",
     "choices": [
       "S11",
@@ -4852,6 +5072,7 @@
     ]
   },
   {
+    "id": "extra-98fcff02c8",
     "question": "What happens if a dip meter is too tightly coupled to a tuned circuit being checked?",
     "choices": [
       "Harmonics are generated",
@@ -4874,6 +5095,7 @@
     ]
   },
   {
+    "id": "extra-8448980897",
     "question": "Which of the following can be used as a relative measurement of the Q for a series-tuned circuit?",
     "choices": [
       "The inductance to capacitance ratio",
@@ -4896,6 +5118,7 @@
     ]
   },
   {
+    "id": "extra-2fe667a447",
     "question": "Which S parameter represents return loss or SWR?",
     "choices": [
       "S11",
@@ -4918,6 +5141,7 @@
     ]
   },
   {
+    "id": "extra-6f91b83c53",
     "question": "What three test loads are used to calibrate a standard RF vector network analyzer?",
     "choices": [
       "50 ohms, 75 ohms, and 90 ohms",
@@ -4940,6 +5164,7 @@
     ]
   },
   {
+    "id": "extra-c4b7085c1e",
     "question": "What is an effect of excessive phase noise in the local oscillator section of a receiver?",
     "choices": [
       "It limits the receiver\u2019s ability to receive strong signals",
@@ -4962,6 +5187,7 @@
     ]
   },
   {
+    "id": "extra-9e0f584196",
     "question": "Which of the following portions of a receiver can be effective in eliminating image signal interference?",
     "choices": [
       "A front-end filter or pre-selector",
@@ -4984,6 +5210,7 @@
     ]
   },
   {
+    "id": "extra-6e6baa6db6",
     "question": "What is the term for the blocking of one FM phone signal by another, stronger FM phone signal?",
     "choices": [
       "Desensitization",
@@ -5006,6 +5233,7 @@
     ]
   },
   {
+    "id": "extra-cb01f0ff5d",
     "question": "How is the noise figure of a receiver defined?",
     "choices": [
       "The ratio of atmospheric noise to phase noise",
@@ -5028,6 +5256,7 @@
     ]
   },
   {
+    "id": "extra-013c372c0b",
     "question": "What does a value of -174 dBm/Hz represent with regard to the noise floor of a receiver?",
     "choices": [
       "The minimum detectable signal as a function of receive frequency",
@@ -5050,6 +5279,7 @@
     ]
   },
   {
+    "id": "extra-f363e47840",
     "question": "A CW receiver with the AGC off has an equivalent input noise power density of -174 dBm/Hz.  What would be the level of an unmodulated carrier input to this receiver that would yield an audio output SNR of 0 dB in a 400 Hz noise bandwidth?",
     "choices": [
       "-174 dBm",
@@ -5072,6 +5302,7 @@
     ]
   },
   {
+    "id": "extra-34c3013343",
     "question": "What does the MDS of a receiver represent?",
     "choices": [
       "The meter display sensitivity",
@@ -5094,6 +5325,7 @@
     ]
   },
   {
+    "id": "extra-2876c46745",
     "question": "An SDR receiver is overloaded when input signals exceed what level?",
     "choices": [
       "One-half the maximum sample rate",
@@ -5116,6 +5348,7 @@
     ]
   },
   {
+    "id": "extra-a165798119",
     "question": "Which of the following choices is a good reason for selecting a high frequency for the design of the IF in a conventional HF or VHF communications receiver?",
     "choices": [
       "Fewer components in the receiver",
@@ -5138,6 +5371,7 @@
     ]
   },
   {
+    "id": "extra-1e0816c71b",
     "question": "Which of the following is a desirable amount of selectivity for an amateur RTTY HF receiver?",
     "choices": [
       "100 Hz",
@@ -5160,6 +5394,7 @@
     ]
   },
   {
+    "id": "extra-edebfde71b",
     "question": "Which of the following is a desirable amount of selectivity for an amateur SSB phone receiver?",
     "choices": [
       "1 kHz",
@@ -5182,6 +5417,7 @@
     ]
   },
   {
+    "id": "extra-3605cbd5ad",
     "question": "What is an undesirable effect of using too wide a filter bandwidth in the IF section of a receiver?",
     "choices": [
       "Output-offset overshoot",
@@ -5204,6 +5440,7 @@
     ]
   },
   {
+    "id": "extra-890bd858b7",
     "question": "How does a narrow-band roofing filter affect receiver performance?",
     "choices": [
       "It improves sensitivity by reducing front end noise",
@@ -5226,6 +5463,7 @@
     ]
   },
   {
+    "id": "extra-3948ebf295",
     "question": "What transmit frequency might generate an image response signal in a receiver tuned to 14.300 MHz and which uses a 455 kHz IF frequency?",
     "choices": [
       "13.845 MHz",
@@ -5248,6 +5486,7 @@
     ]
   },
   {
+    "id": "extra-30688c8cbe",
     "question": "What is usually the primary source of noise that is heard from an HF receiver with an antenna connected?",
     "choices": [
       "Detector noise",
@@ -5270,6 +5509,7 @@
     ]
   },
   {
+    "id": "extra-abe38acf0f",
     "question": "Which of the following is caused by missing codes in an SDR receiver\u2019s analog-to-digital converter?",
     "choices": [
       "Distortion",
@@ -5292,6 +5532,7 @@
     ]
   },
   {
+    "id": "extra-4b7dd3a20a",
     "question": "Which of the following has the largest effect on an SDR receiver\u2019s linearity?",
     "choices": [
       "CPU register width in bits",
@@ -5314,6 +5555,7 @@
     ]
   },
   {
+    "id": "extra-77e7f7c390",
     "question": "What is meant by the blocking dynamic range of a receiver?",
     "choices": [
       "The difference in dB between the noise floor and the level of an incoming signal which will cause 1 dB of gain compression",
@@ -5336,6 +5578,7 @@
     ]
   },
   {
+    "id": "extra-43442b6333",
     "question": "Which of the following describes two problems caused by poor dynamic range in a communications receiver?",
     "choices": [
       "Cross-modulation of the desired signal and desensitization from strong adjacent signals",
@@ -5358,6 +5601,7 @@
     ]
   },
   {
+    "id": "extra-03cf3057fc",
     "question": "How can intermodulation interference between two repeaters occur?",
     "choices": [
       "When the repeaters are in close proximity and the signals cause feedback in the final amplifier of one or both transmitters",
@@ -5380,6 +5624,7 @@
     ]
   },
   {
+    "id": "extra-1ea0970003",
     "question": "Which of the following may reduce or eliminate intermodulation interference in a repeater caused by another transmitter operating in close proximity?",
     "choices": [
       "A band-pass filter in the feed line between the transmitter and receiver",
@@ -5402,6 +5647,7 @@
     ]
   },
   {
+    "id": "extra-489824ba16",
     "question": "What transmitter frequencies would cause an intermodulation-product signal in a receiver tuned to 146.70 MHz when a nearby station transmits on 146.52 MHz?",
     "choices": [
       "146.34 MHz and 146.61 MHz",
@@ -5424,6 +5670,7 @@
     ]
   },
   {
+    "id": "extra-af15fcad92",
     "question": "What is the term for unwanted signals generated by the mixing of two or more signals?",
     "choices": [
       "Amplifier desensitization",
@@ -5446,6 +5693,7 @@
     ]
   },
   {
+    "id": "extra-254b9c9ac1",
     "question": "Which describes the most significant effect of an off-frequency signal when it is causing cross-modulation interference to a desired signal?",
     "choices": [
       "A large increase in background noise",
@@ -5468,6 +5716,7 @@
     ]
   },
   {
+    "id": "extra-1a294f567c",
     "question": "What causes intermodulation in an electronic circuit?",
     "choices": [
       "Too little gain",
@@ -5490,6 +5739,7 @@
     ]
   },
   {
+    "id": "extra-aad8d9fc0e",
     "question": "What is the purpose of the preselector in a communications receiver?",
     "choices": [
       "To store often-used frequencies",
@@ -5512,6 +5762,7 @@
     ]
   },
   {
+    "id": "extra-e967f5815a",
     "question": "What does a third-order intercept level of 40 dBm mean with respect to receiver performance?",
     "choices": [
       "Signals less than 40 dBm will not generate audible third-order intermodulation products",
@@ -5534,6 +5785,7 @@
     ]
   },
   {
+    "id": "extra-30a81e3fd3",
     "question": "Why are third-order intermodulation products created within a receiver of particular interest compared to other products?",
     "choices": [
       "The third-order product of two signals which are in the band of interest is also likely to be within the band",
@@ -5556,6 +5808,7 @@
     ]
   },
   {
+    "id": "extra-0fb0ff78ff",
     "question": "What is the term for the reduction in receiver sensitivity caused by a strong signal near the received frequency?",
     "choices": [
       "Desensitization",
@@ -5578,6 +5831,7 @@
     ]
   },
   {
+    "id": "extra-d83f64a0ac",
     "question": "Which of the following can cause receiver desensitization?",
     "choices": [
       "Audio gain adjusted too low",
@@ -5600,6 +5854,7 @@
     ]
   },
   {
+    "id": "extra-6cea356306",
     "question": "Which of the following is a way to reduce the likelihood of receiver desensitization?",
     "choices": [
       "Decrease the RF bandwidth of the receiver",
@@ -5622,6 +5877,7 @@
     ]
   },
   {
+    "id": "extra-ca886d29d4",
     "question": "Which of the following types of receiver noise can often be reduced by use of a receiver noise blanker?",
     "choices": [
       "Ignition noise",
@@ -5644,6 +5900,7 @@
     ]
   },
   {
+    "id": "extra-f9349005be",
     "question": "Which of the following types of receiver noise can often be reduced with a DSP noise filter?",
     "choices": [
       "Broadband white noise",
@@ -5666,6 +5923,7 @@
     ]
   },
   {
+    "id": "extra-94bbf3d33a",
     "question": "Which of the following signals might a receiver noise blanker be able to remove from desired signals?",
     "choices": [
       "Signals which are constant at all IF levels",
@@ -5688,6 +5946,7 @@
     ]
   },
   {
+    "id": "extra-f50a986716",
     "question": "How can conducted and radiated noise caused by an automobile alternator be suppressed?",
     "choices": [
       "By installing filter capacitors in series with the DC power lead and a blocking capacitor in the field lead",
@@ -5710,6 +5969,7 @@
     ]
   },
   {
+    "id": "extra-ea259ef13a",
     "question": "How can noise from an electric motor be suppressed?",
     "choices": [
       "By installing a high pass filter in series with the motor\u2019s power leads",
@@ -5732,6 +5992,7 @@
     ]
   },
   {
+    "id": "extra-a5d1942315",
     "question": "What is a major cause of atmospheric static?",
     "choices": [
       "Solar radio frequency emissions",
@@ -5754,6 +6015,7 @@
     ]
   },
   {
+    "id": "extra-e5b101190c",
     "question": "How can you determine if line noise interference is being generated within your home?",
     "choices": [
       "By checking the power line voltage with a time domain reflectometer",
@@ -5776,6 +6038,7 @@
     ]
   },
   {
+    "id": "extra-10063c5f90",
     "question": "What type of signal is picked up by electrical wiring near a radio antenna?",
     "choices": [
       "A common-mode signal at the frequency of the radio transmitter",
@@ -5798,6 +6061,7 @@
     ]
   },
   {
+    "id": "extra-14f96ab2dd",
     "question": "What undesirable effect can occur when using an IF noise blanker?",
     "choices": [
       "Received audio in the speech range might have an echo effect",
@@ -5820,6 +6084,7 @@
     ]
   },
   {
+    "id": "extra-0d53cef4f2",
     "question": "What is a common characteristic of interference caused by a touch controlled electrical device?",
     "choices": [
       "The interfering signal sounds like AC hum on an AM receiver or a carrier modulated by 60 Hz hum on a SSB or CW receiver",
@@ -5842,6 +6107,7 @@
     ]
   },
   {
+    "id": "extra-aeabaa68e9",
     "question": "Which is the most likely cause if you are hearing combinations of local AM broadcast signals within one or more of the MF or HF ham bands?",
     "choices": [
       "The broadcast station is transmitting an over-modulated signal",
@@ -5864,6 +6130,7 @@
     ]
   },
   {
+    "id": "extra-4673dfd645",
     "question": "What is one disadvantage of using some types of automatic DSP notch-filters when attempting to copy CW signals?",
     "choices": [
       "A DSP filter can remove the desired signal at the same time as it removes interfering signals",
@@ -5886,6 +6153,7 @@
     ]
   },
   {
+    "id": "extra-24c89eb105",
     "question": "What might be the cause of a loud roaring or buzzing AC line interference that comes and goes at intervals?",
     "choices": [
       "Arcing contacts in a thermostatically controlled device",
@@ -5908,6 +6176,7 @@
     ]
   },
   {
+    "id": "extra-4392a4896f",
     "question": "What is one type of electrical interference that might be caused by the operation of a nearby personal computer?",
     "choices": [
       "A loud AC hum in the audio output of your station receiver",
@@ -5930,6 +6199,7 @@
     ]
   },
   {
+    "id": "extra-10b2ddc623",
     "question": "Which of the following can cause shielded cables to radiate or receive interference?",
     "choices": [
       "Low inductance ground connections at both ends of the shield",
@@ -5952,6 +6222,7 @@
     ]
   },
   {
+    "id": "extra-86ab31f046",
     "question": "What current flows equally on all conductors of an unshielded multi-conductor cable?",
     "choices": [
       "Differential-mode current",
@@ -5974,6 +6245,7 @@
     ]
   },
   {
+    "id": "extra-0067a19a8c",
     "question": "What can cause the voltage across reactances in series to be larger than the voltage applied to them?",
     "choices": [
       "Resonance",
@@ -5996,6 +6268,7 @@
     ]
   },
   {
+    "id": "extra-47936eb55b",
     "question": "What is resonance in an electrical circuit?",
     "choices": [
       "The highest frequency that will pass current",
@@ -6018,6 +6291,7 @@
     ]
   },
   {
+    "id": "extra-8e5c658113",
     "question": "What is the magnitude of the impedance of a series RLC circuit at resonance?",
     "choices": [
       "High, as compared to the circuit resistance",
@@ -6040,6 +6314,7 @@
     ]
   },
   {
+    "id": "extra-5e5416eee6",
     "question": "What is the magnitude of the impedance of a circuit with a resistor, an inductor and a capacitor all in parallel, at resonance?",
     "choices": [
       "Approximately equal to circuit resistance",
@@ -6062,6 +6337,7 @@
     ]
   },
   {
+    "id": "extra-40d0774e68",
     "question": "What is the magnitude of the current at the input of a series RLC circuit as the frequency goes through resonance?",
     "choices": [
       "Minimum",
@@ -6084,6 +6360,7 @@
     ]
   },
   {
+    "id": "extra-dd5f2c3a40",
     "question": "What is the magnitude of the circulating current within the components of a parallel LC circuit at resonance?",
     "choices": [
       "It is at a minimum",
@@ -6106,6 +6383,7 @@
     ]
   },
   {
+    "id": "extra-5c2eccb093",
     "question": "What is the magnitude of the current at the input of a parallel RLC circuit at resonance?",
     "choices": [
       "Minimum",
@@ -6128,6 +6406,7 @@
     ]
   },
   {
+    "id": "extra-ec21d73dff",
     "question": "What is the phase relationship between the current through and the voltage across a series resonant circuit at resonance?",
     "choices": [
       "The voltage leads the current by 90 degrees",
@@ -6150,6 +6429,7 @@
     ]
   },
   {
+    "id": "extra-08ab997a91",
     "question": "How is the Q of an RLC parallel resonant circuit calculated?",
     "choices": [
       "Reactance of either the inductance or capacitance divided by the resistance",
@@ -6172,6 +6452,7 @@
     ]
   },
   {
+    "id": "extra-2e2c222d58",
     "question": "How is the Q of an RLC series resonant circuit calculated?",
     "choices": [
       "Reactance of either the inductance or capacitance divided by the resistance",
@@ -6194,6 +6475,7 @@
     ]
   },
   {
+    "id": "extra-083a123adc",
     "question": "What is the half-power bandwidth of a parallel resonant circuit that has a resonant frequency of 7.1 MHz and a Q of 150?",
     "choices": [
       "157.8 Hz",
@@ -6216,6 +6498,7 @@
     ]
   },
   {
+    "id": "extra-4e6559e3fa",
     "question": "What is the half-power bandwidth of a parallel resonant circuit that has a resonant frequency of 3.7 MHz and a Q of 118?",
     "choices": [
       "436.6 kHz",
@@ -6238,6 +6521,7 @@
     ]
   },
   {
+    "id": "extra-40c7e19f11",
     "question": "What is an effect of increasing Q in a resonant circuit?",
     "choices": [
       "Fewer components are needed for the same performance",
@@ -6260,6 +6544,7 @@
     ]
   },
   {
+    "id": "extra-17cbd44c66",
     "question": "What is the resonant frequency of a series RLC circuit if R is 22 ohms, L is 50 microhenrys and C is 40 picofarads?",
     "choices": [
       "44.72 MHz",
@@ -6282,6 +6567,7 @@
     ]
   },
   {
+    "id": "extra-2cdbb20dfe",
     "question": "Which of the following can increase Q for inductors and capacitors?",
     "choices": [
       "Lower losses",
@@ -6304,6 +6590,7 @@
     ]
   },
   {
+    "id": "extra-bffe92edd9",
     "question": "What is the resonant frequency of a parallel RLC circuit if R is 33 ohms, L is 50 microhenrys and C is 10 picofarads?",
     "choices": [
       "23.5 MHz",
@@ -6326,6 +6613,7 @@
     ]
   },
   {
+    "id": "extra-f2d92cfe34",
     "question": "What is the result of increasing the Q of an impedance-matching circuit?",
     "choices": [
       "Matching bandwidth is decreased",
@@ -6348,6 +6636,7 @@
     ]
   },
   {
+    "id": "extra-e1a763f244",
     "question": "What is the term for the time required for the capacitor in an RC circuit to be charged to 63.2% of the applied voltage?",
     "choices": [
       "An exponential rate of one",
@@ -6370,6 +6659,7 @@
     ]
   },
   {
+    "id": "extra-818d14f84c",
     "question": "What is the term for the time it takes for a charged capacitor in an RC circuit to discharge to 36.8% of its initial voltage?",
     "choices": [
       "One discharge period",
@@ -6392,6 +6682,7 @@
     ]
   },
   {
+    "id": "extra-02d04fa442",
     "question": "What happens to the phase angle of a reactance when it is converted to a susceptance?",
     "choices": [
       "It is unchanged",
@@ -6414,6 +6705,7 @@
     ]
   },
   {
+    "id": "extra-b9d668c156",
     "question": "What is the time constant of a circuit having two 220 microfarad capacitors and two 1 megohm resistors, all in parallel?",
     "choices": [
       "55 seconds",
@@ -6436,6 +6728,7 @@
     ]
   },
   {
+    "id": "extra-f46dc881b1",
     "question": "What happens to the magnitude of a reactance when it is converted to a susceptance?",
     "choices": [
       "It is unchanged",
@@ -6458,6 +6751,7 @@
     ]
   },
   {
+    "id": "extra-36450d6e7b",
     "question": "What is susceptance?",
     "choices": [
       "The magnetic impedance of a circuit",
@@ -6480,6 +6774,7 @@
     ]
   },
   {
+    "id": "extra-67111d97d3",
     "question": "What is the phase angle between the voltage across and the current through a series RLC circuit if XC is 500 ohms, R is 1 kilohm, and XL is 250 ohms?",
     "choices": [
       "68.2 degrees with the voltage leading the current",
@@ -6502,6 +6797,7 @@
     ]
   },
   {
+    "id": "extra-63c28f0639",
     "question": "What is the phase angle between the voltage across and the current through a series RLC circuit if XC is 100 ohms, R is 100 ohms, and XL is 75 ohms?",
     "choices": [
       "14 degrees with the voltage lagging the current",
@@ -6524,6 +6820,7 @@
     ]
   },
   {
+    "id": "extra-fc4dd0e5ab",
     "question": "What is the relationship between the current through a capacitor and the voltage across a capacitor?",
     "choices": [
       "Voltage and current are in phase",
@@ -6546,6 +6843,7 @@
     ]
   },
   {
+    "id": "extra-34e4e37727",
     "question": "What is the relationship between the current through an inductor and the voltage across an inductor?",
     "choices": [
       "Voltage leads current by 90 degrees",
@@ -6568,6 +6866,7 @@
     ]
   },
   {
+    "id": "extra-f68e32fe0f",
     "question": "What is the phase angle between the voltage across and the current through a series RLC circuit if XC is 25 ohms, R is 100 ohms, and XL is 50 ohms?",
     "choices": [
       "14 degrees with the voltage lagging the current",
@@ -6590,6 +6889,7 @@
     ]
   },
   {
+    "id": "extra-bc0abc005e",
     "question": "What is admittance?",
     "choices": [
       "The inverse of impedance",
@@ -6612,6 +6912,7 @@
     ]
   },
   {
+    "id": "extra-03afecd1c9",
     "question": "What letter is commonly used to represent susceptance?",
     "choices": [
       "G",
@@ -6634,6 +6935,7 @@
     ]
   },
   {
+    "id": "extra-e71a855f9c",
     "question": "Which of the following represents a capacitive reactance in rectangular notation?",
     "choices": [
       "\u2013jX",
@@ -6656,6 +6958,7 @@
     ]
   },
   {
+    "id": "extra-32b32c94ce",
     "question": "How are impedances described in polar coordinates?",
     "choices": [
       "By X and R values",
@@ -6678,6 +6981,7 @@
     ]
   },
   {
+    "id": "extra-6c84a86064",
     "question": "Which of the following represents an inductive reactance in polar coordinates?",
     "choices": [
       "A positive real part",
@@ -6700,6 +7004,7 @@
     ]
   },
   {
+    "id": "extra-6503878c07",
     "question": "Which of the following represents a capacitive reactance in polar coordinates?",
     "choices": [
       "A positive real part",
@@ -6722,6 +7027,7 @@
     ]
   },
   {
+    "id": "extra-1cfc4e2864",
     "question": "What is the name of the diagram used to show the phase relationship between impedances at a given frequency?",
     "choices": [
       "Venn diagram",
@@ -6744,6 +7050,7 @@
     ]
   },
   {
+    "id": "extra-fc5ae5f3b2",
     "question": "What does the impedance 50\u2013j25 represent?",
     "choices": [
       "50 ohms resistance in series with 25 ohms inductive reactance",
@@ -6766,6 +7073,7 @@
     ]
   },
   {
+    "id": "extra-8b57e5c8a5",
     "question": "What is a vector?",
     "choices": [
       "The value of a quantity that changes over time",
@@ -6788,6 +7096,7 @@
     ]
   },
   {
+    "id": "extra-fee515fac3",
     "question": "What coordinate system is often used to display the phase angle of a circuit containing resistance, inductive and/or capacitive reactance?",
     "choices": [
       "Maidenhead grid",
@@ -6810,6 +7119,7 @@
     ]
   },
   {
+    "id": "extra-cfbd78eb53",
     "question": "When using rectangular coordinates to graph the impedance of a circuit, what does the horizontal axis represent?",
     "choices": [
       "Resistive component",
@@ -6832,6 +7142,7 @@
     ]
   },
   {
+    "id": "extra-02a02c9ee5",
     "question": "When using rectangular coordinates to graph the impedance of a circuit, what does the vertical axis represent?",
     "choices": [
       "Resistive component",
@@ -6854,6 +7165,7 @@
     ]
   },
   {
+    "id": "extra-b62dcc207e",
     "question": "What do the two numbers that are used to define a point on a graph using rectangular coordinates represent?",
     "choices": [
       "The magnitude and phase of the point",
@@ -6876,6 +7188,7 @@
     ]
   },
   {
+    "id": "extra-2370c0e3af",
     "question": "If you plot the impedance of a circuit using the rectangular coordinate system and find the impedance point falls on the right side of the graph on the horizontal axis, what do you know about the circuit?",
     "choices": [
       "It has to be a direct current circuit",
@@ -6898,6 +7211,7 @@
     ]
   },
   {
+    "id": "extra-b1724e954e",
     "question": "What coordinate system is often used to display the resistive, inductive, and/or capacitive reactance components of impedance?",
     "choices": [
       "Maidenhead grid",
@@ -6920,6 +7234,7 @@
     ]
   },
   {
+    "id": "extra-f0fb7058c2",
     "question": "Which point on Figure E5-2 best represents the impedance of a series circuit consisting of a 400 ohm resistor and a 38 picofarad capacitor at 14 MHz?",
     "choices": [
       "Point 2",
@@ -6942,6 +7257,7 @@
     ]
   },
   {
+    "id": "extra-89bc40199a",
     "question": "Which point in Figure E5-2 best represents the impedance of a series circuit consisting of a 300 ohm resistor and an 18 microhenry inductor at 3.505 MHz?",
     "choices": [
       "Point 1",
@@ -6964,6 +7280,7 @@
     ]
   },
   {
+    "id": "extra-59640b6f55",
     "question": "Which point on Figure E5-2 best represents the impedance of a series circuit consisting of a 300 ohm resistor and a 19 picofarad capacitor at 21.200 MHz?",
     "choices": [
       "Point 1",
@@ -6986,6 +7303,7 @@
     ]
   },
   {
+    "id": "extra-992bafdd01",
     "question": "Which point on Figure E5-2 best represents the impedance of a series circuit consisting of a 300 ohm resistor, a 0.64-microhenry inductor and an 85-picofarad capacitor at 24.900 MHz?",
     "choices": [
       "Point 1",
@@ -7008,6 +7326,7 @@
     ]
   },
   {
+    "id": "extra-d58ec420f1",
     "question": "What is the result of skin effect?",
     "choices": [
       "As frequency increases, RF current flows in a thinner layer of the conductor, closer to the surface",
@@ -7030,6 +7349,7 @@
     ]
   },
   {
+    "id": "extra-ff43a0eb79",
     "question": "Why is it important to keep lead lengths short for components used in circuits for VHF and above?",
     "choices": [
       "To increase the thermal time constant",
@@ -7052,6 +7372,7 @@
     ]
   },
   {
+    "id": "extra-45360e95f9",
     "question": "What is microstrip?",
     "choices": [
       "Lightweight transmission line made of common zip cord",
@@ -7074,6 +7395,7 @@
     ]
   },
   {
+    "id": "extra-4f4ca3382c",
     "question": "Why are short connections necessary at microwave frequencies?",
     "choices": [
       "To increase neutralizing resistance",
@@ -7096,6 +7418,7 @@
     ]
   },
   {
+    "id": "extra-66f0fac867",
     "question": "Which parasitic characteristic increases with conductor length?",
     "choices": [
       "Inductance",
@@ -7118,6 +7441,7 @@
     ]
   },
   {
+    "id": "extra-8f4f46c00b",
     "question": "In what direction is the magnetic field oriented about a conductor in relation to the direction of electron flow?",
     "choices": [
       "In the same direction as the current",
@@ -7140,6 +7464,7 @@
     ]
   },
   {
+    "id": "extra-1de639a08e",
     "question": "What determines the strength of the magnetic field around a conductor?",
     "choices": [
       "The resistance divided by the current",
@@ -7162,6 +7487,7 @@
     ]
   },
   {
+    "id": "extra-5f8dd1dce9",
     "question": "What type of energy is stored in an electromagnetic or electrostatic field?",
     "choices": [
       "Electromechanical energy",
@@ -7184,6 +7510,7 @@
     ]
   },
   {
+    "id": "extra-1725111ef0",
     "question": "What happens to reactive power in an AC circuit that has both ideal inductors and ideal capacitors?",
     "choices": [
       "It is dissipated as heat in the circuit",
@@ -7206,6 +7533,7 @@
     ]
   },
   {
+    "id": "extra-4a3265b8b9",
     "question": "How can the true power be determined in an AC circuit where the voltage and current are out of phase?",
     "choices": [
       "By multiplying the apparent power times the power factor",
@@ -7228,6 +7556,7 @@
     ]
   },
   {
+    "id": "extra-59bc98ac01",
     "question": "What is the power factor of an R-L circuit having a 60 degree phase angle between the voltage and the current?",
     "choices": [
       "1.414",
@@ -7250,6 +7579,7 @@
     ]
   },
   {
+    "id": "extra-de72771de1",
     "question": "How many watts are consumed in a circuit having a power factor of 0.2 if the input is 100-VAC at 4 amperes?",
     "choices": [
       "400 watts",
@@ -7272,6 +7602,7 @@
     ]
   },
   {
+    "id": "extra-2777cb64bb",
     "question": "How much power is consumed in a circuit consisting of a 100 ohm resistor in series with a 100 ohm inductive reactance drawing 1 ampere?",
     "choices": [
       "70.7 Watts",
@@ -7294,6 +7625,7 @@
     ]
   },
   {
+    "id": "extra-d1c3e01bb9",
     "question": "What is reactive power?",
     "choices": [
       "Wattless, nonproductive power",
@@ -7316,6 +7648,7 @@
     ]
   },
   {
+    "id": "extra-27da2a3984",
     "question": "What is the power factor of an R-L circuit having a 45 degree phase angle between the voltage and the current?",
     "choices": [
       "0.866",
@@ -7338,6 +7671,7 @@
     ]
   },
   {
+    "id": "extra-db5782522d",
     "question": "What is the power factor of an R-L circuit having a 30 degree phase angle between the voltage and the current?",
     "choices": [
       "1.73",
@@ -7360,6 +7694,7 @@
     ]
   },
   {
+    "id": "extra-00b0c90a2e",
     "question": "How many watts are consumed in a circuit having a power factor of 0.6 if the input is 200VAC at 5 amperes?",
     "choices": [
       "200 watts",
@@ -7382,6 +7717,7 @@
     ]
   },
   {
+    "id": "extra-ba115c6ca6",
     "question": "How many watts are consumed in a circuit having a power factor of 0.71 if the apparent power is 500VA?",
     "choices": [
       "704 W",
@@ -7404,6 +7740,7 @@
     ]
   },
   {
+    "id": "extra-dd90f36602",
     "question": "In what application is gallium arsenide used as a semiconductor material in preference to germanium or silicon?",
     "choices": [
       "In high-current rectifier circuits",
@@ -7426,6 +7763,7 @@
     ]
   },
   {
+    "id": "extra-50547b6049",
     "question": "Which of the following semiconductor materials contains excess free electrons?",
     "choices": [
       "N-type",
@@ -7448,6 +7786,7 @@
     ]
   },
   {
+    "id": "extra-8e6f32ec8f",
     "question": "Why does a PN-junction diode not conduct current when reverse biased?",
     "choices": [
       "Only P-type semiconductor material can conduct current",
@@ -7470,6 +7809,7 @@
     ]
   },
   {
+    "id": "extra-0def5e320b",
     "question": "What is the name given to an impurity atom that adds holes to a semiconductor crystal structure?",
     "choices": [
       "Insulator impurity",
@@ -7492,6 +7832,7 @@
     ]
   },
   {
+    "id": "extra-ded6cef691",
     "question": "What is the alpha of a bipolar junction transistor?",
     "choices": [
       "The change of collector current with respect to base current",
@@ -7514,6 +7855,7 @@
     ]
   },
   {
+    "id": "extra-033196334f",
     "question": "What is the beta of a bipolar junction transistor?",
     "choices": [
       "The frequency at which the current gain is reduced to 1",
@@ -7536,6 +7878,7 @@
     ]
   },
   {
+    "id": "extra-2bee8b9095",
     "question": "Which of the following indicates that a silicon NPN junction transistor is biased on?",
     "choices": [
       "Base-to-emitter resistance of approximately 6 to 7 ohms",
@@ -7558,6 +7901,7 @@
     ]
   },
   {
+    "id": "extra-2574a5ac16",
     "question": "What term indicates the frequency at which the grounded-base current gain of a transistor has decreased to 0.7 of the gain obtainable at 1 kHz?",
     "choices": [
       "Corner frequency",
@@ -7580,6 +7924,7 @@
     ]
   },
   {
+    "id": "extra-6611fdf59d",
     "question": "What is a depletion-mode FET?",
     "choices": [
       "An FET that exhibits a current flow between source and drain when no gate voltage is applied",
@@ -7602,6 +7947,7 @@
     ]
   },
   {
+    "id": "extra-0b5ef6bd83",
     "question": "In Figure E6-2, what is the schematic symbol for an N-channel dual-gate MOSFET?",
     "choices": [
       "2",
@@ -7624,6 +7970,7 @@
     ]
   },
   {
+    "id": "extra-d486a3169f",
     "question": "In Figure E6-2, what is the schematic symbol for a P-channel junction FET?",
     "choices": [
       "1",
@@ -7646,6 +7993,7 @@
     ]
   },
   {
+    "id": "extra-44e8df92cb",
     "question": "Why do many MOSFET devices have internally connected Zener diodes on the gates?",
     "choices": [
       "To provide a voltage reference for the correct amount of reverse-bias gate voltage",
@@ -7668,6 +8016,7 @@
     ]
   },
   {
+    "id": "extra-29d73e1f5a",
     "question": "What do the initials CMOS stand for?",
     "choices": [
       "Common Mode Oscillating System",
@@ -7690,6 +8039,7 @@
     ]
   },
   {
+    "id": "extra-64a948ed3d",
     "question": "How does DC input impedance at the gate of a field-effect transistor compare with the DC input impedance of a bipolar transistor?",
     "choices": [
       "They are both low impedance",
@@ -7712,6 +8062,7 @@
     ]
   },
   {
+    "id": "extra-ae7ba671ec",
     "question": "Which semiconductor material contains excess holes in the outer shell of electrons?",
     "choices": [
       "N-type",
@@ -7734,6 +8085,7 @@
     ]
   },
   {
+    "id": "extra-9c02442e4e",
     "question": "What are the majority charge carriers in N-type semiconductor material?",
     "choices": [
       "Holes",
@@ -7756,6 +8108,7 @@
     ]
   },
   {
+    "id": "extra-76a01d881b",
     "question": "What are the names of the three terminals of a field-effect transistor?",
     "choices": [
       "Gate 1, gate 2, drain",
@@ -7778,6 +8131,7 @@
     ]
   },
   {
+    "id": "extra-a1115f588f",
     "question": "What is the most useful characteristic of a Zener diode?",
     "choices": [
       "A constant current drop under conditions of varying voltage",
@@ -7800,6 +8154,7 @@
     ]
   },
   {
+    "id": "extra-70444944b3",
     "question": "What is an important characteristic of a Schottky diode as compared to an ordinary silicon diode when used as a power supply rectifier?",
     "choices": [
       "Much higher reverse voltage breakdown",
@@ -7822,6 +8177,7 @@
     ]
   },
   {
+    "id": "extra-5dab1b1837",
     "question": "What special type of diode is capable of both amplification and oscillation?",
     "choices": [
       "Point contact",
@@ -7844,6 +8200,7 @@
     ]
   },
   {
+    "id": "extra-daa7528940",
     "question": "What type of semiconductor device is designed for use as a voltage-controlled capacitor?",
     "choices": [
       "Varactor diode",
@@ -7866,6 +8223,7 @@
     ]
   },
   {
+    "id": "extra-3589d30518",
     "question": "What characteristic of a PIN diode makes it useful as an RF switch or attenuator?",
     "choices": [
       "Extremely high reverse breakdown voltage",
@@ -7888,6 +8246,7 @@
     ]
   },
   {
+    "id": "extra-75050215d5",
     "question": "Which of the following is a common use of a hot-carrier diode?",
     "choices": [
       "As balanced mixers in FM generation",
@@ -7910,6 +8269,7 @@
     ]
   },
   {
+    "id": "extra-ea3951e754",
     "question": "What is the failure mechanism when a junction diode fails due to excessive current?",
     "choices": [
       "Excessive inverse voltage",
@@ -7932,6 +8292,7 @@
     ]
   },
   {
+    "id": "extra-4299b26226",
     "question": "Which of the following describes a type of semiconductor diode?",
     "choices": [
       "Metal-semiconductor junction",
@@ -7954,6 +8315,7 @@
     ]
   },
   {
+    "id": "extra-d8d2b06f8e",
     "question": "What is a common use for point contact diodes?",
     "choices": [
       "As a constant current source",
@@ -7976,6 +8338,7 @@
     ]
   },
   {
+    "id": "extra-67f9277c45",
     "question": "In Figure E6-3, what is the schematic symbol for a light-emitting diode?",
     "choices": [
       "1",
@@ -7998,6 +8361,7 @@
     ]
   },
   {
+    "id": "extra-85eea85135",
     "question": "What is used to control the attenuation of RF signals by a PIN diode?",
     "choices": [
       "Forward DC bias current",
@@ -8020,6 +8384,7 @@
     ]
   },
   {
+    "id": "extra-213723f16c",
     "question": "What is one common use for PIN diodes?",
     "choices": [
       "As a constant current source",
@@ -8042,6 +8407,7 @@
     ]
   },
   {
+    "id": "extra-2a8a26588b",
     "question": "What type of bias is required for an LED to emit light?",
     "choices": [
       "Reverse bias",
@@ -8064,6 +8430,7 @@
     ]
   },
   {
+    "id": "extra-c201c3d44c",
     "question": "What is the function of hysteresis in a comparator?",
     "choices": [
       "To prevent input noise from causing unstable output signals",
@@ -8086,6 +8453,7 @@
     ]
   },
   {
+    "id": "extra-b7816108c2",
     "question": "What happens when the level of a comparator\u2019s input signal crosses the threshold?",
     "choices": [
       "The IC input can be damaged",
@@ -8108,6 +8476,7 @@
     ]
   },
   {
+    "id": "extra-c959744b94",
     "question": "What is tri-state logic?",
     "choices": [
       "Logic devices with 0, 1, and high impedance output states",
@@ -8128,6 +8497,7 @@
     "tags": []
   },
   {
+    "id": "extra-2030471b02",
     "question": "What is the primary advantage of tri-state logic?",
     "choices": [
       "Low power consumption",
@@ -8148,6 +8518,7 @@
     "tags": []
   },
   {
+    "id": "extra-de1cab74b2",
     "question": "What is an advantage of CMOS logic devices over TTL devices?",
     "choices": [
       "Differential output capability",
@@ -8170,6 +8541,7 @@
     ]
   },
   {
+    "id": "extra-d0ff33a5f4",
     "question": "Why do CMOS digital integrated circuits have high immunity to noise on the input signal or power supply?",
     "choices": [
       "Larger bypass capacitors are used in CMOS circuit design",
@@ -8192,6 +8564,7 @@
     ]
   },
   {
+    "id": "extra-29a74cf139",
     "question": "What best describes a pull-up or pull-down resistor?",
     "choices": [
       "A resistor in a keying circuit used to reduce key clicks",
@@ -8214,6 +8587,7 @@
     ]
   },
   {
+    "id": "extra-2f6f17ffe6",
     "question": "In Figure E6-5, what is the schematic symbol for a NAND gate?",
     "choices": [
       "1",
@@ -8236,6 +8610,7 @@
     ]
   },
   {
+    "id": "extra-d4fa03ca0c",
     "question": "What is a Programmable Logic Device (PLD)?",
     "choices": [
       "A device to control industrial equipment",
@@ -8258,6 +8633,7 @@
     ]
   },
   {
+    "id": "extra-52e57ddb9a",
     "question": "In Figure E6-5, what is the schematic symbol for a NOR gate?",
     "choices": [
       "1",
@@ -8280,6 +8656,7 @@
     ]
   },
   {
+    "id": "extra-32eb70e016",
     "question": "In Figure E6-5, what is the schematic symbol for the NOT operation (inverter)?",
     "choices": [
       "2",
@@ -8302,6 +8679,7 @@
     ]
   },
   {
+    "id": "extra-b8f918baa8",
     "question": "What is BiCMOS logic?",
     "choices": [
       "A logic device with two CMOS circuits per package",
@@ -8322,6 +8700,7 @@
     "tags": []
   },
   {
+    "id": "extra-430df197ff",
     "question": "Which of the following is an advantage of BiCMOS logic?",
     "choices": [
       "Its simplicity results in much less expensive devices than standard CMOS",
@@ -8344,6 +8723,7 @@
     ]
   },
   {
+    "id": "extra-534126469d",
     "question": "What is the primary advantage of using a Programmable Gate Array (PGA) in a logic circuit?",
     "choices": [
       "Many similar gates are less expensive than a mixture of gate types",
@@ -8366,6 +8746,7 @@
     ]
   },
   {
+    "id": "extra-34ebe76fe5",
     "question": "How many turns will be required to produce a 5-microhenry inductor using a powdered-iron toroidal core that has an inductance index (A L) value of 40 microhenrys/100 turns?",
     "choices": [
       "35 turns",
@@ -8388,6 +8769,7 @@
     ]
   },
   {
+    "id": "extra-d71ff70d86",
     "question": "What is the equivalent circuit of a quartz crystal?",
     "choices": [
       "Motional capacitance, motional inductance, and loss resistance in series, all in parallel with a shunt capacitor representing electrode and stray capacitance",
@@ -8410,6 +8792,7 @@
     ]
   },
   {
+    "id": "extra-d276952941",
     "question": "Which of the following is an aspect of the piezoelectric effect?",
     "choices": [
       "Mechanical deformation of material by the application of a voltage",
@@ -8432,6 +8815,7 @@
     ]
   },
   {
+    "id": "extra-8ab6bbb209",
     "question": "Which materials are commonly used as a slug core in a variable inductor?",
     "choices": [
       "Polystyrene and polyethylene",
@@ -8454,6 +8838,7 @@
     ]
   },
   {
+    "id": "extra-3464771c96",
     "question": "What is one reason for using ferrite cores rather than powdered-iron in an inductor?",
     "choices": [
       "Ferrite toroids generally have lower initial permeability",
@@ -8476,6 +8861,7 @@
     ]
   },
   {
+    "id": "extra-4fa1964168",
     "question": "What core material property determines the inductance of a toroidal inductor?",
     "choices": [
       "Thermal impedance",
@@ -8498,6 +8884,7 @@
     ]
   },
   {
+    "id": "extra-4fc7b1203a",
     "question": "What is the usable frequency range of inductors that use toroidal cores, assuming a correct selection of core material for the frequency being used?",
     "choices": [
       "From a few kHz to no more than 30 MHz",
@@ -8520,6 +8907,7 @@
     ]
   },
   {
+    "id": "extra-135f7cbdac",
     "question": "What is one reason for using powdered-iron cores rather than ferrite cores in an inductor?",
     "choices": [
       "Powdered-iron cores generally have greater initial permeability",
@@ -8542,6 +8930,7 @@
     ]
   },
   {
+    "id": "extra-e5326bb28d",
     "question": "What devices are commonly used as VHF and UHF parasitic suppressors at the input and output terminals of a transistor HF amplifier?",
     "choices": [
       "Electrolytic capacitors",
@@ -8564,6 +8953,7 @@
     ]
   },
   {
+    "id": "extra-04c85c9682",
     "question": "What is a primary advantage of using a toroidal core instead of a solenoidal core in an inductor?",
     "choices": [
       "Toroidal cores confine most of the magnetic field within the core material",
@@ -8586,6 +8976,7 @@
     ]
   },
   {
+    "id": "extra-1eed5613ae",
     "question": "How many turns will be required to produce a 1-mH inductor using a core that has an inductance index (A L) value of 523 millihenrys/1000 turns?",
     "choices": [
       "2 turns",
@@ -8608,6 +8999,7 @@
     ]
   },
   {
+    "id": "extra-6c06d3ba7e",
     "question": "What is the definition of saturation in a ferrite core inductor?",
     "choices": [
       "The inductor windings are over coupled",
@@ -8630,6 +9022,7 @@
     ]
   },
   {
+    "id": "extra-41d5ccda56",
     "question": "What is the primary cause of inductor self-resonance?",
     "choices": [
       "Inter-turn capacitance",
@@ -8652,6 +9045,7 @@
     ]
   },
   {
+    "id": "extra-ac7aeca917",
     "question": "Which type of slug material decreases inductance when inserted into a coil?",
     "choices": [
       "Ceramic",
@@ -8674,6 +9068,7 @@
     ]
   },
   {
+    "id": "extra-1b3c66f276",
     "question": "What is current in the primary winding of a transformer called if no load is attached to the secondary?",
     "choices": [
       "Magnetizing current",
@@ -8696,6 +9091,7 @@
     ]
   },
   {
+    "id": "extra-6adaf8c196",
     "question": "What is the common name for a capacitor connected across a transformer secondary that is used to absorb transient voltage spikes?",
     "choices": [
       "Clipper capacitor",
@@ -8718,6 +9114,7 @@
     ]
   },
   {
+    "id": "extra-8ee90109d7",
     "question": "Why should core saturation of a conventional impedance matching transformer be avoided?",
     "choices": [
       "Harmonics and distortion could result",
@@ -8740,6 +9137,7 @@
     ]
   },
   {
+    "id": "extra-2812587cc9",
     "question": "Which of the following is true of a charge-coupled device (CCD)?",
     "choices": [
       "Its phase shift changes rapidly with frequency",
@@ -8762,6 +9160,7 @@
     ]
   },
   {
+    "id": "extra-cd3df92eed",
     "question": "Which of the following device packages is a through-hole type?",
     "choices": [
       "DIP",
@@ -8784,6 +9183,7 @@
     ]
   },
   {
+    "id": "extra-58c2f956b5",
     "question": "Which of the following materials is likely to provide the highest frequency of operation when used in MMICs?",
     "choices": [
       "Silicon",
@@ -8806,6 +9206,7 @@
     ]
   },
   {
+    "id": "extra-a0ecc5ec76",
     "question": "Which is the most common input and output impedance of circuits that use MMICs?",
     "choices": [
       "50 ohms",
@@ -8828,6 +9229,7 @@
     ]
   },
   {
+    "id": "extra-843a5a60dd",
     "question": "Which of the following noise figure values is typical of a low-noise UHF preamplifier?",
     "choices": [
       "2 dB",
@@ -8850,6 +9252,7 @@
     ]
   },
   {
+    "id": "extra-4baec91807",
     "question": "What characteristics of the MMIC make it a popular choice for VHF through microwave circuits?",
     "choices": [
       "The ability to retrieve information from a single signal even in the presence of other strong signals",
@@ -8872,6 +9275,7 @@
     ]
   },
   {
+    "id": "extra-f49a55fdad",
     "question": "Which of the following is typically used to construct a MMIC-based microwave amplifier?",
     "choices": [
       "Ground-plane construction",
@@ -8894,6 +9298,7 @@
     ]
   },
   {
+    "id": "extra-855145cc39",
     "question": "How is voltage from a power supply normally furnished to the most common type of monolithic microwave integrated circuit (MMIC)?",
     "choices": [
       "Through a resistor and/or RF choke connected to the amplifier output lead",
@@ -8916,6 +9321,7 @@
     ]
   },
   {
+    "id": "extra-98ebd98b61",
     "question": "Which of the following component package types would be most suitable for use at frequencies above the HF range?",
     "choices": [
       "TO-220",
@@ -8938,6 +9344,7 @@
     ]
   },
   {
+    "id": "extra-f706fa234d",
     "question": "What is the packaging technique in which leadless components are soldered directly to circuit boards?",
     "choices": [
       "Direct soldering",
@@ -8960,6 +9367,7 @@
     ]
   },
   {
+    "id": "extra-ac88c7db66",
     "question": "What is a characteristic of DIP packaging used for integrated circuits?",
     "choices": [
       "Package mounts in a direct inverted position",
@@ -8982,6 +9390,7 @@
     ]
   },
   {
+    "id": "extra-28d36df89f",
     "question": "Why are high-power RF amplifier ICs and transistors sometimes mounted in ceramic packages?",
     "choices": [
       "High-voltage insulating ability",
@@ -9004,6 +9413,7 @@
     ]
   },
   {
+    "id": "extra-2d3608c340",
     "question": "What is photoconductivity?",
     "choices": [
       "The conversion of photon energy to electromotive energy",
@@ -9026,6 +9436,7 @@
     ]
   },
   {
+    "id": "extra-2f2c9a4e08",
     "question": "What happens to the conductivity of a photoconductive material when light shines on it?",
     "choices": [
       "It increases",
@@ -9048,6 +9459,7 @@
     ]
   },
   {
+    "id": "extra-e69bc7c97b",
     "question": "What is the most common configuration of an optoisolator or optocoupler?",
     "choices": [
       "A lens and a photomultiplier",
@@ -9070,6 +9482,7 @@
     ]
   },
   {
+    "id": "extra-1087e33346",
     "question": "What is the photovoltaic effect?",
     "choices": [
       "The conversion of voltage to current when exposed to light",
@@ -9092,6 +9505,7 @@
     ]
   },
   {
+    "id": "extra-e28d1eecd6",
     "question": "Which describes an optical shaft encoder?",
     "choices": [
       "A device which detects rotation of a control by interrupting a light source with a patterned wheel",
@@ -9114,6 +9528,7 @@
     ]
   },
   {
+    "id": "extra-85d937bf48",
     "question": "Which of these materials is affected the most by photoconductivity?",
     "choices": [
       "A crystalline semiconductor",
@@ -9136,6 +9551,7 @@
     ]
   },
   {
+    "id": "extra-da8b830f53",
     "question": "What is a solid state relay?",
     "choices": [
       "A relay using transistors to drive the relay coil",
@@ -9158,6 +9574,7 @@
     ]
   },
   {
+    "id": "extra-f07527128c",
     "question": "Why are optoisolators often used in conjunction with solid state circuits when switching 120VAC?",
     "choices": [
       "Optoisolators provide a low impedance link between a control circuit and a power circuit",
@@ -9180,6 +9597,7 @@
     ]
   },
   {
+    "id": "extra-e3a07220fa",
     "question": "What is the efficiency of a photovoltaic cell?",
     "choices": [
       "The output RF power divided by the input DC power",
@@ -9202,6 +9620,7 @@
     ]
   },
   {
+    "id": "extra-7016fbf45a",
     "question": "What is the most common type of photovoltaic cell used for electrical power generation?",
     "choices": [
       "Selenium",
@@ -9224,6 +9643,7 @@
     ]
   },
   {
+    "id": "extra-c3450d07e0",
     "question": "What is the approximate open-circuit voltage produced by a fully-illuminated silicon\u00a0photovoltaic cell?",
     "choices": [
       "0.1 V",
@@ -9246,6 +9666,7 @@
     ]
   },
   {
+    "id": "extra-b64fbe588a",
     "question": "What absorbs the energy from light falling on a photovoltaic cell?",
     "choices": [
       "Protons",
@@ -9268,6 +9689,7 @@
     ]
   },
   {
+    "id": "extra-31c2377ead",
     "question": "What is a liquid crystal display (LCD)?",
     "choices": [
       "A modern replacement for a quartz crystal oscillator which displays its fundamental frequency",
@@ -9290,6 +9712,7 @@
     ]
   },
   {
+    "id": "extra-eaa3bb81ef",
     "question": "Which of the following is true of LCD displays?",
     "choices": [
       "They are hard to view in high ambient light conditions",
@@ -9312,6 +9735,7 @@
     ]
   },
   {
+    "id": "extra-379b4d0b9c",
     "question": "Which is a bi-stable circuit?",
     "choices": [
       "An \"AND\" gate",
@@ -9334,6 +9758,7 @@
     ]
   },
   {
+    "id": "extra-b60fb706e7",
     "question": "What is the function of a decade counter digital IC?",
     "choices": [
       "It produces one output pulse for every ten input pulses",
@@ -9356,6 +9781,7 @@
     ]
   },
   {
+    "id": "extra-1249767b1c",
     "question": "Which of the following can divide the frequency of a pulse train by 2?",
     "choices": [
       "An XOR gate",
@@ -9378,6 +9804,7 @@
     ]
   },
   {
+    "id": "extra-e90fbaa1f8",
     "question": "How many flip-flops are required to divide a signal frequency by 4?",
     "choices": [
       "1",
@@ -9400,6 +9827,7 @@
     ]
   },
   {
+    "id": "extra-3df23407d9",
     "question": "Which of the following is a circuit that continuously alternates between two states without an external clock?",
     "choices": [
       "Monostable multivibrator",
@@ -9422,6 +9850,7 @@
     ]
   },
   {
+    "id": "extra-f495b5819b",
     "question": "What is a characteristic of a monostable multivibrator?",
     "choices": [
       "It switches momentarily to the opposite binary state and then returns to its original state after a set time",
@@ -9444,6 +9873,7 @@
     ]
   },
   {
+    "id": "extra-e0dc1afca0",
     "question": "What logical operation does a NAND gate perform?",
     "choices": [
       "It produces logic \"0\" at its output only when all inputs are logic \"0\"",
@@ -9466,6 +9896,7 @@
     ]
   },
   {
+    "id": "extra-a306498b81",
     "question": "What logical operation does an OR gate perform?",
     "choices": [
       "It produces logic \"1\" at its output if any or all inputs are logic \"1\"",
@@ -9488,6 +9919,7 @@
     ]
   },
   {
+    "id": "extra-85059f676b",
     "question": "What logical operation is performed by an exclusive NOR gate?",
     "choices": [
       "It produces logic \"0\" at its output only if all inputs are logic \"0\"",
@@ -9510,6 +9942,7 @@
     ]
   },
   {
+    "id": "extra-a60312ec8b",
     "question": "What is a truth table?",
     "choices": [
       "A table of logic symbols that indicate the high logic states of an op-amp",
@@ -9532,6 +9965,7 @@
     ]
   },
   {
+    "id": "extra-8815e07188",
     "question": "What type of logic defines \"1\" as a high voltage?",
     "choices": [
       "Reverse Logic",
@@ -9554,6 +9988,7 @@
     ]
   },
   {
+    "id": "extra-5fb5bd8411",
     "question": "What type of logic defines \"0\" as a high voltage?",
     "choices": [
       "Reverse Logic",
@@ -9576,6 +10011,7 @@
     ]
   },
   {
+    "id": "extra-eb86052d18",
     "question": "For what portion of a signal cycle does a Class AB amplifier operate?",
     "choices": [
       "More than 180 degrees but less than 360 degrees",
@@ -9598,6 +10034,7 @@
     ]
   },
   {
+    "id": "extra-b23090ae44",
     "question": "What is a Class D amplifier?",
     "choices": [
       "A type of amplifier that uses switching technology to achieve high efficiency",
@@ -9620,6 +10057,7 @@
     ]
   },
   {
+    "id": "extra-4e8c6157e7",
     "question": "Which of the following components form the output of a class D amplifier circuit?",
     "choices": [
       "A low-pass filter to remove switching signal components",
@@ -9642,6 +10080,7 @@
     ]
   },
   {
+    "id": "extra-8c4ffded7e",
     "question": "Where on the load line of a Class A common emitter amplifier would bias normally be set?",
     "choices": [
       "Approximately half-way between saturation and cutoff",
@@ -9664,6 +10103,7 @@
     ]
   },
   {
+    "id": "extra-66f5b792b9",
     "question": "What can be done to prevent unwanted oscillations in an RF power amplifier?",
     "choices": [
       "Tune the stage for maximum SWR",
@@ -9686,6 +10126,7 @@
     ]
   },
   {
+    "id": "extra-093e32a17a",
     "question": "Which of the following amplifier types reduces or eliminates even order harmonics?",
     "choices": [
       "Push-push",
@@ -9708,6 +10149,7 @@
     ]
   },
   {
+    "id": "extra-591033ba79",
     "question": "Which of the following is a likely result when a Class C amplifier is used to amplify a single-sideband phone signal?",
     "choices": [
       "Reduced intermodulation products",
@@ -9730,6 +10172,7 @@
     ]
   },
   {
+    "id": "extra-d19ec54544",
     "question": "How can an RF power amplifier be neutralized?",
     "choices": [
       "By increasing the driving power",
@@ -9752,6 +10195,7 @@
     ]
   },
   {
+    "id": "extra-552cbec2f0",
     "question": "Which of the following describes how the loading and tuning capacitors are to be adjusted when tuning a vacuum tube RF power amplifier that employs a Pi-network output circuit?",
     "choices": [
       "The loading capacitor is set to maximum capacitance and the tuning capacitor is adjusted for minimum allowable plate current",
@@ -9774,6 +10218,7 @@
     ]
   },
   {
+    "id": "extra-68ca9c3dfb",
     "question": "In Figure E7-1, what is the purpose of R1 and R2?",
     "choices": [
       "Load resistors",
@@ -9796,6 +10241,7 @@
     ]
   },
   {
+    "id": "extra-445e24ed08",
     "question": "In Figure E7-1, what is the purpose of R3?",
     "choices": [
       "Fixed bias",
@@ -9818,6 +10264,7 @@
     ]
   },
   {
+    "id": "extra-c8ca4b61f0",
     "question": "What type of amplifier circuit is shown in Figure E7-1?",
     "choices": [
       "Common base",
@@ -9840,6 +10287,7 @@
     ]
   },
   {
+    "id": "extra-56f71a6434",
     "question": "In Figure E7-2, what is the purpose of R?",
     "choices": [
       "Emitter load",
@@ -9862,6 +10310,7 @@
     ]
   },
   {
+    "id": "extra-a81ef02adf",
     "question": "Why are switching amplifiers more efficient than linear amplifiers?",
     "choices": [
       "Switching amplifiers operate at higher voltages",
@@ -9884,6 +10333,7 @@
     ]
   },
   {
+    "id": "extra-848857609b",
     "question": "What is one way to prevent thermal runaway in a bipolar transistor amplifier?",
     "choices": [
       "Neutralization",
@@ -9906,6 +10356,7 @@
     ]
   },
   {
+    "id": "extra-550b37cb88",
     "question": "What is the effect of intermodulation products in a linear power amplifier?",
     "choices": [
       "Transmission of spurious signals",
@@ -9928,6 +10379,7 @@
     ]
   },
   {
+    "id": "extra-f026aa7544",
     "question": "Why are odd-order rather than even-order intermodulation distortion products of concern in linear power amplifiers?",
     "choices": [
       "Because they are relatively close in frequency to the desired signal",
@@ -9950,6 +10402,7 @@
     ]
   },
   {
+    "id": "extra-b0ae00d3ee",
     "question": "What is a characteristic of a grounded-grid amplifier?",
     "choices": [
       "High power gain",
@@ -9972,6 +10425,7 @@
     ]
   },
   {
+    "id": "extra-01dfba8799",
     "question": "How are the capacitors and inductors of a low-pass filter Pi-network arranged between the network's input and output?",
     "choices": [
       "Two inductors are in series between the input and output, and a capacitor is connected between the two inductors and ground",
@@ -9994,6 +10448,7 @@
     ]
   },
   {
+    "id": "extra-a952cd7bfd",
     "question": "Which of the following is a property of a T-network with series capacitors and a parallel shunt inductor?",
     "choices": [
       "It is a low-pass filter",
@@ -10016,6 +10471,7 @@
     ]
   },
   {
+    "id": "extra-1872f93a6c",
     "question": "What advantage does a Pi-L-network have over a regular Pi-network for impedance matching between the final amplifier of a vacuum-tube transmitter and an antenna?",
     "choices": [
       "Greater harmonic suppression",
@@ -10038,6 +10494,7 @@
     ]
   },
   {
+    "id": "extra-e94de72a3f",
     "question": "How does an impedance-matching circuit transform a complex impedance to a resistive impedance?",
     "choices": [
       "It introduces negative resistance to cancel the resistive part of impedance",
@@ -10060,6 +10517,7 @@
     ]
   },
   {
+    "id": "extra-1b821d4c9a",
     "question": "Which filter type is described as having ripple in the passband and a sharp cutoff?",
     "choices": [
       "A Butterworth filter",
@@ -10082,6 +10540,7 @@
     ]
   },
   {
+    "id": "extra-1391ad31a1",
     "question": "What are the distinguishing features of an elliptical filter?",
     "choices": [
       "Gradual passband rolloff with minimal stop band ripple",
@@ -10104,6 +10563,7 @@
     ]
   },
   {
+    "id": "extra-2c1bd1590d",
     "question": "What kind of filter would you use to attenuate an interfering carrier signal while receiving an SSB transmission?",
     "choices": [
       "A band-pass filter",
@@ -10126,6 +10586,7 @@
     ]
   },
   {
+    "id": "extra-0b275cc0ee",
     "question": "Which of the following factors has the greatest effect in helping determine the bandwidth and response shape of a crystal ladder filter?",
     "choices": [
       "The relative frequencies of the individual crystals",
@@ -10148,6 +10609,7 @@
     ]
   },
   {
+    "id": "extra-7cd75d9433",
     "question": "Which of the following filters would be the best choice for use in a 2 meter repeater duplexer?",
     "choices": [
       "A crystal filter",
@@ -10170,6 +10632,7 @@
     ]
   },
   {
+    "id": "extra-af37d0db03",
     "question": "Which of the following is the common name for a filter network which is equivalent to two L-networks connected back-to-back with the two inductors in series and the capacitors in shunt at the input and output?",
     "choices": [
       "Pi-L",
@@ -10192,6 +10655,7 @@
     ]
   },
   {
+    "id": "extra-34db70681e",
     "question": "Which describes a Pi-L-network used for matching a vacuum tube final amplifier to a 50 ohm unbalanced output?",
     "choices": [
       "A Phase Inverter Load network",
@@ -10214,6 +10678,7 @@
     ]
   },
   {
+    "id": "extra-a67e96125e",
     "question": "What is one advantage of a Pi-matching network over an L-matching network consisting of a single inductor and a single capacitor?",
     "choices": [
       "The Q of Pi-networks can be varied depending on the component values chosen",
@@ -10236,6 +10701,7 @@
     ]
   },
   {
+    "id": "extra-a5935a98f8",
     "question": "Which mode is most affected by non-linear phase response in a receiver IF filter?",
     "choices": [
       "Meteor scatter",
@@ -10258,6 +10724,7 @@
     ]
   },
   {
+    "id": "extra-240b12b066",
     "question": "What is a crystal lattice filter?",
     "choices": [
       "A power supply filter made with interlaced quartz crystals",
@@ -10280,6 +10747,7 @@
     ]
   },
   {
+    "id": "extra-0427b54bfb",
     "question": "What is one characteristic of a linear electronic voltage regulator?",
     "choices": [
       "It has a ramp voltage as its output",
@@ -10302,6 +10770,7 @@
     ]
   },
   {
+    "id": "extra-1e39e93858",
     "question": "What is one characteristic of a switching electronic voltage regulator?",
     "choices": [
       "The resistance of a control element is varied in direct proportion to the line voltage or load current",
@@ -10324,6 +10793,7 @@
     ]
   },
   {
+    "id": "extra-919a2044cf",
     "question": "What device is typically used as a stable reference voltage in a linear voltage regulator?",
     "choices": [
       "A Zener diode",
@@ -10346,6 +10816,7 @@
     ]
   },
   {
+    "id": "extra-f86a84eb04",
     "question": "Which of the following types of linear voltage regulator usually make the most efficient use of the primary power source?",
     "choices": [
       "A series current source",
@@ -10368,6 +10839,7 @@
     ]
   },
   {
+    "id": "extra-918d414bc7",
     "question": "Which of the following types of linear voltage regulator places a constant load on the unregulated voltage source?",
     "choices": [
       "A constant current source",
@@ -10390,6 +10862,7 @@
     ]
   },
   {
+    "id": "extra-9319143b82",
     "question": "What is the purpose of Q1 in the circuit shown in Figure E7-3?",
     "choices": [
       "It provides negative feedback to improve regulation",
@@ -10412,6 +10885,7 @@
     ]
   },
   {
+    "id": "extra-de3d43cc5d",
     "question": "What is the purpose of C2 in the circuit shown in Figure E7-3?",
     "choices": [
       "It bypasses hum around D1",
@@ -10434,6 +10908,7 @@
     ]
   },
   {
+    "id": "extra-b91da0bc2b",
     "question": "What type of circuit is shown in Figure E7-3?",
     "choices": [
       "Switching voltage regulator",
@@ -10456,6 +10931,7 @@
     ]
   },
   {
+    "id": "extra-cbe6cdd87e",
     "question": "What is the main reason to use a charge controller with a solar power system?",
     "choices": [
       "Prevention of battery undercharge",
@@ -10478,6 +10954,7 @@
     ]
   },
   {
+    "id": "extra-967c83cd67",
     "question": "What is the primary reason that a high-frequency switching type high voltage power supply can be both less expensive and lighter in weight than a conventional power supply?",
     "choices": [
       "The inverter design does not require any output filtering",
@@ -10500,6 +10977,7 @@
     ]
   },
   {
+    "id": "extra-6efc1431fa",
     "question": "What circuit element is controlled by a series analog voltage regulator to maintain a constant output voltage?",
     "choices": [
       "Reference voltage",
@@ -10522,6 +11000,7 @@
     ]
   },
   {
+    "id": "extra-53c5765955",
     "question": "What is the drop-out voltage of an analog voltage regulator?",
     "choices": [
       "Minimum input voltage for rated power dissipation",
@@ -10544,6 +11023,7 @@
     ]
   },
   {
+    "id": "extra-6f05398f6c",
     "question": "What is the equation for calculating power dissipation by a series connected linear voltage regulator?",
     "choices": [
       "Input voltage multiplied by input current",
@@ -10566,6 +11046,7 @@
     ]
   },
   {
+    "id": "extra-88e262ebda",
     "question": "What is one purpose of a \"bleeder\" resistor in a conventional unregulated power supply?",
     "choices": [
       "To cut down on waste heat generated by the power supply",
@@ -10588,6 +11069,7 @@
     ]
   },
   {
+    "id": "extra-8766ea58bd",
     "question": "What is the purpose of a \"step-start\" circuit in a high voltage power supply?",
     "choices": [
       "To provide a dual-voltage output for reduced power applications",
@@ -10610,6 +11092,7 @@
     ]
   },
   {
+    "id": "extra-09ac6e9241",
     "question": "When several electrolytic filter capacitors are connected in series to increase the operating voltage of a power supply filter circuit, why should resistors be connected across each capacitor?",
     "choices": [
       "To equalize, as much as possible, the voltage drop across each capacitor",
@@ -10632,6 +11115,7 @@
     ]
   },
   {
+    "id": "extra-b6b63615be",
     "question": "Which of the following can be used to generate FM phone emissions?",
     "choices": [
       "A balanced modulator on the audio amplifier",
@@ -10654,6 +11138,7 @@
     ]
   },
   {
+    "id": "extra-69057b2e3e",
     "question": "What is the function of a reactance modulator?",
     "choices": [
       "To produce PM signals by using an electrically variable resistance",
@@ -10676,6 +11161,7 @@
     ]
   },
   {
+    "id": "extra-7718da502d",
     "question": "How does an analog phase modulator function?",
     "choices": [
       "By varying the tuning of a microphone preamplifier to produce PM signals",
@@ -10698,6 +11184,7 @@
     ]
   },
   {
+    "id": "extra-01f23f5059",
     "question": "What is one way a single-sideband phone signal can be generated?",
     "choices": [
       "By using a balanced modulator followed by a filter",
@@ -10720,6 +11207,7 @@
     ]
   },
   {
+    "id": "extra-c40bd3bc4a",
     "question": "What circuit is added to an FM transmitter to boost the higher audio frequencies?",
     "choices": [
       "A de-emphasis network",
@@ -10742,6 +11230,7 @@
     ]
   },
   {
+    "id": "extra-a23a9aeb0e",
     "question": "Why is de-emphasis commonly used in FM communications receivers?",
     "choices": [
       "For compatibility with transmitters using phase modulation",
@@ -10764,6 +11253,7 @@
     ]
   },
   {
+    "id": "extra-3081b75a68",
     "question": "What is meant by the term baseband in radio communications?",
     "choices": [
       "The lowest frequency band that the transmitter or receiver covers",
@@ -10786,6 +11276,7 @@
     ]
   },
   {
+    "id": "extra-7d8db3be96",
     "question": "What are the principal frequencies that appear at the output of a mixer circuit?",
     "choices": [
       "Two and four times the original frequency",
@@ -10808,6 +11299,7 @@
     ]
   },
   {
+    "id": "extra-dfc31b87cf",
     "question": "What occurs when an excessive amount of signal energy reaches a mixer circuit?",
     "choices": [
       "Spurious mixer products are generated",
@@ -10830,6 +11322,7 @@
     ]
   },
   {
+    "id": "extra-faa8e65f12",
     "question": "How does a diode detector function?",
     "choices": [
       "By rectification and filtering of RF signals",
@@ -10852,6 +11345,7 @@
     ]
   },
   {
+    "id": "extra-10f8c5a1ef",
     "question": "Which type of detector is used for demodulating SSB signals?",
     "choices": [
       "Discriminator",
@@ -10874,6 +11368,7 @@
     ]
   },
   {
+    "id": "extra-5a09dec4e8",
     "question": "What is a frequency discriminator stage in a FM receiver?",
     "choices": [
       "An FM generator circuit",
@@ -10896,6 +11391,7 @@
     ]
   },
   {
+    "id": "extra-d081a2987a",
     "question": "What is meant by direct digital conversion as applied to software defined radios?",
     "choices": [
       "Software is converted from source code to object code during operation of the receiver",
@@ -10918,6 +11414,7 @@
     ]
   },
   {
+    "id": "extra-c4c7d6f325",
     "question": "What kind of digital signal processing audio filter is used to remove unwanted noise from a received SSB signal?",
     "choices": [
       "An adaptive filter",
@@ -10940,6 +11437,7 @@
     ]
   },
   {
+    "id": "extra-58886675e5",
     "question": "What type of digital signal processing filter is used to generate an SSB signal?",
     "choices": [
       "An adaptive filter",
@@ -10962,6 +11460,7 @@
     ]
   },
   {
+    "id": "extra-458f6263e2",
     "question": "What is a common method of generating an SSB signal using digital signal processing?",
     "choices": [
       "Mixing products are converted to voltages and subtracted by adder circuits",
@@ -10984,6 +11483,7 @@
     ]
   },
   {
+    "id": "extra-60c94006fa",
     "question": "How frequently must an analog signal be sampled by an analog-to-digital converter so that the signal can be accurately reproduced?",
     "choices": [
       "At half the rate of the highest frequency component of the signal",
@@ -11006,6 +11506,7 @@
     ]
   },
   {
+    "id": "extra-7a893b0140",
     "question": "What is the minimum number of bits required for an analog-to-digital converter to sample a signal with a range of 1 volt at a resolution of 1 millivolt?",
     "choices": [
       "4 bits",
@@ -11028,6 +11529,7 @@
     ]
   },
   {
+    "id": "extra-02d89d1f09",
     "question": "What function can a Fast Fourier Transform perform?",
     "choices": [
       "Converting analog signals to digital form",
@@ -11050,6 +11552,7 @@
     ]
   },
   {
+    "id": "extra-393b220972",
     "question": "What is the function of decimation with regard to digital filters?",
     "choices": [
       "Converting data to binary code decimal form",
@@ -11072,6 +11575,7 @@
     ]
   },
   {
+    "id": "extra-03f14badb9",
     "question": "Why is an anti-aliasing digital filter required in a digital decimator?",
     "choices": [
       "It removes high-frequency signal components which would otherwise be reproduced as lower frequency components",
@@ -11094,6 +11598,7 @@
     ]
   },
   {
+    "id": "extra-2d5bb04439",
     "question": "What aspect of receiver analog-to-digital conversion determines the maximum receive bandwidth of a Direct Digital Conversion SDR?",
     "choices": [
       "Sample rate",
@@ -11116,6 +11621,7 @@
     ]
   },
   {
+    "id": "extra-4d617a6a48",
     "question": "What sets the minimum detectable signal level for an SDR in the absence of atmospheric or thermal noise?",
     "choices": [
       "Sample clock phase noise",
@@ -11138,6 +11644,7 @@
     ]
   },
   {
+    "id": "extra-371c559f3c",
     "question": "What digital process is applied to I and Q signals in order to recover the baseband modulation information?",
     "choices": [
       "Fast Fourier Transform",
@@ -11160,6 +11667,7 @@
     ]
   },
   {
+    "id": "extra-1281d6c5dd",
     "question": "What is the function of taps in a digital signal processing filter?",
     "choices": [
       "To reduce excess signal pressure levels",
@@ -11182,6 +11690,7 @@
     ]
   },
   {
+    "id": "extra-0876ce710a",
     "question": "Which of the following would allow a digital signal processing filter to create a sharper filter response?",
     "choices": [
       "Higher data rate",
@@ -11204,6 +11713,7 @@
     ]
   },
   {
+    "id": "extra-69e0d410bb",
     "question": "Which of the following is an advantage of a Finite Impulse Response (FIR) filter vs an Infinite Impulse Response (IIR) digital filter?",
     "choices": [
       "FIR filters delay all frequency components of the signal by the same amount",
@@ -11226,6 +11736,7 @@
     ]
   },
   {
+    "id": "extra-93ddccb905",
     "question": "How might the sampling rate of an existing digital signal be adjusted by a factor of 3/4?",
     "choices": [
       "Change the gain by a factor of 3/4",
@@ -11248,6 +11759,7 @@
     ]
   },
   {
+    "id": "extra-7785d35412",
     "question": "What do the letters I and Q in I/Q Modulation represent?",
     "choices": [
       "Inactive and Quiescent",
@@ -11270,6 +11782,7 @@
     ]
   },
   {
+    "id": "extra-5b40464d79",
     "question": "What is the typical output impedance of an integrated circuit op-amp?",
     "choices": [
       "Very low",
@@ -11292,6 +11805,7 @@
     ]
   },
   {
+    "id": "extra-df28d2808b",
     "question": "What is the effect of ringing in a filter?",
     "choices": [
       "An echo caused by a long time delay",
@@ -11314,6 +11828,7 @@
     ]
   },
   {
+    "id": "extra-58771fc9bd",
     "question": "What is the typical input impedance of an integrated circuit op-amp?",
     "choices": [
       "100 ohms",
@@ -11336,6 +11851,7 @@
     ]
   },
   {
+    "id": "extra-518f271755",
     "question": "What is meant by the term op-amp input offset voltage?",
     "choices": [
       "The output voltage of the op-amp minus its input voltage",
@@ -11358,6 +11874,7 @@
     ]
   },
   {
+    "id": "extra-69eddda023",
     "question": "How can unwanted ringing and audio instability be prevented in a multi-section op-amp RC audio filter circuit?",
     "choices": [
       "Restrict both gain and Q",
@@ -11380,6 +11897,7 @@
     ]
   },
   {
+    "id": "extra-647590b719",
     "question": "Which of the following is the most appropriate use of an op-amp active filter?",
     "choices": [
       "As a high-pass filter used to block RFI at the input to receivers",
@@ -11402,6 +11920,7 @@
     ]
   },
   {
+    "id": "extra-dcb8a4ae6d",
     "question": "How does the gain of an ideal operational amplifier vary with frequency?",
     "choices": [
       "It increases linearly with increasing frequency",
@@ -11424,6 +11943,7 @@
     ]
   },
   {
+    "id": "extra-e0ed000347",
     "question": "What will be the output voltage of the circuit shown in Figure E7-4 if R1 is 1000 ohms, RF is 10,000 ohms, and 0.23 volts DC is applied to the input?",
     "choices": [
       "0.23 volts",
@@ -11446,6 +11966,7 @@
     ]
   },
   {
+    "id": "extra-9bf9de23b6",
     "question": "What absolute voltage gain can be expected from the circuit in Figure E7-4 when R1 is 1800 ohms and RF is 68 kilohms?",
     "choices": [
       "1",
@@ -11468,6 +11989,7 @@
     ]
   },
   {
+    "id": "extra-5704b5790e",
     "question": "What absolute voltage gain can be expected from the circuit in Figure E7-4 when R1 is 3300 ohms and RF is 47 kilohms?",
     "choices": [
       "28",
@@ -11490,6 +12012,7 @@
     ]
   },
   {
+    "id": "extra-9f94e0e548",
     "question": "What is an integrated circuit operational amplifier?",
     "choices": [
       "A high-gain, direct-coupled differential amplifier with very high input impedance and very low output impedance",
@@ -11512,6 +12035,7 @@
     ]
   },
   {
+    "id": "extra-4eb169976c",
     "question": "What are three oscillator circuits used in Amateur Radio equipment?",
     "choices": [
       "Taft, Pierce and negative feedback",
@@ -11534,6 +12058,7 @@
     ]
   },
   {
+    "id": "extra-dbd5d51b53",
     "question": "Which describes a microphonic?",
     "choices": [
       "An IC used for amplifying microphone signals",
@@ -11556,6 +12081,7 @@
     ]
   },
   {
+    "id": "extra-203c66e66f",
     "question": "How is positive feedback supplied in a Hartley oscillator?",
     "choices": [
       "Through a tapped coil",
@@ -11578,6 +12104,7 @@
     ]
   },
   {
+    "id": "extra-5818e5e401",
     "question": "How is positive feedback supplied in a Colpitts oscillator?",
     "choices": [
       "Through a tapped coil",
@@ -11600,6 +12127,7 @@
     ]
   },
   {
+    "id": "extra-554d11e7f5",
     "question": "How is positive feedback supplied in a Pierce oscillator?",
     "choices": [
       "Through a tapped coil",
@@ -11622,6 +12150,7 @@
     ]
   },
   {
+    "id": "extra-fab8181658",
     "question": "Which of the following oscillator circuits are commonly used in VFOs?",
     "choices": [
       "Pierce and Zener",
@@ -11644,6 +12173,7 @@
     ]
   },
   {
+    "id": "extra-ffae09c9a5",
     "question": "How can an oscillator\u2019s microphonic responses be reduced?",
     "choices": [
       "Use of NP0 capacitors",
@@ -11666,6 +12196,7 @@
     ]
   },
   {
+    "id": "extra-cae9c434a6",
     "question": "Which of the following components can be used to reduce thermal drift in crystal oscillators?",
     "choices": [
       "NP0 capacitors",
@@ -11688,6 +12219,7 @@
     ]
   },
   {
+    "id": "extra-92d9be23ee",
     "question": "What type of frequency synthesizer circuit uses a phase accumulator, lookup table, digital to analog converter, and a low-pass anti-alias filter?",
     "choices": [
       "A direct digital synthesizer",
@@ -11710,6 +12242,7 @@
     ]
   },
   {
+    "id": "extra-8c1609a9be",
     "question": "What information is contained in the lookup table of a direct digital frequency synthesizer?",
     "choices": [
       "The phase relationship between a reference oscillator and the output waveform",
@@ -11732,6 +12265,7 @@
     ]
   },
   {
+    "id": "extra-6269ab67ce",
     "question": "What are the major spectral impurity components of direct digital synthesizers?",
     "choices": [
       "Broadband noise",
@@ -11754,6 +12288,7 @@
     ]
   },
   {
+    "id": "extra-01a1f2abab",
     "question": "Which of the following must be done to insure that a crystal oscillator provides the frequency specified by the crystal manufacturer?",
     "choices": [
       "Provide the crystal with a specified parallel inductance",
@@ -11776,6 +12311,7 @@
     ]
   },
   {
+    "id": "extra-680be2bf9f",
     "question": "Which of the following is a technique for providing highly accurate and stable oscillators needed for microwave transmission and reception?",
     "choices": [
       "Use a GPS signal reference",
@@ -11798,6 +12334,7 @@
     ]
   },
   {
+    "id": "extra-b81a986c69",
     "question": "What is a phase-locked loop circuit?",
     "choices": [
       "An electronic servo loop consisting of a ratio detector, reactance modulator, and voltage-controlled oscillator",
@@ -11820,6 +12357,7 @@
     ]
   },
   {
+    "id": "extra-e040225241",
     "question": "Which of these functions can be performed by a phase-locked loop?",
     "choices": [
       "Wide-band AF and RF power amplification",
@@ -11842,6 +12380,7 @@
     ]
   },
   {
+    "id": "extra-b548311e43",
     "question": "What is the name of the process that shows that a square wave is made up of a sine wave plus all of its odd harmonics?",
     "choices": [
       "Fourier analysis",
@@ -11864,6 +12403,7 @@
     ]
   },
   {
+    "id": "extra-712984bc85",
     "question": "What type of wave has a rise time significantly faster than its fall time (or vice versa)?",
     "choices": [
       "A cosine wave",
@@ -11886,6 +12426,7 @@
     ]
   },
   {
+    "id": "extra-4acd465682",
     "question": "What type of wave does a Fourier analysis show to be made up of sine waves of a given fundamental frequency plus all of its harmonics?",
     "choices": [
       "A sawtooth wave",
@@ -11908,6 +12449,7 @@
     ]
   },
   {
+    "id": "extra-b1d2b8703c",
     "question": "What is \"dither\" with respect to analog to digital converters?",
     "choices": [
       "An abnormal condition where the converter cannot settle on a value to represent the signal",
@@ -11930,6 +12472,7 @@
     ]
   },
   {
+    "id": "extra-e0e3ed4da7",
     "question": "What would be the most accurate way of measuring the RMS voltage of a complex waveform?",
     "choices": [
       "By using a grid dip meter",
@@ -11952,6 +12495,7 @@
     ]
   },
   {
+    "id": "extra-58e07ce5b8",
     "question": "What is the approximate ratio of PEP-to-average power in a typical single-sideband phone signal?",
     "choices": [
       "2.5 to 1",
@@ -11974,6 +12518,7 @@
     ]
   },
   {
+    "id": "extra-5f955a8766",
     "question": "What determines the PEP-to-average power ratio of a single-sideband phone signal?",
     "choices": [
       "The frequency of the modulating signal",
@@ -11996,6 +12541,7 @@
     ]
   },
   {
+    "id": "extra-2b7e59af26",
     "question": "Why would a direct or flash conversion analog-to-digital converter be useful for a software defined radio?",
     "choices": [
       "Very low power consumption decreases frequency drift",
@@ -12018,6 +12564,7 @@
     ]
   },
   {
+    "id": "extra-bbafb03099",
     "question": "How many levels can an analog-to-digital converter with 8 bit resolution encode?",
     "choices": [
       "8",
@@ -12040,6 +12587,7 @@
     ]
   },
   {
+    "id": "extra-4b4f1041d6",
     "question": "What is the purpose of a low pass filter used in conjunction with a digital-to-analog converter?",
     "choices": [
       "Lower the input bandwidth to increase the effective resolution",
@@ -12062,6 +12610,7 @@
     ]
   },
   {
+    "id": "extra-2364050eb5",
     "question": "What type of information can be conveyed using digital waveforms?",
     "choices": [
       "Human speech",
@@ -12084,6 +12633,7 @@
     ]
   },
   {
+    "id": "extra-2d7a86376b",
     "question": "What is an advantage of using digital signals instead of analog signals to convey the same information?",
     "choices": [
       "Less complex circuitry is required for digital signal generation and detection",
@@ -12106,6 +12656,7 @@
     ]
   },
   {
+    "id": "extra-e955cd9ccc",
     "question": "Which of these methods is commonly used to convert analog signals to digital signals?",
     "choices": [
       "Sequential sampling",
@@ -12128,6 +12679,7 @@
     ]
   },
   {
+    "id": "extra-efec08bb40",
     "question": "What is the term for the ratio between the frequency deviation of an RF carrier wave and the modulating frequency of its corresponding FM-phone signal?",
     "choices": [
       "FM compressibility",
@@ -12150,6 +12702,7 @@
     ]
   },
   {
+    "id": "extra-6e1b86b648",
     "question": "How does the modulation index of a phase-modulated emission vary with RF carrier frequency (the modulated frequency)?",
     "choices": [
       "It increases as the RF carrier frequency increases",
@@ -12172,6 +12725,7 @@
     ]
   },
   {
+    "id": "extra-cc0810e87b",
     "question": "What is the modulation index of an FM-phone signal having a maximum frequency deviation of 3000 Hz either side of the carrier frequency when the modulating frequency is 1000 Hz?",
     "choices": [
       "3",
@@ -12194,6 +12748,7 @@
     ]
   },
   {
+    "id": "extra-b2729c087d",
     "question": "What is the modulation index of an FM-phone signal having a maximum carrier deviation of plus or minus 6 kHz when modulated with a 2 kHz modulating frequency?",
     "choices": [
       "6000",
@@ -12216,6 +12771,7 @@
     ]
   },
   {
+    "id": "extra-d3046213db",
     "question": "What is the deviation ratio of an FM-phone signal having a maximum frequency swing of plus-or-minus 5 kHz when the maximum modulation frequency is 3 kHz?",
     "choices": [
       "60",
@@ -12238,6 +12794,7 @@
     ]
   },
   {
+    "id": "extra-38a5bc8dea",
     "question": "What is the deviation ratio of an FM-phone signal having a maximum frequency swing of plus or minus 7.5 kHz when the maximum modulation frequency is 3.5 kHz?",
     "choices": [
       "2.14",
@@ -12260,6 +12817,7 @@
     ]
   },
   {
+    "id": "extra-a8e08fb732",
     "question": "Orthogonal Frequency Division Multiplexing is a technique used for which type of amateur communication?",
     "choices": [
       "High speed digital modes",
@@ -12282,6 +12840,7 @@
     ]
   },
   {
+    "id": "extra-3d8b46a448",
     "question": "What describes Orthogonal Frequency Division Multiplexing?",
     "choices": [
       "A frequency modulation technique which uses non-harmonically related frequencies",
@@ -12304,6 +12863,7 @@
     ]
   },
   {
+    "id": "extra-b4385be654",
     "question": "What is meant by deviation ratio?",
     "choices": [
       "The ratio of the audio modulating frequency to the center carrier frequency",
@@ -12326,6 +12886,7 @@
     ]
   },
   {
+    "id": "extra-f002c9974d",
     "question": "What describes frequency division multiplexing?",
     "choices": [
       "The transmitted signal jumps from band to band at a predetermined rate",
@@ -12348,6 +12909,7 @@
     ]
   },
   {
+    "id": "extra-86939b7de9",
     "question": "What is digital time division multiplexing?",
     "choices": [
       "Two or more data streams are assigned to discrete sub-carriers on an FM transmitter",
@@ -12370,6 +12932,7 @@
     ]
   },
   {
+    "id": "extra-d2f172eb5d",
     "question": "How is Forward Error Correction implemented?",
     "choices": [
       "By the receiving station repeating each block of three data characters",
@@ -12392,6 +12955,7 @@
     ]
   },
   {
+    "id": "extra-0d87690aa0",
     "question": "What is the definition of symbol rate in a digital transmission?",
     "choices": [
       "The number of control characters in a message packet",
@@ -12414,6 +12978,7 @@
     ]
   },
   {
+    "id": "extra-9276b7faab",
     "question": "When performing phase shift keying, why is it advantageous to shift phase precisely at the zero crossing of the RF carrier?",
     "choices": [
       "This results in the least possible transmitted bandwidth for the particular mode",
@@ -12436,6 +13001,7 @@
     ]
   },
   {
+    "id": "extra-30c462cad6",
     "question": "What technique is used to minimize the bandwidth requirements of a PSK31 signal?",
     "choices": [
       "Zero-sum character encoding",
@@ -12458,6 +13024,7 @@
     ]
   },
   {
+    "id": "extra-553182ba58",
     "question": "What is the necessary bandwidth of a 13-WPM international Morse code transmission?",
     "choices": [
       "Approximately 13 Hz",
@@ -12480,6 +13047,7 @@
     ]
   },
   {
+    "id": "extra-d7be587701",
     "question": "What is the necessary bandwidth of a 170-hertz shift, 300-baud ASCII transmission?",
     "choices": [
       "0.1 Hz",
@@ -12502,6 +13070,7 @@
     ]
   },
   {
+    "id": "extra-1315f88c68",
     "question": "What is the necessary bandwidth of a 4800-Hz frequency shift, 9600-baud ASCII FM transmission?",
     "choices": [
       "15.36 kHz",
@@ -12524,6 +13093,7 @@
     ]
   },
   {
+    "id": "extra-a219f654e8",
     "question": "How does ARQ accomplish error correction?",
     "choices": [
       "Special binary codes provide automatic correction",
@@ -12546,6 +13116,7 @@
     ]
   },
   {
+    "id": "extra-6eea4d7732",
     "question": "Which is the name of a digital code where each preceding or following character changes by only one bit?",
     "choices": [
       "Binary Coded Decimal Code",
@@ -12568,6 +13139,7 @@
     ]
   },
   {
+    "id": "extra-b063b618b8",
     "question": "What is an advantage of Gray code in digital communications where symbols are transmitted as multiple bits",
     "choices": [
       "It increases security",
@@ -12590,6 +13162,7 @@
     ]
   },
   {
+    "id": "extra-af4597800d",
     "question": "What is the relationship between symbol rate and baud?",
     "choices": [
       "They are the same",
@@ -12612,6 +13185,7 @@
     ]
   },
   {
+    "id": "extra-1dd531a18a",
     "question": "Why are received spread spectrum signals resistant to interference?",
     "choices": [
       "Signals not using the spread spectrum algorithm are suppressed in the receiver",
@@ -12634,6 +13208,7 @@
     ]
   },
   {
+    "id": "extra-08fb1d669d",
     "question": "What spread spectrum communications technique uses a high speed binary bit stream to shift the phase of an RF carrier?",
     "choices": [
       "Frequency hopping",
@@ -12656,6 +13231,7 @@
     ]
   },
   {
+    "id": "extra-44ef1d995a",
     "question": "How does the spread spectrum technique of frequency hopping work?",
     "choices": [
       "If interference is detected by the receiver it will signal the transmitter to change frequencies",
@@ -12678,6 +13254,7 @@
     ]
   },
   {
+    "id": "extra-7a87ddeff8",
     "question": "What is the primary effect of extremely short rise or fall time on a CW signal?",
     "choices": [
       "More difficult to copy",
@@ -12700,6 +13277,7 @@
     ]
   },
   {
+    "id": "extra-d9e9233de4",
     "question": "What is the most common method of reducing key clicks?",
     "choices": [
       "Increase keying waveform rise and fall times",
@@ -12722,6 +13300,7 @@
     ]
   },
   {
+    "id": "extra-3ec324c28f",
     "question": "Which of the following indicates likely overmodulation of an AFSK signal such as PSK or MFSK?",
     "choices": [
       "High reflected power",
@@ -12744,6 +13323,7 @@
     ]
   },
   {
+    "id": "extra-1969fce0fd",
     "question": "What is a common cause of overmodulation of AFSK signals?",
     "choices": [
       "Excessive numbers of retries",
@@ -12766,6 +13346,7 @@
     ]
   },
   {
+    "id": "extra-b0764a9e38",
     "question": "What parameter might indicate that excessively high input levels are causing distortion in an AFSK signal?",
     "choices": [
       "Signal to noise ratio",
@@ -12788,6 +13369,7 @@
     ]
   },
   {
+    "id": "extra-907523c60b",
     "question": "What is considered a good minimum IMD level for an idling PSK signal?",
     "choices": [
       "+10 dB",
@@ -12810,6 +13392,7 @@
     ]
   },
   {
+    "id": "extra-d3d33cf417",
     "question": "What are some of the differences between the Baudot digital code and ASCII?",
     "choices": [
       "Baudot uses 4 data bits per character, ASCII uses 7 or 8; Baudot uses 1 character as a letters/figures shift code, ASCII has no letters/figures code",
@@ -12832,6 +13415,7 @@
     ]
   },
   {
+    "id": "extra-67bdff032b",
     "question": "What is one advantage of using ASCII code for data communications?",
     "choices": [
       "It includes built in error correction features",
@@ -12854,6 +13438,7 @@
     ]
   },
   {
+    "id": "extra-5801712227",
     "question": "What describes an isotropic antenna?",
     "choices": [
       "A grounded antenna used to measure earth conductivity",
@@ -12876,6 +13461,7 @@
     ]
   },
   {
+    "id": "extra-38b33c3a4c",
     "question": "What antenna has no gain in any direction?",
     "choices": [
       "Quarter-wave vertical",
@@ -12898,6 +13484,7 @@
     ]
   },
   {
+    "id": "extra-348f7cee96",
     "question": "Why would one need to know the feed point impedance of an antenna?",
     "choices": [
       "To match impedances in order to minimize standing wave ratio on the transmission line",
@@ -12920,6 +13507,7 @@
     ]
   },
   {
+    "id": "extra-666d7399d0",
     "question": "Which of the following factors may affect the feed point impedance of an antenna?",
     "choices": [
       "Transmission-line length",
@@ -12942,6 +13530,7 @@
     ]
   },
   {
+    "id": "extra-a8cda5cd15",
     "question": "What is included in the total resistance of an antenna system?",
     "choices": [
       "Radiation resistance plus space impedance",
@@ -12964,6 +13553,7 @@
     ]
   },
   {
+    "id": "extra-dd66e32289",
     "question": "How does the beamwidth of an antenna vary as the gain is increased?",
     "choices": [
       "It increases geometrically",
@@ -12986,6 +13576,7 @@
     ]
   },
   {
+    "id": "extra-cc1dd64af3",
     "question": "What is meant by antenna gain?",
     "choices": [
       "The ratio of the radiated signal strength of an antenna in the direction of maximum radiation to that of a reference antenna",
@@ -13008,6 +13599,7 @@
     ]
   },
   {
+    "id": "extra-5f10cc6741",
     "question": "What is meant by antenna bandwidth?",
     "choices": [
       "Antenna length divided by the number of elements",
@@ -13030,6 +13622,7 @@
     ]
   },
   {
+    "id": "extra-c68dddf0a8",
     "question": "How is antenna efficiency calculated?",
     "choices": [
       "(radiation resistance / transmission resistance) x 100 per cent",
@@ -13052,6 +13645,7 @@
     ]
   },
   {
+    "id": "extra-a004338d45",
     "question": "Which of the following choices is a way to improve the efficiency of a ground-mounted quarter-wave vertical antenna?",
     "choices": [
       "Install a good radial system",
@@ -13074,6 +13668,7 @@
     ]
   },
   {
+    "id": "extra-158ea14731",
     "question": "Which of the following factors determines ground losses for a ground-mounted vertical antenna operating in the 3 MHz to 30 MHz range?",
     "choices": [
       "The standing wave ratio",
@@ -13096,6 +13691,7 @@
     ]
   },
   {
+    "id": "extra-35d4aa5106",
     "question": "How much gain does an antenna have compared to a 1/2-wavelength dipole when it has 6 dB gain over an isotropic antenna?",
     "choices": [
       "3.85 dB",
@@ -13118,6 +13714,7 @@
     ]
   },
   {
+    "id": "extra-e6fbe10c0a",
     "question": "How much gain does an antenna have compared to a 1/2-wavelength dipole when it has 12 dB gain over an isotropic antenna?",
     "choices": [
       "6.17 dB",
@@ -13140,6 +13737,7 @@
     ]
   },
   {
+    "id": "extra-3c4b9fdb7f",
     "question": "What is meant by the radiation resistance of an antenna?",
     "choices": [
       "The combined losses of the antenna elements and feed line",
@@ -13162,6 +13760,7 @@
     ]
   },
   {
+    "id": "extra-8b0171d6ae",
     "question": "What is the effective radiated power relative to a dipole of a repeater station with 150 watts transmitter power output, 2 dB feed line loss, 2.2 dB duplexer loss, and 7 dBd antenna gain?",
     "choices": [
       "1977 watts",
@@ -13184,6 +13783,7 @@
     ]
   },
   {
+    "id": "extra-9f399ebc2e",
     "question": "What is the effective radiated power relative to a dipole of a repeater station with 200 watts transmitter power output, 4 dB feed line loss, 3.2 dB duplexer loss, 0.8 dB circulator loss, and 10 dBd antenna gain?",
     "choices": [
       "317 watts",
@@ -13206,6 +13806,7 @@
     ]
   },
   {
+    "id": "extra-cafe38dd28",
     "question": "What is the effective radiated power of a repeater station with 200 watts transmitter power output, 2 dB feed line loss, 2.8 dB duplexer loss, 1.2 dB circulator loss, and 7 dBi antenna gain?",
     "choices": [
       "159 watts",
@@ -13228,6 +13829,7 @@
     ]
   },
   {
+    "id": "extra-86ee468513",
     "question": "What term describes station output, taking into account all gains and losses?",
     "choices": [
       "Power factor",
@@ -13250,6 +13852,7 @@
     ]
   },
   {
+    "id": "extra-6df931cac8",
     "question": "In the antenna radiation pattern shown in Figure E9-1, what is the 3 dB beam-width?",
     "choices": [
       "75 degrees",
@@ -13272,6 +13875,7 @@
     ]
   },
   {
+    "id": "extra-e441cfd084",
     "question": "In the antenna radiation pattern shown in Figure E9-1, what is the front-to-back ratio?",
     "choices": [
       "36 dB",
@@ -13294,6 +13898,7 @@
     ]
   },
   {
+    "id": "extra-24d743631c",
     "question": "In the antenna radiation pattern shown in Figure E9-1, what is the front-to-side ratio?",
     "choices": [
       "12 dB",
@@ -13316,6 +13921,7 @@
     ]
   },
   {
+    "id": "extra-8c2065a407",
     "question": "What may occur when a directional antenna is operated at different frequencies within the band for which it was designed?",
     "choices": [
       "Feed point impedance may become negative",
@@ -13338,6 +13944,7 @@
     ]
   },
   {
+    "id": "extra-9fb6bcaa8e",
     "question": "What type of antenna pattern over real ground is shown in Figure E9-2?",
     "choices": [
       "Elevation",
@@ -13360,6 +13967,7 @@
     ]
   },
   {
+    "id": "extra-a239e4e48c",
     "question": "What is the elevation angle of peak response in the antenna radiation pattern shown in Figure E9-2?",
     "choices": [
       "45 degrees",
@@ -13382,6 +13990,7 @@
     ]
   },
   {
+    "id": "extra-91d5f3b641",
     "question": "How does the total amount of radiation emitted by a directional gain antenna compare with the total amount of radiation emitted from an isotropic antenna, assuming each is driven by the same amount of power?",
     "choices": [
       "The total amount of radiation from the directional antenna is increased by the gain of the antenna",
@@ -13404,6 +14013,7 @@
     ]
   },
   {
+    "id": "extra-b909de64ae",
     "question": "How can the approximate beam-width in a given plane of a directional antenna be determined?",
     "choices": [
       "Note the two points where the signal strength of the antenna is 3 dB less than maximum and compute the angular difference",
@@ -13426,6 +14036,7 @@
     ]
   },
   {
+    "id": "extra-24488f0453",
     "question": "What type of computer program technique is commonly used for modeling antennas?",
     "choices": [
       "Graphical analysis",
@@ -13448,6 +14059,7 @@
     ]
   },
   {
+    "id": "extra-fe79b222e7",
     "question": "What is the principle of a Method of Moments analysis?",
     "choices": [
       "A wire is modeled as a series of segments, each having a uniform value of current",
@@ -13470,6 +14082,7 @@
     ]
   },
   {
+    "id": "extra-81cd2dbf4f",
     "question": "What is a disadvantage of decreasing the number of wire segments in an antenna model below the guideline of 10 segments per half-wavelength?",
     "choices": [
       "Ground conductivity will not be accurately modeled",
@@ -13492,6 +14105,7 @@
     ]
   },
   {
+    "id": "extra-dbf821c4ee",
     "question": "What is the far field of an antenna?",
     "choices": [
       "The region of the ionosphere where radiated power is not refracted",
@@ -13514,6 +14128,7 @@
     ]
   },
   {
+    "id": "extra-b78a835f63",
     "question": "What does the abbreviation NEC stand for when applied to antenna modeling programs?",
     "choices": [
       "Next Element Comparison",
@@ -13536,6 +14151,7 @@
     ]
   },
   {
+    "id": "extra-44fbbe5619",
     "question": "What type of information can be obtained by submitting the details of a proposed new antenna to a modeling program?",
     "choices": [
       "SWR vs frequency charts",
@@ -13558,6 +14174,7 @@
     ]
   },
   {
+    "id": "extra-db61ff1f9f",
     "question": "What is the front-to-back ratio of the radiation pattern shown in Figure E9-2?",
     "choices": [
       "15 dB",
@@ -13580,6 +14197,7 @@
     ]
   },
   {
+    "id": "extra-cb4d9db2b9",
     "question": "How many elevation lobes appear in the forward direction of the antenna radiation pattern shown in Figure E9-2?",
     "choices": [
       "4",
@@ -13602,6 +14220,7 @@
     ]
   },
   {
+    "id": "extra-4b9d07d74e",
     "question": "What is the radiation pattern of two 1/4-wavelength vertical antennas spaced 1/2-wavelength apart and fed 180 degrees out of phase?",
     "choices": [
       "Cardioid",
@@ -13624,6 +14243,7 @@
     ]
   },
   {
+    "id": "extra-5ff5fea128",
     "question": "What is the radiation pattern of two 1/4 wavelength vertical antennas spaced 1/4 wavelength apart and fed 90 degrees out of phase?",
     "choices": [
       "Cardioid",
@@ -13646,6 +14266,7 @@
     ]
   },
   {
+    "id": "extra-2284d29e3f",
     "question": "What is the radiation pattern of two 1/4 wavelength vertical antennas spaced a 1/2 wavelength apart and fed in phase?",
     "choices": [
       "Omni-directional",
@@ -13668,6 +14289,7 @@
     ]
   },
   {
+    "id": "extra-213af77d6d",
     "question": "What happens to the radiation pattern of an unterminated long wire antenna as the wire length is increased?",
     "choices": [
       "The lobes become more perpendicular to the wire",
@@ -13690,6 +14312,7 @@
     ]
   },
   {
+    "id": "extra-5d09e79eab",
     "question": "What is an OCFD antenna?",
     "choices": [
       "A dipole feed approximately 1/3 the way from one end with a 4:1 balun to provide multiband operation",
@@ -13712,6 +14335,7 @@
     ]
   },
   {
+    "id": "extra-ec1c846f3c",
     "question": "What is the effect of a terminating resistor on a rhombic antenna?",
     "choices": [
       "It reflects the standing waves on the antenna elements back to the transmitter",
@@ -13734,6 +14358,7 @@
     ]
   },
   {
+    "id": "extra-41d993b571",
     "question": "What is the approximate feed point impedance at the center of a two-wire folded dipole antenna?",
     "choices": [
       "300 ohms",
@@ -13756,6 +14381,7 @@
     ]
   },
   {
+    "id": "extra-216565441f",
     "question": "What is a folded dipole antenna?",
     "choices": [
       "A dipole one-quarter wavelength long",
@@ -13778,6 +14404,7 @@
     ]
   },
   {
+    "id": "extra-4172994e94",
     "question": "What is a G5RV antenna?",
     "choices": [
       "A multi-band dipole antenna fed with coax and a balun through a selected length of open wire transmission line",
@@ -13800,6 +14427,7 @@
     ]
   },
   {
+    "id": "extra-627cec0138",
     "question": "Which of the following describes a Zepp antenna?",
     "choices": [
       "A dipole constructed from zip cord",
@@ -13822,6 +14450,7 @@
     ]
   },
   {
+    "id": "extra-2a5527657c",
     "question": "How is the far-field elevation pattern of a vertically polarized antenna affected by being mounted over seawater versus rocky ground?",
     "choices": [
       "The low-angle radiation decreases",
@@ -13844,6 +14473,7 @@
     ]
   },
   {
+    "id": "extra-c255afad4f",
     "question": "Which of the following describes an extended double Zepp antenna?",
     "choices": [
       "A wideband vertical antenna constructed from precisely tapered aluminum tubing",
@@ -13866,6 +14496,7 @@
     ]
   },
   {
+    "id": "extra-652bb51481",
     "question": "What is the main effect of placing a vertical antenna over an imperfect ground?",
     "choices": [
       "It causes increased SWR",
@@ -13888,6 +14519,7 @@
     ]
   },
   {
+    "id": "extra-07438a62f9",
     "question": "How does the performance of a horizontally polarized antenna mounted on the side of a hill compare with the same antenna mounted on flat ground?",
     "choices": [
       "The main lobe takeoff angle increases in the downhill direction",
@@ -13910,6 +14542,7 @@
     ]
   },
   {
+    "id": "extra-eae8d6ec09",
     "question": "How does the radiation pattern of a horizontally polarized 3-element beam antenna vary with its height above ground?",
     "choices": [
       "The main lobe takeoff angle increases with increasing height",
@@ -13932,6 +14565,7 @@
     ]
   },
   {
+    "id": "extra-b94afd0a28",
     "question": "How does the gain of an ideal parabolic dish antenna change when the operating frequency is doubled?",
     "choices": [
       "Gain does not change",
@@ -13954,6 +14588,7 @@
     ]
   },
   {
+    "id": "extra-cc9d38ec64",
     "question": "How can linearly polarized Yagi antennas be used to produce circular polarization?",
     "choices": [
       "Stack two Yagis fed 90 degrees out of phase to form an array with the respective elements in parallel planes",
@@ -13976,6 +14611,7 @@
     ]
   },
   {
+    "id": "extra-39e5c2579c",
     "question": "Where should a high Q loading coil be placed to minimize losses in a shortened vertical antenna?",
     "choices": [
       "Near the center of the vertical radiator",
@@ -13998,6 +14634,7 @@
     ]
   },
   {
+    "id": "extra-4892dcdef5",
     "question": "Why should an HF mobile antenna loading coil have a high ratio of reactance to resistance?",
     "choices": [
       "To swamp out harmonics",
@@ -14020,6 +14657,7 @@
     ]
   },
   {
+    "id": "extra-959aeec08e",
     "question": "What is a disadvantage of using a multiband trapped antenna?",
     "choices": [
       "It might radiate harmonics",
@@ -14042,6 +14680,7 @@
     ]
   },
   {
+    "id": "extra-d23282726c",
     "question": "What happens to the bandwidth of an antenna as it is shortened through the use of loading coils?",
     "choices": [
       "It is increased",
@@ -14064,6 +14703,7 @@
     ]
   },
   {
+    "id": "extra-8b2041c5b6",
     "question": "What is an advantage of using top loading in a shortened HF vertical antenna?",
     "choices": [
       "Lower Q",
@@ -14086,6 +14726,7 @@
     ]
   },
   {
+    "id": "extra-0c113ff517",
     "question": "What happens as the Q of an antenna increases?",
     "choices": [
       "SWR bandwidth increases",
@@ -14108,6 +14749,7 @@
     ]
   },
   {
+    "id": "extra-95ee2f3e62",
     "question": "What is the function of a loading coil used as part of an HF mobile antenna?",
     "choices": [
       "To increase the SWR bandwidth",
@@ -14130,6 +14772,7 @@
     ]
   },
   {
+    "id": "extra-fb0a78bb69",
     "question": "What happens to feed point impedance at the base of a fixed length HF mobile antenna as the frequency of operation is lowered?",
     "choices": [
       "The radiation resistance decreases and the capacitive reactance decreases",
@@ -14152,6 +14795,7 @@
     ]
   },
   {
+    "id": "extra-24322bf97b",
     "question": "Which of the following types of conductors would be best for minimizing losses in a station's RF ground system?",
     "choices": [
       "A resistive wire, such as spark plug wire",
@@ -14174,6 +14818,7 @@
     ]
   },
   {
+    "id": "extra-ca31b8b014",
     "question": "Which of the following would provide the best RF ground for your station?",
     "choices": [
       "A 50 ohm resistor connected to ground",
@@ -14196,6 +14841,7 @@
     ]
   },
   {
+    "id": "extra-a37cb8757f",
     "question": "What usually occurs if a Yagi antenna is designed solely for maximum forward gain?",
     "choices": [
       "The front-to-back ratio increases",
@@ -14218,6 +14864,7 @@
     ]
   },
   {
+    "id": "extra-bf48837acb",
     "question": "What system matches a higher impedance transmission line to a lower impedance antenna by connecting the line to the driven element in two places spaced a fraction of a wavelength each side of element center?",
     "choices": [
       "The gamma matching system",
@@ -14240,6 +14887,7 @@
     ]
   },
   {
+    "id": "extra-2a88d36f57",
     "question": "What is the name of an antenna matching system that matches an unbalanced feed line to an antenna by feeding the driven element both at the center of the element and at a fraction of a wavelength to one side of center?",
     "choices": [
       "The gamma match",
@@ -14262,6 +14910,7 @@
     ]
   },
   {
+    "id": "extra-8326fe3700",
     "question": "What is the name of the matching system that uses a section of transmission line connected in parallel with the feed line at or near the feed point?",
     "choices": [
       "The gamma match",
@@ -14284,6 +14933,7 @@
     ]
   },
   {
+    "id": "extra-ca365558d9",
     "question": "What is the purpose of the series capacitor in a gamma-type antenna matching network?",
     "choices": [
       "To provide DC isolation between the feed line and the antenna",
@@ -14306,6 +14956,7 @@
     ]
   },
   {
+    "id": "extra-f0c3e6cd5d",
     "question": "How must the driven element in a 3-element Yagi be tuned to use a hairpin matching system?",
     "choices": [
       "The driven element reactance must be capacitive",
@@ -14328,6 +14979,7 @@
     ]
   },
   {
+    "id": "extra-3f0f697320",
     "question": "What term best describes the interactions at the load end of a mismatched transmission line?",
     "choices": [
       "Characteristic impedance",
@@ -14350,6 +15002,7 @@
     ]
   },
   {
+    "id": "extra-ddac425d4a",
     "question": "Which of the following measurements is characteristic of a mismatched transmission line?",
     "choices": [
       "An SWR less than 1:1",
@@ -14372,6 +15025,7 @@
     ]
   },
   {
+    "id": "extra-dc15258f44",
     "question": "Which of these matching systems is an effective method of connecting a 50 ohm coaxial cable feed line to a grounded tower so it can be used as a vertical antenna?",
     "choices": [
       "Double-bazooka match",
@@ -14394,6 +15048,7 @@
     ]
   },
   {
+    "id": "extra-aa34ecc99c",
     "question": "Which of these choices is an effective way to match an antenna with a 100 ohm feed point impedance to a 50 ohm coaxial cable feed line?",
     "choices": [
       "Connect a 1/4-wavelength open stub of 300 ohm twin-lead in parallel with the coaxial feed line where it connects to the antenna",
@@ -14416,6 +15071,7 @@
     ]
   },
   {
+    "id": "extra-dd3f1a86d4",
     "question": "What is an effective way of matching a feed line to a VHF or UHF antenna when the impedances of both the antenna and feed line are unknown?",
     "choices": [
       "Use a 50 ohm 1:1 balun between the antenna and feed line",
@@ -14438,6 +15094,7 @@
     ]
   },
   {
+    "id": "extra-02f67dbeff",
     "question": "What is the primary purpose of a phasing line when used with an antenna having multiple driven elements?",
     "choices": [
       "It ensures that each driven element operates in concert with the others to create the desired antenna pattern",
@@ -14460,6 +15117,7 @@
     ]
   },
   {
+    "id": "extra-38d64568c7",
     "question": "What is a use for a Wilkinson divider?",
     "choices": [
       "It divides the operating frequency of a transmitter signal so it can be used on a lower frequency band",
@@ -14482,6 +15140,7 @@
     ]
   },
   {
+    "id": "extra-98a5d720e3",
     "question": "What is the velocity factor of a transmission line?",
     "choices": [
       "The ratio of the characteristic impedance of the line to the terminating impedance",
@@ -14504,6 +15163,7 @@
     ]
   },
   {
+    "id": "extra-f053a515a9",
     "question": "Which of the following determines the velocity factor of a transmission line?",
     "choices": [
       "The termination impedance",
@@ -14526,6 +15186,7 @@
     ]
   },
   {
+    "id": "extra-4aa7949dd8",
     "question": "Why is the physical length of a coaxial cable transmission line shorter than its electrical length?",
     "choices": [
       "Skin effect is less pronounced in the coaxial cable",
@@ -14548,6 +15209,7 @@
     ]
   },
   {
+    "id": "extra-8138be17b6",
     "question": "What is the typical velocity factor for a coaxial cable with solid polyethylene dielectric?",
     "choices": [
       "2.70",
@@ -14570,6 +15232,7 @@
     ]
   },
   {
+    "id": "extra-1228ed6a2f",
     "question": "What is the approximate physical length of a solid polyethylene dielectric coaxial transmission line that is electrically one-quarter wavelength long at 14.1 MHz?",
     "choices": [
       "20 meters",
@@ -14592,6 +15255,7 @@
     ]
   },
   {
+    "id": "extra-3cb289d9ee",
     "question": "What is the approximate physical length of an air-insulated, parallel conductor transmission line that is electrically one-half wavelength long at 14.10 MHz?",
     "choices": [
       "15 meters",
@@ -14614,6 +15278,7 @@
     ]
   },
   {
+    "id": "extra-66d22a481b",
     "question": "How does ladder line compare to small-diameter coaxial cable such as RG-58 at 50 MHz?",
     "choices": [
       "Lower loss",
@@ -14636,6 +15301,7 @@
     ]
   },
   {
+    "id": "extra-e51ac7b934",
     "question": "What is the term for the ratio of the actual speed at which a signal travels through a transmission line to the speed of light in a vacuum?",
     "choices": [
       "Velocity factor",
@@ -14658,6 +15324,7 @@
     ]
   },
   {
+    "id": "extra-33eba0300a",
     "question": "What is the approximate physical length of a solid polyethylene dielectric coaxial transmission line that is electrically one-quarter wavelength long at 7.2 MHz?",
     "choices": [
       "10 meters",
@@ -14680,6 +15347,7 @@
     ]
   },
   {
+    "id": "extra-f34dad0221",
     "question": "What impedance does a 1/8 wavelength transmission line present to a generator when the line is shorted at the far end?",
     "choices": [
       "A capacitive reactance",
@@ -14702,6 +15370,7 @@
     ]
   },
   {
+    "id": "extra-a88ddf965e",
     "question": "What impedance does a 1/8 wavelength transmission line present to a generator when the line is open at the far end?",
     "choices": [
       "The same as the characteristic impedance of the line",
@@ -14724,6 +15393,7 @@
     ]
   },
   {
+    "id": "extra-bf120a53c7",
     "question": "What impedance does a 1/4 wavelength transmission line present to a generator when the line is open at the far end?",
     "choices": [
       "The same as the characteristic impedance of the line",
@@ -14746,6 +15416,7 @@
     ]
   },
   {
+    "id": "extra-a9df271d10",
     "question": "What impedance does a 1/4 wavelength transmission line present to a generator when the line is shorted at the far end?",
     "choices": [
       "Very high impedance",
@@ -14768,6 +15439,7 @@
     ]
   },
   {
+    "id": "extra-9c6c5db927",
     "question": "What impedance does a 1/2 wavelength transmission line present to a generator when the line is shorted at the far end?",
     "choices": [
       "Very high impedance",
@@ -14790,6 +15462,7 @@
     ]
   },
   {
+    "id": "extra-d7d32324ac",
     "question": "What impedance does a 1/2 wavelength transmission line present to a generator when the line is open at the far end?",
     "choices": [
       "Very high impedance",
@@ -14812,6 +15485,7 @@
     ]
   },
   {
+    "id": "extra-6a30ea8a4a",
     "question": "Which of the following is a significant difference between foam dielectric coaxial cable and solid dielectric cable, assuming all other parameters are the same?",
     "choices": [
       "Foam dielectric has lower safe operating voltage limits",
@@ -14834,6 +15508,7 @@
     ]
   },
   {
+    "id": "extra-c99a5fc65a",
     "question": "Which of the following can be calculated using a Smith chart?",
     "choices": [
       "Impedance along transmission lines",
@@ -14856,6 +15531,7 @@
     ]
   },
   {
+    "id": "extra-f5eade9194",
     "question": "What type of coordinate system is used in a Smith chart?",
     "choices": [
       "Voltage circles and current arcs",
@@ -14878,6 +15554,7 @@
     ]
   },
   {
+    "id": "extra-8e98fa367c",
     "question": "Which of the following is often determined using a Smith chart?",
     "choices": [
       "Beam headings and radiation patterns",
@@ -14900,6 +15577,7 @@
     ]
   },
   {
+    "id": "extra-797118f285",
     "question": "What are the two families of circles and arcs that make up a Smith chart?",
     "choices": [
       "Resistance and voltage",
@@ -14922,6 +15600,7 @@
     ]
   },
   {
+    "id": "extra-940043e854",
     "question": "What type of chart is shown in Figure E9-3?",
     "choices": [
       "Smith chart",
@@ -14944,6 +15623,7 @@
     ]
   },
   {
+    "id": "extra-e7edf6b7d6",
     "question": "On the Smith chart shown in Figure E9-3, what is the name for the large outer circle on which the reactance arcs terminate?",
     "choices": [
       "Prime axis",
@@ -14966,6 +15646,7 @@
     ]
   },
   {
+    "id": "extra-7601381d3c",
     "question": "On the Smith chart shown in Figure E9-3, what is the only straight line shown?",
     "choices": [
       "The reactance axis",
@@ -14988,6 +15669,7 @@
     ]
   },
   {
+    "id": "extra-e2558acf9c",
     "question": "What is the process of normalization with regard to a Smith chart?",
     "choices": [
       "Reassigning resistance values with regard to the reactance axis",
@@ -15010,6 +15692,7 @@
     ]
   },
   {
+    "id": "extra-3416e34593",
     "question": "What third family of circles is often added to a Smith chart during the process of solving problems?",
     "choices": [
       "Standing wave ratio circles",
@@ -15032,6 +15715,7 @@
     ]
   },
   {
+    "id": "extra-7b95a08282",
     "question": "What do the arcs on a Smith chart represent?",
     "choices": [
       "Frequency",
@@ -15054,6 +15738,7 @@
     ]
   },
   {
+    "id": "extra-653f208352",
     "question": "How are the wavelength scales on a Smith chart calibrated?",
     "choices": [
       "In fractions of transmission line electrical frequency",
@@ -15076,6 +15761,7 @@
     ]
   },
   {
+    "id": "extra-a1884cf6bd",
     "question": "When constructing a Beverage antenna, which of the following factors should be included in the design to achieve good performance at the desired frequency?",
     "choices": [
       "Its overall length must not exceed 1/4 wavelength",
@@ -15098,6 +15784,7 @@
     ]
   },
   {
+    "id": "extra-a821639410",
     "question": "Which is generally true for low band (160 meter and 80 meter) receiving antennas?",
     "choices": [
       "Atmospheric noise is so high that gain over a dipole is not important",
@@ -15120,6 +15807,7 @@
     ]
   },
   {
+    "id": "extra-5f0ecb0495",
     "question": "What is an advantage of using a shielded loop antenna for direction finding?",
     "choices": [
       "It automatically cancels ignition noise in mobile installations",
@@ -15142,6 +15830,7 @@
     ]
   },
   {
+    "id": "extra-179bee6673",
     "question": "What is the main drawback of a wire-loop antenna for direction finding?",
     "choices": [
       "It has a bidirectional pattern",
@@ -15164,6 +15853,7 @@
     ]
   },
   {
+    "id": "extra-d284c9c8f5",
     "question": "What is the triangulation method of direction finding?",
     "choices": [
       "The geometric angles of sky waves from the source are used to determine its position",
@@ -15186,6 +15876,7 @@
     ]
   },
   {
+    "id": "extra-fa4d64971e",
     "question": "Why is it advisable to use an RF attenuator on a receiver being used for direction finding?",
     "choices": [
       "It narrows the bandwidth of the received signal to improve signal to noise ratio",
@@ -15208,6 +15899,7 @@
     ]
   },
   {
+    "id": "extra-aae56c8af2",
     "question": "What is the function of a sense antenna?",
     "choices": [
       "It modifies the pattern of a DF antenna array to provide a null in one direction",
@@ -15230,6 +15922,7 @@
     ]
   },
   {
+    "id": "extra-1630fd7859",
     "question": "Which of the following describes the construction of a receiving loop antenna?",
     "choices": [
       "A large circularly polarized antenna",
@@ -15252,6 +15945,7 @@
     ]
   },
   {
+    "id": "extra-3a44203c7c",
     "question": "How can the output voltage of a multiple turn receiving loop antenna be increased?",
     "choices": [
       "By reducing the permeability of the loop shield",
@@ -15274,6 +15968,7 @@
     ]
   },
   {
+    "id": "extra-54d08ec9cb",
     "question": "What characteristic of a cardioid pattern antenna is useful for direction finding?",
     "choices": [
       "A very sharp peak",
@@ -15296,6 +15991,7 @@
     ]
   },
   {
+    "id": "extra-420992c168",
     "question": "What is the primary function of an external earth connection or ground rod?",
     "choices": [
       "Reduce received noise",
@@ -15316,6 +16012,7 @@
     "tags": []
   },
   {
+    "id": "extra-8ca1bc79c5",
     "question": "When evaluating RF exposure levels from your station at a neighbor\u2019s home, what must you do?",
     "choices": [
       "Make sure signals from your station are less than the controlled MPE limits",
@@ -15338,6 +16035,7 @@
     ]
   },
   {
+    "id": "extra-86aa4715d1",
     "question": "Which of the following would be a practical way to estimate whether the RF fields produced by an amateur radio station are within permissible MPE limits?",
     "choices": [
       "Use a calibrated antenna analyzer",
@@ -15360,6 +16058,7 @@
     ]
   },
   {
+    "id": "extra-2e659ed342",
     "question": "When evaluating a site with multiple transmitters operating at the same time, the operators and licensees of which transmitters are responsible for mitigating over-exposure situations?",
     "choices": [
       "Only the most powerful transmitter",
@@ -15382,6 +16081,7 @@
     ]
   },
   {
+    "id": "extra-9ff21d5f9e",
     "question": "What is one of the potential hazards of using microwaves in the amateur radio bands?",
     "choices": [
       "Microwaves are ionizing radiation",
@@ -15404,6 +16104,7 @@
     ]
   },
   {
+    "id": "extra-78160d30a1",
     "question": "Why are there separate electric (E) and magnetic (H) field MPE limits?",
     "choices": [
       "The body reacts to electromagnetic radiation from both the E and H fields",
@@ -15426,6 +16127,7 @@
     ]
   },
   {
+    "id": "extra-e4f8ffbee7",
     "question": "How may dangerous levels of carbon monoxide from an emergency generator be detected?",
     "choices": [
       "By the odor",
@@ -15448,6 +16150,7 @@
     ]
   },
   {
+    "id": "extra-dcc64be621",
     "question": "What does SAR measure?",
     "choices": [
       "Synthetic Aperture Ratio of the human body",
@@ -15468,6 +16171,7 @@
     "tags": []
   },
   {
+    "id": "extra-6568755616",
     "question": "Which insulating material commonly used as a thermal conductor for some types of electronic devices is extremely toxic if broken or crushed and the particles are accidentally inhaled?",
     "choices": [
       "Mica",
@@ -15490,6 +16194,7 @@
     ]
   },
   {
+    "id": "extra-ba1df4a335",
     "question": "What toxic material may be present in some electronic components such as high voltage capacitors and transformers?",
     "choices": [
       "Polychlorinated Biphenyls",
@@ -15512,6 +16217,7 @@
     ]
   },
   {
+    "id": "extra-fdf03111fd",
     "question": "Which of the following injuries can result from using high-power UHF or microwave transmitters?",
     "choices": [
       "Hearing loss caused by high voltage corona discharge",

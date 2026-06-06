@@ -1,0 +1,40 @@
+{
+  "_note": "Authoritative source/version metadata per dataset, keyed by '<category>/<subcategory>' (DATA_SOURCES keys). generate-manifest.mjs reads this into the manifest's pool field; import-pool.mjs updates it on import. NCVEC amateur pools run on fixed 4-year cycles (effective July 1).",
+  "pools": {
+    "ham-radio/technician": {
+      "version": "2022-2026",
+      "effectiveDate": "2022-07-01",
+      "expiryDate": "2026-06-30",
+      "source": "NCVEC",
+      "sourceUrl": "https://www.ncvec.org/"
+    },
+    "ham-radio/general": {
+      "version": "2023-2027",
+      "effectiveDate": "2023-07-01",
+      "expiryDate": "2027-06-30",
+      "source": "NCVEC",
+      "sourceUrl": "https://www.ncvec.org/"
+    },
+    "ham-radio/extra": {
+      "version": "2024-2028",
+      "effectiveDate": "2024-07-01",
+      "expiryDate": "2028-06-30",
+      "source": "NCVEC",
+      "sourceUrl": "https://www.ncvec.org/"
+    },
+    "cybersecurity/security+ sy0-701": {
+      "version": "SY0-701",
+      "effectiveDate": "2023-11-07",
+      "expiryDate": null,
+      "source": "CompTIA exam objectives (authored; CompTIA does not publish a public item pool)",
+      "sourceUrl": "https://www.comptia.org/certifications/security"
+    },
+    "falconry/apprentice": {
+      "version": null,
+      "effectiveDate": null,
+      "expiryDate": null,
+      "source": "U.S. state apprentice falconry exams (no national pool)",
+      "sourceUrl": null
+    }
+  }
+}

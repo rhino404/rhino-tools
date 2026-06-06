@@ -19,12 +19,13 @@ const BASE_PATH = self.registration.scope.replace(self.location.origin, '').repl
 const CORE_ASSETS = [
   `${BASE_PATH}/`,
   `${BASE_PATH}/index.html`,
-  `${BASE_PATH}/styles/base.css`,
-  `${BASE_PATH}/styles/dark.css`,
-  `${BASE_PATH}/styles/light.css`,
+  `${BASE_PATH}/css/base.css`,
+  `${BASE_PATH}/css/theme.css`,
+  `${BASE_PATH}/css/modal.css`,
   `${BASE_PATH}/index.js`,
   `${BASE_PATH}/services/pwaInstaller.js`,
   `${BASE_PATH}/manifest.json`,
+  `${BASE_PATH}/datasets/index.json`,
 ];
 
 // ===============================

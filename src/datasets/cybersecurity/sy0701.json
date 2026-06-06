@@ -1,5 +1,6 @@
 [
   {
+    "id": "security-sy0-701-fb89a98307",
     "q_number": 1,
     "question": "A user reports receiving unexpected pop-up messages asking for login credentials. What type of attack is this?",
     "choices": ["Phishing", "Malware", "Man-in-the-Middle", "Social Engineering"],
@@ -16,6 +17,7 @@
     "tags": ["social engineering"]
   },
   {
+    "id": "security-sy0-701-7e7cc7e33b",
     "q_number": 2,
     "question": "Which type of malware is designed to remain hidden and gain unauthorized access to a system?",
     "choices": ["Rootkit", "Adware", "Ransomware", "Spyware"],
@@ -32,6 +34,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-f7379ff826",
     "q_number": 3,
     "question": "Which authentication factor uses something the user possesses?",
     "choices": ["Password", "Token", "Biometric", "PIN"],
@@ -48,6 +51,7 @@
     "tags": ["authentication"]
   },
   {
+    "id": "security-sy0-701-effcbf3bf8",
     "q_number": 4,
     "question": "Which access control model restricts access based on predefined policies and security labels?",
     "choices": ["DAC", "RBAC", "MAC", "ABAC"],
@@ -64,6 +68,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-40b9ac15d2",
     "q_number": 5,
     "question": "Which protocol provides encrypted communication for web traffic?",
     "choices": ["HTTP", "HTTPS", "FTP", "Telnet"],
@@ -80,6 +85,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-48c70781a1",
     "q_number": 6,
     "question": "An administrator wants to prevent users from visiting malicious websites. Which control should be implemented?",
     "choices": ["Firewall", "Web Content Filter", "VPN", "Antivirus"],
@@ -96,6 +102,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-da4b636d62",
     "q_number": 7,
     "question": "Which type of attack involves overwhelming a system with traffic to make it unavailable?",
     "choices": ["DDoS", "Phishing", "SQL Injection", "Man-in-the-Middle"],
@@ -112,6 +119,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-7f7dbb9beb",
     "q_number": 8,
     "question": "Which cryptographic algorithm is symmetric?",
     "choices": ["RSA", "AES", "ECC", "DSA"],
@@ -128,6 +136,7 @@
     "tags": ["cryptography"]
   },
   {
+    "id": "security-sy0-701-97e1e96dea",
     "q_number": 9,
     "question": "Which of the following is considered a detective control?",
     "choices": ["Antivirus software", "CCTV monitoring", "Security Awareness Training", "Firewall"],
@@ -144,6 +153,7 @@
     "tags": ["physical security"]
   },
   {
+    "id": "security-sy0-701-08364dabec",
     "q_number": 10,
     "question": "Which security concept ensures that users can only access resources they are permitted to use?",
     "choices": ["Confidentiality", "Integrity", "Availability", "Access Control"],
@@ -160,6 +170,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-463a2319b1",
     "q_number": 11,
     "question": "Which type of malware encrypts a user's files and demands payment for the decryption key?",
     "choices": ["Ransomware", "Spyware", "Adware", "Rootkit"],
@@ -176,6 +187,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-c015bf7b12",
     "q_number": 12,
     "question": "Which type of social engineering involves an attacker posing as technical support to extract credentials?",
     "choices": ["Phishing", "Vishing", "Pretexting", "Tailgating"],
@@ -192,6 +204,7 @@
     "tags": ["social engineering"]
   },
   {
+    "id": "security-sy0-701-c272b8ed8a",
     "q_number": 13,
     "question": "Which protocol secures email transmission by encrypting message content between mail servers?",
     "choices": ["SMTP", "SMTPS", "IMAP", "POP3"],
@@ -208,6 +221,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-7717114b5b",
     "q_number": 14,
     "question": "Which type of attack manipulates a database query to execute unauthorized commands?",
     "choices": ["SQL Injection", "Cross-Site Scripting", "DDoS", "Man-in-the-Middle"],
@@ -224,6 +238,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-496c329f82",
     "q_number": 15,
     "question": "Which encryption algorithm is primarily used for securing data in transit over the internet?",
     "choices": ["AES", "RSA", "TLS", "SHA-256"],
@@ -240,6 +255,7 @@
     "tags": ["cryptography"]
   },
   {
+    "id": "security-sy0-701-54c9a6ec50",
     "q_number": 16,
     "question": "A company wants to restrict user access to resources based on department membership. Which access control model should be used?",
     "choices": ["MAC", "DAC", "RBAC", "ABAC"],
@@ -256,6 +272,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-02949c6f93",
     "q_number": 17,
     "question": "Which control provides ongoing monitoring to detect security events as they occur?",
     "choices": ["Preventive control", "Detective control", "Corrective control", "Compensating control"],
@@ -272,6 +289,7 @@
     "tags": ["physical security"]
   },
   {
+    "id": "security-sy0-701-8187ab2447",
     "q_number": 18,
     "question": "Which type of attack attempts to intercept and alter communication between two parties?",
     "choices": ["Phishing", "Man-in-the-Middle", "DDoS", "SQL Injection"],
@@ -288,6 +306,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-237cb26eea",
     "q_number": 19,
     "question": "Which method ensures non-repudiation in digital communications?",
     "choices": ["Symmetric encryption", "Digital signature", "Hashing", "VPN"],
@@ -304,6 +323,7 @@
     "tags": ["cryptography"]
   },
   {
+    "id": "security-sy0-701-b9644ee309",
     "q_number": 20,
     "question": "Which type of physical security control prevents unauthorized entry by requiring a badge or key card?",
     "choices": ["Mantrap", "Biometric scanner", "CCTV", "Fence"],
@@ -320,6 +340,7 @@
     "tags": ["physical security"]
   },
   {
+    "id": "security-sy0-701-176d1f4a1c",
     "q_number": 21,
     "question": "Which type of malware is designed to replicate itself and spread across systems without user interaction?",
     "choices": ["Virus", "Worm", "Trojan", "Rootkit"],
@@ -336,6 +357,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-aee84b9636",
     "q_number": 22,
     "question": "Which authentication factor uses something inherent to the user, such as fingerprints?",
     "choices": ["Knowledge", "Possession", "Biometric", "Token"],
@@ -352,6 +374,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-8c3c015500",
     "q_number": 23,
     "question": "Which type of access control grants permissions based on policies defined by administrators rather than users?",
     "choices": ["DAC", "MAC", "RBAC", "ABAC"],
@@ -368,6 +391,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-00a216f2f6",
     "q_number": 24,
     "question": "Which protocol provides secure remote access to a command-line interface over an unsecured network?",
     "choices": ["Telnet", "SSH", "FTP", "HTTP"],
@@ -384,6 +408,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-0981077b91",
     "q_number": 25,
     "question": "Which security control type focuses on reducing the likelihood or impact of a potential threat?",
     "choices": ["Preventive", "Detective", "Corrective", "Compensating"],
@@ -400,6 +425,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-2a5539d203",
     "q_number": 26,
     "question": "Which type of encryption uses the same key for both encryption and decryption?",
     "choices": ["RSA", "AES", "ECC", "DSA"],
@@ -416,6 +442,7 @@
     "tags": ["cryptography"]
   },
   {
+    "id": "security-sy0-701-9203510a3a",
     "q_number": 27,
     "question": "Which security principle ensures data cannot be altered or tampered with?",
     "choices": ["Confidentiality", "Integrity", "Availability", "Non-repudiation"],
@@ -432,6 +459,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-fd9837934a",
     "q_number": 28,
     "question": "Which access control model uses attributes such as time of day or location to enforce permissions?",
     "choices": ["MAC", "RBAC", "ABAC", "DAC"],
@@ -448,6 +476,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-33b1dabcae",
     "q_number": 29,
     "question": "Which attack uses unsolicited messages to trick users into clicking malicious links or opening attachments?",
     "choices": ["Phishing", "Vishing", "Smishing", "Spear Phishing"],
@@ -464,6 +493,7 @@
     "tags": ["social engineering"]
   },
   {
+    "id": "security-sy0-701-874f22b175",
     "q_number": 30,
     "question": "Which control type restores a system to normal operation after an incident?",
     "choices": ["Preventive", "Detective", "Corrective", "Compensating"],
@@ -480,6 +510,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-25650f2db2",
     "q_number": 31,
     "question": "Which type of malware collects user activity data without consent?",
     "choices": ["Spyware", "Adware", "Rootkit", "Trojan"],
@@ -496,6 +527,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-84209f8eb7",
     "q_number": 32,
     "question": "Which cryptographic technique provides both encryption and authentication?",
     "choices": ["AES", "RSA", "HMAC", "SHA-256"],
@@ -512,6 +544,7 @@
     "tags": ["cryptography"]
   },
   {
+    "id": "security-sy0-701-ba0c4179ee",
     "q_number": 33,
     "question": "Which access control model allows users to grant access to their own resources?",
     "choices": ["DAC", "RBAC", "MAC", "ABAC"],
@@ -528,6 +561,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-52175efeac",
     "q_number": 34,
     "question": "Which type of physical security control prevents tailgating into a secure area?",
     "choices": ["Mantrap", "CCTV", "Security Guard", "Badge Reader"],
@@ -544,6 +578,7 @@
     "tags": ["physical security"]
   },
   {
+    "id": "security-sy0-701-21c1410bed",
     "q_number": 35,
     "question": "Which type of attack injects malicious scripts into a web page viewed by other users?",
     "choices": ["SQL Injection", "Cross-Site Scripting", "DDoS", "Phishing"],
@@ -560,6 +595,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-c74b2d2670",
     "q_number": 36,
     "question": "Which control type is implemented to meet requirements when the primary control cannot be used?",
     "choices": ["Preventive", "Detective", "Corrective", "Compensating"],
@@ -576,6 +612,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-2d2958984e",
     "q_number": 37,
     "question": "Which cryptographic algorithm is used for digital signatures?",
     "choices": ["AES", "RSA", "SHA-256", "HMAC"],
@@ -592,6 +629,7 @@
     "tags": ["cryptography"]
   },
   {
+    "id": "security-sy0-701-18df961c87",
     "q_number": 38,
     "question": "Which type of attack attempts to obtain information by physically accessing unattended devices?",
     "choices": ["Tailgating", "Shoulder Surfing", "Dumpster Diving", "Pretexting"],
@@ -608,6 +646,7 @@
     "tags": ["physical security"]
   },
   {
+    "id": "security-sy0-701-725594396d",
     "q_number": 39,
     "question": "Which authentication method requires two different factors to verify identity?",
     "choices": ["Single-factor", "Two-factor", "Multi-factor", "Password-only"],
@@ -624,6 +663,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-3ae05fbb7d",
     "q_number": 40,
     "question": "Which network device filters incoming and outgoing traffic based on rules?",
     "choices": ["Router", "Switch", "Firewall", "Access Point"],
@@ -640,6 +680,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-68e07b3ea0",
     "q_number": 41,
     "question": "Which type of malware hides its presence and allows continued unauthorized access to a system?",
     "choices": ["Rootkit", "Trojan", "Worm", "Spyware"],
@@ -656,6 +697,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-961bf49857",
     "q_number": 42,
     "question": "Which security principle ensures that only authorized users have access to information?",
     "choices": ["Confidentiality", "Integrity", "Availability", "Non-repudiation"],
@@ -672,6 +714,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-ea98d4e08d",
     "q_number": 43,
     "question": "Which type of attack floods a network or system with traffic to deny service to legitimate users?",
     "choices": ["Phishing", "DDoS", "SQL Injection", "Man-in-the-Middle"],
@@ -688,6 +731,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-a117d43c79",
     "q_number": 44,
     "question": "Which type of authentication factor uses something the user has, like a smart card or token?",
     "choices": ["Knowledge", "Possession", "Biometric", "Location"],
@@ -704,6 +748,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-09f1c14652",
     "q_number": 45,
     "question": "Which type of attack involves manipulating a user to reveal confidential information via phone calls?",
     "choices": ["Phishing", "Vishing", "Smishing", "Pretexting"],
@@ -720,6 +765,7 @@
     "tags": ["social engineering"]
   },
   {
+    "id": "security-sy0-701-2ea2cce18a",
     "q_number": 46,
     "question": "Which type of firewall inspects packets at the application layer to block malicious content?",
     "choices": ["Packet Filtering", "Stateful Inspection", "Next-Generation Firewall", "Proxy Firewall"],
@@ -736,6 +782,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-1ef9078282",
     "q_number": 47,
     "question": "Which access control method assigns permissions directly to users rather than roles?",
     "choices": ["DAC", "MAC", "RBAC", "ABAC"],
@@ -752,6 +799,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-d9c615cfff",
     "q_number": 48,
     "question": "Which control type monitors systems to detect potential security incidents?",
     "choices": ["Preventive", "Detective", "Corrective", "Compensating"],
@@ -768,6 +816,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-46d84af5c3",
     "q_number": 49,
     "question": "Which cryptographic algorithm is used to ensure data integrity?",
     "choices": ["AES", "SHA-256", "RSA", "ECC"],
@@ -784,6 +833,7 @@
     "tags": ["cryptography"]
   },
   {
+    "id": "security-sy0-701-7234614b1c",
     "q_number": 50,
     "question": "Which security principle ensures that authorized users can access systems and data when needed?",
     "choices": ["Confidentiality", "Integrity", "Availability", "Non-repudiation"],
@@ -800,6 +850,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-134367150a",
     "q_number": 51,
     "question": "Which type of malware encrypts a user's files and demands payment for decryption?",
     "choices": ["Ransomware", "Spyware", "Rootkit", "Adware"],
@@ -816,6 +867,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-a79eb482b8",
     "q_number": 52,
     "question": "Which authentication factor uses something the user knows, like a password or PIN?",
     "choices": ["Possession", "Knowledge", "Biometric", "Location"],
@@ -832,6 +884,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-cce5f27f24",
     "q_number": 53,
     "question": "Which attack occurs when an attacker intercepts communication between two parties?",
     "choices": ["Phishing", "Man-in-the-Middle", "SQL Injection", "DDoS"],
@@ -848,6 +901,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-96361819cf",
     "q_number": 54,
     "question": "Which type of firewall establishes a connection table to track active sessions?",
     "choices": ["Packet Filtering", "Stateful Inspection", "Next-Generation Firewall", "Proxy Firewall"],
@@ -864,6 +918,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-dbc904244b",
     "q_number": 55,
     "question": "Which cryptographic method uses a public and private key pair for encryption and decryption?",
     "choices": ["AES", "RSA", "SHA-256", "HMAC"],
@@ -880,6 +935,7 @@
     "tags": ["cryptography"]
   },
   {
+    "id": "security-sy0-701-bc7f35712d",
     "q_number": 56,
     "question": "Which type of attack targets web applications by inserting malicious SQL statements?",
     "choices": ["Cross-Site Scripting", "SQL Injection", "DDoS", "Phishing"],
@@ -896,6 +952,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-aef029d294",
     "q_number": 57,
     "question": "Which security control type reduces the impact of a successful attack?",
     "choices": ["Preventive", "Detective", "Corrective", "Deterrent"],
@@ -912,6 +969,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-b0edfe057d",
     "q_number": 58,
     "question": "Which access control model uses roles assigned to users to determine permissions?",
     "choices": ["DAC", "MAC", "RBAC", "ABAC"],
@@ -928,6 +986,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-0dff04bfdd",
     "q_number": 59,
     "question": "Which type of malware displays unwanted ads while running in the background?",
     "choices": ["Adware", "Spyware", "Rootkit", "Trojan"],
@@ -944,6 +1003,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-1c4678ae21",
     "q_number": 60,
     "question": "Which attack method uses fraudulent websites to collect user credentials by mimicking legitimate sites?",
     "choices": ["Pharming", "Phishing", "Vishing", "Smishing"],
@@ -960,6 +1020,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-677d4c150e",
     "q_number": 61,
     "question": "Which type of social engineering attack involves sending fraudulent text messages to obtain sensitive information?",
     "choices": ["Phishing", "Vishing", "Smishing", "Tailgating"],
@@ -976,6 +1037,7 @@
     "tags": ["social engineering"]
   },
   {
+    "id": "security-sy0-701-a3fdbf2eed",
     "q_number": 62,
     "question": "Which type of attack modifies packets in transit to inject malicious content?",
     "choices": ["Man-in-the-Middle", "ARP Poisoning", "DDoS", "Cross-Site Scripting"],
@@ -992,6 +1054,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-f6a3cfa499",
     "q_number": 63,
     "question": "Which security control type is implemented before an attack occurs to prevent incidents?",
     "choices": ["Preventive", "Detective", "Corrective", "Compensating"],
@@ -1008,6 +1071,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-e3d13fbf18",
     "q_number": 64,
     "question": "Which type of backup captures only changes since the last full backup?",
     "choices": ["Full", "Incremental", "Differential", "Snapshot"],
@@ -1024,6 +1088,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-0d7ec658c3",
     "q_number": 65,
     "question": "Which type of access control uses labels and classifications to grant or restrict access?",
     "choices": ["DAC", "MAC", "RBAC", "ABAC"],
@@ -1040,6 +1105,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-c0e0ea8ffb",
     "q_number": 66,
     "question": "Which method protects wireless networks by encrypting traffic and requiring authentication?",
     "choices": ["WEP", "WPA2/WPA3", "SSID Broadcasting", "MAC Filtering"],
@@ -1056,6 +1122,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-54fdf586bf",
     "q_number": 67,
     "question": "Which type of malware secretly records user actions and sends data to an attacker?",
     "choices": ["Spyware", "Adware", "Ransomware", "Rootkit"],
@@ -1072,6 +1139,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-c5011f77c3",
     "q_number": 68,
     "question": "Which type of attack involves gaining unauthorized access by exploiting software vulnerabilities?",
     "choices": ["Phishing", "Exploitation", "DDoS", "Man-in-the-Middle"],
@@ -1088,6 +1156,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-687300ac9e",
     "q_number": 69,
     "question": "Which security principle ensures that changes to data are legitimate and unaltered?",
     "choices": ["Confidentiality", "Integrity", "Availability", "Non-repudiation"],
@@ -1104,6 +1173,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-7a09180dd5",
     "q_number": 70,
     "question": "Which type of attack redirects a website’s traffic to a fake site to steal user credentials?",
     "choices": ["Phishing", "Pharming", "Vishing", "Smishing"],
@@ -1120,6 +1190,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-19845aab78",
     "q_number": 71,
     "question": "Which type of malware spreads without user interaction and can self-replicate across networks?",
     "choices": ["Worm", "Trojan", "Ransomware", "Adware"],
@@ -1136,6 +1207,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-3daedd63ec",
     "q_number": 72,
     "question": "Which protocol provides secure remote access by encrypting all traffic?",
     "choices": ["Telnet", "SSH", "FTP", "HTTP"],
@@ -1152,6 +1224,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-feafcce53e",
     "q_number": 73,
     "question": "Which type of access control uses attributes like user role, department, or location to grant access?",
     "choices": ["DAC", "MAC", "RBAC", "ABAC"],
@@ -1168,6 +1241,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-c2f9992ac7",
     "q_number": 74,
     "question": "Which type of attack tricks users into installing malicious software by disguising it as legitimate?",
     "choices": ["Trojan", "Worm", "Ransomware", "Spyware"],
@@ -1184,6 +1258,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-26c71866a9",
     "q_number": 75,
     "question": "Which principle of security ensures users cannot deny their actions on a system?",
     "choices": ["Confidentiality", "Integrity", "Availability", "Non-repudiation"],
@@ -1200,6 +1275,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-d2e0d11366",
     "q_number": 76,
     "question": "Which type of attack attempts to guess passwords or encryption keys by systematically trying all possible combinations?",
     "choices": ["Dictionary Attack", "Brute Force Attack", "Rainbow Table Attack", "Phishing"],
@@ -1216,6 +1292,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-cd28382a1a",
     "q_number": 77,
     "question": "Which wireless security protocol is considered the weakest and should no longer be used?",
     "choices": ["WEP", "WPA", "WPA2", "WPA3"],
@@ -1232,6 +1309,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-c8f4ae5380",
     "q_number": 78,
     "question": "Which type of backup captures all files, regardless of changes, every time a backup is performed?",
     "choices": ["Full", "Incremental", "Differential", "Snapshot"],
@@ -1248,6 +1326,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-2783a88ed6",
     "q_number": 79,
     "question": "Which type of attack attempts to steal credentials by intercepting emails or communications containing sensitive information?",
     "choices": ["Phishing", "Spear Phishing", "Whaling", "Vishing"],
@@ -1264,6 +1343,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-13d001581e",
     "q_number": 80,
     "question": "Which principle ensures that sensitive information is only available to those authorized to access it?",
     "choices": ["Confidentiality", "Integrity", "Availability", "Non-repudiation"],
@@ -1280,6 +1360,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-aad31b845d",
     "q_number": 81,
     "question": "Which type of malware provides attackers with remote access to an infected system?",
     "choices": ["RAT", "Spyware", "Worm", "Rootkit"],
@@ -1296,6 +1377,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-b41a58e01d",
     "q_number": 82,
     "question": "Which security measure uses certificates and encryption to ensure the authenticity of a website?",
     "choices": ["HTTP", "HTTPS", "FTP", "Telnet"],
@@ -1312,6 +1394,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-60b751aa10",
     "q_number": 83,
     "question": "Which authentication factor uses physical characteristics, like fingerprints or facial recognition?",
     "choices": ["Knowledge", "Possession", "Biometric", "Location"],
@@ -1328,6 +1411,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-ac5d0d4a40",
     "q_number": 84,
     "question": "Which type of attack tricks users into performing actions or revealing credentials by posing as a legitimate entity?",
     "choices": ["Phishing", "Tailgating", "Smishing", "Vishing"],
@@ -1344,6 +1428,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-2795060591",
     "q_number": 85,
     "question": "Which control type limits exposure by providing alternative processes to mitigate risk?",
     "choices": ["Preventive", "Detective", "Corrective", "Compensating"],
@@ -1360,6 +1445,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-e4794a86ba",
     "q_number": 86,
     "question": "Which type of attack captures keystrokes to obtain sensitive information like passwords?",
     "choices": ["Keylogger", "Spyware", "Ransomware", "Trojan"],
@@ -1376,6 +1462,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-ba6e2f7d91",
     "q_number": 87,
     "question": "Which protocol is used for secure email transmission?",
     "choices": ["SMTP", "IMAP", "POP3", "SMTPS"],
@@ -1392,6 +1479,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-bcbc5ad412",
     "q_number": 88,
     "question": "Which type of attack uses multiple compromised systems to overwhelm a target?",
     "choices": ["DDoS", "Phishing", "ARP Poisoning", "Trojan"],
@@ -1408,6 +1496,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-3abaffb278",
     "q_number": 89,
     "question": "Which type of attack uses malicious scripts in websites to steal information or manipulate content?",
     "choices": ["Cross-Site Scripting", "SQL Injection", "DDoS", "Phishing"],
@@ -1424,6 +1513,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-7b57a69b41",
     "q_number": 90,
     "question": "Which backup type copies all changes since the last full backup, providing a middle ground between full and incremental?",
     "choices": ["Full", "Incremental", "Differential", "Snapshot"],
@@ -1440,6 +1530,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-3d4928e5b8",
     "q_number": 91,
     "question": "Which type of authentication factor validates identity by where the user is located?",
     "choices": ["Knowledge", "Possession", "Biometric", "Location"],
@@ -1456,6 +1547,7 @@
     "tags": ["access control"]
   },
   {
+    "id": "security-sy0-701-bafd8136b8",
     "q_number": 92,
     "question": "Which malware type provides hidden functionality while appearing benign?",
     "choices": ["Trojan", "Worm", "Ransomware", "Adware"],
@@ -1472,6 +1564,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-a44a12d11e",
     "q_number": 93,
     "question": "Which security control type discourages potential attackers by presenting a visible barrier?",
     "choices": ["Preventive", "Detective", "Corrective", "Deterrent"],
@@ -1488,6 +1581,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-7c16b01fb8",
     "q_number": 94,
     "question": "Which attack type manipulates users into revealing information through impersonation or deceit?",
     "choices": ["Social Engineering", "Phishing", "DDoS", "SQL Injection"],
@@ -1504,6 +1598,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-2c867279e9",
     "q_number": 95,
     "question": "Which type of attack leverages weaknesses in the TCP/IP protocol to redirect traffic or intercept data?",
     "choices": ["ARP Poisoning", "DNS Spoofing", "DDoS", "Phishing"],
@@ -1520,6 +1615,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-898d22d441",
     "q_number": 96,
     "question": "Which principle ensures systems remain functional and available for authorized users?",
     "choices": ["Confidentiality", "Integrity", "Availability", "Non-repudiation"],
@@ -1536,6 +1632,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-c03c5a0a5b",
     "q_number": 97,
     "question": "Which tool is used to detect vulnerabilities and misconfigurations in systems and networks?",
     "choices": ["Vulnerability Scanner", "Firewall", "IDS", "Antivirus"],
@@ -1552,6 +1649,7 @@
     "tags": ["risk"]
   },
   {
+    "id": "security-sy0-701-99a86d6721",
     "q_number": 98,
     "question": "Which type of attack modifies SQL queries to manipulate or access a database without authorization?",
     "choices": ["SQL Injection", "XSS", "ARP Poisoning", "DDoS"],
@@ -1568,6 +1666,7 @@
     "tags": ["network security"]
   },
   {
+    "id": "security-sy0-701-22a58db5ce",
     "q_number": 99,
     "question": "Which type of attack encrypts files and demands a ransom for decryption?",
     "choices": ["Ransomware", "Trojan", "Worm", "Adware"],
@@ -1584,6 +1683,7 @@
     "tags": ["malware"]
   },
   {
+    "id": "security-sy0-701-0e8729292a",
     "q_number": 100,
     "question": "Which type of security control identifies when an incident occurs and triggers alerts or responses?",
     "choices": ["Preventive", "Detective", "Corrective", "Deterrent"],

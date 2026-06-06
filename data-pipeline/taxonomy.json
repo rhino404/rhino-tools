@@ -1,0 +1,77 @@
+{
+  "_note": "Controlled tag vocabulary per category, generated from current dataset usage on 2026-06-06. Phase 2 validator warns on tags outside this list. Review 'singletons' (used once) for typos/consolidation.",
+  "categories": {
+    "cybersecurity": {
+      "tags": [
+        "access control",
+        "authentication",
+        "cryptography",
+        "malware",
+        "network security",
+        "physical security",
+        "risk",
+        "social engineering"
+      ],
+      "singletons": [
+        "authentication"
+      ]
+    },
+    "falconry": {
+      "tags": [
+        "Apprentice Birds",
+        "Equipment",
+        "General",
+        "Health",
+        "Hunting and Training",
+        "Other Falconry Birds",
+        "Rules and Regulations"
+      ],
+      "singletons": [
+        "Equipment"
+      ]
+    },
+    "ham-radio": {
+      "tags": [
+        "amateur",
+        "analog",
+        "antennas",
+        "benefit",
+        "communication",
+        "component",
+        "condition",
+        "current",
+        "data",
+        "distance",
+        "equipment",
+        "flux",
+        "frequency",
+        "index",
+        "inductance",
+        "licensing",
+        "modulation",
+        "particle",
+        "period",
+        "power",
+        "privileges",
+        "radiation",
+        "requirement",
+        "resistance",
+        "schematics",
+        "significance",
+        "stability",
+        "storm",
+        "testing",
+        "voltage"
+      ],
+      "singletons": [
+        "benefit",
+        "condition",
+        "distance",
+        "flux",
+        "particle",
+        "significance",
+        "storm"
+      ]
+    }
+  }
+}

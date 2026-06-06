@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ryno.tools/schema/exam.schema.json",
+  "title": "Ryno Tools Exam Definitions",
+  "description": "Contract for src/datasets/exam.json — timed-exam specs per category/subcategory.",
+  "$comment": "JSON Schema cannot express the cross-file coupling that examManager.buildExamQuestions relies on. The validator additionally enforces, per subcategory: (1) every `distribution` key matches a `topic_label` value present in that subcategory's dataset; (2) sum(distribution values) == totalQuestions; (3) passingScore <= totalQuestions; (4) each topic_label pool holds at least its distribution count.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["category", "subcategory"],
+    "properties": {
+      "category": { "type": "string", "minLength": 1 },
+      "subcategory": {
+        "type": "object",
+        "minProperties": 1,
+        "additionalProperties": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["totalQuestions", "passingScore"],
+          "properties": {
+            "totalQuestions": { "type": "integer", "minimum": 1 },
+            "passingScore": { "type": "integer", "minimum": 0 },
+            "distribution": {
+              "type": "object",
+              "minProperties": 1,
+              "additionalProperties": { "type": "integer", "minimum": 0 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

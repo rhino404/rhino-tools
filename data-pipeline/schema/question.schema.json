@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ryno.tools/schema/question.schema.json",
+  "title": "Ryno Tools Quiz Question",
+  "description": "Canonical contract for a single quiz question. A dataset file is a JSON array of these objects. This schema is the single source of truth consumed by the validator and pipeline.",
+  "$comment": "JSON Schema cannot express cross-field rules. The validator additionally enforces: (1) `correct` MUST be one of `choices` (matched as TEXT, because the app shuffles choices at render time and matches by value, not index); (2) `id` is unique across the dataset; (3) no duplicate question content; (4) tags are drawn from data-pipeline/taxonomy.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "question",
+    "choices",
+    "correct",
+    "explanation",
+    "category",
+    "subcategory",
+    "type",
+    "topic",
+    "topic_label",
+    "tags"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+-[0-9a-f]{10}$",
+      "description": "Stable content fingerprint: `<subcategory-slug>-<sha1(question + sorted choices + correct)[:10]>`."
+    },
+    "question": { "type": "string", "minLength": 1 },
+    "choices": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 2,
+      "maxItems": 6,
+      "uniqueItems": true
+    },
+    "correct": { "type": "string", "minLength": 1 },
+    "explanation": { "type": "string" },
+    "category": { "type": "string", "minLength": 1 },
+    "subcategory": { "type": "string", "minLength": 1 },
+    "type": { "type": "string", "enum": ["multiple", "boolean"] },
+    "topic": { "type": "string" },
+    "topic_label": { "type": "string" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "topic_id": { "type": "string", "description": "Optional native pool ID prefix (e.g. NCVEC group 'G9C')." },
+    "total_topic_questions": { "type": "integer", "minimum": 0 },
+    "q_number": { "type": "integer", "minimum": 0 },
+    "image": { "type": "string", "description": "Optional image URL; empty string when none." }
+  }
+}
