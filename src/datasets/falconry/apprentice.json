@@ -1,5 +1,6 @@
 [
   {
+    "id": "apprentice-f305a4cb33",
     "question": "Hawks in the genus Accipiter are traditionally called what in falconry?",
     "choices": [
       "Broadwings",
@@ -20,6 +21,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-e6a0275dec",
     "question": "Which statement about male raptors is generally true?",
     "choices": [
       "They often return to the breeding area first",
@@ -40,6 +42,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-30e032efd5",
     "question": "A young raptor typically reaches full body size by what time?",
     "choices": [
       "At one year of age",
@@ -60,6 +63,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-977bf0a5f0",
     "question": "Which raptor listed does NOT show sexual size dimorphism (female larger)?",
     "choices": [
       "American Kestrel",
@@ -80,6 +84,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-e719f5399c",
     "question": "A relaxed hawk is likely to:",
     "choices": [
       "Preen",
@@ -100,6 +105,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-2a342302b4",
     "question": "Which of the following is NOT part of a raptor’s wing?",
     "choices": [
       "Coverts",
@@ -120,6 +126,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-72f6760625",
     "question": "Which term does NOT match the others?",
     "choices": [
       "Talon",
@@ -140,6 +147,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-e31480b989",
     "question": "What is the most important factor in choosing a first falconry species?",
     "choices": [
       "Housing aesthetics",
@@ -160,6 +168,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-75d6ca875d",
     "question": "The terms passage, imprint, and chamber describe:",
     "choices": [
       "Falconer license classes",
@@ -180,6 +189,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-ffa92d7615",
     "question": "Which order does not include members of the raptors?",
     "choices": [
       "Strigiformes",
@@ -200,6 +210,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-5bc066b3fc",
     "question": "Nest desertion by adult raptors due to disturbance is most likely:",
     "choices": [
       "Just before or at early egg laying",
@@ -220,6 +231,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-750e44ebad",
     "question": "If a first clutch is lost early, many hawks and falcons will lay a replacement clutch.",
     "choices": [
       "True",
@@ -238,6 +250,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-36100262a8",
     "question": "Young falcons sometimes initially take larger prey than adults mainly because:",
     "choices": [
       "They are still growing",
@@ -258,6 +271,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-91a527f77d",
     "question": "Which bird is most likely to breed successfully in captivity?",
     "choices": [
       "A passage (wild‑caught) bird just trapped",
@@ -278,6 +292,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-29effb61f8",
     "question": "Male vs. female raptors are most reliably distinguished (externally) by:",
     "choices": [
       "Faster females",
@@ -298,6 +313,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-c6cc13272f",
     "question": "Compared to adults, fledged juvenile falcons appear:",
     "choices": [
       "Smaller",
@@ -318,6 +334,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-4c10d1963c",
     "question": "In Buteo, Parabuteo, and Accipiter the primary molt sequence usually:",
     "choices": [
       "Starts at inner primary (1) outward to 10",
@@ -338,6 +355,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-932e6b5e0f",
     "question": "Why are adult (haggard) raptors generally not taken for falconry?",
     "choices": [
       "They may soon die of old age",
@@ -358,6 +376,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-96218f32a3",
     "question": "Hawks and falcons rely primarily on vision and hearing rather than smell when hunting.",
     "choices": [
       "True",
@@ -376,6 +395,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-f8b70e0e77",
     "question": "Where is the cere located?",
     "choices": [
       "At the base of the beak",
@@ -396,6 +416,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-20692238d5",
     "question": "The tarsus is part of the raptor’s:",
     "choices": [
       "Wing",
@@ -416,6 +437,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-9329612005",
     "question": "A bird’s “train” refers to its:",
     "choices": [
       "Head",
@@ -436,6 +458,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-0c8c0af2e9",
     "question": "Deck feathers are:",
     "choices": [
       "The central pair of tail feathers",
@@ -456,6 +479,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-7141774f02",
     "question": "Hard‑penned (full summed) means:",
     "choices": [
       "Feathers fully grown and blood withdrawn",
@@ -476,6 +500,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-145251f23c",
     "question": "A bird is most likely to mantle when:",
     "choices": [
       "Chasing quarry",
@@ -496,6 +521,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-227af3808f",
     "question": "After a full meal a comfortable hawk is likely to:",
     "choices": [
       "Gorge again immediately",
@@ -516,6 +542,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-3a59683c7a",
     "question": "A bird commonly preens:",
     "choices": [
       "After bathing",
@@ -536,6 +563,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-8ed24eaf1f",
     "question": "In falconry the word “cast” can mean:",
     "choices": [
       "A regurgitated pellet",
@@ -556,6 +584,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-64fc80d16d",
     "question": "Historically a falconer ‘enseamed’ a hawk primarily when it was:",
     "choices": [
       "Hood shy",
@@ -576,6 +605,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-fb0fd6cb52",
     "question": "A hawk ‘puts over’ its crop:",
     "choices": [
       "Before stooping",
@@ -596,6 +626,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-1f6b0b9306",
     "question": "A bird typically feaks:",
     "choices": [
       "Before a kill",
@@ -616,6 +647,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-445067c107",
     "question": "The term “austringer” refers to a person who flies accipiters.",
     "choices": [
       "True",
@@ -634,6 +666,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-124108f117",
     "question": "A passage hawk is:",
     "choices": [
       "Any migrating raptor (any age)",
@@ -654,6 +687,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-749acf0d19",
     "question": "It is desirable for your bird to crab after striking quarry.",
     "choices": [
       "True",
@@ -672,6 +706,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-b4fd2d5585",
     "question": "In falconry ‘strike’ can mean:",
     "choices": [
       "Impact with quarry or lure",
@@ -692,6 +727,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-77cef2d0cc",
     "question": "‘Rake away’ means:",
     "choices": [
       "Abort and veer off a flight",
@@ -712,6 +748,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-3157be619d",
     "question": "‘Intermewed’ means a bird has completed a molt in captivity (kept a full year).",
     "choices": [
       "True",
@@ -730,6 +767,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-6a7052ed2f",
     "question": "Drinking water is also called:",
     "choices": [
       "Yarak",
@@ -750,6 +788,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-cdb27df9ed",
     "question": "A bird that is ‘keen’ is:",
     "choices": [
       "Hungry",
@@ -770,6 +809,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-efe1d7de13",
     "question": "A ‘slip’ is:",
     "choices": [
       "An opportunity at quarry",
@@ -790,6 +830,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-1078182f68",
     "question": "Which falcon shows clear plumage sexual dimorphism (color/pattern) as well as size?",
     "choices": [
       "Peregrine Falcon",
@@ -810,6 +851,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-c71f55b4c7",
     "question": "Which species lacks a distinctly different juvenile body plumage compared to adults?",
     "choices": [
       "Northern Goshawk",
@@ -830,6 +872,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-203ca18f0f",
     "question": "The American Kestrel is closely related to the Eurasian Sparrowhawk.",
     "choices": [
       "True",
@@ -848,6 +891,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-27d441c743",
     "question": "Tail pumping, head bobbing, and hovering are classic field marks of a:",
     "choices": [
       "Sharp-shinned Hawk",
@@ -868,6 +912,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-2b445b629d",
     "question": "A very small raptor hovering 6–10 m (≈20–30 ft) above a field is most likely:",
     "choices": [
       "Sharp-shinned Hawk",
@@ -888,6 +933,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-b9141301ce",
     "question": "Summer kestrels often hunt insects and rodents; in winter many shift to more small birds.",
     "choices": [
       "True",
@@ -906,6 +952,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-8eddc4230b",
     "question": "Which species is most sensitive to weight fluctuation due to high metabolism?",
     "choices": [
       "Gyrfalcon",
@@ -926,6 +973,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-9864daf494",
     "question": "It is good practice to have an American Kestrel strongly conditioned to the lure before free flight.",
     "choices": [
       "True",
@@ -944,6 +992,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-c32e0031a9",
     "question": "Special husbandry concerns with American Kestrels include:",
     "choices": [
       "Precise weight management",
@@ -964,6 +1013,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-6a0ae93cec",
     "question": "A common wild behavior of American Kestrels that can become a vice in falconry is:",
     "choices": [
       "Soaring",
@@ -984,6 +1034,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-0a8199fb9b",
     "question": "Which traditional falconry equipment items are NOT routinely used with American Kestrels?",
     "choices": [
       "Bells",
@@ -1004,6 +1055,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-fd4789462a",
     "question": "Red-tailed Hawks never take game birds or passerines in the wild.",
     "choices": [
       "True",
@@ -1022,6 +1074,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-3aef470472",
     "question": "The sex of Red-tailed Hawks is most often (imperfectly) estimated by:",
     "choices": [
       "Weight and overall size",
@@ -1042,6 +1095,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-150b751d6e",
     "question": "There is no sexual dimorphism in Red-tailed Hawks.",
     "choices": [
       "True",
@@ -1060,6 +1114,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-3357527c7e",
     "question": "Red-tailed Hawks only nest in trees.",
     "choices": [
       "True",
@@ -1078,6 +1133,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-fb13923bf2",
     "question": "When a human climbs toward an active Red-tailed Hawk nest, the adults usually:",
     "choices": [
       "Attack the intruder",
@@ -1098,6 +1154,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-17cd87e802",
     "question": "In the wild, Red-tailed Hawks generally fledge how many young?",
     "choices": [
       "1",
@@ -1118,6 +1175,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-b1a28dfd61",
     "question": "A Red-tailed Hawk nestling (eyas) typically first leaves the nest at about:",
     "choices": [
       "2 weeks",
@@ -1138,6 +1196,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-c965626889",
     "question": "There are many geographic variants (subspecies) of Red-tailed Hawks in North America.",
     "choices": [
       "True",
@@ -1156,6 +1215,7 @@
     "topic": "Apprentice Birds"
   },
   {
+    "id": "apprentice-c69d7caaa9",
     "question": "Which species is best suited for taking rabbits?",
     "choices": [
       "Merlin",
@@ -1176,6 +1236,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-81490eacec",
     "question": "Best overall conditioning method for a Red-tailed Hawk:",
     "choices": [
       "Let it bate repeatedly while tied",
@@ -1196,6 +1257,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-34e63a6f6f",
     "question": "Which species most notably shows increased aggression if taken as an eyas and imprinted poorly?",
     "choices": [
       "Goshawk",
@@ -1216,6 +1278,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-3ff2e2c4b7",
     "question": "In an emergency, your imprint Red-tailed Hawk is firmly bound to a person and causing injury. Best immediate action:",
     "choices": [
       "Pull each rear talon back and slide feet forward",
@@ -1236,6 +1299,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-948903e534",
     "question": "Punitive discipline (pain/threat) is effective for training a misbehaving Red-tailed Hawk.",
     "choices": [
       "True",
@@ -1254,6 +1318,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-25066caec2",
     "question": "Aggression by an imprinted Red-tailed Hawk may not appear until its second or third year.",
     "choices": [
       "True",
@@ -1272,6 +1337,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-3e113b1f17",
     "question": "Which passage raptor is generally considered the easiest to man?",
     "choices": [
       "Goshawk",
@@ -1292,6 +1358,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-07ca3b4da7",
     "question": "Reasons to choose an American Kestrel over a Red-tailed Hawk as a first bird:",
     "choices": [
       "Needs less frequent feeding",
@@ -1312,6 +1379,7 @@
     "topic": "Apprentice Birds"
   },
   {
+    "id": "apprentice-71cc1c04ba",
     "question": "Which bird listed is most cold-tolerant?",
     "choices": [
       "Red-tailed Hawk",
@@ -1332,6 +1400,7 @@
     "topic": "Apprentice Birds"
   },
   {
+    "id": "apprentice-1742e0fcf9",
     "question": "The typical hunting style of a wild Red-tailed Hawk is:",
     "choices": [
       "Waiting-on at height",
@@ -1352,6 +1421,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-29d0a44f6f",
     "question": "Taking an eyas Red-tailed Hawk is preferred over trapping a passage bird.",
     "choices": [
       "True",
@@ -1370,6 +1440,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-68534916dc",
     "question": "Red-tailed Hawks are commonly trained using:",
     "choices": [
       "Operant conditioning (positive reinforcement)",
@@ -1390,6 +1461,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-981b0b89ff",
     "question": "The hunting style of an American Kestrel most closely resembles which listed species?",
     "choices": [
       "Goshawk",
@@ -1410,6 +1482,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-4f3a755706",
     "question": "Reasons male Red-tailed Hawks are preferred over females:",
     "choices": [
       "Females are too clumsy for squirrels",
@@ -1430,6 +1503,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-9b4ab5d2f0",
     "question": "Your American Kestrel is best suited to hunt which of the following?",
     "choices": [
       "Quail",
@@ -1450,6 +1524,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-018bcb1888",
     "question": "Field marks/behaviors useful for identifying an American Kestrel include:",
     "choices": [
       "Hovering",
@@ -1470,6 +1545,7 @@
     "topic": "Apprentice Birds"
   },
   {
+    "id": "apprentice-54d6591ed6",
     "question": "Which listed raptor most typically kills prey with powerful sustained grip pressure?",
     "choices": [
       "Male Merlin (jack)",
@@ -1490,6 +1566,7 @@
     "topic": "Apprentice Birds"
   },
   {
+    "id": "apprentice-817d841fd7",
     "question": "A defining characteristic of true falcons (genus Falco) is:",
     "choices": [
       "Heavy crushing feet",
@@ -1510,6 +1587,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-f29e3d71c6",
     "question": "Large falcons kill prey primarily by foot pressure alone.",
     "choices": [
       "True",
@@ -1528,6 +1606,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-94ee1e7774",
     "question": "Raptors that typically sever the spinal cord of vertebrate prey with the beak are:",
     "choices": [
       "Falcons",
@@ -1548,6 +1627,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-cfd633cdcc",
     "question": "Which species is least likely to ‘slice’ (project mutes horizontally)?",
     "choices": [
       "Peregrine Falcon",
@@ -1568,6 +1648,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-14c3432c9f",
     "question": "Stick nests are NOT built by:",
     "choices": [
       "Accipiters",
@@ -1588,6 +1669,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-851263faf1",
     "question": "In most large falcons, the male does most hunting for roughly the first two weeks after hatching.",
     "choices": [
       "True",
@@ -1606,6 +1688,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-9dd91ea327",
     "question": "Which species listed typically defends the largest territory?",
     "choices": [
       "Gyrfalcon",
@@ -1626,6 +1709,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-8561cc4188",
     "question": "The largest bird listed is the:",
     "choices": [
       "Jerkin (male Gyrfalcon)",
@@ -1646,6 +1730,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-ef8586360b",
     "question": "The Peregrine Falcon:",
     "choices": [
       "Occurs on all continents except Antarctica",
@@ -1666,6 +1751,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-593b3f55e0",
     "question": "A malar stripe (dark facial 'mustache') is characteristic of a:",
     "choices": [
       "Peregrine Falcon",
@@ -1686,6 +1772,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-3663f23946",
     "question": "Adult Prairie and Peregrine Falcons have different soft part coloration (feet, cere, eyelids) than first-year birds.",
     "choices": [
       "True",
@@ -1704,6 +1791,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-03a029f3cd",
     "question": "The Peregrine Falcon’s tail is proportionally longer than that of the Prairie Falcon and Gyrfalcon.",
     "choices": [
       "True",
@@ -1722,6 +1810,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-eb7c92e5cb",
     "question": "Incubation period for Peregrine Falcon eggs:",
     "choices": [
       "21 days",
@@ -1742,6 +1831,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-048aa2c14a",
     "question": "The large dark maritime Peregrine of the Pacific Northwest is the:",
     "choices": [
       "American Peregrine (F. p. anatum)",
@@ -1762,6 +1852,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-64d762cb4b",
     "question": "Assateague Island is significant to North American falconers because it is:",
     "choices": [
       "A silk used to cover a hawk’s eyes",
@@ -1782,6 +1873,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-25648d043a",
     "question": "A Peregrine Falcon is best known in falconry for:",
     "choices": [
       "Short low flush pursuits",
@@ -1802,6 +1894,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-140aead829",
     "question": "A Prairie Falcon is best described as:",
     "choices": [
       "Smaller than a Merlin",
@@ -1822,6 +1915,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-f281f42950",
     "question": "Large falcons may capture prey by:",
     "choices": [
       "Binding",
@@ -1842,6 +1936,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-6eca663302",
     "question": "Cooper’s Hawks are best suited for hunting:",
     "choices": [
       "Ducks",
@@ -1862,6 +1957,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-ed164a9a38",
     "question": "Parabuteo (Harris’s Hawk) use in falconry:",
     "choices": [
       "Best for arctic hare in severe cold",
@@ -1882,6 +1978,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-08acec80cc",
     "question": "Male Sharp-shinned Hawks are well suited for hunting:",
     "choices": [
       "Quail",
@@ -1902,6 +1999,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-415f08fc53",
     "question": "The raptor most commonly used by European falconers in the sixteenth century was the:",
     "choices": [
       "Red-tailed Hawk",
@@ -1922,6 +2020,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-add8d201f2",
     "question": "A wild haggard falcon (adult) typically:",
     "choices": [
       "Represents wild breeding stock",
@@ -1942,6 +2041,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-5400387127",
     "question": "Which statement about the Ferruginous Hawk (Buteo regalis) is correct?",
     "choices": [
       "It is larger than a Red-tailed Hawk",
@@ -1962,6 +2062,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-a62ea460f4",
     "question": "Which term does not fit with the others (all are traditional names for male falcons)?",
     "choices": [
       "Jack",
@@ -1982,6 +2083,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-a0a667c434",
     "question": "Which raptor is least likely to build its own nest?",
     "choices": [
       "Merlin",
@@ -2002,6 +2104,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-226a675440",
     "question": "Which raptor is least likely to nest on a cliff?",
     "choices": [
       "Gyrfalcon",
@@ -2022,6 +2125,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-1c2d8a7a03",
     "question": "A young Peregrine Falcon usually fledges at what age?",
     "choices": [
       "6–7 weeks",
@@ -2042,6 +2146,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-09baba8eb8",
     "question": "Where is a Northern Goshawk nest most likely encountered?",
     "choices": [
       "Suburban woodlots",
@@ -2062,6 +2167,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-01b5e642db",
     "question": "Which species typically undertakes the longest migration?",
     "choices": [
       "Merlin",
@@ -2082,6 +2188,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-015923973d",
     "question": "A black, raven-sized raptor with chestnut shoulders and a white tail base band is a:",
     "choices": [
       "Cooper’s Hawk",
@@ -2102,6 +2209,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-7bdce63b43",
     "question": "Which statements about age terms are correct?",
     "choices": [
       "A haggard (adult) was once an eyas",
@@ -2122,6 +2230,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-162adc09e7",
     "question": "When a falconer is calling a bird, a visitor should not:",
     "choices": [
       "Stay back and still",
@@ -2142,6 +2251,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-0bfc87b70f",
     "question": "In falconry terminology, drinking water taken by a raptor is called:",
     "choices": [
       "Yarak",
@@ -2162,6 +2272,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-ef8b31c701",
     "question": "Best initial manning method for a newly trapped Red-tailed Hawk:",
     "choices": [
       "Keep it outdoors from day one",
@@ -2182,6 +2293,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-f0fc604a05",
     "question": "Benefits of hunting a bird frequently include:",
     "choices": [
       "Natural varied diet",
@@ -2202,6 +2314,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-9d6b1cfe68",
     "question": "After a new Red-tailed Hawk stops bating and sits quietly, the next training goal is:",
     "choices": [
       "Enter it on wild game",
@@ -2222,6 +2335,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-208954c03d",
     "question": "In falconry, hacking a bird refers to:",
     "choices": [
       "Introducing it directly to quarry",
@@ -2242,6 +2356,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-19f0055c62",
     "question": "A hawk described as keen is:",
     "choices": [
       "Hungry",
@@ -2262,6 +2377,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-750692f524",
     "question": "Your new Red-tailed Hawk seems unusually tame after one day. You should:",
     "choices": [
       "Frighten it to reset",
@@ -2282,6 +2398,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-8254b0bfc2",
     "question": "A lure is especially useful:",
     "choices": [
       "During training",
@@ -2302,6 +2419,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-af43e06277",
     "question": "If a Red-tailed Hawk appears excessively keen (over-hungry), you should:",
     "choices": [
       "Give rangle",
@@ -2322,6 +2440,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-f24571334e",
     "question": "When is a Red-tailed Hawk generally safe for first free flight?",
     "choices": [
       "After 10 ft to fist response",
@@ -2342,6 +2461,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-d62317512c",
     "question": "To reduce carrying tendencies in an American Kestrel you can:",
     "choices": [
       "Use a very light lure line",
@@ -2362,6 +2482,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-d94afe32f1",
     "question": "To help a Peregrine develop pitch you should not use:",
     "choices": [
       "A kite",
@@ -2382,6 +2503,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-6807f1034f",
     "question": "Why can April flights be risky for some hawks?",
     "choices": [
       "Electrocution risk peaks",
@@ -2402,6 +2524,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-c3d25fba6c",
     "question": "On first free flight your Red-tailed Hawk stays out overnight. Best action:",
     "choices": [
       "Arrive before dawn to recover and call your sponsor for advice",
@@ -2422,6 +2545,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-c408e60bfb",
     "question": "A lost passage Red-tailed Hawk is most likely to:",
     "choices": [
       "Seek new humans",
@@ -2442,6 +2566,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-988fa21ed1",
     "question": "Which statement about lure flying is most accurate?",
     "choices": [
       "It is obsolete",
@@ -2462,6 +2587,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-33a9ecc32d",
     "question": "Which is an example of operant conditioning in falconry?",
     "choices": [
       "Pinching toes after refusal",
@@ -2482,6 +2608,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-32b433a1b4",
     "question": "Primary goal when training a hawk:",
     "choices": [
       "Create a responsive hunting partner",
@@ -2502,6 +2629,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-ce4c0236af",
     "question": "Keeping a Red-tailed Hawk through the molt, you should:",
     "choices": [
       "Keep it sharp-set",
@@ -2522,6 +2650,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-a40dca17c9",
     "question": "Which raptors start the primary molt with the outermost primary and proceed inward?",
     "choices": [
       "Falcons",
@@ -2542,6 +2671,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-30bfd9657e",
     "question": "When hooding a first Red-tailed Hawk your approach should be:",
     "choices": [
       "Patient, calm, methodical effort",
@@ -2562,6 +2692,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-23f3ea6d76",
     "question": "Acceptable early quarry for a new Red-tailed Hawk may include:",
     "choices": [
       "Squirrel",
@@ -2582,6 +2713,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-c08acc30d9",
     "question": "When selecting a duck flight for a new falcon you would ideally:",
     "choices": [
       "Fly large open water first",
@@ -2602,6 +2734,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-f09a7d45cd",
     "question": "A Red-tailed Hawk often increases success when hunting from:",
     "choices": [
       "Perches (trees/poles/T-Perch)",
@@ -2622,6 +2755,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-55dce43dc4",
     "question": "Which raptor most often uses ringing (spiraling pursuit) flight to take prey?",
     "choices": [
       "Goshawk",
@@ -2642,6 +2776,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-be9ab132cc",
     "question": "Use of a live lure (live tethered prey) is:",
     "choices": [
       "Always required with a goshawk",
@@ -2662,6 +2797,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-da14702f77",
     "question": "A key benefit of using a lure with any falcon is:",
     "choices": [
       "It encourages tail-chasing",
@@ -2682,6 +2818,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-0659ea3824",
     "question": "Why are male Red-tailed Hawks not generally preferred over females?",
     "choices": [
       "Females are too clumsy for squirrels",
@@ -2702,6 +2839,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-ce00621fe9",
     "question": "Making in to a Red-tailed Hawk on its first kill should be:",
     "choices": [
       "Deliberate and cautious",
@@ -2722,6 +2860,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-23e085da5b",
     "question": "A kestrel is especially suited to hunt:",
     "choices": [
       "Quail only",
@@ -2742,6 +2881,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-5ef0c6df2d",
     "question": "Best way to take a starling with an American Kestrel:",
     "choices": [
       "From a high waiting-on pitch",
@@ -2762,6 +2902,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-ae77f81b53",
     "question": "Jackrabbits are difficult quarry for Red-tailed Hawks because they:",
     "choices": [
       "Hide only in dense cover",
@@ -2782,6 +2923,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-0048d3546b",
     "question": "Cooper’s Hawks are most commonly hunted:",
     "choices": [
       "From power poles",
@@ -2802,6 +2944,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-d26dbb2bb8",
     "question": "Hunting upland game with a goshawk is aided by:",
     "choices": [
       "A steady pointing dog and a good flushing dog",
@@ -2822,6 +2965,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-f5aa2dfc75",
     "question": "Bagged quarry (pre-captured release) is:",
     "choices": [
       "Essential for a new Red-tailed Hawk",
@@ -2842,6 +2986,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-ad51472b4f",
     "question": "Entering a new bird refers to:",
     "choices": [
       "Feeding pigeons to a falcon daily",
@@ -2862,6 +3007,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-1a2fd9f1d5",
     "question": "A slip is:",
     "choices": [
       "An opportunity at quarry",
@@ -2882,6 +3028,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-537b014be0",
     "question": "After striking (without binding) a falcon typically:",
     "choices": [
       "Rakes away low",
@@ -2902,6 +3049,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-56ec473695",
     "question": "Female American Kestrels are preferred over males because they:",
     "choices": [
       "Train much easier",
@@ -2922,6 +3070,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-b7a0b46b25",
     "question": "A pheasant is most often taken by a goshawk:",
     "choices": [
       "On first flush",
@@ -2942,6 +3091,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-e2b7358258",
     "question": "When walking with a falconer carrying an unhooded hawk, where should an accompanying person walk?",
     "choices": [
       "In front of the falconer",
@@ -2961,6 +3111,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-38d03d627a",
     "question": "Freshly trapped raptors should be manned in a cool, well‑ventilated, low‑stress area to prevent overheating. True or false?",
     "choices": [
       "True",
@@ -2979,6 +3130,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-6d8a702b53",
     "question": "A hungry raptor can usually be trained more quickly than a well-fed one. True or false?",
     "choices": [
       "True",
@@ -2997,6 +3149,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-aa2f321aec",
     "question": "Falconers prefer a bird to be “sharp-set” (keen with mild hunger) before hunting. True or false?",
     "choices": [
       "True",
@@ -3015,6 +3168,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-64eddb6e4b",
     "question": "Raptors are most effectively trained by which method?",
     "choices": [
       "Punishment",
@@ -3035,6 +3189,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-e5646bc305",
     "question": "Hawks should not be made too tame and should retain a wild nature. True or false?",
     "choices": [
       "True",
@@ -3053,6 +3208,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-c9bfbed568",
     "question": "A passager (passage hawk) is:",
     "choices": [
       "Any raptor taken while migrating (unknown age)",
@@ -3073,6 +3229,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-a91a2da5c3",
     "question": "Passagers are more proficient hunters than haggards (full adults). True or false?",
     "choices": [
       "True",
@@ -3091,6 +3248,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-903354ea36",
     "question": "A five-year-old bird can never be accurately described as an eyas. True or false?",
     "choices": [
       "True",
@@ -3109,6 +3267,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-c20b13df10",
     "question": "Hacking is the process whereby:",
     "choices": [
       "Young raptors are allowed controlled perch exercise only",
@@ -3129,6 +3288,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-e71488cfd3",
     "question": "The chief advantage of tame-hack is:",
     "choices": [
       "Early flight conditioning",
@@ -3149,6 +3309,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-944c3b8dc0",
     "question": "It is generally advisable for an apprentice to take an eyas Red-tailed Hawk. True or false?",
     "choices": [
       "True",
@@ -3167,6 +3328,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-b133b0e188",
     "question": "A good rule to reduce imprint screaming is: take the hawk to food, not the food to the hawk. True or false?",
     "choices": [
       "True",
@@ -3185,6 +3347,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-654bccf312",
     "question": "To stop a bird from grabbing food and bating off with it, a good method is to:",
     "choices": [
       "Feed rangle",
@@ -3205,6 +3368,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-af5006958c",
     "question": "During early training, carrying the lure can be discouraged by:",
     "choices": [
       "Firmly holding or lightly securing the lure",
@@ -3225,6 +3389,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-b434449c2a",
     "question": "After striking quarry, it is desirable that your falcon binds (seizes and holds) it?",
     "choices": [
       "True",
@@ -3243,6 +3408,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-9740ac7746",
     "question": "In falconry slang, when is a falcon most likely to 'throw up' (rise steeply on outstretched wings)?",
     "choices": [
       "After eating spoiled meat",
@@ -3263,6 +3429,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-183d8fd748",
     "question": "Yarak is purely a function of hunger.",
     "choices": [
       "True",
@@ -3281,6 +3448,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-0e7e4417c8",
     "question": "The development of strong hunting performance in a trained hawk is primarily based on:",
     "choices": [
       "Sentimental attachment to the falconer",
@@ -3301,6 +3469,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-d7416e425b",
     "question": "In falconry, 'strike' can mean:",
     "choices": [
       "Moment of impact with quarry or lure",
@@ -3321,6 +3490,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-0bf7d50058",
     "question": "The phrase 'rake away' means:",
     "choices": [
       "To abandon the flight and veer off",
@@ -3341,6 +3511,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-1d397ddd7a",
     "question": "A good reason to stop flying a bird as spring approaches is:",
     "choices": [
       "Increased soaring conditions",
@@ -3361,6 +3532,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-ce99b3bc40",
     "question": "The best reason not to fly a hawk during molt is:",
     "choices": [
       "Risk of breaking blood feathers",
@@ -3381,6 +3553,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-de89044ca8",
     "question": "'Intermewed' describes an obsolete medieval practice.",
     "choices": [
       "True",
@@ -3399,6 +3572,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-514e05af60",
     "question": "When is it most useful to enter (introduce) your bird to a new quarry species?",
     "choices": [
       "When it is unfamiliar with the surrounding landscape",
@@ -3419,6 +3593,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-73bee37303",
     "question": "The scream of an eyas hawk frightens game away:",
     "choices": [
       "True",
@@ -3437,6 +3612,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-bcfc845266",
     "question": "A cock pheasant is usually easier to catch on the wing than a hen but harder to subdue on the ground:",
     "choices": [
       "True",
@@ -3455,6 +3631,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-b806c2407f",
     "question": "After a long chase a pheasant takes cover and your hawk waits above. If you flush it again is an aerial capture now more likely?",
     "choices": [
       "Yes",
@@ -3473,6 +3650,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-5082ed0e9f",
     "question": "At height a falcon is most likely to take which target?",
     "choices": [
       "A hen mallard dropping low over open water",
@@ -3493,6 +3671,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-49f9cd2725",
     "question": "A pursued duck is usually as reluctant as a falcon to plunge into trees or dense brush:",
     "choices": [
       "True",
@@ -3511,6 +3690,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-422781e400",
     "question": "When should a live lure be used?",
     "choices": [
       "Never",
@@ -3531,6 +3711,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-2c0165b293",
     "question": "A pellet (casting) found under the perch in the morning is:",
     "choices": [
       "The first sign of frounce",
@@ -3551,6 +3732,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-3c8afd6328",
     "question": "A bath pan is not necessary for a hawk because:",
     "choices": [
       "They dislike bathing",
@@ -3571,6 +3753,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-66dc67ae64",
     "question": "Fed equal weights, which food is most likely to put weight on a hawk fastest?",
     "choices": [
       "Duck",
@@ -3591,6 +3774,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-50ff26f2b9",
     "question": "Proper mews should provide:",
     "choices": [
       "Protection from predators",
@@ -3611,6 +3795,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-076b5de28e",
     "question": "If your new Red-tailed Hawk bends several feathers while hunting you should:",
     "choices": [
       "Cut them off immediately",
@@ -3631,6 +3816,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-6ffb6b6e2b",
     "question": "The best daily method for an apprentice to monitor a hawk’s condition is:",
     "choices": [
       "Inspecting feather sleekness",
@@ -3651,6 +3837,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-c2952bde76",
     "question": "A gram scale can be used to weigh which raptors?",
     "choices": [
       "American Kestrels",
@@ -3671,6 +3858,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-9c5f3046eb",
     "question": "During hunting season a new Red-tailed Hawk should be weighed:",
     "choices": [
       "Once a week",
@@ -3691,6 +3879,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-72c51ec13d",
     "question": "Fret (stress) marks on feathers usually indicate:",
     "choices": [
       "Interrupted feather growth from stress or nutrition",
@@ -3711,6 +3900,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-16dffdb035",
     "question": "A passage hawk is most likely to break tail feathers if:",
     "choices": [
       "Using a tail guard",
@@ -3731,6 +3921,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-709a823113",
     "question": "The white chalky component of a hawk’s mute is:",
     "choices": [
       "Urates from the kidneys",
@@ -3751,6 +3942,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-3c33876967",
     "question": "A falcon is most commonly kept on which perch type?",
     "choices": [
       "Screen perch",
@@ -3771,6 +3963,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-00ef60f55d",
     "question": "Which of the following is NOT a benefit of properly using a pigeon wing tiring?",
     "choices": [
       "Keeps the beak trimmed through abrasion",
@@ -3791,6 +3984,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-f9ee00b95f",
     "question": "A bird’s ideal flight weight:",
     "choices": [
       "Is constant year‑round",
@@ -3811,6 +4005,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-de7af1ecd7",
     "question": "Protecting a bird from direct summer sun is necessary because:",
     "choices": [
       "Raptors cannot overheat",
@@ -3831,6 +4026,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-45406806a1",
     "question": "After eating a bird that feaks (wipes its beak) is:",
     "choices": [
       "Displaying normal grooming behavior",
@@ -3851,6 +4047,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-03484031ac",
     "question": "Imping a new passage Red-tailed Hawk requires:",
     "choices": [
       "Help from a sponsor or experienced falconer",
@@ -3871,6 +4068,7 @@
     "topic": "Apprentice Birds"
   },
   {
+    "id": "apprentice-d5cd98e75c",
     "question": "Coping your Red-tailed Hawk the first time should involve:",
     "choices": [
       "Doing it alone to learn",
@@ -3891,6 +4089,7 @@
     "topic": "Apprentice Birds"
   },
   {
+    "id": "apprentice-91a7d8857b",
     "question": "A giant hood for a passage hawk:",
     "choices": [
       "Is obsolete and unnecessary",
@@ -3911,6 +4110,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-fc3d0ed013",
     "question": "A lure can be:",
     "choices": [
       "A prepared dead pigeon",
@@ -3931,6 +4131,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-16acd932dc",
     "question": "When lure flying an American Kestrel the lure should be:",
     "choices": [
       "Lightweight",
@@ -3951,6 +4152,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-683d5795a9",
     "question": "A creance is best:",
     "choices": [
       "Used in open spaces free of snags",
@@ -3971,6 +4173,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-8707494618",
     "question": "Bells may be attached to:",
     "choices": [
       "Leg jesses",
@@ -3991,6 +4194,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-61f8b94e42",
     "question": "A bewit is used to attach which item to a raptor's tarsus?",
     "choices": [
       "A leash",
@@ -4011,6 +4215,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-fc017d1638",
     "question": "Which item is NOT essential for a newly trapped hawk?",
     "choices": [
       "A glove",
@@ -4031,6 +4236,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-07a4f2a510",
     "question": "Using a bracelet that is too thin may cause:",
     "choices": [
       "Excessive bating",
@@ -4051,6 +4257,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-21a3e4623e",
     "question": "Which of the following is NOT prevented by using field (slitless) jesses?",
     "choices": [
       "Reduce snagging hazards",
@@ -4071,6 +4278,7 @@
     "topic": "Equipment"
   },
   {
+    "id": "apprentice-fc8724b094",
     "question": "Which of the following is NOT an acceptable characteristic of a falconry leash?",
     "choices": [
       "Be made of strong oiled leather",
@@ -4091,6 +4299,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-a207e5e4b6",
     "question": "The preferred swivel is:",
     "choices": [
       "Snap type fishing swivel",
@@ -4111,6 +4320,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-94ef6523ef",
     "question": "The most effective common trap for a first Red-tailed Hawk is:",
     "choices": [
       "Dho-gazza",
@@ -4131,6 +4341,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-f9b13fad81",
     "question": "When trapping your first hawk, what should you NOT do?",
     "choices": [
       "Trap alone to gain experience",
@@ -4151,6 +4362,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-bea9d9c735",
     "question": "Which type of falconry hood can NOT be made without using a block?",
     "choices": [
       "Dutch hood",
@@ -4171,6 +4383,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-779fcd6eed",
     "question": "What is a giant hood NOT used for in falconry?",
     "choices": [
       "A ventilated box for transporting a hawk",
@@ -4191,6 +4404,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-24ae60ad30",
     "question": "The best outdoor tether perch for a Red-tailed Hawk is:",
     "choices": [
       "Screen perch",
@@ -4211,6 +4425,7 @@
     "topic": "Apprentice Birds"
   },
   {
+    "id": "apprentice-37a4fe1064",
     "question": "A block perch is best suited for which bird?",
     "choices": [
       "Goshawk",
@@ -4231,6 +4446,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-57911ff027",
     "question": "A cadge is used to:",
     "choices": [
       "Restrict movement during manning",
@@ -4251,6 +4467,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-59f4ce5c4d",
     "question": "Radio telemetry primarily allows the falconer to:",
     "choices": [
       "Fly without bells",
@@ -4271,6 +4488,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-63666c9bf0",
     "question": "Hood braces are used to:",
     "choices": [
       "Restrain a bating hawk",
@@ -4291,6 +4509,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-517eb074da",
     "question": "Bells are best used:",
     "choices": [
       "While hunting",
@@ -4311,6 +4530,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-6e9a8320a2",
     "question": "Marks of a good falconer include all except:",
     "choices": [
       "Consistent success on wild game",
@@ -4331,6 +4551,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-4c1c4e3625",
     "question": "Key factors in maintaining a healthy raptor are:",
     "choices": [
       "Daily flying",
@@ -4351,6 +4572,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-2bc889b612",
     "question": "Direct sun with temperatures above 90°F for extended periods:",
     "choices": [
       "Does not affect desert species",
@@ -4371,6 +4593,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-2f5950307d",
     "question": "A raptor at hack should be taken up:",
     "choices": [
       "When it begins hunting for itself",
@@ -4391,6 +4614,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-a4af525bf7",
     "question": "Falconers prefer a falcon take the lure:",
     "choices": [
       "From a steep downwind stoop",
@@ -4411,6 +4635,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-708a747a45",
     "question": "If a falcon firmly strikes the lure on its first stoop of the session you should:",
     "choices": [
       "Keep swinging so it tries again",
@@ -4431,6 +4656,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-66103cd510",
     "question": "Beef heart and chicken necks alone provide a safe, balanced diet for a hawk:",
     "choices": [
       "True",
@@ -4449,6 +4675,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-9f2af9fcdb",
     "question": "Dark-colored meats have higher caloric value for raptors than white meats:",
     "choices": [
       "True",
@@ -4467,6 +4694,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-c38e5aaedd",
     "question": "If a raptor maintains weight on 2 oz of whole pigeon daily, feeding 2 oz of rabbit would likely make it:",
     "choices": [
       "Gain weight",
@@ -4487,6 +4715,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-ee88444cc8",
     "question": "Captive raptors need increased food energy:",
     "choices": [
       "In cold weather",
@@ -4507,6 +4736,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-71ad84bb00",
     "question": "A good tiring is:",
     "choices": [
       "Chicken breast",
@@ -4527,6 +4757,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-a1b8120b7a",
     "question": "Most raptors drink water:",
     "choices": [
       "Never",
@@ -4547,6 +4778,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-08a5ad6d9d",
     "question": "Drinking water should be provided:",
     "choices": [
       "Once a week",
@@ -4567,6 +4799,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-33e1568b00",
     "question": "Beyond daily spot cleaning, mews should be thoroughly cleaned:",
     "choices": [
       "Once a year",
@@ -4587,6 +4820,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-a33234970c",
     "question": "Free‑loft mews windows should be protected with:",
     "choices": [
       "Heavy welded wire",
@@ -4607,6 +4841,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-e58c53eae1",
     "question": "A bent feather should be:",
     "choices": [
       "Cut off and imped",
@@ -4627,6 +4862,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-4c4e724236",
     "question": "Shock (stress) marks on an eyas tail can result from:",
     "choices": [
       "Early food shortage",
@@ -4647,6 +4883,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-ab051c3d55",
     "question": "Newly trapped accipiters tend to break feathers more than most hawks:",
     "choices": [
       "True",
@@ -4665,6 +4902,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-2c5a10c0e5",
     "question": "Best action for a broken primary or secondary (remige):",
     "choices": [
       "Imping repair",
@@ -4685,6 +4923,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-dd7c2ddcce",
     "question": "A feather broken on the last day of season should be repaired immediately:",
     "choices": [
       "True",
@@ -4703,6 +4942,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-b7e53491ae",
     "question": "A metal needle is the ideal imping plug:",
     "choices": [
       "True",
@@ -4721,6 +4961,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-612958a0f6",
     "question": "Ideal imping needle cross‑section:",
     "choices": [
       "Round",
@@ -4741,6 +4982,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-97eaa36506",
     "question": "Best daily method for a beginner to monitor condition:",
     "choices": [
       "Feather sleekness",
@@ -4761,6 +5003,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-d1dbf295e6",
     "question": "A novice should weigh the bird:",
     "choices": [
       "Once each day",
@@ -4781,6 +5024,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-cfde28b366",
     "question": "Basic requirements for maintaining a captive raptor include:",
     "choices": [
       "Perch, bath, hood, scales",
@@ -4801,6 +5045,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-35090fa29f",
     "question": "Most effective trap for large non‑migratory raptors:",
     "choices": [
       "Dho-gazza",
@@ -4821,6 +5066,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-5dc8d49af6",
     "question": "The mist net is also known as:",
     "choices": [
       "Bal-chatri",
@@ -4841,6 +5087,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-b5d2a927c3",
     "question": "Most effective trap for small hawks outside migration:",
     "choices": [
       "Bal-chatri",
@@ -4861,6 +5108,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-d853ea52c4",
     "question": "H.J. Slijper's canon is:",
     "choices": [
       "A modified Dutch bow net",
@@ -4881,6 +5129,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-9149790cbf",
     "question": "Most North American falconers prefer the Dutch hood over the Indian pattern:",
     "choices": [
       "True",
@@ -4899,6 +5148,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-b2ba98d66c",
     "question": "An austringer should change slitted jesses before free flight:",
     "choices": [
       "True",
@@ -4917,6 +5167,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-d15aff8c79",
     "question": "Narrow jess bracelets are dangerous because:",
     "choices": [
       "They catch in briars",
@@ -4937,6 +5188,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-86fa89d429",
     "question": "The Aylmeri jess is safer than the traditional jess:",
     "choices": [
       "True",
@@ -4955,6 +5207,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-4efe3fc552",
     "question": "Goshawks need longer field jesses than falcons?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -4968,6 +5221,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-5d8cb6255b",
     "question": "A common dog-leash snap swivel is a reliable swivel for a hawk leash?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -4981,6 +5235,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-889a44f9cc",
     "question": "The best perch style for minimizing tail feather damage in accipiters is:",
     "choices": ["Ring perch", "Tail-saver perch", "Bow perch", "Screen perch"],
     "correct": "Tail-saver perch",
@@ -4994,6 +5249,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-037737c14d",
     "question": "Using block perches for falcons and ring/bow styles for accipiters is based mainly on:",
     "choices": ["Health", "Comfort", "Tradition", "All of these choices are correct"],
     "correct": "All of these choices are correct",
@@ -5007,6 +5263,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-fec6ee01b7",
     "question": "What determines the proper width of the top of a falcon block perch?",
     "choices": ["4 inches", "6 inches", "12 inches", "The bird’s foot size and jess length"],
     "correct": "The bird’s foot size and jess length",
@@ -5020,6 +5277,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-4dff587853",
     "question": "A creance is:",
     "choices": ["A strong line for controlled early flight training", "A mouth/throat disease", "A foul watery mute", "A leather thong to bind a wing"],
     "correct": "A strong line for controlled early flight training",
@@ -5033,6 +5291,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-7032c0b2f0",
     "question": "One end of a creance should be tied to the bird’s swivel?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -5046,6 +5305,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-b52800c807",
     "question": "The safest practical creance anchor is:",
     "choices": ["A light drag like old sneakers", "A goal post", "A tree trunk", "A parked automobile"],
     "correct": "A light drag like old sneakers",
@@ -5059,6 +5319,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-0d8354aef5",
     "question": "Essential field equipment includes:",
     "choices": ["Bells", "A lure", "Jesses", "All of these choices are correct"],
     "correct": "All of these choices are correct",
@@ -5072,6 +5333,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-1698a3fb6b",
     "question": "A lure with an attached weight is usually preferred over a one-piece lure?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -5085,6 +5347,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-ebf58922f5",
     "question": "Tough, stringy meat is good lure garnish?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -5098,6 +5361,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-75351b49c3",
     "question": "Bells are most helpful:",
     "choices": ["When the bird is perched outdoors", "To track the bird when out of sight", "When the bird is down on quarry", "All of these choices are correct"],
     "correct": "All of these choices are correct",
@@ -5111,6 +5375,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-33c318c2cd",
     "question": "Both bells in a pair should produce identical tones?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -5124,6 +5389,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-6c8c55bcbe",
     "question": "A plastic cable tie used as a bewit should be fastened directly around the tarsus?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -5137,6 +5403,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-6c0b57a0c6",
     "question": "A Yagi is:",
     "choices": ["A type of hood", "A glove style", "A hand‑held telemetry antenna", "A juvenile Saker falcon"],
     "correct": "A hand‑held telemetry antenna",
@@ -5150,6 +5417,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-cac7868699",
     "question": "Recognizing the weak (secondary) response on a telemetry receiver is important?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -5163,6 +5431,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-5ffe50d4d7",
     "question": "Cold temperatures can shift receiver tuning and transmitter output?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -5176,6 +5445,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-7c660f7fcb",
     "question": "A hack board is most likely used with:",
     "choices": ["An eyas", "A passage bird", "A haggard", "A vulture"],
     "correct": "An eyas",
@@ -5189,6 +5459,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-2812ef7356",
     "question": "A halsband is most useful when:",
     "choices": ["Hunting a Golden Eagle from horseback", "Flying a cast of gyrfalcons", "Flush hunting with a dog and a goshawk from the fist", "Ferreting with a red-tailed hawk"],
     "correct": "Flush hunting with a dog and a goshawk from the fist",
@@ -5202,6 +5473,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-63f0b050fe",
     "question": "Ways to reduce electrocution risk include:",
     "choices": ["Avoid risky single phase lines", "Avoid uninsulated transformer hardware", "Do not fly if hazards are uncertain", "All of these choices are correct"],
     "correct": "All of these choices are correct",
@@ -5215,6 +5487,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-7d6e859c51",
     "question": "Aspergillosis primarily affects which system?",
     "choices": ["Digestive system", "Nervous system", "Respiratory system", "Plumage"],
     "correct": "Respiratory system",
@@ -5228,6 +5501,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-5ca9e1e69a",
     "question": "Frounce (trichomoniasis) primarily affects which system?",
     "choices": ["Digestive (upper alimentary) system", "Nervous system", "Respiratory system", "Feathers"],
     "correct": "Digestive (upper alimentary) system",
@@ -5241,6 +5515,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-485974fa15",
     "question": "Which bird is most prone to stress-induced seizures (fits)?",
     "choices": ["Peregrine falcon", "Red-tailed hawk", "Sharp-shinned hawk", "Merlin"],
     "correct": "Sharp-shinned hawk",
@@ -5254,6 +5529,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-0da5a3b2f6",
     "question": "Aspergillosis is seen in which birds?",
     "choices": ["Red-tailed hawks", "Gyrfalcons", "Goshawks", "All of these choices are correct"],
     "correct": "All of these choices are correct",
@@ -5267,6 +5543,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-022247170f",
     "question": "A common disease risk from a wild mourning dove fed to a raptor is:",
     "choices": ["Aspergillosis", "Coccidiosis", "Frounce (trichomoniasis)", "Pneumonia"],
     "correct": "Frounce (trichomoniasis)",
@@ -5280,6 +5557,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-d42bbf9e40",
     "question": "Bumblefoot may be caused or promoted by:",
     "choices": ["Poor diet or husbandry", "Improper perches or surfaces", "Obesity or repetitive pressure injury", "All of these choices are correct"],
     "correct": "All of these choices are correct",
@@ -5293,6 +5571,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-f524249e78",
     "question": "A day after a large meal your bird still has a full, sour‑smelling crop. First action?",
     "choices": [
       "Manually empty the crop",
@@ -5311,6 +5590,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-21481db9c5",
     "question": "Feaking after eating, soft warbling, and resting on one foot usually indicate:",
     "choices": [
       "Frounce",
@@ -5329,6 +5609,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-d683a056fe",
     "question": "Gradual weight loss, poor appetite, and lethargy with normal mutes most likely indicate:",
     "choices": [
       "Lead poisoning",
@@ -5347,6 +5628,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-7c6ccadf7e",
     "question": "Bent legs and later 'stargazing' in an eyas could have been prevented by:",
     "choices": [
       "Feeding whole prey with bone",
@@ -5365,6 +5647,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-295fc18e89",
     "question": "Best way to avoid being unprepared for a fracture emergency?",
     "choices": [
       "Never hunt the bird",
@@ -5383,6 +5666,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-07f1bf81d8",
     "question": "An American Kestrel is most often lost to:",
     "choices": [
       "Frounce",
@@ -5401,6 +5685,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-eee5611abe",
     "question": "Passage bird shows feather lice. Appropriate response?",
     "choices": [
       "Give IV ivermectin",
@@ -5419,6 +5704,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-2ef5703adf",
     "question": "You see a small white moving parasite in a fresh mute. You should:",
     "choices": [
       "Submit a fecal exam",
@@ -5437,6 +5723,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-d5b027e04b",
     "question": "Feeding freshly trapped wild pigeons risks:",
     "choices": [
       "Trichomoniasis (frounce)",
@@ -5455,6 +5742,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-75ef611c9a",
     "question": "Cheesy yellow oral plaques, weight loss, and flicking food indicate:",
     "choices": [
       "Coccidiosis",
@@ -5473,6 +5761,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-fd6dc2d71d",
     "question": "After a wild raptor 'crabs' your bird you find a bleeding thigh puncture. Best action?",
     "choices": [
       "Give oral fluids and bandage at home",
@@ -5491,6 +5780,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-0388e8a50e",
     "question": "A green mute may indicate:",
     "choices": [
       "A fasting bird (bile staining)",
@@ -5509,6 +5799,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-a04c2b587a",
     "question": "Most reliable routine indicators of a raptor’s health are:",
     "choices": [
       "Daily weight tracking",
@@ -5527,6 +5818,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-ef39b66618",
     "question": "A diet exclusively of freshly killed rodents is:",
     "choices": [
       "Generally adequate for many buteos and kestrels",
@@ -5545,6 +5837,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-132719eb40",
     "question": "It is best to feed whole prey with intestines intact because they are a rich vitamin source?",
     "choices": [
       "True",
@@ -5561,6 +5854,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-56495ba0d1",
     "question": "Feeding hamburger (boneless beef) is an acceptable emergency meal?",
     "choices": [
       "True",
@@ -5577,6 +5871,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-fd88c7fdac",
     "question": "A hawk with ice accumulating on feathers should be brought in to dry?",
     "choices": [
       "True",
@@ -5593,6 +5888,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-6c5a9156e1",
     "question": "Hypothermia means the core body temperature is below normal?",
     "choices": [
       "True",
@@ -5609,6 +5905,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-c474c0d035",
     "question": "Smaller raptor species are generally easier to keep at a stable, healthy flying weight?",
     "choices": [
       "True",
@@ -5625,6 +5922,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-e948b44b94",
     "question": "The gray, fur/feather and bone mass a raptor regurgitates is called:",
     "choices": [
       "Pellet (casting)",
@@ -5643,6 +5941,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-0797a4fa90",
     "question": "A creamy white mute with a small well‑formed dark fecal core indicates:",
     "choices": [
       "Trichomoniasis",
@@ -5661,6 +5960,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-50e3d4f2ba",
     "question": "The cloaca is the common chamber through which a bird expels mutes?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -5674,6 +5974,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-32c36b83c3",
     "question": "A small dark green, scant mute from an otherwise bright bird most often indicates:",
     "choices": [
       "Frounce (trichomoniasis)",
@@ -5692,6 +5993,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-f041881ff6",
     "question": "Washed (water‑soaked then wrung) meat is primarily used to:",
     "choices": [
       "Give a quick energy boost",
@@ -5710,6 +6012,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-1396d9c135",
     "question": "Why should a hawk not remain in prolonged soaking rain?",
     "choices": [
       "The jesses will immediately tear",
@@ -5728,6 +6031,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-cb0b615b47",
     "question": "Light bleeding after slightly over‑coping a beak or talon usually requires:",
     "choices": [
       "Emergency surgery",
@@ -5746,6 +6050,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-38ccab9a05",
     "question": "A bird should be coped when:",
     "choices": [
       "The beak is overgrown",
@@ -5764,6 +6069,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-b44e3858d4",
     "question": "Reduced exercise tolerance, heavy breathing after short flights, and voice change suggest:",
     "choices": [
       "Coccidiosis",
@@ -5782,6 +6088,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-b5de363776",
     "question": "Which statement about aspergillosis is true?",
     "choices": [
       "Treatment is routinely 100% effective",
@@ -5800,6 +6107,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-b7a40042d0",
     "question": "Fungal infections in raptors are often associated with other medical problems?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -5813,6 +6121,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-2939592dab",
     "question": "Progressive lethargy, extreme thirst, weight loss, weak bating, and rapid decline most likely indicate:",
     "choices": [
       "Coccidiosis",
@@ -5831,6 +6140,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-7676b93988",
     "question": "Of the following, the most often rapidly lethal disease is:",
     "choices": [
       "Aspergillosis",
@@ -5849,6 +6159,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-af9ef18659",
     "question": "The most effective strategy against aspergillosis is:",
     "choices": [
       "Ancobon therapy",
@@ -5867,6 +6178,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-5a21027d7a",
     "question": "Aspergillosis is seen most commonly in:",
     "choices": [
       "Peregrine and Prairie Falcons",
@@ -5885,6 +6197,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-de19be9048",
     "question": "Birds with signs suggestive of aspergillosis should also be evaluated for:",
     "choices": [
       "Coccidiosis",
@@ -5903,6 +6216,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-a74645b344",
     "question": "Coccidiosis is caused by:",
     "choices": [
       "Protozoan parasites of the intestinal lining",
@@ -5921,6 +6235,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-6516425eae",
     "question": "Coccidia are transmitted by:",
     "choices": [
       "Direct contact with infected birds",
@@ -5939,6 +6254,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-144c0899b3",
     "question": "Early treatment of coccidiosis should be directed by a veterinarian?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -5952,6 +6268,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-48b31dd42d",
     "question": "Red flecks then watery black, foul mutes with slimy dark castings most likely indicate:",
     "choices": [
       "Coccidiosis",
@@ -5970,6 +6287,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-bd41de6812",
     "question": "Cheesy yellow oral plaques with difficulty swallowing most strongly suggest:",
     "choices": [
       "Tapeworm infection",
@@ -5988,6 +6306,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-6236139068",
     "question": "A common source of trichomonas infection in raptors is eating:",
     "choices": [
       "Infected pigeons or doves",
@@ -6006,6 +6325,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-487a124e6c",
     "question": "Does trichomoniasis (frounce) in raptors usually clear on its own in a few days without treatment?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6019,6 +6339,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-b2f9fca9e3",
     "question": "Untreated trichomoniasis (frounce) is usually fatal within how many days after symptoms appear?",
     "choices": ["1", "2", "7–10", "30"],
     "correct": "7–10",
@@ -6032,6 +6353,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-fd94d67689",
     "question": "The most effective primary drug treatment for trichomoniasis (frounce) is:",
     "choices": ["Metronidazole (Flagyl) or dimetridazole (Emtryl)", "Thiamine", "Ivermectin", "Enheptin"],
     "correct": "Metronidazole (Flagyl) or dimetridazole (Emtryl)",
@@ -6045,6 +6367,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-ec838a3750",
     "question": "West Nile virus in raptors is most commonly acquired via the bite of an infected mosquito?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6058,6 +6381,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-5a98148405",
     "question": "Typical clinical signs of West Nile virus infection in raptors include:",
     "choices": ["Weakness, neurologic signs, seizures, visual impairment", "Bone fractures", "Liver cancer", "No clinical signs ever occur"],
     "correct": "Weakness, neurologic signs, seizures, visual impairment",
@@ -6071,6 +6395,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-557f731c6f",
     "question": "Progressive painful swelling with a central scab on the bottom of a raptor’s foot most likely indicates:",
     "choices": ["Frounce", "Myiasis", "Bumblefoot", "Aspergillosis"],
     "correct": "Bumblefoot",
@@ -6084,6 +6409,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-90c98f0523",
     "question": "Bumblefoot (pododermatitis) is minor and usually resolves without intervention?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6097,6 +6423,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-23f9dcec8e",
     "question": "Chronic foot swelling in trained falcons is most often associated with:",
     "choices": ["Poor diet or husbandry (e.g., lean meat only)", "Cold wind exposure", "High humidity alone", "Perch too wide"],
     "correct": "Poor diet or husbandry (e.g., lean meat only)",
@@ -6110,6 +6437,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-1f9be518cb",
     "question": "Bumblefoot can be initiated by:",
     "choices": ["Penetrating or pressure injury", "Unsanitary or irritating perch conditions", "Nutritional and weight problems", "All of these choices are correct"],
     "correct": "All of these choices are correct",
@@ -6123,6 +6451,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-1751c95ebb",
     "question": "Best overall prevention of bumblefoot involves:",
     "choices": ["Clean padded perches only", "Diet management only", "Talons frequently blunted only", "Comprehensive husbandry: clean padded perches, proper diet, weight, exercise, monitoring"],
     "correct": "Comprehensive husbandry: clean padded perches, proper diet, weight, exercise, monitoring",
@@ -6136,6 +6465,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-1bbb9b3db0",
     "question": "Frequent physical examinations of a raptor’s feet help prevent advanced bumblefoot?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6149,6 +6479,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-e8d2aced54",
     "question": "Do signs such as a persistently full sour‑smelling crop, dullness, and reduced appetite indicate sour crop?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6162,6 +6493,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-82bab382eb",
     "question": "Sour crop (crop stasis with fermentation) can be caused by:",
     "choices": ["Spoiled or inappropriate food", "Infectious agents (yeast, bacteria, protozoa)", "Toxins or foreign/irritant material", "All of these choices are correct"],
     "correct": "All of these choices are correct",
@@ -6175,6 +6507,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-a3018a9499",
     "question": "Sour crop can be easily and reliably treated by the falconer without veterinary input?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6188,6 +6521,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-30bb406790",
     "question": "Uncontrolled shoulder and wing twitching in a newly trapped Sharp-shinned Hawk most likely results from:",
     "choices": ["Aspergillosis", "Trichomoniasis (frounce)", "Acute stress / capture myopathy (stress seizure)", "Coccidiosis"],
     "correct": "Acute stress / capture myopathy (stress seizure)",
@@ -6201,6 +6535,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-3589a261f8",
     "question": "Which species is most susceptible to stress-induced seizures in captivity?",
     "choices": ["American Kestrel", "Cooper's Hawk", "Merlin", "Northern Goshawk"],
     "correct": "Cooper's Hawk",
@@ -6214,6 +6549,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-4f19acc8de",
     "question": "Immediate management of a stress-induced seizure episode in a small accipiter should include:",
     "choices": ["Dewormer", "Antibiotics", "Antifungal drugs", "Dark quiet isolation; minimal handling; cautious oral glucose/electrolytes if swallowing"],
     "correct": "Dark quiet isolation; minimal handling; cautious oral glucose/electrolytes if swallowing",
@@ -6227,6 +6563,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-b42fa25f9b",
     "question": "A newly captured merlin repeatedly biting at its legs most likely indicates:",
     "choices": ["Maladaptation to captive environment", "Perch too narrow", "Water bowl too shallow", "Normal species behavior"],
     "correct": "Maladaptation to captive environment",
@@ -6240,6 +6577,7 @@
     "topic": "Other Falconry Birds"
   },
   {
+    "id": "apprentice-71329fedd3",
     "question": "A muscle meat–only diet in a growing raptor rapidly leads to:",
     "choices": ["Intestinal infection", "Improper bone mineralization and fractures (metabolic bone disease)", "Liver infection", "Renal failure"],
     "correct": "Improper bone mineralization and fractures (metabolic bone disease)",
@@ -6253,6 +6591,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-b2ac918c4e",
     "question": "Metabolic bone disease signs in a downy eyas include:",
     "choices": ["Inability to sit upright", "Persistent high-pitched distress vocalizations", "Crawling instead of standing", "All of these choices are correct"],
     "correct": "All of these choices are correct",
@@ -6266,6 +6605,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-26b46af0a2",
     "question": "Metabolic bone disease is most commonly observed in:",
     "choices": ["Intermewed raptors", "Passage falcons", "Red-tailed hawks", "Downies taken into captivity"],
     "correct": "Downies taken into captivity",
@@ -6279,6 +6619,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-3da29f03c7",
     "question": "Primary prevention of metabolic bone disease in nestlings relies on:",
     "choices": ["Feeding minced whole prey including bone as soon as feasible", "Adding only veal liver", "Adding tuna to meals", "Adding feathers to diets under 10 days old"],
     "correct": "Feeding minced whole prey including bone as soon as feasible",
@@ -6292,6 +6633,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-e58c1cb0a8",
     "question": "If stargazing (opisthotonos) is due to a dietary deficiency, the recommended vitamin therapy is:",
     "choices": ["Vitamin A", "Vitamin C", "Phosphorus", "Thiamine (Vitamin B1)"],
     "correct": "Thiamine (Vitamin B1)",
@@ -6305,6 +6647,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-98749a77f1",
     "question": "The preferred treatment for stargazing (opisthotonos) in a young raptor is:",
     "choices": [
       "Direct sunlight and vitamin D3",
@@ -6323,6 +6666,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-958cafc347",
     "question": "A raptor with a fractured leg or wing should be euthanized because such fractures cannot be repaired?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6336,6 +6680,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-d49c8003df",
     "question": "Lead toxicity from ingested shot requires:",
     "choices": [
       "No treatment; raptors are resistant",
@@ -6354,6 +6699,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-0838fdbb75",
     "question": "Improper hormonal or drug induction of molt can:",
     "choices": [
       "Be fatal",
@@ -6372,6 +6718,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-abba340df5",
     "question": "Best method to transport a newly captured wild raptor:",
     "choices": [
       "Hanging upside down by a leg",
@@ -6390,6 +6737,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-754b152ea2",
     "question": "A downy eyas that crawls, cannot sit up, and becomes restless with high‑pitched calls most likely has:",
     "choices": ["Coccidiosis", "Cramp (metabolic bone disease)", "Frounce", "Aspergillosis"],
     "correct": "Cramp (metabolic bone disease)",
@@ -6403,6 +6751,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-a4d0b973bf",
     "question": "Cramp (metabolic bone disease) is most common in:",
     "choices": ["Intermewed raptors", "Passage falcons", "Red-tailed Hawks", "Downies taken into captivity"],
     "correct": "Downies taken into captivity",
@@ -6416,6 +6765,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-bbd5c8f90d",
     "question": "A principal cause of cramp (in nestlings) is:",
     "choices": [
       "Roundworm infection",
@@ -6434,6 +6784,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-e2e6e6b1d0",
     "question": "Internal parasites in captive raptors:",
     "choices": ["Are uncommon and harmless", "Are always fatal", "Are usually easily treated", "May debilitate or kill and often warrant treatment"],
     "correct": "May debilitate or kill and often warrant treatment",
@@ -6447,6 +6798,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-97d69eca7c",
     "question": "All intestinal parasites can be eliminated reliably with one broad drug (e.g., ivermectin)?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6460,6 +6812,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-5ed7391f0f",
     "question": "Effective treatment for roundworms (ascarids) in raptors is:",
     "choices": ["Tetracycline", "Enheptin", "Piperazine or fenbendazole", "Furacin"],
     "correct": "Piperazine or fenbendazole",
@@ -6473,6 +6826,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-d0d3eb6573",
     "question": "Parasites sometimes visible in fresh mutes without a microscope include:",
     "choices": ["Capillaria only", "Roundworms only", "Tapeworm segments only", "Roundworms and tapeworm segments"],
     "correct": "Roundworms and tapeworm segments",
@@ -6486,6 +6840,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-43915f2b82",
     "question": "Preferred treatment for tapeworm infestation:",
     "choices": ["Fluconazole", "Praziquantel", "Vitamin C", "Ivermectin alone"],
     "correct": "Praziquantel",
@@ -6499,6 +6854,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-5b764162ad",
     "question": "Bird (feather) lice can kill a healthy raptor?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6512,6 +6868,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-5053c6c543",
     "question": "A nestling raptor's ear canals should be inspected promptly for:",
     "choices": ["Hearing response", "Maggots (myiasis)", "Feather sheaths", "Castings"],
     "correct": "Maggots (myiasis)",
@@ -6525,6 +6882,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-7a7622a842",
     "question": "Best initial treatment for maggots (myiasis) in a nestling's ear:",
     "choices": ["Saline flush and manual removal", "Topical antibiotic only", "Vitamin powder", "Oral dewormer only"],
     "correct": "Saline flush and manual removal",
@@ -6538,6 +6896,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-922fed230e",
     "question": "Hippoboscid (louse) flies are potentially harmful to raptors?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6551,6 +6910,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-f849d0dc08",
     "question": "Suspension or revocation of a falconry permit is handled by the State, tribe, or territory?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6564,6 +6924,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-7967760049",
     "question": "As an Apprentice you may hold any number of falconry permits in multiple jurisdictions and exceed your class species limits?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6577,6 +6938,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-883add708e",
     "question": "A captive-bred raptor must be identified with a seamless band (or approved microchip)?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6590,6 +6952,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-652eb83e34",
     "question": "Your sponsor is always fully responsible for the health and care of your falconry bird?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6603,6 +6966,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-667fa969b1",
     "question": "Required basic equipment includes jesses (or materials), leash and swivel, bath pan, and accurate scales?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6616,6 +6980,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-d87885809b",
     "question": "If you capture a bird you are not authorized to possess, you must:",
     "choices": [
       "Transfer it later after keeping it overnight",
@@ -6634,6 +6999,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-e6eb75c77b",
     "question": "You may attempt to recapture a lost falconry bird:",
     "choices": ["Within one week only", "Within one month only", "At any time", "Never"],
     "correct": "At any time",
@@ -6647,6 +7013,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-f410264239",
     "question": "An Apprentice falconer may take a nestling (eyas) from the wild?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6660,6 +7027,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-19fdc9af62",
     "question": "When flying a hybrid raptor free, must you use at least two functioning radio transmitters?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6673,6 +7041,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-30db1ec20b",
     "question": "You may release a falconry bird at any time without first meeting all State and Federal requirements?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6686,6 +7055,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-3b4713bb07",
     "question": "A raptor taken from the wild and used in falconry is still classified as a wild (wild‑caught) raptor for regulatory purposes?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6699,6 +7069,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-1b04bea99c",
     "question": "An Apprentice may present a public conservation education program with their bird only:",
     "choices": ["With sponsor physically supervising", "Alone after first hunt", "Only to other falconers", "Only online"],
     "correct": "With sponsor physically supervising",
@@ -6712,6 +7083,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-dba4052159",
     "question": "You may use a falconry raptor in a commercial advertisement unrelated to falconry or conservation?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6725,6 +7097,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-137560d42e",
     "question": "Permitted falconers may exchange molted feathers for imping with other licensed falconers, rehabilitators, or propagators?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6738,6 +7111,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-19ba328289",
     "question": "Your falconry permit authorizes trapping or hunting on any land without landowner or managing agency permission?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6751,6 +7125,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-b26cb88eca",
     "question": "An Apprentice may possess a bird that is imprinted on humans?",
     "choices": ["Yes, any species", "Only if Red-tailed Hawk", "Only with sponsor approval", "No; only a passage Red-tailed Hawk or American Kestrel not imprinted"],
     "correct": "No; only a passage Red-tailed Hawk or American Kestrel not imprinted",
@@ -6764,6 +7139,7 @@
     "topic": "Apprentice Birds"
   },
   {
+    "id": "apprentice-e4bd179864",
     "question": "Formal schooling can shorten the required 2 years at Apprentice level?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6777,6 +7153,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-b884e01798",
     "question": "Minimum age to qualify as a General falconer (assuming other requirements met) is:",
     "choices": ["16", "18", "20", "21"],
     "correct": "18",
@@ -6790,6 +7167,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-60fb20c91c",
     "question": "You must have your falconry permit (or legible copy) with you when trapping, transporting, or flying your bird away from your facilities?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6803,6 +7181,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-7807c4dda9",
     "question": "If your raptor accidentally kills out-of-season or wrong legal class game you should:",
     "choices": ["Hide it and keep the carcass", "Bury it immediately", "Leave it where taken or let the bird feed briefly, then depart", "Report and surrender carcass automatically"],
     "correct": "Leave it where taken or let the bird feed briefly, then depart",
@@ -6816,6 +7195,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-ab438ea263",
     "question": "Submitting a written summary of each raptor held (species and duration) is required for upgrade to General?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6829,6 +7209,7 @@
     "topic": "General"
   },
   {
+    "id": "apprentice-5253d0eaf5",
     "question": "Required tree flashing after taking a nestling must be:",
     "choices": ["At least 2 ft wide, fully encircling, ≥4 ft above ground, painted to match", "Any width and color", "Wire mesh only", "Installed after fledging"],
     "correct": "At least 2 ft wide, fully encircling, ≥4 ft above ground, painted to match",
@@ -6842,6 +7223,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-3b1d86fdf2",
     "question": "At a capture site another present licensed falconer may take possession of the newly trapped bird if:",
     "choices": ["Original captor keeps it 90 days first", "Transfer is immediate and the receiving falconer reports the take", "Only after inspection", "Never allowed"],
     "correct": "Transfer is immediate and the receiving falconer reports the take",
@@ -6855,6 +7237,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-0442f09cb4",
     "question": "General falconers may possess up to three raptors and obtain no more than two replacements per calendar year?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6868,6 +7251,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-e9283d957a",
     "question": "Captive‑bred progeny of lawfully held raptors may be bought or sold under a falconry license (where permitted)?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6881,6 +7265,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-d7a35fabac",
     "question": "The Lacey Act prohibits interstate commerce in wildlife taken contrary to State or foreign law?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6894,6 +7279,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-518e2bae6f",
     "question": "A federal Duck Stamp is not required to hunt migratory waterfowl with a raptor?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6907,6 +7293,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-584f971800",
     "question": "Annual falconry activity reports are only required if you hunted that year?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6920,6 +7307,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-0fe3605c80",
     "question": "Apprentice falconers may possess nestling (eyas) raptors?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6933,6 +7321,7 @@
     "topic": "Apprentice Birds"
   },
   {
+    "id": "apprentice-3410018660",
     "question": "General and Master falconers may remove only one nestling from any single nest and must leave at least one nestling remaining?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6946,6 +7335,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-c01e0c1868",
     "question": "An Apprentice must be under direct sponsor supervision only for the first hunt with their raptor?",
     "choices": ["True", "False"],
     "correct": "False",
@@ -6959,6 +7349,7 @@
     "topic": "Hunting and Training"
   },
   {
+    "id": "apprentice-e678a6e67a",
     "question": "Captive-bred raptors lawfully acquired may be sold or bartered to properly licensed individuals?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6972,6 +7363,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-a1fa0c32e8",
     "question": "Application or renewal of a falconry license must be on forms provided by the department?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6985,6 +7377,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-e5209d4b48",
     "question": "Death, escape (unrecovered), or permanent release of a falconry bird must be reported (e.g., 3-186A) within required time limits?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -6998,6 +7391,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-845fad4c57",
     "question": "Ethical nest take practice requires:",
     "choices": ["Take all young if legal", "Never disclose eyrie to anyone", "Always band remaining young", "Leave at least one healthy young in the nest"],
     "correct": "Leave at least one healthy young in the nest",
@@ -7011,6 +7405,7 @@
     "topic": "Health"
   },
   {
+    "id": "apprentice-3fcf67f6dc",
     "question": "When capturing a nestling raptor you must at capture time:",
     "choices": ["Install required predator-deterrent flashing on the tree", "Remove entire brood", "Band all remaining nestlings", "Report immediately before leaving site"],
     "correct": "Install required predator-deterrent flashing on the tree",
@@ -7024,6 +7419,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-db388bb17f",
     "question": "Authority may restrict possession of certain raptors for falconry if needed to protect the species or sport?",
     "choices": ["True", "False"],
     "correct": "True",
@@ -7037,6 +7433,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-24d4f15599",
     "question": "Within how many days must you report (3-186A) take, transfer, loss >30 days, release, rebanding, or death of a falconry raptor?",
     "choices": ["3 days", "5 days", "10 days", "30 days"],
     "correct": "10 days",
@@ -7050,6 +7447,7 @@
     "topic": "Rules and Regulations"
   },
   {
+    "id": "apprentice-40be8c25ad",
     "question": "Captive-bred raptors must be identified by which primary method?",
     "choices": ["Seamless band or ISO microchip", "Colored thread on jess", "Anodized tail bell", "Ink mark on tarsus"],
     "correct": "Seamless band or ISO microchip",
