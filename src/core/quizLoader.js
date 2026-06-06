@@ -1,5 +1,5 @@
 // src/core/quizLoader.js
-import { DATA_SOURCES } from './dataSources.js';
+import { getQuestions as _getQuestions } from './dataProvider.js';
 import { quizMeta, getCategoryIcon, categories } from '../data/quizMeta.js';
 import { getSubcategoriesForCategory } from '../utils/quizMetaUtils.js';
 import { filterUnansweredQuestions, showQuestion as originalShowQuestion } from '../ui/questions.js';
@@ -35,35 +35,7 @@ export function showQuestion(index, questions, els, stateObj) {
 // Fetch Questions Helper
 // -------------------------
 export async function fetchAllQuestions(category, subcategory = null) {
-    if (!category) return [];
-    const subData = DATA_SOURCES[category] || {};
-    let questionFiles = [];
-
-    if (!subcategory || subcategory === 'all') {
-        questionFiles = Object.values(subData).flatMap(fileRef => {
-            if (Array.isArray(fileRef)) return fileRef;
-            if (typeof fileRef === 'string') return [fileRef];
-            return [];
-        });
-    } else {
-        const file = subData[subcategory];
-        if (file) questionFiles = [file];
-    }
-
-    // Fetch all files in parallel (Promise.all preserves order); order is
-    // irrelevant anyway since startQuiz shuffles. A failed file yields [].
-    const perFile = await Promise.all(questionFiles.map(async (url) => {
-        try {
-            const res = await fetch(url);
-            if (!res.ok) throw new Error(`Failed to fetch ${url}`);
-            const data = await res.json();
-            return data.questions || data;
-        } catch (err) {
-            console.error(err);
-            return [];
-        }
-    }));
-    return perFile.flat();
+    return _getQuestions(category, subcategory);
 }
 
 // -------------------------

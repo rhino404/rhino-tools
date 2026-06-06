@@ -63,11 +63,13 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
   const existingImage = document.getElementById('questionImage');
   if (existingImage) existingImage.remove();
 
-  if (typeof q.image === 'string' && q.image.trim() !== '' && /\.(png|jpe?g|gif|svg)$/i.test(q.image.trim())) {
+  if (typeof q.image === 'string' && q.image.trim() !== '' && /\.(png|jpe?g|gif|svg|webp)$/i.test(q.image.trim())) {
     const img = document.createElement('img');
     img.id = 'questionImage';
     img.src = q.image.trim();
     img.alt = 'Figure for this question';
+    img.loading = 'lazy';
+    img.decoding = 'async';
     img.classList.add('question-image');
     img.onerror = () => img.remove();
     questionEl.after(img);

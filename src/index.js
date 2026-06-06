@@ -10,7 +10,7 @@ import { loadSession, setupSessionEvents } from './core/sessionManager.js';
 import { startQuiz, restoreSession, loadAndShowQuestions } from './core/quizLoader.js';
 import { setupDropdowns } from './core/dropdowns.js';
 import { setupButtons } from './core/controls.js';
-import { categories, getCategoryIcon } from './data/quizMeta.js';
+import { getCatalogSync, getCategoryIcon } from './core/dataProvider.js';
 import { state } from './core/state.js';
 import { getSubcategoriesForCategory } from './utils/quizMetaUtils.js';
 import { renderTagFilter } from './ui/tagFilter.js';
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ------------------------
   // Category Dropdown Setup
   // ------------------------
-  const categoryList = categories.map(c => ({
+  const categoryList = getCatalogSync().categories.map(c => ({
     label: c.label,
     value: c.value,
     icon: getCategoryIcon[c.value] || ''

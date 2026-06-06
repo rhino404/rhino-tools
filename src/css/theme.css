@@ -635,7 +635,7 @@ body.light-mode {
   color: var(--color-neutral-dark);
   background-image: linear-gradient(rgba(255, 255, 255, 0.85),
       rgba(255, 255, 255, 0.85)),
-    url(../images/rhino404.jpeg);
+    url(../images/logo.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center left;
@@ -745,7 +745,7 @@ body.dark-mode {
   color: var(--text-color-dark);
   background-image: linear-gradient(rgba(17, 24, 39, 0.95),
       rgba(17, 24, 39, 0.95)),
-    url(../images/rhino404.jpeg);
+    url(../images/logo.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center left;

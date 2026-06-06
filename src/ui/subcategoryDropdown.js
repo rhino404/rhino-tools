@@ -1,6 +1,6 @@
 // subcategoryDropdown.js
-import { quizMeta } from '../data/quizMeta.js';
-import { state } from '../core/state.js'; // track subcategory
+import { getCatalogSync } from '../core/dataProvider.js';
+import { state } from '../core/state.js';
 
 function normalizeKey(key) {
   return key.toLowerCase().replace(/\s+/g, '-');
@@ -9,7 +9,7 @@ function normalizeKey(key) {
 export function populateSubcategoryDropdown(containerEl, category) {
   if (!containerEl) return;
 
-  const subcategories = quizMeta.subcategories?.filter(sc => sc.category === category) || [];
+  const subcategories = getCatalogSync().subcategories.filter(sc => sc.category === category);
   containerEl.innerHTML = '';
 
   if (subcategories.length === 0) {

@@ -26,6 +26,7 @@ const CORE_ASSETS = [
   `${BASE_PATH}/services/pwaInstaller.js`,
   `${BASE_PATH}/manifest.json`,
   `${BASE_PATH}/datasets/index.json`,
+  `${BASE_PATH}/images/logo.webp`,
 ];
 
 // ===============================
@@ -84,6 +85,19 @@ self.addEventListener('fetch', (event) => {
 
   // Only handle GET requests for caching
   if (req.method !== 'GET') return;
+
+  const url = new URL(req.url);
+
+  // Images: cache-first (stable assets; no SWR overhead needed)
+  if (url.pathname.startsWith(`${BASE_PATH}/images/`)) {
+    event.respondWith(
+      caches.match(req).then(cached => cached || fetch(req).then(resp => {
+        if (resp.ok) caches.open(CONTENT_CACHE).then(c => c.put(req, resp.clone()));
+        return resp;
+      }))
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(req).then(cachedResponse => {

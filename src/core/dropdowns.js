@@ -2,7 +2,7 @@
 // dropdowns.js
 // =========================
 
-import { quizMeta, getCategoryIcon } from '../data/quizMeta.js';
+import { getCatalogSync, getCategoryIcon, prefetchCategory } from './dataProvider.js';
 import { getSubcategoriesForCategory } from '../utils/quizMetaUtils.js';
 import { startQuiz } from './quizLoader.js';
 import { saveSession } from './sessionManager.js';
@@ -56,8 +56,9 @@ export function setupDropdowns(toggleBtn, optionsEl, optionsArray, filterKey, st
 
         if (filterKey === 'currentCategory') {
             const icon = getCategoryIcon[val] || '';
-            const label = quizMeta.categories.find(o => o.value === val)?.label || '';
+            const label = getCatalogSync().categories.find(o => o.value === val)?.label || '';
             toggleBtn.innerHTML = `${icon} ${label} ▾`;
+            prefetchCategory(val);
 
             // Populate subcategory dropdown when category is selected
             const subcategories = getSubcategoriesForCategory(val);

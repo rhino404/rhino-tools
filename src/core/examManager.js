@@ -1,10 +1,10 @@
 import { state } from './state.js';
 import { fetchAllQuestions, shuffleArray, showQuestion } from './quizLoader.js';
+import { getExamDefinition } from './dataProvider.js';
 import { createComplexModal } from '../ui/modal.js';
 import { isAnswerCorrect } from '../utils/answerUtils.js';
 import { showAnswerFeedback } from '../ui/questions.js';
 
-let examDefinitions = [];
 let isProcessingAnswer = false;
 let advanceTimeout = null;
 
@@ -12,20 +12,6 @@ function restorePreExamState() {
     if (!state._preExamState) return;
     Object.assign(state, state._preExamState);
     delete state._preExamState;
-}
-
-// --- Exam Definitions ---
-export async function loadExamDefinitions() {
-    if (examDefinitions.length) return examDefinitions;
-    try {
-        const res = await fetch('/datasets/exam.json');
-        if (!res.ok) throw new Error('Failed to fetch exam.json');
-        examDefinitions = await res.json();
-        return examDefinitions;
-    } catch (err) {
-        console.error('[ExamManager] Error loading exam definitions:', err);
-        return [];
-    }
 }
 
 // --- Progress Bar ---
@@ -83,9 +69,7 @@ export async function startExam(category, subcategory) {
     }
 
     // Load exam definition
-    const examDefs = await loadExamDefinitions();
-    const categoryDef = examDefs.find(c => c.category === state.currentCategory);
-    const subcategoryDef = categoryDef?.subcategory?.[state.currentSubcategory];
+    const subcategoryDef = await getExamDefinition(state.currentCategory, state.currentSubcategory);
     if (!subcategoryDef) {
         alert('Exam mode is not available for this section.');
         return;

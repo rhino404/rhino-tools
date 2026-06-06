@@ -1,10 +1,7 @@
-//quizMetaUtils.js
-
-import { quizMeta } from '../data/quizMeta.js';
+// quizMetaUtils.js
+import { getCatalogSync } from '../core/dataProvider.js';
 
 export function getSubcategoriesForCategory(categoryValue) {
   if (!categoryValue) return [];
-
-  // Return only subcategories matching the category field
-  return quizMeta.subcategories.filter(subcat => subcat.category === categoryValue);
+  return getCatalogSync().subcategories.filter(sc => sc.category === categoryValue);
 }
