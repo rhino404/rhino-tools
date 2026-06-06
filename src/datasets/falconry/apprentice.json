@@ -1437,7 +1437,7 @@
       "House (English) Sparrows",
       "Starlings and House Sparrows"
     ],
-    "correct": "Starlings and House (English) Sparrows",
+    "correct": "Starlings and House Sparrows",
     "explanation": "Kestrels commonly take small birds like starlings and sparrows; quail are generally too large.",
     "category": "falconry",
     "subcategory": "apprentice",
@@ -3299,24 +3299,6 @@
     ],
     "topic_label": "Health & Maintenance",
     "topic": "Health"
-  },
-  {
-    "question": "It is desirable for your bird to crab after striking quarry.",
-    "choices": [
-      "True",
-      "False"
-    ],
-    "correct": "False",
-    "explanation": "Crabbing is fighting between raptors, not holding quarry.",
-    "category": "falconry",
-    "subcategory": "apprentice",
-    "type": "boolean",
-    "image": "",
-    "tags": [
-      "Hunting and Training"
-    ],
-    "topic_label": "Falconry Practices",
-    "topic": "Hunting and Training"
   },
   {
     "question": "In falconry, 'strike' can mean:",

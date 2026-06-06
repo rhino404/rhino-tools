@@ -8,11 +8,11 @@
 
 ## Quizzes Available
 
-- [Ham Radio Technician](https://ryno.tools/): 500+ FCC Technician license practice questions covering regulations, operating procedures, and electronics fundamentals.
+- [Ham Radio Technician](https://ryno.tools/): 400+ FCC Technician license practice questions covering regulations, operating procedures, and electronics fundamentals.
 - [Ham Radio General](https://ryno.tools/): 450+ FCC General class questions on HF propagation, advanced operating, and regulations.
-- [Ham Radio Extra](https://ryno.tools/): 800+ FCC Amateur Extra questions — the most advanced amateur radio license.
+- [Ham Radio Extra](https://ryno.tools/): 700+ FCC Amateur Extra questions — the most advanced amateur radio license.
 - [Falconry Apprentice](https://ryno.tools/): 350+ questions on raptor biology, health, housing, federal/state regulations, and hunting ethics.
-- [CompTIA Security+ SY0-701](https://ryno.tools/): 400+ practice questions for the CompTIA Security+ certification.
+- [CompTIA Security+ SY0-701](https://ryno.tools/): 100 practice questions for the CompTIA Security+ certification.
 
 ## Features
 
