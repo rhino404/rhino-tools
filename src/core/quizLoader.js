@@ -50,18 +50,20 @@ export async function fetchAllQuestions(category, subcategory = null) {
         if (file) questionFiles = [file];
     }
 
-    const questions = [];
-    for (const url of questionFiles) {
+    // Fetch all files in parallel (Promise.all preserves order); order is
+    // irrelevant anyway since startQuiz shuffles. A failed file yields [].
+    const perFile = await Promise.all(questionFiles.map(async (url) => {
         try {
             const res = await fetch(url);
             if (!res.ok) throw new Error(`Failed to fetch ${url}`);
             const data = await res.json();
-            questions.push(...(data.questions || data));
+            return data.questions || data;
         } catch (err) {
             console.error(err);
+            return [];
         }
-    }
-    return questions;
+    }));
+    return perFile.flat();
 }
 
 // -------------------------
