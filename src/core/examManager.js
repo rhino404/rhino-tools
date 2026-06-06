@@ -114,32 +114,25 @@ export async function startExam(category, subcategory) {
     showQuestion(0, state.questions, state.uiElements, state);
     bindChoiceEvents();
     showProgressBar();
-    updateProgressBar();
     if (state.syncButtons) state.syncButtons();
     console.log(`[Exam] Started with ${finalExamQuestions.length} questions.`);
 }
 
-// --- Choice Event Binding ---
+// --- Choice Event Binding (delegated) ---
 export function bindChoiceEvents() {
     if (!state.choicesEl) return;
-    state.choicesEl.querySelectorAll('button.choice-btn').forEach(btn => {
-        btn.disabled = false;
-        btn.classList.remove('disabled', 'selected');
-        btn.style.pointerEvents = 'auto';
+    state.choicesEl.onclick = (e) => {
+        const btn = e.target.closest('button.choice-btn');
+        if (!btn || btn.disabled || isProcessingAnswer) return;
         const qid = String(btn.dataset.questionId ?? btn.dataset.questionid ?? '');
         const value = btn.dataset.value;
         if (!qid) {
             console.warn('[Exam] Choice button missing data-question-id');
             return;
         }
-        btn.onclick = (e) => {
-            e && e.preventDefault();
-            e && e.stopImmediatePropagation();
-            if (isProcessingAnswer) return;
-            btn.classList.add('selected');
-            recordExamAnswer(qid, value);
-        };
-    });
+        btn.classList.add('selected');
+        recordExamAnswer(qid, value);
+    };
 }
 
 // --- Answer Recording ---
@@ -285,8 +278,8 @@ export function cancelExam() {
     if (!state.examMode) return;
     state.examMode = false;
     state.exam = null;
+    if (state.choicesEl) state.choicesEl.onclick = null;
     if (state._preExamState) restorePreExamState();
-    // Hide exam progress bar
     const container = document.getElementById('exam-progress-container');
     if (container) container.style.display = 'none';
     if (state.syncButtons) state.syncButtons();
@@ -310,8 +303,8 @@ export function endExam() {
     examResults.show(resultsData, state.exam.passingScore);
     state.examMode = false;
     state.exam = null;
+    if (state.choicesEl) state.choicesEl.onclick = null;
     if (state._preExamState) restorePreExamState();
-    // Hide exam progress bar
     const container = document.getElementById('exam-progress-container');
     if (container) container.style.display = 'none';
     if (state.syncButtons) state.syncButtons();

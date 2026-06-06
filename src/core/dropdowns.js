@@ -17,6 +17,7 @@ export function closeDropdown(toggleBtn, optionsEl) {
 
 export function populateDropdown(listEl, options, selectedVal) {
     listEl.innerHTML = '';
+    const frag = document.createDocumentFragment();
     options.forEach(opt => {
         const li = document.createElement('li');
         li.setAttribute('role', 'option');
@@ -25,8 +26,9 @@ export function populateDropdown(listEl, options, selectedVal) {
         if (opt.value === selectedVal) {
             li.classList.add('selected');
         }
-        listEl.appendChild(li);
+        frag.appendChild(li);
     });
+    listEl.appendChild(frag);
 }
 
 export function setupDropdowns(toggleBtn, optionsEl, optionsArray, filterKey, state) {

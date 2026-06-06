@@ -75,6 +75,7 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
     questionEl.after(img);
   }
 
+  const frag = document.createDocumentFragment();
   q.choices.forEach(choice => {
     const btn = document.createElement('button');
     btn.textContent = choice;
@@ -85,15 +86,13 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
     }
 
     btn.setAttribute('data-question-id', q.id);
-    btn.setAttribute('data-value', choice); // <-- ADD THIS LINE
+    btn.setAttribute('data-value', choice);
 
     btn.onclick = () => {
-      const value = btn.getAttribute('data-value'); // <-- USE THIS VALUE
+      const value = btn.getAttribute('data-value');
       if (state.examMode) {
-        // Only record and advance via examManager in exam mode
         recordExamAnswer(q.id, value);
       } else {
-        // Only handle check/advance in study mode
         checkAnswer(
           value,
           q,
@@ -105,8 +104,9 @@ export function showQuestion(current, questions, showingAnswers, { questionEl, c
       }
     };
 
-    choicesEl.appendChild(btn);
+    frag.appendChild(btn);
   });
+  choicesEl.appendChild(frag);
 }
 
 
