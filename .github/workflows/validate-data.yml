@@ -1,0 +1,43 @@
+# Validates quiz datasets against the canonical schema and checks the dataset
+# manifest is up to date. Gates pull requests — does NOT deploy (deployment is
+# handled separately by static.yml on push to main).
+name: Validate datasets
+
+on:
+  pull_request:
+    paths:
+      - "src/datasets/**"
+      - "src/core/dataSources.js"
+      - "src/data/quizMeta.js"
+      - "data-pipeline/**"
+      - ".github/workflows/validate-data.yml"
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - "src/datasets/**"
+      - "data-pipeline/**"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate datasets (schema + constraints + exam coupling)
+        run: node data-pipeline/validate.mjs
+
+      - name: Check dataset manifest is up to date
+        run: |
+          node data-pipeline/generate-manifest.mjs
+          if ! git diff --exit-code -- src/datasets/index.json; then
+            echo "::error::src/datasets/index.json is stale. Run 'node data-pipeline/generate-manifest.mjs' and commit the result."
+            exit 1
+          fi
