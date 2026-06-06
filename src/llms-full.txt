@@ -12,15 +12,15 @@ The platform provides adaptive microlearning through flashcard quizzes and timed
 
 The FCC administers three levels of amateur radio (ham radio) licenses in the United States:
 
-- **Technician Class** (400+ questions): Entry-level license covering basic regulations, safety, operating procedures, and electronics fundamentals. Required for VHF/UHF access. ~15 hours study time.
-- **General Class** (450+ questions): Intermediate license enabling HF band access. Tests on propagation, antenna theory, regulations, and advanced operating procedures. ~25 hours study time.
-- **Amateur Extra Class** (700+ questions): Advanced license requiring mastery of EMI, advanced regulations, and theoretical concepts. ~50 hours study time.
+- **Technician Class** (425+ questions): Entry-level license covering basic regulations, safety, operating procedures, and electronics fundamentals. Required for VHF/UHF access. ~15 hours study time.
+- **General Class** (456+ questions): Intermediate license enabling HF band access. Tests on propagation, antenna theory, regulations, and advanced operating procedures. ~25 hours study time.
+- **Amateur Extra Class** (706+ questions): Advanced license requiring mastery of EMI, advanced regulations, and theoretical concepts. ~50 hours study time.
 
 Each question includes regulations reference, explanation, and category tags (e.g., "safety", "operating-procedures", "electronics").
 
 ### Falconry Apprenticeship
 
-**Falconry Apprentice** (350+ questions): Preparation for the falconry apprenticeship exam, a requirement in all U.S. states to legally practice falconry. Tests cover:
+**Falconry Apprentice** (398+ questions): Preparation for the falconry apprenticeship exam, a requirement in all U.S. states to legally practice falconry. Tests cover:
 - Raptor biology, species identification, and behavior
 - Housing standards (mews design, perches, netting)
 - Health, nutrition, and veterinary care
