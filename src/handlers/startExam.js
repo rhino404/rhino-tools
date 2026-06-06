@@ -1,4 +1,5 @@
-import { startExam as beginExamLogic, cancelExam as coreCancelExam, loadExamDefinitions } from '../core/examManager.js';
+import { startExam as beginExamLogic, cancelExam as coreCancelExam } from '../core/examManager.js';
+import { getExamDefinition } from '../core/dataProvider.js';
 import { showStatusModal } from '../ui/modal.js';
 
 /**
@@ -12,9 +13,7 @@ export async function startExam(state) {
   }
 
   // --- Check if exam definition exists for this section ---
-  const examDefs = await loadExamDefinitions();
-  const categoryDef = examDefs.find(c => c.category === state.currentCategory);
-  const subcategoryDef = categoryDef?.subcategory?.[state.currentSubcategory];
+  const subcategoryDef = await getExamDefinition(state.currentCategory, state.currentSubcategory);
   if (!subcategoryDef) {
     showStatusModal('Exam mode is not available for this section.');
     return;
