@@ -72,6 +72,27 @@
         "significance",
         "storm"
       ]
+    },
+    "devops": {
+      "tags": [
+        "automation",
+        "cicd",
+        "cloud",
+        "collaboration",
+        "containers",
+        "culture",
+        "git",
+        "iac",
+        "kubernetes",
+        "linux",
+        "monitoring",
+        "networking",
+        "observability",
+        "reliability",
+        "security",
+        "troubleshooting"
+      ],
+      "singletons": []
     }
   }
 }

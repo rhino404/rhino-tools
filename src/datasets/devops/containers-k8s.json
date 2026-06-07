@@ -1,0 +1,1264 @@
+[
+  {
+    "id": "containers-k8s-080ec5303a",
+    "q_number": 1,
+    "question": "What is the fundamental difference between a container and a virtual machine?",
+    "choices": [
+      "Containers share the host OS kernel; VMs each run their own OS kernel",
+      "Containers require a hypervisor; VMs run directly on hardware",
+      "Containers are slower than VMs because they add an extra abstraction layer",
+      "Containers can only run Linux workloads; VMs can run any operating system"
+    ],
+    "correct": "Containers share the host OS kernel; VMs each run their own OS kernel",
+    "explanation": "Containers are OS-level virtualization: they share the host kernel and isolate processes using Linux namespaces and cgroups, making them lightweight and fast to start. VMs virtualize hardware and each carries a full OS kernel via a hypervisor, which is heavier but provides stronger isolation boundaries. (Source: Docker docs — 'What is a container?', kubernetes.io/docs/concepts/overview/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Core concepts of containerization: what containers are, how they differ from VMs, and the Linux primitives that make them work",
+    "topic_label": "Container Fundamentals",
+    "total_topic_questions": 9,
+    "tags": [
+      "containers"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-46365bcd67",
+    "q_number": 2,
+    "question": "Which Linux kernel feature gives each container its own isolated view of system resources such as process IDs, network interfaces, and mount points?",
+    "choices": [
+      "cgroups (control groups)",
+      "Namespaces",
+      "seccomp profiles",
+      "AppArmor"
+    ],
+    "correct": "Namespaces",
+    "explanation": "Linux namespaces partition kernel resources so that each container sees only its own set of PIDs, network interfaces, filesystem mounts, hostname, and more. Different namespace types (pid, net, mnt, uts, ipc, user) each isolate a different resource. cgroups are the complementary feature that limits and accounts for resource consumption (CPU, memory). (Source: kernel.org namespaces docs; Docker docs — 'Isolation')",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Core concepts of containerization: what containers are, how they differ from VMs, and the Linux primitives that make them work",
+    "topic_label": "Container Fundamentals",
+    "total_topic_questions": 9,
+    "tags": [
+      "containers",
+      "linux"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-120a7ea192",
+    "q_number": 3,
+    "question": "Which Linux kernel feature is responsible for enforcing CPU and memory resource limits on containers?",
+    "choices": [
+      "Namespaces",
+      "cgroups (control groups)",
+      "Union filesystems",
+      "iptables"
+    ],
+    "correct": "cgroups (control groups)",
+    "explanation": "Control groups (cgroups) allow the kernel to allocate, limit, and account for resource usage — CPU time, memory, disk I/O, and network — on a per-group basis. Container runtimes use cgroups to enforce the resource limits you set. Namespaces handle isolation (visibility), not resource limits. (Source: Docker docs — 'Resource constraints'; kernel.org cgroups documentation)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Core concepts of containerization: what containers are, how they differ from VMs, and the Linux primitives that make them work",
+    "topic_label": "Container Fundamentals",
+    "total_topic_questions": 9,
+    "tags": [
+      "containers",
+      "linux"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-ef4bc0ea65",
+    "q_number": 4,
+    "question": "Why do containers start significantly faster than virtual machines?",
+    "choices": [
+      "Containers use a faster storage driver than VMs",
+      "Containers do not boot an OS kernel — they launch a process directly on the shared host kernel",
+      "Container images are always smaller than VM disk images",
+      "Containers bypass the CPU scheduler, giving them raw hardware access"
+    ],
+    "correct": "Containers do not boot an OS kernel — they launch a process directly on the shared host kernel",
+    "explanation": "Because a container is simply a process isolated by namespaces and cgroups running on the host kernel, there is no firmware, bootloader, or OS kernel initialization to wait for. VMs must boot a full OS kernel each time, which takes seconds to minutes. This is one of the primary operational advantages of containers for CI/CD pipelines and autoscaling. (Source: Docker docs — 'Why use Docker?')",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Core concepts of containerization: what containers are, how they differ from VMs, and the Linux primitives that make them work",
+    "topic_label": "Container Fundamentals",
+    "total_topic_questions": 9,
+    "tags": [
+      "containers"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-6ca862128f",
+    "q_number": 5,
+    "question": "What is a container runtime, and which component in Kubernetes is responsible for invoking it?",
+    "choices": [
+      "A container runtime builds images; it is invoked by the Kubernetes API server",
+      "A container runtime starts, stops, and manages container lifecycles; it is invoked by the kubelet on each node",
+      "A container runtime manages network overlays; it is invoked by kube-proxy",
+      "A container runtime schedules pods across nodes; it is invoked by the kube-scheduler"
+    ],
+    "correct": "A container runtime starts, stops, and manages container lifecycles; it is invoked by the kubelet on each node",
+    "explanation": "A container runtime (e.g., containerd, CRI-O) is the software that actually executes containers. In Kubernetes, the kubelet agent running on each worker node communicates with the container runtime via the Container Runtime Interface (CRI) to create and manage containers. The API server, scheduler, and kube-proxy each handle different concerns. (Source: kubernetes.io/docs/concepts/architecture/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Core concepts of containerization: what containers are, how they differ from VMs, and the Linux primitives that make them work",
+    "topic_label": "Container Fundamentals",
+    "total_topic_questions": 9,
+    "tags": [
+      "containers",
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-07a19fdf4c",
+    "q_number": 6,
+    "question": "A stateless container writes application logs to its local filesystem. What is the risk of this approach?",
+    "choices": [
+      "The container will consume excessive CPU writing to disk",
+      "Logs are lost when the container restarts or is replaced, because the container filesystem is ephemeral",
+      "Log writes will block network I/O inside the container",
+      "The container runtime will refuse to start if the log file already exists"
+    ],
+    "correct": "Logs are lost when the container restarts or is replaced, because the container filesystem is ephemeral",
+    "explanation": "Container filesystems are ephemeral by design: the writable layer is tied to the container instance and is destroyed when the container is removed. For persistent data like logs, you should write to stdout/stderr (so the runtime captures them) or mount an external volume. This is a core 12-factor app principle. (Source: Docker docs — 'Manage data in Docker'; 12factor.net — Logs)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Core concepts of containerization: what containers are, how they differ from VMs, and the Linux primitives that make them work",
+    "topic_label": "Container Fundamentals",
+    "total_topic_questions": 9,
+    "tags": [
+      "containers",
+      "reliability"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-6debe4fa5e",
+    "q_number": 7,
+    "question": "Which of the following best describes a stateful container workload?",
+    "choices": [
+      "A container that starts in under one second",
+      "A container whose correctness depends on data that persists beyond the container's lifetime, such as a database",
+      "A container that runs as a non-root user",
+      "A container that is restarted automatically by Kubernetes after a crash"
+    ],
+    "correct": "A container whose correctness depends on data that persists beyond the container's lifetime, such as a database",
+    "explanation": "A stateful workload requires durable storage that survives container restarts and replacements. Databases, message queues, and caches are classic examples. Stateless workloads, by contrast, derive all necessary state from incoming requests or environment variables and can be freely replaced. Kubernetes StatefulSets are designed specifically to handle stateful workloads with stable network identities and persistent volumes. (Source: kubernetes.io/docs/concepts/workloads/controllers/statefulset/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Core concepts of containerization: what containers are, how they differ from VMs, and the Linux primitives that make them work",
+    "topic_label": "Container Fundamentals",
+    "total_topic_questions": 9,
+    "tags": [
+      "containers",
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-8812eac5e6",
+    "q_number": 8,
+    "question": "How does process isolation in containers differ from process isolation in a traditional OS?",
+    "choices": [
+      "Containers provide stronger isolation than traditional OS processes because they use hardware virtualization",
+      "Traditional OS processes are already isolated; containers add no additional isolation mechanism",
+      "Containers use namespace-based isolation that limits what a process can see, but all processes still share the same kernel — unlike VMs which have fully separate kernels",
+      "Container isolation is equivalent to VM isolation because both use hypervisors"
+    ],
+    "correct": "Containers use namespace-based isolation that limits what a process can see, but all processes still share the same kernel — unlike VMs which have fully separate kernels",
+    "explanation": "On a traditional OS, processes are isolated by the kernel's process table but can see other processes and share global kernel resources. Containers narrow that view using namespaces (so a container cannot see host processes or network interfaces), but a kernel exploit can still affect all containers on the host. VMs have separate kernels, providing a stronger isolation boundary. This is why security-sensitive workloads sometimes still use VMs or add sandboxing layers like gVisor. (Source: kubernetes.io/docs/concepts/security/; CNCF cloud-native security whitepaper)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Core concepts of containerization: what containers are, how they differ from VMs, and the Linux primitives that make them work",
+    "topic_label": "Container Fundamentals",
+    "total_topic_questions": 9,
+    "tags": [
+      "containers",
+      "security"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-4c177119fa",
+    "q_number": 9,
+    "question": "A team runs dozens of microservices, each with different dependency versions that conflict with one another. How do containers solve this problem?",
+    "choices": [
+      "Containers install all dependencies into a shared global directory, preventing version duplication",
+      "Containers package each application with its own dependencies into a self-contained image, eliminating host-level dependency conflicts",
+      "Containers require the host OS to manage all dependencies through a package manager",
+      "Containers automatically upgrade conflicting dependencies to the latest compatible version"
+    ],
+    "correct": "Containers package each application with its own dependencies into a self-contained image, eliminating host-level dependency conflicts",
+    "explanation": "A container image bundles the application binary, runtime, libraries, and configuration into an immutable unit. Because each container runs from its own image, service A can use Python 3.8 while service B uses Python 3.11, with no conflict on the host. This is a primary driver for adopting containers in microservice architectures. (Source: Docker docs — 'What is a container image?')",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Core concepts of containerization: what containers are, how they differ from VMs, and the Linux primitives that make them work",
+    "topic_label": "Container Fundamentals",
+    "total_topic_questions": 9,
+    "tags": [
+      "containers"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-8f398d47e8",
+    "q_number": 10,
+    "question": "Why are container images described as being composed of 'layers'?",
+    "choices": [
+      "Each layer corresponds to a different network namespace used by the container",
+      "Each Dockerfile instruction that modifies the filesystem produces a read-only layer; layers are stacked to form the final image, enabling reuse and efficient storage",
+      "Layers represent different versions of the same image stored side by side in a registry",
+      "Layers are runtime memory segments the container runtime allocates to isolate heap from stack"
+    ],
+    "correct": "Each Dockerfile instruction that modifies the filesystem produces a read-only layer; layers are stacked to form the final image, enabling reuse and efficient storage",
+    "explanation": "Docker and OCI-compliant images use a union filesystem (e.g., OverlayFS). Each instruction in a Dockerfile that changes the filesystem — RUN, COPY, ADD — creates a new read-only layer on top of the previous one. The layers are content-addressed and can be shared between images. When a container runs, a thin writable layer is added on top. This means if two images share the same base (e.g., ubuntu:22.04), that base layer is stored only once on disk. (Source: Docker docs — 'About storage drivers'; OCI image spec)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Container images: layered filesystem, build instructions, registries, tagging, and security scanning",
+    "topic_label": "Images & Registries",
+    "total_topic_questions": 8,
+    "tags": [
+      "containers"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-4a7deb6cd9",
+    "q_number": 11,
+    "question": "A developer adds a secret API key in a RUN instruction midway through a Dockerfile, then deletes it in a later RUN instruction. Is the secret safe in the final image?",
+    "choices": [
+      "Yes — the deletion instruction removes the secret from all previous layers",
+      "No — the secret remains accessible in the intermediate layer where it was written, even though it was deleted in a later layer",
+      "Yes — Docker encrypts secrets that are written and then deleted within the same build",
+      "No — only secrets in the final layer are stored; all earlier layers are discarded"
+    ],
+    "correct": "No — the secret remains accessible in the intermediate layer where it was written, even though it was deleted in a later layer",
+    "explanation": "Each layer is immutable and independently stored. Deleting a file in a later RUN instruction only adds a 'whiteout' entry in the new layer — the file still exists in the layer where it was created. Anyone who pulls the image and inspects its layers can recover the secret. The correct approach is to use BuildKit's `--secret` mount (or multi-stage builds) so secrets are never written to any image layer. (Source: Docker docs — 'Build secrets'; Docker docs — 'Best practices for writing Dockerfiles')",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Container images: layered filesystem, build instructions, registries, tagging, and security scanning",
+    "topic_label": "Images & Registries",
+    "total_topic_questions": 8,
+    "tags": [
+      "containers",
+      "security"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-8ff5a69916",
+    "q_number": 12,
+    "question": "What is the purpose of the FROM instruction at the start of a Dockerfile?",
+    "choices": [
+      "FROM specifies the final output filename for the built image",
+      "FROM declares the base image whose filesystem and environment the new image builds upon",
+      "FROM sets the working directory for all subsequent instructions",
+      "FROM defines the network namespace the container will use at runtime"
+    ],
+    "correct": "FROM declares the base image whose filesystem and environment the new image builds upon",
+    "explanation": "The FROM instruction selects the starting point — a parent image — for the new image being built. All subsequent instructions add layers on top of that base. Using a minimal, well-maintained base image (e.g., alpine, distroless) reduces image size and attack surface. A Dockerfile can use multiple FROM statements for multi-stage builds. (Source: Docker docs — 'Dockerfile reference — FROM')",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Container images: layered filesystem, build instructions, registries, tagging, and security scanning",
+    "topic_label": "Images & Registries",
+    "total_topic_questions": 8,
+    "tags": [
+      "containers"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-eb97ed8d24",
+    "q_number": 13,
+    "question": "What is the conceptual difference between the CMD and ENTRYPOINT instructions in a Dockerfile?",
+    "choices": [
+      "CMD executes during image build; ENTRYPOINT executes when the container starts",
+      "ENTRYPOINT defines the executable that runs when the container starts; CMD provides default arguments to that executable (or the default command if ENTRYPOINT is not set)",
+      "CMD and ENTRYPOINT are aliases — either can be used to define what runs at container start",
+      "ENTRYPOINT sets environment variables; CMD runs the main process"
+    ],
+    "correct": "ENTRYPOINT defines the executable that runs when the container starts; CMD provides default arguments to that executable (or the default command if ENTRYPOINT is not set)",
+    "explanation": "ENTRYPOINT locks in the container's main executable (e.g., a web server binary). CMD supplies default arguments to that executable; users can override CMD at `docker run` time without replacing the ENTRYPOINT. If ENTRYPOINT is absent, CMD itself becomes the command. This separation allows images to behave like self-contained tools while remaining configurable. (Source: Docker docs — 'Dockerfile reference — CMD and ENTRYPOINT')",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Container images: layered filesystem, build instructions, registries, tagging, and security scanning",
+    "topic_label": "Images & Registries",
+    "total_topic_questions": 8,
+    "tags": [
+      "containers"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-45e8705ce4",
+    "q_number": 14,
+    "question": "An image is tagged as `myapp:latest` in your registry. Why is relying on the `latest` tag considered a risky practice in production?",
+    "choices": [
+      "The `latest` tag is reserved for internal use by the container runtime and should not be applied to custom images",
+      "`latest` is a mutable pointer — it can refer to different image content at different points in time, making deployments non-deterministic",
+      "`latest` tagged images are automatically deleted by registries after 30 days",
+      "Kubernetes refuses to pull images tagged `latest` in production clusters"
+    ],
+    "correct": "`latest` is a mutable pointer — it can refer to different image content at different points in time, making deployments non-deterministic",
+    "explanation": "An image tag is just a label; it can be moved to point to a new image digest at any time. Using `latest` means different nodes in a cluster might pull different underlying images depending on when they were scheduled. The reliable alternative is to tag images with a unique, immutable identifier — typically the Git commit SHA or a semantic version. For complete immutability, reference images by their SHA-256 digest. (Source: Docker docs — 'Docker tag'; Kubernetes docs — 'Images')",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Container images: layered filesystem, build instructions, registries, tagging, and security scanning",
+    "topic_label": "Images & Registries",
+    "total_topic_questions": 8,
+    "tags": [
+      "containers",
+      "reliability"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-236a95fc0e",
+    "q_number": 15,
+    "question": "What does an image digest (e.g., `sha256:a3f...`) guarantee that an image tag does not?",
+    "choices": [
+      "A digest guarantees the image was built from a verified Dockerfile",
+      "A digest is a cryptographic hash of the image content; pulling by digest guarantees you get exactly that image, even if a tag is later updated to point elsewhere",
+      "A digest is a timestamp that proves when the image was built",
+      "A digest is required to pull images from private registries but is optional for public registries"
+    ],
+    "correct": "A digest is a cryptographic hash of the image content; pulling by digest guarantees you get exactly that image, even if a tag is later updated to point elsewhere",
+    "explanation": "An image digest is the SHA-256 hash of the image manifest. Because the hash is derived from content, it is immutable — if any layer or metadata changes, the digest changes. Pinning a Kubernetes deployment to a digest (e.g., `myapp@sha256:a3f...`) is the most secure way to ensure the exact same image runs on every node. (Source: Docker docs — 'Content trust'; OCI distribution spec)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Container images: layered filesystem, build instructions, registries, tagging, and security scanning",
+    "topic_label": "Images & Registries",
+    "total_topic_questions": 8,
+    "tags": [
+      "containers",
+      "security"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-1a481dd183",
+    "q_number": 16,
+    "question": "What is the primary purpose of image scanning in a container CI/CD pipeline?",
+    "choices": [
+      "To compress image layers and reduce registry storage costs",
+      "To detect known CVEs (common vulnerabilities and exposures) in the OS packages and libraries bundled into the image before it is deployed",
+      "To verify that the image was built by an authorized Dockerfile and not modified after build",
+      "To convert images from Docker format to OCI format for Kubernetes compatibility"
+    ],
+    "correct": "To detect known CVEs (common vulnerabilities and exposures) in the OS packages and libraries bundled into the image before it is deployed",
+    "explanation": "Image scanners (e.g., Trivy, Grype, Snyk) compare the packages installed in each image layer against public vulnerability databases (NVD, OSV). Running a scan in CI lets you block deployments of images with critical vulnerabilities before they reach production. This is a foundational practice in supply chain security ('shift-left security'). (Source: CNCF cloud-native security whitepaper; Docker docs — 'Scan images')",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Container images: layered filesystem, build instructions, registries, tagging, and security scanning",
+    "topic_label": "Images & Registries",
+    "total_topic_questions": 8,
+    "tags": [
+      "containers",
+      "security",
+      "cicd"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-dd1c0dea80",
+    "q_number": 17,
+    "question": "What is the main advantage of using a private container registry instead of Docker Hub for production workloads?",
+    "choices": [
+      "Private registries build images faster than Docker Hub",
+      "Private registries store images in a non-layered format that is more efficient",
+      "Private registries keep images internal to your network, provide access control, and eliminate dependency on a third-party public service during deployments",
+      "Private registries automatically sign all images with a code-signing certificate"
+    ],
+    "correct": "Private registries keep images internal to your network, provide access control, and eliminate dependency on a third-party public service during deployments",
+    "explanation": "Public registries like Docker Hub have rate limits, availability risks, and expose your image list publicly. A private registry (e.g., AWS ECR, GCR, Harbor, Artifactory) sits inside your network perimeter, allows fine-grained RBAC, keeps images close to your clusters for faster pulls, and removes third-party availability from your critical deployment path. (Source: Docker docs — 'Registry'; CNCF Harbor project documentation)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Container images: layered filesystem, build instructions, registries, tagging, and security scanning",
+    "topic_label": "Images & Registries",
+    "total_topic_questions": 8,
+    "tags": [
+      "containers",
+      "security"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-8128add881",
+    "q_number": 18,
+    "question": "What is a Kubernetes Pod, and why is it the smallest deployable unit rather than a container?",
+    "choices": [
+      "A Pod is a VM provisioned by the cloud provider; it is the smallest unit because VMs cannot be subdivided",
+      "A Pod is a grouping of one or more containers that share the same network namespace and storage volumes, and are always scheduled together on the same node",
+      "A Pod is a single container with a dedicated IP address; it is the smallest unit because each IP can only be assigned to one container",
+      "A Pod is a configuration file that describes how to build an image; it is the smallest deployable unit because images cannot be deployed without one"
+    ],
+    "correct": "A Pod is a grouping of one or more containers that share the same network namespace and storage volumes, and are always scheduled together on the same node",
+    "explanation": "Kubernetes uses the Pod as its atomic scheduling unit because some application patterns require tightly coupled containers (e.g., a main app container and a sidecar logging agent) that must share localhost networking and volumes. Containers inside a Pod communicate over localhost and see the same mounted volumes, but they are otherwise isolated. Kubernetes manages Pods, not individual containers. (Source: kubernetes.io/docs/concepts/workloads/pods/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Pod anatomy, lifecycle, workload controllers, resource management, and scheduling",
+    "topic_label": "Pods & Workloads",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-6cc90621ff",
+    "q_number": 19,
+    "question": "A Pod passes through which sequence of lifecycle phases from creation to successful completion?",
+    "choices": [
+      "Created → Running → Terminated → Deleted",
+      "Pending → Running → Succeeded (or Failed)",
+      "Scheduled → Initializing → Active → Done",
+      "Queued → Booting → Healthy → Stopped"
+    ],
+    "correct": "Pending → Running → Succeeded (or Failed)",
+    "explanation": "Kubernetes defines official Pod phase values: Pending (the Pod has been accepted but containers are not yet running — node assignment or image pull may be in progress), Running (at least one container is running), Succeeded (all containers exited with status 0), Failed (at least one container exited non-zero), and Unknown (state cannot be determined). Understanding these phases is essential for diagnosing why a Pod is not doing what you expect. (Source: kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Pod anatomy, lifecycle, workload controllers, resource management, and scheduling",
+    "topic_label": "Pods & Workloads",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-ed33b1523f",
+    "q_number": 20,
+    "question": "What is the key difference between a Kubernetes Deployment and a StatefulSet?",
+    "choices": [
+      "Deployments run containers as root; StatefulSets run containers as non-root users",
+      "Deployments manage stateless Pods with interchangeable replicas; StatefulSets provide each Pod with a stable, unique network identity and persistent storage that follows the Pod across rescheduling",
+      "Deployments can only run one replica at a time; StatefulSets support horizontal scaling",
+      "Deployments are used for batch jobs; StatefulSets are used for long-running services"
+    ],
+    "correct": "Deployments manage stateless Pods with interchangeable replicas; StatefulSets provide each Pod with a stable, unique network identity and persistent storage that follows the Pod across rescheduling",
+    "explanation": "In a Deployment, replicas are fungible — Pod names are random, and any Pod can be replaced without distinction. StatefulSets assign each Pod a persistent ordinal index (e.g., mysql-0, mysql-1), a stable DNS hostname, and a dedicated PersistentVolumeClaim. This is critical for distributed databases (Cassandra, MongoDB) and other stateful systems that require identity-aware clustering. (Source: kubernetes.io/docs/concepts/workloads/controllers/statefulset/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Pod anatomy, lifecycle, workload controllers, resource management, and scheduling",
+    "topic_label": "Pods & Workloads",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-26918dae08",
+    "q_number": 21,
+    "question": "Your cluster has 10 nodes and you need a log-collection agent running on every single node, including nodes added in the future. Which workload controller is designed for this?",
+    "choices": [
+      "Deployment",
+      "StatefulSet",
+      "DaemonSet",
+      "CronJob"
+    ],
+    "correct": "DaemonSet",
+    "explanation": "A DaemonSet ensures that exactly one copy of a Pod runs on every node in the cluster (or on a subset defined by a node selector). When new nodes join, the DaemonSet controller automatically schedules the Pod on them; when nodes are removed, the Pod is garbage-collected. Typical use cases include log collectors (Fluentd, Fluent Bit), node monitoring agents (node-exporter), and CNI networking plugins. (Source: kubernetes.io/docs/concepts/workloads/controllers/daemonset/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Pod anatomy, lifecycle, workload controllers, resource management, and scheduling",
+    "topic_label": "Pods & Workloads",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "observability"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-f3d47af9fe",
+    "q_number": 22,
+    "question": "What distinguishes a Kubernetes Job from a Deployment?",
+    "choices": [
+      "A Job runs continuously and restarts failed Pods automatically; a Deployment runs to completion once",
+      "A Deployment scales horizontally; a Job cannot have more than one Pod",
+      "A Job runs Pods to completion (the task succeeds when a specified number of completions are reached); a Deployment keeps a set of Pods running indefinitely",
+      "A Job is only for scheduled batch work; a Deployment handles all other workload types"
+    ],
+    "correct": "A Job runs Pods to completion (the task succeeds when a specified number of completions are reached); a Deployment keeps a set of Pods running indefinitely",
+    "explanation": "A Deployment's reconciliation loop continuously tries to maintain a desired number of running replicas. A Job, by contrast, tracks successful completions: once the defined number of Pods complete successfully, the Job is done. If a Pod fails, the Job controller creates a replacement, up to a backoff limit. CronJob wraps a Job to run it on a schedule. (Source: kubernetes.io/docs/concepts/workloads/controllers/job/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Pod anatomy, lifecycle, workload controllers, resource management, and scheduling",
+    "topic_label": "Pods & Workloads",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-3f1d6ed892",
+    "q_number": 23,
+    "question": "What is the difference between resource `requests` and resource `limits` on a Kubernetes container?",
+    "choices": [
+      "Requests are enforced at runtime; limits are only advisory hints to the scheduler",
+      "Requests tell the scheduler how much resource to reserve when placing the Pod; limits cap the maximum resource the container may consume at runtime",
+      "Requests and limits are identical — setting one automatically sets the other to the same value",
+      "Requests apply to CPU only; limits apply to memory only"
+    ],
+    "correct": "Requests tell the scheduler how much resource to reserve when placing the Pod; limits cap the maximum resource the container may consume at runtime",
+    "explanation": "The kube-scheduler sums container requests to decide whether a node has enough capacity to host a Pod. At runtime, cgroups enforce limits: a container exceeding its CPU limit is throttled; a container exceeding its memory limit is OOMKilled by the kernel. Setting requests without limits can allow one container to starve others ('noisy neighbor'). Setting limits without requests makes scheduling unpredictable. Best practice is to set both. (Source: kubernetes.io/docs/concepts/configuration/manage-resources-containers/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Pod anatomy, lifecycle, workload controllers, resource management, and scheduling",
+    "topic_label": "Pods & Workloads",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-427cae9213",
+    "q_number": 24,
+    "question": "What is the role of an init container in a Kubernetes Pod?",
+    "choices": [
+      "Init containers run alongside the main container to handle health checks",
+      "Init containers run to completion before any app containers in the Pod start, allowing setup tasks such as waiting for a dependency or pre-populating a shared volume",
+      "Init containers are lightweight proxy containers that intercept inbound traffic before it reaches the app container",
+      "Init containers replace the main container if it fails to start within a defined timeout"
+    ],
+    "correct": "Init containers run to completion before any app containers in the Pod start, allowing setup tasks such as waiting for a dependency or pre-populating a shared volume",
+    "explanation": "Init containers are specialized containers that run sequentially before the application containers start. Common uses include: waiting until a database is ready (polling a readiness endpoint), cloning a Git repository into a shared volume, or injecting configuration files. If any init container fails, Kubernetes restarts the Pod (subject to restartPolicy). Only after all init containers complete does the main application container start. (Source: kubernetes.io/docs/concepts/workloads/pods/init-containers/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Pod anatomy, lifecycle, workload controllers, resource management, and scheduling",
+    "topic_label": "Pods & Workloads",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-c2e290fcc0",
+    "q_number": 25,
+    "question": "A Pod has `restartPolicy: Never`. One of its containers exits with a non-zero code. What happens?",
+    "choices": [
+      "Kubernetes restarts the container immediately and records a restart count",
+      "Kubernetes replaces the entire Pod with a new one",
+      "The container is not restarted; the Pod moves to the Failed phase",
+      "The kubelet sends an alert but keeps the container in a stopped state indefinitely"
+    ],
+    "correct": "The container is not restarted; the Pod moves to the Failed phase",
+    "explanation": "restartPolicy controls whether containers within a Pod are restarted after they exit. `Never` means containers are not restarted under any circumstances. If any container fails, the Pod's phase becomes Failed. `Always` (the default) always restarts; `OnFailure` restarts only on non-zero exit. Jobs typically use `OnFailure` or `Never`. (Source: kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Pod anatomy, lifecycle, workload controllers, resource management, and scheduling",
+    "topic_label": "Pods & Workloads",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "troubleshooting"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-bb2f2ee72d",
+    "q_number": 26,
+    "question": "What does a Kubernetes Service of type `ClusterIP` do?",
+    "choices": [
+      "It exposes the application on a port of every node in the cluster, accessible from outside the cluster",
+      "It provisions a cloud load balancer with a public IP address in front of the Pods",
+      "It creates a stable virtual IP address reachable only from within the cluster, load-balancing traffic across healthy matching Pods",
+      "It maps an external DNS name to a set of Pods without assigning any IP address"
+    ],
+    "correct": "It creates a stable virtual IP address reachable only from within the cluster, load-balancing traffic across healthy matching Pods",
+    "explanation": "ClusterIP is the default Service type. Kubernetes allocates a virtual IP (the cluster IP) from an internal range. kube-proxy (or eBPF-based implementations like Cilium) programs iptables/IPVS rules so that traffic to the ClusterIP is forwarded to one of the matching Pod IPs. ClusterIP is invisible outside the cluster, making it appropriate for internal service-to-service communication. (Source: kubernetes.io/docs/concepts/services-networking/service/#type-clusterip)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes Service types, DNS, Ingress, network policies, and traffic patterns",
+    "topic_label": "Services & Networking",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "networking"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-2607b5f9ef",
+    "q_number": 27,
+    "question": "What problem does a `NodePort` Service solve, and what is its key limitation compared to a `LoadBalancer` Service?",
+    "choices": [
+      "NodePort solves internal service discovery; its limitation is that it requires CoreDNS to be running",
+      "NodePort exposes a Service on a static port on every node's IP, allowing external access; its limitation is that clients must know a node's IP and the assigned port, and there is no automatic load balancing across nodes",
+      "NodePort provides TLS termination; its limitation is that it only works with HTTP traffic",
+      "NodePort allows inter-namespace communication; its limitation is that it is only available in GKE clusters"
+    ],
+    "correct": "NodePort exposes a Service on a static port on every node's IP, allowing external access; its limitation is that clients must know a node's IP and the assigned port, and there is no automatic load balancing across nodes",
+    "explanation": "NodePort opens a port (30000–32767 by default) on every cluster node and forwards traffic on that port to the Service. This makes the service reachable from outside without a cloud load balancer, which is useful for development or bare-metal clusters. However, clients must target a specific node IP; if that node is unhealthy, traffic fails. LoadBalancer builds on NodePort by provisioning a cloud-managed load balancer that distributes traffic across all healthy nodes automatically. (Source: kubernetes.io/docs/concepts/services-networking/service/#type-nodeport)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes Service types, DNS, Ingress, network policies, and traffic patterns",
+    "topic_label": "Services & Networking",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "networking"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-31ac82949d",
+    "q_number": 28,
+    "question": "A Service of type `LoadBalancer` is created in a cloud-hosted Kubernetes cluster. What happens automatically?",
+    "choices": [
+      "Kubernetes provisions an Ingress controller and assigns an internal hostname",
+      "The cloud provider's controller manager detects the Service and provisions an external cloud load balancer, assigning it a public IP that forwards traffic to the cluster nodes",
+      "Kubernetes creates a NodePort on each node and a ClusterIP, but no external resource is created",
+      "The kubelet on each node opens a firewall port and registers the node with a round-robin DNS entry"
+    ],
+    "correct": "The cloud provider's controller manager detects the Service and provisions an external cloud load balancer, assigning it a public IP that forwards traffic to the cluster nodes",
+    "explanation": "When a Service is created with `type: LoadBalancer` in a cloud environment (AWS, GCP, Azure), the cloud controller manager watches for this event and calls the cloud API to create a native load balancer (e.g., AWS ELB, GCP GCLB). The provisioned load balancer's public IP is written back to the Service's `status.loadBalancer.ingress` field. On bare-metal clusters without cloud integration, this type stays in Pending unless a tool like MetalLB is installed. (Source: kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes Service types, DNS, Ingress, network policies, and traffic patterns",
+    "topic_label": "Services & Networking",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "networking",
+      "cloud"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-f11e6de18e",
+    "q_number": 29,
+    "question": "When would you use a Service of type `ExternalName` instead of ClusterIP?",
+    "choices": [
+      "When you want to expose a Pod to the internet using a human-readable DNS name",
+      "When you want to map an in-cluster DNS name to an external DNS hostname, so Pods can reach an external service using a stable in-cluster name",
+      "When you need a Service that bypasses kube-proxy for high-performance workloads",
+      "When you want Kubernetes to assign a fixed external IP to a Deployment"
+    ],
+    "correct": "When you want to map an in-cluster DNS name to an external DNS hostname, so Pods can reach an external service using a stable in-cluster name",
+    "explanation": "ExternalName creates a CNAME DNS record in CoreDNS that resolves to an external hostname (e.g., `rds.amazonaws.com`). Pods inside the cluster use the in-cluster Service name, so if the external endpoint changes (e.g., database hostname changes after a migration), only the ExternalName Service needs to be updated — not every application config. It does not create ClusterIP or Endpoints; it is purely a DNS alias. (Source: kubernetes.io/docs/concepts/services-networking/service/#externalname)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes Service types, DNS, Ingress, network policies, and traffic patterns",
+    "topic_label": "Services & Networking",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "networking"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-787a8867c4",
+    "q_number": 30,
+    "question": "How does a Pod resolve the DNS name `my-service.my-namespace.svc.cluster.local`?",
+    "choices": [
+      "The kubelet on the Pod's node resolves the name using the host's /etc/resolv.conf",
+      "CoreDNS, running as a cluster add-on, receives the DNS query and returns the ClusterIP of the Service named `my-service` in namespace `my-namespace`",
+      "The Kubernetes API server intercepts DNS queries from Pods and performs name resolution internally",
+      "Each Pod maintains a local DNS cache that is synchronized from the etcd key-value store"
+    ],
+    "correct": "CoreDNS, running as a cluster add-on, receives the DNS query and returns the ClusterIP of the Service named `my-service` in namespace `my-namespace`",
+    "explanation": "Kubernetes configures each Pod's `/etc/resolv.conf` to point to the ClusterIP of the CoreDNS Service (by default in the `kube-system` namespace). CoreDNS watches Kubernetes API events and maintains DNS records for every Service and (optionally) Pod. The FQDN format `<service>.<namespace>.svc.<cluster-domain>` is the fully qualified form; shorter forms like `my-service` or `my-service.my-namespace` also work within the cluster due to search domain configuration. (Source: kubernetes.io/docs/concepts/services-networking/dns-pod-service/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes Service types, DNS, Ingress, network policies, and traffic patterns",
+    "topic_label": "Services & Networking",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "networking"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-b4d2daee8f",
+    "q_number": 31,
+    "question": "What problem does a Kubernetes Ingress resource solve that a LoadBalancer Service does not?",
+    "choices": [
+      "Ingress enables Pods to communicate within the cluster; LoadBalancer only allows external access",
+      "Ingress provides HTTP/HTTPS routing rules (virtual hosting, path-based routing, TLS termination) in a single entry point; using a LoadBalancer per Service would require one cloud load balancer per Service, which is expensive",
+      "Ingress balances TCP traffic; LoadBalancer can only handle UDP traffic",
+      "Ingress allows Services to receive traffic from other namespaces; LoadBalancer is namespace-scoped"
+    ],
+    "correct": "Ingress provides HTTP/HTTPS routing rules (virtual hosting, path-based routing, TLS termination) in a single entry point; using a LoadBalancer per Service would require one cloud load balancer per Service, which is expensive",
+    "explanation": "An Ingress resource defines Layer 7 routing rules (host-based or path-based) and is implemented by an Ingress controller (e.g., nginx-ingress, Traefik, AWS ALB controller). One cloud load balancer can front many Services by routing `example.com/api` to Service A and `example.com/web` to Service B. This avoids provisioning a separate load balancer (and paying for it) for every Service. TLS termination can also be configured centrally on the Ingress. (Source: kubernetes.io/docs/concepts/services-networking/ingress/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes Service types, DNS, Ingress, network policies, and traffic patterns",
+    "topic_label": "Services & Networking",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "networking"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-c8b00800a5",
+    "q_number": 32,
+    "question": "What is the purpose of a Kubernetes NetworkPolicy?",
+    "choices": [
+      "NetworkPolicy configures which cloud subnets Kubernetes nodes belong to",
+      "NetworkPolicy defines firewall-like rules that control which Pods (or namespaces) are allowed to send or receive traffic to/from other Pods, providing micro-segmentation within the cluster",
+      "NetworkPolicy routes traffic between Services and external load balancers",
+      "NetworkPolicy sets the MTU and DNS search domain for each Pod"
+    ],
+    "correct": "NetworkPolicy defines firewall-like rules that control which Pods (or namespaces) are allowed to send or receive traffic to/from other Pods, providing micro-segmentation within the cluster",
+    "explanation": "By default, Kubernetes allows all Pod-to-Pod communication within a cluster. NetworkPolicy resources let you restrict that — for example, allowing only the `frontend` namespace to reach the `backend` Service, or blocking all egress except to a specific CIDR. Enforcement requires a CNI plugin that supports NetworkPolicy (e.g., Calico, Cilium, Weave). Without such a plugin, NetworkPolicy resources are accepted but not enforced. (Source: kubernetes.io/docs/concepts/services-networking/network-policies/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes Service types, DNS, Ingress, network policies, and traffic patterns",
+    "topic_label": "Services & Networking",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "networking",
+      "security"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-77d598cb57",
+    "q_number": 33,
+    "question": "In the context of Kubernetes traffic patterns, what is the difference between 'east-west' and 'north-south' traffic?",
+    "choices": [
+      "East-west traffic flows between data center regions; north-south traffic flows within a single availability zone",
+      "East-west traffic is service-to-service communication within the cluster; north-south traffic is between external clients and cluster Services",
+      "East-west traffic uses TCP; north-south traffic uses UDP",
+      "East-west traffic is encrypted by default; north-south traffic is unencrypted"
+    ],
+    "correct": "East-west traffic is service-to-service communication within the cluster; north-south traffic is between external clients and cluster Services",
+    "explanation": "These terms describe the direction of traffic flow. East-west (lateral) traffic — e.g., the `order-service` calling `payment-service` — stays inside the cluster and is typically governed by NetworkPolicies and service mesh mTLS. North-south traffic enters or leaves the cluster boundary — e.g., a user's browser hitting an Ingress controller. Separating these concerns helps teams reason about security controls, latency, and observability tools appropriate for each path. (Source: CNCF service mesh landscape; kubernetes.io/docs/concepts/services-networking/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes Service types, DNS, Ingress, network policies, and traffic patterns",
+    "topic_label": "Services & Networking",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "networking"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-48f7467930",
+    "q_number": 34,
+    "question": "A Pod needs 10 GB of storage that persists independently of the Pod's lifecycle. Which Kubernetes objects model this correctly?",
+    "choices": [
+      "Create a ConfigMap with 10 GB of binary data and mount it as a volume",
+      "Create a PersistentVolume (PV) that represents the storage resource, and a PersistentVolumeClaim (PVC) that the Pod references to consume it",
+      "Mount an emptyDir volume in the Pod spec — it persists for the lifetime of the node",
+      "Add a hostPath volume pointing to a node directory — it persists across Pod restarts because the node's filesystem is durable"
+    ],
+    "correct": "Create a PersistentVolume (PV) that represents the storage resource, and a PersistentVolumeClaim (PVC) that the Pod references to consume it",
+    "explanation": "A PersistentVolume (PV) is a cluster-level storage resource (an NFS share, an EBS volume, a Ceph RBD, etc.) provisioned by an admin or dynamically by a StorageClass. A PersistentVolumeClaim (PVC) is a user's request for storage — it specifies size, access mode, and optionally a StorageClass. Kubernetes binds the PVC to a matching PV. The Pod mounts the PVC; the data persists even if the Pod is deleted and a new one is created. (Source: kubernetes.io/docs/concepts/storage/persistent-volumes/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes storage concepts: PVs, PVCs, StorageClasses, volume types, and access modes",
+    "topic_label": "Storage",
+    "total_topic_questions": 7,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-881fa0a534",
+    "q_number": 35,
+    "question": "What does a Kubernetes StorageClass enable that static PersistentVolume provisioning does not?",
+    "choices": [
+      "StorageClass enables Pods to write to the same volume simultaneously (ReadWriteMany) without any additional configuration",
+      "StorageClass enables dynamic provisioning: when a PVC is created, Kubernetes automatically creates a backing storage resource on the cloud provider or storage system without an administrator pre-creating PVs",
+      "StorageClass defines which nodes are allowed to mount a given volume",
+      "StorageClass encrypts all data written to the volume using a cluster-managed key"
+    ],
+    "correct": "StorageClass enables dynamic provisioning: when a PVC is created, Kubernetes automatically creates a backing storage resource on the cloud provider or storage system without an administrator pre-creating PVs",
+    "explanation": "With static provisioning, an admin must manually create PV objects for every storage request. StorageClass objects define a provisioner plugin (e.g., `kubernetes.io/aws-ebs`, a CSI driver) and parameters. When a PVC references a StorageClass, the provisioner automatically creates and configures the underlying storage. This is critical for self-service, autoscaling, and GitOps workflows where pre-provisioned volumes would be a bottleneck. (Source: kubernetes.io/docs/concepts/storage/storage-classes/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes storage concepts: PVs, PVCs, StorageClasses, volume types, and access modes",
+    "topic_label": "Storage",
+    "total_topic_questions": 7,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-f546aaed20",
+    "q_number": 36,
+    "question": "What is the difference between an `emptyDir` volume and a `hostPath` volume in Kubernetes?",
+    "choices": [
+      "emptyDir is backed by cloud block storage; hostPath is backed by network-attached storage",
+      "emptyDir is created fresh when a Pod starts and deleted when the Pod is removed; hostPath mounts a directory from the host node's filesystem, which persists after the Pod is deleted",
+      "emptyDir allows multiple Pods to share data; hostPath is exclusive to one Pod at a time",
+      "emptyDir requires a StorageClass; hostPath uses the default PersistentVolume"
+    ],
+    "correct": "emptyDir is created fresh when a Pod starts and deleted when the Pod is removed; hostPath mounts a directory from the host node's filesystem, which persists after the Pod is deleted",
+    "explanation": "emptyDir is a temporary, ephemeral volume that lives exactly as long as the Pod — useful for scratch space or sharing files between containers in the same Pod. hostPath maps a real directory on the underlying node into the Pod; data in it survives Pod deletion but is tied to that specific node, making it unsuitable for replicated or portable workloads (and a security risk because it can expose host files). PersistentVolumes are the correct approach for durable, portable storage. (Source: kubernetes.io/docs/concepts/storage/volumes/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes storage concepts: PVs, PVCs, StorageClasses, volume types, and access modes",
+    "topic_label": "Storage",
+    "total_topic_questions": 7,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-392c13304b",
+    "q_number": 37,
+    "question": "A PersistentVolume has `persistentVolumeReclaimPolicy: Retain`. What happens to the volume after the PVC that bound it is deleted?",
+    "choices": [
+      "The PV and its data are immediately deleted to free up storage",
+      "The PV is automatically made available and can be immediately bound to a new PVC",
+      "The PV moves to a Released state and its data is preserved; an administrator must manually reclaim or delete the PV before it can be reused",
+      "The PV is re-formatted and returned to the Available pool automatically"
+    ],
+    "correct": "The PV moves to a Released state and its data is preserved; an administrator must manually reclaim or delete the PV before it can be reused",
+    "explanation": "The reclaim policy controls what happens to a PV after its PVC is deleted. `Retain` means the PV is not deleted and its data is kept intact — an admin must manually intervene (inspect, back up, delete, or re-create the PV) before the storage can be reused. `Delete` (the default for dynamically provisioned volumes) deletes both the PV object and the underlying storage resource. `Recycle` (deprecated) performs a basic scrub. (Source: kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes storage concepts: PVs, PVCs, StorageClasses, volume types, and access modes",
+    "topic_label": "Storage",
+    "total_topic_questions": 7,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-47ab7f9d39",
+    "q_number": 38,
+    "question": "A StatefulSet with 3 replicas needs each Pod to have its own exclusive persistent storage. Which PVC access mode is appropriate?",
+    "choices": [
+      "ReadWriteMany — all three Pods share one volume",
+      "ReadOnlyMany — each Pod reads from a shared read-only snapshot",
+      "ReadWriteOnce — each Pod gets its own PVC that can be written to by that single Pod",
+      "ReadWriteOncePod — this allows all Pods to write but rate-limits them"
+    ],
+    "correct": "ReadWriteOnce — each Pod gets its own PVC that can be written to by that single Pod",
+    "explanation": "ReadWriteOnce (RWO) means the volume can be mounted as read-write by a single node at a time. StatefulSets create a separate PVC per replica via `volumeClaimTemplates`, so each Pod (mysql-0, mysql-1, mysql-2) gets its own dedicated volume. ReadWriteMany (RWX) would allow a shared volume mounted by multiple nodes simultaneously — suitable for shared filesystems (NFS, EFS) but not for exclusive-write workloads. (Source: kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes storage concepts: PVs, PVCs, StorageClasses, volume types, and access modes",
+    "topic_label": "Storage",
+    "total_topic_questions": 7,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-a5a400f015",
+    "q_number": 39,
+    "question": "What is the Container Storage Interface (CSI), and why was it introduced in Kubernetes?",
+    "choices": [
+      "CSI is a Kubernetes API for monitoring disk I/O metrics from within containers",
+      "CSI is a standardized interface between container orchestrators and storage vendors, so storage drivers can be developed and shipped independently of the Kubernetes core codebase",
+      "CSI is a protocol for encrypting data at rest in PersistentVolumes",
+      "CSI replaces PersistentVolumes and PersistentVolumeClaims with a simpler file-mount model"
+    ],
+    "correct": "CSI is a standardized interface between container orchestrators and storage vendors, so storage drivers can be developed and shipped independently of the Kubernetes core codebase",
+    "explanation": "Before CSI, storage plugins were compiled directly into the Kubernetes binary ('in-tree' plugins). Adding or updating a storage driver required a Kubernetes release. CSI defines a gRPC-based API that any storage vendor can implement as an out-of-tree plugin deployed as Pods in the cluster. This lets vendors like Portworx, NetApp, or cloud providers release and update their drivers without waiting for Kubernetes release cycles. (Source: kubernetes.io/docs/concepts/storage/volumes/#csi; CNCF CSI spec)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes storage concepts: PVs, PVCs, StorageClasses, volume types, and access modes",
+    "topic_label": "Storage",
+    "total_topic_questions": 7,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-c5dd0ad176",
+    "q_number": 40,
+    "question": "A Pod is stuck in `CrashLoopBackOff`. What does this status indicate, and what are the most common causes?",
+    "choices": [
+      "The Pod's image cannot be pulled from the registry; common causes are an incorrect image name or missing registry credentials",
+      "The Pod has been manually paused by an administrator and is waiting for manual intervention to resume",
+      "The container keeps starting and immediately crashing; Kubernetes restarts it with exponential backoff delays. Common causes include an application crash on startup, a missing required environment variable or config, an incorrect command/entrypoint, or a failing liveness probe",
+      "The node the Pod is scheduled on has run out of disk space and the container cannot be created"
+    ],
+    "correct": "The container keeps starting and immediately crashing; Kubernetes restarts it with exponential backoff delays. Common causes include an application crash on startup, a missing required environment variable or config, an incorrect command/entrypoint, or a failing liveness probe",
+    "explanation": "CrashLoopBackOff means the kubelet has restarted the container multiple times, and each restart has ended in failure. The 'BackOff' part indicates Kubernetes is adding exponential delay (10s, 20s, 40s... up to 5 minutes) between restart attempts to avoid overwhelming the system. Diagnostic steps: `kubectl describe pod <pod>` to check events, `kubectl logs <pod> --previous` to read the last crash's output, and verify environment variables, secrets, and config maps are correctly mounted. (Source: kubernetes.io/docs/tasks/debug/debug-application/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Diagnosing and resolving common Kubernetes failure states",
+    "topic_label": "Troubleshooting",
+    "total_topic_questions": 9,
+    "tags": [
+      "troubleshooting",
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-b4b26a3819",
+    "q_number": 41,
+    "question": "A container's status shows `OOMKilled`. What caused it, and how would you resolve it?",
+    "choices": [
+      "The container's image was not found in the registry; increase the image pull timeout",
+      "The container attempted to write more data to disk than allowed by the StorageClass quota; increase the PVC size",
+      "The container exceeded its memory limit and was killed by the Linux kernel's Out-Of-Memory killer; the fix is to increase the memory limit in the Pod spec or reduce the application's memory usage",
+      "The node ran out of CPU capacity and the container was evicted; add more nodes to the cluster"
+    ],
+    "correct": "The container exceeded its memory limit and was killed by the Linux kernel's Out-Of-Memory killer; the fix is to increase the memory limit in the Pod spec or reduce the application's memory usage",
+    "explanation": "When a container exceeds its configured memory limit, the Linux cgroup enforces it by triggering the OOM killer, which terminates the container process. Kubernetes records this as `OOMKilled` in the container status. Short-term fix: raise the `resources.limits.memory` in the Pod spec. Long-term: profile the application's memory usage, check for memory leaks, and set both requests and limits based on observed data. `kubectl top pod` can show current usage to guide the right limit. (Source: kubernetes.io/docs/concepts/configuration/manage-resources-containers/; kernel.org OOM documentation)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Diagnosing and resolving common Kubernetes failure states",
+    "topic_label": "Troubleshooting",
+    "total_topic_questions": 9,
+    "tags": [
+      "troubleshooting",
+      "kubernetes",
+      "observability"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-5d0095f31a",
+    "q_number": 42,
+    "question": "A Pod shows the status `ImagePullBackOff`. What are the most likely root causes?",
+    "choices": [
+      "The container's command exited with a non-zero code before the image could be fully extracted",
+      "The node does not have enough disk space to store the image layers after pulling",
+      "The image name or tag is incorrect, the image does not exist in the registry, or the cluster lacks the credentials (an imagePullSecret) to authenticate to a private registry",
+      "The Pod's resource requests exceed the node's available capacity, preventing image scheduling"
+    ],
+    "correct": "The image name or tag is incorrect, the image does not exist in the registry, or the cluster lacks the credentials (an imagePullSecret) to authenticate to a private registry",
+    "explanation": "ImagePullBackOff (and the transient form ErrImagePull) means the kubelet failed to pull the container image. The three most common reasons: (1) typo in the image name or tag — verify with `kubectl describe pod`; (2) the image was deleted or the tag was removed from the registry; (3) the registry requires authentication and no `imagePullSecret` with valid credentials is configured on the Pod or service account. Check the Events section of `kubectl describe pod` for the exact error message. (Source: kubernetes.io/docs/concepts/containers/images/; kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Diagnosing and resolving common Kubernetes failure states",
+    "topic_label": "Troubleshooting",
+    "total_topic_questions": 9,
+    "tags": [
+      "troubleshooting",
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-1f65c54cf9",
+    "q_number": 43,
+    "question": "A newly created Pod stays in `Pending` state for several minutes. What would you check first?",
+    "choices": [
+      "Check whether the container's liveness probe is correctly configured",
+      "Check the Pod's logs for application startup errors",
+      "Run `kubectl describe pod` to inspect Events — common causes include insufficient node resources (CPU/memory), no node matching the Pod's nodeSelector/affinity/tolerations, or no nodes being schedulable at all",
+      "Check whether the Service associated with the Pod has a valid selector"
+    ],
+    "correct": "Run `kubectl describe pod` to inspect Events — common causes include insufficient node resources (CPU/memory), no node matching the Pod's nodeSelector/affinity/tolerations, or no nodes being schedulable at all",
+    "explanation": "A Pod in Pending state has been accepted by the API server but has not been bound to a node yet — or the node is assigned but the container has not started. `kubectl describe pod` reveals the scheduler's reasoning in the Events field. Common scheduler errors: `Insufficient cpu`, `Insufficient memory`, `0/3 nodes are available: 3 node(s) had untolerated taint`. Other causes: PVC not bound (storage unavailable), cluster autoscaler not yet provisioned a new node. The Pod's own logs are not yet available when it is in Pending. (Source: kubernetes.io/docs/tasks/debug/debug-application/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Diagnosing and resolving common Kubernetes failure states",
+    "topic_label": "Troubleshooting",
+    "total_topic_questions": 9,
+    "tags": [
+      "troubleshooting",
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-9e52a6657e",
+    "q_number": 44,
+    "question": "A Pod cannot reach another Service by its DNS name even though the Service and its backing Pods are all Running. What should you investigate?",
+    "choices": [
+      "Verify that both Pods use the same container image",
+      "Check that the Service's label selector correctly matches the target Pod labels, that CoreDNS is running and healthy, and that no NetworkPolicy is blocking the traffic",
+      "Restart the kube-apiserver to flush the service registry cache",
+      "Increase the memory limit of the calling Pod — DNS failures are caused by insufficient memory for the DNS resolver"
+    ],
+    "correct": "Check that the Service's label selector correctly matches the target Pod labels, that CoreDNS is running and healthy, and that no NetworkPolicy is blocking the traffic",
+    "explanation": "Service-to-service reachability failures typically have one of three root causes: (1) Label selector mismatch — the Service selector does not match any Pod labels, so `Endpoints` is empty (`kubectl get endpoints <svc>`). (2) CoreDNS issue — if CoreDNS Pods are not running or are misconfigured, DNS resolution fails cluster-wide. (3) NetworkPolicy — an ingress or egress policy is blocking the traffic. Verify with `kubectl exec` running `nslookup` or `curl` from within the calling Pod. (Source: kubernetes.io/docs/tasks/debug/debug-service/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Diagnosing and resolving common Kubernetes failure states",
+    "topic_label": "Troubleshooting",
+    "total_topic_questions": 9,
+    "tags": [
+      "troubleshooting",
+      "kubernetes",
+      "networking"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-44a747cb2a",
+    "q_number": 45,
+    "question": "What is the conceptual difference between a liveness probe and a readiness probe in Kubernetes?",
+    "choices": [
+      "Liveness probes check network connectivity; readiness probes check disk space",
+      "Liveness probes run only once at container startup; readiness probes run continuously throughout the container's lifetime",
+      "A liveness probe determines whether the container should be restarted (is the process alive?); a readiness probe determines whether the container should receive traffic from a Service (is the app ready to handle requests?)",
+      "Liveness probes are configured by the developer; readiness probes are auto-generated by Kubernetes based on container metrics"
+    ],
+    "correct": "A liveness probe determines whether the container should be restarted (is the process alive?); a readiness probe determines whether the container should receive traffic from a Service (is the app ready to handle requests?)",
+    "explanation": "If a liveness probe fails, kubelet kills and restarts the container. If a readiness probe fails, Kubernetes removes the Pod's IP from the Service's Endpoints, stopping new traffic from reaching it — but does not restart the container. A classic pattern: configure a readiness probe that temporarily fails during a slow startup or database migration, preventing premature traffic while the app initializes, while the liveness probe catches true deadlocks. (Source: kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Diagnosing and resolving common Kubernetes failure states",
+    "topic_label": "Troubleshooting",
+    "total_topic_questions": 9,
+    "tags": [
+      "troubleshooting",
+      "kubernetes",
+      "reliability"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-00244e41f9",
+    "q_number": 46,
+    "question": "A liveness probe is configured with a very short `initialDelaySeconds`. The application takes 30 seconds to initialize. What symptom will you see?",
+    "choices": [
+      "The Pod will stay in Pending state until the app finishes initializing",
+      "The container will be repeatedly killed and restarted by the kubelet before it ever finishes starting, causing CrashLoopBackOff",
+      "The Pod will be marked Unschedulable until the app signals readiness via a startup hook",
+      "Kubernetes will pause the liveness probe automatically when CPU usage is high during startup"
+    ],
+    "correct": "The container will be repeatedly killed and restarted by the kubelet before it ever finishes starting, causing CrashLoopBackOff",
+    "explanation": "If `initialDelaySeconds` is shorter than the application's startup time, the liveness probe checks the health endpoint before the app is ready to respond, causing repeated failures. The kubelet kills and restarts the container each time, triggering CrashLoopBackOff. The correct remediation is to increase `initialDelaySeconds` to exceed startup time, or better yet, configure a `startupProbe` (available since Kubernetes 1.18) which gates the liveness probe until the application has started. (Source: kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Diagnosing and resolving common Kubernetes failure states",
+    "topic_label": "Troubleshooting",
+    "total_topic_questions": 9,
+    "tags": [
+      "troubleshooting",
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-f52447bd2c",
+    "q_number": 47,
+    "question": "What does `kubectl top pod` display, and what must be running in the cluster for the command to work?",
+    "choices": [
+      "It displays Pod logs sorted by recency; it requires Fluentd to be running",
+      "It displays a list of all Pods with their assigned node; it requires etcd to be accessible",
+      "It displays the current CPU and memory consumption of Pods (or containers with --containers); it requires the metrics-server add-on to be installed and running in the cluster",
+      "It displays the Pod's resource requests and limits from the spec; it works on any cluster without additional add-ons"
+    ],
+    "correct": "It displays the current CPU and memory consumption of Pods (or containers with --containers); it requires the metrics-server add-on to be installed and running in the cluster",
+    "explanation": "`kubectl top` is backed by the Kubernetes Metrics API, which is implemented by the metrics-server. Without metrics-server, `kubectl top` returns an error. The command shows real-time resource usage (sampled over a short window), not historical data. It is the first tool to reach for when diagnosing OOMKilled events or CPU throttling — compare actual usage against configured requests and limits. For historical metrics and alerting, Prometheus + Grafana is the standard. (Source: kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Diagnosing and resolving common Kubernetes failure states",
+    "topic_label": "Troubleshooting",
+    "total_topic_questions": 9,
+    "tags": [
+      "troubleshooting",
+      "kubernetes",
+      "observability"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-142a2ab1de",
+    "q_number": 48,
+    "question": "After deploying a new version of a Service, users report intermittent errors. You suspect some Pods are still serving the old version. How does a readiness probe help during a rolling update?",
+    "choices": [
+      "The readiness probe forces all old Pods to terminate before new Pods start",
+      "The readiness probe sends a canary request to the new Pod and compares the response to the expected output",
+      "The Deployment controller waits for new Pods to pass their readiness probe before removing old Pods from the Service's Endpoints, so traffic only shifts to the new version once it is confirmed ready",
+      "The readiness probe pauses the rolling update if it detects a version mismatch between Pods"
+    ],
+    "correct": "The Deployment controller waits for new Pods to pass their readiness probe before removing old Pods from the Service's Endpoints, so traffic only shifts to the new version once it is confirmed ready",
+    "explanation": "During a rolling update, Kubernetes creates new Pods and waits for them to become Ready (pass their readiness probe) before terminating old Pods. If new Pods never become Ready, the rollout stalls and old Pods continue serving traffic — preventing a bad deploy from fully taking down a Service. This is why a well-configured readiness probe is as important as correct deployment logic. `kubectl rollout status` reports progress; `kubectl rollout undo` reverts to the previous version. (Source: kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-update-deployment)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Diagnosing and resolving common Kubernetes failure states",
+    "topic_label": "Troubleshooting",
+    "total_topic_questions": 9,
+    "tags": [
+      "troubleshooting",
+      "kubernetes",
+      "reliability"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-10b2a40355",
+    "q_number": 49,
+    "question": "A Service selector is `app: backend` but the target Pods have the label `app: Backend` (capital B). Traffic is not reaching the Pods. Why?",
+    "choices": [
+      "Kubernetes automatically normalizes label values to lowercase, so the selector should still match",
+      "Label selectors in Kubernetes are case-sensitive; `app: backend` does not match `app: Backend`, so no Endpoints are created for the Service",
+      "The Pod labels need to be applied using `kubectl label` after Pod creation to activate selector matching",
+      "Services only match Pods that are in the same namespace AND have identical annotations, not just labels"
+    ],
+    "correct": "Label selectors in Kubernetes are case-sensitive; `app: backend` does not match `app: Backend`, so no Endpoints are created for the Service",
+    "explanation": "Kubernetes label keys and values are case-sensitive strings. A Service's selector must exactly match the label key-value pairs on its target Pods. When there is no match, the Endpoints object for the Service is empty, and no traffic is forwarded. You can verify with `kubectl get endpoints <service-name>` — an empty or missing Endpoints list is the telltale sign. Fix the label or selector to use a consistent casing convention. (Source: kubernetes.io/docs/concepts/services-networking/service/#defining-a-service; kubernetes.io/docs/concepts/overview/working-with-objects/labels/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes Service types, DNS, Ingress, network policies, and traffic patterns",
+    "topic_label": "Services & Networking",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "networking",
+      "troubleshooting"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-4cb2c0c249",
+    "q_number": 50,
+    "question": "A PVC has been created but stays in `Pending` state for several minutes. What are the most likely causes?",
+    "choices": [
+      "The PVC is waiting for a Pod to mount it before it can be provisioned",
+      "No PersistentVolume with matching storage class, capacity, and access mode is available, or the StorageClass provisioner failed to dynamically create the volume",
+      "PVCs always start in Pending; they transition to Bound only after the cluster administrator manually approves the claim",
+      "The namespace resource quota has been exceeded, so the PVC cannot be admitted"
+    ],
+    "correct": "No PersistentVolume with matching storage class, capacity, and access mode is available, or the StorageClass provisioner failed to dynamically create the volume",
+    "explanation": "A PVC in Pending state means Kubernetes cannot bind it to a PV. With static provisioning, either no PV exists with the right StorageClass, size, and access mode, or all matching PVs are already claimed. With dynamic provisioning, the StorageClass provisioner may have failed — check Events on the PVC with `kubectl describe pvc <name>` for errors like insufficient quota, missing credentials, or unsupported access mode. If the StorageClass has `volumeBindingMode: WaitForFirstConsumer`, binding is intentionally deferred until a Pod that uses the PVC is scheduled to a node. (Source: kubernetes.io/docs/concepts/storage/persistent-volumes/#binding; kubernetes.io/docs/concepts/storage/storage-classes/#volume-binding-mode)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes storage concepts: PVs, PVCs, StorageClasses, volume types, and access modes",
+    "topic_label": "Storage",
+    "total_topic_questions": 7,
+    "tags": [
+      "kubernetes",
+      "troubleshooting"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-a2af20c3c9",
+    "q_number": 51,
+    "question": "What is a Kubernetes ConfigMap, and how does it differ from a Secret?",
+    "choices": [
+      "ConfigMap stores encrypted credentials; Secret stores plaintext application configuration",
+      "ConfigMap and Secret are identical objects; the only difference is that Secrets support larger payloads",
+      "ConfigMap stores non-sensitive configuration data (e.g., feature flags, connection strings) as plaintext; Secret stores sensitive data (e.g., passwords, tokens) which Kubernetes base64-encodes and can be encrypted at rest",
+      "ConfigMap is for environment variables only; Secret is for file-based configuration only"
+    ],
+    "correct": "ConfigMap stores non-sensitive configuration data (e.g., feature flags, connection strings) as plaintext; Secret stores sensitive data (e.g., passwords, tokens) which Kubernetes base64-encodes and can be encrypted at rest",
+    "explanation": "ConfigMaps decouple configuration from container images, allowing the same image to be deployed to dev, staging, and production with different settings. Secrets are designed for sensitive values: they can be encrypted at rest in etcd (requires enabling encryption providers), restricted by RBAC, and are only distributed to nodes that run Pods that reference them. Note that base64 is encoding, not encryption — access control via RBAC is the primary security mechanism. (Source: kubernetes.io/docs/concepts/configuration/configmap/; kubernetes.io/docs/concepts/configuration/secret/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Pod anatomy, lifecycle, workload controllers, resource management, and scheduling",
+    "topic_label": "Pods & Workloads",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "security"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-0d22416edb",
+    "q_number": 52,
+    "question": "What is the kube-scheduler's primary responsibility in a Kubernetes cluster?",
+    "choices": [
+      "The kube-scheduler watches for new nodes joining the cluster and configures their network settings",
+      "The kube-scheduler monitors running containers and restarts them if they fail health checks",
+      "The kube-scheduler watches for newly created Pods that have no assigned node, evaluates node eligibility based on resource availability, taints/tolerations, and affinity rules, and assigns the Pod to the best-fit node",
+      "The kube-scheduler enforces ResourceQuotas by evicting Pods that exceed namespace limits"
+    ],
+    "correct": "The kube-scheduler watches for newly created Pods that have no assigned node, evaluates node eligibility based on resource availability, taints/tolerations, and affinity rules, and assigns the Pod to the best-fit node",
+    "explanation": "When a Pod is created without a `nodeName`, the kube-scheduler selects a suitable node through two phases: filtering (eliminates nodes that don't meet hard constraints like resource requests, taints, or node selectors) and scoring (ranks remaining nodes by factors like resource balance and affinity preferences). It writes the chosen node name to the Pod spec. The kubelet on that node then starts the container. The scheduler itself never starts or stops containers. (Source: kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Pod anatomy, lifecycle, workload controllers, resource management, and scheduling",
+    "topic_label": "Pods & Workloads",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes"
+    ],
+    "image": ""
+  },
+  {
+    "id": "containers-k8s-84d43d85e6",
+    "q_number": 53,
+    "question": "What is the role of `kube-proxy` on each Kubernetes node, and how does it relate to Service routing?",
+    "choices": [
+      "kube-proxy is a reverse proxy that terminates TLS for all Services in the cluster",
+      "kube-proxy programs iptables or IPVS rules on each node so that traffic sent to a Service's ClusterIP is load-balanced and forwarded to the correct Pod IPs",
+      "kube-proxy assigns IP addresses to Pods when they start by calling the cloud provider's IPAM API",
+      "kube-proxy monitors Ingress resources and updates the Ingress controller's routing table"
+    ],
+    "correct": "kube-proxy programs iptables or IPVS rules on each node so that traffic sent to a Service's ClusterIP is load-balanced and forwarded to the correct Pod IPs",
+    "explanation": "kube-proxy runs as a DaemonSet on every node. It watches the Kubernetes API for Service and Endpoints changes, then updates the node's network rules (iptables NAT rules or IPVS virtual servers) to steer traffic destined for a ClusterIP to one of the healthy backing Pod IPs. In eBPF-based CNI plugins like Cilium, kube-proxy can be replaced entirely, as the CNI performs the same routing more efficiently in the kernel. kube-proxy does not terminate connections itself — it configures kernel rules. (Source: kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/; kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies)",
+    "category": "devops",
+    "subcategory": "containers-k8s",
+    "type": "multiple",
+    "topic": "Kubernetes Service types, DNS, Ingress, network policies, and traffic patterns",
+    "topic_label": "Services & Networking",
+    "total_topic_questions": 10,
+    "tags": [
+      "kubernetes",
+      "networking"
+    ],
+    "image": ""
+  }
+]
