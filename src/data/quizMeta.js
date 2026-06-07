@@ -22,7 +22,7 @@ export const quizMeta = {
 
 export const getCategoryIcon = {
     "all": "🌐",
-    "ham-radio": "📡",
+    "ham-radio": "📻",
     "cybersecurity": "🛡️",
     "falconry": "🦅",
     // Add more category-icon pairs here
