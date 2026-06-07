@@ -130,8 +130,8 @@ function parseFrontMatter(content) {
     if (!kv) continue;
     const key = kv[1];
     let val = kv[2].trim().replace(/^["']|["']$/g, '');
-    // Handle inline arrays: [a, b, c] or comma-separated after key
-    if (val.startsWith('[')) {
+    // Handle simple inline arrays: [a, b, c] — but NOT JSON arrays like [{...}]
+    if (val.startsWith('[') && !val.includes('{')) {
       val = val.slice(1, -1).split(',').map(s => s.trim().replace(/^["']|["']$/g, ''));
     }
     meta[key] = val;
@@ -248,7 +248,9 @@ for (const file of draftFiles) {
     POST_DATE_FORMATTED: formatDate(meta.datePublished),
     POST_READING_TIME: meta.readingTime || '5',
     POST_BODY_HTML: bodyHtml,
-    POST_SOURCES_HTML: sourcesHtml || '<li>See article text for source references.</li>',
+    POST_SOURCES_SECTION: sourcesHtml
+      ? `<section class="blog-sources" aria-label="Sources">\n        <h2>Sources</h2>\n        <ul>\n          ${sourcesHtml}\n        </ul>\n      </section>`
+      : '',
     POST_QUIZ_CTA_URL: ctaUrl,
     POST_RELATED_HTML: '', // populated post-build once multiple posts exist
     SHARE_TWITTER_URL: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
