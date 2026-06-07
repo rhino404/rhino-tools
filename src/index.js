@@ -18,10 +18,22 @@ import { renderTagFilter } from './ui/tagFilter.js';
 // Service Worker Registration
 // =========================
 if ('serviceWorker' in navigator) {
+  // When a new SW takes control (after skipWaiting + clients.claim), reload once
+  // so the page picks up fresh HTML/JS instead of staying on the previous version.
+  let swReloading = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (swReloading) return;
+    swReloading = true;
+    window.location.reload();
+  });
+
   window.addEventListener('load', () => {
     navigator.serviceWorker
       .register('/service-worker.js')
-      .then(reg => console.log('[SW] Registered with scope:', reg.scope))
+      .then(reg => {
+        console.log('[SW] Registered with scope:', reg.scope);
+        reg.update(); // check for a newer SW on every load
+      })
       .catch(err => console.error('[SW] Registration failed:', err));
   });
 }
@@ -164,5 +176,31 @@ document.addEventListener('DOMContentLoaded', async () => {
       import('./core/quizLoader.js').then(({ resetQuiz }) => resetQuiz());
       showLanding();
     });
+  }
+
+  // ------------------------
+  // Blog deep-link: ?category=&subcategory=
+  // Runs after restoreSession so it overrides any restored state.
+  // Guards unknown values — falls back to landing if category is unrecognized.
+  // ------------------------
+  const params = new URLSearchParams(location.search);
+  const deepCategory = params.get('category');
+  const deepSubcategory = params.get('subcategory');
+  if (deepCategory) {
+    const validCat = getCatalogSync().categories.find(c => c.value === deepCategory);
+    if (validCat) {
+      const catLi = state.categoryOptions?.querySelector(`li[data-value="${deepCategory}"]`);
+      if (catLi) {
+        catLi.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+        if (deepSubcategory) {
+          // Wait one tick for subcategory dropdown to populate after category click
+          setTimeout(() => {
+            const subLi = state.subcategoryOptions?.querySelector(`li[data-value="${deepSubcategory}"]`);
+            if (subLi) subLi.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+          }, 0);
+        }
+        showQuiz();
+      }
+    }
   }
 });

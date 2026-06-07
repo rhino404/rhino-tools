@@ -18,4 +18,30 @@
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
+  <!-- blog:start -->
+  <url>
+    <loc>https://ryno.tools/blog/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ryno.tools/blog/falconry-mews-housing-standards/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ryno.tools/blog/ohms-law-technician-exam/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ryno.tools/blog/symmetric-vs-asymmetric-encryption/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<!-- blog:end -->
 </urlset>

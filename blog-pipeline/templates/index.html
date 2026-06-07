@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
+
+  <title>Blog — Study Guides & Exam Tips | Ryno Tools</title>
+  <meta name="description" content="Free study guides and exam prep tips for Ham Radio (Technician, General, Extra), Falconry Apprentice, and CompTIA Security+ SY0-701. Written by Ask Ryno, reviewed by humans." />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+  <link rel="canonical" href="https://ryno.tools/blog/" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Ryno Tools" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blog — Study Guides & Exam Tips | Ryno Tools" />
+  <meta property="og:description" content="Free study guides and exam prep tips for Ham Radio, Falconry, and Security+." />
+  <meta property="og:url" content="https://ryno.tools/blog/" />
+  <meta property="og:image" content="https://ryno.tools/images/og-cover.jpg" />
+  <meta property="og:image:alt" content="Ryno Tools Blog — microlearning study guides" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog — Study Guides & Exam Tips | Ryno Tools" />
+  <meta name="twitter:description" content="Free study guides for Ham Radio, Falconry, and Security+ exam prep." />
+  <meta name="twitter:image" content="https://ryno.tools/images/og-cover.jpg" />
+
+  <!-- RSS Feed Discovery -->
+  <link rel="alternate" type="application/rss+xml" title="Ryno Tools Blog" href="https://ryno.tools/blog/feed.xml" />
+
+  <!-- Ads / Analytics -->
+  <meta name="google-adsense-account" content="ca-pub-5854133806080130" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCJFB67G3V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-WCJFB67G3V");
+  </script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0f1115" />
+
+  <!-- Fonts + Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/theme.css?v=20260607b" />
+  <link rel="stylesheet" href="/css/blog.css?v=20260608" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://ryno.tools/blog/",
+        "name": "Ryno Tools Blog",
+        "description": "Study guides and exam prep tips for Ham Radio, Falconry, and CompTIA Security+.",
+        "url": "https://ryno.tools/blog/",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://ryno.tools/#org",
+          "name": "Ryno Tools",
+          "url": "https://ryno.tools/"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ryno.tools/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ryno.tools/blog/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="dark-mode blog-index-page">
+
+  <script>
+    (function() {
+      const t = localStorage.getItem('theme');
+      const d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = t || (d ? 'dark' : 'light');
+      document.body.classList.remove('dark-mode', 'light-mode');
+      document.body.classList.add(theme === 'dark' ? 'dark-mode' : 'light-mode');
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.querySelector('.blog-theme-toggle');
+        if (btn) btn.textContent = theme === 'dark' ? '🌕' : '🌑';
+      });
+    })();
+  </script>
+
+  <header class="blog-header">
+    <div class="blog-header-inner">
+      <a href="/" class="blog-logo-link" aria-label="Ryno Tools Home">
+        <img src="/images/logo.webp" alt="Ryno Tools logo" width="48" height="48" />
+        <span class="blog-logo-name">Ryno Tools</span>
+      </a>
+      <nav class="blog-nav" aria-label="Site navigation">
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/">Practice</a>
+      </nav>
+      <button class="blog-theme-toggle icon-btn clickable-icon" aria-label="Toggle dark mode" onclick="(function(btn){var b=document.body,dark=b.classList.contains('dark-mode');b.classList.toggle('dark-mode',!dark);b.classList.toggle('light-mode',dark);localStorage.setItem('theme',dark?'light':'dark');btn.textContent=dark?'🌑':'🌕';})(this)">🌑</button>
+    </div>
+  </header>
+
+  <main class="blog-index-main">
+    <div class="blog-index-hero">
+      <h1>Study Guides &amp; Exam Tips</h1>
+      <p class="blog-index-tagline">The Ryno Tools Blog publishes free, exam-focused study guides for Ham Radio licensing (Technician, General, Extra), Falconry Apprentice, and CompTIA Security+ SY0-701. Written by <strong>Ask Ryno</strong>, reviewed by humans, cited to authoritative sources.</p>
+    </div>
+
+    <!-- Track filter (progressive JS — cards already in DOM for crawlers) -->
+    <div class="blog-filter" role="group" aria-label="Filter by track">
+      <button class="blog-filter-btn active" data-filter="all">All</button>
+      <button class="blog-filter-btn" data-filter="ham-radio">📻 Ham Radio</button>
+      <button class="blog-filter-btn" data-filter="falconry">🦅 Falconry</button>
+      <button class="blog-filter-btn" data-filter="cybersecurity">🔒 Security+</button>
+    </div>
+
+    <!-- Featured post -->
+    {{BLOG_FEATURED_HTML}}
+
+    <!-- Post grid — all cards statically rendered for SEO -->
+    <section class="blog-grid" aria-label="All posts">
+      {{BLOG_CARDS_HTML}}
+    </section>
+
+    <!-- Empty state (shown by JS when filter returns no results) -->
+    <p class="blog-empty is-hidden">No posts found for this track yet.</p>
+
+  </main>
+
+  <footer class="blog-footer">
+    <p>
+      <a href="/">Ryno Tools</a> &nbsp;|&nbsp;
+      <a href="/blog/">Blog</a> &nbsp;|&nbsp;
+      <a href="/pages/privacy.html">Privacy</a> &nbsp;|&nbsp;
+      <a href="/pages/terms.html">Terms</a>
+    </p>
+    <p class="blog-footer-copy">Copyright © <script>document.write(new Date().getFullYear())</script> Ryno Tools. All rights reserved.</p>
+  </footer>
+
+  <script src="/blog/blog.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(function(reg) { reg.update(); })
+          .catch(function(err) { console.warn('[SW]', err); });
+      });
+    }
+  </script>
+</body>
+</html>

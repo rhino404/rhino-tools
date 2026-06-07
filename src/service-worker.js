@@ -4,10 +4,11 @@
 // PWA Service Worker — Optimized
 // ===============================
 
-// Use build timestamp as cache version (forces update on each deploy)
-const BUILD_TIMESTAMP = new Date().toISOString();
-const CORE_CACHE = `ryno-core-${BUILD_TIMESTAMP}`;     // Core app shell (HTML, JS, CSS)
-const CONTENT_CACHE = `ryno-content`;                 // Dynamic assets (images, optional resources)
+// Static version string — increment this (e.g. v20260607b) on each deploy to force
+// the browser to detect a changed SW file and install a fresh cache.
+const CACHE_VERSION = 'v20260607e';
+const CORE_CACHE = `ryno-core-${CACHE_VERSION}`;
+const CONTENT_CACHE = `ryno-content-${CACHE_VERSION}`;
 
 // Optional: set to new domain for migration, or null to disable
 const NEW_DOMAIN = null; // e.g., 'https://ryno.tools/'
@@ -22,22 +23,32 @@ const CORE_ASSETS = [
   `${BASE_PATH}/css/base.css`,
   `${BASE_PATH}/css/theme.css`,
   `${BASE_PATH}/css/modal.css`,
+  `${BASE_PATH}/css/blog.css`,
   `${BASE_PATH}/index.js`,
   `${BASE_PATH}/services/pwaInstaller.js`,
   `${BASE_PATH}/manifest.json`,
   `${BASE_PATH}/datasets/index.json`,
   `${BASE_PATH}/images/logo.webp`,
+  `${BASE_PATH}/blog/`,
+  `${BASE_PATH}/blog/index.html`,
+  `${BASE_PATH}/blog/feed.xml`,
 ];
 
 // ===============================
 // Install Event — Cache Core Assets
 // ===============================
 self.addEventListener('install', (event) => {
-  console.log('[SW] Installing — build:', BUILD_TIMESTAMP, 'Scope:', self.registration.scope);
+  console.log('[SW] Installing —', CACHE_VERSION, 'Scope:', self.registration.scope);
   event.waitUntil(
-    caches.open(CORE_CACHE)
-      .then(cache => cache.addAll(CORE_ASSETS))
-      .catch(err => console.error('[SW] Cache addAll failed:', err))
+    caches.open(CORE_CACHE).then(cache =>
+      // Resilient precache: cache each asset independently so one 404 doesn't
+      // abort the whole shell (atomic addAll would reject on any single failure).
+      Promise.allSettled(
+        CORE_ASSETS.map(asset =>
+          cache.add(asset).catch(err => console.warn('[SW] Precache skipped:', asset, err))
+        )
+      )
+    )
   );
   self.skipWaiting(); // Activate immediately after install
 });
@@ -46,12 +57,12 @@ self.addEventListener('install', (event) => {
 // Activate Event — Clean Old Caches
 // ===============================
 self.addEventListener('activate', (event) => {
-  console.log('[SW] Activating — build:', BUILD_TIMESTAMP);
+  console.log('[SW] Activating —', CACHE_VERSION);
   event.waitUntil(
     caches.keys().then(keys =>
       Promise.all(
         keys
-          .filter(key => (key.startsWith('ryno-core-') || key.startsWith('ryno-content')) && ![CORE_CACHE, CONTENT_CACHE].includes(key))
+          .filter(key => (key.startsWith('ryno-core-') || key.startsWith('ryno-content-')) && ![CORE_CACHE, CONTENT_CACHE].includes(key))
           .map(key => {
             console.log('[SW] Deleting old cache:', key);
             return caches.delete(key);
@@ -99,31 +110,46 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // HTML navigations: network-first so content fixes appear immediately.
+  // Falls back to cache only when offline.
+  if (req.mode === 'navigate') {
+    event.respondWith(
+      fetch(req).then(networkResp => {
+        if (networkResp.ok) {
+          const dest = url.pathname.startsWith(`${BASE_PATH}/blog`) ? CONTENT_CACHE : CORE_CACHE;
+          caches.open(dest).then(c => c.put(req, networkResp.clone()));
+        }
+        return networkResp;
+      }).catch(() =>
+        caches.match(req).then(cached => cached || caches.match(`${BASE_PATH}/index.html`))
+      )
+    );
+    return;
+  }
+
+  // All other GET: stale-while-revalidate (assets, JSON, images)
+  const coreSet = new Set(CORE_ASSETS.map(p => new URL(p, self.location.origin).pathname));
+
   event.respondWith(
     caches.match(req).then(cachedResponse => {
-      // Serve cached response immediately if available
       if (cachedResponse) {
-        // Update cache in background (stale-while-revalidate)
+        // Update cache in background
         fetch(req).then(networkResp => {
           if (networkResp.ok) {
-            const cacheToUse = CORE_ASSETS.includes(req.url.replace(location.origin, BASE_PATH)) ? CORE_CACHE : CONTENT_CACHE;
-            caches.open(cacheToUse).then(cache => cache.put(req, networkResp.clone()));
+            const bucket = coreSet.has(url.pathname) ? CORE_CACHE : CONTENT_CACHE;
+            caches.open(bucket).then(c => c.put(req, networkResp.clone()));
           }
         }).catch(() => {});
         return cachedResponse;
       }
 
-      // If not cached, fetch from network
       return fetch(req).then(networkResp => {
-        // Cache dynamically for future
         if (networkResp.ok) {
-          caches.open(CONTENT_CACHE).then(cache => cache.put(req, networkResp.clone()));
+          caches.open(CONTENT_CACHE).then(c => c.put(req, networkResp.clone()));
         }
         return networkResp;
       }).catch(err => {
         console.warn('[SW] Fetch failed; returning offline cache if available.', err);
-        // fallback to app shell for navigations
-        if (req.mode === 'navigate') return caches.match(`${BASE_PATH}/index.html`);
       });
     })
   );

@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "falconry-mews-housing-standards",
+    "title": "Falconry Mews & Housing Standards Every Apprentice Must Know",
+    "description": "What the falconry apprentice exam tests on mews design, perch types, weathering areas, and housing requirements under federal and state regulations.",
+    "excerpt": "A mews is more than a shed with a bird in it. Falconry housing standards are federally regulated and heavily tested on the apprentice exam. Here's what you need to know.",
+    "track": "falconry/apprentice",
+    "trackLabel": "Falconry — Apprentice",
+    "trackIcon": "🦅",
+    "trackSlug": "falconry",
+    "trackCategory": "falconry",
+    "tags": [
+      "Equipment",
+      "Rules and Regulations",
+      "Health"
+    ],
+    "datePublished": "2026-06-08",
+    "dateModified": "2026-06-08",
+    "readingTime": 7,
+    "url": "/blog/falconry-mews-housing-standards/"
+  },
+  {
+    "slug": "ohms-law-technician-exam",
+    "title": "Ohm's Law Made Simple for the Ham Radio Technician Exam",
+    "description": "Learn Ohm's Law for the ham radio Technician exam: V=IR explained with examples, memory tricks, and the exact question types the FCC tests.",
+    "excerpt": "Ohm's Law — V = IR — appears on every Technician license exam. Master the formula, the units, and the common exam scenarios in one focused read.",
+    "track": "ham-radio/technician",
+    "trackLabel": "Ham Radio — Technician",
+    "trackIcon": "📻",
+    "trackSlug": "ham-radio",
+    "trackCategory": "ham-radio",
+    "tags": [
+      "voltage",
+      "resistance",
+      "current",
+      "power"
+    ],
+    "datePublished": "2026-06-08",
+    "dateModified": "2026-06-08",
+    "readingTime": 6,
+    "url": "/blog/ohms-law-technician-exam/"
+  },
+  {
+    "slug": "symmetric-vs-asymmetric-encryption",
+    "title": "Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer",
+    "description": "Symmetric vs. asymmetric encryption for CompTIA Security+ SY0-701: key differences, AES, RSA, ECC, TLS hybrid model, and exam-tested scenarios explained.",
+    "excerpt": "Symmetric encryption uses one key; asymmetric uses two. That distinction drives dozens of Security+ SY0-701 exam questions on TLS, key exchange, digital signatures, and PKI.",
+    "track": "cybersecurity/sy0-701",
+    "trackLabel": "Security+ SY0-701",
+    "trackIcon": "🔒",
+    "trackSlug": "cybersecurity",
+    "trackCategory": "cybersecurity",
+    "tags": [
+      "cryptography",
+      "network security"
+    ],
+    "datePublished": "2026-06-08",
+    "dateModified": "2026-06-08",
+    "readingTime": 7,
+    "url": "/blog/symmetric-vs-asymmetric-encryption/"
+  }
+]

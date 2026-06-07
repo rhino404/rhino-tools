@@ -895,6 +895,17 @@ body.banner-visible {
   margin-inline: auto;
 }
 
+.header-blog-link {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.15s;
+  margin-left: auto;
+}
+.header-blog-link:hover { opacity: 1; }
+
 /* =========================
    Desktop Layout Polish
 ========================= */
