@@ -61,15 +61,17 @@
 .blog-nav a:hover,
 .blog-nav a[aria-current="page"] {
   opacity: 1;
+  color: #fff;
 }
 
 .blog-theme-toggle {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1.2rem;
-  padding: 0.25rem;
+  font-size: 2rem;
+  padding: 0;
   flex-shrink: 0;
+  line-height: 1;
 }
 
 /* ── Track badge + hero colors ────────────────────────────────── */
@@ -79,25 +81,38 @@
   --track-cybersecurity:  #1e3a2f;
 }
 
-/* Dark mode */
+/* Both modes — green gradient, same as main page #crypto-bar */
+.blog-header {
+  background-size: 40px 40px;
+}
 body.dark-mode .blog-header {
-  background: rgba(15, 17, 21, 0.94);
+  background-image:
+    repeating-linear-gradient(45deg,
+      rgba(255,255,255,0.05) 0px,
+      rgba(255,255,255,0.05) 20px,
+      transparent 20px,
+      transparent 40px),
+    var(--gradient-green-torque);
   border-color: rgba(255,255,255,0.08);
-  backdrop-filter: blur(8px);
 }
-body.dark-mode .blog-logo-name,
-body.dark-mode .blog-nav a { color: #e8eaf0; }
-body.dark-mode .blog-theme-toggle { color: #e8eaf0; }
-
-/* Light mode */
 body.light-mode .blog-header {
-  background: rgba(255, 255, 255, 0.94);
-  border-color: rgba(0,0,0,0.1);
-  backdrop-filter: blur(8px);
+  background-image:
+    repeating-linear-gradient(45deg,
+      rgba(0,0,0,0.05) 0px,
+      rgba(0,0,0,0.05) 20px,
+      transparent 20px,
+      transparent 40px),
+    var(--gradient-green-torque);
+  border-color: rgba(0,0,0,0.08);
 }
-body.light-mode .blog-logo-name,
-body.light-mode .blog-nav a { color: #1a1c22; }
-body.light-mode .blog-theme-toggle { color: #1a1c22; }
+
+/* Text on green gradient is always white */
+.blog-logo-name,
+.blog-nav a,
+.blog-theme-toggle { color: rgba(255,255,255,0.9); }
+.blog-nav a:hover,
+.blog-nav a[aria-current="page"],
+.blog-theme-toggle:hover { color: #fff; }
 
 /* ── Blog index hero ──────────────────────────────────────────── */
 .blog-index-hero {

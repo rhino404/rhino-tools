@@ -90,6 +90,10 @@
       const theme = t || (d ? 'dark' : 'light');
       document.body.classList.remove('dark-mode', 'light-mode');
       document.body.classList.add(theme === 'dark' ? 'dark-mode' : 'light-mode');
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.querySelector('.blog-theme-toggle');
+        if (btn) btn.textContent = theme === 'dark' ? '🌕' : '🌑';
+      });
     })();
   </script>
 
@@ -103,7 +107,7 @@
         <a href="/blog/" aria-current="page">Blog</a>
         <a href="/">Practice</a>
       </nav>
-      <button class="blog-theme-toggle clickable-icon" aria-label="Toggle dark mode" onclick="(function(){const b=document.body;const isDark=b.classList.contains('dark-mode');b.classList.toggle('dark-mode',!isDark);b.classList.toggle('light-mode',isDark);localStorage.setItem('theme',isDark?'light':'dark');})()">🌑</button>
+      <button class="blog-theme-toggle clickable-icon" aria-label="Toggle dark mode" onclick="(function(btn){var b=document.body,dark=b.classList.contains('dark-mode');b.classList.toggle('dark-mode',!dark);b.classList.toggle('light-mode',dark);localStorage.setItem('theme',dark?'light':'dark');btn.textContent=dark?'🌑':'🌕';})(this)">🌑</button>
     </div>
   </header>
 

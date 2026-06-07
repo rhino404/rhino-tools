@@ -624,10 +624,11 @@ body #crypto-bar {
     var(--gradient-green-torque);
 }
 
-body.dark-mode .header-blog-link { color: rgba(232, 234, 240, 0.75); }
-body.dark-mode .header-blog-link:hover { color: #e8eaf0; }
-body.light-mode .header-blog-link { color: rgba(26, 28, 34, 0.7); }
-body.light-mode .header-blog-link:hover { color: #1a1c22; }
+/* Green gradient header in both modes — white text matches #crypto-bar */
+body.dark-mode .header-blog-link,
+body.light-mode .header-blog-link { color: rgba(255, 255, 255, 0.9); }
+body.dark-mode .header-blog-link:hover,
+body.light-mode .header-blog-link:hover { color: #fff; }
 
 /* =========================
    Light Theme (light.css)

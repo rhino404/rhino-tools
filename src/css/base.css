@@ -897,10 +897,10 @@ body.banner-visible {
 
 .header-blog-link {
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 500;
   text-decoration: none;
-  opacity: 0.7;
+  opacity: 0.85;
   transition: opacity 0.15s;
   margin-left: auto;
 }
