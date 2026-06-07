@@ -18,10 +18,22 @@ import { renderTagFilter } from './ui/tagFilter.js';
 // Service Worker Registration
 // =========================
 if ('serviceWorker' in navigator) {
+  // When a new SW takes control (after skipWaiting + clients.claim), reload once
+  // so the page picks up fresh HTML/JS instead of staying on the previous version.
+  let swReloading = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (swReloading) return;
+    swReloading = true;
+    window.location.reload();
+  });
+
   window.addEventListener('load', () => {
     navigator.serviceWorker
       .register('/service-worker.js')
-      .then(reg => console.log('[SW] Registered with scope:', reg.scope))
+      .then(reg => {
+        console.log('[SW] Registered with scope:', reg.scope);
+        reg.update(); // check for a newer SW on every load
+      })
       .catch(err => console.error('[SW] Registration failed:', err));
   });
 }

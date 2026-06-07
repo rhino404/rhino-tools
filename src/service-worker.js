@@ -38,11 +38,17 @@ const CORE_ASSETS = [
 // Install Event — Cache Core Assets
 // ===============================
 self.addEventListener('install', (event) => {
-  console.log('[SW] Installing — build:', BUILD_TIMESTAMP, 'Scope:', self.registration.scope);
+  console.log('[SW] Installing —', CACHE_VERSION, 'Scope:', self.registration.scope);
   event.waitUntil(
-    caches.open(CORE_CACHE)
-      .then(cache => cache.addAll(CORE_ASSETS))
-      .catch(err => console.error('[SW] Cache addAll failed:', err))
+    caches.open(CORE_CACHE).then(cache =>
+      // Resilient precache: cache each asset independently so one 404 doesn't
+      // abort the whole shell (atomic addAll would reject on any single failure).
+      Promise.allSettled(
+        CORE_ASSETS.map(asset =>
+          cache.add(asset).catch(err => console.warn('[SW] Precache skipped:', asset, err))
+        )
+      )
+    )
   );
   self.skipWaiting(); // Activate immediately after install
 });
@@ -51,7 +57,7 @@ self.addEventListener('install', (event) => {
 // Activate Event — Clean Old Caches
 // ===============================
 self.addEventListener('activate', (event) => {
-  console.log('[SW] Activating — build:', BUILD_TIMESTAMP);
+  console.log('[SW] Activating —', CACHE_VERSION);
   event.waitUntil(
     caches.keys().then(keys =>
       Promise.all(
