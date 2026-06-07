@@ -215,7 +215,7 @@ body.light-mode #pwaInstallBanner button#pwa-dismiss-btn:hover {
    Buttons - Unified Shape
 ========================= */
 .btn,
-button,
+button:not(.icon-btn),
 .level-btn,
 .category-btn,
 .dropdown-toggle {
@@ -229,7 +229,7 @@ button,
 
 /* Primary */
 .btn-primary,
-button,
+button:not(.icon-btn),
 .level-btn,
 .category-btn,
 .dropdown-toggle {
@@ -238,7 +238,7 @@ button,
 }
 
 .btn-primary:hover,
-button:hover,
+button:not(.icon-btn):hover,
 .level-btn:hover,
 .category-btn:hover,
 .dropdown-toggle:hover {
@@ -280,7 +280,7 @@ button.accent:hover,
 /* -------------------------
    Light Mode Buttons
 ------------------------- */
-body.light-mode button,
+body.light-mode button:not(.icon-btn),
 body.light-mode .choice-btn,
 body.light-mode .level-btn,
 body.light-mode .category-btn,
@@ -296,7 +296,7 @@ body.light-mode .exam-btn {
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
-body.light-mode button:hover,
+body.light-mode button:not(.icon-btn):hover,
 body.light-mode .choice-btn:hover,
 body.light-mode .level-btn:hover,
 body.light-mode .category-btn:hover,
@@ -364,7 +364,7 @@ body.light-mode #hide-answers-btn.active:hover {
 /* -------------------------
    Dark Mode Buttons
 ------------------------- */
-body.dark-mode button,
+body.dark-mode button:not(.icon-btn),
 body.dark-mode .choice-btn,
 body.dark-mode .level-btn,
 body.dark-mode .category-btn,
@@ -378,7 +378,7 @@ body.dark-mode .exam-btn {
   transition: background 0.2s, transform 0.15s ease, border-color 0.2s;
 }
 
-body.dark-mode button:hover,
+body.dark-mode button:not(.icon-btn):hover,
 body.dark-mode .choice-btn:hover,
 body.dark-mode .level-btn:hover,
 body.dark-mode .category-btn:hover,
