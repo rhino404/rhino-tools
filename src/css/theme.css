@@ -560,26 +560,6 @@ body.light-mode .tag-filter-btn.active {
 }
 
 /* =========================
-   Social Icons
-========================= */
-#social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-#social-links a:hover {
-  transform: scale(1.1);
-}
-
-#social-links .social-icon {
-  width: 24px;
-  height: 24px;
-  color: inherit;
-}
-
-/* =========================
    Correct Answer Highlight
 ========================= */
 .choice-btn.correct {
@@ -587,48 +567,6 @@ body.light-mode .tag-filter-btn.active {
   box-shadow: 0 0 8px var(--color-neutral-dark);
 }
 
-
-/* Shared checkered crypto bar base */
-#crypto-bar {
-  background-size: 40px 40px;
-  background-image:
-    repeating-linear-gradient(45deg,
-      rgba(255, 255, 255, 0.05) 0px,
-      rgba(255, 255, 255, 0.05) 20px,
-      transparent 20px,
-      transparent 40px);
-  color: white;
-}
-
-/* Dark mode variant */
-body.dark-mode #crypto-bar {
-  background-color: transparent;
-  background-image:
-    repeating-linear-gradient(45deg,
-      rgba(255, 255, 255, 0.05) 0px,
-      rgba(255, 255, 255, 0.05) 20px,
-      transparent 20px,
-      transparent 40px),
-    var(--gradient-green-torque);
-}
-
-/* Light mode variant */
-body #crypto-bar {
-  background-color: transparent;
-  background-image:
-    repeating-linear-gradient(45deg,
-      rgba(0, 0, 0, 0.05) 0px,
-      rgba(0, 0, 0, 0.05) 20px,
-      transparent 20px,
-      transparent 40px),
-    var(--gradient-green-torque);
-}
-
-/* Green gradient header in both modes — white text matches #crypto-bar */
-body.dark-mode .header-blog-link,
-body.light-mode .header-blog-link { color: rgba(255, 255, 255, 0.9); }
-body.dark-mode .header-blog-link:hover,
-body.light-mode .header-blog-link:hover { color: #fff; }
 
 /* =========================
    Light Theme (light.css)
@@ -687,18 +625,6 @@ body.light-mode .progress-fill {
   background: var(--color-primary);
 }
 
-/* =========================
-   Footer
-========================= */
-body.light-mode footer {
-  color: var(--color-neutral-dark);
-}
-
-body.light-mode #brand-tagline h3,
-body.light-mode #brand-tagline p,
-body.light-mode #copyright {
-  color: var(--color-neutral-dark);
-}
 
 /* =========================
    Misc (Ad Slot)
@@ -715,19 +641,6 @@ body.light-mode .question {
   color: var(--color-neutral-dark);
   -webkit-text-stroke: none;
   /* keep clean text */
-}
-
-/* =========================
-   Social Icons
-========================= */
-body.light-mode #social-links a {
-  color: #000;
-  /* base black */
-}
-
-body.light-mode #social-links a:hover {
-  color: var(--color-primary);
-  /* brand green */
 }
 
 /* =========================
@@ -811,13 +724,6 @@ body.dark-mode #ad-slot {
 }
 
 /* =========================
-   Footer
-========================= */
-body.dark-mode footer {
-  color: #ccc;
-}
-
-/* =========================
    Score Card
 ========================= */
 body.dark-mode #score-card {
@@ -877,26 +783,6 @@ body.dark-mode .progress-bar {
 
 body.dark-mode .progress-fill {
   background-color: #76ff7a;
-}
-
-/* =========================
-   Social Icons
-========================= */
-body.dark-mode #social-links a {
-  color: #fff;
-}
-
-body.dark-mode #social-links a:hover {
-  color: var(--color-primary);
-}
-
-/* =========================
-   Branding Footer Text
-========================= */
-#brand-tagline h3,
-#brand-tagline p,
-#copyright {
-  color: #aaa;
 }
 
 /* =========================

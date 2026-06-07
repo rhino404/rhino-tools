@@ -49,23 +49,6 @@ header {
   width: 100%;
 }
 
-#crypto-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 1rem;
-  padding: 0.5em 1em;
-  height: 5em;
-}
-
-#logo {
-  height: 3rem;
-  width: 3rem;
-  border-radius: 10%;
-  object-fit: cover;
-}
-
-
 .clickable-icon {
   cursor: pointer;
   display: inline-flex;
@@ -354,34 +337,7 @@ main#quiz-container,
 ========================= */
 
 footer {
-  text-align: center;
-  font-size: 0.9em;
-  margin-top: 2em;
-  margin-bottom: 2rem;
-}
-
-#social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-  margin: 1em;
-}
-
-#social-links img {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-#brand-tagline {
-  text-align: center;
-  margin: 1em 0;
-}
-
-#copyright {
-  text-align: center;
-  font-size: 0.9rem;
+  width: 100%;
 }
 
 /* =========================
@@ -882,31 +838,6 @@ body.banner-visible {
 }
 
 /* =========================
-   Header Inner Container
-========================= */
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  width: 100%;
-  max-width: 680px;
-  margin-inline: auto;
-}
-
-.header-blog-link {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-decoration: none;
-  opacity: 0.85;
-  transition: opacity 0.15s;
-  margin-left: auto;
-}
-.header-blog-link:hover { opacity: 1; }
-
-/* =========================
    Desktop Layout Polish
 ========================= */
 
@@ -917,7 +848,7 @@ body.banner-visible {
     padding: 2rem 2.25rem 1.5rem;
     border-radius: 16px;
     /* Contain scroll to the panel — page never scrolls */
-    max-height: calc(100vh - 5em - 3rem);
+    max-height: calc(100vh - var(--site-header-h) - 3rem);
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
