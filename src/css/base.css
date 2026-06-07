@@ -783,6 +783,11 @@ body.banner-visible {
     margin: 1.5rem auto 0;
     padding: 2rem 2.25rem 1.5rem;
     border-radius: 16px;
+    /* Contain scroll to the panel — page never scrolls */
+    max-height: calc(100vh - 5em - 3rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
   }
 
   #quiz-app nav[aria-label="Quiz Filters"],
@@ -802,4 +807,19 @@ body.banner-visible {
 
   #landing .landing-hero h1 { font-size: 2rem; }
   #landing .landing-tagline { font-size: 1rem; }
+
+  /* Polished thin scrollbar (WebKit) */
+  #quiz-app::-webkit-scrollbar {
+    width: 6px;
+  }
+  #quiz-app::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  #quiz-app::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+  }
+  #quiz-app::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.28);
+  }
 }

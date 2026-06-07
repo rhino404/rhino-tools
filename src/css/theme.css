@@ -973,11 +973,19 @@ body.dark-mode #exam-progress-bar {
     border: 1px solid var(--border-color-dark);
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(4px);
+    scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
   }
   body.light-mode #quiz-app {
     background: rgba(255, 255, 255, 0.78);
     border: 1px solid #ddd;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
     backdrop-filter: blur(4px);
+    scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+  }
+  body.light-mode #quiz-app::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+  }
+  body.light-mode #quiz-app::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.28);
   }
 }
