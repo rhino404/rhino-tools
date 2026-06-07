@@ -3,6 +3,10 @@
   --transition: background 0.2s, color 0.2s;
 }
 
+.is-hidden {
+  display: none !important;
+}
+
 /* =========================
    Global Reset & Base Layout
 ========================= */
@@ -61,13 +65,6 @@ header {
   object-fit: cover;
 }
 
-#crypto-prices {
-  flex-grow: 10em;
-  min-width: 10em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: pre-line;
-}
 
 .clickable-icon {
   cursor: pointer;
@@ -703,26 +700,61 @@ body.banner-visible {
 }
 
 /* =========================
-   Intro / SEO copy block
+   Landing / Home View
 ========================= */
 
-.intro {
+.landing-view {
+  width: 100%;
   max-width: 640px;
-  margin: 0.75rem auto 0.5rem;
+  margin: 1.5rem auto 2rem;
   padding: 0 1rem;
   text-align: center;
 }
 
-.intro h1 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin: 0 0 0.35rem;
+.landing-hero h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
   line-height: 1.3;
 }
 
-.intro p {
-  font-size: 0.82rem;
+.landing-tagline {
+  font-size: 0.9rem;
   line-height: 1.5;
-  opacity: 0.6;
+  opacity: 0.7;
+  margin: 0 0 2rem;
+}
+
+.landing-cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.landing-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  width: 140px;
+  padding: 1.25rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.landing-card:hover {
+  transform: translateY(-3px);
+}
+
+.landing-card-icon  { font-size: 2rem; line-height: 1; }
+.landing-card-title { font-size: 1rem; font-weight: 700; }
+.landing-card-sub   { font-size: 0.72rem; opacity: 0.65; }
+
+.landing-features {
+  font-size: 0.78rem;
+  opacity: 0.5;
   margin: 0;
 }

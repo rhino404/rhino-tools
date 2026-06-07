@@ -5,7 +5,6 @@
 // ----- Core & UI Imports -----
 import { initializeTheme } from './ui/theme.js';
 import { initPwaInstaller } from './services/pwaInstaller.js';
-import { loadCryptoPrices } from './services/cryptoPrices.js';
 import { loadSession, setupSessionEvents } from './core/sessionManager.js';
 import { startQuiz, restoreSession, loadAndShowQuestions } from './core/quizLoader.js';
 import { setupDropdowns } from './core/dropdowns.js';
@@ -33,7 +32,6 @@ if ('serviceWorker' in navigator) {
 document.addEventListener('DOMContentLoaded', async () => {
   initializeTheme();
   initPwaInstaller();
-  loadCryptoPrices();
   setupSessionEvents(state);
   const session = loadSession() || {};
 
@@ -66,6 +64,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   state.tagFilterEl = document.getElementById('tag-filter');
 
   // ------------------------
+  // Landing / Quiz view toggle
+  // ------------------------
+  const landingEl = document.getElementById('landing');
+  const quizAppEl = document.getElementById('quiz-app');
+
+  function showQuiz() {
+    landingEl?.classList.add('is-hidden');
+    quizAppEl?.classList.remove('is-hidden');
+  }
+  function showLanding() {
+    quizAppEl?.classList.add('is-hidden');
+    landingEl?.classList.remove('is-hidden');
+  }
+
+  // ------------------------
   // Restore session if available
   // ------------------------
   let restored = false;
@@ -73,6 +86,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // If session restored, load and show questions at saved position
     await loadAndShowQuestions(state.currentCategory, state.currentSubcategory, state.currentIndex);
     restored = true;
+    showQuiz();
   } else {
     // If not restored, use session manager fallback
     state.currentCategory = session.currentCategory ?? null;
@@ -130,12 +144,24 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   // ------------------------
+  // Landing CTA card handlers
+  // ------------------------
+  document.querySelectorAll('.landing-card').forEach(card => {
+    card.addEventListener('click', () => {
+      showQuiz();
+      const li = state.categoryOptions?.querySelector(`li[data-value="${card.dataset.category}"]`);
+      if (li) li.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    });
+  });
+
+  // ------------------------
   // Logo Reset Click Handler
   // ------------------------
   const logoEl = document.getElementById('logo');
   if (logoEl) {
     logoEl.addEventListener('click', () => {
       import('./core/quizLoader.js').then(({ resetQuiz }) => resetQuiz());
+      showLanding();
     });
   }
 });

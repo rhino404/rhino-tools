@@ -896,6 +896,34 @@ body.dark-mode #social-links a:hover {
 }
 
 /* =========================
+   Landing Cards
+========================= */
+
+body.dark-mode .landing-card {
+  background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
+  border: 1px solid var(--border-color-dark);
+  color: #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .landing-card:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+  border-color: var(--color-primary-light);
+}
+
+body.light-mode .landing-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: var(--color-neutral-dark);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+body.light-mode .landing-card:hover {
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  border-color: var(--color-primary);
+}
+
+/* =========================
    Exam Progress Bar Themed Gradient Animation
 ========================= */
 

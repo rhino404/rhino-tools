@@ -322,15 +322,36 @@
         <img src="./images/logo.webp" alt="Ryno Tools Rhino Logo" id="logo" width="80" height="80" />
       </a>
       <h3 id="crypto-title">Ryno Tools</h3>
-      <span id="crypto-prices">Loading crypto prices...</span>
       <span id="dark-mode-toggle" class="clickable-icon" role="button" aria-label="Toggle dark mode">🌑</span>
     </div>
   </header>
 
-  <section id="intro" class="intro">
-    <h1>Free Ham Radio, Falconry &amp; Security+ Exam Prep</h1>
-    <p>Adaptive practice quizzes and timed exam simulations for the FCC ham radio license exams (Technician, General, Extra), the falconry apprentice exam, and CompTIA Security+ SY0-701 — with instant explanations. No login, no paywall, works offline.</p>
+  <section id="landing" class="landing-view">
+    <div class="landing-hero">
+      <h1>Free Ham Radio, Falconry &amp; Security+ Exam Prep</h1>
+      <p class="landing-tagline">Adaptive quizzes and timed exam simulations — no login, no paywall, works offline.</p>
+    </div>
+    <div class="landing-cards">
+      <button class="landing-card" data-category="ham-radio">
+        <span class="landing-card-icon">📻</span>
+        <span class="landing-card-title">Ham Radio</span>
+        <span class="landing-card-sub">Technician · General · Extra</span>
+      </button>
+      <button class="landing-card" data-category="falconry">
+        <span class="landing-card-icon">🦅</span>
+        <span class="landing-card-title">Falconry</span>
+        <span class="landing-card-sub">Apprentice Exam</span>
+      </button>
+      <button class="landing-card" data-category="cybersecurity">
+        <span class="landing-card-icon">🔒</span>
+        <span class="landing-card-title">Security+</span>
+        <span class="landing-card-sub">CompTIA SY0-701</span>
+      </button>
+    </div>
+    <p class="landing-features">Instant explanations &nbsp;·&nbsp; Tag filtering &nbsp;·&nbsp; Timed exam mode &nbsp;·&nbsp; Offline PWA</p>
   </section>
+
+  <div id="quiz-app" class="is-hidden">
 
   <nav aria-label="Quiz Filters">
     <div class="dropdown">
@@ -363,6 +384,8 @@
     <button id="hide-answers-btn" class="circle-btn" title="Hide Answers">🙈</button>
     <button id="exam-btn" class="circle-btn" title="Start Exam">📝</button>
   </div>
+
+  </div><!-- #quiz-app -->
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
