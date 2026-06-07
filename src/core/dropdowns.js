@@ -19,13 +19,11 @@ export function populateDropdown(listEl, options, selectedVal) {
     listEl.innerHTML = '';
     const frag = document.createDocumentFragment();
     options.forEach(opt => {
+        if (opt.value === selectedVal) return;
         const li = document.createElement('li');
         li.setAttribute('role', 'option');
         li.dataset.value = opt.value;
         li.innerHTML = `${opt.icon ? `${opt.icon} ` : ''}${opt.label}`;
-        if (opt.value === selectedVal) {
-            li.classList.add('selected');
-        }
         frag.appendChild(li);
     });
     listEl.appendChild(frag);
