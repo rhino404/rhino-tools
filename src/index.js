@@ -159,7 +159,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ------------------------
   const logoEl = document.getElementById('logo');
   if (logoEl) {
-    logoEl.addEventListener('click', () => {
+    logoEl.addEventListener('click', (e) => {
+      e.preventDefault();
       import('./core/quizLoader.js').then(({ resetQuiz }) => resetQuiz());
       showLanding();
     });
