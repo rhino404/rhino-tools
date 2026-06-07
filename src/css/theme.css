@@ -962,3 +962,22 @@ body.dark-mode #exam-progress-bar {
         background-position: -200% 0;
     }
 }
+
+/* =========================
+   Desktop Panel Framing
+========================= */
+
+@media (min-width: 768px) {
+  body.dark-mode #quiz-app {
+    background: rgba(31, 31, 31, 0.55);
+    border: 1px solid var(--border-color-dark);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+  }
+  body.light-mode #quiz-app {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid #ddd;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(4px);
+  }
+}

@@ -671,7 +671,7 @@ body.banner-visible {
     overflow: hidden;
     /* Match width of quiz container */
     width: 100%;
-    max-width: 90%; /* optional: same as question container max width */
+    max-width: 100%;
     margin: 0 auto 0.75rem auto; /* center it with bottom spacing */
 }
 
@@ -757,4 +757,49 @@ body.banner-visible {
   font-size: 0.78rem;
   opacity: 0.5;
   margin: 0;
+}
+
+/* =========================
+   Header Inner Container
+========================= */
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+/* =========================
+   Desktop Layout Polish
+========================= */
+
+@media (min-width: 768px) {
+  #quiz-app {
+    max-width: 680px;
+    margin: 1.5rem auto 0;
+    padding: 2rem 2.25rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  #quiz-app nav[aria-label="Quiz Filters"],
+  #quiz-app main#quiz-container,
+  #quiz-app .choices,
+  #quiz-app .explanation,
+  #quiz-app .question,
+  #quiz-app .button-group,
+  #quiz-app #exam-progress-container {
+    max-width: 100%;
+  }
+
+  #quiz-app .question {
+    font-size: 1.5em;
+    padding: 1.25em;
+  }
+
+  #landing .landing-hero h1 { font-size: 2rem; }
+  #landing .landing-tagline { font-size: 1rem; }
 }
