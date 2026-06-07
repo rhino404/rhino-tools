@@ -5,73 +5,10 @@
    ============================================================= */
 
 /* ── Layout ──────────────────────────────────────────────────── */
-.blog-header,
 .blog-post-main,
-.blog-index-main,
-.blog-footer {
+.blog-index-main {
   box-sizing: border-box;
   width: 100%;
-}
-
-/* ── Header ──────────────────────────────────────────────────── */
-.blog-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: 0.75rem 1.25rem;
-  border-bottom: 1px solid;
-}
-
-.blog-header-inner {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  max-width: 860px;
-  margin: 0 auto;
-}
-
-.blog-logo-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-}
-
-.blog-logo-name {
-  font-family: var(--font-headline);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-.blog-nav {
-  display: flex;
-  gap: 1.25rem;
-  margin-left: auto;
-}
-
-.blog-nav a {
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-decoration: none;
-  opacity: 0.75;
-  transition: opacity 0.15s;
-}
-
-.blog-nav a:hover,
-.blog-nav a[aria-current="page"] {
-  opacity: 1;
-  color: #fff;
-}
-
-.blog-theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 2rem;
-  padding: 0;
-  flex-shrink: 0;
-  line-height: 1;
 }
 
 /* ── Track badge + hero colors ────────────────────────────────── */
@@ -80,39 +17,6 @@
   --track-falconry:       #4a3520;
   --track-cybersecurity:  #1e3a2f;
 }
-
-/* Both modes — green gradient, same as main page #crypto-bar */
-.blog-header {
-  background-size: 40px 40px;
-}
-body.dark-mode .blog-header {
-  background-image:
-    repeating-linear-gradient(45deg,
-      rgba(255,255,255,0.05) 0px,
-      rgba(255,255,255,0.05) 20px,
-      transparent 20px,
-      transparent 40px),
-    var(--gradient-green-torque);
-  border-color: rgba(255,255,255,0.08);
-}
-body.light-mode .blog-header {
-  background-image:
-    repeating-linear-gradient(45deg,
-      rgba(0,0,0,0.05) 0px,
-      rgba(0,0,0,0.05) 20px,
-      transparent 20px,
-      transparent 40px),
-    var(--gradient-green-torque);
-  border-color: rgba(0,0,0,0.08);
-}
-
-/* Text on green gradient is always white */
-.blog-logo-name,
-.blog-nav a,
-.blog-theme-toggle { color: rgba(255,255,255,0.9); }
-.blog-nav a:hover,
-.blog-nav a[aria-current="page"],
-.blog-theme-toggle:hover { color: #fff; }
 
 /* ── Blog index hero ──────────────────────────────────────────── */
 .blog-index-hero {
@@ -612,21 +516,6 @@ body.dark-mode .blog-share-btn { color: #c8cdd8; border-color: rgba(255,255,255,
 body.dark-mode .blog-share-btn:hover { background: rgba(255,255,255,0.08); }
 body.light-mode .blog-share-btn { color: #2c3040; border-color: rgba(0,0,0,0.18); background: none; }
 body.light-mode .blog-share-btn:hover { background: rgba(0,0,0,0.05); }
-
-/* ── Footer ──────────────────────────────────────────────────── */
-.blog-footer {
-  text-align: center;
-  padding: 2rem 1.25rem;
-  font-size: 0.85rem;
-  border-top: 1px solid;
-  opacity: 0.6;
-}
-
-body.dark-mode .blog-footer { border-color: rgba(255,255,255,0.08); color: #9099b0; }
-body.light-mode .blog-footer { border-color: rgba(0,0,0,0.08); color: #666; }
-
-.blog-footer a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-.blog-footer-copy { margin: 0.5rem 0 0; }
 
 /* ── Hidden utility ──────────────────────────────────────────── */
 .is-hidden { display: none !important; }
