@@ -42,8 +42,8 @@
   --gradient-power-boost: linear-gradient(135deg, #f97316, #fcd34d);
 
   /* ===== Typography ===== */
-  --font-headline: 'Montserrat', 'Exo 2', 'Orbitron', sans-serif;
-  --font-body: 'Inter', 'Roboto', sans-serif;
+  --font-headline: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-code: 'Fira Code', 'Source Code Pro', monospace;
 
   /* ===== Sizing ===== */
@@ -969,7 +969,7 @@ body.dark-mode #exam-progress-bar {
 
 @media (min-width: 768px) {
   body.dark-mode #quiz-app,
-  body.dark-mode #landing {
+  body.dark-mode .landing-panel {
     background: rgba(31, 31, 31, 0.55);
     border: 1px solid var(--border-color-dark);
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
@@ -979,7 +979,7 @@ body.dark-mode #exam-progress-bar {
     scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
   }
   body.light-mode #quiz-app,
-  body.light-mode #landing {
+  body.light-mode .landing-panel {
     background: rgba(255, 255, 255, 0.78);
     border: 1px solid #ddd;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
@@ -994,4 +994,98 @@ body.dark-mode #exam-progress-bar {
   body.light-mode #quiz-app::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.28);
   }
+}
+
+/* =========================
+   Landing Badges
+========================= */
+
+body.dark-mode .landing-badges li {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ddd;
+}
+
+body.light-mode .landing-badges li {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: var(--color-neutral-dark);
+}
+
+/* =========================
+   Landing Sections & Blocks
+========================= */
+
+body.dark-mode .landing-block {
+  border-top: 1px solid var(--border-color-dark);
+}
+
+body.dark-mode .landing-block h2 {
+  color: var(--color-primary-light);
+}
+
+body.dark-mode .landing-block p {
+  color: #ccc;
+}
+
+body.light-mode .landing-block {
+  border-top: 1px solid #e0e0e0;
+}
+
+body.light-mode .landing-block h2 {
+  color: var(--color-primary-dark);
+}
+
+body.light-mode .landing-block p {
+  color: #444;
+}
+
+/* =========================
+   Landing FAQ
+========================= */
+
+body.dark-mode .landing-faq details {
+  border: 1px solid var(--border-color-dark);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+body.dark-mode .landing-faq summary {
+  color: #eee;
+}
+
+body.dark-mode .landing-faq details[open] summary {
+  color: var(--color-primary-light);
+}
+
+body.dark-mode .landing-faq details p {
+  color: #bbb;
+}
+
+body.light-mode .landing-faq details {
+  border: 1px solid #ddd;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+body.light-mode .landing-faq summary {
+  color: var(--color-neutral-dark);
+}
+
+body.light-mode .landing-faq details[open] summary {
+  color: var(--color-primary-dark);
+}
+
+body.light-mode .landing-faq details p {
+  color: #555;
+}
+
+/* =========================
+   Landing CTA Hint
+========================= */
+
+body.dark-mode .landing-cta-hint {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+body.light-mode .landing-cta-hint {
+  color: rgba(0, 0, 0, 0.4);
 }

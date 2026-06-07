@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: Ubuntu, Roboto, Oxygen, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-body, 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif);
   overflow-x: hidden;
 }
 
@@ -143,7 +143,7 @@ main#quiz-container,
 }
 
 .question {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.4em;
   line-height: 1.5;
   text-align: center;
@@ -705,24 +705,57 @@ body.banner-visible {
 
 .landing-view {
   width: 100%;
-  max-width: 680px;
-  margin: 1.5rem auto 2rem;
+  max-width: 720px;
+  margin: 1.5rem auto 3rem;
   padding: 0 1rem;
   text-align: center;
 }
 
+/* Hero panel — glass card on desktop */
+.landing-panel {
+  width: 100%;
+  padding: 2rem 1.5rem 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
 .landing-hero h1 {
-  font-size: 1.6rem;
+  font-family: var(--font-headline);
+  font-size: 2rem;
   font-weight: 700;
-  margin: 0 0 0.5rem;
-  line-height: 1.3;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
 }
 
 .landing-tagline {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  opacity: 0.7;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin: 0 0 1.5rem;
+  max-width: 520px;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* Trust badges */
+.landing-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
   margin: 0 0 2rem;
+  padding: 0;
+}
+
+.landing-badges li {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.3em 0.85em;
+  border-radius: 999px;
 }
 
 .landing-cards {
@@ -730,33 +763,122 @@ body.banner-visible {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .landing-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.3rem;
-  width: 140px;
-  padding: 1.25rem 1rem;
-  border-radius: 12px;
+  gap: 0.4rem;
+  width: 150px;
+  padding: 1.4rem 1rem;
+  border-radius: 14px;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .landing-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
-.landing-card-icon  { font-size: 2rem; line-height: 1; }
-.landing-card-title { font-size: 1rem; font-weight: 700; }
-.landing-card-sub   { font-size: 0.72rem; opacity: 0.65; }
+.landing-card-icon  { font-size: 2.2rem; line-height: 1; }
+.landing-card-title { font-family: var(--font-headline); font-size: 1rem; font-weight: 700; }
+.landing-card-sub   { font-size: 0.72rem; opacity: 0.6; }
 
-.landing-features {
-  font-size: 0.78rem;
-  opacity: 0.5;
+.landing-cta-hint {
+  font-size: 0.8rem;
+  opacity: 0.45;
+  margin: 0.25rem 0 0;
+}
+
+/* =========================
+   Landing Content Sections
+========================= */
+
+.landing-sections {
+  width: 100%;
+  max-width: 680px;
+  margin: 2.5rem auto 0;
+  text-align: left;
+}
+
+.landing-block {
+  padding: 1.75rem 0;
+}
+
+.landing-block:first-child {
+  border-top: none;
+  padding-top: 0.5rem;
+}
+
+.landing-block h2 {
+  font-family: var(--font-headline);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.6rem;
+}
+
+.landing-block p {
+  font-size: 0.95rem;
+  line-height: 1.7;
   margin: 0;
+}
+
+/* =========================
+   Landing FAQ
+========================= */
+
+.landing-faq {
+  padding-bottom: 0.5rem;
+}
+
+.landing-faq h2 {
+  margin-bottom: 1rem;
+}
+
+.landing-faq details {
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.landing-faq summary {
+  font-family: var(--font-headline);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.85em 1em;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.landing-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.landing-faq summary::after {
+  content: '+';
+  font-size: 1.1em;
+  font-weight: 400;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.landing-faq details[open] summary::after {
+  content: '−';
+}
+
+.landing-faq details p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0 1em 1em;
 }
 
 /* =========================
@@ -805,16 +927,24 @@ body.banner-visible {
     padding: 1.25em;
   }
 
-  /* Landing panel matches quiz panel width/shape exactly */
-  #landing {
+  /* Landing panel — centered glass card */
+  .landing-panel {
     max-width: 680px;
     margin: 1.5rem auto 0;
-    padding: 2rem 2.25rem 1.5rem;
+    padding: 2.5rem 2.5rem 2rem;
     border-radius: 16px;
   }
 
-  #landing .landing-hero h1 { font-size: 2rem; }
-  #landing .landing-tagline { font-size: 1rem; }
+  .landing-hero h1 { font-size: 2.6rem; }
+  .landing-tagline { font-size: 1.05rem; }
+
+  .landing-sections {
+    max-width: 680px;
+    margin-top: 3rem;
+  }
+
+  .landing-block h2 { font-size: 1.3rem; }
+  .landing-block p  { font-size: 1rem; }
 
   /* Polished thin scrollbar (WebKit) */
   #quiz-app::-webkit-scrollbar {

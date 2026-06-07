@@ -70,10 +70,10 @@
   </script>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="./css/base.css?v=20260606" />
-  <link rel="stylesheet" href="./css/theme.css?v=20260606" />
-  <link rel="stylesheet" href="./css/modal.css?v=20260606" />
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/base.css?v=20260607" />
+  <link rel="stylesheet" href="./css/theme.css?v=20260607" />
+  <link rel="stylesheet" href="./css/modal.css?v=20260607" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Main App -->
   <script type="module" src="./index.js" defer></script>
@@ -329,28 +329,94 @@
   </header>
 
   <section id="landing" class="landing-view">
-    <div class="landing-hero">
-      <h1>Free Ham Radio, Falconry &amp; Security+ Exam Prep</h1>
-      <p class="landing-tagline">Adaptive quizzes and timed exam simulations — no login, no paywall, works offline.</p>
-    </div>
-    <div class="landing-cards">
-      <button class="landing-card" data-category="ham-radio">
-        <span class="landing-card-icon">📻</span>
-        <span class="landing-card-title">Ham Radio</span>
-        <span class="landing-card-sub">Technician · General · Extra</span>
-      </button>
-      <button class="landing-card" data-category="falconry">
-        <span class="landing-card-icon">🦅</span>
-        <span class="landing-card-title">Falconry</span>
-        <span class="landing-card-sub">Apprentice Exam</span>
-      </button>
-      <button class="landing-card" data-category="cybersecurity">
-        <span class="landing-card-icon">🔒</span>
-        <span class="landing-card-title">Security+</span>
-        <span class="landing-card-sub">CompTIA SY0-701</span>
-      </button>
-    </div>
-    <p class="landing-features">Instant explanations &nbsp;·&nbsp; Tag filtering &nbsp;·&nbsp; Timed exam mode &nbsp;·&nbsp; Offline PWA</p>
+
+    <!-- Hero panel — glass card on desktop -->
+    <div class="landing-panel">
+      <div class="landing-hero">
+        <h1>Free Ham Radio, Falconry &amp; Security+ Exam Prep</h1>
+        <p class="landing-tagline">Adaptive quizzes and timed exam simulations — no login, no paywall, works offline.</p>
+        <ul class="landing-badges" aria-label="Key features">
+          <li>100% Free</li>
+          <li>No login</li>
+          <li>Works offline</li>
+          <li>Instant explanations</li>
+        </ul>
+      </div>
+      <div class="landing-cards">
+        <button class="landing-card" data-category="ham-radio">
+          <span class="landing-card-icon">📻</span>
+          <span class="landing-card-title">Ham Radio</span>
+          <span class="landing-card-sub">Technician · General · Extra</span>
+        </button>
+        <button class="landing-card" data-category="falconry">
+          <span class="landing-card-icon">🦅</span>
+          <span class="landing-card-title">Falconry</span>
+          <span class="landing-card-sub">Apprentice Exam</span>
+        </button>
+        <button class="landing-card" data-category="cybersecurity">
+          <span class="landing-card-icon">🔒</span>
+          <span class="landing-card-title">Security+</span>
+          <span class="landing-card-sub">CompTIA SY0-701</span>
+        </button>
+      </div>
+      <p class="landing-cta-hint">Pick a track above — no sign-up needed.</p>
+    </div><!-- /.landing-panel -->
+
+    <!-- Rich content sections — visible, crawlable, AEO/SEO -->
+    <div class="landing-sections">
+
+      <section class="landing-block">
+        <h2>Why Ryno Tools</h2>
+        <p>Ryno Tools is a free, no-account microlearning platform built for focused exam prep. Adaptive quizzes surface your weak areas, timed exam simulations mirror the real test format, and instant explanations close knowledge gaps on the spot. Every question bank is tagged by topic so you can drill the sections that matter most. The app installs as a PWA and works fully offline — no internet required after the first visit.</p>
+      </section>
+
+      <section class="landing-block">
+        <h2>Ham Radio License Exam Prep</h2>
+        <p>Practice all three FCC amateur radio license levels in one place. The <strong>Technician</strong> pool covers regulations, operating procedures, and electronics fundamentals (425+ questions). <strong>General Class</strong> adds HF propagation, antenna theory, and advanced operating (456+ questions). <strong>Amateur Extra</strong> covers the full advanced regulations, EMI, and theoretical concepts required for the top-tier license (706+ questions). Question pools are tagged by NCVEC topic area and updated to current FCC exam cycles.</p>
+      </section>
+
+      <section class="landing-block">
+        <h2>Falconry Apprentice Exam Prep</h2>
+        <p>The falconry apprentice exam is required in all U.S. states to legally practice falconry. It is typically 100 multiple-choice questions covering raptor biology, species identification, housing standards (mews design, perches), nutrition and health care, federal and state hunting regulations, and ethical hunting practices. A passing score of 80% is required in most states. Ryno Tools' 398+ question bank is tagged by subject area so you can isolate the topics where you need the most work.</p>
+      </section>
+
+      <section class="landing-block">
+        <h2>CompTIA Security+ (SY0-701) Exam Prep</h2>
+        <p>Practice questions aligned to the current <strong>CompTIA Security+ SY0-701</strong> objectives: threats and vulnerabilities, cryptography, access control, network security, incident response, and governance &amp; compliance. Security+ SY0-701 satisfies the DoD 8570/8140 baseline certification requirement for Information Assurance roles. CompTIA is expected to release SY0-801 in late 2026.</p>
+      </section>
+
+      <section class="landing-block landing-faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+          <summary>Is Ryno Tools free to use?</summary>
+          <p>Yes. Ryno Tools is completely free. There is no account, subscription, or paywall. All quizzes, timed exam simulations, and explanations are available immediately with no login required.</p>
+        </details>
+
+        <details>
+          <summary>What ham radio license exams does Ryno Tools cover?</summary>
+          <p>Ryno Tools covers all three FCC amateur radio license levels: Technician Class (425+ questions), General Class (456+ questions), and Amateur Extra Class (706+ questions). Questions include explanations and are tagged by topic.</p>
+        </details>
+
+        <details>
+          <summary>Does Ryno Tools work offline?</summary>
+          <p>Yes. Ryno Tools is a Progressive Web App (PWA). After the first visit, the service worker caches all quizzes and app assets. You can study without an internet connection. It can also be installed on your phone or desktop like a native app.</p>
+        </details>
+
+        <details>
+          <summary>What is on the falconry apprentice exam?</summary>
+          <p>The falconry apprentice exam covers raptor biology, species identification, housing standards (mews design, perches), nutrition and health care, federal and state hunting regulations, and ethical hunting practices. A passing score of 80% is required in most states.</p>
+        </details>
+
+        <details>
+          <summary>Which CompTIA Security+ exam version does Ryno Tools cover?</summary>
+          <p>Ryno Tools covers CompTIA Security+ SY0-701, the current active exam version as of 2026, with practice questions aligned to the official exam objectives. SY0-701 covers threats and vulnerabilities, cryptography, access control, network security, incident response, and governance. Security+ satisfies the DoD 8570/8140 baseline certification requirement for Information Assurance roles.</p>
+        </details>
+
+      </section>
+
+    </div><!-- /.landing-sections -->
+
   </section>
 
   <div id="quiz-app" class="is-hidden">
