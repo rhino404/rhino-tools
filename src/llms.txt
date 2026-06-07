@@ -26,8 +26,20 @@
 
 <!-- blog-articles:start -->
 - [Falconry Mews & Housing Standards Every Apprentice Must Know](https://ryno.tools/blog/falconry-mews-housing-standards/) — A mews is more than a shed with a bird in it. Falconry housing standards are federally regulated and heavily tested on the apprentice exam. Here's what you need to know.
+  author: Ask Ryno
+  published: 2026-06-08
+  track: falconry/apprentice
+  tags: Equipment, Rules and Regulations, Health
 - [Ohm's Law Made Simple for the Ham Radio Technician Exam](https://ryno.tools/blog/ohms-law-technician-exam/) — Ohm's Law — V = IR — appears on every Technician license exam. Master the formula, the units, and the common exam scenarios in one focused read.
+  author: Ask Ryno
+  published: 2026-06-08
+  track: ham-radio/technician
+  tags: voltage, resistance, current, power
 - [Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer](https://ryno.tools/blog/symmetric-vs-asymmetric-encryption/) — Symmetric encryption uses one key; asymmetric uses two. That distinction drives dozens of Security+ SY0-701 exam questions on TLS, key exchange, digital signatures, and PKI.
+  author: Ask Ryno
+  published: 2026-06-08
+  track: cybersecurity/sy0-701
+  tags: cryptography, network security
 <!-- blog-articles:end -->
 
 ## Legal

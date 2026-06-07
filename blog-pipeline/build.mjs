@@ -186,6 +186,7 @@ if (draftFiles.length === 0) {
 mkdirSync(SRC_BLOG_DIR, { recursive: true });
 
 const publishedPosts = [];
+const bodyHtmlBySlug = new Map(); // used for RSS content:encoded
 
 for (const file of draftFiles) {
   const raw = readFileSync(join(DRAFTS_DIR, file), 'utf8');
@@ -281,6 +282,7 @@ for (const file of draftFiles) {
   };
 
   const postHtml = fill(postTemplate, vars);
+  bodyHtmlBySlug.set(slug, bodyHtml);
 
   const outDir = join(SRC_BLOG_DIR, slug);
   mkdirSync(outDir, { recursive: true });
@@ -361,17 +363,22 @@ writeFileSync(join(SRC_BLOG_DIR, 'index.html'), indexHtml);
 console.log('✅ Built: src/blog/index.html');
 
 // ── Build RSS feed ─────────────────────────────────────────────────────────────
-const rssItems = publishedPosts.map(p => `  <item>
+const rssItems = publishedPosts.map(p => {
+  const fullBody = bodyHtmlBySlug.get(p.slug) || '';
+  return `  <item>
     <title><![CDATA[${p.title}]]></title>
     <link>https://ryno.tools/blog/${p.slug}/</link>
     <guid isPermaLink="true">https://ryno.tools/blog/${p.slug}/</guid>
     <pubDate>${new Date(p.datePublished + 'T12:00:00Z').toUTCString()}</pubDate>
     <description><![CDATA[${p.excerpt}]]></description>
     <category><![CDATA[${p.trackLabel}]]></category>
-  </item>`).join('\n');
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[${fullBody}]]></content:encoded>
+  </item>`;
+}).join('\n');
 
 const rssFeed = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ryno Tools Blog</title>
     <link>https://ryno.tools/blog/</link>
@@ -411,9 +418,16 @@ console.log('✅ Updated sitemap.xml (blog region)');
 function updateLlms(filePath) {
   if (!existsSync(filePath)) return;
   const content = readFileSync(filePath, 'utf8');
-  const articlesSection = publishedPosts.map(p =>
-    `- [${p.title}](https://ryno.tools/blog/${p.slug}/) — ${p.excerpt}`
-  ).join('\n');
+  const articlesSection = publishedPosts.map(p => {
+    const tagsLine = Array.isArray(p.tags) && p.tags.length ? `  tags: ${p.tags.join(', ')}` : '';
+    return [
+      `- [${p.title}](https://ryno.tools/blog/${p.slug}/) — ${p.excerpt}`,
+      `  author: Ask Ryno`,
+      `  published: ${p.datePublished}`,
+      `  track: ${p.track}`,
+      tagsLine,
+    ].filter(Boolean).join('\n');
+  }).join('\n');
   const updated = replaceManagedRegion(content, 'blog-articles', articlesSection);
   writeFileSync(filePath, updated);
   console.log(`✅ Updated ${filePath.split('/').pop()} (blog-articles region)`);

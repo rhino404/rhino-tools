@@ -31,3 +31,8 @@ Allow: /
 User-agent: GitHubCopilot
 Allow: /
 
+# Structured content discovery
+Sitemap: https://ryno.tools/sitemap.xml
+LLMs: https://ryno.tools/llms.txt
+LLMs-Full: https://ryno.tools/llms-full.txt
+
