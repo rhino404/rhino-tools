@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
+
+  <!-- SEO -->
+  <title>Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer | Ryno Tools Blog</title>
+  <meta name="description" content="Symmetric vs. asymmetric encryption for CompTIA Security+ SY0-701: key differences, AES, RSA, ECC, TLS hybrid model, and exam-tested scenarios explained." />
+  <meta name="author" content="Ask Ryno" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+  <link rel="canonical" href="https://ryno.tools/blog/symmetric-vs-asymmetric-encryption/" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Ryno Tools" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer | Ryno Tools Blog" />
+  <meta property="og:description" content="Symmetric vs. asymmetric encryption for CompTIA Security+ SY0-701: key differences, AES, RSA, ECC, TLS hybrid model, and exam-tested scenarios explained." />
+  <meta property="og:url" content="https://ryno.tools/blog/symmetric-vs-asymmetric-encryption/" />
+  <meta property="og:image" content="https://ryno.tools/images/og-cover.jpg" />
+  <meta property="og:image:alt" content="Ryno Tools — Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-06-08" />
+  <meta property="article:modified_time" content="2026-06-08" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer | Ryno Tools Blog" />
+  <meta name="twitter:description" content="Symmetric vs. asymmetric encryption for CompTIA Security+ SY0-701: key differences, AES, RSA, ECC, TLS hybrid model, and exam-tested scenarios explained." />
+  <meta name="twitter:image" content="https://ryno.tools/images/og-cover.jpg" />
+
+  <!-- RSS Feed Discovery -->
+  <link rel="alternate" type="application/rss+xml" title="Ryno Tools Blog" href="https://ryno.tools/blog/feed.xml" />
+
+  <!-- Ads / Analytics -->
+  <meta name="google-adsense-account" content="ca-pub-5854133806080130" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCJFB67G3V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-WCJFB67G3V");
+  </script>
+
+  <!-- Favicons / PWA -->
+  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0f1115" />
+
+  <!-- Fonts + Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/theme.css?v=20260607b" />
+  <link rel="stylesheet" href="/css/blog.css?v=20260608" />
+
+  <!-- Structured Data: BlogPosting + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://ryno.tools/blog/symmetric-vs-asymmetric-encryption/",
+        "headline": "Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer",
+        "description": "Symmetric vs. asymmetric encryption for CompTIA Security+ SY0-701: key differences, AES, RSA, ECC, TLS hybrid model, and exam-tested scenarios explained.",
+        "url": "https://ryno.tools/blog/symmetric-vs-asymmetric-encryption/",
+        "datePublished": "2026-06-08",
+        "dateModified": "2026-06-08",
+        "author": {
+          "@type": "Organization",
+          "@id": "https://ryno.tools/#org",
+          "name": "Ask Ryno",
+          "url": "https://ryno.tools/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://ryno.tools/#org",
+          "name": "Ryno Tools",
+          "url": "https://ryno.tools/",
+          "logo": "https://ryno.tools/images/logo.webp"
+        },
+        "mainEntityOfPage": "https://ryno.tools/blog/symmetric-vs-asymmetric-encryption/",
+        "image": "https://ryno.tools/images/og-cover.jpg",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ryno.tools/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ryno.tools/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer", "item": "https://ryno.tools/blog/symmetric-vs-asymmetric-encryption/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="dark-mode blog-post-page">
+
+  <!-- Theme bootstrap (no app JS needed) -->
+  <script>
+    (function() {
+      const t = localStorage.getItem('theme');
+      const d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = t || (d ? 'dark' : 'light');
+      document.body.classList.remove('dark-mode', 'light-mode');
+      document.body.classList.add(theme === 'dark' ? 'dark-mode' : 'light-mode');
+    })();
+  </script>
+
+  <header class="blog-header">
+    <div class="blog-header-inner">
+      <a href="/" class="blog-logo-link" aria-label="Ryno Tools Home">
+        <img src="/images/logo.webp" alt="Ryno Tools logo" width="48" height="48" />
+        <span class="blog-logo-name">Ryno Tools</span>
+      </a>
+      <nav class="blog-nav" aria-label="Site navigation">
+        <a href="/blog/">Blog</a>
+        <a href="/">Practice</a>
+      </nav>
+      <button class="blog-theme-toggle clickable-icon" aria-label="Toggle dark mode" onclick="(function(){const b=document.body;const isDark=b.classList.contains('dark-mode');b.classList.toggle('dark-mode',!isDark);b.classList.toggle('light-mode',isDark);localStorage.setItem('theme',isDark?'light':'dark');})()">🌑</button>
+    </div>
+  </header>
+
+  <main class="blog-post-main">
+
+    <!-- Breadcrumb -->
+    <nav class="blog-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li aria-current="page">Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer</li>
+      </ol>
+    </nav>
+
+    <!-- CSS Banner Hero (no raster image — copyright clean) -->
+    <div class="blog-hero blog-hero--cybersecurity">
+      <span class="blog-hero-track-badge">Security+ SY0-701</span>
+      <span class="blog-hero-icon">🔒</span>
+    </div>
+
+    <article class="blog-article">
+      <header class="blog-article-header">
+        <h1>Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer</h1>
+        <div class="blog-byline">
+          <span class="blog-author">By <strong>Ask Ryno</strong></span>
+          <span class="blog-sep">·</span>
+          <time datetime="2026-06-08">June 8, 2026</time>
+          <span class="blog-sep">·</span>
+          <span class="blog-reading-time">7 min read</span>
+        </div>
+        <p class="blog-disclosure">
+          <em>This article was drafted with AI assistance and reviewed by a human before publishing. Sources are listed below so you can verify everything yourself.</em>
+        </p>
+      </header>
+
+      <div class="blog-body">
+        <p>Cryptography is the engine underneath nearly every security control — HTTPS, VPNs, digital signatures, password storage, and disk encryption all depend on it. For the CompTIA Security+ SY0-701 exam, the single most important cryptographic distinction to master is between <strong>symmetric</strong> and <strong>asymmetric</strong> encryption, because it underlies questions across multiple domains: cryptography and PKI, network security, identity, and incident response.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> Symmetric encryption uses the <em>same key</em> to encrypt and decrypt (fast, used for bulk data). Asymmetric encryption uses a <em>key pair</em> — a public key to encrypt, a private key to decrypt (slower, used for key exchange and digital signatures). Most real systems (HTTPS, TLS) combine both.</p>
+</blockquote>
+<h2>What is symmetric encryption?</h2>
+<p>Symmetric encryption uses a single shared key for both encryption and decryption. Anyone who possesses the key can encrypt or decrypt the data. This makes symmetric encryption extremely fast and efficient for encrypting large volumes of data — which is why it's the default for disk encryption, file encryption, and the bulk-data phase of TLS sessions.</p>
+<p>The dominant symmetric algorithm on the Security+ exam is <strong>AES (Advanced Encryption Standard)</strong>. Key facts about AES:</p>
+<ul>
+<li>Symmetric (same key for encrypt and decrypt)</li>
+<li>Block cipher (operates on fixed-size blocks of data)</li>
+<li>Key sizes: 128, 192, or 256 bits — larger keys are more secure</li>
+<li>NIST-approved and used in most modern encryption standards, including WPA2/WPA3 Wi-Fi security</li>
+</ul>
+<p>Other symmetric algorithms you may encounter: <strong>DES</strong> (outdated, 56-bit key, no longer considered secure), <strong>3DES</strong> (Triple DES, a stopgap improvement on DES, also being retired), and <strong>Blowfish/ChaCha20</strong> (less common on the exam).</p>
+<blockquote>
+<p><strong>Exam tip:</strong> The Security+ exam frequently asks to identify symmetric vs. asymmetric algorithms. AES = symmetric. RSA, ECC, and Diffie-Hellman = asymmetric. This is one of the most commonly tested distinctions in the cryptography domain.</p>
+</blockquote>
+<h2>What is asymmetric encryption?</h2>
+<p>Asymmetric encryption uses a mathematically linked <strong>key pair</strong>: a <em>public key</em> and a <em>private key</em>. Data encrypted with the public key can only be decrypted by the corresponding private key, and vice versa. The public key is freely shared; the private key is kept secret by its owner.</p>
+<p>This property enables two fundamental security operations:</p>
+<ul>
+<li><strong>Encryption:</strong> The sender encrypts with the recipient's public key. Only the recipient (who holds the private key) can decrypt.</li>
+<li><strong>Digital signatures:</strong> The signer encrypts a hash of the message with their <em>private key</em>. Anyone can verify the signature using the signer's <em>public key</em>, confirming both authorship and integrity.</li>
+</ul>
+<p>Asymmetric algorithms are significantly slower than symmetric ones for bulk data. For this reason, they're used for key exchange and authentication — not for encrypting large files.</p>
+<p>Common asymmetric algorithms for the SY0-701 exam:</p>
+<ul>
+<li><strong>RSA</strong> — most widely known; used for key exchange and digital signatures; key sizes typically 2048 or 4096 bits</li>
+<li><strong>ECC (Elliptic Curve Cryptography)</strong> — provides equivalent security to RSA with much smaller key sizes; more efficient, used heavily in mobile and IoT; underlies ECDSA (for signatures) and ECDH (for key exchange)</li>
+<li><strong>Diffie-Hellman (DH) / ECDHE</strong> — a key exchange protocol (not encryption), used to establish a shared secret over an insecure channel; ECDHE adds <em>ephemeral</em> keys for perfect forward secrecy</li>
+</ul>
+<h2>How do symmetric and asymmetric encryption work together in TLS?</h2>
+<p>This is one of the most important real-world scenarios for the exam.</p>
+<p>When your browser connects to an HTTPS website, TLS performs a <strong>hybrid</strong> operation:</p>
+<ol>
+<li><strong>Asymmetric phase (key exchange):</strong> The server presents its certificate (containing its public key). The browser uses asymmetric cryptography (e.g., ECDHE for key exchange, RSA/ECDSA for authentication) to establish a shared <em>session key</em> without transmitting it over the network.</li>
+</ol>
+<ol>
+<li><strong>Symmetric phase (bulk data):</strong> Once the session key is established, all subsequent data (the actual HTTP traffic) is encrypted with <strong>AES</strong> using that shared session key. AES is fast enough for real-time data.</li>
+</ol>
+<p>The result: asymmetric cryptography solves the key distribution problem; symmetric cryptography provides the speed needed for actual data transfer. Neither alone is the complete solution.</p>
+<h2>What is perfect forward secrecy (PFS)?</h2>
+<p><strong>Perfect forward secrecy</strong> means that if a server's long-term private key is later compromised, past session recordings cannot be decrypted retroactively. It is achieved by using <em>ephemeral</em> key pairs (new ones for each session) during key exchange — which is what the "E" in ECDHE means. The Security+ exam tests PFS as a feature of TLS 1.3 and as a reason to prefer ECDHE over static RSA key exchange.</p>
+<h2>Digital signatures and certificate authorities</h2>
+<p>Asymmetric cryptography is the foundation of <strong>digital signatures</strong> and the <strong>Public Key Infrastructure (PKI)</strong> that makes HTTPS trustworthy:</p>
+<ol>
+<li>A certificate authority (CA) digitally signs a server's certificate using the CA's private key.</li>
+<li>Your browser trusts the CA's public key (pre-installed in the OS/browser trust store).</li>
+<li>The browser verifies the server's certificate using the CA's public key, confirming the server's identity.</li>
+</ol>
+<p>This chain of trust — from the root CA down to the server certificate — is <strong>PKI</strong>. Understanding it is essential for the Identity and Access Management and Cryptography domains on SY0-701.</p>
+<h2>Frequently asked</h2>
+<h2>Which encryption algorithm is symmetric?</h2>
+<p><strong>AES</strong> is symmetric. It uses the same key for both encryption and decryption. This is the most tested symmetric algorithm on Security+.</p>
+<h2>What is the difference between RSA and ECC?</h2>
+<p>Both are asymmetric. <strong>RSA</strong> relies on the difficulty of factoring large prime numbers and uses larger key sizes (2048+ bits). <strong>ECC</strong> relies on elliptic curve discrete logarithm problems and achieves equivalent security with much smaller keys (256-bit ECC ≈ 3072-bit RSA), making it more efficient for constrained environments like mobile devices.</p>
+<h2>Which protocol uses TLS to encrypt web traffic?</h2>
+<p><strong>HTTPS</strong> uses TLS (Transport Layer Security) to encrypt web traffic, protecting data in transit from eavesdropping and tampering. TLS is also used by SMTPS (email) and other application protocols.</p>
+      </div>
+
+      <!-- Quiz CTA -->
+      <div class="blog-quiz-cta">
+        <p>Ready to test your knowledge?</p>
+        <a href="/?category=cybersecurity&subcategory=security%2B%20sy0-701" class="blog-cta-btn">
+          Practice Security+ SY0-701 on Ryno Tools →
+        </a>
+      </div>
+
+      <!-- Sources -->
+      <section class="blog-sources" aria-label="Sources">
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="undefined" target="_blank" rel="noopener noreferrer">undefined</a></li>
+          <li><a href="undefined" target="_blank" rel="noopener noreferrer">undefined</a></li>
+          <li><a href="undefined" target="_blank" rel="noopener noreferrer">undefined</a></li>
+          <li><a href="undefined" target="_blank" rel="noopener noreferrer">undefined</a></li>
+          <li><a href="undefined" target="_blank" rel="noopener noreferrer">undefined</a></li>
+          <li><a href="undefined" target="_blank" rel="noopener noreferrer">undefined</a></li>
+          <li><a href="undefined" target="_blank" rel="noopener noreferrer">undefined</a></li>
+          <li><a href="undefined" target="_blank" rel="noopener noreferrer">undefined</a></li>
+          <li><a href="undefined" target="_blank" rel="noopener noreferrer">undefined</a></li>
+          <li><a href="undefined" target="_blank" rel="noopener noreferrer">undefined</a></li>
+          <li><a href="undefined" target="_blank" rel="noopener noreferrer">undefined</a></li>
+          <li><a href="undefined" target="_blank" rel="noopener noreferrer">undefined</a></li>
+        </ul>
+      </section>
+
+      <!-- Related Posts -->
+      
+
+      <!-- Share -->
+      <div class="blog-share">
+        <p>Found this helpful? Share it:</p>
+        <div class="blog-share-btns">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fryno.tools%2Fblog%2Fsymmetric-vs-asymmetric-encryption%2F&text=Symmetric%20vs.%20Asymmetric%20Encryption%3A%20A%20Security%2B%20SY0-701%20Primer" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Share on X">X / Twitter</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fryno.tools%2Fblog%2Fsymmetric-vs-asymmetric-encryption%2F" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Share on LinkedIn">LinkedIn</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fryno.tools%2Fblog%2Fsymmetric-vs-asymmetric-encryption%2F" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Share on Facebook">Facebook</a>
+          <button class="blog-share-btn blog-copy-link" onclick="navigator.clipboard&&navigator.clipboard.writeText(window.location.href).then(function(){var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy Link'},2000)}.bind(this))" aria-label="Copy link">Copy Link</button>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="blog-footer">
+    <p>
+      <a href="/">Ryno Tools</a> &nbsp;|&nbsp;
+      <a href="/blog/">Blog</a> &nbsp;|&nbsp;
+      <a href="/pages/privacy.html">Privacy</a> &nbsp;|&nbsp;
+      <a href="/pages/terms.html">Terms</a>
+    </p>
+    <p class="blog-footer-copy">Copyright © <script>document.write(new Date().getFullYear())</script> Ryno Tools. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -22,6 +22,14 @@
 - Light/dark mode
 - Installable as a PWA (works offline)
 
+## Articles
+
+<!-- blog-articles:start -->
+- [Falconry Mews & Housing Standards Every Apprentice Must Know](https://ryno.tools/blog/falconry-mews-housing-standards/) — A mews is more than a shed with a bird in it. Falconry housing standards are federally regulated and heavily tested on the apprentice exam. Here's what you need to know.
+- [Ohm's Law Made Simple for the Ham Radio Technician Exam](https://ryno.tools/blog/ohms-law-technician-exam/) — Ohm's Law — V = IR — appears on every Technician license exam. Master the formula, the units, and the common exam scenarios in one focused read.
+- [Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer](https://ryno.tools/blog/symmetric-vs-asymmetric-encryption/) — Symmetric encryption uses one key; asymmetric uses two. That distinction drives dozens of Security+ SY0-701 exam questions on TLS, key exchange, digital signatures, and PKI.
+<!-- blog-articles:end -->
+
 ## Legal
 
 - [Privacy Policy](https://ryno.tools/pages/privacy.html)

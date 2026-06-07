@@ -165,4 +165,30 @@ document.addEventListener('DOMContentLoaded', async () => {
       showLanding();
     });
   }
+
+  // ------------------------
+  // Blog deep-link: ?category=&subcategory=
+  // Runs after restoreSession so it overrides any restored state.
+  // Guards unknown values — falls back to landing if category is unrecognized.
+  // ------------------------
+  const params = new URLSearchParams(location.search);
+  const deepCategory = params.get('category');
+  const deepSubcategory = params.get('subcategory');
+  if (deepCategory) {
+    const validCat = getCatalogSync().categories.find(c => c.value === deepCategory);
+    if (validCat) {
+      const catLi = state.categoryOptions?.querySelector(`li[data-value="${deepCategory}"]`);
+      if (catLi) {
+        catLi.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+        if (deepSubcategory) {
+          // Wait one tick for subcategory dropdown to populate after category click
+          setTimeout(() => {
+            const subLi = state.subcategoryOptions?.querySelector(`li[data-value="${deepSubcategory}"]`);
+            if (subLi) subLi.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+          }, 0);
+        }
+        showQuiz();
+      }
+    }
+  }
 });

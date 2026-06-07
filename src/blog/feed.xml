@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ryno Tools Blog</title>
+    <link>https://ryno.tools/blog/</link>
+    <description>Study guides and exam prep tips for Ham Radio, Falconry, and CompTIA Security+.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Jun 2026 03:45:52 GMT</lastBuildDate>
+    <atom:link href="https://ryno.tools/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Falconry Mews & Housing Standards Every Apprentice Must Know]]></title>
+    <link>https://ryno.tools/blog/falconry-mews-housing-standards/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/falconry-mews-housing-standards/</guid>
+    <pubDate>Mon, 08 Jun 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[A mews is more than a shed with a bird in it. Falconry housing standards are federally regulated and heavily tested on the apprentice exam. Here's what you need to know.]]></description>
+    <category><![CDATA[Falconry — Apprentice]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Ohm's Law Made Simple for the Ham Radio Technician Exam]]></title>
+    <link>https://ryno.tools/blog/ohms-law-technician-exam/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/ohms-law-technician-exam/</guid>
+    <pubDate>Mon, 08 Jun 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Ohm's Law — V = IR — appears on every Technician license exam. Master the formula, the units, and the common exam scenarios in one focused read.]]></description>
+    <category><![CDATA[Ham Radio — Technician]]></category>
+  </item>
+  <item>
+    <title><![CDATA[Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer]]></title>
+    <link>https://ryno.tools/blog/symmetric-vs-asymmetric-encryption/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/symmetric-vs-asymmetric-encryption/</guid>
+    <pubDate>Mon, 08 Jun 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Symmetric encryption uses one key; asymmetric uses two. That distinction drives dozens of Security+ SY0-701 exam questions on TLS, key exchange, digital signatures, and PKI.]]></description>
+    <category><![CDATA[Security+ SY0-701]]></category>
+  </item>
+  </channel>
+</rss>

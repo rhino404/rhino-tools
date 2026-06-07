@@ -624,6 +624,11 @@ body #crypto-bar {
     var(--gradient-green-torque);
 }
 
+body.dark-mode .header-blog-link { color: rgba(232, 234, 240, 0.75); }
+body.dark-mode .header-blog-link:hover { color: #e8eaf0; }
+body.light-mode .header-blog-link { color: rgba(26, 28, 34, 0.7); }
+body.light-mode .header-blog-link:hover { color: #1a1c22; }
+
 /* =========================
    Light Theme (light.css)
    Improved for branding & usability
