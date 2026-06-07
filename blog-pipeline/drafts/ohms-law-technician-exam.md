@@ -9,6 +9,7 @@ dateModified: 2026-06-08
 readingTime: 6
 excerpt: "Ohm's Law — V = IR — appears on every Technician license exam. Master the formula, the units, and the common exam scenarios in one focused read."
 sources_json: [{"title":"FCC Part 97 Amateur Radio Rules","url":"https://www.ecfr.gov/current/title-47/chapter-I/subchapter-D/part-97","publisher":"FCC","accessed":"2026-06-08"},{"title":"ARRL Ham Radio License Manual","url":"https://www.arrl.org/ham-radio-license-manual","publisher":"ARRL","accessed":"2026-06-08"},{"title":"NCVEC Technician Class Question Pool (2022–2026)","url":"https://ncvec.org/page/2022-2026-technician-class-question-pool","publisher":"NCVEC","accessed":"2026-06-08"}]
+faq_json: [{"q":"What does electromotive force (EMF) mean on the ham radio exam?","a":"EMF is another term for voltage — the force that causes electrons to flow. On the Technician exam the question asks for the electrical term for EMF that causes electron flow; the answer is voltage."},{"q":"What is the name for the flow of electrons in a circuit?","a":"The flow of electrons in a circuit is called current, measured in amperes. This is a standalone definition question in the T5 subelement."},{"q":"Why does amateur radio care about Ohm's Law?","a":"Every RF circuit, feedline, antenna system, and power supply obeys Ohm's Law. It lets you calculate impedance, size fuses, troubleshoot power supplies, and match transmitter output to antennas."}]
 status: ready
 ---
 
@@ -90,14 +91,14 @@ Electrical current is measured in **amperes**. Electrical power is measured in *
 
 ## Frequently asked
 
-## What does "electromotive force (EMF)" mean on the exam?
+### What does "electromotive force (EMF)" mean on the exam?
 
 EMF is another term for voltage — the force that causes electrons to flow. The Technician pool asks: *"What is the electrical term for the electromotive force (EMF) that causes electron flow?"* The answer is **voltage**.
 
-## What is the name for the flow of electrons in a circuit?
+### What is the name for the flow of electrons in a circuit?
 
 The flow of electrons is called **current**. This is tested directly in the T5 subelement as a standalone definition question.
 
-## Why does amateur radio care about Ohm's Law?
+### Why does amateur radio care about Ohm's Law?
 
 Every RF circuit, feedline, antenna system, and power supply in your station obeys Ohm's Law. Understanding it lets you calculate antenna feedpoint impedance, size fuses correctly, troubleshoot power supply issues, and match transmitter output to antenna systems. It's not just an exam topic — it's the foundation of every hands-on radio project.

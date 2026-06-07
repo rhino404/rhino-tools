@@ -9,6 +9,7 @@ dateModified: 2026-06-08
 readingTime: 7
 excerpt: "Symmetric encryption uses one key; asymmetric uses two. That distinction drives dozens of Security+ SY0-701 exam questions on TLS, key exchange, digital signatures, and PKI."
 sources_json: [{"title":"CompTIA Security+ SY0-701 Exam Objectives","url":"https://www.comptia.org/training/resources/exam-objectives/comptia-security-sy0-701-exam-objectives","publisher":"CompTIA","accessed":"2026-06-08"},{"title":"NIST SP 800-175B Rev 1 — Guideline for Using Cryptographic Standards","url":"https://csrc.nist.gov/publications/detail/sp/800-175b/rev-1/final","publisher":"NIST","accessed":"2026-06-08"},{"title":"CISA — Cryptography","url":"https://www.cisa.gov/topics/cybersecurity-best-practices/cryptography","publisher":"CISA","accessed":"2026-06-08"}]
+faq_json: [{"q":"Which encryption algorithm is symmetric on the Security+ exam?","a":"AES (Advanced Encryption Standard) is the primary symmetric algorithm tested on Security+ SY0-701. It uses the same key for both encryption and decryption and is the current U.S. government standard for symmetric encryption."},{"q":"What is the difference between RSA and ECC encryption?","a":"Both RSA and ECC are asymmetric algorithms. RSA relies on factoring large prime numbers and requires larger keys (2048+ bits). ECC relies on elliptic curve discrete logarithm problems and achieves equivalent security with much smaller keys — 256-bit ECC equals roughly 3072-bit RSA — making it more efficient on mobile and constrained devices."},{"q":"Which protocol uses TLS to encrypt web traffic?","a":"HTTPS uses TLS (Transport Layer Security) to encrypt web traffic, protecting data in transit from eavesdropping and tampering. TLS also secures SMTPS email and other application protocols."}]
 status: ready
 ---
 
@@ -73,14 +74,14 @@ This chain of trust — from the root CA down to the server certificate — is *
 
 ## Frequently asked
 
-## Which encryption algorithm is symmetric?
+### Which encryption algorithm is symmetric?
 
 **AES** is symmetric. It uses the same key for both encryption and decryption. This is the most tested symmetric algorithm on Security+.
 
-## What is the difference between RSA and ECC?
+### What is the difference between RSA and ECC?
 
 Both are asymmetric. **RSA** relies on the difficulty of factoring large prime numbers and uses larger key sizes (2048+ bits). **ECC** relies on elliptic curve discrete logarithm problems and achieves equivalent security with much smaller keys (256-bit ECC ≈ 3072-bit RSA), making it more efficient for constrained environments like mobile devices.
 
-## Which protocol uses TLS to encrypt web traffic?
+### Which protocol uses TLS to encrypt web traffic?
 
 **HTTPS** uses TLS (Transport Layer Security) to encrypt web traffic, protecting data in transit from eavesdropping and tampering. TLS is also used by SMTPS (email) and other application protocols.

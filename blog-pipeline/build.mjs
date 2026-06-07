@@ -224,6 +224,25 @@ for (const file of draftFiles) {
     sources = typeof rawSources === 'string' ? JSON.parse(rawSources) : (Array.isArray(rawSources) ? rawSources : []);
   } catch { sources = []; }
 
+  // Parse faq_json for FAQPage schema + HTML H3 structure
+  let faqItems = [];
+  try {
+    const rawFaq = meta.faq_json;
+    faqItems = typeof rawFaq === 'string' ? JSON.parse(rawFaq) : (Array.isArray(rawFaq) ? rawFaq : []);
+  } catch { faqItems = []; }
+
+  const faqSchemaJson = faqItems.length
+    ? JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqItems.map(item => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: { '@type': 'Answer', text: item.a },
+        })),
+      }, null, 2)
+    : '';
+
   const sourcesHtml = sources.map(s =>
     `<li><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.title}</a>${s.publisher ? ` — ${s.publisher}` : ''}${s.accessed ? ` (accessed ${s.accessed})` : ''}</li>`
   ).join('\n          ');
@@ -252,6 +271,9 @@ for (const file of draftFiles) {
       ? `<section class="blog-sources" aria-label="Sources">\n        <h2>Sources</h2>\n        <ul>\n          ${sourcesHtml}\n        </ul>\n      </section>`
       : '',
     POST_QUIZ_CTA_URL: ctaUrl,
+    POST_FAQ_SCHEMA: faqSchemaJson
+      ? `\n  <script type="application/ld+json">\n  ${faqSchemaJson}\n  </script>`
+      : '',
     POST_RELATED_HTML: '', // populated post-build once multiple posts exist
     SHARE_TWITTER_URL: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
     SHARE_LINKEDIN_URL: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,

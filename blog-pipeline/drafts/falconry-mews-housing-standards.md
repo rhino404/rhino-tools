@@ -9,6 +9,7 @@ dateModified: 2026-06-08
 readingTime: 7
 excerpt: "A mews is more than a shed with a bird in it. Falconry housing standards are federally regulated and heavily tested on the apprentice exam. Here's what you need to know."
 sources_json: [{"title":"USFWS Falconry Regulations — 50 CFR Part 21","url":"https://www.fws.gov/media/falconry-regulations","publisher":"U.S. Fish & Wildlife Service","accessed":"2026-06-08"},{"title":"North American Falconers Association — Apprentice Study Guide","url":"https://www.nafa.org","publisher":"NAFA","accessed":"2026-06-08"},{"title":"Model Falconry Regulations — AFBH","url":"https://www.afbh.org/model-regulations","publisher":"Association for the Promotion of Falconry and Bird of Prey Husbandry","accessed":"2026-06-08"}]
+faq_json: [{"q":"What are the minimum inside dimensions of a mews for an apprentice bird?","a":"The federally required minimum for an apprentice raptor mews is 8 feet by 8 feet by 6 feet (length by width by height). Individual states may require larger dimensions."},{"q":"What is the maximum gap allowed in a mews structure?","a":"No gap, crack, or opening in the mews may exceed 1 inch in any dimension. This prevents both escapes and predator entry and is directly tested on the apprentice exam."},{"q":"Why are field jesses different from mews jesses?","a":"Field (slitless) jesses have no attachment slit so they cannot snag on branches when the bird flies free. Mews jesses have a slit for attaching the swivel during tethering and must be swapped for field jesses before releasing the bird."}]
 status: ready
 ---
 
@@ -74,14 +75,14 @@ Live lures (live tethered prey animals) are reserved only for true emergencies a
 
 ## Frequently asked
 
-## What are the minimum inside dimensions of a mews for an apprentice bird?
+### What are the minimum inside dimensions of a mews for an apprentice bird?
 
 The federally required minimum for an apprentice raptor mews is **8 feet × 8 feet × 6 feet** (length × width × height). States may require larger dimensions.
 
-## What is the maximum gap allowed in a mews structure?
+### What is the maximum gap allowed in a mews structure?
 
 No gap, crack, or opening in the mews may exceed **1 inch** in any dimension. This prevents both escapes and predator entry.
 
-## Why are field jesses different from mews jesses?
+### Why are field jesses different from mews jesses?
 
 Field (slitless) jesses have no attachment slit, so they cannot snag on branches or brush when the bird is flying free. Mews jesses have a slit for attaching the swivel during tethering but must be swapped for field jesses before releasing the bird to fly.
