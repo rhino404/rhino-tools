@@ -73,6 +73,15 @@
   flex-shrink: 0;
   line-height: 1;
 }
+/* Override theme.css `body.dark-mode button` / `body.light-mode button` rules
+   which have higher specificity (0,2,1) than the rule above (0,1,0). */
+body.dark-mode .blog-theme-toggle,
+body.light-mode .blog-theme-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
 
 /* ── Track badge + hero colors ────────────────────────────────── */
 :root {
@@ -233,7 +242,6 @@ body.light-mode .blog-filter-btn.active {
   line-height: 1.6;
   opacity: 0.85;
   margin: 0 0 1rem;
-  max-width: 560px;
 }
 
 /* ── Post grid ────────────────────────────────────────────────── */
