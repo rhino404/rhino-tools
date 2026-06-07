@@ -73,14 +73,17 @@
   flex-shrink: 0;
   line-height: 1;
 }
-/* Override theme.css `body.dark-mode button` / `body.light-mode button` rules
-   which have higher specificity (0,2,1) than the rule above (0,1,0). */
+/* Override theme.css `body.[mode] button` rules (specificity 0,2,1 > 0,1,0). */
 body.dark-mode .blog-theme-toggle,
-body.light-mode .blog-theme-toggle {
+body.light-mode .blog-theme-toggle,
+body.dark-mode .blog-theme-toggle:hover,
+body.light-mode .blog-theme-toggle:hover {
   background: none;
   border: none;
   padding: 0;
   border-radius: 0;
+  box-shadow: none;
+  transform: none;
 }
 
 /* ── Track badge + hero colors ────────────────────────────────── */
