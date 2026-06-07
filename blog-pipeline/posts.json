@@ -58,5 +58,68 @@
     "dateModified": "2026-06-08",
     "readingTime": 7,
     "url": "/blog/symmetric-vs-asymmetric-encryption/"
+  },
+  {
+    "slug": "ham-radio-exam-online-2026",
+    "title": "Can You Take the Ham Radio Exam Online in 2026?",
+    "description": "Yes — online ham radio exams are widely available in 2026. Learn which VECs offer remote sessions, what you need, and how to register from home.",
+    "excerpt": "Remote ham radio exams have been available since 2020 and are now a mainstream option. Here is everything you need to know to take your Technician exam online.",
+    "track": "ham-radio/technician",
+    "trackLabel": "Ham Radio — Technician",
+    "trackIcon": "📻",
+    "trackSlug": "ham-radio",
+    "trackCategory": "ham-radio",
+    "tags": [
+      "exam-prep",
+      "online-exam",
+      "technician",
+      "ve-session"
+    ],
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "readingTime": 5,
+    "url": "/blog/ham-radio-exam-online-2026/"
+  },
+  {
+    "slug": "how-hard-is-ham-radio-technician-exam",
+    "title": "How Hard Is the Ham Radio Technician Exam?",
+    "description": "The Technician exam is 35 questions, requires a 74% score to pass, and most people pass with 10–20 hours of focused study. Here's exactly what to expect.",
+    "excerpt": "Most people pass the ham radio Technician exam on their first try with 10–20 hours of study. Learn the question count, passing score, topic breakdown, and best study methods.",
+    "track": "ham-radio/technician",
+    "trackLabel": "Ham Radio — Technician",
+    "trackIcon": "📻",
+    "trackSlug": "ham-radio",
+    "trackCategory": "ham-radio",
+    "tags": [
+      "exam-prep",
+      "technician",
+      "study-tips",
+      "fcc"
+    ],
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "readingTime": 5,
+    "url": "/blog/how-hard-is-ham-radio-technician-exam/"
+  },
+  {
+    "slug": "how-many-questions-falconry-apprentice-exam",
+    "title": "How Many Questions Are on the Falconry Apprentice Exam?",
+    "description": "Most states use a 100-question falconry apprentice exam with an 80% passing score. Learn what topics are covered, how to register, and how to prepare.",
+    "excerpt": "The falconry apprentice exam is typically 100 questions and requires an 80% score to pass. Here is what the test covers, how scoring works, and how to register through your state wildlife agency.",
+    "track": "falconry/apprentice",
+    "trackLabel": "Falconry — Apprentice",
+    "trackIcon": "🦅",
+    "trackSlug": "falconry",
+    "trackCategory": "falconry",
+    "tags": [
+      "exam-prep",
+      "apprentice",
+      "falconry-license",
+      "regulations"
+    ],
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "readingTime": 5,
+    "url": "/blog/how-many-questions-falconry-apprentice-exam/"
   }
 ]

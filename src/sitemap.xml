@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://ryno.tools/pages/about.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://ryno.tools/pages/privacy.html</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>yearly</changefreq>
@@ -40,6 +46,24 @@
   <url>
     <loc>https://ryno.tools/blog/symmetric-vs-asymmetric-encryption/</loc>
     <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ryno.tools/blog/ham-radio-exam-online-2026/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ryno.tools/blog/how-hard-is-ham-radio-technician-exam/</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ryno.tools/blog/how-many-questions-falconry-apprentice-exam/</loc>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -5,7 +5,7 @@
     <link>https://ryno.tools/blog/</link>
     <description>Study guides and exam prep tips for Ham Radio, Falconry, and CompTIA Security+.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2026 12:26:38 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 19:50:11 GMT</lastBuildDate>
     <atom:link href="https://ryno.tools/blog/feed.xml" rel="self" type="application/rss+xml" />
   <item>
     <title><![CDATA[Falconry Mews & Housing Standards Every Apprentice Must Know]]></title>
@@ -204,6 +204,171 @@
 <p>Both are asymmetric. <strong>RSA</strong> relies on the difficulty of factoring large prime numbers and uses larger key sizes (2048+ bits). <strong>ECC</strong> relies on elliptic curve discrete logarithm problems and achieves equivalent security with much smaller keys (256-bit ECC ≈ 3072-bit RSA), making it more efficient for constrained environments like mobile devices.</p>
 <h3>Which protocol uses TLS to encrypt web traffic?</h3>
 <p><strong>HTTPS</strong> uses TLS (Transport Layer Security) to encrypt web traffic, protecting data in transit from eavesdropping and tampering. TLS is also used by SMTPS (email) and other application protocols.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title><![CDATA[Can You Take the Ham Radio Exam Online in 2026?]]></title>
+    <link>https://ryno.tools/blog/ham-radio-exam-online-2026/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/ham-radio-exam-online-2026/</guid>
+    <pubDate>Sun, 07 Jun 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Remote ham radio exams have been available since 2020 and are now a mainstream option. Here is everything you need to know to take your Technician exam online.]]></description>
+    <category><![CDATA[Ham Radio — Technician]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p>Yes, you can take the ham radio Technician exam online — and in 2026, remote testing is a well-established, widely available option. For candidates who prefer to test from home, or who live far from an in-person session, online Volunteer Examiner (VE) sessions are a practical path to your first license.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> Online ham radio exams have been authorized since 2014 and fully remote sessions have been widely available since 2020. Multiple VEC organizations offer them. You need a webcam, a government-issued photo ID, a quiet room, a registered FCC FRN, and about 60–90 minutes. Register through ARRL VEC, W5YI, Laurel ARC, or HamStudy.org's session finder.</p>
+</blockquote>
+<h2>When did online ham radio exams become available?</h2>
+<p>The FCC authorized remote exam administration in a 2014 Report and Order (R&amp;O 14-74), which allowed Volunteer Examiners to administer exams at locations remote from themselves. However, early implementations still required an on-site proctor to be physically present with the candidate.</p>
+<p>Fully remote testing — where both the candidate and all three required Volunteer Examiners participate via video conference, with no one physically present together — became a practical reality in 2020. The first documented fully remote amateur radio exam took place on March 26, 2020, when a candidate passed the Technician exam over Zoom under observation by W5YI-VEC examiners. Within weeks, multiple VECs were running remote sessions routinely.</p>
+<p>The FCC deliberately left the mechanics of remote testing to individual VECs, which is why you'll see variation in platforms, procedures, and requirements from one VE team to the next. The core rules — three accredited VEs must be present, the exam must come from the official question pool, and the candidate must be positively identified — remain the same as for in-person sessions.</p>
+<h2>Which organizations offer online ham radio exams?</h2>
+<p>Several <strong>Volunteer Examiner Coordinators (VECs)</strong> sponsor online exam sessions. The major ones to know:</p>
+<ul>
+<li><strong>ARRL VEC</strong> — The American Radio Relay League's VEC arm lists dozens of VE teams that offer remote sessions. ARRL publishes a dedicated page of online exam session teams at arrl.org/online-exam-session, updated regularly.</li>
+<li><strong>W5YI-VEC</strong> — One of the VECs that ran the first remote trial in 2020, W5YI continues to offer online sessions for all license classes. Sessions are listed through their website and HamStudy.org.</li>
+<li><strong>Laurel ARC</strong> — Laurel Amateur Radio Club, Inc. coordinates sessions listed on HamStudy.org, including remote options. Laurel is also known for offering no-fee exam sessions for candidates who need it.</li>
+<li><strong>GLAARG VEC</strong> — Greater Los Angeles Amateur Radio Group was among the earliest adopters of fully remote testing in 2020 and has been running high-volume online sessions since.</li>
+</ul>
+<p>Beyond these, many local clubs affiliated with various VECs now offer remote options. The easiest way to find a current session is through <strong>HamStudy.org's session finder</strong> (hamstudy.org/sessions), which lets you filter specifically for remote sessions across all participating VECs.</p>
+<h2>What do you need for an online ham radio exam session?</h2>
+<p>Requirements vary slightly by VE team, but the following checklist covers what most sessions require:</p>
+<ul>
+<li><strong>A computer (desktop or laptop)</strong> with a working webcam and microphone. Tablets and phones are generally not accepted. Some teams prohibit dual-monitor setups and require you to disconnect any extra displays.</li>
+<li><strong>Reliable internet connection</strong> strong enough to sustain simultaneous video and screen sharing without dropping.</li>
+<li><strong>Video conferencing software</strong> — typically Zoom. Download and test it before exam day; most teams prohibit using the browser-only version.</li>
+<li><strong>A government-issued photo ID</strong> — a driver's license, state ID, or passport. You will be asked to hold the ID up to the camera so each examiner can verify your identity.</li>
+<li><strong>Your FCC Registration Number (FRN)</strong> — obtained by registering in the FCC CORES system before exam day. You cannot complete the license application without one.</li>
+<li><strong>A clean, quiet room</strong> with no books, notes, or study materials visible. You will be asked to pan your webcam around the room before the exam begins. No other people are permitted in the room during the session.</li>
+</ul>
+<blockquote>
+<p><strong>Exam tip:</strong> Register for your FRN in the FCC CORES system at least a few days before your exam. It takes only a few minutes, but you want it in hand on exam day, not scrambling for it 10 minutes before your Zoom call. Once you pass, the VEC will submit your results to the FCC electronically, and you will then have 10 calendar days to pay the $35 FCC application fee — missing that window means your application is dismissed.</p>
+</blockquote>
+<h2>Is the online exam the same as the in-person exam?</h2>
+<p>Yes, in every way that matters for your license. The exam content is identical. Both formats draw from the same official NCVEC question pool — <strong>35 questions from the Technician pool</strong> for the Technician license — and the passing threshold is the same: <strong>26 correct answers out of 35 (74%)</strong>.</p>
+<p>The exam is delivered through an online testing platform (commonly ExamTools at exam.tools). You answer multiple-choice questions on screen. The three Volunteer Examiners observe you via webcam and can see your shared screen throughout. When you finish, the examiners grade the exam immediately. If you pass, you sign a digital FCC Form 605 and receive a Certificate of Successful Completion of Examination (CSCE), which serves as your temporary authorization to operate while the FCC processes your license.</p>
+<p>One practical difference: in-person sessions sometimes allow you to ask questions between exam elements (if you're testing for multiple elements in one sitting), while remote sessions vary in how they handle that. If you plan to attempt more than one element, confirm the procedure with your VE team in advance.</p>
+<h2>How do you find and register for an online VE session?</h2>
+<p>The process is straightforward:</p>
+<ul>
+<li><strong>HamStudy.org</strong> (hamstudy.org/sessions) is the most comprehensive aggregator. Select "Remote" from the filter at the top of the page to show only online sessions. Sessions list the VEC, date, time, fee, and a registration link.</li>
+<li><strong>ARRL's online exam session list</strong> (arrl.org/online-exam-session) lists VE teams that offer remote exams, each with contact information or a direct registration link.</li>
+<li><strong>W5YI's session finder</strong> (w5yi.org) links to their remote session listings.</li>
+</ul>
+<p>Most sessions charge a <strong>VE exam fee of around $14–$15</strong>, paid to the VE team. This is separate from the $35 FCC application fee paid directly to the FCC after you pass. Some Laurel ARC sessions are offered at no charge. A few VE teams cover the FCC fee for students — check the session listing for specifics.</p>
+<p>Registration typically involves filling out a short form with your name, email, and FRN, then receiving a confirmation with the Zoom link. Many teams send the link 15–30 minutes before the session starts, so watch your inbox on exam day.</p>
+<h2>Frequently asked</h2>
+<h3>Do I need my FRN before I register for an exam session?</h3>
+<p>Most VE teams ask for your FRN as part of the registration form. You can get an FRN by registering a free account at the FCC CORES system (fcc.gov/rofrn). It takes about five minutes and you will receive your FRN immediately. Do this before you look for a session so it does not slow you down at registration.</p>
+<h3>How long after passing the online exam can I start transmitting?</h3>
+<p>Once your license appears in the FCC Universal Licensing System (ULS) database, you are authorized to operate — you do not have to wait for a physical license. Most candidates see their new call sign appear in ULS within a few days of paying the FCC application fee, sometimes as quickly as the next business day. Your CSCE serves as a temporary authorization in the meantime.</p>
+<h3>What happens if I fail the online exam?</h3>
+<p>Failing is not the end. Many VE teams allow you to retest the same day if a slot is available and if you pay the session fee again. If not, you can sign up for another session immediately — there is no waiting period between attempts. Use the study tools at arrl.org/exam-practice or hamstudy.org to identify the areas where you lost points and drill those topics before your next session.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title><![CDATA[How Hard Is the Ham Radio Technician Exam?]]></title>
+    <link>https://ryno.tools/blog/how-hard-is-ham-radio-technician-exam/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/how-hard-is-ham-radio-technician-exam/</guid>
+    <pubDate>Sun, 07 Jun 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Most people pass the ham radio Technician exam on their first try with 10–20 hours of study. Learn the question count, passing score, topic breakdown, and best study methods.]]></description>
+    <category><![CDATA[Ham Radio — Technician]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p>The ham radio Technician exam is genuinely accessible for motivated beginners — it is a 35-question multiple-choice test drawn from a publicly published question pool, and it does not require prior electronics experience or Morse code knowledge. Most people who study consistently for two to four weeks pass it on their first attempt.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> The Technician exam has 35 multiple-choice questions; you need 26 correct (74%) to pass. The full question pool has roughly 409 questions and is available free online before you sit. With 10–20 hours of focused practice, most candidates pass on the first try.</p>
+</blockquote>
+<h2>What does the Technician exam cover?</h2>
+<p>The exam is formally called Element 2 and is administered by FCC-authorized Volunteer Examiner teams. It covers six broad areas that any new ham operator needs to understand:</p>
+<ul>
+<li><strong>Rules and regulations</strong> — FCC Part 97, license classes, privileges, station identification, and prohibited conduct</li>
+<li><strong>Operating practices</strong> — Repeater use, calling frequencies, phonetic alphabet, emergency communications</li>
+<li><strong>Radio wave propagation</strong> — How VHF/UHF signals travel, line-of-sight limitations, and basic ionospheric concepts</li>
+<li><strong>Electrical principles</strong> — Ohm's Law, power calculations, basic circuit theory (voltage, current, resistance)</li>
+<li><strong>Station equipment</strong> — Transceivers, antennas, feedlines, connectors, SWR, and RF safety</li>
+<li><strong>Safety</strong> — Electrical hazards, RF exposure limits, tower climbing, and battery safety</li>
+</ul>
+<p>The ARRL describes the Technician license as covering "basic regulations, operating practices and electronics theory, with a focus on VHF and UHF applications." That focus on VHF/UHF means much of the material is practical: working local repeaters, using simplex frequencies, and understanding the 2-meter and 70-centimeter bands that Technician licensees use most.</p>
+<h2>How many questions are in the Technician question pool?</h2>
+<p>The <strong>question pool</strong> is the complete set of possible questions from which every exam is drawn. The pool is maintained by the NCVEC (National Conference of Volunteer Examiner Coordinators) and published openly — anyone can download and study every possible question before sitting for the exam.</p>
+<p>The current pool (effective July 1, 2026 through June 30, 2030) contains <strong>409 questions</strong> organized into 10 subelements labeled T1 through T0. Each subelement covers a topic area and is divided into lettered groups (T1A, T1B, etc.). On exam day, one question is selected at random from each group — and since there are exactly 35 groups across all 10 subelements, the exam always has exactly 35 questions.</p>
+<p>This structure matters for your study strategy: because each group contributes exactly one question, every topic area has equal weight. A question from the electrical principles subelement (T5) counts the same as one from rules and regulations (T1).</p>
+<blockquote>
+<p><strong>Exam tip:</strong> The full question pool is free. Download it from the ARRL or NCVEC website, or use a free online drill tool to work through every question before your exam date. You will see at least some questions on exam day that you recognize from practice.</p>
+</blockquote>
+<h2>What score do you need to pass?</h2>
+<p>You need to answer <strong>26 out of 35 questions correctly</strong> to pass — that is 74%, or just under three-quarters of the exam. You can miss up to 9 questions and still earn your license.</p>
+<p>That margin is meaningful for study strategy. Because each subelement contributes a fixed number of questions, you can afford to struggle with one or two topics and still pass comfortably if you are solid on the rest. That said, the most efficient path is to understand all 10 subelements at a basic level rather than skipping entire topic areas.</p>
+<p>The passing score is set by FCC regulations (47 CFR Part 97). The FCC does not release pass rate statistics for the Technician exam, but community data from exam sessions consistently suggests that candidates who complete structured practice with the question pool pass at a high rate on their first attempt.</p>
+<h2>How much time does it take to study?</h2>
+<p>Most candidates report spending <strong>10 to 20 hours</strong> preparing for the Technician exam. Here is a rough breakdown by starting point:</p>
+<ul>
+<li><strong>No electronics background, casual study:</strong> 3–5 weeks at 30–45 minutes per day (roughly 15–20 hours total)</li>
+<li><strong>Some electronics or technical background:</strong> 1–3 weeks at similar daily commitment (roughly 10–15 hours)</li>
+<li><strong>Intensive weekend-style study:</strong> Some candidates cram over a single weekend and pass, particularly if they focus on question pool memorization rather than deep conceptual understanding</li>
+</ul>
+<p>The exam rewards both approaches — understanding the material and recognizing questions from pool practice — and most test-takers combine them. Reading a study guide or taking a structured course covers the concepts; drilling the question pool daily builds pattern recognition on the actual wording used.</p>
+<h2>What is the best way to study for the Technician exam?</h2>
+<p>The most effective study approach has three components:</p>
+<p><strong>1. Start with a structured resource.</strong> The ARRL Ham Radio License Manual, Gordon West's Technician Class License Prep book, and the free HamStudy.org platform all walk through the subelements systematically. A structured guide explains the "why" behind questions, which helps retention far better than memorization alone.</p>
+<p><strong>2. Drill the question pool daily.</strong> Free online tools let you practice against the actual pool questions. Set a goal of completing 50–100 practice questions per day in the final week before your exam. Pay attention to questions you miss — the explanation behind a wrong answer is often worth more than three correct ones.</p>
+<p><strong>3. Schedule your exam before you feel completely ready.</strong> The question pool is finite. Once you are consistently scoring 80–85% on full-length practice exams, you are ready. Waiting for 100% familiarity is unnecessary, and scheduling a real exam creates productive urgency.</p>
+<p>After you pass, you submit a FCC Universal Licensing System (ULS) application and pay a $35 FCC application fee. Some VEC exam sessions also charge a small session fee (commonly around $15), though the Laurel VEC and some other teams offer free sessions. Your callsign typically appears in the FCC database within a few days.</p>
+<h2>Frequently asked</h2>
+<h3>Do you need to know Morse code for the Technician exam?</h3>
+<p>No. Morse code was removed as a requirement for all US amateur radio licenses in 2007. The Technician exam is entirely written and multiple-choice.</p>
+<h3>Can you take the Technician exam online?</h3>
+<p>Yes. Many VEC teams offer online proctored exams in addition to in-person sessions. The ARRL exam session locator at arrl.org lists both options. Online sessions follow the same rules and use the same question pool as in-person exams.</p>
+<h3>What privileges do you get with a Technician license?</h3>
+<p>A Technician license grants full operating privileges on all amateur bands above 30 MHz — including the widely used 2-meter (144–148 MHz) and 70-centimeter (420–450 MHz) bands — plus limited HF access on the 10-meter band and CW privileges on portions of the 15, 40, and 80 meter bands. It is a complete, standalone license that lets you get on the air immediately.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title><![CDATA[How Many Questions Are on the Falconry Apprentice Exam?]]></title>
+    <link>https://ryno.tools/blog/how-many-questions-falconry-apprentice-exam/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/how-many-questions-falconry-apprentice-exam/</guid>
+    <pubDate>Sun, 07 Jun 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[The falconry apprentice exam is typically 100 questions and requires an 80% score to pass. Here is what the test covers, how scoring works, and how to register through your state wildlife agency.]]></description>
+    <category><![CDATA[Falconry — Apprentice]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p>The falconry apprentice exam is a written test administered by your state (or tribal) wildlife agency that you must pass before you can hold a raptor or begin practicing falconry. It is the first formal gate in a licensing process governed by a combination of federal rules and state-specific requirements — and knowing what to expect before you sit down to study can save you significant time.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> Most states give a 100-question exam covering raptor biology, housing, health care, training, and laws. You need to answer at least 80% of questions correctly to pass. Contact your state wildlife agency to schedule the test — there is no single national exam portal.</p>
+</blockquote>
+<h2>What is the falconry apprentice exam?</h2>
+<p>The falconry apprentice exam is a multiple-choice and true/false test that every first-time falconry permit applicant must pass. It is designed to confirm that a candidate understands how to care for a bird of prey humanely, legally, and safely before they ever take possession of one.</p>
+<p>The exam is not administered by the U.S. Fish and Wildlife Service (USFWS) directly. Instead, federal regulations under 50 CFR Part 21 set the floor — requiring at minimum that states test applicants on the care and handling of falconry raptors and on applicable federal, state, and tribal laws — and each state or territory runs its own version of the test. This means the exact format can vary, but the core subject matter is consistent nationwide.</p>
+<h2>How many questions are on the falconry exam?</h2>
+<p>The most common format is <strong>100 questions</strong>, a standard that appears in California, Texas, and many other states. Questions are a mix of multiple-choice and true/false items. California's exam, for example, uses exactly 100 multiple-choice and true/false questions, and Texas follows the same 100-question structure.</p>
+<p>A small number of states may use a shorter or slightly different format, so it is worth confirming the exact count with your state agency before you start. What is consistent across virtually every jurisdiction is the passing threshold: you must correctly answer <strong>at least 80%</strong> of the questions — meaning no more than 20 errors on a 100-question test. That requirement is written into federal regulations and flows down to all participating states.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> The 80% threshold is non-negotiable in every jurisdiction that participates in the federal falconry framework. One common mistake is treating this like a typical school exam where 70% is acceptable — it is not. Build your study plan around a target of 85-90% to give yourself a safety margin.</p>
+</blockquote>
+<h2>What topics does the falconry apprentice exam cover?</h2>
+<p>Federal rules specify that the exam must cover the care and handling of raptors, relevant federal and state laws, and "other appropriate subject matter." In practice, states interpret that mandate consistently. The exam draws from five broad subject areas:</p>
+<ul>
+<li><strong>Raptor biology.</strong> Taxonomy, anatomy (including falconry-specific terminology like cere, tarsus, train, and mutes), molt cycles, sexual dimorphism, and behavioral cues such as rousing, preening, and bating. Questions on this topic are among the most numerous.</li>
+<li><strong>Housing and equipment.</strong> Legal mews and weathering yard specifications, perch types, tethering equipment, jesses, hoods, bells, and leashes. States have specific minimum dimensions and construction standards that the exam tests directly.</li>
+<li><strong>Health, weight, and maintenance.</strong> Recognizing signs of illness, managing a bird's flying weight, understanding the risks of obesity versus being too sharp (hungry), crop function, feather imping, and molt management.</li>
+<li><strong>Training and hunting.</strong> Manning, the process of acclimating a new bird to the falconer's presence; lure work; creance flying; quarry selection; and the ethical obligations of the sport, including what constitutes legitimate take.</li>
+<li><strong>Federal and state regulations.</strong> The Migratory Bird Treaty Act, permit classes (Apprentice, General, Master), possession limits, species restrictions for apprentices (federally limited to Red-tailed Hawk and American Kestrel in most situations), banding and reporting requirements, and transfer rules.</li>
+</ul>
+<p>The biology and health sections together account for the largest share of questions in most exam pools, so candidates who focus only on regulations often underestimate how much natural history knowledge is expected.</p>
+<h2>What score do you need to pass?</h2>
+<p>You need <strong>80% or higher</strong> to pass the falconry apprentice exam. On a 100-question test, that means answering at least 80 questions correctly. Most states allow you to retake the exam if you do not pass on your first attempt, typically after a short waiting period. California's experience suggests the pass rate is meaningful but not guaranteed — one hawking club reported roughly 80% of test-takers passing, but that was among motivated candidates who had already sought out study materials.</p>
+<p>Failing is not the end of the road, but it does delay the clock on your two-year apprenticeship, so most experienced falconers recommend studying for at least two to three months before scheduling your first attempt.</p>
+<h2>How do you register for the falconry apprentice exam?</h2>
+<p>There is no national registration system. <strong>You register through your state wildlife agency.</strong> The process differs in a few meaningful ways depending on where you live:</p>
+<ul>
+<li><strong>In-person proctored exams</strong> are common. Florida's Fish and Wildlife Conservation Commission, for example, asks candidates to call their regional office and schedule an appointment. Many states operate similarly.</li>
+<li><strong>Online exams</strong> are offered in some states, including New York, which runs scheduled online sittings several times per year (exam dates are announced in advance, and registrants receive a one-time link to access the test).</li>
+<li><strong>Texas</strong> offers its online exam quarterly, on the first Tuesday of February, May, August, and November. Candidates contact the falconry administrator after submitting an application to schedule their sitting.</li>
+</ul>
+<p>The general process is: find your state wildlife agency's falconry or captive wildlife permit page, download any available study guide or reading list, submit a preliminary application or intent form if required, then contact the agency to schedule the exam. Most states charge a modest exam or permit fee in the range of $10–$30.</p>
+<h2>Frequently asked questions</h2>
+<p><strong>Can I take the falconry exam without a sponsor?</strong></p>
+<p>Yes, in most states you can sit the exam before finding a sponsor. However, you will need a licensed General or Master falconer as a sponsor before your permit is actually issued and before you can possess a raptor. Finding a sponsor early is strongly encouraged because they can also guide your study.</p>
+<p><strong>What birds can an apprentice possess?</strong></p>
+<p>Federal regulations limit apprentices to one raptor at a time, and that bird must be either a Red-tailed Hawk or an American Kestrel. Some states narrow this further or, in a few cases, approve additional species. Always check your state's current permit conditions alongside the federal baseline.</p>
+<p><strong>How long does the apprenticeship last?</strong></p>
+<p>A minimum of two years, during which you must maintain, train, fly, and hunt with your raptor for at least four months in each year. After completing two years, a letter from your sponsor confirming your experience allows you to apply for advancement to the General Falconer level.</p>]]></content:encoded>
   </item>
   </channel>
 </rss>
