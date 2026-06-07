@@ -805,6 +805,14 @@ body.banner-visible {
     padding: 1.25em;
   }
 
+  /* Landing panel matches quiz panel width/shape exactly */
+  #landing {
+    max-width: 680px;
+    margin: 1.5rem auto 0;
+    padding: 2rem 2.25rem 1.5rem;
+    border-radius: 16px;
+  }
+
   #landing .landing-hero h1 { font-size: 2rem; }
   #landing .landing-tagline { font-size: 1rem; }
 
