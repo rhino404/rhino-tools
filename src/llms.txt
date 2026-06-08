@@ -8,11 +8,15 @@
 
 ## Quizzes Available
 
-- [Ham Radio Technician](https://ryno.tools/): 425+ FCC Technician license practice questions covering regulations, operating procedures, and electronics fundamentals.
-- [Ham Radio General](https://ryno.tools/): 456+ FCC General class questions on HF propagation, advanced operating, and regulations.
-- [Ham Radio Extra](https://ryno.tools/): 706+ FCC Amateur Extra questions — the most advanced amateur radio license.
-- [Falconry Apprentice](https://ryno.tools/): 398+ questions on raptor biology, health, housing, federal/state regulations, and hunting ethics.
-- [CompTIA Security+ SY0-701](https://ryno.tools/): 100 practice questions for the CompTIA Security+ certification.
+<!-- quizzes:start -->
+- [Technician](https://ryno.tools/ham-radio/): 425+ questions — Entry-level FCC license covering regulations, operating procedures, and electronics fundamentals. Required for VHF/UHF band access. Typical study time: 10–20 hours.
+- [General](https://ryno.tools/ham-radio/): 456+ questions — Intermediate license that unlocks HF band privileges. Covers propagation, antenna theory, advanced operating procedures, and FCC regulations. Typical study time: 20–30 hours.
+- [Extra](https://ryno.tools/ham-radio/): 706+ questions — Top-tier FCC license covering advanced regulations, EMI, transmission theory, and expanded privileges. Typical study time: 40–60 hours.
+- [Apprentice](https://ryno.tools/falconry/): 398+ questions — Preparation for the falconry apprentice exam required in all 50 U.S. states. Covers raptor biology, mews housing, health and nutrition, training, and federal/state hunting regulations (50 CFR Part 21).
+- [Security+ SY0-701](https://ryno.tools/security-plus/): 100+ questions — 100 practice questions aligned to CompTIA Security+ SY0-701 objectives: threats and vulnerabilities, cryptography, access control, network security, incident response, and governance and compliance.
+- [Core Concepts & Culture](https://ryno.tools/devops/): 50+ questions — 50 questions covering DevOps culture, CI/CD principles, SRE and reliability engineering (error budgets, SLI/SLO/SLA), Agile and Lean fundamentals, and DORA metrics — all sourced from Google SRE Book, Accelerate, Team Topologies, and the Agile Manifesto.
+- [Containers & Kubernetes](https://ryno.tools/devops/): 53+ questions — 53 questions covering container fundamentals, image layers and registries, Kubernetes pods and workloads, services and networking, storage (PV/PVC), and troubleshooting (CrashLoopBackOff, OOMKilled, ImagePullBackOff) — sourced from kubernetes.io and docs.docker.com.
+<!-- quizzes:end -->
 
 ## Features
 
