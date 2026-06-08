@@ -1,0 +1,573 @@
+/**
+ * generate-pages.mjs
+ *
+ * Generates category hub pages and injects markers in index.html,
+ * sitemap.xml, llms.txt, and llms-full.txt from:
+ *   src/datasets/index.json       (catalog — run generate-manifest.mjs first)
+ *   data-pipeline/category-content.json  (editorial copy, hand-edited)
+ *   src/blog/feed.xml             (blog posts — parsed for featured + related)
+ *
+ * Output (committed):
+ *   src/<slug>/index.html         one per category
+ *   src/index.html                marker blocks updated (track-grid, whats-new, featured, home-jsonld)
+ *   src/sitemap.xml               hubs:start/end block updated
+ *   src/llms.txt                  quizzes:start/end block updated
+ *   src/llms-full.txt             quizzes:start/end block updated
+ *
+ * Deterministic: same inputs → same output. Re-running with unchanged inputs
+ * produces no git diff. Dates come from category-content.json, not new Date().
+ */
+
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dir = dirname(fileURLToPath(import.meta.url));
+const ROOT  = join(__dir, '..');
+const SRC   = join(ROOT, 'src');
+
+// ── Load inputs ─────────────────────────────────────────────
+
+const catalog = JSON.parse(readFileSync(join(SRC, 'datasets/index.json'), 'utf8'));
+const content = JSON.parse(readFileSync(join(__dir, 'category-content.json'), 'utf8'));
+const feedXml = readFileSync(join(SRC, 'blog/feed.xml'), 'utf8');
+
+// ── Validate: every catalog category needs a content entry ──
+
+const catalogCategories = [...new Set(catalog.datasets.map(d => d.category))];
+const missing = catalogCategories.filter(c => !content[c]);
+if (missing.length) {
+  console.error(`[generate-pages] ERROR: Missing content entries for: ${missing.join(', ')}`);
+  console.error('  Add entries to data-pipeline/category-content.json and re-run.');
+  process.exit(1);
+}
+
+// ── Feed parsing ─────────────────────────────────────────────
+
+function extractCdata(block, tag) {
+  const m = block.match(new RegExp(`<${tag}>[\\s\\S]*?<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>[\\s\\S]*?</${tag}>`));
+  return m ? m[1].trim() : null;
+}
+function extractText(block, tag) {
+  const m = block.match(new RegExp(`<${tag}>([^<]*)</${tag}>`));
+  return m ? m[1].trim() : null;
+}
+
+function parseFeed(xml) {
+  const items = [];
+  const re = /<item>([\s\S]*?)<\/item>/g;
+  let m;
+  while ((m = re.exec(xml)) !== null) {
+    const block = m[1];
+    const title       = extractCdata(block, 'title');
+    const link        = extractText(block, 'link');
+    const description = extractCdata(block, 'description');
+    const pubDate     = extractText(block, 'pubDate');
+    const feedCat     = extractCdata(block, 'category');
+    if (title && link) items.push({ title, link, description, pubDate, feedCat });
+  }
+  return items;
+}
+
+const posts = parseFeed(feedXml);
+
+// Map feed category string ("Falconry — Apprentice") → category value ("falconry")
+function feedCatToValue(feedCat) {
+  if (!feedCat) return null;
+  const base = feedCat.split(/\s*[—–\-]\s*/)[0].trim();
+  return base.toLowerCase().replace(/\s+/g, '-');
+}
+
+// ── Marker injection ─────────────────────────────────────────
+
+function inject(fileStr, markerName, newContent) {
+  const startTag = `<!-- ${markerName}:start -->`;
+  const endTag   = `<!-- ${markerName}:end -->`;
+  const si = fileStr.indexOf(startTag);
+  const ei = fileStr.indexOf(endTag);
+  if (si === -1 || ei === -1) {
+    throw new Error(`[generate-pages] Markers not found in file: <!-- ${markerName}:start/end -->`);
+  }
+  return fileStr.slice(0, si + startTag.length) + '\n' + newContent + '\n' + fileStr.slice(ei);
+}
+
+// ── HTML helpers ─────────────────────────────────────────────
+
+function esc(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function escJson(str) {
+  return String(str).replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n');
+}
+
+// ── Hub page template ────────────────────────────────────────
+
+const CSS_VER    = '20260607j';
+const CHROME_VER = '20260607i';
+const THEME_VER  = '20260607g';
+
+function hubPage(catValue, cat, datasets, relatedPosts) {
+  const baseUrl = `https://ryno.tools/${cat.slug}/`;
+  const totalQ  = datasets.reduce((s, d) => s + d.count, 0);
+
+  // ── BreadcrumbList LD ──────────────────────────────────
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ryno Tools', item: 'https://ryno.tools/' },
+      { '@type': 'ListItem', position: 2, name: cat.label, item: baseUrl }
+    ]
+  };
+
+  // ── CollectionPage LD ──────────────────────────────────
+  const collectionLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${baseUrl}#page`,
+    name: cat.hubTitle,
+    description: cat.metaDescription,
+    url: baseUrl,
+    dateModified: cat.added,
+    about: {
+      '@type': 'Thing',
+      name: `${cat.label} Exam Prep`,
+      sameAs: cat.sameAs
+    },
+    publisher: { '@id': 'https://ryno.tools/#org' }
+  };
+
+  // ── FAQPage LD ─────────────────────────────────────────
+  const faqLd = cat.faq.length ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: cat.faq.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: esc(q),
+      acceptedAnswer: { '@type': 'Answer', text: esc(a) }
+    }))
+  } : null;
+
+  // ── Course list LD ─────────────────────────────────────
+  const courseLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${cat.label} Practice Tracks`,
+    itemListElement: datasets.map((ds, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Course',
+        name: `${ds.label} Exam Prep`,
+        description: cat.subcategoryBlurbs?.[ds.subcategory] || `${ds.count} practice questions for ${ds.label}.`,
+        url: `https://ryno.tools/?category=${encodeURIComponent(catValue)}&subcategory=${encodeURIComponent(ds.subcategory)}`,
+        provider: { '@type': 'Organization', name: 'Ryno Tools', url: 'https://ryno.tools' },
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+      }
+    }))
+  };
+
+  // ── Track cards HTML ───────────────────────────────────
+  const trackCards = datasets.map(ds => {
+    const blurb = cat.subcategoryBlurbs?.[ds.subcategory] || '';
+    const href  = `/?category=${encodeURIComponent(catValue)}&subcategory=${encodeURIComponent(ds.subcategory)}`;
+    return `    <a href="${href}" class="hub-track-card">
+      <span class="hub-track-name">${esc(ds.label)}</span>
+      <span class="hub-track-blurb">${esc(blurb)}</span>
+      <div class="hub-track-meta">
+        <span class="hub-track-count">${ds.count} questions</span>
+        <span class="hub-track-cta">Practice →</span>
+      </div>
+    </a>`;
+  }).join('\n');
+
+  // ── Intro paragraphs HTML ──────────────────────────────
+  const introParagraphs = (cat.intro || []).map(p => `  <p>${p}</p>`).join('\n');
+
+  // ── FAQ HTML ───────────────────────────────────────────
+  const faqHtml = (cat.faq || []).map(({ q, a }) => `    <details>
+      <summary>${esc(q)}</summary>
+      <p>${esc(a)}</p>
+    </details>`).join('\n');
+
+  // ── Related posts HTML ─────────────────────────────────
+  const relatedHtml = relatedPosts.length ? `
+  <section class="hub-blog" id="blog">
+    <h2 class="hub-section-title">Study Guides</h2>
+    <ul class="hub-post-list">
+${relatedPosts.map(p => `      <li>
+        <a href="${esc(p.link)}" class="hub-post-card">
+          <p class="hub-post-title">${esc(p.title)}</p>
+          <p class="hub-post-desc">${esc(p.description || '')}</p>
+        </a>
+      </li>`).join('\n')}
+    </ul>
+  </section>` : '';
+
+  // ── JSON-LD blocks ─────────────────────────────────────
+  const ldBlocks = [breadcrumbLd, collectionLd];
+  if (faqLd) ldBlocks.push(faqLd);
+  ldBlocks.push(courseLd);
+  const ldHtml = ldBlocks.map(ld =>
+    `  <script type="application/ld+json">\n  ${JSON.stringify(ld, null, 2).replace(/\n/g, '\n  ')}\n  </script>`
+  ).join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
+
+  <title>${esc(cat.hubTitle)}</title>
+  <meta name="description" content="${esc(cat.metaDescription)}" />
+  <meta name="keywords" content="${esc(cat.keywords.join(', '))}" />
+  <meta name="author" content="Ryno Tools" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="${baseUrl}" />
+
+  <link rel="alternate" type="application/rss+xml" title="Ryno Tools Blog" href="https://ryno.tools/blog/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preload" as="image" href="/images/logo.webp" fetchpriority="high" type="image/webp" />
+
+  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Ryno Tools" />
+  <link rel="manifest" href="/manifest.json?v=20250915" />
+  <meta name="theme-color" content="#0f1115" />
+
+  <meta property="og:site_name" content="Ryno Tools" />
+  <meta property="og:title" content="${esc(cat.hubTitle)}" />
+  <meta property="og:description" content="${esc(cat.metaDescription)}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="${baseUrl}" />
+  <meta property="og:image" content="${esc(cat.ogImage)}" />
+  <meta property="og:image:alt" content="Ryno Tools — ${esc(cat.label)} exam prep" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${esc(cat.hubTitle)}" />
+  <meta name="twitter:description" content="${esc(cat.metaDescription)}" />
+  <meta name="twitter:image" content="${esc(cat.ogImage)}" />
+
+  <meta name="google-adsense-account" content="ca-pub-5854133806080130" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCJFB67G3V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-WCJFB67G3V");
+  </script>
+
+  <link rel="stylesheet" href="/css/theme.css?v=${THEME_VER}" />
+  <link rel="stylesheet" href="/css/chrome.css?v=${CHROME_VER}" />
+  <link rel="stylesheet" href="/css/hub.css?v=${CSS_VER}" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+${ldHtml}
+</head>
+
+<body class="dark-mode">
+  <script>
+    try {
+      const t = localStorage.getItem('theme');
+      const d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = t || (d ? 'dark' : 'light');
+      document.body.classList.remove('dark-mode', 'light-mode');
+      document.body.classList.add(theme === 'dark' ? 'dark-mode' : 'light-mode');
+    } catch(e) {}
+  </script>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-brand" aria-label="Ryno Tools Home">
+        <img src="/images/logo.webp" alt="Ryno Tools logo" width="36" height="36" class="site-brand-logo" />
+        <span class="site-brand-name">Ryno Tools</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/">Practice</a>
+        <a href="/blog/">Blog</a>
+        <a href="/pages/about.html">About</a>
+      </nav>
+      <button class="site-theme-toggle icon-btn" aria-label="Toggle dark mode" aria-pressed="false"
+        onclick="(function(btn){var b=document.body,dark=b.classList.contains('dark-mode');b.classList.toggle('dark-mode',!dark);b.classList.toggle('light-mode',dark);localStorage.setItem('theme',dark?'light':'dark');btn.setAttribute('aria-pressed',String(!dark));btn.textContent=dark?'🌑':'🌕';})(this)">🌑</button>
+    </div>
+  </header>
+
+  <main id="main" class="hub-page">
+
+    <nav class="hub-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Ryno Tools</a></li>
+        <li aria-current="page">${esc(cat.label)}</li>
+      </ol>
+    </nav>
+
+    <section class="hub-hero">
+      <span class="hub-hero-icon" role="img" aria-label="${esc(cat.label)}">${cat.icon}</span>
+      <h1>${esc(cat.headline)}</h1>
+      <p class="hub-hero-tagline">${esc(cat.tagline)}</p>
+      <p class="hub-answer">${esc(cat.answerSummary)}</p>
+      <a href="/?category=${encodeURIComponent(catValue)}" class="hub-cta">Start practicing — free, no login</a>
+    </section>
+
+    <section class="hub-tracks" id="tracks">
+      <h2 class="hub-section-title">Practice Tracks</h2>
+      <div class="hub-track-grid">
+${trackCards}
+      </div>
+    </section>
+
+    <section class="hub-content" id="about">
+      <h2 class="hub-section-title">About ${esc(cat.label)} Exam Prep on Ryno Tools</h2>
+${introParagraphs}
+    </section>
+
+    <section class="hub-faq" id="faq">
+      <h2 class="hub-section-title">Frequently Asked Questions</h2>
+${faqHtml}
+    </section>
+${relatedHtml}
+
+    <div class="hub-back">
+      <a href="/">← All study tracks</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer-brand">Ryno Tools — Build Momentum</p>
+    <ul class="site-footer-nav">
+      <li><a href="/">Practice</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      <li><a href="/pages/privacy.html">Privacy</a></li>
+      <li><a href="/pages/terms.html">Terms</a></li>
+    </ul>
+    <div class="site-footer-social">
+      <a href="https://github.com/rhino404" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+          <path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.1 3.29 9.43 7.86 10.96.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.72 1.26 3.38.97.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.19-3.11-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.83 0c2.22-1.49 3.2-1.18 3.2-1.18.63 1.65.23 2.87.11 3.17.74.81 1.19 1.85 1.19 3.11 0 4.43-2.68 5.4-5.24 5.69.41.35.78 1.04.78 2.1v3.11c0 .31.21.66.8.55A10.53 10.53 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+        </svg>
+      </a>
+    </div>
+    <p class="site-footer-copy">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ryno Tools. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>`;
+}
+
+// ── Generate hub pages ────────────────────────────────────────
+
+console.log('[generate-pages] Generating hub pages...');
+for (const [catValue, cat] of Object.entries(content)) {
+  if (catValue.startsWith('_')) continue;
+  const datasets     = catalog.datasets.filter(d => d.category === catValue);
+  const relatedPosts = posts.filter(p => feedCatToValue(p.feedCat) === catValue);
+  const html         = hubPage(catValue, cat, datasets, relatedPosts);
+  const dir          = join(SRC, cat.slug);
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(join(dir, 'index.html'), html, 'utf8');
+  console.log(`  → src/${cat.slug}/index.html  (${datasets.length} track${datasets.length !== 1 ? 's' : ''}, ${relatedPosts.length} post${relatedPosts.length !== 1 ? 's' : ''})`);
+}
+
+// ── Generate home track-grid (injection into index.html) ──────
+
+console.log('[generate-pages] Injecting into src/index.html...');
+
+let indexHtml = readFileSync(join(SRC, 'index.html'), 'utf8');
+
+// Track grid
+const trackGridHtml = Object.entries(content)
+  .filter(([k]) => !k.startsWith('_'))
+  .map(([catValue, cat]) => {
+    const datasets  = catalog.datasets.filter(d => d.category === catValue);
+    const totalQ    = datasets.reduce((s, d) => s + d.count, 0);
+    const subLabels = datasets.map(d => d.label).join(' · ');
+    return `    <a href="/${esc(cat.slug)}/" class="track-card">
+      <span class="track-card-icon">${cat.icon}</span>
+      <span class="track-card-title">${esc(cat.label)}</span>
+      <span class="track-card-sub">${esc(subLabels)}</span>
+      <span class="track-card-count">${totalQ.toLocaleString()} questions</span>
+    </a>`;
+  }).join('\n');
+
+indexHtml = inject(indexHtml, 'track-grid', trackGridHtml);
+
+// What's new — entries marked isNew or the 2 most recently added
+const sortedContent = Object.entries(content)
+  .filter(([k]) => !k.startsWith('_'))
+  .sort(([, a], [, b]) => (b.added || '').localeCompare(a.added || ''));
+
+const newEntries = sortedContent.filter(([, c]) => c.isNew);
+const whatsNewItems = newEntries.length
+  ? newEntries
+  : sortedContent.slice(0, 2);
+
+const whatsNewHtml = whatsNewItems.length ? `  <section id="whats-new" class="landing-block landing-whats-new">
+    <h2>What's New</h2>
+    <ul class="whats-new-list">
+${whatsNewItems.map(([, c]) => `      <li>
+        <a href="/${esc(c.slug)}/" class="whats-new-item">
+          <span class="whats-new-icon">${c.icon}</span>
+          <span>
+            <strong>${esc(c.label)}</strong>
+            <span class="whats-new-date">Added ${c.added}</span>
+          </span>
+        </a>
+      </li>`).join('\n')}
+    </ul>
+  </section>` : '';
+
+indexHtml = inject(indexHtml, 'whats-new', whatsNewHtml);
+
+// Featured — newest blog post
+const featured = posts[0];
+const featuredHtml = featured ? `  <section class="landing-block landing-featured" id="blog">
+    <h2>From the Blog</h2>
+    <a href="${esc(featured.link)}" class="featured-post-card">
+      <p class="featured-post-title">${esc(featured.title)}</p>
+      <p class="featured-post-desc">${esc(featured.description || '')}</p>
+      <span class="featured-post-read">Read article →</span>
+    </a>
+    <a href="/blog/" class="featured-all-link">All study guides →</a>
+  </section>` : '';
+
+indexHtml = inject(indexHtml, 'featured', featuredHtml);
+
+// Home JSON-LD — slim, generation-owned schema
+const orgLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://ryno.tools/#org',
+      name: 'Ryno Tools',
+      url: 'https://ryno.tools/',
+      logo: 'https://ryno.tools/images/logo.webp',
+      description: 'Ryno Tools is a free microlearning platform for certification and licensing exam preparation. No login, no paywall, works offline.',
+      email: 'rhino404@pm.me',
+      sameAs: ['https://github.com/rhino404'],
+      member: { '@id': 'https://ryno.tools/#ask-ryno' }
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://ryno.tools/#ask-ryno',
+      name: 'Ask Ryno',
+      description: 'Ask Ryno is the editorial persona of Ryno Tools. Articles are drafted with AI assistance and reviewed by a human before publishing.',
+      worksFor: { '@id': 'https://ryno.tools/#org' },
+      knowsAbout: ['Amateur Radio Licensing', 'FCC Part 97 Regulations', 'Falconry Apprentice Certification', 'Raptor Biology', 'CompTIA Security+ SY0-701', 'Cybersecurity', 'DevOps', 'Kubernetes', 'Site Reliability Engineering'],
+      url: 'https://ryno.tools/pages/about.html'
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://ryno.tools/#site',
+      url: 'https://ryno.tools/',
+      name: 'Ryno Tools',
+      publisher: { '@id': 'https://ryno.tools/#org' },
+      inLanguage: 'en'
+    },
+    {
+      '@type': 'WebApplication',
+      name: 'Ryno Tools',
+      url: 'https://ryno.tools',
+      description: 'Free microlearning platform for certification exam prep. No login required. Works offline.',
+      applicationCategory: 'EducationalApplication',
+      operatingSystem: 'Any',
+      browserRequirements: 'Requires JavaScript',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      author: { '@type': 'Organization', name: 'Ryno Tools', url: 'https://ryno.tools' }
+    },
+    {
+      '@type': 'CollectionPage',
+      '@id': 'https://ryno.tools/#catalog',
+      name: 'Certification Exam Prep Tracks',
+      url: 'https://ryno.tools/',
+      publisher: { '@id': 'https://ryno.tools/#org' },
+      hasPart: Object.entries(content)
+        .filter(([k]) => !k.startsWith('_'))
+        .map(([, c]) => ({
+          '@type': 'WebPage',
+          name: c.hubTitle,
+          url: `https://ryno.tools/${c.slug}/`
+        }))
+    }
+  ]
+};
+
+const homeJsonLd = `  <script type="application/ld+json">\n  ${JSON.stringify(orgLd, null, 2).replace(/\n/g, '\n  ')}\n  </script>`;
+indexHtml = inject(indexHtml, 'home-jsonld', homeJsonLd);
+
+writeFileSync(join(SRC, 'index.html'), indexHtml, 'utf8');
+console.log('  → src/index.html');
+
+// ── Sitemap injection ─────────────────────────────────────────
+
+console.log('[generate-pages] Injecting into src/sitemap.xml...');
+let sitemapXml = readFileSync(join(SRC, 'sitemap.xml'), 'utf8');
+
+const hubSitemapEntries = Object.entries(content)
+  .filter(([k]) => !k.startsWith('_'))
+  .map(([, c]) => `  <url>
+    <loc>https://ryno.tools/${c.slug}/</loc>
+    <lastmod>${c.added}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>`).join('\n');
+
+sitemapXml = inject(sitemapXml, 'hubs', hubSitemapEntries);
+writeFileSync(join(SRC, 'sitemap.xml'), sitemapXml, 'utf8');
+console.log('  → src/sitemap.xml');
+
+// ── llms.txt injection ────────────────────────────────────────
+
+console.log('[generate-pages] Injecting into src/llms.txt...');
+let llmsTxt = readFileSync(join(SRC, 'llms.txt'), 'utf8');
+
+const llmsQuizLines = Object.entries(content)
+  .filter(([k]) => !k.startsWith('_'))
+  .flatMap(([catValue, cat]) => {
+    const datasets = catalog.datasets.filter(d => d.category === catValue);
+    return datasets.map(ds => {
+      const blurb = cat.subcategoryBlurbs?.[ds.subcategory] || `${ds.count} practice questions.`;
+      return `- [${ds.label}](https://ryno.tools/${cat.slug}/): ${ds.count}+ questions — ${blurb}`;
+    });
+  }).join('\n');
+
+llmsTxt = inject(llmsTxt, 'quizzes', llmsQuizLines);
+writeFileSync(join(SRC, 'llms.txt'), llmsTxt, 'utf8');
+console.log('  → src/llms.txt');
+
+// ── llms-full.txt injection ───────────────────────────────────
+
+console.log('[generate-pages] Injecting into src/llms-full.txt...');
+let llmsFullTxt = readFileSync(join(SRC, 'llms-full.txt'), 'utf8');
+
+const llmsFullQuizLines = Object.entries(content)
+  .filter(([k]) => !k.startsWith('_'))
+  .map(([catValue, cat]) => {
+    const datasets = catalog.datasets.filter(d => d.category === catValue);
+    const tracks = datasets.map(ds => {
+      const blurb = cat.subcategoryBlurbs?.[ds.subcategory] || '';
+      return `  - **${ds.label}** (${ds.count}+ questions): ${blurb}`;
+    }).join('\n');
+    return `### ${cat.label}\n\nHub: https://ryno.tools/${cat.slug}/\n\n${tracks}`;
+  }).join('\n\n');
+
+llmsFullTxt = inject(llmsFullTxt, 'quizzes', llmsFullQuizLines);
+writeFileSync(join(SRC, 'llms-full.txt'), llmsFullTxt, 'utf8');
+console.log('  → src/llms-full.txt');
+
+console.log('[generate-pages] All done.');

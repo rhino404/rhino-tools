@@ -12,5 +12,9 @@ export const DATA_SOURCES = {
   "falconry": {
     "apprentice": "./datasets/falconry/apprentice.json"
   },
+  "devops": {
+    "core-concepts": "./datasets/devops/core-concepts.json",
+    "containers-k8s": "./datasets/devops/containers-k8s.json",
+  },
   // add other categories as needed...
 };

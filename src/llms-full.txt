@@ -6,40 +6,38 @@ Ryno Tools is a free, offline-capable Progressive Web App for certification exam
 
 ## Overview
 
-The platform provides adaptive microlearning through flashcard quizzes and timed exam simulations across five certification domains:
+The platform provides adaptive microlearning through flashcard quizzes and timed exam simulations. Each category has a dedicated hub page with deep content, FAQs, and direct links to the quiz.
 
-### Ham Radio Licensing (FCC)
+## Quizzes Available
 
-The FCC administers three levels of amateur radio (ham radio) licenses in the United States:
+<!-- quizzes:start -->
+### Ham Radio
 
-- **Technician Class** (425+ questions): Entry-level license covering basic regulations, safety, operating procedures, and electronics fundamentals. Required for VHF/UHF access. ~15 hours study time.
-- **General Class** (456+ questions): Intermediate license enabling HF band access. Tests on propagation, antenna theory, regulations, and advanced operating procedures. ~25 hours study time.
-- **Amateur Extra Class** (706+ questions): Advanced license requiring mastery of EMI, advanced regulations, and theoretical concepts. ~50 hours study time.
+Hub: https://ryno.tools/ham-radio/
 
-Each question includes regulations reference, explanation, and category tags (e.g., "safety", "operating-procedures", "electronics").
+  - **Technician** (425+ questions): Entry-level FCC license covering regulations, operating procedures, and electronics fundamentals. Required for VHF/UHF band access. Typical study time: 10–20 hours.
+  - **General** (456+ questions): Intermediate license that unlocks HF band privileges. Covers propagation, antenna theory, advanced operating procedures, and FCC regulations. Typical study time: 20–30 hours.
+  - **Extra** (706+ questions): Top-tier FCC license covering advanced regulations, EMI, transmission theory, and expanded privileges. Typical study time: 40–60 hours.
 
-### Falconry Apprenticeship
+### Falconry
 
-**Falconry Apprentice** (398+ questions): Preparation for the falconry apprenticeship exam, a requirement in all U.S. states to legally practice falconry. Tests cover:
-- Raptor biology, species identification, and behavior
-- Housing standards (mews design, perches, netting)
-- Health, nutrition, and veterinary care
-- Federal and state hunting regulations
-- Ethical practices and field techniques
+Hub: https://ryno.tools/falconry/
 
-Questions span regulation text, practical husbandry, species-specific care, and hunting law.
+  - **Apprentice** (398+ questions): Preparation for the falconry apprentice exam required in all 50 U.S. states. Covers raptor biology, mews housing, health and nutrition, training, and federal/state hunting regulations (50 CFR Part 21).
 
-### CompTIA Security+
+### Security+
 
-**CompTIA Security+ SY0-701** (100 questions): Industry-standard IT security certification exam. Coverage includes:
-- Threats, vulnerabilities, and risk management
-- Cryptography and PKI
-- Access control and identity management
-- Network security and architecture
-- Incident response and business continuity
-- Governance, compliance, and organizational security
+Hub: https://ryno.tools/security-plus/
 
-Questions align with the official CompTIA exam objectives.
+  - **Security+ SY0-701** (100+ questions): 100 practice questions aligned to CompTIA Security+ SY0-701 objectives: threats and vulnerabilities, cryptography, access control, network security, incident response, and governance and compliance.
+
+### DevOps
+
+Hub: https://ryno.tools/devops/
+
+  - **Core Concepts & Culture** (50+ questions): 50 questions covering DevOps culture, CI/CD principles, SRE and reliability engineering (error budgets, SLI/SLO/SLA), Agile and Lean fundamentals, and DORA metrics — all sourced from Google SRE Book, Accelerate, Team Topologies, and the Agile Manifesto.
+  - **Containers & Kubernetes** (53+ questions): 53 questions covering container fundamentals, image layers and registries, Kubernetes pods and workloads, services and networking, storage (PV/PVC), and troubleshooting (CrashLoopBackOff, OOMKilled, ImagePullBackOff) — sourced from kubernetes.io and docs.docker.com.
+<!-- quizzes:end -->
 
 ## How the App Works
 

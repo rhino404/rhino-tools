@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
+
+  <title>DevOps Interview Prep — Core Concepts, Containers &amp; Kubernetes | Ryno Tools</title>
+  <meta name="description" content="Free DevOps interview and career prep: 103 questions on DevOps culture, CI/CD principles, SRE and reliability, Agile/Lean, DORA metrics, containers, and Kubernetes. No login required." />
+  <meta name="keywords" content="devops interview questions, devops practice quiz, kubernetes interview prep, docker containers study guide, SRE error budget explained, DORA metrics practice, devops culture quiz, CI/CD interview questions" />
+  <meta name="author" content="Ryno Tools" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="https://ryno.tools/devops/" />
+
+  <link rel="alternate" type="application/rss+xml" title="Ryno Tools Blog" href="https://ryno.tools/blog/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preload" as="image" href="/images/logo.webp" fetchpriority="high" type="image/webp" />
+
+  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Ryno Tools" />
+  <link rel="manifest" href="/manifest.json?v=20250915" />
+  <meta name="theme-color" content="#0f1115" />
+
+  <meta property="og:site_name" content="Ryno Tools" />
+  <meta property="og:title" content="DevOps Interview Prep — Core Concepts, Containers &amp; Kubernetes | Ryno Tools" />
+  <meta property="og:description" content="Free DevOps interview and career prep: 103 questions on DevOps culture, CI/CD principles, SRE and reliability, Agile/Lean, DORA metrics, containers, and Kubernetes. No login required." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ryno.tools/devops/" />
+  <meta property="og:image" content="https://ryno.tools/images/blog/devops-blog-hero.webp" />
+  <meta property="og:image:alt" content="Ryno Tools — DevOps exam prep" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DevOps Interview Prep — Core Concepts, Containers &amp; Kubernetes | Ryno Tools" />
+  <meta name="twitter:description" content="Free DevOps interview and career prep: 103 questions on DevOps culture, CI/CD principles, SRE and reliability, Agile/Lean, DORA metrics, containers, and Kubernetes. No login required." />
+  <meta name="twitter:image" content="https://ryno.tools/images/blog/devops-blog-hero.webp" />
+
+  <meta name="google-adsense-account" content="ca-pub-5854133806080130" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCJFB67G3V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-WCJFB67G3V");
+  </script>
+
+  <link rel="stylesheet" href="/css/theme.css?v=20260607g" />
+  <link rel="stylesheet" href="/css/chrome.css?v=20260607i" />
+  <link rel="stylesheet" href="/css/hub.css?v=20260607j" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ryno Tools",
+        "item": "https://ryno.tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "DevOps",
+        "item": "https://ryno.tools/devops/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://ryno.tools/devops/#page",
+    "name": "DevOps Interview Prep — Core Concepts, Containers & Kubernetes | Ryno Tools",
+    "description": "Free DevOps interview and career prep: 103 questions on DevOps culture, CI/CD principles, SRE and reliability, Agile/Lean, DORA metrics, containers, and Kubernetes. No login required.",
+    "url": "https://ryno.tools/devops/",
+    "dateModified": "2026-06-07",
+    "about": {
+      "@type": "Thing",
+      "name": "DevOps Exam Prep",
+      "sameAs": [
+        "https://en.wikipedia.org/wiki/DevOps",
+        "https://www.wikidata.org/wiki/Q2738095"
+      ]
+    },
+    "publisher": {
+      "@id": "https://ryno.tools/#org"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is DevOps and why does it matter for interviews?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DevOps is a set of cultural practices, organizational patterns, and technical capabilities that improve an organization's ability to deliver software reliably and rapidly. Interviewers probe DevOps knowledge to assess whether a candidate understands how modern software teams operate — not just individual tool syntax. Core topics include the three-way handshake between development, operations, and security; measurement via DORA metrics (deployment frequency, lead time for changes, change failure rate, time to restore service); and cultural practices such as blameless postmortems and shared ownership."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an SRE error budget?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An error budget is the allowable amount of unreliability derived from an SLO (Service Level Objective). If your SLO is 99.9% availability, your error budget is 0.1% downtime — approximately 8.7 hours per year. The error budget is consumed by outages, degradations, and planned maintenance. When the budget is depleted, new feature releases are halted until reliability is restored, creating a shared incentive between product and reliability teams. The concept originates from the Google SRE book (Beyer et al.)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the four DORA metrics?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The four DORA metrics (from Forsgren, Humble, and Kim's Accelerate research) measure software delivery performance: (1) Deployment Frequency — how often code is deployed to production; (2) Lead Time for Changes — time from code commit to production deployment; (3) Change Failure Rate — percentage of deployments that cause a production incident; (4) Time to Restore Service — how long it takes to recover from a production failure. Elite performers (top quartile) deploy multiple times per day, have lead times under one hour, change failure rates under 5%, and restore service in under one hour."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a container and a VM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A virtual machine (VM) includes a full operating system kernel, which is managed by a hypervisor. A container shares the host OS kernel and isolates processes using Linux namespaces (PID, network, mount, UTS, IPC) and cgroups (resource limits). Containers start in milliseconds, have megabyte-level overhead, and are portable across any host running the same container runtime. VMs provide stronger isolation but have gigabyte-level overhead and seconds-to-minutes startup times. In practice, containers and VMs are complementary: containers run inside VMs in most cloud environments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What causes a CrashLoopBackOff in Kubernetes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CrashLoopBackOff means a container is repeatedly starting, crashing, and being restarted by Kubernetes. Common causes: the container's entrypoint or command exits non-zero (configuration error, missing dependency, or application bug); the container runs out of memory (OOMKilled) on startup; a required secret or ConfigMap is missing; a liveness probe is configured too aggressively and kills the container before it finishes starting. Debug with: kubectl describe pod &lt;name&gt; (check Events and Last State), kubectl logs &lt;pod&gt; --previous (logs from the crashed instance)."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "DevOps Practice Tracks",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Course",
+          "name": "Core Concepts & Culture Exam Prep",
+          "description": "50 questions covering DevOps culture, CI/CD principles, SRE and reliability engineering (error budgets, SLI/SLO/SLA), Agile and Lean fundamentals, and DORA metrics — all sourced from Google SRE Book, Accelerate, Team Topologies, and the Agile Manifesto.",
+          "url": "https://ryno.tools/?category=devops&subcategory=core-concepts",
+          "provider": {
+            "@type": "Organization",
+            "name": "Ryno Tools",
+            "url": "https://ryno.tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Course",
+          "name": "Containers & Kubernetes Exam Prep",
+          "description": "53 questions covering container fundamentals, image layers and registries, Kubernetes pods and workloads, services and networking, storage (PV/PVC), and troubleshooting (CrashLoopBackOff, OOMKilled, ImagePullBackOff) — sourced from kubernetes.io and docs.docker.com.",
+          "url": "https://ryno.tools/?category=devops&subcategory=containers-k8s",
+          "provider": {
+            "@type": "Organization",
+            "name": "Ryno Tools",
+            "url": "https://ryno.tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="dark-mode">
+  <script>
+    try {
+      const t = localStorage.getItem('theme');
+      const d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = t || (d ? 'dark' : 'light');
+      document.body.classList.remove('dark-mode', 'light-mode');
+      document.body.classList.add(theme === 'dark' ? 'dark-mode' : 'light-mode');
+    } catch(e) {}
+  </script>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-brand" aria-label="Ryno Tools Home">
+        <img src="/images/logo.webp" alt="Ryno Tools logo" width="36" height="36" class="site-brand-logo" />
+        <span class="site-brand-name">Ryno Tools</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/">Practice</a>
+        <a href="/blog/">Blog</a>
+        <a href="/pages/about.html">About</a>
+      </nav>
+      <button class="site-theme-toggle icon-btn" aria-label="Toggle dark mode" aria-pressed="false"
+        onclick="(function(btn){var b=document.body,dark=b.classList.contains('dark-mode');b.classList.toggle('dark-mode',!dark);b.classList.toggle('light-mode',dark);localStorage.setItem('theme',dark?'light':'dark');btn.setAttribute('aria-pressed',String(!dark));btn.textContent=dark?'🌑':'🌕';})(this)">🌑</button>
+    </div>
+  </header>
+
+  <main id="main" class="hub-page">
+
+    <nav class="hub-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Ryno Tools</a></li>
+        <li aria-current="page">DevOps</li>
+      </ol>
+    </nav>
+
+    <section class="hub-hero">
+      <span class="hub-hero-icon" role="img" aria-label="DevOps">⚙️</span>
+      <h1>DevOps Interview &amp; Career Prep</h1>
+      <p class="hub-hero-tagline">Build fluency in DevOps culture, CI/CD, SRE, containers, and Kubernetes — concept- and troubleshooting-focused questions designed for interviews and career development.</p>
+      <p class="hub-answer">The Ryno Tools DevOps quiz covers two tracks: Core Concepts &amp; Culture (50 questions on DevOps principles, DORA metrics, SRE error budgets, Agile/Lean, blameless postmortems) and Containers &amp; Kubernetes (53 questions on container fundamentals, image management, pods, services, storage, and troubleshooting). Questions are interview-style and concept-focused, not syntax recall.</p>
+      <a href="/?category=devops" class="hub-cta">Start practicing — free, no login</a>
+    </section>
+
+    <section class="hub-tracks" id="tracks">
+      <h2 class="hub-section-title">Practice Tracks</h2>
+      <div class="hub-track-grid">
+    <a href="/?category=devops&subcategory=core-concepts" class="hub-track-card">
+      <span class="hub-track-name">Core Concepts &amp; Culture</span>
+      <span class="hub-track-blurb">50 questions covering DevOps culture, CI/CD principles, SRE and reliability engineering (error budgets, SLI/SLO/SLA), Agile and Lean fundamentals, and DORA metrics — all sourced from Google SRE Book, Accelerate, Team Topologies, and the Agile Manifesto.</span>
+      <div class="hub-track-meta">
+        <span class="hub-track-count">50 questions</span>
+        <span class="hub-track-cta">Practice →</span>
+      </div>
+    </a>
+    <a href="/?category=devops&subcategory=containers-k8s" class="hub-track-card">
+      <span class="hub-track-name">Containers &amp; Kubernetes</span>
+      <span class="hub-track-blurb">53 questions covering container fundamentals, image layers and registries, Kubernetes pods and workloads, services and networking, storage (PV/PVC), and troubleshooting (CrashLoopBackOff, OOMKilled, ImagePullBackOff) — sourced from kubernetes.io and docs.docker.com.</span>
+      <div class="hub-track-meta">
+        <span class="hub-track-count">53 questions</span>
+        <span class="hub-track-cta">Practice →</span>
+      </div>
+    </a>
+      </div>
+    </section>
+
+    <section class="hub-content" id="about">
+      <h2 class="hub-section-title">About DevOps Exam Prep on Ryno Tools</h2>
+  <p>The Ryno Tools DevOps quiz is designed for people pursuing a DevOps or platform engineering career who need fluency in core concepts — not code syntax. Every question is framed as a concept or troubleshooting scenario of the kind you encounter in interviews and on the job: 'why does X happen', 'what would you check if Y', 'what does this metric tell you'.</p>
+  <p>Core Concepts & Culture covers the foundational ideas that distinguish high-performing engineering organizations: DevOps principles (the Three Ways), DORA's four key metrics, SRE practices (error budgets, SLI/SLO/SLA, blameless postmortems, toil), Agile and Lean fundamentals (WIP limits, value stream mapping, Little's Law), and CI/CD principles (trunk-based development, feature flags, deployment strategies). Sources: Google SRE Book, Accelerate (Forsgren/Humble/Kim), Team Topologies (Skelton/Pais), and the Agile Manifesto.</p>
+  <p>Containers & Kubernetes covers the operational primitives every DevOps engineer must understand: what containers are and how they differ from VMs, how image layers and registries work, the anatomy of a Kubernetes pod, workload controllers (Deployment, StatefulSet, DaemonSet, Job), service types and CoreDNS, storage (PersistentVolume/PersistentVolumeClaim), and how to diagnose the most common failure states (CrashLoopBackOff, OOMKilled, ImagePullBackOff, pending pods, service unreachable). Sources: kubernetes.io/docs, docs.docker.com, CNCF.</p>
+    </section>
+
+    <section class="hub-faq" id="faq">
+      <h2 class="hub-section-title">Frequently Asked Questions</h2>
+    <details>
+      <summary>What is DevOps and why does it matter for interviews?</summary>
+      <p>DevOps is a set of cultural practices, organizational patterns, and technical capabilities that improve an organization's ability to deliver software reliably and rapidly. Interviewers probe DevOps knowledge to assess whether a candidate understands how modern software teams operate — not just individual tool syntax. Core topics include the three-way handshake between development, operations, and security; measurement via DORA metrics (deployment frequency, lead time for changes, change failure rate, time to restore service); and cultural practices such as blameless postmortems and shared ownership.</p>
+    </details>
+    <details>
+      <summary>What is an SRE error budget?</summary>
+      <p>An error budget is the allowable amount of unreliability derived from an SLO (Service Level Objective). If your SLO is 99.9% availability, your error budget is 0.1% downtime — approximately 8.7 hours per year. The error budget is consumed by outages, degradations, and planned maintenance. When the budget is depleted, new feature releases are halted until reliability is restored, creating a shared incentive between product and reliability teams. The concept originates from the Google SRE book (Beyer et al.).</p>
+    </details>
+    <details>
+      <summary>What are the four DORA metrics?</summary>
+      <p>The four DORA metrics (from Forsgren, Humble, and Kim's Accelerate research) measure software delivery performance: (1) Deployment Frequency — how often code is deployed to production; (2) Lead Time for Changes — time from code commit to production deployment; (3) Change Failure Rate — percentage of deployments that cause a production incident; (4) Time to Restore Service — how long it takes to recover from a production failure. Elite performers (top quartile) deploy multiple times per day, have lead times under one hour, change failure rates under 5%, and restore service in under one hour.</p>
+    </details>
+    <details>
+      <summary>What is the difference between a container and a VM?</summary>
+      <p>A virtual machine (VM) includes a full operating system kernel, which is managed by a hypervisor. A container shares the host OS kernel and isolates processes using Linux namespaces (PID, network, mount, UTS, IPC) and cgroups (resource limits). Containers start in milliseconds, have megabyte-level overhead, and are portable across any host running the same container runtime. VMs provide stronger isolation but have gigabyte-level overhead and seconds-to-minutes startup times. In practice, containers and VMs are complementary: containers run inside VMs in most cloud environments.</p>
+    </details>
+    <details>
+      <summary>What causes a CrashLoopBackOff in Kubernetes?</summary>
+      <p>CrashLoopBackOff means a container is repeatedly starting, crashing, and being restarted by Kubernetes. Common causes: the container's entrypoint or command exits non-zero (configuration error, missing dependency, or application bug); the container runs out of memory (OOMKilled) on startup; a required secret or ConfigMap is missing; a liveness probe is configured too aggressively and kills the container before it finishes starting. Debug with: kubectl describe pod &lt;name&gt; (check Events and Last State), kubectl logs &lt;pod&gt; --previous (logs from the crashed instance).</p>
+    </details>
+    </section>
+
+
+    <div class="hub-back">
+      <a href="/">← All study tracks</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer-brand">Ryno Tools — Build Momentum</p>
+    <ul class="site-footer-nav">
+      <li><a href="/">Practice</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      <li><a href="/pages/privacy.html">Privacy</a></li>
+      <li><a href="/pages/terms.html">Terms</a></li>
+    </ul>
+    <div class="site-footer-social">
+      <a href="https://github.com/rhino404" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+          <path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.1 3.29 9.43 7.86 10.96.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.72 1.26 3.38.97.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.19-3.11-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.83 0c2.22-1.49 3.2-1.18 3.2-1.18.63 1.65.23 2.87.11 3.17.74.81 1.19 1.85 1.19 3.11 0 4.43-2.68 5.4-5.24 5.69.41.35.78 1.04.78 2.1v3.11c0 .31.21.66.8.55A10.53 10.53 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+        </svg>
+      </a>
+    </div>
+    <p class="site-footer-copy">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ryno Tools. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

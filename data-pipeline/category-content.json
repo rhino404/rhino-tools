@@ -1,0 +1,233 @@
+{
+  "_note": "Editorial content for generated category hub pages. Keyed by category value (DATA_SOURCES keys). Slug = public URL path (may differ from category value). Edit this file; run generate-pages.mjs to emit hub HTML.",
+  "ham-radio": {
+    "slug": "ham-radio",
+    "label": "Ham Radio",
+    "icon": "📻",
+    "hubTitle": "Ham Radio License Exam Prep — Technician, General & Extra | Ryno Tools",
+    "metaDescription": "Free FCC ham radio license practice for all three levels: Technician (425+ questions), General (456+), and Amateur Extra (706+). Adaptive quizzes, timed exams, instant explanations — no login required.",
+    "ogImage": "https://ryno.tools/images/blog/ham-radio-blog-hero.webp",
+    "headline": "Ham Radio License Exam Prep",
+    "tagline": "Practice all three FCC amateur radio license levels — Technician, General, and Amateur Extra — with topic-tagged questions and timed exam simulations.",
+    "answerSummary": "Ryno Tools covers all three FCC amateur radio license exams using questions drawn from the official NCVEC question pools: Technician Class (425 questions), General Class (456 questions), and Amateur Extra Class (706 questions). Each question includes an explanation and is tagged by topic. No login or payment required.",
+    "keywords": [
+      "ham radio exam prep",
+      "technician license practice test",
+      "FCC technician exam questions",
+      "general class ham radio practice",
+      "amateur extra exam prep",
+      "amateur radio practice questions",
+      "FCC Part 97 practice test",
+      "ham radio study guide"
+    ],
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Amateur_radio",
+      "https://www.wikidata.org/wiki/Q190906"
+    ],
+    "added": "2024-01-01",
+    "isNew": false,
+    "faq": [
+      {
+        "q": "How hard is the ham radio Technician exam?",
+        "a": "The FCC Technician exam has 35 questions drawn from a pool of 425 published questions. Most people pass after 10–20 hours of study. The exam covers basic electronics, radio regulations (FCC Part 97), operating procedures, and safety. Because the full question pool is publicly available, focused practice with a tool like Ryno Tools is the most efficient preparation strategy. The passing score is 74% (26 out of 35 correct)."
+      },
+      {
+        "q": "How many questions are on the ham radio Technician exam?",
+        "a": "The FCC Technician Class license exam has 35 questions selected from a published pool of 425 questions. To pass you need to answer at least 26 correctly (74%). The exam is administered by volunteer examiners (VEs) accredited by ARRL, W5YI, or other Volunteer Examiner Coordinators. There is no time limit, but most people finish in 30 minutes or less."
+      },
+      {
+        "q": "Can you take the ham radio exam online?",
+        "a": "Yes. Since 2020 the FCC and major Volunteer Examiner Coordinators (ARRL, Laurel, W5YI) have offered remote online exam sessions administered via video call. Candidates must show a government-issued ID, use a webcam, and share their screen. In-person sessions at exam sites remain available as well. There is no difference in the exam content between online and in-person sessions."
+      },
+      {
+        "q": "Do you need to know Morse code to get a ham radio license?",
+        "a": "No. The FCC eliminated the Morse code requirement for all amateur radio license classes in 2007. Technician, General, and Amateur Extra exams are all written multiple-choice tests. Morse code (CW) operation is still popular among amateur radio operators, but it is not required to obtain or hold any U.S. amateur radio license."
+      },
+      {
+        "q": "How long does it take to get a ham radio license?",
+        "a": "Most Technician candidates pass after 10–20 hours of study spread over one to three weeks. After passing the exam, the FCC typically grants the license and assigns a call sign within a few days. Some candidates receive their call sign within hours through the FCC's ULS database. There is no waiting period — you can operate as soon as your license appears in the FCC database."
+      }
+    ],
+    "subcategoryBlurbs": {
+      "technician": "Entry-level FCC license covering regulations, operating procedures, and electronics fundamentals. Required for VHF/UHF band access. Typical study time: 10–20 hours.",
+      "general": "Intermediate license that unlocks HF band privileges. Covers propagation, antenna theory, advanced operating procedures, and FCC regulations. Typical study time: 20–30 hours.",
+      "extra": "Top-tier FCC license covering advanced regulations, EMI, transmission theory, and expanded privileges. Typical study time: 40–60 hours."
+    },
+    "intro": [
+      "Practice all three FCC amateur radio license levels in one place. Question pools are drawn directly from the official NCVEC publications, tagged by topic area, and updated to current exam cycles. Each question includes a detailed explanation so you understand the material — not just memorize answers.",
+      "Technician Class (425 questions) covers the entry-level material: basic electronics, radio regulations under FCC Part 97, operating procedures, and safety. General Class (456 questions) opens HF band privileges and digs deeper into propagation theory, antenna design, and advanced operating procedures. Amateur Extra (706 questions) covers the complete advanced regulation set, electromagnetic interference, and the theoretical depth required for the top-tier license.",
+      "All three exams are multiple-choice with four answer choices. The Technician exam draws 35 questions from its pool; General draws 35; Extra draws 50. Because the full question pools are publicly published, systematic practice is the most efficient preparation strategy — and Ryno Tools lets you drill by topic, filter by tag, and run timed exam simulations that mirror the real test format."
+    ]
+  },
+
+  "falconry": {
+    "slug": "falconry",
+    "label": "Falconry",
+    "icon": "🦅",
+    "hubTitle": "Falconry Apprentice Exam Prep — Raptor Biology, Regulations & Housing | Ryno Tools",
+    "metaDescription": "Free falconry apprentice exam practice: 398+ questions on raptor biology, mews housing standards, federal regulations (50 CFR Part 21), health, and hunting ethics. No login required.",
+    "ogImage": "https://ryno.tools/images/blog/falconry-blog-hero.webp",
+    "headline": "Falconry Apprentice Exam Prep",
+    "tagline": "Prepare for your state falconry apprentice exam with 398+ questions on raptor biology, housing standards, federal regulations, and hunting ethics.",
+    "answerSummary": "The falconry apprentice exam is required in all U.S. states before you can legally practice falconry. Most states use a 100-question exam with an 80% passing score. Ryno Tools has 398 practice questions covering raptor biology, mews housing standards (50 CFR Part 21), species identification, health and nutrition, and state and federal hunting regulations.",
+    "keywords": [
+      "falconry apprentice exam prep",
+      "falconry practice test",
+      "falconry apprentice exam questions",
+      "raptor biology quiz",
+      "mews housing standards",
+      "falconry regulations 50 CFR Part 21",
+      "falconry license exam",
+      "apprentice falconry study guide"
+    ],
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Falconry",
+      "https://www.wikidata.org/wiki/Q177154"
+    ],
+    "added": "2024-01-01",
+    "isNew": false,
+    "faq": [
+      {
+        "q": "What is on the falconry apprentice exam?",
+        "a": "The falconry apprentice exam typically covers five subject areas: raptor biology and species identification (taxonomy, anatomy, molt cycles), housing standards (mews dimensions, perch types, escape-proofing), health and nutrition (weight management, recognizing illness, imping), training and hunting practices, and federal and state regulations (50 CFR Part 21, permit classes, possession limits, reporting). Biology and health questions together account for the largest share of the exam."
+      },
+      {
+        "q": "What score do you need to pass the falconry apprentice exam?",
+        "a": "Most U.S. states require an 80% passing score on the falconry apprentice exam. On a 100-question test, that means answering at least 80 questions correctly. The 80% threshold is written into the federal regulatory framework (50 CFR Part 21) and applies in virtually every participating state. Some states allow a retake after a waiting period if you do not pass on the first attempt."
+      },
+      {
+        "q": "What birds can a falconry apprentice possess?",
+        "a": "Federal regulations (50 CFR Part 21) limit apprentice falconers to one raptor at a time, and that bird must be either a Red-tailed Hawk or an American Kestrel. Some states approve additional species, but the Red-tail and Kestrel are the nationwide federal baseline. Always verify current species allowances with your state wildlife agency, as regulations can change."
+      },
+      {
+        "q": "How long does the falconry apprenticeship last?",
+        "a": "A minimum of two years, during which you must maintain, train, fly, and hunt with your raptor for at least four months in each year. You must also be sponsored by a licensed General or Master falconer throughout the apprenticeship. After completing two years, a letter from your sponsor confirming your experience allows you to apply for advancement to the General Falconer level."
+      },
+      {
+        "q": "How do I register for the falconry apprentice exam?",
+        "a": "There is no national registration system. You register through your state wildlife agency. Some states offer in-person proctored exams by appointment; others (such as New York and Texas) offer scheduled online sittings several times per year. The general process is: find your state's falconry permit page, download the study guide or reading list if available, submit a preliminary application or intent form if required, then contact the agency to schedule the exam."
+      }
+    ],
+    "subcategoryBlurbs": {
+      "apprentice": "Preparation for the falconry apprentice exam required in all 50 U.S. states. Covers raptor biology, mews housing, health and nutrition, training, and federal/state hunting regulations (50 CFR Part 21)."
+    },
+    "intro": [
+      "The falconry apprentice exam is the first formal gate in a licensing process governed by both federal law (50 CFR Part 21) and state-specific requirements. Every U.S. state requires you to pass this exam before you can legally hold a raptor or begin your apprenticeship. Most states administer a 100-question multiple-choice test with an 80% passing threshold — the highest passing score of any common licensing exam.",
+      "Ryno Tools' 398-question falconry bank is tagged by subject area so you can isolate the topics where you need the most work. Biology and health questions together account for the largest share of real exam content, so the question distribution here reflects what you will actually face on test day.",
+      "Questions cover all five subject areas tested on the apprentice exam: raptor biology and species identification, mews housing and equipment standards, health and nutrition management, training and hunting practices, and federal and state regulations. Every question includes a detailed explanation citing the relevant regulation or biological principle."
+    ]
+  },
+
+  "cybersecurity": {
+    "slug": "security-plus",
+    "label": "Security+",
+    "icon": "🔒",
+    "hubTitle": "CompTIA Security+ SY0-701 Exam Prep | Ryno Tools",
+    "metaDescription": "Free CompTIA Security+ SY0-701 practice questions covering threats, cryptography, access control, network security, incident response, and governance. No login required.",
+    "ogImage": "https://ryno.tools/images/blog/security-plus-blog-hero.webp",
+    "headline": "CompTIA Security+ SY0-701 Exam Prep",
+    "tagline": "Practice questions aligned to the current CompTIA Security+ SY0-701 objectives — threats, cryptography, network security, and incident response.",
+    "answerSummary": "CompTIA Security+ SY0-701 covers five exam domains: threats and vulnerabilities, cryptography and PKI, access control and identity management, network security, and incident response and governance. Ryno Tools has 100 practice questions aligned to the official exam objectives. Security+ SY0-701 satisfies the DoD 8570/8140 baseline certification requirement.",
+    "keywords": [
+      "comptia security plus exam prep",
+      "security+ sy0-701 practice test",
+      "security+ practice questions",
+      "CompTIA Security+ study guide",
+      "sy0-701 exam questions",
+      "security+ cryptography questions",
+      "DoD 8570 certification practice",
+      "IT security certification practice"
+    ],
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/CompTIA",
+      "https://www.wikidata.org/wiki/Q608937"
+    ],
+    "added": "2024-01-01",
+    "isNew": false,
+    "faq": [
+      {
+        "q": "Which CompTIA Security+ exam version does Ryno Tools cover?",
+        "a": "Ryno Tools covers CompTIA Security+ SY0-701, the current active exam version as of 2026, with practice questions aligned to the official exam objectives. SY0-701 covers threats and vulnerabilities, cryptography, access control, network security, incident response, and governance. CompTIA is expected to release SY0-801 in late 2026."
+      },
+      {
+        "q": "Does Security+ satisfy DoD requirements?",
+        "a": "Yes. CompTIA Security+ SY0-701 satisfies the DoD 8570/8140 (now DoD 8140) baseline certification requirement for Information Assurance Technical (IAT) Level II and Information Assurance Management (IAM) Level I roles. It is one of the most widely recognized certifications for government contractor and military IT positions."
+      },
+      {
+        "q": "How many questions are on the Security+ exam?",
+        "a": "The CompTIA Security+ SY0-701 exam has a maximum of 90 questions. The exam uses a mix of multiple-choice and performance-based questions (PBQs). The passing score is 750 on a scale of 100–900. The exam is timed at 90 minutes. CompTIA recommends two years of IT experience with a security focus before sitting the exam, though it is not required."
+      },
+      {
+        "q": "What topics does Security+ SY0-701 cover?",
+        "a": "SY0-701 is organized into five domain areas: (1) General Security Concepts (12%), (2) Threats, Vulnerabilities, and Mitigations (22%), (3) Security Architecture (18%), (4) Security Operations (28%), and (5) Security Program Management and Oversight (20%). Key topics include cryptography and PKI, network security architecture, identity and access management, vulnerability management, incident response, and governance and compliance frameworks."
+      }
+    ],
+    "subcategoryBlurbs": {
+      "security+ sy0-701": "100 practice questions aligned to CompTIA Security+ SY0-701 objectives: threats and vulnerabilities, cryptography, access control, network security, incident response, and governance and compliance."
+    },
+    "intro": [
+      "CompTIA Security+ is the industry-standard entry-to-mid-level cybersecurity certification. SY0-701, released in November 2023, is the current active version and is expected to remain so through late 2026. It satisfies the DoD 8570/8140 baseline certification requirement for IAT Level II and IAM Level I roles, making it a gateway credential for government, contractor, and enterprise IT security positions.",
+      "The exam tests five domains: General Security Concepts, Threats and Vulnerabilities, Security Architecture, Security Operations, and Security Program Management. High-weight topics include network security architecture, cryptography and PKI, identity and access management, vulnerability scanning and analysis, and incident response procedures.",
+      "Ryno Tools' 100 Security+ practice questions are aligned to the official exam objectives and tagged by domain. Each question includes a detailed explanation of why the correct answer is right and why each distractor is wrong — the explanatory feedback format that the research shows improves retention over simple answer-checking."
+    ]
+  },
+
+  "devops": {
+    "slug": "devops",
+    "label": "DevOps",
+    "icon": "⚙️",
+    "hubTitle": "DevOps Interview Prep — Core Concepts, Containers & Kubernetes | Ryno Tools",
+    "metaDescription": "Free DevOps interview and career prep: 103 questions on DevOps culture, CI/CD principles, SRE and reliability, Agile/Lean, DORA metrics, containers, and Kubernetes. No login required.",
+    "ogImage": "https://ryno.tools/images/blog/devops-blog-hero.webp",
+    "headline": "DevOps Interview & Career Prep",
+    "tagline": "Build fluency in DevOps culture, CI/CD, SRE, containers, and Kubernetes — concept- and troubleshooting-focused questions designed for interviews and career development.",
+    "answerSummary": "The Ryno Tools DevOps quiz covers two tracks: Core Concepts & Culture (50 questions on DevOps principles, DORA metrics, SRE error budgets, Agile/Lean, blameless postmortems) and Containers & Kubernetes (53 questions on container fundamentals, image management, pods, services, storage, and troubleshooting). Questions are interview-style and concept-focused, not syntax recall.",
+    "keywords": [
+      "devops interview questions",
+      "devops practice quiz",
+      "kubernetes interview prep",
+      "docker containers study guide",
+      "SRE error budget explained",
+      "DORA metrics practice",
+      "devops culture quiz",
+      "CI/CD interview questions"
+    ],
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/DevOps",
+      "https://www.wikidata.org/wiki/Q2738095"
+    ],
+    "added": "2026-06-07",
+    "isNew": true,
+    "faq": [
+      {
+        "q": "What is DevOps and why does it matter for interviews?",
+        "a": "DevOps is a set of cultural practices, organizational patterns, and technical capabilities that improve an organization's ability to deliver software reliably and rapidly. Interviewers probe DevOps knowledge to assess whether a candidate understands how modern software teams operate — not just individual tool syntax. Core topics include the three-way handshake between development, operations, and security; measurement via DORA metrics (deployment frequency, lead time for changes, change failure rate, time to restore service); and cultural practices such as blameless postmortems and shared ownership."
+      },
+      {
+        "q": "What is an SRE error budget?",
+        "a": "An error budget is the allowable amount of unreliability derived from an SLO (Service Level Objective). If your SLO is 99.9% availability, your error budget is 0.1% downtime — approximately 8.7 hours per year. The error budget is consumed by outages, degradations, and planned maintenance. When the budget is depleted, new feature releases are halted until reliability is restored, creating a shared incentive between product and reliability teams. The concept originates from the Google SRE book (Beyer et al.)."
+      },
+      {
+        "q": "What are the four DORA metrics?",
+        "a": "The four DORA metrics (from Forsgren, Humble, and Kim's Accelerate research) measure software delivery performance: (1) Deployment Frequency — how often code is deployed to production; (2) Lead Time for Changes — time from code commit to production deployment; (3) Change Failure Rate — percentage of deployments that cause a production incident; (4) Time to Restore Service — how long it takes to recover from a production failure. Elite performers (top quartile) deploy multiple times per day, have lead times under one hour, change failure rates under 5%, and restore service in under one hour."
+      },
+      {
+        "q": "What is the difference between a container and a VM?",
+        "a": "A virtual machine (VM) includes a full operating system kernel, which is managed by a hypervisor. A container shares the host OS kernel and isolates processes using Linux namespaces (PID, network, mount, UTS, IPC) and cgroups (resource limits). Containers start in milliseconds, have megabyte-level overhead, and are portable across any host running the same container runtime. VMs provide stronger isolation but have gigabyte-level overhead and seconds-to-minutes startup times. In practice, containers and VMs are complementary: containers run inside VMs in most cloud environments."
+      },
+      {
+        "q": "What causes a CrashLoopBackOff in Kubernetes?",
+        "a": "CrashLoopBackOff means a container is repeatedly starting, crashing, and being restarted by Kubernetes. Common causes: the container's entrypoint or command exits non-zero (configuration error, missing dependency, or application bug); the container runs out of memory (OOMKilled) on startup; a required secret or ConfigMap is missing; a liveness probe is configured too aggressively and kills the container before it finishes starting. Debug with: kubectl describe pod <name> (check Events and Last State), kubectl logs <pod> --previous (logs from the crashed instance)."
+      }
+    ],
+    "subcategoryBlurbs": {
+      "core-concepts": "50 questions covering DevOps culture, CI/CD principles, SRE and reliability engineering (error budgets, SLI/SLO/SLA), Agile and Lean fundamentals, and DORA metrics — all sourced from Google SRE Book, Accelerate, Team Topologies, and the Agile Manifesto.",
+      "containers-k8s": "53 questions covering container fundamentals, image layers and registries, Kubernetes pods and workloads, services and networking, storage (PV/PVC), and troubleshooting (CrashLoopBackOff, OOMKilled, ImagePullBackOff) — sourced from kubernetes.io and docs.docker.com."
+    },
+    "intro": [
+      "The Ryno Tools DevOps quiz is designed for people pursuing a DevOps or platform engineering career who need fluency in core concepts — not code syntax. Every question is framed as a concept or troubleshooting scenario of the kind you encounter in interviews and on the job: 'why does X happen', 'what would you check if Y', 'what does this metric tell you'.",
+      "Core Concepts & Culture covers the foundational ideas that distinguish high-performing engineering organizations: DevOps principles (the Three Ways), DORA's four key metrics, SRE practices (error budgets, SLI/SLO/SLA, blameless postmortems, toil), Agile and Lean fundamentals (WIP limits, value stream mapping, Little's Law), and CI/CD principles (trunk-based development, feature flags, deployment strategies). Sources: Google SRE Book, Accelerate (Forsgren/Humble/Kim), Team Topologies (Skelton/Pais), and the Agile Manifesto.",
+      "Containers & Kubernetes covers the operational primitives every DevOps engineer must understand: what containers are and how they differ from VMs, how image layers and registries work, the anatomy of a Kubernetes pod, workload controllers (Deployment, StatefulSet, DaemonSet, Job), service types and CoreDNS, storage (PersistentVolume/PersistentVolumeClaim), and how to diagnose the most common failure states (CrashLoopBackOff, OOMKilled, ImagePullBackOff, pending pods, service unreachable). Sources: kubernetes.io/docs, docs.docker.com, CNCF."
+    ]
+  }
+}

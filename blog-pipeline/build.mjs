@@ -19,12 +19,22 @@ const LLMS_TXT = join(ROOT, 'src', 'llms.txt');
 const LLMS_FULL_TXT = join(ROOT, 'src', 'llms-full.txt');
 
 // ── Track config ──────────────────────────────────────────────────────────────
+// heroImage/heroAlt: the WebP wallpaper shown behind the gradient on post heroes,
+// blog cards, and the featured block. Keyed per-track (NOT by slug) so cybersecurity
+// can map to the security-plus art while keeping its own CSS/track slug.
+const HAM_ALT    = 'Ham radio transceiver and antenna equipment — Ryno Tools ham radio license exam prep';
+const FALC_ALT   = 'Falconer with a trained bird of prey in flight — Ryno Tools falconry apprentice exam prep';
+const CYBER_ALT  = 'Cybersecurity digital lock visualization — Ryno Tools CompTIA Security+ SY0-701 exam prep';
+const DEVOPS_ALT = 'Software engineering and DevOps workflow diagram — Ryno Tools DevOps interview prep';
+
 const TRACK_META = {
-  'ham-radio/technician': { label: 'Ham Radio — Technician', icon: '📻', slug: 'ham-radio', category: 'ham-radio', subcategory: 'technician' },
-  'ham-radio/general':    { label: 'Ham Radio — General',    icon: '📻', slug: 'ham-radio', category: 'ham-radio', subcategory: 'general' },
-  'ham-radio/extra':      { label: 'Ham Radio — Extra',      icon: '📻', slug: 'ham-radio', category: 'ham-radio', subcategory: 'extra' },
-  'falconry/apprentice':  { label: 'Falconry — Apprentice',  icon: '🦅', slug: 'falconry',  category: 'falconry',  subcategory: 'apprentice' },
-  'cybersecurity/sy0-701':{ label: 'Security+ SY0-701',      icon: '🔒', slug: 'cybersecurity', category: 'cybersecurity', subcategory: 'security+ sy0-701' },
+  'ham-radio/technician': { label: 'Ham Radio — Technician', icon: '📻', slug: 'ham-radio', category: 'ham-radio', subcategory: 'technician', heroImage: '/images/blog/ham-radio-blog-hero.webp', heroAlt: HAM_ALT },
+  'ham-radio/general':    { label: 'Ham Radio — General',    icon: '📻', slug: 'ham-radio', category: 'ham-radio', subcategory: 'general', heroImage: '/images/blog/ham-radio-blog-hero.webp', heroAlt: HAM_ALT },
+  'ham-radio/extra':      { label: 'Ham Radio — Extra',      icon: '📻', slug: 'ham-radio', category: 'ham-radio', subcategory: 'extra', heroImage: '/images/blog/ham-radio-blog-hero.webp', heroAlt: HAM_ALT },
+  'falconry/apprentice':  { label: 'Falconry — Apprentice',  icon: '🦅', slug: 'falconry',  category: 'falconry',  subcategory: 'apprentice', heroImage: '/images/blog/falconry-blog-hero.webp', heroAlt: FALC_ALT },
+  'cybersecurity/sy0-701':{ label: 'Security+ SY0-701',      icon: '🔒', slug: 'cybersecurity', category: 'cybersecurity', subcategory: 'security+ sy0-701', heroImage: '/images/blog/security-plus-blog-hero.webp', heroAlt: CYBER_ALT },
+  'devops/core-concepts': { label: 'DevOps — Core Concepts', icon: '⚙️', slug: 'devops', category: 'devops', subcategory: 'core-concepts', heroImage: '/images/blog/devops-blog-hero.webp', heroAlt: DEVOPS_ALT },
+  'devops/containers-k8s':{ label: 'DevOps — Containers & Kubernetes', icon: '⚙️', slug: 'devops', category: 'devops', subcategory: 'containers-k8s', heroImage: '/images/blog/devops-blog-hero.webp', heroAlt: DEVOPS_ALT },
 };
 
 // ── Tiny Markdown renderer (constrained subset) ────────────────────────────────
@@ -263,6 +273,9 @@ for (const file of draftFiles) {
     POST_TRACK_SLUG: track.slug,
     POST_TRACK_LABEL: track.label,
     POST_TRACK_ICON: track.icon,
+    POST_TRACK_IMAGE: track.heroImage,
+    POST_TRACK_IMAGE_ALT: track.heroAlt,
+    POST_OG_IMAGE: `https://ryno.tools${track.heroImage}`,
     POST_DATE_PUBLISHED: meta.datePublished,
     POST_DATE_MODIFIED: meta.dateModified || meta.datePublished,
     POST_DATE_FORMATTED: formatDate(meta.datePublished),
@@ -299,6 +312,8 @@ for (const file of draftFiles) {
     trackIcon: track.icon,
     trackSlug: track.slug,
     trackCategory: track.category,
+    trackImage: track.heroImage,
+    trackImageAlt: track.heroAlt,
     tags: Array.isArray(meta.tags) ? meta.tags : (meta.tags || '').split(',').map(t => t.trim()).filter(Boolean),
     datePublished: meta.datePublished,
     dateModified: meta.dateModified || meta.datePublished,
@@ -326,6 +341,8 @@ function buildCardHtml(post, featured = false) {
     CARD_TRACK_SLUG: post.trackSlug,
     CARD_TRACK_LABEL: post.trackLabel,
     CARD_TRACK_ICON: post.trackIcon,
+    CARD_TRACK_IMAGE: post.trackImage,
+    CARD_TRACK_IMAGE_ALT: post.trackImageAlt,
     CARD_TRACK_CATEGORY: post.trackCategory,
     CARD_DATE_PUBLISHED: post.datePublished,
     CARD_DATE_FORMATTED: formatDate(post.datePublished),
@@ -339,6 +356,7 @@ const featuredHtml = featuredPost ? `
 <section class="blog-featured" aria-label="Featured post">
   <h2 class="blog-featured-label">Featured</h2>
   <div class="blog-featured-inner blog-hero--${featuredPost.trackSlug}">
+    <img src="${featuredPost.trackImage}" alt="${featuredPost.trackImageAlt}" class="blog-featured-img" width="1200" height="630" loading="lazy" decoding="async" />
     <span class="blog-card-track-badge">${featuredPost.trackLabel}</span>
     <div class="blog-featured-body">
       <h2 class="blog-featured-title"><a href="/blog/${featuredPost.slug}/">${featuredPost.title}</a></h2>

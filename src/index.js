@@ -158,6 +158,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ------------------------
   // Landing CTA card handlers
   // ------------------------
+  // Hero "start practicing" inline button
+  // ------------------------
+  const heroStartBtn = document.getElementById('hero-start-btn');
+  if (heroStartBtn) {
+    heroStartBtn.addEventListener('click', () => showQuiz());
+  }
+
+  // Legacy landing-card buttons (no-op if none present)
   document.querySelectorAll('.landing-card').forEach(card => {
     card.addEventListener('click', () => {
       showQuiz();
