@@ -36,4 +36,3 @@ User-agent: YouBot
 Allow: /
 
 Sitemap: https://ryno.tools/sitemap.xml
-LLMs: https://ryno.tools/llms.txt

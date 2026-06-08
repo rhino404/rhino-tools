@@ -133,7 +133,7 @@ function hubPage(catValue, cat, datasets, relatedPosts) {
     name: cat.hubTitle,
     description: cat.metaDescription,
     url: baseUrl,
-    dateModified: cat.added,
+    dateModified: cat.lastModified || cat.added,
     about: {
       '@type': 'Thing',
       name: `${cat.label} Exam Prep`,
@@ -522,7 +522,7 @@ const hubSitemapEntries = Object.entries(content)
   .filter(([k]) => !k.startsWith('_'))
   .map(([, c]) => `  <url>
     <loc>https://ryno.tools/${c.slug}/</loc>
-    <lastmod>${c.added}</lastmod>
+    <lastmod>${c.lastModified || c.added}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>`).join('\n');
