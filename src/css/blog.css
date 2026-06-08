@@ -481,6 +481,30 @@ body.light-mode .blog-quiz-cta { background: rgba(26, 115, 232, 0.06); border: 1
 body.dark-mode .blog-cta-btn { background: var(--color-primary, #4a90d9); color: #fff; }
 body.light-mode .blog-cta-btn { background: var(--color-primary, #1a73e8); color: #fff; }
 
+.blog-cta-secondary {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  opacity: 0.75;
+}
+.blog-cta-secondary:hover { opacity: 1; }
+
+/* ── Blog index hub links ─────────────────────────────────────── */
+.blog-hub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+.blog-hub-links a {
+  font-size: 0.875rem;
+  text-decoration: underline;
+  opacity: 0.75;
+}
+.blog-hub-links a:hover { opacity: 1; }
+
 /* ── Sources ──────────────────────────────────────────────────── */
 .blog-sources {
   margin: 2.5rem 0;

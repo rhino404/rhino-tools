@@ -71,9 +71,14 @@ function parseFeed(xml) {
 
 const posts = parseFeed(feedXml);
 
-// Map feed category string ("Falconry — Apprentice") → category value ("falconry")
+// Map feed <category> → category-content key. Most slug-match by coincidence
+// (e.g. "Ham Radio — Technician" → "ham-radio"); aliases handle the rest, where
+// the slug can't be derived (Security+ hub key is "cybersecurity", slug "security-plus").
+const FEED_CAT_ALIASES = { 'Security+ SY0-701': 'cybersecurity' };
+
 function feedCatToValue(feedCat) {
   if (!feedCat) return null;
+  if (FEED_CAT_ALIASES[feedCat]) return FEED_CAT_ALIASES[feedCat];
   const base = feedCat.split(/\s*[—–\-]\s*/)[0].trim();
   return base.toLowerCase().replace(/\s+/g, '-');
 }
