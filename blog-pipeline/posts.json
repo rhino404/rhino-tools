@@ -9,6 +9,8 @@
     "trackIcon": "🦅",
     "trackSlug": "falconry",
     "trackCategory": "falconry",
+    "trackImage": "/images/blog/falconry-blog-hero.webp",
+    "trackImageAlt": "Falconer with a trained bird of prey in flight — Ryno Tools falconry apprentice exam prep",
     "tags": [
       "Equipment",
       "Rules and Regulations",
@@ -29,6 +31,8 @@
     "trackIcon": "📻",
     "trackSlug": "ham-radio",
     "trackCategory": "ham-radio",
+    "trackImage": "/images/blog/ham-radio-blog-hero.webp",
+    "trackImageAlt": "Ham radio transceiver and antenna equipment — Ryno Tools ham radio license exam prep",
     "tags": [
       "voltage",
       "resistance",
@@ -50,6 +54,8 @@
     "trackIcon": "🔒",
     "trackSlug": "cybersecurity",
     "trackCategory": "cybersecurity",
+    "trackImage": "/images/blog/security-plus-blog-hero.webp",
+    "trackImageAlt": "Cybersecurity digital lock visualization — Ryno Tools CompTIA Security+ SY0-701 exam prep",
     "tags": [
       "cryptography",
       "network security"
@@ -69,6 +75,8 @@
     "trackIcon": "📻",
     "trackSlug": "ham-radio",
     "trackCategory": "ham-radio",
+    "trackImage": "/images/blog/ham-radio-blog-hero.webp",
+    "trackImageAlt": "Ham radio transceiver and antenna equipment — Ryno Tools ham radio license exam prep",
     "tags": [
       "exam-prep",
       "online-exam",
@@ -90,6 +98,8 @@
     "trackIcon": "📻",
     "trackSlug": "ham-radio",
     "trackCategory": "ham-radio",
+    "trackImage": "/images/blog/ham-radio-blog-hero.webp",
+    "trackImageAlt": "Ham radio transceiver and antenna equipment — Ryno Tools ham radio license exam prep",
     "tags": [
       "exam-prep",
       "technician",
@@ -111,6 +121,8 @@
     "trackIcon": "🦅",
     "trackSlug": "falconry",
     "trackCategory": "falconry",
+    "trackImage": "/images/blog/falconry-blog-hero.webp",
+    "trackImageAlt": "Falconer with a trained bird of prey in flight — Ryno Tools falconry apprentice exam prep",
     "tags": [
       "exam-prep",
       "apprentice",

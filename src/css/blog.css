@@ -111,6 +111,24 @@ body.light-mode .blog-filter-btn.active {
   overflow: hidden;
 }
 
+/* Wallpaper image layer — sits behind gradient, adds texture */
+.blog-featured-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.28;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blog-featured-inner > .blog-card-track-badge {
+  position: relative;
+  z-index: 1;
+}
+
 .blog-featured-body {
   position: relative;
   z-index: 1;
@@ -197,11 +215,26 @@ body.light-mode .blog-card:hover {
   padding: 0 1rem;
   gap: 0.5rem;
   position: relative;
+  overflow: hidden;
 }
 
 .blog-card-banner--ham-radio    { background: linear-gradient(135deg, var(--track-ham-radio) 0%, #0d2d42 100%); }
 .blog-card-banner--falconry     { background: linear-gradient(135deg, var(--track-falconry) 0%, #2a1f10 100%); }
 .blog-card-banner--cybersecurity { background: linear-gradient(135deg, var(--track-cybersecurity) 0%, #0d2016 100%); }
+.blog-card-banner--devops       { background: linear-gradient(135deg, #1a4a7a 0%, #0a1a2e 100%); }
+
+/* Wallpaper image layer — sits behind gradient, adds texture */
+.blog-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
 
 .blog-card-track-badge {
   font-family: var(--font-headline);
@@ -212,11 +245,15 @@ body.light-mode .blog-card:hover {
   background: rgba(255,255,255,0.12);
   border-radius: 999px;
   padding: 0.2rem 0.6rem;
+  position: relative;
+  z-index: 1;
 }
 
 .blog-card-icon {
   font-size: 1.5rem;
   margin-left: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .blog-card-body {
@@ -546,6 +583,7 @@ body.light-mode .blog-share-btn:hover { background: rgba(0,0,0,0.05); }
 .blog-featured-inner.blog-hero--ham-radio    { background: linear-gradient(135deg, var(--track-ham-radio) 0%, #0d2d42 100%); color: #e8eef8; }
 .blog-featured-inner.blog-hero--falconry     { background: linear-gradient(135deg, var(--track-falconry) 0%, #2a1f10 100%); color: #f0e8d8; }
 .blog-featured-inner.blog-hero--cybersecurity { background: linear-gradient(135deg, var(--track-cybersecurity) 0%, #0d2016 100%); color: #d8f0e4; }
+.blog-featured-inner.blog-hero--devops       { background: linear-gradient(135deg, #1a4a7a 0%, #0a1a2e 100%); color: #e4eef8; }
 
 @media (min-width: 768px) {
   .blog-post-main { padding: 0 2rem 5rem; }
