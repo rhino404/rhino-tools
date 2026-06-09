@@ -1,5 +1,19 @@
 [
   {
+    "trackKey": "ham-radio/technician",
+    "trackLabel": "ham-radio — Technician",
+    "trackIcon": "📻",
+    "kind": "pool-refresh",
+    "topic": "Technician pool refreshed (2026-2030)",
+    "tags": [
+      "Whats New"
+    ],
+    "questionCount": 409,
+    "noveltyScore": 1000,
+    "suggestedTitle": "What's New in the 2026-2030 Question Pool",
+    "notes": "Technician refreshed to 2026-2030 (effective 2026-07-01). 409 questions. Announce what changed and link to the quiz."
+  },
+  {
     "trackKey": "falconry/apprentice",
     "trackLabel": "Falconry — Apprentice",
     "trackIcon": "🦅",

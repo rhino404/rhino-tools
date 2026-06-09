@@ -500,10 +500,13 @@ body.light-mode .blog-cta-btn { background: var(--color-primary, #1a73e8); color
 }
 .blog-hub-links a {
   font-size: 0.875rem;
+  font-weight: 600;
   text-decoration: underline;
-  opacity: 0.75;
+  text-underline-offset: 2px;
 }
-.blog-hub-links a:hover { opacity: 1; }
+body.dark-mode .blog-hub-links a { color: var(--color-primary-light); }
+body.light-mode .blog-hub-links a { color: var(--color-primary-dark); }
+.blog-hub-links a:hover { text-decoration-thickness: 2px; }
 
 /* ── Sources ──────────────────────────────────────────────────── */
 .blog-sources {

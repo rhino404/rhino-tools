@@ -9,7 +9,7 @@
 ## Quizzes Available
 
 <!-- quizzes:start -->
-- [Technician](https://ryno.tools/ham-radio/): 425+ questions — Entry-level FCC license covering regulations, operating procedures, and electronics fundamentals. Required for VHF/UHF band access. Typical study time: 10–20 hours.
+- [Technician](https://ryno.tools/ham-radio/): 409+ questions — Entry-level FCC license covering regulations, operating procedures, and electronics fundamentals. Required for VHF/UHF band access. Typical study time: 10–20 hours.
 - [General](https://ryno.tools/ham-radio/): 456+ questions — Intermediate license that unlocks HF band privileges. Covers propagation, antenna theory, advanced operating procedures, and FCC regulations. Typical study time: 20–30 hours.
 - [Extra](https://ryno.tools/ham-radio/): 706+ questions — Top-tier FCC license covering advanced regulations, EMI, transmission theory, and expanded privileges. Typical study time: 40–60 hours.
 - [Apprentice](https://ryno.tools/falconry/): 398+ questions — Preparation for the falconry apprentice exam required in all 50 U.S. states. Covers raptor biology, mews housing, health and nutrition, training, and federal/state hunting regulations (50 CFR Part 21).

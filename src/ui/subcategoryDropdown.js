@@ -6,6 +6,19 @@ function normalizeKey(key) {
   return key.toLowerCase().replace(/\s+/g, '-');
 }
 
+// A featured pool refresh shows a cycle badge (e.g. "2026–2030") in the selector.
+// Gated live against the `until` date so it self-expires with no rebuild — the
+// static homepage badge is presence-based, this runtime one is time-based.
+function appendFeaturedBadge(li, featured) {
+  if (!featured || !featured.badge) return;
+  if (featured.until && new Date(featured.until) < new Date()) return;
+  const badge = document.createElement('span');
+  badge.className = 'subcat-badge';
+  badge.textContent = featured.badge;
+  if (featured.headline) badge.title = featured.headline;
+  li.appendChild(badge);
+}
+
 export function populateSubcategoryDropdown(containerEl, category) {
   if (!containerEl) return;
 
@@ -36,6 +49,7 @@ export function populateSubcategoryDropdown(containerEl, category) {
     li.setAttribute('tabindex', '-1');
     li.dataset.value = normalizeKey(sc.value);
     li.textContent = sc.label;
+    appendFeaturedBadge(li, sc.featured);
 
     li.addEventListener('click', () => {
       // Update state

@@ -35,7 +35,7 @@ function _buildFromManifest(manifest) {
       const fb = FALLBACK_CATS.find(c => c.value === ds.category);
       categories.push({ value: ds.category, label: fb?.label || ds.category });
     }
-    subcats.push({ label: ds.label, value: ds.subcategory, category: ds.category });
+    subcats.push({ label: ds.label, value: ds.subcategory, category: ds.category, featured: ds.pool?.featured || null });
     if (!paths[ds.category]) paths[ds.category] = {};
     paths[ds.category][ds.subcategory] = `./${ds.path}`;
     if (ds.exam) {

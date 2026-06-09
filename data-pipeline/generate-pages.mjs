@@ -395,6 +395,14 @@ console.log('[generate-pages] Injecting into src/index.html...');
 let indexHtml = readFileSync(join(SRC, 'index.html'), 'utf8');
 
 // Track grid
+// Featured = any dataset whose pool carries a `featured` block.
+// comingSoon: true  → "Coming Soon" section (announced but not yet live)
+// comingSoon: false/absent → "What's New" section (already live)
+// Presence-based so generation stays deterministic; prune-featured.mjs handles expiry.
+const featuredDatasets   = catalog.datasets.filter(d => d.pool?.featured);
+const comingSoonDatasets = featuredDatasets.filter(d => d.pool.featured.comingSoon);
+const newDatasets        = featuredDatasets.filter(d => !d.pool.featured.comingSoon);
+
 const trackGridHtml = Object.entries(content)
   .filter(([k]) => !k.startsWith('_'))
   .map(([catValue, cat]) => {
@@ -421,10 +429,50 @@ const whatsNewItems = newEntries.length
   ? newEntries
   : sortedContent.slice(0, 2);
 
-const whatsNewHtml = whatsNewItems.length ? `  <section id="whats-new" class="landing-block landing-whats-new">
-    <h2>What's New</h2>
+// ── Coming Soon section ───────────────────────────────────────
+const comingSoonHtml = comingSoonDatasets.length ? `  <section id="coming-soon" class="landing-block landing-coming-soon">
+    <h2>Coming Soon</h2>
     <ul class="whats-new-list">
-${whatsNewItems.map(([, c]) => `      <li>
+${comingSoonDatasets.map(d => {
+  const cat = content[d.category];
+  const f = d.pool.featured;
+  return `      <li>
+        <a href="/${esc(cat.slug)}/" class="whats-new-item is-coming-soon">
+          <span class="whats-new-icon">${cat.icon}</span>
+          <span>
+            <strong>${esc(cat.label)} — ${esc(d.label)}</strong>
+            <span class="whats-new-date">${esc(f.headline)}</span>
+          </span>
+          <span class="whats-new-badge coming-soon-badge">Live ${esc(f.from)}</span>
+        </a>
+      </li>`;
+}).join('\n')}
+    </ul>
+  </section>` : '';
+
+indexHtml = inject(indexHtml, 'coming-soon', comingSoonHtml);
+
+// Featured pool refreshes lead the list (subcategory-level, with a cycle badge),
+// followed by category-level "new track" entries.
+const featuredLis = newDatasets.map(d => {
+  const cat = content[d.category];
+  const f = d.pool.featured;
+  return `      <li>
+        <a href="/${esc(cat.slug)}/" class="whats-new-item is-featured">
+          <span class="whats-new-icon">${cat.icon}</span>
+          <span>
+            <strong>${esc(cat.label)} — ${esc(d.label)}</strong>
+            <span class="whats-new-date">${esc(f.headline)}</span>
+          </span>
+          <span class="whats-new-badge">${esc(f.badge)}</span>
+        </a>
+      </li>`;
+});
+// Exclude categories that already appear in Coming Soon or What's New (featured).
+const featuredCats = new Set(featuredDatasets.map(d => d.category));
+const categoryLis = whatsNewItems
+  .filter(([k]) => !featuredCats.has(k))
+  .map(([, c]) => `      <li>
         <a href="/${esc(c.slug)}/" class="whats-new-item">
           <span class="whats-new-icon">${c.icon}</span>
           <span>
@@ -432,7 +480,13 @@ ${whatsNewItems.map(([, c]) => `      <li>
             <span class="whats-new-date">Added ${c.added}</span>
           </span>
         </a>
-      </li>`).join('\n')}
+      </li>`);
+const whatsNewLis = [...featuredLis, ...categoryLis];
+
+const whatsNewHtml = whatsNewLis.length ? `  <section id="whats-new" class="landing-block landing-whats-new">
+    <h2>What's New</h2>
+    <ul class="whats-new-list">
+${whatsNewLis.join('\n')}
     </ul>
   </section>` : '';
 

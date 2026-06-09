@@ -15,7 +15,7 @@ The platform provides adaptive microlearning through flashcard quizzes and timed
 
 Hub: https://ryno.tools/ham-radio/
 
-  - **Technician** (425+ questions): Entry-level FCC license covering regulations, operating procedures, and electronics fundamentals. Required for VHF/UHF band access. Typical study time: 10–20 hours.
+  - **Technician** (409+ questions): Entry-level FCC license covering regulations, operating procedures, and electronics fundamentals. Required for VHF/UHF band access. Typical study time: 10–20 hours.
   - **General** (456+ questions): Intermediate license that unlocks HF band privileges. Covers propagation, antenna theory, advanced operating procedures, and FCC regulations. Typical study time: 20–30 hours.
   - **Extra** (706+ questions): Top-tier FCC license covering advanced regulations, EMI, transmission theory, and expanded privileges. Typical study time: 40–60 hours.
 

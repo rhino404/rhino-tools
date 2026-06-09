@@ -1,0 +1,43 @@
+name: Pool cutover (flip Coming Soon → live)
+
+on:
+  schedule:
+    # 12:00 UTC on July 1 every year. Only does work when a pool has comingSoon: true.
+    - cron: '0 12 1 7 *'
+  # Manual trigger from Actions tab (useful for testing or early flip)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  flip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Flip coming-soon pools
+        id: flip
+        run: |
+          node data-pipeline/flip-coming-soon.mjs
+          echo "flipped=true" >> "$GITHUB_OUTPUT"
+        # exit code 1 = nothing to flip; treat as success but skip commit
+        continue-on-error: true
+
+      - name: Commit and push if flipped
+        if: steps.flip.outputs.flipped == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data-pipeline/pools.json src/datasets/index.json src/index.html \
+                  src/llms.txt src/llms-full.txt
+          git commit -m "chore: flip Technician 2026-2030 pool from Coming Soon to live"
+          git push

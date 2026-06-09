@@ -2,11 +2,19 @@
   "_note": "Authoritative source/version metadata per dataset, keyed by '<category>/<subcategory>' (DATA_SOURCES keys). generate-manifest.mjs reads this into the manifest's pool field; import-pool.mjs updates it on import. NCVEC amateur pools run on fixed 4-year cycles (effective July 1).",
   "pools": {
     "ham-radio/technician": {
-      "version": "2022-2026",
-      "effectiveDate": "2022-07-01",
-      "expiryDate": "2026-06-30",
+      "version": "2026-2030",
+      "effectiveDate": "2026-07-01",
+      "expiryDate": "2030-06-30",
       "source": "NCVEC",
-      "sourceUrl": "https://www.ncvec.org/"
+      "sourceUrl": "https://www.ncvec.org/",
+      "featured": {
+        "headline": "Technician pool refreshed (2026-2030)",
+        "badge": "2026–2030",
+        "from": "2026-07-01",
+        "until": "2026-09-29",
+        "blogSlug": null,
+        "comingSoon": true
+      }
     },
     "ham-radio/general": {
       "version": "2023-2027",
