@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
+
+  <!-- SEO -->
+  <title>What Is an SLI, SLO, and SLA? A Plain-English Guide for DevOps Beginners | Ryno Tools Blog</title>
+  <meta name="description" content="SLI, SLO, SLA, and error budgets explained in plain English for DevOps beginners — with concrete examples and interview Q&A on reliability concepts." />
+  <meta name="author" content="Ask Ryno" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+  <link rel="canonical" href="https://ryno.tools/blog/what-is-sli-slo-sla-devops/" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Ryno Tools" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What Is an SLI, SLO, and SLA? A Plain-English Guide for DevOps Beginners | Ryno Tools Blog" />
+  <meta property="og:description" content="SLI, SLO, SLA, and error budgets explained in plain English for DevOps beginners — with concrete examples and interview Q&A on reliability concepts." />
+  <meta property="og:url" content="https://ryno.tools/blog/what-is-sli-slo-sla-devops/" />
+  <meta property="og:image" content="https://ryno.tools/images/blog/devops-blog-hero.webp" />
+  <meta property="og:image:alt" content="Software engineering and DevOps workflow diagram — Ryno Tools DevOps interview prep" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-06-09" />
+  <meta property="article:modified_time" content="2026-06-09" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is an SLI, SLO, and SLA? A Plain-English Guide for DevOps Beginners | Ryno Tools Blog" />
+  <meta name="twitter:description" content="SLI, SLO, SLA, and error budgets explained in plain English for DevOps beginners — with concrete examples and interview Q&A on reliability concepts." />
+  <meta name="twitter:image" content="https://ryno.tools/images/blog/devops-blog-hero.webp" />
+
+  <!-- RSS Feed Discovery -->
+  <link rel="alternate" type="application/rss+xml" title="Ryno Tools Blog" href="https://ryno.tools/blog/feed.xml" />
+
+  <!-- Ads / Analytics -->
+  <meta name="google-adsense-account" content="ca-pub-5854133806080130" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCJFB67G3V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-WCJFB67G3V");
+  </script>
+
+  <!-- Favicons / PWA -->
+  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0f1115" />
+
+  <!-- Fonts + Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/theme.css?v=20260607g" />
+  <link rel="stylesheet" href="/css/chrome.css?v=20260607i" />
+  <link rel="stylesheet" href="/css/blog.css?v=20260608b" />
+
+  <!-- Structured Data: BlogPosting + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://ryno.tools/blog/what-is-sli-slo-sla-devops/",
+        "headline": "What Is an SLI, SLO, and SLA? A Plain-English Guide for DevOps Beginners",
+        "description": "SLI, SLO, SLA, and error budgets explained in plain English for DevOps beginners — with concrete examples and interview Q&A on reliability concepts.",
+        "url": "https://ryno.tools/blog/what-is-sli-slo-sla-devops/",
+        "datePublished": "2026-06-09",
+        "dateModified": "2026-06-09",
+        "author": {
+          "@type": "Person",
+          "@id": "https://ryno.tools/#ask-ryno",
+          "name": "Ask Ryno",
+          "url": "https://ryno.tools/pages/about.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://ryno.tools/#org",
+          "name": "Ryno Tools",
+          "url": "https://ryno.tools/",
+          "logo": "https://ryno.tools/images/logo.webp"
+        },
+        "mainEntityOfPage": "https://ryno.tools/blog/what-is-sli-slo-sla-devops/",
+        "image": "https://ryno.tools/images/blog/devops-blog-hero.webp",
+        "inLanguage": "en",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".blog-article-header h1", ".blog-body > p:first-child"]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ryno.tools/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ryno.tools/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "What Is an SLI, SLO, and SLA? A Plain-English Guide for DevOps Beginners", "item": "https://ryno.tools/blog/what-is-sli-slo-sla-devops/" }
+        ]
+      }
+    ]
+  }
+  </script>
+  
+</head>
+
+<body class="dark-mode blog-post-page">
+
+  <!-- Theme bootstrap (no app JS needed) -->
+  <script>
+    (function() {
+      const t = localStorage.getItem('theme');
+      const d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = t || (d ? 'dark' : 'light');
+      document.body.classList.remove('dark-mode', 'light-mode');
+      document.body.classList.add(theme === 'dark' ? 'dark-mode' : 'light-mode');
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.querySelector('.blog-theme-toggle');
+        if (btn) btn.textContent = theme === 'dark' ? '🌕' : '🌑';
+      });
+    })();
+  </script>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-brand" aria-label="Ryno Tools Home">
+        <img src="/images/logo.webp" alt="Ryno Tools logo" width="36" height="36" class="site-brand-logo" />
+        <span class="site-brand-name">Ryno Tools</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/">Practice</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/pages/about.html">About</a>
+      </nav>
+      <button class="site-theme-toggle icon-btn" aria-label="Toggle dark mode" onclick="(function(btn){var b=document.body,dark=b.classList.contains('dark-mode');b.classList.toggle('dark-mode',!dark);b.classList.toggle('light-mode',dark);localStorage.setItem('theme',dark?'light':'dark');btn.textContent=dark?'🌑':'🌕';})(this)">🌑</button>
+    </div>
+  </header>
+
+  <main class="blog-post-main">
+
+    <!-- Breadcrumb -->
+    <nav class="blog-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li aria-current="page">What Is an SLI, SLO, and SLA? A Plain-English Guide for DevOps Beginners</li>
+      </ol>
+    </nav>
+
+    <!-- Hero banner: track wallpaper behind gradient overlay -->
+    <div class="blog-hero blog-hero--devops">
+      <img src="/images/blog/devops-blog-hero.webp" alt="Software engineering and DevOps workflow diagram — Ryno Tools DevOps interview prep" class="blog-hero-img" width="1200" height="630" fetchpriority="high" decoding="async" />
+      <span class="blog-hero-track-badge">DevOps — Core Concepts</span>
+      <span class="blog-hero-icon">⚙️</span>
+    </div>
+
+    <article class="blog-article">
+      <header class="blog-article-header">
+        <h1>What Is an SLI, SLO, and SLA? A Plain-English Guide for DevOps Beginners</h1>
+        <div class="blog-byline">
+          <span class="blog-author">By <strong>Ask Ryno</strong></span>
+          <span class="blog-sep">·</span>
+          <time datetime="2026-06-09">June 9, 2026</time>
+          <span class="blog-sep">·</span>
+          <span class="blog-reading-time">8 min read</span>
+        </div>
+        <p class="blog-disclosure">
+          <em>This article was drafted with AI assistance and reviewed by a human before publishing. Sources are listed below so you can verify everything yourself.</em>
+        </p>
+      </header>
+
+      <div class="blog-body">
+        <p>Reliability engineering gives teams a shared language for describing how well a service is performing, what the team has promised, and how much runway remains before things get serious. <strong>SLI</strong>, <strong>SLO</strong>, and <strong>SLA</strong> are the three terms at the center of that language, and they confuse almost every developer entering DevOps — not because the concepts are hard, but because the abbreviations look nearly identical and the differences are subtle.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> An SLI measures how your service is actually behaving. An SLO is the internal target your team sets for that measurement. An SLA is the contractual promise you make to customers, backed by financial consequences. The error budget is the breathing room between your SLO and perfect reliability — and it governs how fast your team can ship.</p>
+</blockquote>
+<h2>Why These Three Terms Confuse Everyone</h2>
+<p>The confusion is understandable: all three share the SL prefix and all three involve some notion of a service performing well. The key is to think of them as operating at three different layers.</p>
+<p>The <strong>measurement layer</strong> tells you what is happening right now — raw data about your system. The <strong>target layer</strong> tells you what your team has decided is good enough. The <strong>contract layer</strong> tells you what you have legally promised to customers and what happens when you fall short. SLI lives at the measurement layer, SLO at the target layer, and SLA at the contract layer. Once that hierarchy clicks, the definitions follow naturally.</p>
+<h2>What Is an SLI (Service Level Indicator)?</h2>
+<p>An <strong>SLI</strong> is a quantitative measurement of some aspect of how your service is behaving. The Google SRE Book describes it as a carefully defined quantitative measure of some aspect of the level of service being provided.</p>
+<p>In practice, SLIs are almost always expressed as ratios: successful events divided by total events, multiplied by 100 to give a percentage. That formulation keeps every SLI on a consistent 0–100% scale, which makes setting targets straightforward.</p>
+<p>Two concrete examples:</p>
+<ul>
+<li><strong>Availability SLI:</strong> (successful HTTP requests / total HTTP requests) × 100%. A value of 99.95% means that 99.95% of all requests received a non-error response.</li>
+<li><strong>Latency SLI:</strong> (requests completing under 200ms / total requests) × 100%. A value of 97% means 97% of requests finished within your latency threshold.</li>
+</ul>
+<p>Other common SLIs cover error rate, throughput, and durability (for storage systems). The SRE Book advises choosing SLIs that reflect actual user experience, not just what's easiest to instrument. If users feel pain when the API is slow, latency is a better SLI than CPU utilization.</p>
+<h2>What Is an SLO (Service Level Objective)?</h2>
+<p>An <strong>SLO</strong> is a target value for an SLI — a promise your team makes to itself. Where the SLI tells you what is happening, the SLO tells you what your team has agreed is acceptable.</p>
+<p>The SRE Book defines an SLO as a target value or range of values for a service level measured by an SLI. In plain English: you pick an SLI, then decide how good it needs to be. For example:</p>
+<ul>
+<li>99.9% of requests will succeed — an availability SLO</li>
+<li>95% of requests will complete under 200ms — a latency SLO</li>
+</ul>
+<p>A critical point: SLOs are <strong>internal targets</strong>. They are not customer contracts. They live in runbooks, dashboards, and team agreements — not in customer-facing legal documents. This distinction matters because it gives your team room to act before a customer is harmed.</p>
+<p>Setting SLOs too high is a trap that the SRE Workbook addresses directly. A 100% SLO sounds appealing, but it is operationally impossible: any dependency outside your control — a cloud provider, a DNS resolver, a certificate authority — can cause a failure you cannot prevent. More practically, a 100% SLO leaves zero room for deployments, maintenance, or experimentation. High-performing teams deliberately set SLOs below 100% to preserve that room, which the SRE literature calls the <strong>error budget</strong>.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> When an interviewer asks about the difference between an SLO and an SLA, the key word is <em>internal</em>. An SLO is a target your team sets for itself — not a contractual commitment to customers. That distinction separates SLO from SLA.</p>
+</blockquote>
+<h2>What Is an SLA (Service Level Agreement)?</h2>
+<p>An <strong>SLA</strong> is a business contract between a service provider and its customers that specifies reliability expectations and the consequences — typically financial penalties or service credits — when those expectations are not met. The SRE Workbook puts it plainly: an SLA is the agreement that comes into effect when users are unhappy enough that compensation is required.</p>
+<p>The structural relationship between SLA and SLO is deliberate: your SLA should always be set <em>below</em> your SLO. If your internal SLO is 99.9% availability, a reasonable SLA commitment to customers might be 99.5%. Why? Because that gap gives your team time to detect an SLO breach, investigate, and recover before the SLA threshold is crossed. If your SLO and SLA are identical, any SLO breach immediately triggers a contractual violation — you have no buffer.</p>
+<p>In short: you hold yourself to a higher standard internally (SLO) than the floor you commit to externally (SLA). Customers see the SLA; your dashboards track the SLO.</p>
+<h2>What Is an Error Budget?</h2>
+<p>An <strong>error budget</strong> is the amount of unreliability your service is allowed to have before it violates its SLO. The formula is simple:</p>
+<p><strong>Error budget = 100% − SLO</strong></p>
+<p>If your SLO is 99.9% availability, your error budget is 0.1% of all requests. Over a 30-day month with roughly 43,800 minutes of service time, 0.1% translates to about 43.8 minutes of allowable downtime. Every failing request or slow response draws down this budget.</p>
+<p>The SRE Workbook offers a concrete illustration of how quickly budget can be consumed: in one example, a service with 3,663,253 API calls over four weeks and a 99.9% SLO has roughly 3,663 allowable failures. A single incident that causes 1,500 errors burns through about 40% of the entire period's budget in one shot.</p>
+<p>Error budgets create a <strong>shared incentive</strong> between development and operations. When the budget is healthy — most of it still unspent — the team has data-backed permission to ship new features, take on technical risk, and run experiments. When the budget is depleted, the policy is clear: pause new releases, freeze risky deployments, and focus entirely on reliability work until the budget recovers. According to the Google SRE Book, this is what makes error budgets a cultural tool, not just a metric: both the team that wants to ship and the team that wants stability are working from the same number.</p>
+<h2>How SLI, SLO, SLA, and Error Budget Work Together</h2>
+<p>Imagine a team running a web API. They define an <strong>SLI</strong> as their request success rate: (non-5xx responses / total responses) × 100%. After reviewing historical data and user impact, they set an <strong>SLO</strong> of 99.9% — meaning they target at most one failed request in every thousand. Their customer contract, the <strong>SLA</strong>, guarantees 99.5% — well below the SLO, giving them a 0.4-percentage-point buffer before a contractual violation occurs.</p>
+<p>With a 99.9% SLO and roughly 2 million requests per month, the <strong>error budget</strong> is 0.1%, or about 2,000 allowable failures. In week two of the month, a deployment bug causes a configuration error that produces 900 failed requests over four hours. The team patches it quickly. Afterward, they check their budget: 900 of their 2,000 allowable failures are gone — 45% consumed in one incident, with three weeks still remaining.</p>
+<p>The team now has clear guidance from the data. With 55% of the error budget remaining and three weeks left, they can continue shipping — but with awareness that another incident of similar size would trigger the error budget policy and require a feature freeze. The SLO breach did not breach the SLA (they stayed well above 99.5%), but it changed how the team plans the rest of the month. That is exactly what this framework is designed to do: make reliability visible, shared, and actionable.</p>
+<h2>Common Interview Questions (and How to Answer Them)</h2>
+<p><strong>What is the difference between an SLO and an SLA?</strong></p>
+<p>An SLO is an internal target — a number your team agrees to hold itself to. An SLA is an external contract with a customer, backed by financial consequences if violated. Teams always set their SLO higher than their SLA so that an internal target breach can be caught and addressed before a contractual breach occurs.</p>
+<p><strong>Why would a team deliberately set an SLO below 100%?</strong></p>
+<p>Because 100% reliability is both impossible and counterproductive. No service operates in complete isolation — cloud providers, DNS resolvers, and network paths all introduce failure modes outside the team's control. More importantly, a 100% SLO means zero error budget, which means no room for deployments, experiments, or maintenance. A well-chosen SLO acknowledges that some small amount of failure is acceptable in exchange for the ability to keep shipping.</p>
+<p><strong>What happens when an error budget is exhausted?</strong></p>
+<p>When the error budget runs out, the team's error budget policy kicks in. Typically this means halting new feature releases, freezing risky deployments, and redirecting engineering effort toward reliability improvements until the budget recovers in the next measurement window. This policy creates a natural, data-driven mechanism for prioritizing stability over velocity when reliability is genuinely at risk — without requiring a manager to make a judgment call in the middle of an incident.</p>
+      </div>
+
+      <!-- Quiz CTA -->
+      <div class="blog-quiz-cta">
+        <p>Ready to test your knowledge?</p>
+        <a href="/?category=devops&subcategory=core-concepts" class="blog-cta-btn">
+          Practice DevOps — Core Concepts on Ryno Tools →
+        </a>
+      </div>
+
+      <!-- Sources -->
+      <section class="blog-sources" aria-label="Sources">
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="https://sre.google/sre-book/service-level-objectives/" target="_blank" rel="noopener noreferrer">Site Reliability Engineering — Chapter 4: Service Level Objectives</a> — Google (accessed 2026-06-09)</li>
+          <li><a href="https://sre.google/workbook/implementing-slos/" target="_blank" rel="noopener noreferrer">The Site Reliability Workbook — Chapter 2: Implementing SLOs</a> — Google (accessed 2026-06-09)</li>
+          <li><a href="https://itrevolution.com/product/accelerate/" target="_blank" rel="noopener noreferrer">Accelerate: The Science of Lean Software and DevOps</a> — IT Revolution Press (accessed 2026-06-09)</li>
+        </ul>
+      </section>
+
+      <!-- Related Posts -->
+      
+
+      <!-- Share -->
+      <div class="blog-share">
+        <p>Found this helpful? Share it:</p>
+        <div class="blog-share-btns">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fryno.tools%2Fblog%2Fwhat-is-sli-slo-sla-devops%2F&text=What%20Is%20an%20SLI%2C%20SLO%2C%20and%20SLA%3F%20A%20Plain-English%20Guide%20for%20DevOps%20Beginners" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Share on X">X / Twitter</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fryno.tools%2Fblog%2Fwhat-is-sli-slo-sla-devops%2F" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Share on LinkedIn">LinkedIn</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fryno.tools%2Fblog%2Fwhat-is-sli-slo-sla-devops%2F" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Share on Facebook">Facebook</a>
+          <button class="blog-share-btn blog-copy-link" onclick="navigator.clipboard&&navigator.clipboard.writeText(window.location.href).then(function(){var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy Link'},2000)}.bind(this))" aria-label="Copy link">Copy Link</button>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(function(reg) { reg.update(); })
+          .catch(function(err) { console.warn('[SW]', err); });
+      });
+    }
+  </script>
+
+  <footer class="site-footer">
+    <p class="site-footer-brand">Ryno Tools — Build Momentum</p>
+    <ul class="site-footer-nav">
+      <li><a href="/">Practice</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      <li><a href="/pages/privacy.html">Privacy</a></li>
+      <li><a href="/pages/terms.html">Terms</a></li>
+    </ul>
+    <div class="site-footer-social">
+      <a href="https://github.com/rhino404" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+          <path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.1 3.29 9.43 7.86 10.96.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.72 1.26 3.38.97.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.19-3.11-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.83 0c2.22-1.49 3.2-1.18 3.2-1.18.63 1.65.23 2.87.11 3.17.74.81 1.19 1.85 1.19 3.11 0 4.43-2.68 5.4-5.24 5.69.41.35.78 1.04.78 2.1v3.11c0 .31.21.66.8.55A10.53 10.53 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+        </svg>
+      </a>
+    </div>
+    <p class="site-footer-copy">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ryno Tools. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

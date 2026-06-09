@@ -19,7 +19,15 @@ const TRACKS = [
   { category: 'ham-radio', subcategory: 'general',    trackKey: 'ham-radio/general',    label: 'Ham Radio — General',    icon: '📻' },
   { category: 'ham-radio', subcategory: 'extra',      trackKey: 'ham-radio/extra',       label: 'Ham Radio — Extra',      icon: '📻' },
   { category: 'falconry',  subcategory: 'apprentice', trackKey: 'falconry/apprentice',   label: 'Falconry — Apprentice',  icon: '🦅' },
-  { category: 'cybersecurity', subcategory: 'sy0-701', trackKey: 'cybersecurity/sy0-701', label: 'Security+ SY0-701',     icon: '🔒' },
+  { category: 'cybersecurity', subcategory: 'sy0-701', trackKey: 'cybersecurity/sy0-701', label: 'Security+ SY0-701',         icon: '🔒' },
+  { category: 'devops', subcategory: 'core-concepts',  trackKey: 'devops/core-concepts',  label: 'DevOps — Core Concepts & Culture',      icon: '⚙️' },
+  { category: 'devops', subcategory: 'containers-k8s', trackKey: 'devops/containers-k8s', label: 'DevOps — Containers & Kubernetes',       icon: '⚙️' },
+  { category: 'devops', subcategory: 'linux',          trackKey: 'devops/linux',          label: 'DevOps — Linux Fundamentals',            icon: '⚙️' },
+  { category: 'devops', subcategory: 'networking',     trackKey: 'devops/networking',     label: 'DevOps — Networking for DevOps',         icon: '⚙️' },
+  { category: 'devops', subcategory: 'cicd',           trackKey: 'devops/cicd',           label: 'DevOps — CI/CD Pipelines',               icon: '⚙️' },
+  { category: 'devops', subcategory: 'iac',            trackKey: 'devops/iac',            label: 'DevOps — Infrastructure as Code',        icon: '⚙️' },
+  { category: 'devops', subcategory: 'cloud',          trackKey: 'devops/cloud',          label: 'DevOps — Cloud Platforms',               icon: '⚙️' },
+  { category: 'devops', subcategory: 'observability',  trackKey: 'devops/observability',  label: 'DevOps — Monitoring & Observability',    icon: '⚙️' },
 ];
 
 function loadJson(path) {

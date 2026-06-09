@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
+
+  <!-- SEO -->
+  <title>What Is CI/CD? A Beginner's Guide to Continuous Integration and Delivery | Ryno Tools Blog</title>
+  <meta name="description" content="CI/CD is the most asked-about DevOps concept in interviews. Learn what CI and CD mean, how pipelines work, and why trunk-based development matters." />
+  <meta name="author" content="Ask Ryno" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+  <link rel="canonical" href="https://ryno.tools/blog/what-is-cicd-beginners-guide/" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Ryno Tools" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What Is CI/CD? A Beginner's Guide to Continuous Integration and Delivery | Ryno Tools Blog" />
+  <meta property="og:description" content="CI/CD is the most asked-about DevOps concept in interviews. Learn what CI and CD mean, how pipelines work, and why trunk-based development matters." />
+  <meta property="og:url" content="https://ryno.tools/blog/what-is-cicd-beginners-guide/" />
+  <meta property="og:image" content="https://ryno.tools/images/blog/devops-blog-hero.webp" />
+  <meta property="og:image:alt" content="Software engineering and DevOps workflow diagram — Ryno Tools DevOps interview prep" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-06-09" />
+  <meta property="article:modified_time" content="2026-06-09" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is CI/CD? A Beginner's Guide to Continuous Integration and Delivery | Ryno Tools Blog" />
+  <meta name="twitter:description" content="CI/CD is the most asked-about DevOps concept in interviews. Learn what CI and CD mean, how pipelines work, and why trunk-based development matters." />
+  <meta name="twitter:image" content="https://ryno.tools/images/blog/devops-blog-hero.webp" />
+
+  <!-- RSS Feed Discovery -->
+  <link rel="alternate" type="application/rss+xml" title="Ryno Tools Blog" href="https://ryno.tools/blog/feed.xml" />
+
+  <!-- Ads / Analytics -->
+  <meta name="google-adsense-account" content="ca-pub-5854133806080130" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCJFB67G3V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-WCJFB67G3V");
+  </script>
+
+  <!-- Favicons / PWA -->
+  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0f1115" />
+
+  <!-- Fonts + Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/theme.css?v=20260607g" />
+  <link rel="stylesheet" href="/css/chrome.css?v=20260607i" />
+  <link rel="stylesheet" href="/css/blog.css?v=20260608b" />
+
+  <!-- Structured Data: BlogPosting + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://ryno.tools/blog/what-is-cicd-beginners-guide/",
+        "headline": "What Is CI/CD? A Beginner's Guide to Continuous Integration and Delivery",
+        "description": "CI/CD is the most asked-about DevOps concept in interviews. Learn what CI and CD mean, how pipelines work, and why trunk-based development matters.",
+        "url": "https://ryno.tools/blog/what-is-cicd-beginners-guide/",
+        "datePublished": "2026-06-09",
+        "dateModified": "2026-06-09",
+        "author": {
+          "@type": "Person",
+          "@id": "https://ryno.tools/#ask-ryno",
+          "name": "Ask Ryno",
+          "url": "https://ryno.tools/pages/about.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://ryno.tools/#org",
+          "name": "Ryno Tools",
+          "url": "https://ryno.tools/",
+          "logo": "https://ryno.tools/images/logo.webp"
+        },
+        "mainEntityOfPage": "https://ryno.tools/blog/what-is-cicd-beginners-guide/",
+        "image": "https://ryno.tools/images/blog/devops-blog-hero.webp",
+        "inLanguage": "en",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".blog-article-header h1", ".blog-body > p:first-child"]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ryno.tools/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ryno.tools/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "What Is CI/CD? A Beginner's Guide to Continuous Integration and Delivery", "item": "https://ryno.tools/blog/what-is-cicd-beginners-guide/" }
+        ]
+      }
+    ]
+  }
+  </script>
+  
+</head>
+
+<body class="dark-mode blog-post-page">
+
+  <!-- Theme bootstrap (no app JS needed) -->
+  <script>
+    (function() {
+      const t = localStorage.getItem('theme');
+      const d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = t || (d ? 'dark' : 'light');
+      document.body.classList.remove('dark-mode', 'light-mode');
+      document.body.classList.add(theme === 'dark' ? 'dark-mode' : 'light-mode');
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.querySelector('.blog-theme-toggle');
+        if (btn) btn.textContent = theme === 'dark' ? '🌕' : '🌑';
+      });
+    })();
+  </script>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-brand" aria-label="Ryno Tools Home">
+        <img src="/images/logo.webp" alt="Ryno Tools logo" width="36" height="36" class="site-brand-logo" />
+        <span class="site-brand-name">Ryno Tools</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/">Practice</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/pages/about.html">About</a>
+      </nav>
+      <button class="site-theme-toggle icon-btn" aria-label="Toggle dark mode" onclick="(function(btn){var b=document.body,dark=b.classList.contains('dark-mode');b.classList.toggle('dark-mode',!dark);b.classList.toggle('light-mode',dark);localStorage.setItem('theme',dark?'light':'dark');btn.textContent=dark?'🌑':'🌕';})(this)">🌑</button>
+    </div>
+  </header>
+
+  <main class="blog-post-main">
+
+    <!-- Breadcrumb -->
+    <nav class="blog-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li aria-current="page">What Is CI/CD? A Beginner's Guide to Continuous Integration and Delivery</li>
+      </ol>
+    </nav>
+
+    <!-- Hero banner: track wallpaper behind gradient overlay -->
+    <div class="blog-hero blog-hero--devops">
+      <img src="/images/blog/devops-blog-hero.webp" alt="Software engineering and DevOps workflow diagram — Ryno Tools DevOps interview prep" class="blog-hero-img" width="1200" height="630" fetchpriority="high" decoding="async" />
+      <span class="blog-hero-track-badge">DevOps — Core Concepts</span>
+      <span class="blog-hero-icon">⚙️</span>
+    </div>
+
+    <article class="blog-article">
+      <header class="blog-article-header">
+        <h1>What Is CI/CD? A Beginner's Guide to Continuous Integration and Delivery</h1>
+        <div class="blog-byline">
+          <span class="blog-author">By <strong>Ask Ryno</strong></span>
+          <span class="blog-sep">·</span>
+          <time datetime="2026-06-09">June 9, 2026</time>
+          <span class="blog-sep">·</span>
+          <span class="blog-reading-time">9 min read</span>
+        </div>
+        <p class="blog-disclosure">
+          <em>This article was drafted with AI assistance and reviewed by a human before publishing. Sources are listed below so you can verify everything yourself.</em>
+        </p>
+      </header>
+
+      <div class="blog-body">
+        <p><strong>CI/CD</strong> — short for Continuous Integration and Continuous Delivery (or Deployment) — is a set of engineering practices that lets software teams ship changes to production quickly, reliably, and repeatedly. If you've applied for any developer or DevOps role in the past five years, you've almost certainly been asked to explain it. Understanding CI/CD isn't just good for interviews; it changes how you think about writing and shipping code every day.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> CI means every developer merges code to a shared branch at least daily, and each merge triggers automated tests. CD means every passing build is release-ready (Delivery) or automatically ships to production (Deployment). A pipeline is the automated sequence of stages — build, test, scan, deploy — that every change runs through.</p>
+</blockquote>
+<h2>The Problem CI/CD Was Invented to Solve</h2>
+<p>Before CI/CD became common practice, most software teams worked in isolation. A developer would check out the codebase, build a feature over several weeks, and then attempt to merge everything back in on a fixed release date. The same thing happened in parallel across five, ten, or twenty other developers. When all those long-running branches finally collided, teams entered what practitioners call <strong>integration hell</strong> — a painful, unpredictable period of resolving conflicts, tracking down broken behavior, and manually testing the whole system before anyone could ship.</p>
+<p>The core insight behind CI/CD is simple: problems that take days to untangle at merge time take minutes to fix if you catch them the moment they're introduced. By integrating frequently and testing automatically, teams compress the feedback loop from weeks to minutes.</p>
+<h2>What Is Continuous Integration (CI)?</h2>
+<p><strong>Continuous Integration</strong> is the practice of every developer merging their code changes into a shared main branch at least once a day — often several times a day. Each merge automatically triggers a build and a suite of automated tests. If the build fails or tests go red, the team treats fixing it as the highest priority. In Martin Fowler's foundational article on the practice, he describes the goal as keeping the mainline always in a healthy, releasable state.</p>
+<p>The discipline has two firm requirements. First, changes must be small and frequent. A branch that lives for two weeks before merging is a liability — the longer it diverges from main, the harder integration becomes. Second, the automated tests must be trustworthy. A CI system that produces false positives trains engineers to ignore failures, which defeats the whole point.</p>
+<p>The result is that integration problems surface immediately, while the context is fresh and the diff is small. What used to take days to debug takes minutes.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> Interviewers often ask what makes CI different from simply running tests. The key distinction is the <em>frequency and discipline</em>: CI requires that every developer integrates to the shared branch daily, not just that tests exist.</p>
+</blockquote>
+<h2>What Is Continuous Delivery vs. Continuous Deployment?</h2>
+<p>Both terms start with CD, and people use them interchangeably, but they mean different things.</p>
+<p><strong>Continuous Delivery</strong> means that every build that passes all automated tests is in a state where it <em>could</em> be deployed to production immediately. The actual deployment is a deliberate, human-triggered action — a button click or a single command. According to Jez Humble and Dave Farley in <em>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</em>, the goal is to make releasing software a routine, low-risk business decision rather than a high-stakes event.</p>
+<p><strong>Continuous Deployment</strong> goes one step further: every passing build automatically deploys to production without any human approval gate. This requires exceptional confidence in the automated test suite and often sophisticated monitoring and rollback capabilities. Most organizations practice Delivery; Deployment is common at mature companies — consumer web products, SaaS platforms — that ship dozens or hundreds of times per day.</p>
+<p>The distinction matters in interviews because it shows you understand that CD isn't a single thing.</p>
+<h2>What Is a CI/CD Pipeline?</h2>
+<p>A <strong>pipeline</strong> is the automated sequence of stages that a code change passes through from commit to deployment. A typical pipeline looks like this:</p>
+<ul>
+<li><strong>Build</strong> — compile the code and assemble deployable artifacts</li>
+<li><strong>Unit tests</strong> — verify individual functions and components in isolation</li>
+<li><strong>Integration tests</strong> — verify how components interact with each other and external dependencies</li>
+<li><strong>Security scan</strong> — check dependencies for known vulnerabilities, scan code for common flaws</li>
+<li><strong>Deploy to staging</strong> — push the build to an environment that mirrors production</li>
+<li><strong>Deploy to production</strong> — (in Continuous Deployment) automatically ship; (in Continuous Delivery) await manual approval</li>
+</ul>
+<p>When any stage fails, the pipeline stops. The offending change doesn't advance further, and the developer who introduced it gets notified immediately. The goal of stopping early is to keep broken code away from production and to surface the failure while the change is still fresh in the developer's mind.</p>
+<p>Pipelines are defined as code — most commonly in YAML files checked into the same repository as the application. Common filenames include <code>Jenkinsfile</code> (Jenkins), <code>.github/workflows/deploy.yml</code> (GitHub Actions), and <code>.gitlab-ci.yml</code> (GitLab CI). Storing the pipeline definition in version control means you can review, audit, and roll back pipeline changes exactly like application code.</p>
+<h2>What Is Trunk-Based Development?</h2>
+<p><strong>Trunk-based development</strong> is the branching strategy that makes CI work in practice. All engineers commit directly to a single shared branch — called <code>main</code>, <code>master</code>, or <code>trunk</code> — or merge to it via branches that live for a matter of hours, not days.</p>
+<p>This is a sharp contrast to the old model of long-lived feature branches that exist for weeks. DORA's research on trunk-based development finds that high-performing teams maintain three or fewer active branches at any time and merge to trunk at least once a day. Teams practicing trunk-based development avoid code freezes and extended stabilization phases entirely because the codebase is always in a releasable state.</p>
+<p>The advantage is clear once you've experienced the alternative: small diffs merge cleanly, conflicts surface immediately while the cause is obvious, and CI runs on every change rather than only at the end of a feature cycle. According to DORA's research, trunk-based development is one of the technical capabilities that distinguishes elite delivery performers from the rest.</p>
+<h2>What Are Feature Flags?</h2>
+<p>Trunk-based development raises an obvious question: how do you deploy code for a half-built feature without exposing it to users?</p>
+<p>The answer is <strong>feature flags</strong> (also called feature toggles). A feature flag wraps new or incomplete functionality in a conditional check — something like <code>if (featureEnabled('new-checkout-flow'))</code> — that is off by default in production. Developers can deploy the code at any time without the feature being visible to users. When the team is ready, they enable the flag for a small percentage of users first, observe behavior, and gradually roll out to everyone.</p>
+<p>Feature flags decouple deployment from release. You can ship code continuously to production while controlling exactly when users see each change. This is how organizations practicing trunk-based development avoid releasing unfinished work even while merging to main multiple times a day.</p>
+<h2>CI/CD Tools: GitHub Actions, Jenkins, and GitLab CI</h2>
+<p><strong>GitHub Actions</strong> is the CI/CD platform built directly into GitHub. Pipelines are defined as YAML files stored in <code>.github/workflows/</code> and triggered by repository events — a push to main, a pull request opened, or a scheduled time. GitHub Actions is the default choice for most teams already using GitHub, and it's the dominant platform for open-source projects. Its marketplace of reusable actions makes common tasks (deploying to AWS, running security scans, publishing packages) straightforward to configure without writing custom scripts.</p>
+<p><strong>Jenkins</strong> is the longest-running CI tool in the ecosystem, first released in 2004. It is open-source, highly configurable, and has a plugin ecosystem covering almost any integration you can imagine. Jenkins is still widespread in enterprise environments, particularly at organizations that adopted CI before cloud-native alternatives existed. The tradeoff is maintenance overhead: Jenkins requires dedicated infrastructure and ongoing administration that hosted services handle for you automatically.</p>
+<p><strong>GitLab CI</strong> is built directly into GitLab, using a similar YAML approach (<code>.gitlab-ci.yml</code>). It's the natural choice for teams that use GitLab for source control, issue tracking, and code review, since the pipeline configuration, results, and deployment history all live in the same interface as the code. GitLab CI also offers a built-in container registry and environment management that make it a strong end-to-end platform.</p>
+<p>All three tools implement the same conceptual model: trigger a pipeline on a git event, run a series of stages, report success or failure, and optionally deploy the artifact.</p>
+<h2>How CI/CD Connects to DORA Metrics</h2>
+<p>DORA (the DevOps Research and Assessment program) has spent over a decade studying what separates high-performing engineering organizations from low-performing ones. Their research defines four key software delivery metrics: <strong>deployment frequency</strong> (how often you ship), <strong>lead time for changes</strong> (how quickly a commit reaches production), <strong>change failure rate</strong> (what percentage of deploys cause incidents), and <strong>mean time to restore</strong> (how quickly you recover from failures).</p>
+<p>The counterintuitive finding — one worth knowing for any DevOps conversation — is that teams shipping more frequently don't have higher failure rates. Elite performers in DORA's research ship more often <em>and</em> have lower change failure rates than low performers. The reason is that CI/CD enforces small, well-tested changes. A deployment of one hundred small, individually-tested commits is far less risky than a single massive release containing six weeks of accumulated changes.</p>
+<p>CI/CD is the technical capability that enables all four metrics to improve simultaneously. Automated pipelines reduce lead time. Frequent, small deployments reduce blast radius when something does go wrong. Fast rollback capabilities reduce time to restore. The discipline of green-before-merge keeps change failure rates low. Understanding that connection — that CI/CD is about reliability as much as speed — is what separates a surface-level definition from a real understanding of why it matters.</p>
+      </div>
+
+      <!-- Quiz CTA -->
+      <div class="blog-quiz-cta">
+        <p>Ready to test your knowledge?</p>
+        <a href="/?category=devops&subcategory=core-concepts" class="blog-cta-btn">
+          Practice DevOps — Core Concepts on Ryno Tools →
+        </a>
+      </div>
+
+      <!-- Sources -->
+      <section class="blog-sources" aria-label="Sources">
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="https://www.informit.com/store/continuous-delivery-reliable-software-releases-through-9780321601919" target="_blank" rel="noopener noreferrer">Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</a> — Addison-Wesley (accessed 2026-06-09)</li>
+          <li><a href="https://docs.github.com/en/actions" target="_blank" rel="noopener noreferrer">GitHub Actions Documentation</a> — GitHub (accessed 2026-06-09)</li>
+          <li><a href="https://dora.dev" target="_blank" rel="noopener noreferrer">DORA Research Program</a> — DORA (accessed 2026-06-09)</li>
+          <li><a href="https://martinfowler.com/articles/continuousIntegration.html" target="_blank" rel="noopener noreferrer">Continuous Integration</a> — Martin Fowler (accessed 2026-06-09)</li>
+          <li><a href="https://dora.dev/capabilities/trunk-based-development/" target="_blank" rel="noopener noreferrer">DORA — Trunk-Based Development Capability</a> — DORA (accessed 2026-06-09)</li>
+        </ul>
+      </section>
+
+      <!-- Related Posts -->
+      
+
+      <!-- Share -->
+      <div class="blog-share">
+        <p>Found this helpful? Share it:</p>
+        <div class="blog-share-btns">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fryno.tools%2Fblog%2Fwhat-is-cicd-beginners-guide%2F&text=What%20Is%20CI%2FCD%3F%20A%20Beginner's%20Guide%20to%20Continuous%20Integration%20and%20Delivery" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Share on X">X / Twitter</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fryno.tools%2Fblog%2Fwhat-is-cicd-beginners-guide%2F" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Share on LinkedIn">LinkedIn</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fryno.tools%2Fblog%2Fwhat-is-cicd-beginners-guide%2F" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Share on Facebook">Facebook</a>
+          <button class="blog-share-btn blog-copy-link" onclick="navigator.clipboard&&navigator.clipboard.writeText(window.location.href).then(function(){var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy Link'},2000)}.bind(this))" aria-label="Copy link">Copy Link</button>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(function(reg) { reg.update(); })
+          .catch(function(err) { console.warn('[SW]', err); });
+      });
+    }
+  </script>
+
+  <footer class="site-footer">
+    <p class="site-footer-brand">Ryno Tools — Build Momentum</p>
+    <ul class="site-footer-nav">
+      <li><a href="/">Practice</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      <li><a href="/pages/privacy.html">Privacy</a></li>
+      <li><a href="/pages/terms.html">Terms</a></li>
+    </ul>
+    <div class="site-footer-social">
+      <a href="https://github.com/rhino404" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+          <path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.1 3.29 9.43 7.86 10.96.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.72 1.26 3.38.97.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.19-3.11-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.83 0c2.22-1.49 3.2-1.18 3.2-1.18.63 1.65.23 2.87.11 3.17.74.81 1.19 1.85 1.19 3.11 0 4.43-2.68 5.4-5.24 5.69.41.35.78 1.04.78 2.1v3.11c0 .31.21.66.8.55A10.53 10.53 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+        </svg>
+      </a>
+    </div>
+    <p class="site-footer-copy">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ryno Tools. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

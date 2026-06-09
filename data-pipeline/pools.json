@@ -57,6 +57,48 @@
       "expiryDate": null,
       "source": "Authored from official docs (Kubernetes docs, Docker docs, CNCF); no public item pool",
       "sourceUrl": null
+    },
+    "devops/linux": {
+      "version": null,
+      "effectiveDate": null,
+      "expiryDate": null,
+      "source": "Authored from official docs (Linux man pages, kernel.org, Red Hat docs, FHS spec); no public item pool",
+      "sourceUrl": null
+    },
+    "devops/networking": {
+      "version": null,
+      "effectiveDate": null,
+      "expiryDate": null,
+      "source": "Authored from official docs (RFCs, NGINX docs, Cloudflare Learning Center, MDN); no public item pool",
+      "sourceUrl": null
+    },
+    "devops/cicd": {
+      "version": null,
+      "effectiveDate": null,
+      "expiryDate": null,
+      "source": "Authored from official docs (GitHub Actions, GitLab CI, Jenkins docs, Humble & Farley Continuous Delivery); no public item pool",
+      "sourceUrl": null
+    },
+    "devops/iac": {
+      "version": null,
+      "effectiveDate": null,
+      "expiryDate": null,
+      "source": "Authored from official docs (Terraform docs, Ansible docs, Pulumi docs, Kief Morris Infrastructure as Code 2nd ed.); no public item pool",
+      "sourceUrl": null
+    },
+    "devops/cloud": {
+      "version": null,
+      "effectiveDate": null,
+      "expiryDate": null,
+      "source": "Authored from official docs (AWS Well-Architected Framework, GCP Architecture Framework, Azure Well-Architected Framework); no public item pool",
+      "sourceUrl": null
+    },
+    "devops/observability": {
+      "version": null,
+      "effectiveDate": null,
+      "expiryDate": null,
+      "source": "Authored from official docs (OpenTelemetry spec, Google SRE Book, Prometheus docs, Majors et al. Observability Engineering); no public item pool",
+      "sourceUrl": null
     }
   }
 }

@@ -30,7 +30,15 @@
         "ham-radio/general",
         "ham-radio/extra",
         "falconry/apprentice",
-        "cybersecurity/sy0-701"
+        "cybersecurity/sy0-701",
+        "devops/core-concepts",
+        "devops/containers-k8s",
+        "devops/linux",
+        "devops/networking",
+        "devops/cicd",
+        "devops/iac",
+        "devops/cloud",
+        "devops/observability"
       ],
       "description": "The quiz track this post maps to. Drives the quiz CTA deep-link and track badge color."
     },

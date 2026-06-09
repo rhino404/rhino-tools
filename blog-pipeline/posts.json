@@ -1,5 +1,50 @@
 [
   {
+    "slug": "what-is-cicd-beginners-guide",
+    "title": "What Is CI/CD? A Beginner's Guide to Continuous Integration and Delivery",
+    "description": "CI/CD is the most asked-about DevOps concept in interviews. Learn what CI and CD mean, how pipelines work, and why trunk-based development matters.",
+    "excerpt": "Every DevOps interview asks about CI/CD. Here's what it actually means: how continuous integration differs from continuous delivery, what a pipeline does, and why trunk-based development beats long-lived branches.",
+    "track": "devops/core-concepts",
+    "trackLabel": "DevOps — Core Concepts",
+    "trackIcon": "⚙️",
+    "trackSlug": "devops",
+    "trackCategory": "devops",
+    "trackImage": "/images/blog/devops-blog-hero.webp",
+    "trackImageAlt": "Software engineering and DevOps workflow diagram — Ryno Tools DevOps interview prep",
+    "tags": [
+      "cicd",
+      "automation",
+      "culture",
+      "git"
+    ],
+    "datePublished": "2026-06-09",
+    "dateModified": "2026-06-09",
+    "readingTime": 9,
+    "url": "/blog/what-is-cicd-beginners-guide/"
+  },
+  {
+    "slug": "what-is-sli-slo-sla-devops",
+    "title": "What Is an SLI, SLO, and SLA? A Plain-English Guide for DevOps Beginners",
+    "description": "SLI, SLO, SLA, and error budgets explained in plain English for DevOps beginners — with concrete examples and interview Q&A on reliability concepts.",
+    "excerpt": "SLI, SLO, and SLA sound similar but play very different roles. Learn what each one means, how error budgets connect them, and why high-performing teams use them to balance reliability and velocity.",
+    "track": "devops/core-concepts",
+    "trackLabel": "DevOps — Core Concepts",
+    "trackIcon": "⚙️",
+    "trackSlug": "devops",
+    "trackCategory": "devops",
+    "trackImage": "/images/blog/devops-blog-hero.webp",
+    "trackImageAlt": "Software engineering and DevOps workflow diagram — Ryno Tools DevOps interview prep",
+    "tags": [
+      "reliability",
+      "observability",
+      "culture"
+    ],
+    "datePublished": "2026-06-09",
+    "dateModified": "2026-06-09",
+    "readingTime": 8,
+    "url": "/blog/what-is-sli-slo-sla-devops/"
+  },
+  {
     "slug": "falconry-mews-housing-standards",
     "title": "Falconry Mews & Housing Standards Every Apprentice Must Know",
     "description": "What the falconry apprentice exam tests on mews design, perch types, weathering areas, and housing requirements under federal and state regulations.",

@@ -5,8 +5,123 @@
     <link>https://ryno.tools/blog/</link>
     <description>Study guides and exam prep tips for Ham Radio, Falconry, and CompTIA Security+.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jun 2026 01:50:05 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 12:45:32 GMT</lastBuildDate>
     <atom:link href="https://ryno.tools/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[What Is CI/CD? A Beginner's Guide to Continuous Integration and Delivery]]></title>
+    <link>https://ryno.tools/blog/what-is-cicd-beginners-guide/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/what-is-cicd-beginners-guide/</guid>
+    <pubDate>Tue, 09 Jun 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Every DevOps interview asks about CI/CD. Here's what it actually means: how continuous integration differs from continuous delivery, what a pipeline does, and why trunk-based development beats long-lived branches.]]></description>
+    <category><![CDATA[DevOps — Core Concepts]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p><strong>CI/CD</strong> — short for Continuous Integration and Continuous Delivery (or Deployment) — is a set of engineering practices that lets software teams ship changes to production quickly, reliably, and repeatedly. If you've applied for any developer or DevOps role in the past five years, you've almost certainly been asked to explain it. Understanding CI/CD isn't just good for interviews; it changes how you think about writing and shipping code every day.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> CI means every developer merges code to a shared branch at least daily, and each merge triggers automated tests. CD means every passing build is release-ready (Delivery) or automatically ships to production (Deployment). A pipeline is the automated sequence of stages — build, test, scan, deploy — that every change runs through.</p>
+</blockquote>
+<h2>The Problem CI/CD Was Invented to Solve</h2>
+<p>Before CI/CD became common practice, most software teams worked in isolation. A developer would check out the codebase, build a feature over several weeks, and then attempt to merge everything back in on a fixed release date. The same thing happened in parallel across five, ten, or twenty other developers. When all those long-running branches finally collided, teams entered what practitioners call <strong>integration hell</strong> — a painful, unpredictable period of resolving conflicts, tracking down broken behavior, and manually testing the whole system before anyone could ship.</p>
+<p>The core insight behind CI/CD is simple: problems that take days to untangle at merge time take minutes to fix if you catch them the moment they're introduced. By integrating frequently and testing automatically, teams compress the feedback loop from weeks to minutes.</p>
+<h2>What Is Continuous Integration (CI)?</h2>
+<p><strong>Continuous Integration</strong> is the practice of every developer merging their code changes into a shared main branch at least once a day — often several times a day. Each merge automatically triggers a build and a suite of automated tests. If the build fails or tests go red, the team treats fixing it as the highest priority. In Martin Fowler's foundational article on the practice, he describes the goal as keeping the mainline always in a healthy, releasable state.</p>
+<p>The discipline has two firm requirements. First, changes must be small and frequent. A branch that lives for two weeks before merging is a liability — the longer it diverges from main, the harder integration becomes. Second, the automated tests must be trustworthy. A CI system that produces false positives trains engineers to ignore failures, which defeats the whole point.</p>
+<p>The result is that integration problems surface immediately, while the context is fresh and the diff is small. What used to take days to debug takes minutes.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> Interviewers often ask what makes CI different from simply running tests. The key distinction is the <em>frequency and discipline</em>: CI requires that every developer integrates to the shared branch daily, not just that tests exist.</p>
+</blockquote>
+<h2>What Is Continuous Delivery vs. Continuous Deployment?</h2>
+<p>Both terms start with CD, and people use them interchangeably, but they mean different things.</p>
+<p><strong>Continuous Delivery</strong> means that every build that passes all automated tests is in a state where it <em>could</em> be deployed to production immediately. The actual deployment is a deliberate, human-triggered action — a button click or a single command. According to Jez Humble and Dave Farley in <em>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</em>, the goal is to make releasing software a routine, low-risk business decision rather than a high-stakes event.</p>
+<p><strong>Continuous Deployment</strong> goes one step further: every passing build automatically deploys to production without any human approval gate. This requires exceptional confidence in the automated test suite and often sophisticated monitoring and rollback capabilities. Most organizations practice Delivery; Deployment is common at mature companies — consumer web products, SaaS platforms — that ship dozens or hundreds of times per day.</p>
+<p>The distinction matters in interviews because it shows you understand that CD isn't a single thing.</p>
+<h2>What Is a CI/CD Pipeline?</h2>
+<p>A <strong>pipeline</strong> is the automated sequence of stages that a code change passes through from commit to deployment. A typical pipeline looks like this:</p>
+<ul>
+<li><strong>Build</strong> — compile the code and assemble deployable artifacts</li>
+<li><strong>Unit tests</strong> — verify individual functions and components in isolation</li>
+<li><strong>Integration tests</strong> — verify how components interact with each other and external dependencies</li>
+<li><strong>Security scan</strong> — check dependencies for known vulnerabilities, scan code for common flaws</li>
+<li><strong>Deploy to staging</strong> — push the build to an environment that mirrors production</li>
+<li><strong>Deploy to production</strong> — (in Continuous Deployment) automatically ship; (in Continuous Delivery) await manual approval</li>
+</ul>
+<p>When any stage fails, the pipeline stops. The offending change doesn't advance further, and the developer who introduced it gets notified immediately. The goal of stopping early is to keep broken code away from production and to surface the failure while the change is still fresh in the developer's mind.</p>
+<p>Pipelines are defined as code — most commonly in YAML files checked into the same repository as the application. Common filenames include <code>Jenkinsfile</code> (Jenkins), <code>.github/workflows/deploy.yml</code> (GitHub Actions), and <code>.gitlab-ci.yml</code> (GitLab CI). Storing the pipeline definition in version control means you can review, audit, and roll back pipeline changes exactly like application code.</p>
+<h2>What Is Trunk-Based Development?</h2>
+<p><strong>Trunk-based development</strong> is the branching strategy that makes CI work in practice. All engineers commit directly to a single shared branch — called <code>main</code>, <code>master</code>, or <code>trunk</code> — or merge to it via branches that live for a matter of hours, not days.</p>
+<p>This is a sharp contrast to the old model of long-lived feature branches that exist for weeks. DORA's research on trunk-based development finds that high-performing teams maintain three or fewer active branches at any time and merge to trunk at least once a day. Teams practicing trunk-based development avoid code freezes and extended stabilization phases entirely because the codebase is always in a releasable state.</p>
+<p>The advantage is clear once you've experienced the alternative: small diffs merge cleanly, conflicts surface immediately while the cause is obvious, and CI runs on every change rather than only at the end of a feature cycle. According to DORA's research, trunk-based development is one of the technical capabilities that distinguishes elite delivery performers from the rest.</p>
+<h2>What Are Feature Flags?</h2>
+<p>Trunk-based development raises an obvious question: how do you deploy code for a half-built feature without exposing it to users?</p>
+<p>The answer is <strong>feature flags</strong> (also called feature toggles). A feature flag wraps new or incomplete functionality in a conditional check — something like <code>if (featureEnabled('new-checkout-flow'))</code> — that is off by default in production. Developers can deploy the code at any time without the feature being visible to users. When the team is ready, they enable the flag for a small percentage of users first, observe behavior, and gradually roll out to everyone.</p>
+<p>Feature flags decouple deployment from release. You can ship code continuously to production while controlling exactly when users see each change. This is how organizations practicing trunk-based development avoid releasing unfinished work even while merging to main multiple times a day.</p>
+<h2>CI/CD Tools: GitHub Actions, Jenkins, and GitLab CI</h2>
+<p><strong>GitHub Actions</strong> is the CI/CD platform built directly into GitHub. Pipelines are defined as YAML files stored in <code>.github/workflows/</code> and triggered by repository events — a push to main, a pull request opened, or a scheduled time. GitHub Actions is the default choice for most teams already using GitHub, and it's the dominant platform for open-source projects. Its marketplace of reusable actions makes common tasks (deploying to AWS, running security scans, publishing packages) straightforward to configure without writing custom scripts.</p>
+<p><strong>Jenkins</strong> is the longest-running CI tool in the ecosystem, first released in 2004. It is open-source, highly configurable, and has a plugin ecosystem covering almost any integration you can imagine. Jenkins is still widespread in enterprise environments, particularly at organizations that adopted CI before cloud-native alternatives existed. The tradeoff is maintenance overhead: Jenkins requires dedicated infrastructure and ongoing administration that hosted services handle for you automatically.</p>
+<p><strong>GitLab CI</strong> is built directly into GitLab, using a similar YAML approach (<code>.gitlab-ci.yml</code>). It's the natural choice for teams that use GitLab for source control, issue tracking, and code review, since the pipeline configuration, results, and deployment history all live in the same interface as the code. GitLab CI also offers a built-in container registry and environment management that make it a strong end-to-end platform.</p>
+<p>All three tools implement the same conceptual model: trigger a pipeline on a git event, run a series of stages, report success or failure, and optionally deploy the artifact.</p>
+<h2>How CI/CD Connects to DORA Metrics</h2>
+<p>DORA (the DevOps Research and Assessment program) has spent over a decade studying what separates high-performing engineering organizations from low-performing ones. Their research defines four key software delivery metrics: <strong>deployment frequency</strong> (how often you ship), <strong>lead time for changes</strong> (how quickly a commit reaches production), <strong>change failure rate</strong> (what percentage of deploys cause incidents), and <strong>mean time to restore</strong> (how quickly you recover from failures).</p>
+<p>The counterintuitive finding — one worth knowing for any DevOps conversation — is that teams shipping more frequently don't have higher failure rates. Elite performers in DORA's research ship more often <em>and</em> have lower change failure rates than low performers. The reason is that CI/CD enforces small, well-tested changes. A deployment of one hundred small, individually-tested commits is far less risky than a single massive release containing six weeks of accumulated changes.</p>
+<p>CI/CD is the technical capability that enables all four metrics to improve simultaneously. Automated pipelines reduce lead time. Frequent, small deployments reduce blast radius when something does go wrong. Fast rollback capabilities reduce time to restore. The discipline of green-before-merge keeps change failure rates low. Understanding that connection — that CI/CD is about reliability as much as speed — is what separates a surface-level definition from a real understanding of why it matters.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title><![CDATA[What Is an SLI, SLO, and SLA? A Plain-English Guide for DevOps Beginners]]></title>
+    <link>https://ryno.tools/blog/what-is-sli-slo-sla-devops/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/what-is-sli-slo-sla-devops/</guid>
+    <pubDate>Tue, 09 Jun 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[SLI, SLO, and SLA sound similar but play very different roles. Learn what each one means, how error budgets connect them, and why high-performing teams use them to balance reliability and velocity.]]></description>
+    <category><![CDATA[DevOps — Core Concepts]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p>Reliability engineering gives teams a shared language for describing how well a service is performing, what the team has promised, and how much runway remains before things get serious. <strong>SLI</strong>, <strong>SLO</strong>, and <strong>SLA</strong> are the three terms at the center of that language, and they confuse almost every developer entering DevOps — not because the concepts are hard, but because the abbreviations look nearly identical and the differences are subtle.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> An SLI measures how your service is actually behaving. An SLO is the internal target your team sets for that measurement. An SLA is the contractual promise you make to customers, backed by financial consequences. The error budget is the breathing room between your SLO and perfect reliability — and it governs how fast your team can ship.</p>
+</blockquote>
+<h2>Why These Three Terms Confuse Everyone</h2>
+<p>The confusion is understandable: all three share the SL prefix and all three involve some notion of a service performing well. The key is to think of them as operating at three different layers.</p>
+<p>The <strong>measurement layer</strong> tells you what is happening right now — raw data about your system. The <strong>target layer</strong> tells you what your team has decided is good enough. The <strong>contract layer</strong> tells you what you have legally promised to customers and what happens when you fall short. SLI lives at the measurement layer, SLO at the target layer, and SLA at the contract layer. Once that hierarchy clicks, the definitions follow naturally.</p>
+<h2>What Is an SLI (Service Level Indicator)?</h2>
+<p>An <strong>SLI</strong> is a quantitative measurement of some aspect of how your service is behaving. The Google SRE Book describes it as a carefully defined quantitative measure of some aspect of the level of service being provided.</p>
+<p>In practice, SLIs are almost always expressed as ratios: successful events divided by total events, multiplied by 100 to give a percentage. That formulation keeps every SLI on a consistent 0–100% scale, which makes setting targets straightforward.</p>
+<p>Two concrete examples:</p>
+<ul>
+<li><strong>Availability SLI:</strong> (successful HTTP requests / total HTTP requests) × 100%. A value of 99.95% means that 99.95% of all requests received a non-error response.</li>
+<li><strong>Latency SLI:</strong> (requests completing under 200ms / total requests) × 100%. A value of 97% means 97% of requests finished within your latency threshold.</li>
+</ul>
+<p>Other common SLIs cover error rate, throughput, and durability (for storage systems). The SRE Book advises choosing SLIs that reflect actual user experience, not just what's easiest to instrument. If users feel pain when the API is slow, latency is a better SLI than CPU utilization.</p>
+<h2>What Is an SLO (Service Level Objective)?</h2>
+<p>An <strong>SLO</strong> is a target value for an SLI — a promise your team makes to itself. Where the SLI tells you what is happening, the SLO tells you what your team has agreed is acceptable.</p>
+<p>The SRE Book defines an SLO as a target value or range of values for a service level measured by an SLI. In plain English: you pick an SLI, then decide how good it needs to be. For example:</p>
+<ul>
+<li>99.9% of requests will succeed — an availability SLO</li>
+<li>95% of requests will complete under 200ms — a latency SLO</li>
+</ul>
+<p>A critical point: SLOs are <strong>internal targets</strong>. They are not customer contracts. They live in runbooks, dashboards, and team agreements — not in customer-facing legal documents. This distinction matters because it gives your team room to act before a customer is harmed.</p>
+<p>Setting SLOs too high is a trap that the SRE Workbook addresses directly. A 100% SLO sounds appealing, but it is operationally impossible: any dependency outside your control — a cloud provider, a DNS resolver, a certificate authority — can cause a failure you cannot prevent. More practically, a 100% SLO leaves zero room for deployments, maintenance, or experimentation. High-performing teams deliberately set SLOs below 100% to preserve that room, which the SRE literature calls the <strong>error budget</strong>.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> When an interviewer asks about the difference between an SLO and an SLA, the key word is <em>internal</em>. An SLO is a target your team sets for itself — not a contractual commitment to customers. That distinction separates SLO from SLA.</p>
+</blockquote>
+<h2>What Is an SLA (Service Level Agreement)?</h2>
+<p>An <strong>SLA</strong> is a business contract between a service provider and its customers that specifies reliability expectations and the consequences — typically financial penalties or service credits — when those expectations are not met. The SRE Workbook puts it plainly: an SLA is the agreement that comes into effect when users are unhappy enough that compensation is required.</p>
+<p>The structural relationship between SLA and SLO is deliberate: your SLA should always be set <em>below</em> your SLO. If your internal SLO is 99.9% availability, a reasonable SLA commitment to customers might be 99.5%. Why? Because that gap gives your team time to detect an SLO breach, investigate, and recover before the SLA threshold is crossed. If your SLO and SLA are identical, any SLO breach immediately triggers a contractual violation — you have no buffer.</p>
+<p>In short: you hold yourself to a higher standard internally (SLO) than the floor you commit to externally (SLA). Customers see the SLA; your dashboards track the SLO.</p>
+<h2>What Is an Error Budget?</h2>
+<p>An <strong>error budget</strong> is the amount of unreliability your service is allowed to have before it violates its SLO. The formula is simple:</p>
+<p><strong>Error budget = 100% − SLO</strong></p>
+<p>If your SLO is 99.9% availability, your error budget is 0.1% of all requests. Over a 30-day month with roughly 43,800 minutes of service time, 0.1% translates to about 43.8 minutes of allowable downtime. Every failing request or slow response draws down this budget.</p>
+<p>The SRE Workbook offers a concrete illustration of how quickly budget can be consumed: in one example, a service with 3,663,253 API calls over four weeks and a 99.9% SLO has roughly 3,663 allowable failures. A single incident that causes 1,500 errors burns through about 40% of the entire period's budget in one shot.</p>
+<p>Error budgets create a <strong>shared incentive</strong> between development and operations. When the budget is healthy — most of it still unspent — the team has data-backed permission to ship new features, take on technical risk, and run experiments. When the budget is depleted, the policy is clear: pause new releases, freeze risky deployments, and focus entirely on reliability work until the budget recovers. According to the Google SRE Book, this is what makes error budgets a cultural tool, not just a metric: both the team that wants to ship and the team that wants stability are working from the same number.</p>
+<h2>How SLI, SLO, SLA, and Error Budget Work Together</h2>
+<p>Imagine a team running a web API. They define an <strong>SLI</strong> as their request success rate: (non-5xx responses / total responses) × 100%. After reviewing historical data and user impact, they set an <strong>SLO</strong> of 99.9% — meaning they target at most one failed request in every thousand. Their customer contract, the <strong>SLA</strong>, guarantees 99.5% — well below the SLO, giving them a 0.4-percentage-point buffer before a contractual violation occurs.</p>
+<p>With a 99.9% SLO and roughly 2 million requests per month, the <strong>error budget</strong> is 0.1%, or about 2,000 allowable failures. In week two of the month, a deployment bug causes a configuration error that produces 900 failed requests over four hours. The team patches it quickly. Afterward, they check their budget: 900 of their 2,000 allowable failures are gone — 45% consumed in one incident, with three weeks still remaining.</p>
+<p>The team now has clear guidance from the data. With 55% of the error budget remaining and three weeks left, they can continue shipping — but with awareness that another incident of similar size would trigger the error budget policy and require a feature freeze. The SLO breach did not breach the SLA (they stayed well above 99.5%), but it changed how the team plans the rest of the month. That is exactly what this framework is designed to do: make reliability visible, shared, and actionable.</p>
+<h2>Common Interview Questions (and How to Answer Them)</h2>
+<p><strong>What is the difference between an SLO and an SLA?</strong></p>
+<p>An SLO is an internal target — a number your team agrees to hold itself to. An SLA is an external contract with a customer, backed by financial consequences if violated. Teams always set their SLO higher than their SLA so that an internal target breach can be caught and addressed before a contractual breach occurs.</p>
+<p><strong>Why would a team deliberately set an SLO below 100%?</strong></p>
+<p>Because 100% reliability is both impossible and counterproductive. No service operates in complete isolation — cloud providers, DNS resolvers, and network paths all introduce failure modes outside the team's control. More importantly, a 100% SLO means zero error budget, which means no room for deployments, experiments, or maintenance. A well-chosen SLO acknowledges that some small amount of failure is acceptable in exchange for the ability to keep shipping.</p>
+<p><strong>What happens when an error budget is exhausted?</strong></p>
+<p>When the error budget runs out, the team's error budget policy kicks in. Typically this means halting new feature releases, freezing risky deployments, and redirecting engineering effort toward reliability improvements until the budget recovers in the next measurement window. This policy creates a natural, data-driven mechanism for prioritizing stability over velocity when reliability is genuinely at risk — without requiring a manager to make a judgment call in the middle of an incident.</p>]]></content:encoded>
+  </item>
   <item>
     <title><![CDATA[Falconry Mews & Housing Standards Every Apprentice Must Know]]></title>
     <link>https://ryno.tools/blog/falconry-mews-housing-standards/</link>

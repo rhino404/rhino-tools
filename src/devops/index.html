@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
 
-  <title>DevOps Interview Prep — Core Concepts, Containers &amp; Kubernetes | Ryno Tools</title>
-  <meta name="description" content="Free DevOps interview and career prep: 103 questions on DevOps culture, CI/CD principles, SRE and reliability, Agile/Lean, DORA metrics, containers, and Kubernetes. No login required." />
-  <meta name="keywords" content="devops interview questions, devops practice quiz, kubernetes interview prep, docker containers study guide, SRE error budget explained, DORA metrics practice, devops culture quiz, CI/CD interview questions" />
+  <title>DevOps Interview Prep — Linux, Networking, CI/CD, IaC, Cloud &amp; Observability | Ryno Tools</title>
+  <meta name="description" content="Free DevOps interview prep: 403 questions across 8 tracks — Linux, networking, CI/CD pipelines, IaC, cloud platforms, observability, containers, and Kubernetes. No login required." />
+  <meta name="keywords" content="devops interview questions, devops practice quiz, kubernetes interview prep, docker containers study guide, SRE error budget explained, DORA metrics practice, linux interview questions for devops, CI/CD interview questions, terraform interview questions, ansible interview prep, AWS cloud interview questions, observability SLI SLO practice, networking for devops quiz, linux permissions interview questions" />
   <meta name="author" content="Ryno Tools" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <link rel="canonical" href="https://ryno.tools/devops/" />
@@ -27,8 +27,8 @@
   <meta name="theme-color" content="#0f1115" />
 
   <meta property="og:site_name" content="Ryno Tools" />
-  <meta property="og:title" content="DevOps Interview Prep — Core Concepts, Containers &amp; Kubernetes | Ryno Tools" />
-  <meta property="og:description" content="Free DevOps interview and career prep: 103 questions on DevOps culture, CI/CD principles, SRE and reliability, Agile/Lean, DORA metrics, containers, and Kubernetes. No login required." />
+  <meta property="og:title" content="DevOps Interview Prep — Linux, Networking, CI/CD, IaC, Cloud &amp; Observability | Ryno Tools" />
+  <meta property="og:description" content="Free DevOps interview prep: 403 questions across 8 tracks — Linux, networking, CI/CD pipelines, IaC, cloud platforms, observability, containers, and Kubernetes. No login required." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ryno.tools/devops/" />
   <meta property="og:image" content="https://ryno.tools/images/blog/devops-blog-hero.webp" />
@@ -36,8 +36,8 @@
   <meta property="og:locale" content="en_US" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DevOps Interview Prep — Core Concepts, Containers &amp; Kubernetes | Ryno Tools" />
-  <meta name="twitter:description" content="Free DevOps interview and career prep: 103 questions on DevOps culture, CI/CD principles, SRE and reliability, Agile/Lean, DORA metrics, containers, and Kubernetes. No login required." />
+  <meta name="twitter:title" content="DevOps Interview Prep — Linux, Networking, CI/CD, IaC, Cloud &amp; Observability | Ryno Tools" />
+  <meta name="twitter:description" content="Free DevOps interview prep: 403 questions across 8 tracks — Linux, networking, CI/CD pipelines, IaC, cloud platforms, observability, containers, and Kubernetes. No login required." />
   <meta name="twitter:image" content="https://ryno.tools/images/blog/devops-blog-hero.webp" />
 
   <meta name="google-adsense-account" content="ca-pub-5854133806080130" />
@@ -79,10 +79,10 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "@id": "https://ryno.tools/devops/#page",
-    "name": "DevOps Interview Prep — Core Concepts, Containers & Kubernetes | Ryno Tools",
-    "description": "Free DevOps interview and career prep: 103 questions on DevOps culture, CI/CD principles, SRE and reliability, Agile/Lean, DORA metrics, containers, and Kubernetes. No login required.",
+    "name": "DevOps Interview Prep — Linux, Networking, CI/CD, IaC, Cloud & Observability | Ryno Tools",
+    "description": "Free DevOps interview prep: 403 questions across 8 tracks — Linux, networking, CI/CD pipelines, IaC, cloud platforms, observability, containers, and Kubernetes. No login required.",
     "url": "https://ryno.tools/devops/",
-    "dateModified": "2026-06-07",
+    "dateModified": "2026-06-09",
     "about": {
       "@type": "Thing",
       "name": "DevOps Exam Prep",
@@ -135,10 +135,26 @@
       },
       {
         "@type": "Question",
-        "name": "What causes a CrashLoopBackOff in Kubernetes?",
+        "name": "What Linux topics should I know for a DevOps interview?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "CrashLoopBackOff means a container is repeatedly starting, crashing, and being restarted by Kubernetes. Common causes: the container's entrypoint or command exits non-zero (configuration error, missing dependency, or application bug); the container runs out of memory (OOMKilled) on startup; a required secret or ConfigMap is missing; a liveness probe is configured too aggressively and kills the container before it finishes starting. Debug with: kubectl describe pod &lt;name&gt; (check Events and Last State), kubectl logs &lt;pod&gt; --previous (logs from the crashed instance)."
+          "text": "DevOps interviewers commonly test: process management (how to identify and kill processes, what systemd does, what a zombie process is), file permissions (chmod octal notation, setuid/setgid, umask), filesystem layout (what lives in /var, /tmp, /proc, and why), networking basics (how to check open ports with ss, what /etc/resolv.conf controls, how iptables chains work), and shell fundamentals (exit codes, pipe vs redirection, cron syntax). You don't need to memorize every flag, but you should be able to explain the concepts and describe how you'd diagnose common problems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between blue/green and canary deployments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Blue/green deployment maintains two identical environments (blue = current live, green = new version). Traffic switches entirely from blue to green at cutover. Rollback is instant — switch traffic back to blue. Canary deployment gradually shifts a small percentage of traffic to the new version (e.g., 1% → 5% → 25% → 100%), monitoring error rates and latency at each step before proceeding. Blue/green is simpler and provides faster rollback; canary reduces blast radius by exposing a small fraction of users to the new version first. Canary is preferred when changes are higher risk or when you need real traffic validation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Infrastructure as Code (IaC) and why does it matter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Infrastructure as Code means managing and provisioning infrastructure (servers, networks, databases, security groups) through machine-readable configuration files rather than manual processes or interactive UIs. The key benefits are repeatability (the same config produces the same infrastructure every time), version control (infra changes go through code review, can be diffed and reverted), and auditability (the git history is the change log). Terraform (declarative, HCL) and Ansible (procedural for configuration management) are the most common IaC tools. Pulumi uses general-purpose programming languages instead of a DSL. IaC is a prerequisite for reliable CI/CD and GitOps workflows."
         }
       }
     ]
@@ -156,7 +172,7 @@
         "item": {
           "@type": "Course",
           "name": "Core Concepts & Culture Exam Prep",
-          "description": "50 questions covering DevOps culture, CI/CD principles, SRE and reliability engineering (error budgets, SLI/SLO/SLA), Agile and Lean fundamentals, and DORA metrics — all sourced from Google SRE Book, Accelerate, Team Topologies, and the Agile Manifesto.",
+          "description": "50 questions covering DevOps culture, CI/CD principles, SRE and reliability engineering (error budgets, SLI/SLO/SLA), Agile and Lean fundamentals, and DORA metrics — sourced from Google SRE Book, Accelerate, Team Topologies, and the Agile Manifesto.",
           "url": "https://ryno.tools/?category=devops&subcategory=core-concepts",
           "provider": {
             "@type": "Organization",
@@ -178,6 +194,126 @@
           "name": "Containers & Kubernetes Exam Prep",
           "description": "53 questions covering container fundamentals, image layers and registries, Kubernetes pods and workloads, services and networking, storage (PV/PVC), and troubleshooting (CrashLoopBackOff, OOMKilled, ImagePullBackOff) — sourced from kubernetes.io and docs.docker.com.",
           "url": "https://ryno.tools/?category=devops&subcategory=containers-k8s",
+          "provider": {
+            "@type": "Organization",
+            "name": "Ryno Tools",
+            "url": "https://ryno.tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Course",
+          "name": "Linux Fundamentals Exam Prep",
+          "description": "50 questions covering process management, filesystems and storage, users and permissions, networking basics, and shell and text processing — sourced from Linux man pages, kernel.org, Red Hat docs, and the Filesystem Hierarchy Standard.",
+          "url": "https://ryno.tools/?category=devops&subcategory=linux",
+          "provider": {
+            "@type": "Organization",
+            "name": "Ryno Tools",
+            "url": "https://ryno.tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Course",
+          "name": "Networking for DevOps Exam Prep",
+          "description": "50 questions covering DNS and name resolution, TCP/IP and routing, TLS and certificate management, load balancers and proxies, and HTTP and application protocols — sourced from RFCs, NGINX docs, Cloudflare Learning Center, and MDN.",
+          "url": "https://ryno.tools/?category=devops&subcategory=networking",
+          "provider": {
+            "@type": "Organization",
+            "name": "Ryno Tools",
+            "url": "https://ryno.tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Course",
+          "name": "CI/CD Pipelines Exam Prep",
+          "description": "50 questions covering pipeline fundamentals, GitHub Actions, Jenkins and GitLab CI, testing and quality gates, and deployment strategies (blue/green, canary, rolling, feature flags) — sourced from GitHub Actions docs, GitLab CI docs, Jenkins docs, and Humble & Farley's Continuous Delivery.",
+          "url": "https://ryno.tools/?category=devops&subcategory=cicd",
+          "provider": {
+            "@type": "Organization",
+            "name": "Ryno Tools",
+            "url": "https://ryno.tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Course",
+          "name": "Infrastructure as Code Exam Prep",
+          "description": "50 questions covering Terraform core concepts and state management, Ansible fundamentals and advanced patterns, and IaC principles including Pulumi, GitOps, immutable infrastructure, and policy-as-code — sourced from Terraform docs, Ansible docs, Pulumi docs, and Kief Morris's Infrastructure as Code.",
+          "url": "https://ryno.tools/?category=devops&subcategory=iac",
+          "provider": {
+            "@type": "Organization",
+            "name": "Ryno Tools",
+            "url": "https://ryno.tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Course",
+          "name": "Cloud Platforms Exam Prep",
+          "description": "50 questions covering cloud fundamentals, AWS core services (EC2, S3, IAM, RDS/DynamoDB), GCP and Azure patterns, networking and security (VPC, WAF, KMS), and architecture patterns (HA, DR, RPO/RTO, serverless) — sourced from AWS, GCP, and Azure Well-Architected Frameworks.",
+          "url": "https://ryno.tools/?category=devops&subcategory=cloud",
+          "provider": {
+            "@type": "Organization",
+            "name": "Ryno Tools",
+            "url": "https://ryno.tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "Course",
+          "name": "Monitoring & Observability Exam Prep",
+          "description": "50 questions covering metrics and dashboards (Prometheus, Grafana), logging (structured logs, ELK, Loki), distributed tracing (OpenTelemetry, Jaeger), alerting and on-call practices, and reliability concepts (SLI/SLO/SLA, error budgets, four golden signals) — sourced from OpenTelemetry spec, Google SRE Book, and Prometheus docs.",
+          "url": "https://ryno.tools/?category=devops&subcategory=observability",
           "provider": {
             "@type": "Organization",
             "name": "Ryno Tools",
@@ -236,8 +372,8 @@
     <section class="hub-hero">
       <span class="hub-hero-icon" role="img" aria-label="DevOps">⚙️</span>
       <h1>DevOps Interview &amp; Career Prep</h1>
-      <p class="hub-hero-tagline">Build fluency in DevOps culture, CI/CD, SRE, containers, and Kubernetes — concept- and troubleshooting-focused questions designed for interviews and career development.</p>
-      <p class="hub-answer">The Ryno Tools DevOps quiz covers two tracks: Core Concepts &amp; Culture (50 questions on DevOps principles, DORA metrics, SRE error budgets, Agile/Lean, blameless postmortems) and Containers &amp; Kubernetes (53 questions on container fundamentals, image management, pods, services, storage, and troubleshooting). Questions are interview-style and concept-focused, not syntax recall.</p>
+      <p class="hub-hero-tagline">403 concept- and troubleshooting-focused questions across 8 tracks: Linux, networking, CI/CD, IaC, cloud, observability, containers, and Kubernetes — built for interviews and career development.</p>
+      <p class="hub-answer">Ryno Tools DevOps covers 8 tracks and 403 questions: Core Concepts &amp; Culture (DevOps principles, DORA metrics, SRE, Agile/Lean), Containers &amp; Kubernetes (Docker, pods, services, storage), Linux Fundamentals (processes, filesystems, permissions, shell), Networking for DevOps (DNS, TCP/IP, TLS, load balancers, HTTP), CI/CD Pipelines (GitHub Actions, Jenkins, GitLab CI, deployment strategies), Infrastructure as Code (Terraform, Ansible, Pulumi), Cloud Platforms (AWS, GCP, Azure, architecture patterns), and Monitoring &amp; Observability (metrics, logs, traces, alerting, SLI/SLO/SLA). All questions are interview-style and concept-focused, not syntax recall.</p>
       <a href="/?category=devops" class="hub-cta">Start practicing — free, no login</a>
     </section>
 
@@ -246,7 +382,7 @@
       <div class="hub-track-grid">
     <a href="/?category=devops&subcategory=core-concepts" class="hub-track-card">
       <span class="hub-track-name">Core Concepts &amp; Culture</span>
-      <span class="hub-track-blurb">50 questions covering DevOps culture, CI/CD principles, SRE and reliability engineering (error budgets, SLI/SLO/SLA), Agile and Lean fundamentals, and DORA metrics — all sourced from Google SRE Book, Accelerate, Team Topologies, and the Agile Manifesto.</span>
+      <span class="hub-track-blurb">50 questions covering DevOps culture, CI/CD principles, SRE and reliability engineering (error budgets, SLI/SLO/SLA), Agile and Lean fundamentals, and DORA metrics — sourced from Google SRE Book, Accelerate, Team Topologies, and the Agile Manifesto.</span>
       <div class="hub-track-meta">
         <span class="hub-track-count">50 questions</span>
         <span class="hub-track-cta">Practice →</span>
@@ -260,14 +396,64 @@
         <span class="hub-track-cta">Practice →</span>
       </div>
     </a>
+    <a href="/?category=devops&subcategory=linux" class="hub-track-card">
+      <span class="hub-track-name">Linux Fundamentals</span>
+      <span class="hub-track-blurb">50 questions covering process management, filesystems and storage, users and permissions, networking basics, and shell and text processing — sourced from Linux man pages, kernel.org, Red Hat docs, and the Filesystem Hierarchy Standard.</span>
+      <div class="hub-track-meta">
+        <span class="hub-track-count">50 questions</span>
+        <span class="hub-track-cta">Practice →</span>
+      </div>
+    </a>
+    <a href="/?category=devops&subcategory=networking" class="hub-track-card">
+      <span class="hub-track-name">Networking for DevOps</span>
+      <span class="hub-track-blurb">50 questions covering DNS and name resolution, TCP/IP and routing, TLS and certificate management, load balancers and proxies, and HTTP and application protocols — sourced from RFCs, NGINX docs, Cloudflare Learning Center, and MDN.</span>
+      <div class="hub-track-meta">
+        <span class="hub-track-count">50 questions</span>
+        <span class="hub-track-cta">Practice →</span>
+      </div>
+    </a>
+    <a href="/?category=devops&subcategory=cicd" class="hub-track-card">
+      <span class="hub-track-name">CI/CD Pipelines</span>
+      <span class="hub-track-blurb">50 questions covering pipeline fundamentals, GitHub Actions, Jenkins and GitLab CI, testing and quality gates, and deployment strategies (blue/green, canary, rolling, feature flags) — sourced from GitHub Actions docs, GitLab CI docs, Jenkins docs, and Humble &amp; Farley's Continuous Delivery.</span>
+      <div class="hub-track-meta">
+        <span class="hub-track-count">50 questions</span>
+        <span class="hub-track-cta">Practice →</span>
+      </div>
+    </a>
+    <a href="/?category=devops&subcategory=iac" class="hub-track-card">
+      <span class="hub-track-name">Infrastructure as Code</span>
+      <span class="hub-track-blurb">50 questions covering Terraform core concepts and state management, Ansible fundamentals and advanced patterns, and IaC principles including Pulumi, GitOps, immutable infrastructure, and policy-as-code — sourced from Terraform docs, Ansible docs, Pulumi docs, and Kief Morris's Infrastructure as Code.</span>
+      <div class="hub-track-meta">
+        <span class="hub-track-count">50 questions</span>
+        <span class="hub-track-cta">Practice →</span>
+      </div>
+    </a>
+    <a href="/?category=devops&subcategory=cloud" class="hub-track-card">
+      <span class="hub-track-name">Cloud Platforms</span>
+      <span class="hub-track-blurb">50 questions covering cloud fundamentals, AWS core services (EC2, S3, IAM, RDS/DynamoDB), GCP and Azure patterns, networking and security (VPC, WAF, KMS), and architecture patterns (HA, DR, RPO/RTO, serverless) — sourced from AWS, GCP, and Azure Well-Architected Frameworks.</span>
+      <div class="hub-track-meta">
+        <span class="hub-track-count">50 questions</span>
+        <span class="hub-track-cta">Practice →</span>
+      </div>
+    </a>
+    <a href="/?category=devops&subcategory=observability" class="hub-track-card">
+      <span class="hub-track-name">Monitoring &amp; Observability</span>
+      <span class="hub-track-blurb">50 questions covering metrics and dashboards (Prometheus, Grafana), logging (structured logs, ELK, Loki), distributed tracing (OpenTelemetry, Jaeger), alerting and on-call practices, and reliability concepts (SLI/SLO/SLA, error budgets, four golden signals) — sourced from OpenTelemetry spec, Google SRE Book, and Prometheus docs.</span>
+      <div class="hub-track-meta">
+        <span class="hub-track-count">50 questions</span>
+        <span class="hub-track-cta">Practice →</span>
+      </div>
+    </a>
       </div>
     </section>
 
     <section class="hub-content" id="about">
       <h2 class="hub-section-title">About DevOps Exam Prep on Ryno Tools</h2>
-  <p>The Ryno Tools DevOps quiz is designed for people pursuing a DevOps or platform engineering career who need fluency in core concepts — not code syntax. Every question is framed as a concept or troubleshooting scenario of the kind you encounter in interviews and on the job: 'why does X happen', 'what would you check if Y', 'what does this metric tell you'.</p>
-  <p>Core Concepts & Culture covers the foundational ideas that distinguish high-performing engineering organizations: DevOps principles (the Three Ways), DORA's four key metrics, SRE practices (error budgets, SLI/SLO/SLA, blameless postmortems, toil), Agile and Lean fundamentals (WIP limits, value stream mapping, Little's Law), and CI/CD principles (trunk-based development, feature flags, deployment strategies). Sources: Google SRE Book, Accelerate (Forsgren/Humble/Kim), Team Topologies (Skelton/Pais), and the Agile Manifesto.</p>
-  <p>Containers & Kubernetes covers the operational primitives every DevOps engineer must understand: what containers are and how they differ from VMs, how image layers and registries work, the anatomy of a Kubernetes pod, workload controllers (Deployment, StatefulSet, DaemonSet, Job), service types and CoreDNS, storage (PersistentVolume/PersistentVolumeClaim), and how to diagnose the most common failure states (CrashLoopBackOff, OOMKilled, ImagePullBackOff, pending pods, service unreachable). Sources: kubernetes.io/docs, docs.docker.com, CNCF.</p>
+  <p>The Ryno Tools DevOps quiz is designed for people pursuing a DevOps or platform engineering career who need fluency in core concepts — not code syntax. Every question is framed as a concept or troubleshooting scenario of the kind you encounter in interviews and on the job: 'why does X happen', 'what would you check if Y', 'what does this metric tell you'. All 403 questions across 8 tracks are sourced from authoritative references and cite their source in the explanation.</p>
+  <p>The foundational tracks build the substrate for everything else. Linux Fundamentals covers process management, filesystem layout (FHS), user permissions, networking commands, and shell skills — the knowledge assumed by every other DevOps tool. Networking for DevOps covers DNS, TCP/IP, TLS and certificate management, load balancer concepts, and HTTP semantics — the plumbing behind every distributed system.</p>
+  <p>The automation tracks apply that foundation. CI/CD Pipelines covers pipeline-as-code, GitHub Actions, Jenkins and GitLab CI, testing quality gates, and deployment strategies (blue/green, canary, rolling, feature flags). Infrastructure as Code covers Terraform (state, modules, drift detection), Ansible (idempotency, roles, vault), and IaC principles including GitOps and policy-as-code (Pulumi, OPA/Sentinel).</p>
+  <p>Cloud Platforms and Monitoring & Observability close the loop. Cloud covers IaaS/PaaS/SaaS, the shared responsibility model, AWS core services (EC2, S3, IAM, RDS/DynamoDB), GCP and Azure patterns, VPC networking, and architecture decisions (HA, fault tolerance, RPO/RTO, serverless trade-offs). Observability covers the three pillars (metrics, logs, traces), Prometheus data model and PromQL, the ELK stack and Loki, OpenTelemetry distributed tracing, SLO-based alerting and burn rate, and the four golden signals from the Google SRE Book.</p>
+  <p>Core Concepts & Culture and Containers & Kubernetes round out the full picture — DevOps organizational principles (DORA metrics, blameless postmortems, Team Topologies), SRE practices (error budgets, SLI/SLO/SLA), and the container and Kubernetes fundamentals that underlie modern cloud-native deployments.</p>
     </section>
 
     <section class="hub-faq" id="faq">
@@ -289,8 +475,16 @@
       <p>A virtual machine (VM) includes a full operating system kernel, which is managed by a hypervisor. A container shares the host OS kernel and isolates processes using Linux namespaces (PID, network, mount, UTS, IPC) and cgroups (resource limits). Containers start in milliseconds, have megabyte-level overhead, and are portable across any host running the same container runtime. VMs provide stronger isolation but have gigabyte-level overhead and seconds-to-minutes startup times. In practice, containers and VMs are complementary: containers run inside VMs in most cloud environments.</p>
     </details>
     <details>
-      <summary>What causes a CrashLoopBackOff in Kubernetes?</summary>
-      <p>CrashLoopBackOff means a container is repeatedly starting, crashing, and being restarted by Kubernetes. Common causes: the container's entrypoint or command exits non-zero (configuration error, missing dependency, or application bug); the container runs out of memory (OOMKilled) on startup; a required secret or ConfigMap is missing; a liveness probe is configured too aggressively and kills the container before it finishes starting. Debug with: kubectl describe pod &lt;name&gt; (check Events and Last State), kubectl logs &lt;pod&gt; --previous (logs from the crashed instance).</p>
+      <summary>What Linux topics should I know for a DevOps interview?</summary>
+      <p>DevOps interviewers commonly test: process management (how to identify and kill processes, what systemd does, what a zombie process is), file permissions (chmod octal notation, setuid/setgid, umask), filesystem layout (what lives in /var, /tmp, /proc, and why), networking basics (how to check open ports with ss, what /etc/resolv.conf controls, how iptables chains work), and shell fundamentals (exit codes, pipe vs redirection, cron syntax). You don't need to memorize every flag, but you should be able to explain the concepts and describe how you'd diagnose common problems.</p>
+    </details>
+    <details>
+      <summary>What is the difference between blue/green and canary deployments?</summary>
+      <p>Blue/green deployment maintains two identical environments (blue = current live, green = new version). Traffic switches entirely from blue to green at cutover. Rollback is instant — switch traffic back to blue. Canary deployment gradually shifts a small percentage of traffic to the new version (e.g., 1% → 5% → 25% → 100%), monitoring error rates and latency at each step before proceeding. Blue/green is simpler and provides faster rollback; canary reduces blast radius by exposing a small fraction of users to the new version first. Canary is preferred when changes are higher risk or when you need real traffic validation.</p>
+    </details>
+    <details>
+      <summary>What is Infrastructure as Code (IaC) and why does it matter?</summary>
+      <p>Infrastructure as Code means managing and provisioning infrastructure (servers, networks, databases, security groups) through machine-readable configuration files rather than manual processes or interactive UIs. The key benefits are repeatability (the same config produces the same infrastructure every time), version control (infra changes go through code review, can be diffed and reverted), and auditability (the git history is the change log). Terraform (declarative, HCL) and Ansible (procedural for configuration management) are the most common IaC tools. Pulumi uses general-purpose programming languages instead of a DSL. IaC is a prerequisite for reliable CI/CD and GitOps workflows.</p>
     </details>
     </section>
 

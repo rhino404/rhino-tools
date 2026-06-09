@@ -35,8 +35,14 @@ Hub: https://ryno.tools/security-plus/
 
 Hub: https://ryno.tools/devops/
 
-  - **Core Concepts & Culture** (50+ questions): 50 questions covering DevOps culture, CI/CD principles, SRE and reliability engineering (error budgets, SLI/SLO/SLA), Agile and Lean fundamentals, and DORA metrics — all sourced from Google SRE Book, Accelerate, Team Topologies, and the Agile Manifesto.
+  - **Core Concepts & Culture** (50+ questions): 50 questions covering DevOps culture, CI/CD principles, SRE and reliability engineering (error budgets, SLI/SLO/SLA), Agile and Lean fundamentals, and DORA metrics — sourced from Google SRE Book, Accelerate, Team Topologies, and the Agile Manifesto.
   - **Containers & Kubernetes** (53+ questions): 53 questions covering container fundamentals, image layers and registries, Kubernetes pods and workloads, services and networking, storage (PV/PVC), and troubleshooting (CrashLoopBackOff, OOMKilled, ImagePullBackOff) — sourced from kubernetes.io and docs.docker.com.
+  - **Linux Fundamentals** (50+ questions): 50 questions covering process management, filesystems and storage, users and permissions, networking basics, and shell and text processing — sourced from Linux man pages, kernel.org, Red Hat docs, and the Filesystem Hierarchy Standard.
+  - **Networking for DevOps** (50+ questions): 50 questions covering DNS and name resolution, TCP/IP and routing, TLS and certificate management, load balancers and proxies, and HTTP and application protocols — sourced from RFCs, NGINX docs, Cloudflare Learning Center, and MDN.
+  - **CI/CD Pipelines** (50+ questions): 50 questions covering pipeline fundamentals, GitHub Actions, Jenkins and GitLab CI, testing and quality gates, and deployment strategies (blue/green, canary, rolling, feature flags) — sourced from GitHub Actions docs, GitLab CI docs, Jenkins docs, and Humble & Farley's Continuous Delivery.
+  - **Infrastructure as Code** (50+ questions): 50 questions covering Terraform core concepts and state management, Ansible fundamentals and advanced patterns, and IaC principles including Pulumi, GitOps, immutable infrastructure, and policy-as-code — sourced from Terraform docs, Ansible docs, Pulumi docs, and Kief Morris's Infrastructure as Code.
+  - **Cloud Platforms** (50+ questions): 50 questions covering cloud fundamentals, AWS core services (EC2, S3, IAM, RDS/DynamoDB), GCP and Azure patterns, networking and security (VPC, WAF, KMS), and architecture patterns (HA, DR, RPO/RTO, serverless) — sourced from AWS, GCP, and Azure Well-Architected Frameworks.
+  - **Monitoring & Observability** (50+ questions): 50 questions covering metrics and dashboards (Prometheus, Grafana), logging (structured logs, ELK, Loki), distributed tracing (OpenTelemetry, Jaeger), alerting and on-call practices, and reliability concepts (SLI/SLO/SLA, error budgets, four golden signals) — sourced from OpenTelemetry spec, Google SRE Book, and Prometheus docs.
 <!-- quizzes:end -->
 
 ## How the App Works
@@ -95,6 +101,16 @@ Each question includes:
 ## Articles
 
 <!-- blog-articles:start -->
+- [What Is CI/CD? A Beginner's Guide to Continuous Integration and Delivery](https://ryno.tools/blog/what-is-cicd-beginners-guide/) — Every DevOps interview asks about CI/CD. Here's what it actually means: how continuous integration differs from continuous delivery, what a pipeline does, and why trunk-based development beats long-lived branches.
+  author: Ask Ryno
+  published: 2026-06-09
+  track: devops/core-concepts
+  tags: cicd, automation, culture, git
+- [What Is an SLI, SLO, and SLA? A Plain-English Guide for DevOps Beginners](https://ryno.tools/blog/what-is-sli-slo-sla-devops/) — SLI, SLO, and SLA sound similar but play very different roles. Learn what each one means, how error budgets connect them, and why high-performing teams use them to balance reliability and velocity.
+  author: Ask Ryno
+  published: 2026-06-09
+  track: devops/core-concepts
+  tags: reliability, observability, culture
 - [Falconry Mews & Housing Standards Every Apprentice Must Know](https://ryno.tools/blog/falconry-mews-housing-standards/) — A mews is more than a shed with a bird in it. Falconry housing standards are federally regulated and heavily tested on the apprentice exam. Here's what you need to know.
   author: Ask Ryno
   published: 2026-06-08

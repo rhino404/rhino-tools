@@ -16,6 +16,12 @@ export const subcategories = [
     { label: "Apprentice", value: "apprentice", category: "falconry" },
     { label: "Core Concepts & Culture", value: "core-concepts", category: "devops" },
     { label: "Containers & Kubernetes", value: "containers-k8s", category: "devops" },
+    { label: "Linux Fundamentals", value: "linux", category: "devops" },
+    { label: "Networking for DevOps", value: "networking", category: "devops" },
+    { label: "CI/CD Pipelines", value: "cicd", category: "devops" },
+    { label: "Infrastructure as Code", value: "iac", category: "devops" },
+    { label: "Cloud Platforms", value: "cloud", category: "devops" },
+    { label: "Monitoring & Observability", value: "observability", category: "devops" },
 ];
 
 export const quizMeta = {
