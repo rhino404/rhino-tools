@@ -1,89 +1,60 @@
 # Ryno.Tools
 
-![Ryno.Tools Banner](src/images/banner.png)
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![website](https://img.shields.io/website?url=https%3A%2F%2Fryno.tools)](https://ryno.tools)
 
-**Ryno.Tools**: A high-octane microlearning platform that supercharges your mastery of Ham Radio, Cybersecurity, and more. Crush your goals with bite-sized quizzes, adaptive tracking, and a sleek, browser-based interface.
+Free, no-login, offline-capable exam prep for licensing and certification. Adaptive quizzes and timed exam simulations — no paywall, works offline, installs as a PWA.
 
-👉 **Build Your Momentum** @ [ryno.tools](https://ryno.tools)
-
----
-
-## 📑 Contents
-
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Get Started](#-get-started)
-- [Roadmap](#-roadmap)
-- [License](#-license)
+👉 **[ryno.tools](https://ryno.tools)**
 
 ---
 
-## ✨ Features
+## Quiz Tracks
 
-- **Dynamic Quizzes**  
-  - Curated sets for Ham Radio (Technician, General, Extra) and Cybersecurity.  
-  - Tag-based filtering for laser-focused study.  
-
-- **Smart Stats Dashboard**  
-  - Monitor accuracy, streaks, and topic progress.  
-  - Pinpoint strengths and weaknesses with a clean, card-based layout.  
-
-- **Slick Interface**  
-  - Responsive design for seamless use on desktop and mobile.  
-  - Pruned navigation with auto-closing dropdowns.  
-  - Toggle between light and dark themes for maximum comfort.  
-
-- **Progressive Web App (PWA)**  
-  - Installable for offline access on any device.  
-  - Instant setup with a built-in install prompt.  
-
-- **Persistent Progress**  
-  - Auto-saved progress in your browser — no sign-up needed.  
-  - Pick up right where you left off.  
+<!-- TRACKS-START -->
+| Track | Subcategories |
+| --- | --- |
+| Ham Radio | Technician · General · Extra |
+| Falconry | Apprentice |
+| CompTIA Security+ | SY0-701 |
+| DevOps | Core Concepts · Containers & K8s · Linux · Networking · CI/CD · IaC · Cloud · Observability |
+<!-- TRACKS-END -->
 
 ---
 
-## 🛠 Tech Stack
+## Features
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript&logoColor=black)
-
-- **Frontend**: HTML5, CSS3 (Light/Dark Mode), JavaScript (ES6+)  
-- **Data**: JSON-driven question metadata  
-- **State**: In-browser storage for seamless progress tracking  
-- **UI**: Custom dropdowns, quiz rendering, and stats visualizations  
-- **PWA**: Offline-ready with installable web app  
+- **Adaptive quizzes** — tag-based filtering for focused study on weak spots
+- **Timed exam mode** — full simulated exams with pass/fail scoring
+- **Light/dark theme** — persisted to `localStorage`
+- **PWA** — installable, works offline, no app store required
+- **No login, no paywall** — 100% free, progress saved in the browser
 
 ---
 
-## 🚀 Get Started
+## Blog
 
-1. Visit [ryno.tools](https://ryno.tools).  
-2. **Install as a PWA** (optional):  
-   - Desktop: Click the install icon in the browser’s address bar.  
-   - Mobile: Select “Add to Home Screen” from the share menu.  
-3. Pick a **category** and **subcategory**.  
-4. Tackle quizzes at your pace.  
-5. Check your **stats dashboard** for progress insights.  
-6. Return anytime — your progress is auto-saved.  
+Exam-focused study guides at [ryno.tools/blog/](https://ryno.tools/blog/), authored by Ask Ryno and cited to authoritative sources.
 
 ---
 
-## 🗺 Roadmap
+## Dev Setup
 
-- [x] Ham Radio quizzes (Technician, General, Extra)  
-- [x] Cybersecurity Questions Focused on CompTIA Security+ SY0-701
-- [ ] Vocabulary Practice Cards
-- [ ] Enhanced stats with topic comparison charts  
-- [ ] Small Language Model (SML) integration
-- [ ] Community challenges and leaderboards  
+```bash
+cd src
+python3 -m http.server 8080
+```
+
+Visit <http://localhost:8080>. No build step — raw ES6 modules served as-is. Hard-refresh (`Ctrl+Shift+R`) to bypass the service worker cache after changes.
 
 ---
 
-## 📄 License
+## Deployment
 
-Licensed under the MIT License. See [LICENSE](LICENSE) for details.
+`main` auto-deploys to production via GitHub Actions (`.github/workflows/static.yml`). **Treat `main` as production.** Branch for non-trivial work; PR to merge.
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE).
