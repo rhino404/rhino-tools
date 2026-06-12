@@ -1,0 +1,666 @@
+{
+  "version": "2.0",
+  "id": "hiragana",
+  "type": "kana",
+  "stages": [
+    { "id": "s1", "label": "Vowels",   "rows": ["a"] },
+    { "id": "s2", "label": "K & S",    "rows": ["ka", "sa"] },
+    { "id": "s3", "label": "T & N",    "rows": ["ta", "na"] },
+    { "id": "s4", "label": "H & M",    "rows": ["ha", "ma"] },
+    { "id": "s5", "label": "Y, R & W", "rows": ["ya", "ra", "wa", "n"] },
+    { "id": "s6", "label": "Voiced",   "rows": ["ga", "za", "da", "ba"] },
+    { "id": "s7", "label": "P sounds", "rows": ["pa"] },
+    { "id": "s8", "label": "Combos",   "rows": ["kya", "sha", "cha", "nya", "hya", "mya", "rya", "gya", "ja", "bya", "pya"] }
+  ],
+  "kana": [
+    {
+      "id": "hira-a",  "char": "あ",  "romaji": "a",   "accepts": ["a"],
+      "group": "gojuon", "row": "a", "audio": "hira-a",
+      "mnemonic": "Looks like a person with one arm raised wide, saying 'AH!' — open your mouth and let it out.",
+      "example": { "word": "あか", "romaji": "aka", "meaning": "red" }
+    },
+    {
+      "id": "hira-i",  "char": "い",  "romaji": "i",   "accepts": ["i"],
+      "group": "gojuon", "row": "a", "audio": "hira-i",
+      "mnemonic": "Two EEL-shaped strokes swimming side by side, making an 'eeee!' sound.",
+      "example": { "word": "いぬ", "romaji": "inu", "meaning": "dog" }
+    },
+    {
+      "id": "hira-u",  "char": "う",  "romaji": "u",   "accepts": ["u"],
+      "group": "gojuon", "row": "a", "audio": "hira-u",
+      "mnemonic": "A BULL's head with its horn curving up. Bulls say 'moo' → the 'oo' sound gives you 'u'.",
+      "example": { "word": "うし", "romaji": "ushi", "meaning": "cow" }
+    },
+    {
+      "id": "hira-e",  "char": "え",  "romaji": "e",   "accepts": ["e"],
+      "group": "gojuon", "row": "a", "audio": "hira-e",
+      "mnemonic": "An ELF doing an elaborate dance — arms out, leg up. 'Eh, look at me!'",
+      "example": { "word": "えき", "romaji": "eki", "meaning": "station" }
+    },
+    {
+      "id": "hira-o",  "char": "お",  "romaji": "o",   "accepts": ["o"],
+      "group": "gojuon", "row": "a", "audio": "hira-o",
+      "mnemonic": "A sumo wrestler with arms spread wide, bellowing 'OH!' before a match.",
+      "example": { "word": "おかね", "romaji": "okane", "meaning": "money" }
+    },
+
+    {
+      "id": "hira-ka", "char": "か",  "romaji": "ka",  "accepts": ["ka"],
+      "group": "gojuon", "row": "ka", "audio": "hira-ka",
+      "mnemonic": "A KATANA blade drawn fast — KA-ching! The sharp diagonal is the sword stroke.",
+      "example": { "word": "かお", "romaji": "kao", "meaning": "face" }
+    },
+    {
+      "id": "hira-ki", "char": "き",  "romaji": "ki",  "accepts": ["ki"],
+      "group": "gojuon", "row": "ka", "audio": "hira-ki",
+      "mnemonic": "Looks just like a KEY. 'Ki' sounds like 'key' — this one's a gift.",
+      "example": { "word": "きいろ", "romaji": "kiiro", "meaning": "yellow" }
+    },
+    {
+      "id": "hira-ku", "char": "く",  "romaji": "ku",  "accepts": ["ku"],
+      "group": "gojuon", "row": "ka", "audio": "hira-ku",
+      "mnemonic": "An open CUCKOO bird beak pointing left. 'Coo-coo' → 'ku'.",
+      "example": { "word": "くるま", "romaji": "kuruma", "meaning": "car" }
+    },
+    {
+      "id": "hira-ke", "char": "け",  "romaji": "ke",  "accepts": ["ke"],
+      "group": "gojuon", "row": "ka", "audio": "hira-ke",
+      "mnemonic": "A KE-ttle with a tall handle standing on a base. 'KE-ttle!'",
+      "example": { "word": "けむり", "romaji": "kemuri", "meaning": "smoke" }
+    },
+    {
+      "id": "hira-ko", "char": "こ",  "romaji": "ko",  "accepts": ["ko"],
+      "group": "gojuon", "row": "ka", "audio": "hira-ko",
+      "mnemonic": "Two parallel horizontal tracks — the KO-KO-KO sound of a train on the rails.",
+      "example": { "word": "ここ", "romaji": "koko", "meaning": "here" }
+    },
+
+    {
+      "id": "hira-sa", "char": "さ",  "romaji": "sa",  "accepts": ["sa"],
+      "group": "gojuon", "row": "sa", "audio": "hira-sa",
+      "mnemonic": "A SAMURAI sword with a cross-guard. The warrior draws it with a 'SA!'",
+      "example": { "word": "さかな", "romaji": "sakana", "meaning": "fish" }
+    },
+    {
+      "id": "hira-shi","char": "し",  "romaji": "shi", "accepts": ["shi","si"],
+      "group": "gojuon", "row": "sa", "audio": "hira-shi",
+      "mnemonic": "A FISHING HOOK dangling down. 'SHE hooks a big one!' — shi sounds like 'she'.",
+      "example": { "word": "しろ", "romaji": "shiro", "meaning": "white/castle" }
+    },
+    {
+      "id": "hira-su", "char": "す",  "romaji": "su",  "accepts": ["su"],
+      "group": "gojuon", "row": "sa", "audio": "hira-su",
+      "mnemonic": "A spinning TOP leaving a swirling trail. Tops go 'su-su-su' as they spin.",
+      "example": { "word": "すし", "romaji": "sushi", "meaning": "sushi" }
+    },
+    {
+      "id": "hira-se", "char": "せ",  "romaji": "se",  "accepts": ["se"],
+      "group": "gojuon", "row": "sa", "audio": "hira-se",
+      "mnemonic": "A SEAL balancing a ball — it signs its name 'SE' with a flourish.",
+      "example": { "word": "せかい", "romaji": "sekai", "meaning": "world" }
+    },
+    {
+      "id": "hira-so", "char": "そ",  "romaji": "so",  "accepts": ["so"],
+      "group": "gojuon", "row": "sa", "audio": "hira-so",
+      "mnemonic": "A single Z-shaped slash across the air. 'SO that's how a ninja signs off!'",
+      "example": { "word": "そら", "romaji": "sora", "meaning": "sky" }
+    },
+
+    {
+      "id": "hira-ta", "char": "た",  "romaji": "ta",  "accepts": ["ta"],
+      "group": "gojuon", "row": "ta", "audio": "hira-ta",
+      "mnemonic": "A TABLE with two sticks under it. 'TA-ble!' The top stroke is the tabletop.",
+      "example": { "word": "たこ", "romaji": "tako", "meaning": "octopus" }
+    },
+    {
+      "id": "hira-chi","char": "ち",  "romaji": "chi", "accepts": ["chi","ti"],
+      "group": "gojuon", "row": "ta", "audio": "hira-chi",
+      "mnemonic": "A little CHICK pecking at a worm. 'Chi-chi-chi!' it cries as it hops.",
+      "example": { "word": "ちかい", "romaji": "chikai", "meaning": "nearby" }
+    },
+    {
+      "id": "hira-tsu","char": "つ",  "romaji": "tsu", "accepts": ["tsu","tu"],
+      "group": "gojuon", "row": "ta", "audio": "hira-tsu",
+      "mnemonic": "A TSUNAMI wave arcing toward shore. The first syllable of 'tsunami' is 'tsu' — this IS the wave.",
+      "example": { "word": "つき", "romaji": "tsuki", "meaning": "moon" }
+    },
+    {
+      "id": "hira-te", "char": "て",  "romaji": "te",  "accepts": ["te"],
+      "group": "gojuon", "row": "ta", "audio": "hira-te",
+      "mnemonic": "A TV ANTENNA on a rooftop, catching signals from above. 'TE-levision!'",
+      "example": { "word": "てがみ", "romaji": "tegami", "meaning": "letter (mail)" }
+    },
+    {
+      "id": "hira-to", "char": "と",  "romaji": "to",  "accepts": ["to"],
+      "group": "gojuon", "row": "ta", "audio": "hira-to",
+      "mnemonic": "A TORNADO forming — a curved body with a spike shooting out. 'TO-rnado!'",
+      "example": { "word": "とり", "romaji": "tori", "meaning": "bird" }
+    },
+
+    {
+      "id": "hira-na", "char": "な",  "romaji": "na",  "accepts": ["na"],
+      "group": "gojuon", "row": "na", "audio": "hira-na",
+      "mnemonic": "A KNIFE stuck into a NUT on the ground. 'NA! Don't touch that!'",
+      "example": { "word": "なまえ", "romaji": "namae", "meaning": "name" }
+    },
+    {
+      "id": "hira-ni", "char": "に",  "romaji": "ni",  "accepts": ["ni"],
+      "group": "gojuon", "row": "na", "audio": "hira-ni",
+      "mnemonic": "A NEEDLE threading itself through fabric. 'NI-needle' stitching two strokes.",
+      "example": { "word": "にほん", "romaji": "nihon", "meaning": "Japan" }
+    },
+    {
+      "id": "hira-nu", "char": "ぬ",  "romaji": "nu",  "accepts": ["nu"],
+      "group": "gojuon", "row": "na", "audio": "hira-nu",
+      "mnemonic": "NOODLES being twirled and slurped off a fork. 'NU-dles!' The loop is the noodle swirl.",
+      "example": { "word": "ぬの", "romaji": "nuno", "meaning": "fabric" }
+    },
+    {
+      "id": "hira-ne", "char": "ね",  "romaji": "ne",  "accepts": ["ne"],
+      "group": "gojuon", "row": "na", "audio": "hira-ne",
+      "mnemonic": "A cat curled up asleep. In Japanese, ねる (neru) means 'to sleep' — and ねこ (neko) is 'cat'!",
+      "example": { "word": "ねこ", "romaji": "neko", "meaning": "cat" }
+    },
+    {
+      "id": "hira-no", "char": "の",  "romaji": "no",  "accepts": ["no"],
+      "group": "gojuon", "row": "na", "audio": "hira-no",
+      "mnemonic": "A big swirling NO sign. 'NO! Don't do it!' — one confident spiral.",
+      "example": { "word": "のり", "romaji": "nori", "meaning": "seaweed / glue" }
+    },
+
+    {
+      "id": "hira-ha", "char": "は",  "romaji": "ha",  "accepts": ["ha"],
+      "group": "gojuon", "row": "ha", "audio": "hira-ha",
+      "mnemonic": "Someone doubled over laughing — 'HA HA HA!' Hands on knees, mouth wide.",
+      "example": { "word": "はな", "romaji": "hana", "meaning": "flower / nose" }
+    },
+    {
+      "id": "hira-hi", "char": "ひ",  "romaji": "hi",  "accepts": ["hi"],
+      "group": "gojuon", "row": "ha", "audio": "hira-hi",
+      "mnemonic": "Waving cheerfully with a big smile — 'HI!' The curve is the smiling face.",
+      "example": { "word": "ひと", "romaji": "hito", "meaning": "person" }
+    },
+    {
+      "id": "hira-fu", "char": "ふ",  "romaji": "fu",  "accepts": ["fu","hu"],
+      "group": "gojuon", "row": "ha", "audio": "hira-fu",
+      "mnemonic": "The silhouette of Mount FUJI with a cloud on top. 'FU-ji!' — iconic shape, iconic name.",
+      "example": { "word": "ふゆ", "romaji": "fuyu", "meaning": "winter" }
+    },
+    {
+      "id": "hira-he", "char": "へ",  "romaji": "he",  "accepts": ["he"],
+      "group": "gojuon", "row": "ha", "audio": "hira-he",
+      "mnemonic": "A simple mountain peak. 'HEY, check out the view from up here!'",
+      "example": { "word": "へや", "romaji": "heya", "meaning": "room" }
+    },
+    {
+      "id": "hira-ho", "char": "ほ",  "romaji": "ho",  "accepts": ["ho"],
+      "group": "gojuon", "row": "ha", "audio": "hira-ho",
+      "mnemonic": "Santa's jolly 'HO HO HO!' — lots of vertical strokes, full of cheer.",
+      "example": { "word": "ほし", "romaji": "hoshi", "meaning": "star" }
+    },
+
+    {
+      "id": "hira-ma", "char": "ま",  "romaji": "ma",  "accepts": ["ma"],
+      "group": "gojuon", "row": "ma", "audio": "hira-ma",
+      "mnemonic": "A MAMA fish dangling on a hook. 'MA-ma!' she cries as she's reeled in.",
+      "example": { "word": "まち", "romaji": "machi", "meaning": "town" }
+    },
+    {
+      "id": "hira-mi", "char": "み",  "romaji": "mi",  "accepts": ["mi"],
+      "group": "gojuon", "row": "ma", "audio": "hira-mi",
+      "mnemonic": "A MINNOW with a curly little tail flicking in the current. 'MI-nnow!'",
+      "example": { "word": "みず", "romaji": "mizu", "meaning": "water" }
+    },
+    {
+      "id": "hira-mu", "char": "む",  "romaji": "mu",  "accepts": ["mu"],
+      "group": "gojuon", "row": "ma", "audio": "hira-mu",
+      "mnemonic": "A COW's face staring straight at you. Cows say 'MU!' in Japanese (and MOO in English — same idea!).",
+      "example": { "word": "むし", "romaji": "mushi", "meaning": "bug / insect" }
+    },
+    {
+      "id": "hira-me", "char": "め",  "romaji": "me",  "accepts": ["me"],
+      "group": "gojuon", "row": "ma", "audio": "hira-me",
+      "mnemonic": "In Japanese, 目 (me) means EYE. This character looks like a stylized eye with a swirling pupil.",
+      "example": { "word": "めがね", "romaji": "megane", "meaning": "glasses" }
+    },
+    {
+      "id": "hira-mo", "char": "も",  "romaji": "mo",  "accepts": ["mo"],
+      "group": "gojuon", "row": "ma", "audio": "hira-mo",
+      "mnemonic": "MO' fish on the hook! Like た (ta) but with two extra lines — MORE and more catches.",
+      "example": { "word": "もり", "romaji": "mori", "meaning": "forest" }
+    },
+
+    {
+      "id": "hira-ya", "char": "や",  "romaji": "ya",  "accepts": ["ya"],
+      "group": "gojuon", "row": "ya", "audio": "hira-ya",
+      "mnemonic": "A YACHT sailing with its mast and hull. 'YA-cht!' off into the waves.",
+      "example": { "word": "やま", "romaji": "yama", "meaning": "mountain" }
+    },
+    {
+      "id": "hira-yu", "char": "ゆ",  "romaji": "yu",  "accepts": ["yu"],
+      "group": "gojuon", "row": "ya", "audio": "hira-yu",
+      "mnemonic": "A FISH swimming through a twisting river. 'YU' — 'you' are the fish going with the flow.",
+      "example": { "word": "ゆき", "romaji": "yuki", "meaning": "snow" }
+    },
+    {
+      "id": "hira-yo", "char": "よ",  "romaji": "yo",  "accepts": ["yo"],
+      "group": "gojuon", "row": "ya", "audio": "hira-yo",
+      "mnemonic": "Someone throwing their arm out shouting 'YO!' to get your attention — the sweep of the gesture.",
+      "example": { "word": "よる", "romaji": "yoru", "meaning": "night" }
+    },
+
+    {
+      "id": "hira-ra", "char": "ら",  "romaji": "ra",  "accepts": ["ra"],
+      "group": "gojuon", "row": "ra", "audio": "hira-ra",
+      "mnemonic": "A RABBIT leaping — the curved stroke is the arc of a bounding hop. 'RA-bbit!'",
+      "example": { "word": "らいねん", "romaji": "rainen", "meaning": "next year" }
+    },
+    {
+      "id": "hira-ri", "char": "り",  "romaji": "ri",  "accepts": ["ri"],
+      "group": "gojuon", "row": "ra", "audio": "hira-ri",
+      "mnemonic": "Two REEDS standing side by side at a RIVER's edge. 'RI-ver reeds' swaying gently.",
+      "example": { "word": "りんご", "romaji": "ringo", "meaning": "apple" }
+    },
+    {
+      "id": "hira-ru", "char": "る",  "romaji": "ru",  "accepts": ["ru"],
+      "group": "gojuon", "row": "ra", "audio": "hira-ru",
+      "mnemonic": "A RUBY ribbon curling into a loop at the end. 'RU-by loop' — the tail is the gem.",
+      "example": { "word": "るす", "romaji": "rusu", "meaning": "absence (from home)" }
+    },
+    {
+      "id": "hira-re", "char": "れ",  "romaji": "re",  "accepts": ["re"],
+      "group": "gojuon", "row": "ra", "audio": "hira-re",
+      "mnemonic": "A WRENCH with a hooked end — 'RE-nch' it into place. Like る but with an extra kick.",
+      "example": { "word": "れきし", "romaji": "rekishi", "meaning": "history" }
+    },
+    {
+      "id": "hira-ro", "char": "ろ",  "romaji": "ro",  "accepts": ["ro"],
+      "group": "gojuon", "row": "ra", "audio": "hira-ro",
+      "mnemonic": "A ROAD bending off to the horizon — no upstroke at the end, it just fades away. 'RO-ad'.",
+      "example": { "word": "ろく", "romaji": "roku", "meaning": "six" }
+    },
+
+    {
+      "id": "hira-wa", "char": "わ",  "romaji": "wa",  "accepts": ["wa"],
+      "group": "gojuon", "row": "wa", "audio": "hira-wa",
+      "mnemonic": "A WAVE on the WATER — the curved top is the crest, the stroke below is the swell. 'WA-ter!'",
+      "example": { "word": "わたし", "romaji": "watashi", "meaning": "I / me" }
+    },
+    {
+      "id": "hira-wo", "char": "を",  "romaji": "wo",  "accepts": ["wo","o"],
+      "group": "gojuon", "row": "wa", "audio": "hira-wo",
+      "mnemonic": "The WO-mbat sits in a box — three strokes like a cage. This is almost always the object particle 'o'.",
+      "example": { "word": "りんごをたべる", "romaji": "ringo o taberu", "meaning": "to eat an apple (を marks the object)" }
+    },
+    {
+      "id": "hira-n",  "char": "ん",  "romaji": "n",   "accepts": ["n","m"],
+      "group": "gojuon", "row": "n", "audio": "hira-n",
+      "mnemonic": "A simple curved N — just the nasal hum at the end of a syllable. 'Mmm…' or 'Nn…'.",
+      "example": { "word": "にほん", "romaji": "nihon", "meaning": "Japan" }
+    },
+
+    {
+      "id": "hira-ga", "char": "が",  "romaji": "ga",  "accepts": ["ga"],
+      "group": "dakuten", "row": "ga", "audio": "hira-ga",
+      "mnemonic": "か (ka) with two dots — the voice turns on. 'GA!' like a GUITAR striking a power chord.",
+      "example": { "word": "がっこう", "romaji": "gakkou", "meaning": "school" }
+    },
+    {
+      "id": "hira-gi", "char": "ぎ",  "romaji": "gi",  "accepts": ["gi"],
+      "group": "dakuten", "row": "ga", "audio": "hira-gi",
+      "mnemonic": "き (ki) voiced up with dots — a GIG key to the backstage door.",
+      "example": { "word": "ぎんこう", "romaji": "ginkou", "meaning": "bank" }
+    },
+    {
+      "id": "hira-gu", "char": "ぐ",  "romaji": "gu",  "accepts": ["gu"],
+      "group": "dakuten", "row": "ga", "audio": "hira-gu",
+      "mnemonic": "く (ku) with dots — the cuckoo's low, rumbling GURGLE. 'GU!'",
+      "example": { "word": "ぐんたい", "romaji": "guntai", "meaning": "army" }
+    },
+    {
+      "id": "hira-ge", "char": "げ",  "romaji": "ge",  "accepts": ["ge"],
+      "group": "dakuten", "row": "ga", "audio": "hira-ge",
+      "mnemonic": "け (ke) voiced — a kettle rumbling until it lets out a deep 'GE!' of steam.",
+      "example": { "word": "げんき", "romaji": "genki", "meaning": "healthy / energetic" }
+    },
+    {
+      "id": "hira-go", "char": "ご",  "romaji": "go",  "accepts": ["go"],
+      "group": "dakuten", "row": "ga", "audio": "hira-go",
+      "mnemonic": "こ (ko) with dots — it's GO time! Two tracks and the starter's gun fires.",
+      "example": { "word": "ごはん", "romaji": "gohan", "meaning": "rice / meal" }
+    },
+
+    {
+      "id": "hira-za", "char": "ざ",  "romaji": "za",  "accepts": ["za"],
+      "group": "dakuten", "row": "za", "audio": "hira-za",
+      "mnemonic": "さ (sa) voiced — the samurai's sword now ZAPS with electric energy. 'ZA!'",
+      "example": { "word": "ざっし", "romaji": "zasshi", "meaning": "magazine" }
+    },
+    {
+      "id": "hira-ji-z","char": "じ", "romaji": "ji",  "accepts": ["ji","zi"],
+      "group": "dakuten", "row": "za", "audio": "hira-ji-z",
+      "mnemonic": "し (shi) voiced — the fishing hook glows like a GENIE's lamp. Rub it and say 'JI!'",
+      "example": { "word": "じかん", "romaji": "jikan", "meaning": "time" }
+    },
+    {
+      "id": "hira-zu-z","char": "ず", "romaji": "zu",  "accepts": ["zu"],
+      "group": "dakuten", "row": "za", "audio": "hira-zu-z",
+      "mnemonic": "す (su) voiced — the spinning top ZUMs with a deeper, buzzier tone. 'ZU!'",
+      "example": { "word": "ずっと", "romaji": "zutto", "meaning": "always / all along" }
+    },
+    {
+      "id": "hira-ze", "char": "ぜ",  "romaji": "ze",  "accepts": ["ze"],
+      "group": "dakuten", "row": "za", "audio": "hira-ze",
+      "mnemonic": "せ (se) with dots — the seal now performs a dramatic 'ZE!' as the crowd applauds.",
+      "example": { "word": "ぜんぶ", "romaji": "zenbu", "meaning": "everything / all" }
+    },
+    {
+      "id": "hira-zo", "char": "ぞ",  "romaji": "zo",  "accepts": ["zo"],
+      "group": "dakuten", "row": "za", "audio": "hira-zo",
+      "mnemonic": "そ (so) voiced — the Z-slash now BUZZES with power. 'ZO!' like a zone alarm.",
+      "example": { "word": "ぞう", "romaji": "zou", "meaning": "elephant" }
+    },
+
+    {
+      "id": "hira-da", "char": "だ",  "romaji": "da",  "accepts": ["da"],
+      "group": "dakuten", "row": "da", "audio": "hira-da",
+      "mnemonic": "た (ta) voiced — the table DRUMS with a heavy 'DA!' beat. It's bold.",
+      "example": { "word": "だいがく", "romaji": "daigaku", "meaning": "university" }
+    },
+    {
+      "id": "hira-ji-d","char": "ぢ", "romaji": "ji",  "accepts": ["ji","di"],
+      "group": "dakuten", "row": "da", "audio": "hira-ji-z",
+      "mnemonic": "ち (chi) voiced — a rare variant. Same sound as じ; you'll see this mostly in compound words like はなぢ (nosebleed).",
+      "example": { "word": "はなぢ", "romaji": "hanaji", "meaning": "nosebleed" }
+    },
+    {
+      "id": "hira-zu-d","char": "づ", "romaji": "zu",  "accepts": ["zu","du"],
+      "group": "dakuten", "row": "da", "audio": "hira-zu-z",
+      "mnemonic": "つ (tsu) voiced — another rare variant sharing ず's sound. Appears in words like つづく (to continue).",
+      "example": { "word": "つづく", "romaji": "tsuzuku", "meaning": "to continue" }
+    },
+    {
+      "id": "hira-de", "char": "で",  "romaji": "de",  "accepts": ["de"],
+      "group": "dakuten", "row": "da", "audio": "hira-de",
+      "mnemonic": "て (te) with dots — the antenna now transmits in DE-ep bass frequency. 'DE!'",
+      "example": { "word": "でんしゃ", "romaji": "densha", "meaning": "train" }
+    },
+    {
+      "id": "hira-do", "char": "ど",  "romaji": "do",  "accepts": ["do"],
+      "group": "dakuten", "row": "da", "audio": "hira-do",
+      "mnemonic": "と (to) voiced — the tornado is now DO-wnright massive. Watch out!",
+      "example": { "word": "どこ", "romaji": "doko", "meaning": "where" }
+    },
+
+    {
+      "id": "hira-ba", "char": "ば",  "romaji": "ba",  "accepts": ["ba"],
+      "group": "dakuten", "row": "ba", "audio": "hira-ba",
+      "mnemonic": "は (ha) with dots — the laughter turns into a booming BASS. 'BA!' like a drum hit.",
+      "example": { "word": "ばしょ", "romaji": "basho", "meaning": "place / location" }
+    },
+    {
+      "id": "hira-bi", "char": "び",  "romaji": "bi",  "accepts": ["bi"],
+      "group": "dakuten", "row": "ba", "audio": "hira-bi",
+      "mnemonic": "ひ (hi) with dots — a BI-g hello now echoes with a deep rumble.",
+      "example": { "word": "びょういん", "romaji": "byouin", "meaning": "hospital" }
+    },
+    {
+      "id": "hira-bu", "char": "ぶ",  "romaji": "bu",  "accepts": ["bu"],
+      "group": "dakuten", "row": "ba", "audio": "hira-bu",
+      "mnemonic": "ふ (fu) with dots — Mount Fuji erupts! BUDDHA says 'BU!' from the explosion.",
+      "example": { "word": "ぶどう", "romaji": "budou", "meaning": "grapes" }
+    },
+    {
+      "id": "hira-be", "char": "べ",  "romaji": "be",  "accepts": ["be"],
+      "group": "dakuten", "row": "ba", "audio": "hira-be",
+      "mnemonic": "へ (he) with dots — the mountain now BOOMS. 'BE!' like a bell on the peak.",
+      "example": { "word": "べんきょう", "romaji": "benkyou", "meaning": "study" }
+    },
+    {
+      "id": "hira-bo", "char": "ぼ",  "romaji": "bo",  "accepts": ["bo"],
+      "group": "dakuten", "row": "ba", "audio": "hira-bo",
+      "mnemonic": "ほ (ho) with dots — Santa's 'HO!' turns into a deep 'BO!' A BOBA bubble pops.",
+      "example": { "word": "ぼうし", "romaji": "boushi", "meaning": "hat" }
+    },
+
+    {
+      "id": "hira-pa", "char": "ぱ",  "romaji": "pa",  "accepts": ["pa"],
+      "group": "handakuten", "row": "pa", "audio": "hira-pa",
+      "mnemonic": "は (ha) with a little circle — a POP! The circle is a tiny bubble bursting. 'PA!'",
+      "example": { "word": "パーティー", "romaji": "paatii", "meaning": "party" }
+    },
+    {
+      "id": "hira-pi", "char": "ぴ",  "romaji": "pi",  "accepts": ["pi"],
+      "group": "handakuten", "row": "pa", "audio": "hira-pi",
+      "mnemonic": "ひ (hi) with a circle — the greeting bubble goes 'PI!' like a cute little ping.",
+      "example": { "word": "ピンク", "romaji": "pinku", "meaning": "pink" }
+    },
+    {
+      "id": "hira-pu", "char": "ぷ",  "romaji": "pu",  "accepts": ["pu"],
+      "group": "handakuten", "row": "pa", "audio": "hira-pu",
+      "mnemonic": "ふ (fu) with a circle — Fuji shoots a little PU! steam puff from the top.",
+      "example": { "word": "プール", "romaji": "puuru", "meaning": "pool" }
+    },
+    {
+      "id": "hira-pe", "char": "ぺ",  "romaji": "pe",  "accepts": ["pe"],
+      "group": "handakuten", "row": "pa", "audio": "hira-pe",
+      "mnemonic": "へ (he) with a circle — the mountain peak pops with a satisfying 'PE!' echo.",
+      "example": { "word": "ペン", "romaji": "pen", "meaning": "pen" }
+    },
+    {
+      "id": "hira-po", "char": "ぽ",  "romaji": "po",  "accepts": ["po"],
+      "group": "handakuten", "row": "pa", "audio": "hira-po",
+      "mnemonic": "ほ (ho) with a circle — Santa fires a PO! confetti cannon. 'PO-ppin!'",
+      "example": { "word": "ポケット", "romaji": "poketto", "meaning": "pocket" }
+    },
+
+    {
+      "id": "yoon-kya", "char": "きゃ", "romaji": "kya", "accepts": ["kya"],
+      "group": "yoon", "row": "kya", "audio": "yoon-kya",
+      "mnemonic": "き (ki) + small や (ya) = KYA! Like a kid shouting in surprise: 'KYA-AH!'",
+      "example": { "word": "きゃく", "romaji": "kyaku", "meaning": "guest / customer" }
+    },
+    {
+      "id": "yoon-kyu", "char": "きゅ", "romaji": "kyu", "accepts": ["kyu"],
+      "group": "yoon", "row": "kya", "audio": "yoon-kyu",
+      "mnemonic": "き (ki) + small ゆ (yu) = KYU. A cue in billiards — your KEY hits the YU-ball.",
+      "example": { "word": "きゅうり", "romaji": "kyuuri", "meaning": "cucumber" }
+    },
+    {
+      "id": "yoon-kyo", "char": "きょ", "romaji": "kyo", "accepts": ["kyo"],
+      "group": "yoon", "row": "kya", "audio": "yoon-kyo",
+      "mnemonic": "き (ki) + small よ (yo) = KYO. Today in Japanese is 今日 (kyou) — this is the TODAY sound.",
+      "example": { "word": "きょう", "romaji": "kyou", "meaning": "today" }
+    },
+
+    {
+      "id": "yoon-sha", "char": "しゃ", "romaji": "sha", "accepts": ["sha","sya"],
+      "group": "yoon", "row": "sha", "audio": "yoon-sha",
+      "mnemonic": "し (shi) + small や (ya) = SHA. The hook snags a SHARK — 'SHA-rk!'",
+      "example": { "word": "しゃしん", "romaji": "shashin", "meaning": "photograph" }
+    },
+    {
+      "id": "yoon-shu", "char": "しゅ", "romaji": "shu", "accepts": ["shu","syu"],
+      "group": "yoon", "row": "sha", "audio": "yoon-shu",
+      "mnemonic": "し (shi) + small ゆ (yu) = SHU. A SHOE dangling from a fishing hook.",
+      "example": { "word": "しゅみ", "romaji": "shumi", "meaning": "hobby" }
+    },
+    {
+      "id": "yoon-sho", "char": "しょ", "romaji": "sho", "accepts": ["sho","syo"],
+      "group": "yoon", "row": "sha", "audio": "yoon-sho",
+      "mnemonic": "し (shi) + small よ (yo) = SHO. A SHOW with spotlights — 'SHO-time!'",
+      "example": { "word": "しょうがっこう", "romaji": "shougakkou", "meaning": "elementary school" }
+    },
+
+    {
+      "id": "yoon-cha", "char": "ちゃ", "romaji": "cha", "accepts": ["cha","tya"],
+      "group": "yoon", "row": "cha", "audio": "yoon-cha",
+      "mnemonic": "ち (chi) + small や (ya) = CHA. A chick drinking CHA (tea) — 'CHA-time!'",
+      "example": { "word": "おちゃ", "romaji": "ocha", "meaning": "green tea" }
+    },
+    {
+      "id": "yoon-chu", "char": "ちゅ", "romaji": "chu", "accepts": ["chu","tyu"],
+      "group": "yoon", "row": "cha", "audio": "yoon-chu",
+      "mnemonic": "ち (chi) + small ゆ (yu) = CHU. A mouse going 'CHU CHU!' (Japanese onomatopoeia for mice).",
+      "example": { "word": "ちゅうい", "romaji": "chuui", "meaning": "caution / attention" }
+    },
+    {
+      "id": "yoon-cho", "char": "ちょ", "romaji": "cho", "accepts": ["cho","tyo"],
+      "group": "yoon", "row": "cha", "audio": "yoon-cho",
+      "mnemonic": "ち (chi) + small よ (yo) = CHO. A CHOCÓ-late butterfly — CHO = butterfly in Japanese (蝶)!",
+      "example": { "word": "ちょうちょ", "romaji": "choucho", "meaning": "butterfly" }
+    },
+
+    {
+      "id": "yoon-nya", "char": "にゃ", "romaji": "nya", "accepts": ["nya"],
+      "group": "yoon", "row": "nya", "audio": "yoon-nya",
+      "mnemonic": "に (ni) + small や (ya) = NYA. A cat says 'NYA!' in Japanese — the cat sound!",
+      "example": { "word": "にゃんこ", "romaji": "nyanko", "meaning": "kitty (cute form)" }
+    },
+    {
+      "id": "yoon-nyu", "char": "にゅ", "romaji": "nyu", "accepts": ["nyu"],
+      "group": "yoon", "row": "nya", "audio": "yoon-nyu",
+      "mnemonic": "に (ni) + small ゆ (yu) = NYU. A cat gliding into its cosy NYU (new) home.",
+      "example": { "word": "にゅうがく", "romaji": "nyuugaku", "meaning": "school enrollment" }
+    },
+    {
+      "id": "yoon-nyo", "char": "にょ", "romaji": "nyo", "accepts": ["nyo"],
+      "group": "yoon", "row": "nya", "audio": "yoon-nyo",
+      "mnemonic": "に (ni) + small よ (yo) = NYO. Rare but real — a cat stretching with a 'NYO~' yawn.",
+      "example": { "word": "にょろにょろ", "romaji": "nyoronyoro", "meaning": "wriggling / slithering" }
+    },
+
+    {
+      "id": "yoon-hya", "char": "ひゃ", "romaji": "hya", "accepts": ["hya"],
+      "group": "yoon", "row": "hya", "audio": "yoon-hya",
+      "mnemonic": "ひ (hi) + small や (ya) = HYA. 100 in Japanese is 百 (hyaku) — 'HYA-ku!'",
+      "example": { "word": "ひゃく", "romaji": "hyaku", "meaning": "one hundred" }
+    },
+    {
+      "id": "yoon-hyu", "char": "ひゅ", "romaji": "hyu", "accepts": ["hyu"],
+      "group": "yoon", "row": "hya", "audio": "yoon-hyu",
+      "mnemonic": "ひ (hi) + small ゆ (yu) = HYU. The whoosh sound of wind through a canyon — 'HYU~!'",
+      "example": { "word": "ひゅうひゅう", "romaji": "hyuuhyuu", "meaning": "sound of wind whistling" }
+    },
+    {
+      "id": "yoon-hyo", "char": "ひょ", "romaji": "hyo", "accepts": ["hyo"],
+      "group": "yoon", "row": "hya", "audio": "yoon-hyo",
+      "mnemonic": "ひ (hi) + small よ (yo) = HYO. A startled 'HYO!' like slipping on ice (氷 = hyou = ice).",
+      "example": { "word": "ひょう", "romaji": "hyou", "meaning": "hail / ice" }
+    },
+
+    {
+      "id": "yoon-mya", "char": "みゃ", "romaji": "mya", "accepts": ["mya"],
+      "group": "yoon", "row": "mya", "audio": "yoon-mya",
+      "mnemonic": "み (mi) + small や (ya) = MYA. A minnow doing a little MYA jump out of the water.",
+      "example": { "word": "みゃく", "romaji": "myaku", "meaning": "pulse / vein" }
+    },
+    {
+      "id": "yoon-myu", "char": "みゅ", "romaji": "myu", "accepts": ["myu"],
+      "group": "yoon", "row": "mya", "audio": "yoon-myu",
+      "mnemonic": "み (mi) + small ゆ (yu) = MYU. A musical note floating downstream — MYU-sic!",
+      "example": { "word": "みゅーじっく", "romaji": "myuujikku", "meaning": "music (loanword)" }
+    },
+    {
+      "id": "yoon-myo", "char": "みょ", "romaji": "myo", "accepts": ["myo"],
+      "group": "yoon", "row": "mya", "audio": "yoon-myo",
+      "mnemonic": "み (mi) + small よ (yo) = MYO. A strange (妙 = myou = strange) fish swimming sideways.",
+      "example": { "word": "みょうじ", "romaji": "myouji", "meaning": "surname / family name" }
+    },
+
+    {
+      "id": "yoon-rya", "char": "りゃ", "romaji": "rya", "accepts": ["rya"],
+      "group": "yoon", "row": "rya", "audio": "yoon-rya",
+      "mnemonic": "り (ri) + small や (ya) = RYA. River reeds bending in the RYA~ing wind.",
+      "example": { "word": "りゃくご", "romaji": "ryakugo", "meaning": "abbreviation" }
+    },
+    {
+      "id": "yoon-ryu", "char": "りゅ", "romaji": "ryu", "accepts": ["ryu"],
+      "group": "yoon", "row": "rya", "audio": "yoon-ryu",
+      "mnemonic": "り (ri) + small ゆ (yu) = RYU. A DRAGON (龍 = ryuu) rising from the river. ROAR!",
+      "example": { "word": "りゅう", "romaji": "ryuu", "meaning": "dragon" }
+    },
+    {
+      "id": "yoon-ryo", "char": "りょ", "romaji": "ryo", "accepts": ["ryo"],
+      "group": "yoon", "row": "rya", "audio": "yoon-ryo",
+      "mnemonic": "り (ri) + small よ (yo) = RYO. A traditional Japanese inn (旅館 = ryokan) — 'RYO-kan!'",
+      "example": { "word": "りょこう", "romaji": "ryokou", "meaning": "travel / trip" }
+    },
+
+    {
+      "id": "yoon-gya", "char": "ぎゃ", "romaji": "gya", "accepts": ["gya"],
+      "group": "yoon", "row": "gya", "audio": "yoon-gya",
+      "mnemonic": "ぎ (gi) + small や (ya) = GYA! A wild GYAH! of surprise — louder than KYA.",
+      "example": { "word": "ぎゃく", "romaji": "gyaku", "meaning": "reverse / opposite" }
+    },
+    {
+      "id": "yoon-gyu", "char": "ぎゅ", "romaji": "gyu", "accepts": ["gyu"],
+      "group": "yoon", "row": "gya", "audio": "yoon-gyu",
+      "mnemonic": "ぎ (gi) + small ゆ (yu) = GYU. Gyudon (牛丼) = beef bowl! GYU = beef in Japanese.",
+      "example": { "word": "ぎゅうにく", "romaji": "gyuuniku", "meaning": "beef" }
+    },
+    {
+      "id": "yoon-gyo", "char": "ぎょ", "romaji": "gyo", "accepts": ["gyo"],
+      "group": "yoon", "row": "gya", "audio": "yoon-gyo",
+      "mnemonic": "ぎ (gi) + small よ (yo) = GYO. 魚 (sakana/gyo) means FISH — a big gyoza dumpling with fish inside.",
+      "example": { "word": "ぎょうざ", "romaji": "gyouza", "meaning": "gyoza / dumplings" }
+    },
+
+    {
+      "id": "yoon-ja",  "char": "じゃ", "romaji": "ja",  "accepts": ["ja","zya"],
+      "group": "yoon", "row": "ja", "audio": "yoon-ja",
+      "mnemonic": "じ (ji) + small や (ya) = JA. 'JA-n ken pon!' (Rock-paper-scissors) — game time!",
+      "example": { "word": "じゃあ", "romaji": "jaa", "meaning": "well then / OK then" }
+    },
+    {
+      "id": "yoon-ju",  "char": "じゅ", "romaji": "ju",  "accepts": ["ju","zyu"],
+      "group": "yoon", "row": "ja", "audio": "yoon-ju",
+      "mnemonic": "じ (ji) + small ゆ (yu) = JU. Ten in Japanese is 十 (juu) — count to JU!",
+      "example": { "word": "じゅう", "romaji": "juu", "meaning": "ten" }
+    },
+    {
+      "id": "yoon-jo",  "char": "じょ", "romaji": "jo",  "accepts": ["jo","zyo"],
+      "group": "yoon", "row": "ja", "audio": "yoon-jo",
+      "mnemonic": "じ (ji) + small よ (yo) = JO. A joyful genie: 'JO-y!' granted!",
+      "example": { "word": "じょうず", "romaji": "jouzu", "meaning": "skilled / good at" }
+    },
+
+    {
+      "id": "yoon-bya", "char": "びゃ", "romaji": "bya", "accepts": ["bya"],
+      "group": "yoon", "row": "bya", "audio": "yoon-bya",
+      "mnemonic": "び (bi) + small や (ya) = BYA. A balloon bursting — 'BYA!'",
+      "example": { "word": "びゃく", "romaji": "byaku", "meaning": "white (archaic/rare)" }
+    },
+    {
+      "id": "yoon-byu", "char": "びゅ", "romaji": "byu", "accepts": ["byu"],
+      "group": "yoon", "row": "bya", "audio": "yoon-byu",
+      "mnemonic": "び (bi) + small ゆ (yu) = BYU. A BOOM-ZOOM, something flying past very fast. 'BYU~!'",
+      "example": { "word": "びゅうびゅう", "romaji": "byuubyuu", "meaning": "sound of strong wind" }
+    },
+    {
+      "id": "yoon-byo", "char": "びょ", "romaji": "byo", "accepts": ["byo"],
+      "group": "yoon", "row": "bya", "audio": "yoon-byo",
+      "mnemonic": "び (bi) + small よ (yo) = BYO. 病院 (byouin) = hospital — 'BYO-in' where you get better.",
+      "example": { "word": "びょうき", "romaji": "byouki", "meaning": "illness / sickness" }
+    },
+
+    {
+      "id": "yoon-pya", "char": "ぴゃ", "romaji": "pya", "accepts": ["pya"],
+      "group": "yoon", "row": "pya", "audio": "yoon-pya",
+      "mnemonic": "ぴ (pi) + small や (ya) = PYA. A tiny firework: 'PYA!' — a sparkle pop!",
+      "example": { "word": "ぴゃっと", "romaji": "pyatto", "meaning": "(onomatopoeia for a quick jump/dart)" }
+    },
+    {
+      "id": "yoon-pyu", "char": "ぴゅ", "romaji": "pyu", "accepts": ["pyu"],
+      "group": "yoon", "row": "pya", "audio": "yoon-pyu",
+      "mnemonic": "ぴ (pi) + small ゆ (yu) = PYU. A dart zooming through the air. 'PYU~!' right on target.",
+      "example": { "word": "ぴゅうぴゅう", "romaji": "pyuupyuu", "meaning": "(onomatopoeia for whistling wind)" }
+    },
+    {
+      "id": "yoon-pyo", "char": "ぴょ", "romaji": "pyo", "accepts": ["pyo"],
+      "group": "yoon", "row": "pya", "audio": "yoon-pyo",
+      "mnemonic": "ぴ (pi) + small よ (yo) = PYO. A bunny hopping — 'PYO PYO PYO!' (Japanese hopping sound).",
+      "example": { "word": "ぴょんぴょん", "romaji": "pyonpyon", "meaning": "hopping / bouncing" }
+    }
+  ]
+}

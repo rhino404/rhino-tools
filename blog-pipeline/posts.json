@@ -1,5 +1,77 @@
 [
   {
+    "slug": "how-to-learn-hiragana",
+    "title": "How to Learn Hiragana: The Complete Beginner's Guide",
+    "description": "Learn hiragana fast with this beginner's guide: the gojūon chart, all 104 characters explained, a proven study method, and what comes next.",
+    "excerpt": "Hiragana is the essential first step in Japanese. Learn the 46-character gojūon grid, understand the full 104-character set, and use active recall to read hiragana in 1–2 weeks.",
+    "track": "japanese/foundations",
+    "trackLabel": "Japanese — Foundations",
+    "trackIcon": "🇯🇵",
+    "trackSlug": "japanese",
+    "trackCategory": "japanese",
+    "trackImage": "/images/blog/japanese-blog-hero.webp",
+    "trackImageAlt": "Hiragana chart and Japanese text on a dark background — Ryno Tools Japanese learning",
+    "tags": [
+      "hiragana",
+      "kana",
+      "beginners",
+      "mnemonics",
+      "study-tips"
+    ],
+    "datePublished": "2026-06-11",
+    "dateModified": "2026-06-11",
+    "readingTime": 7,
+    "url": "/blog/how-to-learn-hiragana/"
+  },
+  {
+    "slug": "japanese-particles-guide",
+    "title": "Japanese Particles Explained for Beginners: は, が, を, に, へ, で",
+    "description": "Japanese particles explained for beginners: what は, が, を, に, へ, and で do, why wa and e sound different from their spelling, and how to use each one.",
+    "excerpt": "Particles are the glue of every Japanese sentence — but は is pronounced 'wa', を is pronounced 'o', and が vs は confuses everyone. This guide breaks all six essential N5 particles down clearly, one at a time.",
+    "track": "japanese/grammar",
+    "trackLabel": "Japanese — Grammar",
+    "trackIcon": "🇯🇵",
+    "trackSlug": "japanese",
+    "trackCategory": "japanese",
+    "trackImage": "/images/blog/japanese-blog-hero.webp",
+    "trackImageAlt": "Japanese grammar particles and sentence patterns — Ryno Tools Japanese learning",
+    "tags": [
+      "particles",
+      "grammar",
+      "wa-ga",
+      "n5",
+      "beginners"
+    ],
+    "datePublished": "2026-06-11",
+    "dateModified": "2026-06-11",
+    "readingTime": 8,
+    "url": "/blog/japanese-particles-guide/"
+  },
+  {
+    "slug": "what-is-jlpt-n5",
+    "title": "What Is JLPT N5? The Beginner's Entry Point to Japanese Proficiency",
+    "description": "JLPT N5 is the easiest level of Japan's official language test. Learn what N5 requires, how the test works, scoring, study time, and whether it's worth taking.",
+    "excerpt": "JLPT N5 is the entry-level Japanese proficiency certification — roughly 800 vocabulary words, ~100 kanji, and basic grammar. Here's what the test looks like, how it's scored, and whether it belongs on your study plan.",
+    "track": "japanese/foundations",
+    "trackLabel": "Japanese — Foundations",
+    "trackIcon": "🇯🇵",
+    "trackSlug": "japanese",
+    "trackCategory": "japanese",
+    "trackImage": "/images/blog/japanese-blog-hero.webp",
+    "trackImageAlt": "Hiragana chart and Japanese text on a dark background — Ryno Tools Japanese learning",
+    "tags": [
+      "jlpt",
+      "n5",
+      "japanese-proficiency",
+      "grammar",
+      "beginners"
+    ],
+    "datePublished": "2026-06-11",
+    "dateModified": "2026-06-11",
+    "readingTime": 6,
+    "url": "/blog/what-is-jlpt-n5/"
+  },
+  {
     "slug": "what-is-cicd-beginners-guide",
     "title": "What Is CI/CD? A Beginner's Guide to Continuous Integration and Delivery",
     "description": "CI/CD is the most asked-about DevOps concept in interviews. Learn what CI and CD mean, how pipelines work, and why trunk-based development matters.",

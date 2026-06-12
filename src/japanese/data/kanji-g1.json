@@ -1,0 +1,577 @@
+{
+  "version": "1.0",
+  "id": "kanji-g1",
+  "type": "kanji",
+  "stages": [
+    { "id": "s1", "label": "Numbers (数字)", "lessons": ["numbers"] },
+    { "id": "s2", "label": "Counts & Values (数と価値)", "lessons": ["counts"] },
+    { "id": "s3", "label": "Nature (自然)", "lessons": ["nature"] },
+    { "id": "s4", "label": "Sky & Colors (空と色)", "lessons": ["sky"] },
+    { "id": "s5", "label": "People & Body (人と体)", "lessons": ["people"] },
+    { "id": "s6", "label": "Directions (方向)", "lessons": ["directions"] },
+    { "id": "s7", "label": "Days & Time (曜日と時)", "lessons": ["days"] },
+    { "id": "s8", "label": "School & Community (学校と地域)", "lessons": ["school"] }
+  ],
+  "items": [
+    {
+      "id": "kg1-ichi", "word": "一", "reading": "ichi", "meaning": "one",
+      "onyomi": ["ichi", "itsu"], "kunyomi": ["hitotsu"], "strokes": 1,
+      "accepts": ["ichi", "hitotsu"], "lesson": "numbers", "audio": "",
+      "mnemonic": "A single horizontal stroke — as simple as the number itself.",
+      "example": { "ja": "一日", "reading": "ichinichi", "en": "one day" }
+    },
+    {
+      "id": "kg1-ni", "word": "二", "reading": "ni", "meaning": "two",
+      "onyomi": ["ni"], "kunyomi": ["futatsu"], "strokes": 2,
+      "accepts": ["ni", "futatsu"], "lesson": "numbers", "audio": "",
+      "mnemonic": "Two horizontal strokes stacked — easy as counting on two fingers.",
+      "example": { "ja": "二人", "reading": "futari", "en": "two people" }
+    },
+    {
+      "id": "kg1-san", "word": "三", "reading": "san", "meaning": "three",
+      "onyomi": ["san"], "kunyomi": ["mittsu"], "strokes": 3,
+      "accepts": ["san", "mittsu"], "lesson": "numbers", "audio": "",
+      "mnemonic": "Three horizontal strokes — like tally marks for three.",
+      "example": { "ja": "三月", "reading": "sangatsu", "en": "March" }
+    },
+    {
+      "id": "kg1-shi", "word": "四", "reading": "yon", "meaning": "four",
+      "onyomi": ["shi"], "kunyomi": ["yon", "yottsu"], "strokes": 5,
+      "accepts": ["yon", "shi", "yottsu"], "lesson": "numbers", "audio": "",
+      "mnemonic": "Two legs dangling from a box — four limbs of a table.",
+      "example": { "ja": "四月", "reading": "shigatsu", "en": "April" }
+    },
+    {
+      "id": "kg1-go", "word": "五", "reading": "go", "meaning": "five",
+      "onyomi": ["go"], "kunyomi": ["itsutsu"], "strokes": 4,
+      "accepts": ["go", "itsutsu"], "lesson": "numbers", "audio": "",
+      "mnemonic": "A symbol that looks like a hand with fingers spread — five fingers.",
+      "example": { "ja": "五月", "reading": "gogatsu", "en": "May" }
+    },
+    {
+      "id": "kg1-roku", "word": "六", "reading": "roku", "meaning": "six",
+      "onyomi": ["roku"], "kunyomi": ["muttsu"], "strokes": 4,
+      "accepts": ["roku", "muttsu"], "lesson": "numbers", "audio": "",
+      "mnemonic": "A hat on stilts — two legs holding up the roof of six.",
+      "example": { "ja": "六月", "reading": "rokugatsu", "en": "June" }
+    },
+    {
+      "id": "kg1-shichi", "word": "七", "reading": "nana", "meaning": "seven",
+      "onyomi": ["shichi"], "kunyomi": ["nana", "nanatsu"], "strokes": 2,
+      "accepts": ["nana", "shichi", "nanatsu"], "lesson": "numbers", "audio": "",
+      "mnemonic": "A cross with a hook — like a 7 tilted slightly.",
+      "example": { "ja": "七月", "reading": "shichigatsu", "en": "July" }
+    },
+    {
+      "id": "kg1-hachi", "word": "八", "reading": "hachi", "meaning": "eight",
+      "onyomi": ["hachi"], "kunyomi": ["yattsu"], "strokes": 2,
+      "accepts": ["hachi", "yattsu"], "lesson": "numbers", "audio": "",
+      "mnemonic": "Two strokes spreading outward like a V — the shape of the number 8 split open.",
+      "example": { "ja": "八月", "reading": "hachigatsu", "en": "August" }
+    },
+    {
+      "id": "kg1-kyuu", "word": "九", "reading": "kyuu", "meaning": "nine",
+      "onyomi": ["kyuu", "ku"], "kunyomi": ["kokonotsu"], "strokes": 2,
+      "accepts": ["kyuu", "ku", "kokonotsu"], "lesson": "numbers", "audio": "",
+      "mnemonic": "A bent arm reaching up — almost there, just one more to ten.",
+      "example": { "ja": "九月", "reading": "kugatsu", "en": "September" }
+    },
+    {
+      "id": "kg1-juu", "word": "十", "reading": "juu", "meaning": "ten",
+      "onyomi": ["juu"], "kunyomi": ["too"], "strokes": 2,
+      "accepts": ["juu", "too"], "lesson": "numbers", "audio": "",
+      "mnemonic": "A plus sign — crossing the finish line at ten.",
+      "example": { "ja": "十月", "reading": "juugatsu", "en": "October" }
+    },
+    {
+      "id": "kg1-hyaku", "word": "百", "reading": "hyaku", "meaning": "hundred",
+      "onyomi": ["hyaku"], "kunyomi": [], "strokes": 6,
+      "accepts": ["hyaku"], "lesson": "counts", "audio": "",
+      "mnemonic": "One (一) sitting on top of a white (白) base — a hundred-fold foundation.",
+      "example": { "ja": "三百円", "reading": "sanbyakuen", "en": "300 yen" }
+    },
+    {
+      "id": "kg1-sen", "word": "千", "reading": "sen", "meaning": "thousand",
+      "onyomi": ["sen"], "kunyomi": ["chi"], "strokes": 3,
+      "accepts": ["sen", "chi"], "lesson": "counts", "audio": "",
+      "mnemonic": "A person (人) with a line through the top — a thousand people crossing.",
+      "example": { "ja": "千円", "reading": "sen-en", "en": "1000 yen" }
+    },
+    {
+      "id": "kg1-en", "word": "円", "reading": "en", "meaning": "yen / circle",
+      "onyomi": ["en"], "kunyomi": ["marui"], "strokes": 4,
+      "accepts": ["en"], "lesson": "counts", "audio": "",
+      "mnemonic": "A gate enclosing a person — money circulates in an enclosed market.",
+      "example": { "ja": "五百円", "reading": "gohyakuen", "en": "500 yen" }
+    },
+    {
+      "id": "kg1-kin", "word": "金", "reading": "kane", "meaning": "gold / money",
+      "onyomi": ["kin", "kon"], "kunyomi": ["kane", "kana"], "strokes": 8,
+      "accepts": ["kane", "kin"], "lesson": "counts", "audio": "",
+      "mnemonic": "A king under a roof with two nuggets — gold locked in a vault.",
+      "example": { "ja": "お金", "reading": "okane", "en": "money" }
+    },
+    {
+      "id": "kg1-tama", "word": "玉", "reading": "tama", "meaning": "ball / jewel",
+      "onyomi": ["gyoku"], "kunyomi": ["tama"], "strokes": 5,
+      "accepts": ["tama", "gyoku"], "lesson": "counts", "audio": "",
+      "mnemonic": "A king (王) with a dot — a precious jewel beside the crown.",
+      "example": { "ja": "目玉", "reading": "medama", "en": "eyeball" }
+    },
+    {
+      "id": "kg1-ou", "word": "王", "reading": "ou", "meaning": "king",
+      "onyomi": ["ou"], "kunyomi": [], "strokes": 4,
+      "accepts": ["ou"], "lesson": "counts", "audio": "",
+      "mnemonic": "Three horizontal strokes connected by one vertical — a king connecting heaven, earth, and people.",
+      "example": { "ja": "王様", "reading": "ousama", "en": "king (honorific)" }
+    },
+    {
+      "id": "kg1-chikara", "word": "力", "reading": "chikara", "meaning": "power / strength",
+      "onyomi": ["ryoku", "riki"], "kunyomi": ["chikara"], "strokes": 2,
+      "accepts": ["chikara", "ryoku"], "lesson": "counts", "audio": "",
+      "mnemonic": "A flexed arm — the shape of a muscle showing its strength.",
+      "example": { "ja": "力持ち", "reading": "chikaramochi", "en": "strong person" }
+    },
+    {
+      "id": "kg1-na", "word": "名", "reading": "na", "meaning": "name",
+      "onyomi": ["mei", "myou"], "kunyomi": ["na"], "strokes": 6,
+      "accepts": ["na", "mei"], "lesson": "counts", "audio": "",
+      "mnemonic": "Evening (夕) and mouth (口) — calling someone's name in the dusk.",
+      "example": { "ja": "名前", "reading": "namae", "en": "name" }
+    },
+    {
+      "id": "kg1-hon", "word": "本", "reading": "hon", "meaning": "book / origin",
+      "onyomi": ["hon"], "kunyomi": ["moto"], "strokes": 5,
+      "accepts": ["hon", "moto"], "lesson": "counts", "audio": "",
+      "mnemonic": "A tree (木) with a mark at the root — the origin, the base.",
+      "example": { "ja": "日本語", "reading": "nihongo", "en": "Japanese language" }
+    },
+    {
+      "id": "kg1-bun", "word": "文", "reading": "fumi", "meaning": "text / writing",
+      "onyomi": ["bun", "mon"], "kunyomi": ["fumi"], "strokes": 4,
+      "accepts": ["fumi", "bun"], "lesson": "counts", "audio": "",
+      "mnemonic": "An X with a line through it — like a signature or cross-mark on a document.",
+      "example": { "ja": "文字", "reading": "moji", "en": "character / letter" }
+    },
+    {
+      "id": "kg1-yama", "word": "山", "reading": "yama", "meaning": "mountain",
+      "onyomi": ["san"], "kunyomi": ["yama"], "strokes": 3,
+      "accepts": ["yama", "san"], "lesson": "nature", "audio": "",
+      "mnemonic": "Three peaks rising up — the classic silhouette of a mountain.",
+      "example": { "ja": "富士山", "reading": "fujisan", "en": "Mt. Fuji" }
+    },
+    {
+      "id": "kg1-kawa", "word": "川", "reading": "kawa", "meaning": "river",
+      "onyomi": ["sen"], "kunyomi": ["kawa"], "strokes": 3,
+      "accepts": ["kawa", "sen"], "lesson": "nature", "audio": "",
+      "mnemonic": "Three vertical lines — three streams flowing down together.",
+      "example": { "ja": "川岸", "reading": "kawagishi", "en": "riverbank" }
+    },
+    {
+      "id": "kg1-ta", "word": "田", "reading": "ta", "meaning": "rice field",
+      "onyomi": ["den"], "kunyomi": ["ta"], "strokes": 5,
+      "accepts": ["ta", "den"], "lesson": "nature", "audio": "",
+      "mnemonic": "A grid of paddies seen from above — the classic layout of a rice field.",
+      "example": { "ja": "田んぼ", "reading": "tanbo", "en": "paddy field" }
+    },
+    {
+      "id": "kg1-kai", "word": "貝", "reading": "kai", "meaning": "shellfish",
+      "onyomi": [], "kunyomi": ["kai"], "strokes": 7,
+      "accepts": ["kai"], "lesson": "nature", "audio": "",
+      "mnemonic": "Eyes (目) on a stand — a clam peering up from the sand.",
+      "example": { "ja": "貝殻", "reading": "kaigara", "en": "seashell" }
+    },
+    {
+      "id": "kg1-ishi", "word": "石", "reading": "ishi", "meaning": "stone",
+      "onyomi": ["seki", "shaku"], "kunyomi": ["ishi"], "strokes": 5,
+      "accepts": ["ishi", "seki"], "lesson": "nature", "audio": "",
+      "mnemonic": "A cliff face with a boulder at its base — stone found at the foot of a rock face.",
+      "example": { "ja": "石川", "reading": "ishikawa", "en": "Ishikawa (place name)" }
+    },
+    {
+      "id": "kg1-hayashi", "word": "林", "reading": "hayashi", "meaning": "grove / woods",
+      "onyomi": ["rin"], "kunyomi": ["hayashi"], "strokes": 8,
+      "accepts": ["hayashi", "rin"], "lesson": "nature", "audio": "",
+      "mnemonic": "Two trees side by side — a small cluster of trees, a grove.",
+      "example": { "ja": "林道", "reading": "rindou", "en": "forest road" }
+    },
+    {
+      "id": "kg1-mori", "word": "森", "reading": "mori", "meaning": "forest",
+      "onyomi": ["shin"], "kunyomi": ["mori"], "strokes": 12,
+      "accepts": ["mori", "shin"], "lesson": "nature", "audio": "",
+      "mnemonic": "Three trees together — a full forest is denser than a grove.",
+      "example": { "ja": "森林", "reading": "shinrin", "en": "forest / woods" }
+    },
+    {
+      "id": "kg1-take", "word": "竹", "reading": "take", "meaning": "bamboo",
+      "onyomi": ["chiku"], "kunyomi": ["take"], "strokes": 6,
+      "accepts": ["take", "chiku"], "lesson": "nature", "audio": "",
+      "mnemonic": "Two bamboo stalks with drooping leaves at the top.",
+      "example": { "ja": "竹刀", "reading": "shinai", "en": "bamboo sword" }
+    },
+    {
+      "id": "kg1-kusa", "word": "草", "reading": "kusa", "meaning": "grass / plant",
+      "onyomi": ["sou"], "kunyomi": ["kusa"], "strokes": 9,
+      "accepts": ["kusa", "sou"], "lesson": "nature", "audio": "",
+      "mnemonic": "The grass radical on top of early (早) — grass that grows early and fast.",
+      "example": { "ja": "草原", "reading": "sougen", "en": "grassland / meadow" }
+    },
+    {
+      "id": "kg1-hana", "word": "花", "reading": "hana", "meaning": "flower",
+      "onyomi": ["ka"], "kunyomi": ["hana"], "strokes": 7,
+      "accepts": ["hana", "ka"], "lesson": "nature", "audio": "",
+      "mnemonic": "A plant changing (化) — a flower is a plant transforming into beauty.",
+      "example": { "ja": "花火", "reading": "hanabi", "en": "fireworks" }
+    },
+    {
+      "id": "kg1-sora", "word": "空", "reading": "sora", "meaning": "sky / empty",
+      "onyomi": ["kuu"], "kunyomi": ["sora", "kara", "akeru"], "strokes": 8,
+      "accepts": ["sora", "kuu"], "lesson": "sky", "audio": "",
+      "mnemonic": "A cave (穴) with a craftsman (工) inside — the empty hollow of the sky above.",
+      "example": { "ja": "青空", "reading": "aozora", "en": "blue sky" }
+    },
+    {
+      "id": "kg1-ten", "word": "天", "reading": "ten", "meaning": "heaven / sky",
+      "onyomi": ["ten"], "kunyomi": ["ame", "ama"], "strokes": 4,
+      "accepts": ["ten", "ame"], "lesson": "sky", "audio": "",
+      "mnemonic": "A big person (大) with a line above their head — heaven is above all.",
+      "example": { "ja": "天気", "reading": "tenki", "en": "weather" }
+    },
+    {
+      "id": "kg1-ame", "word": "雨", "reading": "ame", "meaning": "rain",
+      "onyomi": ["u"], "kunyomi": ["ame", "ama"], "strokes": 8,
+      "accepts": ["ame", "u"], "lesson": "sky", "audio": "",
+      "mnemonic": "A cloud with four drops falling down — rain dripping from the sky.",
+      "example": { "ja": "大雨", "reading": "oosame", "en": "heavy rain" }
+    },
+    {
+      "id": "kg1-ki", "word": "気", "reading": "ki", "meaning": "spirit / energy / feeling",
+      "onyomi": ["ki", "ke"], "kunyomi": [], "strokes": 6,
+      "accepts": ["ki", "ke"], "lesson": "sky", "audio": "",
+      "mnemonic": "Steam rising from rice — the vital energy that rises like steam.",
+      "example": { "ja": "天気", "reading": "tenki", "en": "weather" }
+    },
+    {
+      "id": "kg1-oto", "word": "音", "reading": "oto", "meaning": "sound / noise",
+      "onyomi": ["on", "in"], "kunyomi": ["oto", "ne"], "strokes": 9,
+      "accepts": ["oto", "ne", "on"], "lesson": "sky", "audio": "",
+      "mnemonic": "A sun (日) with a line below it — sound waves rippling out from a source.",
+      "example": { "ja": "音楽", "reading": "ongaku", "en": "music" }
+    },
+    {
+      "id": "kg1-aka", "word": "赤", "reading": "aka", "meaning": "red",
+      "onyomi": ["seki", "shaku"], "kunyomi": ["aka", "akai"], "strokes": 7,
+      "accepts": ["aka", "akai"], "lesson": "sky", "audio": "",
+      "mnemonic": "A fire burning at the base of a large person — the red glow of flames.",
+      "example": { "ja": "赤ちゃん", "reading": "akachan", "en": "baby" }
+    },
+    {
+      "id": "kg1-ao", "word": "青", "reading": "ao", "meaning": "blue / green",
+      "onyomi": ["sei", "shou"], "kunyomi": ["ao", "aoi"], "strokes": 8,
+      "accepts": ["ao", "aoi", "sei"], "lesson": "sky", "audio": "",
+      "mnemonic": "Plants (生) growing near a well (丼) — the blue-green of fresh life.",
+      "example": { "ja": "青空", "reading": "aozora", "en": "blue sky" }
+    },
+    {
+      "id": "kg1-shiro", "word": "白", "reading": "shiro", "meaning": "white",
+      "onyomi": ["haku", "byaku"], "kunyomi": ["shiro", "shiroi"], "strokes": 5,
+      "accepts": ["shiro", "shiroi", "haku"], "lesson": "sky", "audio": "",
+      "mnemonic": "A sun (日) on a small base — white like the midday sun.",
+      "example": { "ja": "白黒", "reading": "shirokuro", "en": "black and white" }
+    },
+    {
+      "id": "kg1-yuu", "word": "夕", "reading": "yuu", "meaning": "evening",
+      "onyomi": ["seki"], "kunyomi": ["yuu"], "strokes": 3,
+      "accepts": ["yuu", "seki"], "lesson": "sky", "audio": "",
+      "mnemonic": "A crescent moon shape — the half-moon that appears in the evening.",
+      "example": { "ja": "夕日", "reading": "yuuhi", "en": "setting sun" }
+    },
+    {
+      "id": "kg1-haya", "word": "早", "reading": "haya", "meaning": "early / fast",
+      "onyomi": ["sou", "sa"], "kunyomi": ["haya", "hayai"], "strokes": 6,
+      "accepts": ["haya", "hayai", "sou"], "lesson": "sky", "audio": "",
+      "mnemonic": "The sun (日) just above the horizon — the early morning sun rising fast.",
+      "example": { "ja": "早起き", "reading": "hayaoki", "en": "early rising" }
+    },
+    {
+      "id": "kg1-hito", "word": "人", "reading": "hito", "meaning": "person",
+      "onyomi": ["jin", "nin"], "kunyomi": ["hito"], "strokes": 2,
+      "accepts": ["hito", "jin", "nin"], "lesson": "people", "audio": "",
+      "mnemonic": "Two strokes like a person leaning — a human being walking.",
+      "example": { "ja": "日本人", "reading": "nihonjin", "en": "Japanese person" }
+    },
+    {
+      "id": "kg1-onna", "word": "女", "reading": "onna", "meaning": "woman",
+      "onyomi": ["jo", "nyo"], "kunyomi": ["onna"], "strokes": 3,
+      "accepts": ["onna", "jo"], "lesson": "people", "audio": "",
+      "mnemonic": "A figure kneeling with arms folded — a graceful, seated pose.",
+      "example": { "ja": "女の子", "reading": "onnanoko", "en": "girl" }
+    },
+    {
+      "id": "kg1-otoko", "word": "男", "reading": "otoko", "meaning": "man",
+      "onyomi": ["dan", "nan"], "kunyomi": ["otoko"], "strokes": 7,
+      "accepts": ["otoko", "dan"], "lesson": "people", "audio": "",
+      "mnemonic": "A rice field (田) above strength (力) — a man working hard in the field.",
+      "example": { "ja": "男の子", "reading": "otokonoko", "en": "boy" }
+    },
+    {
+      "id": "kg1-ko", "word": "子", "reading": "ko", "meaning": "child",
+      "onyomi": ["shi", "su"], "kunyomi": ["ko"], "strokes": 3,
+      "accepts": ["ko", "shi"], "lesson": "people", "audio": "",
+      "mnemonic": "A baby wrapped in swaddling clothes with arms reaching out.",
+      "example": { "ja": "子供", "reading": "kodomo", "en": "child / children" }
+    },
+    {
+      "id": "kg1-me", "word": "目", "reading": "me", "meaning": "eye",
+      "onyomi": ["moku", "boku"], "kunyomi": ["me"], "strokes": 5,
+      "accepts": ["me", "moku"], "lesson": "people", "audio": "",
+      "mnemonic": "A rectangle with a line through the middle — an eye turned sideways.",
+      "example": { "ja": "目玉", "reading": "medama", "en": "eyeball" }
+    },
+    {
+      "id": "kg1-kuchi", "word": "口", "reading": "kuchi", "meaning": "mouth",
+      "onyomi": ["kou", "ku"], "kunyomi": ["kuchi"], "strokes": 3,
+      "accepts": ["kuchi", "kou", "ku"], "lesson": "people", "audio": "",
+      "mnemonic": "A simple square — the shape of an open mouth.",
+      "example": { "ja": "人口", "reading": "jinkou", "en": "population" }
+    },
+    {
+      "id": "kg1-mimi", "word": "耳", "reading": "mimi", "meaning": "ear",
+      "onyomi": ["ji"], "kunyomi": ["mimi"], "strokes": 6,
+      "accepts": ["mimi", "ji"], "lesson": "people", "audio": "",
+      "mnemonic": "A box with three lines — the shape of an ear with its folds.",
+      "example": { "ja": "耳鳴り", "reading": "miminari", "en": "ringing in the ears" }
+    },
+    {
+      "id": "kg1-te", "word": "手", "reading": "te", "meaning": "hand",
+      "onyomi": ["shu"], "kunyomi": ["te"], "strokes": 4,
+      "accepts": ["te", "shu"], "lesson": "people", "audio": "",
+      "mnemonic": "Fingers spread above a palm — a hand reaching out.",
+      "example": { "ja": "手紙", "reading": "tegami", "en": "letter (written)" }
+    },
+    {
+      "id": "kg1-ashi", "word": "足", "reading": "ashi", "meaning": "foot / leg",
+      "onyomi": ["soku"], "kunyomi": ["ashi", "tariru"], "strokes": 7,
+      "accepts": ["ashi", "soku"], "lesson": "people", "audio": "",
+      "mnemonic": "A mouth (口) above a stop sign — a foot planted firmly on the ground.",
+      "example": { "ja": "足音", "reading": "ashioto", "en": "footsteps" }
+    },
+    {
+      "id": "kg1-inu", "word": "犬", "reading": "inu", "meaning": "dog",
+      "onyomi": ["ken"], "kunyomi": ["inu"], "strokes": 4,
+      "accepts": ["inu", "ken"], "lesson": "people", "audio": "",
+      "mnemonic": "A big person (大) with an extra dot — a loyal companion at your side.",
+      "example": { "ja": "犬小屋", "reading": "inugoya", "en": "doghouse" }
+    },
+    {
+      "id": "kg1-oo", "word": "大", "reading": "ookii", "meaning": "big / large",
+      "onyomi": ["dai", "tai"], "kunyomi": ["ookii", "oo"], "strokes": 3,
+      "accepts": ["ookii", "oo", "dai"], "lesson": "directions", "audio": "",
+      "mnemonic": "A person (人) with arms stretched wide — as big as you can get.",
+      "example": { "ja": "大学", "reading": "daigaku", "en": "university" }
+    },
+    {
+      "id": "kg1-chii", "word": "小", "reading": "chiisai", "meaning": "small / little",
+      "onyomi": ["shou"], "kunyomi": ["chiisai", "ko", "o"], "strokes": 3,
+      "accepts": ["chiisai", "chii", "shou"], "lesson": "directions", "audio": "",
+      "mnemonic": "A vertical line with two tiny dots — a small mark almost invisible.",
+      "example": { "ja": "小学校", "reading": "shougakkou", "en": "elementary school" }
+    },
+    {
+      "id": "kg1-ue", "word": "上", "reading": "ue", "meaning": "above / up",
+      "onyomi": ["jou"], "kunyomi": ["ue", "noboru"], "strokes": 3,
+      "accepts": ["ue", "jou"], "lesson": "directions", "audio": "",
+      "mnemonic": "A line with a rising mark — pointing upward above the baseline.",
+      "example": { "ja": "上手", "reading": "jouzu", "en": "skilled / good at" }
+    },
+    {
+      "id": "kg1-shita", "word": "下", "reading": "shita", "meaning": "below / down",
+      "onyomi": ["ka", "ge"], "kunyomi": ["shita", "kudaru"], "strokes": 3,
+      "accepts": ["shita", "ka", "ge"], "lesson": "directions", "audio": "",
+      "mnemonic": "A line with a drooping mark — hanging below the baseline.",
+      "example": { "ja": "地下鉄", "reading": "chikatetsu", "en": "subway / underground train" }
+    },
+    {
+      "id": "kg1-hidari", "word": "左", "reading": "hidari", "meaning": "left",
+      "onyomi": ["sa"], "kunyomi": ["hidari"], "strokes": 5,
+      "accepts": ["hidari", "sa"], "lesson": "directions", "audio": "",
+      "mnemonic": "A hand (工) holding a tool — your left hand does the supporting work.",
+      "example": { "ja": "左手", "reading": "hidarite", "en": "left hand" }
+    },
+    {
+      "id": "kg1-migi", "word": "右", "reading": "migi", "meaning": "right",
+      "onyomi": ["u", "yuu"], "kunyomi": ["migi"], "strokes": 5,
+      "accepts": ["migi", "u"], "lesson": "directions", "audio": "",
+      "mnemonic": "A hand near a mouth — your right hand brings food to your mouth.",
+      "example": { "ja": "右手", "reading": "migite", "en": "right hand" }
+    },
+    {
+      "id": "kg1-naka", "word": "中", "reading": "naka", "meaning": "middle / inside",
+      "onyomi": ["chuu"], "kunyomi": ["naka"], "strokes": 4,
+      "accepts": ["naka", "chuu"], "lesson": "directions", "audio": "",
+      "mnemonic": "A vertical line through the center of a box — right in the middle.",
+      "example": { "ja": "中学校", "reading": "chuugakkou", "en": "middle school" }
+    },
+    {
+      "id": "kg1-hairu", "word": "入", "reading": "hairu", "meaning": "enter / go in",
+      "onyomi": ["nyuu"], "kunyomi": ["hairu", "ireru"], "strokes": 2,
+      "accepts": ["hairu", "iru", "nyuu"], "lesson": "directions", "audio": "",
+      "mnemonic": "Two strokes converging inward — like an arrow pointing into a doorway.",
+      "example": { "ja": "入口", "reading": "iriguchi", "en": "entrance" }
+    },
+    {
+      "id": "kg1-deru", "word": "出", "reading": "deru", "meaning": "exit / come out",
+      "onyomi": ["shutsu", "sui"], "kunyomi": ["deru", "dasu"], "strokes": 5,
+      "accepts": ["deru", "de", "shutsu"], "lesson": "directions", "audio": "",
+      "mnemonic": "Two mountains stacked — something rising up and coming out.",
+      "example": { "ja": "出口", "reading": "deguchi", "en": "exit" }
+    },
+    {
+      "id": "kg1-tatsu", "word": "立", "reading": "tatsu", "meaning": "stand",
+      "onyomi": ["ritsu", "ryuu"], "kunyomi": ["tatsu"], "strokes": 5,
+      "accepts": ["tatsu", "ritsu"], "lesson": "directions", "audio": "",
+      "mnemonic": "A person standing on a surface — upright on two legs.",
+      "example": { "ja": "立ち止まる", "reading": "tachidomaru", "en": "stop / stand still" }
+    },
+    {
+      "id": "kg1-hi", "word": "日", "reading": "nichi", "meaning": "day / sun",
+      "onyomi": ["nichi", "jitsu"], "kunyomi": ["hi", "ka"], "strokes": 4,
+      "accepts": ["nichi", "hi", "ka"], "lesson": "days", "audio": "",
+      "mnemonic": "A rectangle with a line through it — the sun at its zenith.",
+      "example": { "ja": "日曜日", "reading": "nichiyoubi", "en": "Sunday" }
+    },
+    {
+      "id": "kg1-tsuki", "word": "月", "reading": "tsuki", "meaning": "moon / month",
+      "onyomi": ["getsu", "gatsu"], "kunyomi": ["tsuki"], "strokes": 4,
+      "accepts": ["tsuki", "getsu", "gatsu"], "lesson": "days", "audio": "",
+      "mnemonic": "A crescent with two lines inside — the moon with its shadows.",
+      "example": { "ja": "月曜日", "reading": "getsuyoubi", "en": "Monday" }
+    },
+    {
+      "id": "kg1-hi-fire", "word": "火", "reading": "hi", "meaning": "fire",
+      "onyomi": ["ka"], "kunyomi": ["hi", "ho"], "strokes": 4,
+      "accepts": ["hi", "ka", "ho"], "lesson": "days", "audio": "",
+      "mnemonic": "A person with two flames at the sides — fire dancing around a figure.",
+      "example": { "ja": "火曜日", "reading": "kayoubi", "en": "Tuesday" }
+    },
+    {
+      "id": "kg1-mizu", "word": "水", "reading": "mizu", "meaning": "water",
+      "onyomi": ["sui"], "kunyomi": ["mizu"], "strokes": 4,
+      "accepts": ["mizu", "sui"], "lesson": "days", "audio": "",
+      "mnemonic": "A central stream with two tributaries flowing beside it.",
+      "example": { "ja": "水曜日", "reading": "suiyoubi", "en": "Wednesday" }
+    },
+    {
+      "id": "kg1-ki-tree", "word": "木", "reading": "ki", "meaning": "tree / wood",
+      "onyomi": ["moku", "boku"], "kunyomi": ["ki", "ko"], "strokes": 4,
+      "accepts": ["ki", "moku", "boku"], "lesson": "days", "audio": "",
+      "mnemonic": "A cross with roots at the bottom and branches at the top — a tree.",
+      "example": { "ja": "木曜日", "reading": "mokuyoubi", "en": "Thursday" }
+    },
+    {
+      "id": "kg1-tsuchi", "word": "土", "reading": "tsuchi", "meaning": "earth / soil",
+      "onyomi": ["do", "to"], "kunyomi": ["tsuchi"], "strokes": 3,
+      "accepts": ["tsuchi", "do", "to"], "lesson": "days", "audio": "",
+      "mnemonic": "A cross planted in the ground — a marker stuck into the earth.",
+      "example": { "ja": "土曜日", "reading": "doyoubi", "en": "Saturday" }
+    },
+    {
+      "id": "kg1-nen", "word": "年", "reading": "nen", "meaning": "year",
+      "onyomi": ["nen"], "kunyomi": ["toshi"], "strokes": 6,
+      "accepts": ["nen", "toshi"], "lesson": "days", "audio": "",
+      "mnemonic": "A person beneath a harvest — the cycle of planting and harvest marks a year.",
+      "example": { "ja": "今年", "reading": "kotoshi", "en": "this year" }
+    },
+    {
+      "id": "kg1-saki", "word": "先", "reading": "saki", "meaning": "ahead / previous",
+      "onyomi": ["sen"], "kunyomi": ["saki"], "strokes": 6,
+      "accepts": ["saki", "sen"], "lesson": "days", "audio": "",
+      "mnemonic": "A person with legs first — stepping ahead, going before.",
+      "example": { "ja": "先生", "reading": "sensei", "en": "teacher" }
+    },
+    {
+      "id": "kg1-sei", "word": "生", "reading": "sei", "meaning": "life / birth",
+      "onyomi": ["sei", "shou"], "kunyomi": ["ikiru", "umareru", "nama"], "strokes": 5,
+      "accepts": ["sei", "shou", "ikiru", "nama"], "lesson": "days", "audio": "",
+      "mnemonic": "A plant sprouting from the earth — life emerging from the ground.",
+      "example": { "ja": "先生", "reading": "sensei", "en": "teacher" }
+    },
+    {
+      "id": "kg1-yasu", "word": "休", "reading": "yasumu", "meaning": "rest / break",
+      "onyomi": ["kyuu"], "kunyomi": ["yasumu"], "strokes": 6,
+      "accepts": ["yasumu", "yasu", "kyuu"], "lesson": "days", "audio": "",
+      "mnemonic": "A person (人) leaning against a tree (木) — resting in the shade.",
+      "example": { "ja": "夏休み", "reading": "natsuyasumi", "en": "summer vacation" }
+    },
+    {
+      "id": "kg1-gaku", "word": "学", "reading": "manabu", "meaning": "study / learning",
+      "onyomi": ["gaku"], "kunyomi": ["manabu"], "strokes": 8,
+      "accepts": ["manabu", "gaku"], "lesson": "school", "audio": "",
+      "mnemonic": "Hands guiding a child beneath a roof — a teacher in a school.",
+      "example": { "ja": "学校", "reading": "gakkou", "en": "school" }
+    },
+    {
+      "id": "kg1-miru", "word": "見", "reading": "miru", "meaning": "see / look",
+      "onyomi": ["ken"], "kunyomi": ["miru", "miseru"], "strokes": 7,
+      "accepts": ["miru", "ken"], "lesson": "school", "audio": "",
+      "mnemonic": "An eye (目) on legs — walking around to see things.",
+      "example": { "ja": "見学", "reading": "kengaku", "en": "field trip / study tour" }
+    },
+    {
+      "id": "kg1-kou", "word": "校", "reading": "kou", "meaning": "school",
+      "onyomi": ["kou"], "kunyomi": [], "strokes": 10,
+      "accepts": ["kou"], "lesson": "school", "audio": "",
+      "mnemonic": "A tree (木) on the left, an intersecting structure on the right — a school building complex.",
+      "example": { "ja": "学校", "reading": "gakkou", "en": "school" }
+    },
+    {
+      "id": "kg1-ito", "word": "糸", "reading": "ito", "meaning": "thread / string",
+      "onyomi": ["shi"], "kunyomi": ["ito"], "strokes": 6,
+      "accepts": ["ito", "shi"], "lesson": "school", "audio": "",
+      "mnemonic": "A coiled spool of thread with loops at the top — silk thread.",
+      "example": { "ja": "糸口", "reading": "itoguchi", "en": "clue / thread end" }
+    },
+    {
+      "id": "kg1-ji", "word": "字", "reading": "ji", "meaning": "character / letter",
+      "onyomi": ["ji"], "kunyomi": ["aza"], "strokes": 6,
+      "accepts": ["ji"], "lesson": "school", "audio": "",
+      "mnemonic": "A child (子) under a roof (宀) — a child in a house learning to write.",
+      "example": { "ja": "文字", "reading": "moji", "en": "character / letter" }
+    },
+    {
+      "id": "kg1-kuruma", "word": "車", "reading": "kuruma", "meaning": "car / vehicle",
+      "onyomi": ["sha"], "kunyomi": ["kuruma"], "strokes": 7,
+      "accepts": ["kuruma", "sha"], "lesson": "school", "audio": "",
+      "mnemonic": "A wheel seen from the front with an axle — a cart's wheel.",
+      "example": { "ja": "電車", "reading": "densha", "en": "train" }
+    },
+    {
+      "id": "kg1-tadashii", "word": "正", "reading": "tadashii", "meaning": "correct / straight",
+      "onyomi": ["sei", "shou"], "kunyomi": ["tadashii", "tada"], "strokes": 5,
+      "accepts": ["tadashii", "tada", "sei", "shou"], "lesson": "school", "audio": "",
+      "mnemonic": "Stopping at a target — arriving at the right answer.",
+      "example": { "ja": "正月", "reading": "shougatsu", "en": "New Year" }
+    },
+    {
+      "id": "kg1-mura", "word": "村", "reading": "mura", "meaning": "village",
+      "onyomi": ["son"], "kunyomi": ["mura"], "strokes": 7,
+      "accepts": ["mura", "son"], "lesson": "school", "audio": "",
+      "mnemonic": "Trees (木) by a measuring rod (寸) — the woodlands marking a small village.",
+      "example": { "ja": "村人", "reading": "murabito", "en": "villager" }
+    },
+    {
+      "id": "kg1-mushi", "word": "虫", "reading": "mushi", "meaning": "insect / bug",
+      "onyomi": ["chuu"], "kunyomi": ["mushi"], "strokes": 6,
+      "accepts": ["mushi", "chuu"], "lesson": "school", "audio": "",
+      "mnemonic": "A snake or worm coiled up — a creeping creature.",
+      "example": { "ja": "虫歯", "reading": "mushiba", "en": "tooth decay / cavity" }
+    },
+    {
+      "id": "kg1-machi", "word": "町", "reading": "machi", "meaning": "town",
+      "onyomi": ["chou"], "kunyomi": ["machi"], "strokes": 7,
+      "accepts": ["machi", "chou"], "lesson": "school", "audio": "",
+      "mnemonic": "A rice field (田) beside a nail or peg (丁) — the pegged-out plots of a town.",
+      "example": { "ja": "下町", "reading": "shitamachi", "en": "old town / downtown" }
+    }
+  ]
+}

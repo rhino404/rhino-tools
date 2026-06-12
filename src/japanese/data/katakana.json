@@ -1,0 +1,667 @@
+{
+  "version": "1.0",
+  "id": "katakana",
+  "type": "kana",
+  "stages": [
+    { "id": "s1", "label": "Vowels",   "rows": ["a"] },
+    { "id": "s2", "label": "K & S",    "rows": ["ka", "sa"] },
+    { "id": "s3", "label": "T & N",    "rows": ["ta", "na"] },
+    { "id": "s4", "label": "H & M",    "rows": ["ha", "ma"] },
+    { "id": "s5", "label": "Y, R & W", "rows": ["ya", "ra", "wa", "n"] },
+    { "id": "s6", "label": "Voiced",   "rows": ["ga", "za", "da", "ba"] },
+    { "id": "s7", "label": "P sounds", "rows": ["pa"] },
+    { "id": "s8", "label": "Combos",   "rows": ["kya", "sha", "cha", "nya", "hya", "mya", "rya", "gya", "ja", "bya", "pya"] }
+  ],
+  "kana": [
+    {
+      "id": "kata-a", "char": "ア", "romaji": "a", "accepts": ["a"],
+      "group": "gojuon", "row": "a", "audio": "",
+      "mnemonic": "Looks like an 'A' with the crossbar removed — two strokes forming a tent, saying AH!",
+      "example": { "word": "アイスクリーム", "romaji": "aisukuriimu", "meaning": "ice cream" }
+    },
+    {
+      "id": "kata-i", "char": "イ", "romaji": "i", "accepts": ["i"],
+      "group": "gojuon", "row": "a", "audio": "",
+      "mnemonic": "Two diagonal strokes leaning like slanted pillars — EE, they lean on each other.",
+      "example": { "word": "イタリア", "romaji": "itaria", "meaning": "Italy" }
+    },
+    {
+      "id": "kata-u", "char": "ウ", "romaji": "u", "accepts": ["u"],
+      "group": "gojuon", "row": "a", "audio": "",
+      "mnemonic": "A U-shape with a peak on top — like a cowl hood saying OOH.",
+      "example": { "word": "ウイスキー", "romaji": "uisukii", "meaning": "whiskey" }
+    },
+    {
+      "id": "kata-e", "char": "エ", "romaji": "e", "accepts": ["e"],
+      "group": "gojuon", "row": "a", "audio": "",
+      "mnemonic": "Two horizontal bars with a vertical center — an H-beam or engineering bracket; EH, it's solid.",
+      "example": { "word": "エアコン", "romaji": "eakon", "meaning": "air conditioner" }
+    },
+    {
+      "id": "kata-o", "char": "オ", "romaji": "o", "accepts": ["o"],
+      "group": "gojuon", "row": "a", "audio": "",
+      "mnemonic": "Like a crosshair with an extra stroke — aim it and say OH!",
+      "example": { "word": "オレンジ", "romaji": "orenji", "meaning": "orange" }
+    },
+
+    {
+      "id": "kata-ka", "char": "カ", "romaji": "ka", "accepts": ["ka"],
+      "group": "gojuon", "row": "ka", "audio": "",
+      "mnemonic": "Like a katana blade — swift diagonal stroke; KA-ching!",
+      "example": { "word": "カメラ", "romaji": "kamera", "meaning": "camera" }
+    },
+    {
+      "id": "kata-ki", "char": "キ", "romaji": "ki", "accepts": ["ki"],
+      "group": "gojuon", "row": "ka", "audio": "",
+      "mnemonic": "Three horizontal bars like KEY teeth — 'ki' sounds exactly like 'key'.",
+      "example": { "word": "キー", "romaji": "kii", "meaning": "key" }
+    },
+    {
+      "id": "kata-ku", "char": "ク", "romaji": "ku", "accepts": ["ku"],
+      "group": "gojuon", "row": "ka", "audio": "",
+      "mnemonic": "An open beak — like a cuckoo's cry; coo-KOO!",
+      "example": { "word": "クッキー", "romaji": "kukkii", "meaning": "cookie" }
+    },
+    {
+      "id": "kata-ke", "char": "ケ", "romaji": "ke", "accepts": ["ke"],
+      "group": "gojuon", "row": "ka", "audio": "",
+      "mnemonic": "Like the letter K with an extra foot — K is for KE.",
+      "example": { "word": "ケーキ", "romaji": "keeki", "meaning": "cake" }
+    },
+    {
+      "id": "kata-ko", "char": "コ", "romaji": "ko", "accepts": ["ko"],
+      "group": "gojuon", "row": "ka", "audio": "",
+      "mnemonic": "Two right-angle brackets — the corner of a box; CO-rner.",
+      "example": { "word": "コーヒー", "romaji": "koohii", "meaning": "coffee" }
+    },
+
+    {
+      "id": "kata-sa", "char": "サ", "romaji": "sa", "accepts": ["sa"],
+      "group": "gojuon", "row": "sa", "audio": "",
+      "mnemonic": "Like a stick figure saluting — arm up, say SAH!",
+      "example": { "word": "サンドイッチ", "romaji": "sandoicchi", "meaning": "sandwich" }
+    },
+    {
+      "id": "kata-shi", "char": "シ", "romaji": "shi", "accepts": ["shi"],
+      "group": "gojuon", "row": "sa", "audio": "",
+      "mnemonic": "Three strokes like a shih tzu dog face — nose + two eyes; shi-tzu!",
+      "example": { "word": "シール", "romaji": "shiiru", "meaning": "sticker / seal" }
+    },
+    {
+      "id": "kata-su", "char": "ス", "romaji": "su", "accepts": ["su"],
+      "group": "gojuon", "row": "sa", "audio": "",
+      "mnemonic": "Like a swan gliding — curved neck dipping into water; smooth SU.",
+      "example": { "word": "スーパー", "romaji": "suupaa", "meaning": "supermarket" }
+    },
+    {
+      "id": "kata-se", "char": "セ", "romaji": "se", "accepts": ["se"],
+      "group": "gojuon", "row": "sa", "audio": "",
+      "mnemonic": "Like an upside-down F with a horizontal base — a chair tipped over; SE-t down.",
+      "example": { "word": "セーター", "romaji": "seetaa", "meaning": "sweater" }
+    },
+    {
+      "id": "kata-so", "char": "ソ", "romaji": "so", "accepts": ["so"],
+      "group": "gojuon", "row": "sa", "audio": "",
+      "mnemonic": "A single swooping stroke with a dot — like a soccer ball being kicked; SO!",
+      "example": { "word": "ソファ", "romaji": "sofa", "meaning": "sofa" }
+    },
+
+    {
+      "id": "kata-ta", "char": "タ", "romaji": "ta", "accepts": ["ta"],
+      "group": "gojuon", "row": "ta", "audio": "",
+      "mnemonic": "Like a flag tilting in the wind — two strokes form a flapping flag; TA-ta!",
+      "example": { "word": "タクシー", "romaji": "takushii", "meaning": "taxi" }
+    },
+    {
+      "id": "kata-chi", "char": "チ", "romaji": "chi", "accepts": ["chi"],
+      "group": "gojuon", "row": "ta", "audio": "",
+      "mnemonic": "Like a fish hook or checkmark — CHECKmate; chi!",
+      "example": { "word": "チーズ", "romaji": "chiizu", "meaning": "cheese" }
+    },
+    {
+      "id": "kata-tsu", "char": "ツ", "romaji": "tsu", "accepts": ["tsu"],
+      "group": "gojuon", "row": "ta", "audio": "",
+      "mnemonic": "Three short strokes like footprints — TSUrf's up, step into the waves!",
+      "example": { "word": "ツアー", "romaji": "tsuaa", "meaning": "tour" }
+    },
+    {
+      "id": "kata-te", "char": "テ", "romaji": "te", "accepts": ["te"],
+      "group": "gojuon", "row": "ta", "audio": "",
+      "mnemonic": "Like a TV antenna — T shape with a crossbar on top; TElevision!",
+      "example": { "word": "テレビ", "romaji": "terebi", "meaning": "television" }
+    },
+    {
+      "id": "kata-to", "char": "ト", "romaji": "to", "accepts": ["to"],
+      "group": "gojuon", "row": "ta", "audio": "",
+      "mnemonic": "Like a totem pole spike — tall vertical with a small peg sticking right; TO-tem.",
+      "example": { "word": "トマト", "romaji": "tomato", "meaning": "tomato" }
+    },
+
+    {
+      "id": "kata-na", "char": "ナ", "romaji": "na", "accepts": ["na"],
+      "group": "gojuon", "row": "na", "audio": "",
+      "mnemonic": "Like a + cross being nailed — NAILing it.",
+      "example": { "word": "ナイフ", "romaji": "naifu", "meaning": "knife" }
+    },
+    {
+      "id": "kata-ni", "char": "ニ", "romaji": "ni", "accepts": ["ni"],
+      "group": "gojuon", "row": "na", "audio": "",
+      "mnemonic": "Two clean horizontal lines — NI-ce and simple; two knees side by side.",
+      "example": { "word": "ニコチン", "romaji": "nikochin", "meaning": "nicotine" }
+    },
+    {
+      "id": "kata-nu", "char": "ヌ", "romaji": "nu", "accepts": ["nu"],
+      "group": "gojuon", "row": "na", "audio": "",
+      "mnemonic": "Like noodles swirling in a bowl — NUdel (German for noodle).",
+      "example": { "word": "ヌードル", "romaji": "nuudoru", "meaning": "noodle" }
+    },
+    {
+      "id": "kata-ne", "char": "ネ", "romaji": "ne", "accepts": ["ne"],
+      "group": "gojuon", "row": "na", "audio": "",
+      "mnemonic": "Like a network of crossing lines — NEtwork.",
+      "example": { "word": "ネクタイ", "romaji": "nekutai", "meaning": "necktie" }
+    },
+    {
+      "id": "kata-no", "char": "ノ", "romaji": "no", "accepts": ["no"],
+      "group": "gojuon", "row": "na", "audio": "",
+      "mnemonic": "A single diagonal swoosh — NO debate; just one stroke says it all.",
+      "example": { "word": "ノート", "romaji": "nooto", "meaning": "notebook" }
+    },
+
+    {
+      "id": "kata-ha", "char": "ハ", "romaji": "ha", "accepts": ["ha"],
+      "group": "gojuon", "row": "ha", "audio": "",
+      "mnemonic": "Two strokes spreading apart like legs — HA-HA! spread your arms wide.",
+      "example": { "word": "ハンバーガー", "romaji": "hanbaagaa", "meaning": "hamburger" }
+    },
+    {
+      "id": "kata-hi", "char": "ヒ", "romaji": "hi", "accepts": ["hi"],
+      "group": "gojuon", "row": "ha", "audio": "",
+      "mnemonic": "Like a flag on a pole — wave HI!",
+      "example": { "word": "ヒーロー", "romaji": "hiiroo", "meaning": "hero" }
+    },
+    {
+      "id": "kata-fu", "char": "フ", "romaji": "fu", "accepts": ["fu", "hu"],
+      "group": "gojuon", "row": "ha", "audio": "",
+      "mnemonic": "Like a hook or fishing line — phi/FU; a hook that says 'phew!'",
+      "example": { "word": "フランス", "romaji": "furansu", "meaning": "France" }
+    },
+    {
+      "id": "kata-he", "char": "ヘ", "romaji": "he", "accepts": ["he"],
+      "group": "gojuon", "row": "ha", "audio": "",
+      "mnemonic": "Like a mountain peak — one stroke forming an inverted V; the HEight.",
+      "example": { "word": "ヘリコプター", "romaji": "herikoputaa", "meaning": "helicopter" }
+    },
+    {
+      "id": "kata-ho", "char": "ホ", "romaji": "ho", "accepts": ["ho"],
+      "group": "gojuon", "row": "ha", "audio": "",
+      "mnemonic": "Like a holy cross with extra strokes — HO HO HO! Santa's cross.",
+      "example": { "word": "ホテル", "romaji": "hoteru", "meaning": "hotel" }
+    },
+
+    {
+      "id": "kata-ma", "char": "マ", "romaji": "ma", "accepts": ["ma"],
+      "group": "gojuon", "row": "ma", "audio": "",
+      "mnemonic": "Like an upside-down f with a hook — MAMA's needle and thread.",
+      "example": { "word": "マスク", "romaji": "masuku", "meaning": "mask" }
+    },
+    {
+      "id": "kata-mi", "char": "ミ", "romaji": "mi", "accepts": ["mi"],
+      "group": "gojuon", "row": "ma", "audio": "",
+      "mnemonic": "Three parallel horizontal strokes — ME ME ME! Three cat whiskers.",
+      "example": { "word": "ミルク", "romaji": "miruku", "meaning": "milk" }
+    },
+    {
+      "id": "kata-mu", "char": "ム", "romaji": "mu", "accepts": ["mu"],
+      "group": "gojuon", "row": "ma", "audio": "",
+      "mnemonic": "Like a bull's head with a horn curving up — MOO → mu.",
+      "example": { "word": "ムービー", "romaji": "muubii", "meaning": "movie" }
+    },
+    {
+      "id": "kata-me", "char": "メ", "romaji": "me", "accepts": ["me"],
+      "group": "gojuon", "row": "ma", "audio": "",
+      "mnemonic": "Like an X with an extra stroke — MESSY crossing lines; ME!",
+      "example": { "word": "メモ", "romaji": "memo", "meaning": "memo" }
+    },
+    {
+      "id": "kata-mo", "char": "モ", "romaji": "mo", "accepts": ["mo"],
+      "group": "gojuon", "row": "ma", "audio": "",
+      "mnemonic": "Like MORE horizontal bars stacked on a pole — MORE and MORE.",
+      "example": { "word": "モデル", "romaji": "moderu", "meaning": "model" }
+    },
+
+    {
+      "id": "kata-ya", "char": "ヤ", "romaji": "ya", "accepts": ["ya"],
+      "group": "gojuon", "row": "ya", "audio": "",
+      "mnemonic": "Like a yardstick with a hook — measuring tool at an angle; YArd.",
+      "example": { "word": "ヤード", "romaji": "yaado", "meaning": "yard" }
+    },
+    {
+      "id": "kata-yu", "char": "ユ", "romaji": "yu", "accepts": ["yu"],
+      "group": "gojuon", "row": "ya", "audio": "",
+      "mnemonic": "Like a U-shaped bathtub — soak in the YU-bune (Japanese bath).",
+      "example": { "word": "ユーモア", "romaji": "yuumoa", "meaning": "humor" }
+    },
+    {
+      "id": "kata-yo", "char": "ヨ", "romaji": "yo", "accepts": ["yo"],
+      "group": "gojuon", "row": "ya", "audio": "",
+      "mnemonic": "Like the letter E rotated 90° — YOga pose with three arms extended.",
+      "example": { "word": "ヨーグルト", "romaji": "yooguruto", "meaning": "yogurt" }
+    },
+
+    {
+      "id": "kata-ra", "char": "ラ", "romaji": "ra", "accepts": ["ra"],
+      "group": "gojuon", "row": "ra", "audio": "",
+      "mnemonic": "Like a hockey stick or rabbit ear curving out — RA-bbit.",
+      "example": { "word": "ラーメン", "romaji": "raamen", "meaning": "ramen" }
+    },
+    {
+      "id": "kata-ri", "char": "リ", "romaji": "ri", "accepts": ["ri"],
+      "group": "gojuon", "row": "ra", "audio": "",
+      "mnemonic": "Two vertical pillars leaning inward — reeds growing in a pond; RI.",
+      "example": { "word": "リモコン", "romaji": "rimokon", "meaning": "remote control" }
+    },
+    {
+      "id": "kata-ru", "char": "ル", "romaji": "ru", "accepts": ["ru"],
+      "group": "gojuon", "row": "ra", "audio": "",
+      "mnemonic": "Like a ruler that bends at the bottom — bent ruler; RUler.",
+      "example": { "word": "ルール", "romaji": "ruuru", "meaning": "rule" }
+    },
+    {
+      "id": "kata-re", "char": "レ", "romaji": "re", "accepts": ["re"],
+      "group": "gojuon", "row": "ra", "audio": "",
+      "mnemonic": "Like a relay baton — the sweeping single stroke passes it forward; RE-lay.",
+      "example": { "word": "レストラン", "romaji": "resutoran", "meaning": "restaurant" }
+    },
+    {
+      "id": "kata-ro", "char": "ロ", "romaji": "ro", "accepts": ["ro"],
+      "group": "gojuon", "row": "ra", "audio": "",
+      "mnemonic": "Like a robot's square head — the enclosed rectangle is a robot mouth; RO-bot.",
+      "example": { "word": "ロボット", "romaji": "robotto", "meaning": "robot" }
+    },
+
+    {
+      "id": "kata-wa", "char": "ワ", "romaji": "wa", "accepts": ["wa"],
+      "group": "gojuon", "row": "wa", "audio": "",
+      "mnemonic": "Like a wine glass — stem at bottom, bowl curving up; WA!",
+      "example": { "word": "ワイン", "romaji": "wain", "meaning": "wine" }
+    },
+    {
+      "id": "kata-wo", "char": "ヲ", "romaji": "wo", "accepts": ["wo", "o"],
+      "group": "gojuon", "row": "wa", "audio": "",
+      "mnemonic": "Like a twisted ワ (wa) — used almost exclusively as the particle を (wo/o).",
+      "example": { "word": "ヲタク", "romaji": "otaku", "meaning": "otaku (enthusiast)" }
+    },
+
+    {
+      "id": "kata-n", "char": "ン", "romaji": "n", "accepts": ["n"],
+      "group": "gojuon", "row": "n", "audio": "",
+      "mnemonic": "Like a reversed N or a fishhook facing left — the nasal N at the end of words.",
+      "example": { "word": "パン", "romaji": "pan", "meaning": "bread" }
+    },
+
+    {
+      "id": "kata-ga", "char": "ガ", "romaji": "ga", "accepts": ["ga"],
+      "group": "dakuten", "row": "ga", "audio": "",
+      "mnemonic": "カ (ka) with two dots — K voiced becomes G; think GAME (ゲーム).",
+      "example": { "word": "ガム", "romaji": "gamu", "meaning": "gum" }
+    },
+    {
+      "id": "kata-gi", "char": "ギ", "romaji": "gi", "accepts": ["gi"],
+      "group": "dakuten", "row": "ga", "audio": "",
+      "mnemonic": "キ (ki) with two dots — voiced; think GUITAR (ギター).",
+      "example": { "word": "ギター", "romaji": "gitaa", "meaning": "guitar" }
+    },
+    {
+      "id": "kata-gu", "char": "グ", "romaji": "gu", "accepts": ["gu"],
+      "group": "dakuten", "row": "ga", "audio": "",
+      "mnemonic": "ク (ku) with two dots — voiced; GROUP (グループ).",
+      "example": { "word": "グループ", "romaji": "guruupu", "meaning": "group" }
+    },
+    {
+      "id": "kata-ge", "char": "ゲ", "romaji": "ge", "accepts": ["ge"],
+      "group": "dakuten", "row": "ga", "audio": "",
+      "mnemonic": "ケ (ke) with two dots — voiced; GAME (ゲーム).",
+      "example": { "word": "ゲーム", "romaji": "geemu", "meaning": "game" }
+    },
+    {
+      "id": "kata-go", "char": "ゴ", "romaji": "go", "accepts": ["go"],
+      "group": "dakuten", "row": "ga", "audio": "",
+      "mnemonic": "コ (ko) with two dots — voiced; GO! GOAL (ゴール).",
+      "example": { "word": "ゴール", "romaji": "gooru", "meaning": "goal" }
+    },
+
+    {
+      "id": "kata-za", "char": "ザ", "romaji": "za", "accepts": ["za"],
+      "group": "dakuten", "row": "za", "audio": "",
+      "mnemonic": "サ (sa) with two dots — S voiced to Z; PIZZA (ピザ).",
+      "example": { "word": "ザラザラ", "romaji": "zarazara", "meaning": "rough / grainy (texture)" }
+    },
+    {
+      "id": "kata-ji", "char": "ジ", "romaji": "ji", "accepts": ["ji"],
+      "group": "dakuten", "row": "za", "audio": "",
+      "mnemonic": "シ (shi) with two dots — SH voiced to J; JEANS (ジーンズ).",
+      "example": { "word": "ジーンズ", "romaji": "jiinzu", "meaning": "jeans" }
+    },
+    {
+      "id": "kata-zu", "char": "ズ", "romaji": "zu", "accepts": ["zu"],
+      "group": "dakuten", "row": "za", "audio": "",
+      "mnemonic": "ス (su) with two dots — S voiced to Z; ZOOM (ズーム).",
+      "example": { "word": "ズーム", "romaji": "zuumu", "meaning": "zoom" }
+    },
+    {
+      "id": "kata-ze", "char": "ゼ", "romaji": "ze", "accepts": ["ze"],
+      "group": "dakuten", "row": "za", "audio": "",
+      "mnemonic": "セ (se) with two dots — voiced; ZERO (ゼロ).",
+      "example": { "word": "ゼロ", "romaji": "zero", "meaning": "zero" }
+    },
+    {
+      "id": "kata-zo", "char": "ゾ", "romaji": "zo", "accepts": ["zo"],
+      "group": "dakuten", "row": "za", "audio": "",
+      "mnemonic": "ソ (so) with two dots — voiced; ZONE (ゾーン).",
+      "example": { "word": "ゾーン", "romaji": "zoon", "meaning": "zone" }
+    },
+
+    {
+      "id": "kata-da", "char": "ダ", "romaji": "da", "accepts": ["da"],
+      "group": "dakuten", "row": "da", "audio": "",
+      "mnemonic": "タ (ta) with two dots — T voiced to D; DANCE (ダンス).",
+      "example": { "word": "ダンス", "romaji": "dansu", "meaning": "dance" }
+    },
+    {
+      "id": "kata-di", "char": "ヂ", "romaji": "ji", "accepts": ["ji", "di"],
+      "group": "dakuten", "row": "da", "audio": "",
+      "mnemonic": "チ (chi) with two dots — same sound as ジ (ji); rare in modern writing.",
+      "example": { "word": "ハナヂ", "romaji": "hanadji", "meaning": "nosebleed (dialectal)" }
+    },
+    {
+      "id": "kata-du", "char": "ヅ", "romaji": "zu", "accepts": ["zu", "du"],
+      "group": "dakuten", "row": "da", "audio": "",
+      "mnemonic": "ツ (tsu) with two dots — same sound as ズ (zu); rare in modern writing.",
+      "example": { "word": "ヒヅメ", "romaji": "hizume", "meaning": "hoof (dialectal)" }
+    },
+    {
+      "id": "kata-de", "char": "デ", "romaji": "de", "accepts": ["de"],
+      "group": "dakuten", "row": "da", "audio": "",
+      "mnemonic": "テ (te) with two dots — T voiced to D; DESK (デスク).",
+      "example": { "word": "デスク", "romaji": "desuku", "meaning": "desk" }
+    },
+    {
+      "id": "kata-do", "char": "ド", "romaji": "do", "accepts": ["do"],
+      "group": "dakuten", "row": "da", "audio": "",
+      "mnemonic": "ト (to) with two dots — T voiced to D; DOOR (ドア).",
+      "example": { "word": "ドア", "romaji": "doa", "meaning": "door" }
+    },
+
+    {
+      "id": "kata-ba", "char": "バ", "romaji": "ba", "accepts": ["ba"],
+      "group": "dakuten", "row": "ba", "audio": "",
+      "mnemonic": "ハ (ha) with two dots — H voiced to B; BUS (バス).",
+      "example": { "word": "バス", "romaji": "basu", "meaning": "bus" }
+    },
+    {
+      "id": "kata-bi", "char": "ビ", "romaji": "bi", "accepts": ["bi"],
+      "group": "dakuten", "row": "ba", "audio": "",
+      "mnemonic": "ヒ (hi) with two dots — H voiced to B; BEER (ビール).",
+      "example": { "word": "ビール", "romaji": "biiru", "meaning": "beer" }
+    },
+    {
+      "id": "kata-bu", "char": "ブ", "romaji": "bu", "accepts": ["bu"],
+      "group": "dakuten", "row": "ba", "audio": "",
+      "mnemonic": "フ (fu) with two dots — voiced; BOOTS (ブーツ).",
+      "example": { "word": "ブーツ", "romaji": "buutsu", "meaning": "boots" }
+    },
+    {
+      "id": "kata-be", "char": "ベ", "romaji": "be", "accepts": ["be"],
+      "group": "dakuten", "row": "ba", "audio": "",
+      "mnemonic": "ヘ (he) with two dots — mountain peak voiced; BED (ベッド).",
+      "example": { "word": "ベッド", "romaji": "beddo", "meaning": "bed" }
+    },
+    {
+      "id": "kata-bo", "char": "ボ", "romaji": "bo", "accepts": ["bo"],
+      "group": "dakuten", "row": "ba", "audio": "",
+      "mnemonic": "ホ (ho) with two dots — cross voiced; BOAT (ボート).",
+      "example": { "word": "ボート", "romaji": "booto", "meaning": "boat" }
+    },
+
+    {
+      "id": "kata-pa", "char": "パ", "romaji": "pa", "accepts": ["pa"],
+      "group": "handakuten", "row": "pa", "audio": "",
+      "mnemonic": "ハ (ha) with a circle (°) — the ring makes it P; PASTA (パスタ).",
+      "example": { "word": "パスタ", "romaji": "pasuta", "meaning": "pasta" }
+    },
+    {
+      "id": "kata-pi", "char": "ピ", "romaji": "pi", "accepts": ["pi"],
+      "group": "handakuten", "row": "pa", "audio": "",
+      "mnemonic": "ヒ (hi) with a circle — P with a flag; PIZZA (ピザ).",
+      "example": { "word": "ピザ", "romaji": "piza", "meaning": "pizza" }
+    },
+    {
+      "id": "kata-pu", "char": "プ", "romaji": "pu", "accepts": ["pu"],
+      "group": "handakuten", "row": "pa", "audio": "",
+      "mnemonic": "フ (fu) with a circle — hook with a bubble; POOL (プール).",
+      "example": { "word": "プール", "romaji": "puuru", "meaning": "pool" }
+    },
+    {
+      "id": "kata-pe", "char": "ペ", "romaji": "pe", "accepts": ["pe"],
+      "group": "handakuten", "row": "pa", "audio": "",
+      "mnemonic": "ヘ (he) with a circle — mountain peak with a dot; PEN (ペン).",
+      "example": { "word": "ペン", "romaji": "pen", "meaning": "pen" }
+    },
+    {
+      "id": "kata-po", "char": "ポ", "romaji": "po", "accepts": ["po"],
+      "group": "handakuten", "row": "pa", "audio": "",
+      "mnemonic": "ホ (ho) with a circle — cross with a bubble; PORTAL (ポータル).",
+      "example": { "word": "ポスター", "romaji": "posutaa", "meaning": "poster" }
+    },
+
+    {
+      "id": "kata-kya", "char": "キャ", "romaji": "kya", "accepts": ["kya"],
+      "group": "yoon", "row": "kya", "audio": "",
+      "mnemonic": "キ (ki) + small ャ = KYA — キャンプ (camp).",
+      "example": { "word": "キャンプ", "romaji": "kyampu", "meaning": "camp" }
+    },
+    {
+      "id": "kata-kyu", "char": "キュ", "romaji": "kyu", "accepts": ["kyu"],
+      "group": "yoon", "row": "kya", "audio": "",
+      "mnemonic": "キ (ki) + small ュ = KYU — キューバ (Cuba).",
+      "example": { "word": "キューバ", "romaji": "kyuuba", "meaning": "Cuba" }
+    },
+    {
+      "id": "kata-kyo", "char": "キョ", "romaji": "kyo", "accepts": ["kyo"],
+      "group": "yoon", "row": "kya", "audio": "",
+      "mnemonic": "キ (ki) + small ョ = KYO — キョウリュウ (dinosaur).",
+      "example": { "word": "キョウリュウ", "romaji": "kyouryuu", "meaning": "dinosaur" }
+    },
+
+    {
+      "id": "kata-sha", "char": "シャ", "romaji": "sha", "accepts": ["sha"],
+      "group": "yoon", "row": "sha", "audio": "",
+      "mnemonic": "シ (shi) + small ャ = SHA — シャワー (shower).",
+      "example": { "word": "シャワー", "romaji": "shawaa", "meaning": "shower" }
+    },
+    {
+      "id": "kata-shu", "char": "シュ", "romaji": "shu", "accepts": ["shu"],
+      "group": "yoon", "row": "sha", "audio": "",
+      "mnemonic": "シ (shi) + small ュ = SHU — シューズ (shoes).",
+      "example": { "word": "シューズ", "romaji": "shuuzu", "meaning": "shoes" }
+    },
+    {
+      "id": "kata-sho", "char": "ショ", "romaji": "sho", "accepts": ["sho"],
+      "group": "yoon", "row": "sha", "audio": "",
+      "mnemonic": "シ (shi) + small ョ = SHO — ショッピング (shopping).",
+      "example": { "word": "ショッピング", "romaji": "shoppingu", "meaning": "shopping" }
+    },
+
+    {
+      "id": "kata-cha", "char": "チャ", "romaji": "cha", "accepts": ["cha"],
+      "group": "yoon", "row": "cha", "audio": "",
+      "mnemonic": "チ (chi) + small ャ = CHA — チャンス (chance).",
+      "example": { "word": "チャンス", "romaji": "chansu", "meaning": "chance" }
+    },
+    {
+      "id": "kata-chu", "char": "チュ", "romaji": "chu", "accepts": ["chu"],
+      "group": "yoon", "row": "cha", "audio": "",
+      "mnemonic": "チ (chi) + small ュ = CHU — チューリップ (tulip).",
+      "example": { "word": "チューリップ", "romaji": "chuurippu", "meaning": "tulip" }
+    },
+    {
+      "id": "kata-cho", "char": "チョ", "romaji": "cho", "accepts": ["cho"],
+      "group": "yoon", "row": "cha", "audio": "",
+      "mnemonic": "チ (chi) + small ョ = CHO — チョコレート (chocolate).",
+      "example": { "word": "チョコレート", "romaji": "chokoreeto", "meaning": "chocolate" }
+    },
+
+    {
+      "id": "kata-nya", "char": "ニャ", "romaji": "nya", "accepts": ["nya"],
+      "group": "yoon", "row": "nya", "audio": "",
+      "mnemonic": "ニ (ni) + small ャ = NYA — ニャンコ (kitty-cat).",
+      "example": { "word": "ニャンコ", "romaji": "nyanko", "meaning": "kitty (cat)" }
+    },
+    {
+      "id": "kata-nyu", "char": "ニュ", "romaji": "nyu", "accepts": ["nyu"],
+      "group": "yoon", "row": "nya", "audio": "",
+      "mnemonic": "ニ (ni) + small ュ = NYU — ニュース (news).",
+      "example": { "word": "ニュース", "romaji": "nyuusu", "meaning": "news" }
+    },
+    {
+      "id": "kata-nyo", "char": "ニョ", "romaji": "nyo", "accepts": ["nyo"],
+      "group": "yoon", "row": "nya", "audio": "",
+      "mnemonic": "ニ (ni) + small ョ = NYO — ニョッキ (gnocchi).",
+      "example": { "word": "ニョッキ", "romaji": "nyokki", "meaning": "gnocchi" }
+    },
+
+    {
+      "id": "kata-hya", "char": "ヒャ", "romaji": "hya", "accepts": ["hya"],
+      "group": "yoon", "row": "hya", "audio": "",
+      "mnemonic": "ヒ (hi) + small ャ = HYA — ヒャク (one hundred).",
+      "example": { "word": "ヒャク", "romaji": "hyaku", "meaning": "one hundred" }
+    },
+    {
+      "id": "kata-hyu", "char": "ヒュ", "romaji": "hyu", "accepts": ["hyu"],
+      "group": "yoon", "row": "hya", "audio": "",
+      "mnemonic": "ヒ (hi) + small ュ = HYU — ヒューズ (fuse).",
+      "example": { "word": "ヒューズ", "romaji": "hyuuzu", "meaning": "fuse" }
+    },
+    {
+      "id": "kata-hyo", "char": "ヒョ", "romaji": "hyo", "accepts": ["hyo"],
+      "group": "yoon", "row": "hya", "audio": "",
+      "mnemonic": "ヒ (hi) + small ョ = HYO — ヒョウ (leopard).",
+      "example": { "word": "ヒョウ", "romaji": "hyou", "meaning": "leopard" }
+    },
+
+    {
+      "id": "kata-mya", "char": "ミャ", "romaji": "mya", "accepts": ["mya"],
+      "group": "yoon", "row": "mya", "audio": "",
+      "mnemonic": "ミ (mi) + small ャ = MYA — ミャンマー (Myanmar).",
+      "example": { "word": "ミャンマー", "romaji": "Myanmaa", "meaning": "Myanmar" }
+    },
+    {
+      "id": "kata-myu", "char": "ミュ", "romaji": "myu", "accepts": ["myu"],
+      "group": "yoon", "row": "mya", "audio": "",
+      "mnemonic": "ミ (mi) + small ュ = MYU — ミュージック (music).",
+      "example": { "word": "ミュージック", "romaji": "myuujikku", "meaning": "music" }
+    },
+    {
+      "id": "kata-myo", "char": "ミョ", "romaji": "myo", "accepts": ["myo"],
+      "group": "yoon", "row": "mya", "audio": "",
+      "mnemonic": "ミ (mi) + small ョ = MYO — ミョウガ (Japanese ginger).",
+      "example": { "word": "ミョウガ", "romaji": "myouga", "meaning": "myoga ginger" }
+    },
+
+    {
+      "id": "kata-rya", "char": "リャ", "romaji": "rya", "accepts": ["rya"],
+      "group": "yoon", "row": "rya", "audio": "",
+      "mnemonic": "リ (ri) + small ャ = RYA — リャマ (llama).",
+      "example": { "word": "リャマ", "romaji": "ryama", "meaning": "llama" }
+    },
+    {
+      "id": "kata-ryu", "char": "リュ", "romaji": "ryu", "accepts": ["ryu"],
+      "group": "yoon", "row": "rya", "audio": "",
+      "mnemonic": "リ (ri) + small ュ = RYU — リュック (backpack).",
+      "example": { "word": "リュック", "romaji": "ryukku", "meaning": "backpack" }
+    },
+    {
+      "id": "kata-ryo", "char": "リョ", "romaji": "ryo", "accepts": ["ryo"],
+      "group": "yoon", "row": "rya", "audio": "",
+      "mnemonic": "リ (ri) + small ョ = RYO — リョカン (Japanese inn).",
+      "example": { "word": "リョカン", "romaji": "ryokan", "meaning": "ryokan inn" }
+    },
+
+    {
+      "id": "kata-gya", "char": "ギャ", "romaji": "gya", "accepts": ["gya"],
+      "group": "yoon", "row": "gya", "audio": "",
+      "mnemonic": "ギ (gi) + small ャ = GYA — ギャップ (gap).",
+      "example": { "word": "ギャップ", "romaji": "gyappu", "meaning": "gap" }
+    },
+    {
+      "id": "kata-gyu", "char": "ギュ", "romaji": "gyu", "accepts": ["gyu"],
+      "group": "yoon", "row": "gya", "audio": "",
+      "mnemonic": "ギ (gi) + small ュ = GYU — ギュウニュウ (cow's milk).",
+      "example": { "word": "ギュウニュウ", "romaji": "gyuunyuu", "meaning": "cow's milk" }
+    },
+    {
+      "id": "kata-gyo", "char": "ギョ", "romaji": "gyo", "accepts": ["gyo"],
+      "group": "yoon", "row": "gya", "audio": "",
+      "mnemonic": "ギ (gi) + small ョ = GYO — ギョウザ (dumplings).",
+      "example": { "word": "ギョウザ", "romaji": "gyouza", "meaning": "gyoza dumplings" }
+    },
+
+    {
+      "id": "kata-ja", "char": "ジャ", "romaji": "ja", "accepts": ["ja"],
+      "group": "yoon", "row": "ja", "audio": "",
+      "mnemonic": "ジ (ji) + small ャ = JA — ジャズ (jazz).",
+      "example": { "word": "ジャズ", "romaji": "jazu", "meaning": "jazz" }
+    },
+    {
+      "id": "kata-ju", "char": "ジュ", "romaji": "ju", "accepts": ["ju"],
+      "group": "yoon", "row": "ja", "audio": "",
+      "mnemonic": "ジ (ji) + small ュ = JU — ジュース (juice).",
+      "example": { "word": "ジュース", "romaji": "juusu", "meaning": "juice" }
+    },
+    {
+      "id": "kata-jo", "char": "ジョ", "romaji": "jo", "accepts": ["jo"],
+      "group": "yoon", "row": "ja", "audio": "",
+      "mnemonic": "ジ (ji) + small ョ = JO — ジョギング (jogging).",
+      "example": { "word": "ジョギング", "romaji": "jogingu", "meaning": "jogging" }
+    },
+
+    {
+      "id": "kata-bya", "char": "ビャ", "romaji": "bya", "accepts": ["bya"],
+      "group": "yoon", "row": "bya", "audio": "",
+      "mnemonic": "ビ (bi) + small ャ = BYA — ビャクダン (sandalwood).",
+      "example": { "word": "ビャクダン", "romaji": "byakudan", "meaning": "sandalwood" }
+    },
+    {
+      "id": "kata-byu", "char": "ビュ", "romaji": "byu", "accepts": ["byu"],
+      "group": "yoon", "row": "bya", "audio": "",
+      "mnemonic": "ビ (bi) + small ュ = BYU — ビュッフェ (buffet).",
+      "example": { "word": "ビュッフェ", "romaji": "byuffe", "meaning": "buffet" }
+    },
+    {
+      "id": "kata-byo", "char": "ビョ", "romaji": "byo", "accepts": ["byo"],
+      "group": "yoon", "row": "bya", "audio": "",
+      "mnemonic": "ビ (bi) + small ョ = BYO — ビョウイン (hospital).",
+      "example": { "word": "ビョウイン", "romaji": "byouin", "meaning": "hospital" }
+    },
+
+    {
+      "id": "kata-pya", "char": "ピャ", "romaji": "pya", "accepts": ["pya"],
+      "group": "yoon", "row": "pya", "audio": "",
+      "mnemonic": "ピ (pi) + small ャ = PYA — rare combination, found in some loanwords.",
+      "example": { "word": "ピャノ", "romaji": "pyano", "meaning": "piano (regional)" }
+    },
+    {
+      "id": "kata-pyu", "char": "ピュ", "romaji": "pyu", "accepts": ["pyu"],
+      "group": "yoon", "row": "pya", "audio": "",
+      "mnemonic": "ピ (pi) + small ュ = PYU — ピュア (pure).",
+      "example": { "word": "ピュア", "romaji": "pyua", "meaning": "pure" }
+    },
+    {
+      "id": "kata-pyo", "char": "ピョ", "romaji": "pyo", "accepts": ["pyo"],
+      "group": "yoon", "row": "pya", "audio": "",
+      "mnemonic": "ピ (pi) + small ョ = PYO — ピョンヤン (Pyongyang).",
+      "example": { "word": "ピョンヤン", "romaji": "Pyonyan", "meaning": "Pyongyang" }
+    }
+  ]
+}

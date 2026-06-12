@@ -1,0 +1,1158 @@
+/* =============================================================
+   japanese.css — Learn Japanese interactive experience
+   Standalone styles for /japanese/. Depends on theme.css tokens.
+   ============================================================= */
+
+/* Ensure [hidden] beats any display: flex/inline-flex from classes */
+[hidden] { display: none !important; }
+
+/* ── Page layout ─────────────────────────────────────────────── */
+.jp-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+/* ── Compact hero ─────────────────────────────────────────────── */
+.jp-hero {
+  text-align: center;
+  padding: 1.75rem 1rem 0.75rem;
+}
+.jp-hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: var(--color-text-primary);
+}
+.jp-hero-tagline {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  margin: 0 auto;
+  max-width: 460px;
+  line-height: 1.5;
+}
+
+.jp-soon-badge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.4rem;
+  border-radius: 999px;
+  background: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+/* ── Track header (progress bar + CTA) ───────────────────────── */
+.jp-track-header {
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 0 1rem;
+}
+.jp-progress-bar-wrap { flex: 1; min-width: 180px; }
+.jp-progress-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 0.35rem;
+}
+.jp-progress-hint {
+  font-size: 0.68rem;
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+  margin-top: 0.3rem;
+}
+.jp-progress-bar-track {
+  height: 7px;
+  background: var(--color-border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.jp-progress-bar-fill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+.jp-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.5rem;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.925rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(26, 175, 94, 0.3);
+}
+.jp-cta-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+.jp-cta-btn:active { transform: translateY(0); }
+
+/* ── Color legend ─────────────────────────────────────────────── */
+.jp-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  align-items: center;
+  padding: 0.6rem 0 0.9rem;
+}
+.jp-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.jp-legend-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1.5px solid;
+  flex-shrink: 0;
+}
+.jp-legend-dot--unseen { border-color: var(--color-border); background: transparent; }
+.jp-legend-dot--seen   { border-color: #f59e0b; background: rgba(245, 158, 11, 0.15); }
+.jp-legend-dot--mastered { border-color: #22c55e; background: rgba(34, 197, 94, 0.15); }
+.jp-legend-dot--locked { border-color: var(--color-border); background: var(--color-border); opacity: 0.4; }
+
+/* ── Gojūon CSS grid ──────────────────────────────────────────── */
+.jp-grid-section { margin-bottom: 2rem; }
+.jp-grid-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 0 0.6rem;
+  padding: 0.3rem 0;
+  border-top: 1.5px solid var(--color-border);
+}
+.jp-grid-section-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+.jp-grid-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 6px;
+}
+.jp-grid-scroll::-webkit-scrollbar { display: none; }
+.jp-grid {
+  display: grid;
+  gap: 4px;
+  min-width: 260px;
+}
+.jp-grid[data-cols="5"] { grid-template-columns: repeat(5, 1fr); }
+.jp-grid[data-cols="3"] { grid-template-columns: repeat(3, 1fr); }
+
+.jp-grid-col-header {
+  font-size: 0.63rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: 0.2rem 0 0.3rem;
+}
+.jp-grid-row-label {
+  font-size: 0.62rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.3rem;
+  font-family: monospace;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.jp-grid-gap { /* empty — keeps column alignment */ }
+
+/* Grid cells */
+.jp-grid-cell {
+  aspect-ratio: 1 / 1.18;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s, background 0.18s, border-color 0.18s;
+  user-select: none;
+  background: var(--color-surface);
+  padding: 0.2rem;
+  min-width: 0;
+}
+.jp-grid-cell:hover:not([disabled]):not(.jp-grid-cell--locked) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  border-color: var(--color-accent);
+}
+.jp-grid-cell:active:not([disabled]) { transform: translateY(0); }
+
+.jp-cell-char {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+.jp-cell-romaji {
+  font-size: clamp(0.7rem, 1.25vw, 0.875rem);
+  color: var(--color-text-secondary);
+  line-height: 1;
+  margin-top: 6px;
+  letter-spacing: 0.03em;
+}
+
+/* Cell states */
+.jp-grid-cell--locked {
+  opacity: 0.22;
+  cursor: default;
+  filter: grayscale(1);
+}
+.jp-grid-cell--seen {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+}
+.jp-grid-cell--seen .jp-cell-char { color: #f59e0b; }
+.jp-grid-cell--mastered {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.10);
+}
+.jp-grid-cell--mastered .jp-cell-char { color: #22c55e; }
+
+body.light-mode .jp-grid-cell--seen     { background: rgba(245, 158, 11, 0.12); }
+body.light-mode .jp-grid-cell--mastered { background: rgba(34, 197, 94, 0.13); }
+
+/* ── Session controls row (mode tabs + difficulty) ───────────── */
+.jp-session-controls {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.jp-session-controls .jp-mode-tabs { margin-bottom: 0; flex-wrap: wrap; }
+
+/* ── Difficulty segmented control ─────────────────────────────── */
+.jp-difficulty {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+.jp-difficulty-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-text-secondary);
+  margin-right: 0.2rem;
+  white-space: nowrap;
+}
+.jp-diff-btn {
+  padding: 0.28rem 0.65rem;
+  border-radius: 6px;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.jp-diff-btn:hover:not(.active) { border-color: rgba(255,255,255,0.5); color: var(--color-text); }
+.jp-diff-btn.active {
+  border-color: #fff;
+  background: #fff;
+  color: #111;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.2);
+}
+.jp-diff-btn.active::before {
+  content: '✓ ';
+}
+
+/* ── Collapsible blocks (Learn card) ──────────────────────────── */
+.jp-collapse-block {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.jp-reveal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-accent);
+  background: rgba(26, 175, 94, 0.10);
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, background 0.15s;
+}
+.jp-reveal-btn:hover { opacity: 0.85; }
+.jp-reveal-btn--secondary {
+  border-color: var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+.jp-reveal-btn--secondary:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+.jp-collapse-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.28s ease, opacity 0.22s ease;
+}
+.jp-collapse-body.is-open {
+  max-height: 600px;
+  opacity: 1;
+}
+
+/* ── Hint (Type mode) ─────────────────────────────────────────── */
+.jp-hint-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+.jp-hint-btn {
+  padding: 0.3rem 0.85rem;
+  border-radius: 7px;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.jp-hint-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.jp-hint--hidden { display: none; }
+
+/* ── Session view ─────────────────────────────────────────────── */
+.jp-session-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0 1rem;
+  border-bottom: 1.5px solid var(--color-border);
+  margin-bottom: 1rem;
+}
+.jp-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.jp-back-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.jp-session-title {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  flex: 1;
+  font-weight: 500;
+}
+
+/* ── Mode tabs ────────────────────────────────────────────────── */
+.jp-mode-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+.jp-mode-tab {
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.jp-mode-tab:hover:not(:disabled):not(.active) { border-color: rgba(255,255,255,0.5); color: var(--color-text); }
+.jp-mode-tab.active {
+  border-color: #fff;
+  background: #fff;
+  color: #111;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(255,255,255,0.25);
+}
+.jp-mode-tab:disabled { opacity: 0.4; cursor: default; }
+
+/* ── Game area ────────────────────────────────────────────────── */
+.jp-game-area {
+  border-radius: 16px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface);
+  padding: 1.75rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+}
+.jp-game-area.correct-effect   { box-shadow: 0 0 0 3px #22c55e; transition: box-shadow 0.15s; }
+.jp-game-area.incorrect-effect { box-shadow: 0 0 0 3px #ef4444; transition: box-shadow 0.15s; }
+
+/* ── Learn card ───────────────────────────────────────────────── */
+.jp-learn-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 480px;
+}
+.jp-kana-display {
+  font-size: clamp(5rem, 15vw, 8rem);
+  line-height: 1;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  transition: opacity 0.2s;
+  max-width: 100%;
+}
+.jp-kana-display--md { font-size: clamp(2.8rem, 8.5vw, 4rem); }
+.jp-kana-display--sm { font-size: clamp(1.6rem, 4.5vw, 2.4rem); }
+.jp-kana-display--xs { font-size: clamp(1.1rem, 3.5vw, 1.5rem); line-height: 1.5; white-space: pre-wrap; text-align: center; }
+.jp-romaji-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}
+.jp-mnemonic {
+  font-size: 1.02rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  font-style: italic;
+  max-width: 380px;
+  margin: 0;
+}
+.jp-grammar-note {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-surface-raised);
+  border-radius: 0 6px 6px 0;
+}
+.jp-vocab-meaning {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.jp-example {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+}
+.jp-example .jp-ex-word { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.15rem; }
+.jp-example .jp-ex-meta { color: var(--color-text-secondary); font-size: 0.9rem; }
+
+/* Audio button */
+.jp-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.jp-audio-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.jp-audio-btn:disabled { opacity: 0.4; cursor: default; }
+
+/* Card nav */
+.jp-card-nav { display: flex; align-items: center; gap: 1.5rem; margin-top: 0.5rem; }
+.jp-card-nav-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.jp-card-nav-btn:hover { border-color: var(--color-accent); }
+.jp-card-nav-btn--primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+.jp-card-nav-btn--primary:hover { opacity: 0.9; }
+.jp-card-counter { font-size: 0.8rem; color: var(--color-text-secondary); }
+
+/* ── Match game ───────────────────────────────────────────────── */
+.jp-match-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.jp-match-choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 380px;
+  margin-top: 0.5rem;
+}
+.jp-choice-btn {
+  padding: 0.75rem 0.5rem;
+  border-radius: 10px;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s, transform 0.1s;
+  min-height: 52px;
+  white-space: normal;
+  line-height: 1.3;
+  word-break: break-word;
+}
+.jp-choice-btn:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+.jp-choice-btn:disabled { cursor: default; }
+.jp-choice-btn.correct {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.15);
+  color: #16a34a;
+}
+.jp-choice-btn.incorrect {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+}
+
+/* ── Type game ────────────────────────────────────────────────── */
+.jp-type-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+.jp-type-input-row { display: flex; gap: 0.5rem; width: 100%; }
+.jp-type-input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: 1.1rem;
+  font-family: inherit;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.jp-type-input:focus { border-color: var(--color-accent); }
+.jp-type-input.correct  { border-color: #22c55e; color: #16a34a; }
+.jp-type-input.incorrect { border-color: #ef4444; color: #dc2626; }
+.jp-type-submit {
+  padding: 0.7rem 1.1rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.jp-type-submit:hover { opacity: 0.9; }
+.jp-type-feedback {
+  font-size: 0.9rem;
+  min-height: 1.5em;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+.jp-type-feedback.correct  { color: #22c55e; }
+.jp-type-feedback.incorrect { color: #ef4444; }
+.jp-hint { font-size: 0.9rem; color: var(--color-text-secondary); text-align: center; }
+
+/* ── Session progress bar ─────────────────────────────────────── */
+.jp-session-bar { width: 100%; max-width: 400px; }
+.jp-session-bar-track {
+  height: 5px;
+  background: var(--color-border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.jp-session-bar-fill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+.jp-session-label {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+/* ── Score screen ─────────────────────────────────────────────── */
+.jp-score-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+.jp-score-big {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+}
+.jp-score-label { font-size: 1rem; color: var(--color-text-secondary); }
+.jp-score-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.jp-score-btn {
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.jp-score-btn:hover { border-color: var(--color-accent); }
+.jp-score-btn--primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+.jp-score-btn--primary:hover { opacity: 0.9; }
+
+/* ── Deck layout (vocab) ──────────────────────────────────────── */
+.jp-deck-section { margin-bottom: 1.75rem; }
+.jp-deck-section-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  margin: 0 0 0.6rem;
+  padding: 0.3rem 0;
+  border-top: 1.5px solid var(--color-border);
+}
+.jp-deck-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+.jp-deck-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 1rem 1.1rem 0.9rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.12s, box-shadow 0.12s, border-color 0.18s, background 0.18s;
+}
+.jp-deck-item:hover:not([disabled]):not(.jp-deck-item--locked) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  border-color: var(--color-accent);
+}
+.jp-deck-item:active:not([disabled]) { transform: translateY(0); }
+.jp-deck-item[disabled] { opacity: 0.4; cursor: default; }
+.jp-deck-item--seen {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+}
+.jp-deck-item--mastered {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.10);
+}
+.jp-deck-item--locked { opacity: 0.22; cursor: default; filter: grayscale(1); }
+body.light-mode .jp-deck-item--seen     { background: rgba(245, 158, 11, 0.12); }
+body.light-mode .jp-deck-item--mastered { background: rgba(34, 197, 94, 0.13); }
+.jp-deck-word {
+  font-size: 1.55rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+}
+.jp-deck-reading { font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 0.25rem; }
+.jp-deck-meaning { font-size: 0.9rem; color: var(--color-text-primary); flex: 1; line-height: 1.4; }
+.jp-deck-state-dot {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.7rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+}
+.jp-deck-state-dot--seen     { border-color: #f59e0b; background: rgba(245, 158, 11, 0.6); }
+.jp-deck-state-dot--mastered { border-color: #22c55e; background: rgba(34, 197, 94, 0.7); }
+
+/* ── Soon panel ───────────────────────────────────────────────── */
+.jp-soon-panel {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-radius: 16px;
+  border: 1.5px dashed var(--color-border);
+  color: var(--color-text-secondary);
+  margin-top: 1.5rem;
+}
+.jp-soon-icon { font-size: 2.5rem; display: block; margin-bottom: 0.75rem; }
+.jp-soon-panel h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 0.5rem;
+}
+.jp-soon-panel p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ── Empty / loading ──────────────────────────────────────────── */
+.jp-empty {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  padding: 2rem 1rem;
+}
+.jp-empty p { margin: 0.25rem 0; }
+
+/* ── Kana entrance animation ──────────────────────────────────── */
+@keyframes jp-kana-in {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.jp-kana-anim { animation: jp-kana-in 0.18s ease-out; }
+
+/* ── Mobile ───────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .jp-cta-btn { width: 100%; justify-content: center; }
+  .jp-grid[data-cols="5"] { grid-template-columns: repeat(5, 1fr); }
+  .jp-grid[data-cols="3"] { grid-template-columns: repeat(3, 1fr); }
+  .jp-cell-char { font-size: clamp(1.8rem, 8.5vw, 2.6rem); }
+  .jp-cell-romaji { font-size: clamp(0.6rem, 2vw, 0.75rem); }
+  .jp-match-choices { max-width: 100%; }
+  .jp-kana-display { font-size: clamp(4rem, 18vw, 6rem); }
+  .jp-kana-display--md { font-size: clamp(2.4rem, 10vw, 3.4rem); }
+  .jp-kana-display--sm { font-size: clamp(1.4rem, 5.5vw, 2.2rem); }
+  .jp-kana-display--xs { font-size: clamp(0.95rem, 3vw, 1.25rem); }
+  .jp-deck-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jp-kana-anim { animation: none; }
+  .jp-cta-btn, .jp-grid-cell, .jp-choice-btn { transition: none; }
+  .jp-collapse-body { transition: none; }
+}
+
+/* ── Home back button spacing ─────────────────────────────────── */
+#jp-home-back-btn { margin: 0.75rem 0 0; }
+
+/* ── Continue CTA (path view) ─────────────────────────────────── */
+.jp-continue-cta {
+  display: block;
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  margin: 1rem 0 0.25rem;
+  border-radius: 12px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: opacity 0.15s, transform 0.12s;
+}
+.jp-continue-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+
+/* ── Path view — level nodes ──────────────────────────────────── */
+.jp-path {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.jp-level-node {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: transform 0.12s, box-shadow 0.12s, border-color 0.18s;
+}
+.jp-level-node:hover:not([disabled]) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  border-color: var(--color-accent);
+}
+.jp-level-node--locked {
+  opacity: 0.55;
+  cursor: default;
+  filter: grayscale(0.4);
+}
+.jp-level-node-icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 2.5rem;
+  text-align: center;
+}
+.jp-level-node-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.jp-level-node-top {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.jp-level-node-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.jp-level-node-sublabel {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+}
+.jp-level-node-blurb {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+.jp-level-node-hint {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  opacity: 0.8;
+}
+.jp-level-node-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.jp-level-node-progress .jp-progress-bar-track {
+  flex: 1;
+  height: 6px;
+}
+.jp-level-node-pct {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+.jp-level-node-arrow {
+  font-size: 1.4rem;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+.jp-level-node-lock {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ── Level view — skill cards ─────────────────────────────────── */
+.jp-level-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 0 0.5rem;
+}
+.jp-level-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+.jp-level-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+.jp-level-sublabel {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+.jp-level-blurb {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin: 0 0 1.25rem;
+  line-height: 1.5;
+}
+.jp-level-skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.jp-skill-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: transform 0.12s, box-shadow 0.12s, border-color 0.18s;
+}
+.jp-skill-card:hover:not([disabled]) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  border-color: var(--color-accent);
+}
+.jp-skill-card--soon { opacity: 0.5; cursor: default; }
+.jp-skill-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.jp-skill-card-icon { font-size: 1.4rem; line-height: 1; }
+.jp-skill-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+.jp-skill-card-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.jp-skill-card-blurb {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+  margin: 0;
+}
+.jp-skill-card-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.jp-skill-card-progress .jp-progress-bar-track { height: 5px; }
+.jp-skill-card-stat {
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+}
+.jp-skill-card-count {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+}
+
+/* ── Kanji learn-card detail pane ─────────────────────────────── */
+.jp-kanji-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.5rem 0.85rem;
+  align-self: stretch;
+  max-width: 320px;
+  width: 100%;
+}
+.jp-kanji-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.jp-kanji-row-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  width: 5rem;
+  flex-shrink: 0;
+}
+.jp-kanji-row-value {
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+}
+.jp-ex-reading {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-left: 0.35rem;
+}
+
+/* ── About / SEO static section ───────────────────────────────── */
+.jp-about-section {
+  border-top: 1px solid var(--color-border, rgba(255,255,255,0.08));
+  margin-top: 3rem;
+  padding: 2.5rem 0 1rem;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.jp-about-section h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  color: var(--color-text-primary);
+}
+.jp-about-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--color-text-primary);
+}
+.jp-about-section p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  margin: 0 0 0.75rem;
+}
+.jp-about-section ul {
+  padding-left: 1.25rem;
+  margin: 0 0 0.75rem;
+}
+.jp-about-section li {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+.jp-about-section li strong {
+  color: var(--color-text-primary);
+}
+.jp-about-section details {
+  border-top: 1px solid var(--color-border, rgba(255,255,255,0.06));
+  padding: 0.75rem 0;
+}
+.jp-about-section details:last-of-type {
+  border-bottom: 1px solid var(--color-border, rgba(255,255,255,0.06));
+}
+.jp-about-section details summary {
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+.jp-about-section details summary::before {
+  content: '+';
+  font-size: 1rem;
+  color: var(--color-accent, #4caf6e);
+  flex-shrink: 0;
+  width: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.jp-about-section details[open] summary::before {
+  content: '−';
+}
+.jp-about-section details p {
+  margin: 0.6rem 0 0.25rem;
+  padding-left: 1.5rem;
+}
+
+/* ── Mobile adjustments ───────────────────────────────────────── */
+@media (max-width: 600px) {
+  .jp-level-skills { grid-template-columns: 1fr; }
+  .jp-level-node { padding: 0.8rem 1rem; }
+  .jp-level-node-icon { font-size: 1.6rem; width: 2rem; }
+  .jp-session-controls { flex-direction: column; gap: 0.5rem; }
+  .jp-difficulty { justify-content: flex-start; }
+}

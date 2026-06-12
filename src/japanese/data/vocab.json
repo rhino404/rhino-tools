@@ -1,0 +1,2053 @@
+{
+  "version": "1.0",
+  "id": "vocab",
+  "type": "vocab",
+  "stages": [
+    {
+      "id": "s1",
+      "label": "Greetings",
+      "lessons": [
+        "greetings"
+      ]
+    },
+    {
+      "id": "s2",
+      "label": "People & Family",
+      "lessons": [
+        "people"
+      ]
+    },
+    {
+      "id": "s3",
+      "label": "Common Verbs",
+      "lessons": [
+        "verbs"
+      ]
+    },
+    {
+      "id": "s4",
+      "label": "Describing Words",
+      "lessons": [
+        "adjectives"
+      ]
+    },
+    {
+      "id": "s5",
+      "label": "Things & Places",
+      "lessons": [
+        "things"
+      ]
+    },
+    {
+      "id": "s6",
+      "label": "Food, Drink & Nature",
+      "lessons": [
+        "food"
+      ]
+    },
+    {
+      "id": "s7",
+      "label": "Colors",
+      "lessons": [
+        "colors"
+      ]
+    },
+    {
+      "id": "s8",
+      "label": "More Words",
+      "lessons": [
+        "extras"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "vocab-konnichiwa",
+      "word": "こんにちは",
+      "reading": "konnichiwa",
+      "accepts": [
+        "konnichiwa"
+      ],
+      "lesson": "greetings",
+      "audio": "",
+      "meaning": "Hello / Good afternoon",
+      "mnemonic": "The greeting you'll use most — say it with a slight bow.",
+      "example": {
+        "ja": "こんにちは、はじめまして。",
+        "en": "Hello, nice to meet you."
+      }
+    },
+    {
+      "id": "vocab-konbanwa",
+      "word": "こんばんは",
+      "reading": "konbanwa",
+      "accepts": [
+        "konbanwa"
+      ],
+      "lesson": "greetings",
+      "audio": "",
+      "meaning": "Good evening",
+      "mnemonic": "Kon-BAN-wa — BAN sounds like 'ban' (sunset banning the light).",
+      "example": {
+        "ja": "こんばんは、いいてんきですね。",
+        "en": "Good evening, nice weather isn't it?"
+      }
+    },
+    {
+      "id": "vocab-ohayou",
+      "word": "おはようございます",
+      "reading": "ohayou gozaimasu",
+      "accepts": [
+        "ohayou gozaimasu",
+        "ohayou"
+      ],
+      "lesson": "greetings",
+      "audio": "",
+      "meaning": "Good morning (formal)",
+      "mnemonic": "Sounds like 'Oh, I'm early!' — which is why you say it in the morning.",
+      "example": {
+        "ja": "おはようございます！",
+        "en": "Good morning!"
+      }
+    },
+    {
+      "id": "vocab-arigatou",
+      "word": "ありがとうございます",
+      "reading": "arigatou gozaimasu",
+      "accepts": [
+        "arigatou gozaimasu",
+        "arigatou"
+      ],
+      "lesson": "greetings",
+      "audio": "",
+      "meaning": "Thank you",
+      "mnemonic": "Ari-GA-TOU — sounds a bit like 'Ah, I got you!' (gratitude).",
+      "example": {
+        "ja": "ありがとうございます！",
+        "en": "Thank you very much!"
+      }
+    },
+    {
+      "id": "vocab-sumimasen",
+      "word": "すみません",
+      "reading": "sumimasen",
+      "accepts": [
+        "sumimasen"
+      ],
+      "lesson": "greetings",
+      "audio": "",
+      "meaning": "Excuse me / Sorry",
+      "mnemonic": "Sumi-MA-SEN — use it to get attention or to apologize.",
+      "example": {
+        "ja": "すみません、トイレはどこですか？",
+        "en": "Excuse me, where is the restroom?"
+      }
+    },
+    {
+      "id": "vocab-hai",
+      "word": "はい",
+      "reading": "hai",
+      "accepts": [
+        "hai"
+      ],
+      "lesson": "greetings",
+      "audio": "",
+      "meaning": "Yes",
+      "mnemonic": "Hai sounds like 'high' — raise your hand and say yes!",
+      "example": {
+        "ja": "はい、わかりました。",
+        "en": "Yes, I understand."
+      }
+    },
+    {
+      "id": "vocab-iie",
+      "word": "いいえ",
+      "reading": "iie",
+      "accepts": [
+        "iie"
+      ],
+      "lesson": "greetings",
+      "audio": "",
+      "meaning": "No",
+      "mnemonic": "いいえ = 'ee-yeh' — two sounds for 'no no!'",
+      "example": {
+        "ja": "いいえ、けっこうです。",
+        "en": "No thank you, I'm fine."
+      }
+    },
+    {
+      "id": "vocab-sayounara",
+      "word": "さようなら",
+      "reading": "sayounara",
+      "accepts": [
+        "sayounara",
+        "sayonara"
+      ],
+      "lesson": "greetings",
+      "audio": "",
+      "meaning": "Goodbye (formal / permanent)",
+      "mnemonic": "Sa-YO-NA-RA — the long farewell; use じゃあね for casual 'bye'.",
+      "example": {
+        "ja": "さようなら、またね。",
+        "en": "Goodbye, see you."
+      }
+    },
+    {
+      "id": "vocab-watashi",
+      "word": "わたし",
+      "reading": "watashi",
+      "accepts": [
+        "watashi"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "I / Me",
+      "mnemonic": "WAH-tah-shi — 'what-a-she', that's me!",
+      "example": {
+        "ja": "わたしはがくせいです。",
+        "en": "I am a student."
+      }
+    },
+    {
+      "id": "vocab-anata",
+      "word": "あなた",
+      "reading": "anata",
+      "accepts": [
+        "anata"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "You",
+      "mnemonic": "a-NA-ta — 'ah, natà' (you, there).",
+      "example": {
+        "ja": "あなたのなまえはなんですか？",
+        "en": "What is your name?"
+      }
+    },
+    {
+      "id": "vocab-kare",
+      "word": "かれ",
+      "reading": "kare",
+      "accepts": [
+        "kare"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "He / Him",
+      "mnemonic": "KA-reh — 'car-eh'; he drives the car.",
+      "example": {
+        "ja": "かれはせんせいです。",
+        "en": "He is a teacher."
+      }
+    },
+    {
+      "id": "vocab-kanojo",
+      "word": "かのじょ",
+      "reading": "kanojo",
+      "accepts": [
+        "kanojo"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "She / Her",
+      "mnemonic": "ka-NO-jo — 'can-oh-jo'; she's the one.",
+      "example": {
+        "ja": "かのじょはがくせいです。",
+        "en": "She is a student."
+      }
+    },
+    {
+      "id": "vocab-hito",
+      "word": "ひと",
+      "reading": "hito",
+      "accepts": [
+        "hito"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "Person",
+      "mnemonic": "HI-to — 'hee-toh'; a person stands on two legs.",
+      "example": {
+        "ja": "このひとはだれですか？",
+        "en": "Who is this person?"
+      }
+    },
+    {
+      "id": "vocab-gakusei",
+      "word": "がくせい",
+      "reading": "gakusei",
+      "accepts": [
+        "gakusei"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "Student",
+      "mnemonic": "GAKU-sei — gaku = study, sei = life; a student lives to study.",
+      "example": {
+        "ja": "わたしはがくせいです。",
+        "en": "I am a student."
+      }
+    },
+    {
+      "id": "vocab-sensei",
+      "word": "せんせい",
+      "reading": "sensei",
+      "accepts": [
+        "sensei"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "Teacher",
+      "mnemonic": "SEN-sei — sen is the path, sei is life; a teacher guides the way.",
+      "example": {
+        "ja": "せんせいはほんをよみます。",
+        "en": "The teacher reads a book."
+      }
+    },
+    {
+      "id": "vocab-tomodachi",
+      "word": "ともだち",
+      "reading": "tomodachi",
+      "accepts": [
+        "tomodachi"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "Friend",
+      "mnemonic": "to-MO-da-chi — 'toe-mo-dah-chi'; friends walk side by side.",
+      "example": {
+        "ja": "ともだちとごはんをたべます。",
+        "en": "I eat a meal with my friend."
+      }
+    },
+    {
+      "id": "vocab-kodomo",
+      "word": "こども",
+      "reading": "kodomo",
+      "accepts": [
+        "kodomo"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "Child",
+      "mnemonic": "KO-do-mo — ko = small; a small human.",
+      "example": {
+        "ja": "こどもがこうえんであそびます。",
+        "en": "The child plays at the park."
+      }
+    },
+    {
+      "id": "vocab-nihonjin",
+      "word": "にほんじん",
+      "reading": "nihonjin",
+      "accepts": [
+        "nihonjin"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "Japanese person",
+      "mnemonic": "NI-hon-JIN — nihon = Japan, jin = person.",
+      "example": {
+        "ja": "かれはにほんじんです。",
+        "en": "He is Japanese."
+      }
+    },
+    {
+      "id": "vocab-namae",
+      "word": "なまえ",
+      "reading": "namae",
+      "accepts": [
+        "namae"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "Name",
+      "mnemonic": "na-MA-eh — 'nah, may?'; what's your name?",
+      "example": {
+        "ja": "おなまえはなんですか？",
+        "en": "What is your name?"
+      }
+    },
+    {
+      "id": "vocab-kazoku",
+      "word": "かぞく",
+      "reading": "kazoku",
+      "accepts": [
+        "kazoku"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "Family",
+      "mnemonic": "KA-zo-ku — 'kah-zoh-koo'; your family is your cause of joy.",
+      "example": {
+        "ja": "わたしのかぞくはよにんです。",
+        "en": "My family has four people."
+      }
+    },
+    {
+      "id": "vocab-chichi",
+      "word": "ちち",
+      "reading": "chichi",
+      "accepts": [
+        "chichi"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "Father",
+      "mnemonic": "chi-chi — like a clock ticking; dad's always on time.",
+      "example": {
+        "ja": "ちちはしごとにいきます。",
+        "en": "My father goes to work."
+      }
+    },
+    {
+      "id": "vocab-haha",
+      "word": "はは",
+      "reading": "haha",
+      "accepts": [
+        "haha"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "Mother",
+      "mnemonic": "HA-ha — haha, mom's always cheerful.",
+      "example": {
+        "ja": "はははごはんをつくります。",
+        "en": "My mother makes a meal."
+      }
+    },
+    {
+      "id": "vocab-ani",
+      "word": "あに",
+      "reading": "ani",
+      "accepts": [
+        "ani"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "Older brother",
+      "mnemonic": "A-ni — 'ah-nee'; older bro is always right!",
+      "example": {
+        "ja": "あにはだいがくせいです。",
+        "en": "My older brother is a university student."
+      }
+    },
+    {
+      "id": "vocab-ane",
+      "word": "あね",
+      "reading": "ane",
+      "accepts": [
+        "ane"
+      ],
+      "lesson": "people",
+      "audio": "",
+      "meaning": "Older sister",
+      "mnemonic": "A-neh — 'ah-neh'; older sis shows the way.",
+      "example": {
+        "ja": "あねははたらいています。",
+        "en": "My older sister is working."
+      }
+    },
+    {
+      "id": "vocab-taberu",
+      "word": "たべる",
+      "reading": "taberu",
+      "accepts": [
+        "taberu"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to eat",
+      "mnemonic": "Group 2 (る) verb. Polite: たべます. TABE sounds like \"tabletop\" where you eat.",
+      "example": {
+        "ja": "すしをたべます。",
+        "en": "I eat sushi."
+      }
+    },
+    {
+      "id": "vocab-nomu",
+      "word": "のむ",
+      "reading": "nomu",
+      "accepts": [
+        "nomu"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to drink",
+      "mnemonic": "Group 1 verb. Polite: のみます. NO-MU — \"no moo!\"; people drink, cows just moo.",
+      "example": {
+        "ja": "みずをのみます。",
+        "en": "I drink water."
+      }
+    },
+    {
+      "id": "vocab-miru",
+      "word": "みる",
+      "reading": "miru",
+      "accepts": [
+        "miru"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to see / watch",
+      "mnemonic": "Group 2 (る) verb. Polite: みます. MI sounds like \"me\" — I see it!",
+      "example": {
+        "ja": "テレビをみます。",
+        "en": "I watch TV."
+      }
+    },
+    {
+      "id": "vocab-yomu",
+      "word": "よむ",
+      "reading": "yomu",
+      "accepts": [
+        "yomu"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to read",
+      "mnemonic": "Group 1 verb. Polite: よみます. YO-MU — yo, I'm reading!",
+      "example": {
+        "ja": "ほんをよみます。",
+        "en": "I read a book."
+      }
+    },
+    {
+      "id": "vocab-kiku",
+      "word": "きく",
+      "reading": "kiku",
+      "accepts": [
+        "kiku"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to listen / ask",
+      "mnemonic": "Group 1 verb. Polite: ききます. KI-KU — \"kee-koo\"; ears go kiku!",
+      "example": {
+        "ja": "おんがくをききます。",
+        "en": "I listen to music."
+      }
+    },
+    {
+      "id": "vocab-kaku",
+      "word": "かく",
+      "reading": "kaku",
+      "accepts": [
+        "kaku"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to write",
+      "mnemonic": "Group 1 verb. Polite: かきます. KA-KU — \"kah-koo\"; write it down quick.",
+      "example": {
+        "ja": "てがみをかきます。",
+        "en": "I write a letter."
+      }
+    },
+    {
+      "id": "vocab-iku",
+      "word": "いく",
+      "reading": "iku",
+      "accepts": [
+        "iku"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to go",
+      "mnemonic": "Group 1 verb. Polite: いきます. I-KU — \"ee-koo\"; I'll go!",
+      "example": {
+        "ja": "がっこうにいきます。",
+        "en": "I go to school."
+      }
+    },
+    {
+      "id": "vocab-kuru",
+      "word": "くる",
+      "reading": "kuru",
+      "accepts": [
+        "kuru"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to come",
+      "mnemonic": "Irregular verb. Polite: きます. KU-RU — \"koo-roo\"; here it comes!",
+      "example": {
+        "ja": "ともだちがきます。",
+        "en": "My friend comes."
+      }
+    },
+    {
+      "id": "vocab-kaeru",
+      "word": "かえる",
+      "reading": "kaeru",
+      "accepts": [
+        "kaeru"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to return / go home",
+      "mnemonic": "Group 2 (る) verb. Polite: かえります. KA-E-RU — like a frog hopping back home.",
+      "example": {
+        "ja": "いえにかえります。",
+        "en": "I return home."
+      }
+    },
+    {
+      "id": "vocab-suru",
+      "word": "する",
+      "reading": "suru",
+      "accepts": [
+        "suru"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to do",
+      "mnemonic": "Irregular verb. Polite: します. SU-RU — \"soo-roo\"; just do it.",
+      "example": {
+        "ja": "べんきょうをします。",
+        "en": "I do studying."
+      }
+    },
+    {
+      "id": "vocab-hanasu",
+      "word": "はなす",
+      "reading": "hanasu",
+      "accepts": [
+        "hanasu"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to speak / talk",
+      "mnemonic": "Group 1 verb. Polite: はなします. HA-NA-SU — speak your words like flowers.",
+      "example": {
+        "ja": "にほんごをはなします。",
+        "en": "I speak Japanese."
+      }
+    },
+    {
+      "id": "vocab-neru",
+      "word": "ねる",
+      "reading": "neru",
+      "accepts": [
+        "neru"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to sleep",
+      "mnemonic": "Group 2 (る) verb. Polite: ねます. NE-RU — \"neh-roo\"; zero energy — sleep!",
+      "example": {
+        "ja": "じゅうじにねます。",
+        "en": "I sleep at ten."
+      }
+    },
+    {
+      "id": "vocab-okiru",
+      "word": "おきる",
+      "reading": "okiru",
+      "accepts": [
+        "okiru"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to wake up / get up",
+      "mnemonic": "Group 2 (る) verb. Polite: おきます (same polite form as おく — context tells them apart). O-KI-RU — wake up!",
+      "example": {
+        "ja": "しちじにおきます。",
+        "en": "I wake up at seven."
+      }
+    },
+    {
+      "id": "vocab-wakaru",
+      "word": "わかる",
+      "reading": "wakaru",
+      "accepts": [
+        "wakaru"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to understand",
+      "mnemonic": "Group 1 verb. Polite: わかります. WA-KA-RU — the answer dawns on you.",
+      "example": {
+        "ja": "にほんごがわかります。",
+        "en": "I understand Japanese."
+      }
+    },
+    {
+      "id": "vocab-aru",
+      "word": "ある",
+      "reading": "aru",
+      "accepts": [
+        "aru"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "there is (thing)",
+      "mnemonic": "Group 1 verb. Polite: あります. A-RU — something is there! Use for inanimate objects.",
+      "example": {
+        "ja": "つくえのうえにほんがあります。",
+        "en": "There is a book on the desk."
+      }
+    },
+    {
+      "id": "vocab-iru",
+      "word": "いる",
+      "reading": "iru",
+      "accepts": [
+        "iru"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "there is (person/animal)",
+      "mnemonic": "Group 2 (る) verb. Polite: います. I-RU — a person or animal is here. Use for living things.",
+      "example": {
+        "ja": "ねこがいます。",
+        "en": "There is a cat."
+      }
+    },
+    {
+      "id": "vocab-oku",
+      "word": "おく",
+      "reading": "oku",
+      "accepts": [
+        "oku"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to put / place",
+      "mnemonic": "Group 1 verb. Polite: おきます (same polite form as おきる — context tells them apart). O-KU — put it right there.",
+      "example": {
+        "ja": "ほんをつくえにおきます。",
+        "en": "I put the book on the desk."
+      }
+    },
+    {
+      "id": "vocab-kau",
+      "word": "かう",
+      "reading": "kau",
+      "accepts": [
+        "kau"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to buy",
+      "mnemonic": "Group 1 verb. Polite: かいます. KA-U — \"kah-oo\"; cows cost money to buy.",
+      "example": {
+        "ja": "みせでパンをかいます。",
+        "en": "I buy bread at the shop."
+      }
+    },
+    {
+      "id": "vocab-au",
+      "word": "あう",
+      "reading": "au",
+      "accepts": [
+        "au"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to meet",
+      "mnemonic": "Group 1 verb. Polite: あいます. A-U — \"ah-oo\"; we meet — ahh!",
+      "example": {
+        "ja": "ともだちにあいます。",
+        "en": "I meet my friend."
+      }
+    },
+    {
+      "id": "vocab-utau",
+      "word": "うたう",
+      "reading": "utau",
+      "accepts": [
+        "utau"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to sing",
+      "mnemonic": "Group 1 verb. Polite: うたいます. U-TA-U — \"oo-tah-oo\"; singing goes oo-ta-oo!",
+      "example": {
+        "ja": "うたをうたいます。",
+        "en": "I sing a song."
+      }
+    },
+    {
+      "id": "vocab-benkyousuru",
+      "word": "べんきょうする",
+      "reading": "benkyousuru",
+      "accepts": [
+        "benkyousuru"
+      ],
+      "lesson": "verbs",
+      "audio": "",
+      "meaning": "to study",
+      "mnemonic": "Compound verb (noun + する). Polite: べんきょうします. BEN-KYOU: study hard at your desk.",
+      "example": {
+        "ja": "まいにちにほんごをべんきょうします。",
+        "en": "I study Japanese every day."
+      }
+    },
+    {
+      "id": "vocab-ookii",
+      "word": "おおきい",
+      "reading": "ookii",
+      "accepts": [
+        "ookii",
+        "ooki"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "big / large",
+      "mnemonic": "OO-KI-I — \"ooh, key!\"; the huge key is big!",
+      "example": {
+        "ja": "これはおおきいいえです。",
+        "en": "This is a big house."
+      }
+    },
+    {
+      "id": "vocab-chiisai",
+      "word": "ちいさい",
+      "reading": "chiisai",
+      "accepts": [
+        "chiisai"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "small / little",
+      "mnemonic": "CHI-I-SA-I — \"chee-sigh\"; small things make a quiet sigh.",
+      "example": {
+        "ja": "あのいぬはちいさいです。",
+        "en": "That dog is small."
+      }
+    },
+    {
+      "id": "vocab-takai",
+      "word": "たかい",
+      "reading": "takai",
+      "accepts": [
+        "takai"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "tall / expensive",
+      "mnemonic": "TA-KA-I — \"tah-kah-ee\"; tall people always look expensive.",
+      "example": {
+        "ja": "このとけいはたかいです。",
+        "en": "This watch is expensive."
+      }
+    },
+    {
+      "id": "vocab-yasui",
+      "word": "やすい",
+      "reading": "yasui",
+      "accepts": [
+        "yasui"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "cheap / inexpensive",
+      "mnemonic": "YA-SU-I — \"yah-soo-ee\"; yeah, it's super cheap!",
+      "example": {
+        "ja": "このみせはやすいです。",
+        "en": "This shop is cheap."
+      }
+    },
+    {
+      "id": "vocab-atarashii",
+      "word": "あたらしい",
+      "reading": "atarashii",
+      "accepts": [
+        "atarashii"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "new",
+      "mnemonic": "a-TA-RA-SHI-I — \"a-ta-rush-ee\"; rushing to get the new thing.",
+      "example": {
+        "ja": "あたらしいほんをかいました。",
+        "en": "I bought a new book."
+      }
+    },
+    {
+      "id": "vocab-furui",
+      "word": "ふるい",
+      "reading": "furui",
+      "accepts": [
+        "furui"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "old",
+      "mnemonic": "FU-RU-I — \"foo-roo-ee\"; an old fool buys the old model.",
+      "example": {
+        "ja": "このいえはふるいです。",
+        "en": "This house is old."
+      }
+    },
+    {
+      "id": "vocab-ii",
+      "word": "いい",
+      "reading": "ii",
+      "accepts": [
+        "ii"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "good",
+      "mnemonic": "I-I — \"ee-ee\"; double good!",
+      "example": {
+        "ja": "これはいいほんです。",
+        "en": "This is a good book."
+      }
+    },
+    {
+      "id": "vocab-warui",
+      "word": "わるい",
+      "reading": "warui",
+      "accepts": [
+        "warui"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "bad",
+      "mnemonic": "WA-RU-I — \"wah-roo-ee\"; war is bad news.",
+      "example": {
+        "ja": "てんきがわるいです。",
+        "en": "The weather is bad."
+      }
+    },
+    {
+      "id": "vocab-atsui",
+      "word": "あつい",
+      "reading": "atsui",
+      "accepts": [
+        "atsui"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "hot",
+      "mnemonic": "A-TSU-I — \"ah-tsoo-ee\"; ah, too hot!",
+      "example": {
+        "ja": "きょうはあついです。",
+        "en": "Today is hot."
+      }
+    },
+    {
+      "id": "vocab-samui",
+      "word": "さむい",
+      "reading": "samui",
+      "accepts": [
+        "samui"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "cold",
+      "mnemonic": "SA-MU-I — \"sah-moo-ee\"; Samuel is always cold.",
+      "example": {
+        "ja": "ふゆはさむいです。",
+        "en": "Winter is cold."
+      }
+    },
+    {
+      "id": "vocab-hayai",
+      "word": "はやい",
+      "reading": "hayai",
+      "accepts": [
+        "hayai"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "fast / early",
+      "mnemonic": "HA-YA-I — \"hah-yah-ee\"; fast like a ninja!",
+      "example": {
+        "ja": "このでんしゃははやいです。",
+        "en": "This train is fast."
+      }
+    },
+    {
+      "id": "vocab-omoi",
+      "word": "おもい",
+      "reading": "omoi",
+      "accepts": [
+        "omoi"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "heavy",
+      "mnemonic": "O-MO-I — \"oh-moh-ee\"; oh my, it's so heavy!",
+      "example": {
+        "ja": "このかばんはおもいです。",
+        "en": "This bag is heavy."
+      }
+    },
+    {
+      "id": "vocab-oishii",
+      "word": "おいしい",
+      "reading": "oishii",
+      "accepts": [
+        "oishii"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "delicious",
+      "mnemonic": "O-I-SHI-I — \"oh-ee-shee\"; oh, this is delicious!",
+      "example": {
+        "ja": "このすしはおいしいです。",
+        "en": "This sushi is delicious."
+      }
+    },
+    {
+      "id": "vocab-omoshiroi",
+      "word": "おもしろい",
+      "reading": "omoshiroi",
+      "accepts": [
+        "omoshiroi"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "interesting / funny",
+      "mnemonic": "o-MO-SHI-RO-I — \"oh-mosh-ero-ee\"; oh, more interesting stuff!",
+      "example": {
+        "ja": "このほんはおもしろいです。",
+        "en": "This book is interesting."
+      }
+    },
+    {
+      "id": "vocab-muzukashii",
+      "word": "むずかしい",
+      "reading": "muzukashii",
+      "accepts": [
+        "muzukashii"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "difficult",
+      "mnemonic": "mu-ZU-KA-SHI-I — \"moo-zoo-kash-ee\"; a muzzy, confused feeling = difficult.",
+      "example": {
+        "ja": "にほんごはむずかしいですか？",
+        "en": "Is Japanese difficult?"
+      }
+    },
+    {
+      "id": "vocab-nigiyaka",
+      "word": "にぎやか",
+      "reading": "nigiyaka",
+      "accepts": [
+        "nigiyaka"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "lively / busy",
+      "mnemonic": "ni-GI-YA-KA — \"nee-gee-yah-kah\"; the festival is nigiyaka!",
+      "example": {
+        "ja": "このまちはにぎやかです。",
+        "en": "This town is lively."
+      }
+    },
+    {
+      "id": "vocab-shizuka",
+      "word": "しずか",
+      "reading": "shizuka",
+      "accepts": [
+        "shizuka"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "quiet",
+      "mnemonic": "SHI-ZU-KA — \"shee-zoo-kah\"; the zoo is quiet after closing.",
+      "example": {
+        "ja": "としょかんはしずかです。",
+        "en": "The library is quiet."
+      }
+    },
+    {
+      "id": "vocab-kirei",
+      "word": "きれい",
+      "reading": "kirei",
+      "accepts": [
+        "kirei"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "beautiful / clean",
+      "mnemonic": "KI-RE-I — \"kee-ray-ee\"; key rays of sunlight are beautiful.",
+      "example": {
+        "ja": "このはなはきれいです。",
+        "en": "This flower is beautiful."
+      }
+    },
+    {
+      "id": "vocab-suki",
+      "word": "すき",
+      "reading": "suki",
+      "accepts": [
+        "suki"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "liked / favourite",
+      "mnemonic": "SU-KI — \"soo-kee\"; you love your favourite thing!",
+      "example": {
+        "ja": "わたしはすしがすきです。",
+        "en": "I like sushi."
+      }
+    },
+    {
+      "id": "vocab-genki",
+      "word": "げんき",
+      "reading": "genki",
+      "accepts": [
+        "genki"
+      ],
+      "lesson": "adjectives",
+      "audio": "",
+      "meaning": "energetic / well",
+      "mnemonic": "GEN-KI — \"gen-kee\"; full of energy!",
+      "example": {
+        "ja": "げんきですか？",
+        "en": "Are you well?"
+      }
+    },
+    {
+      "id": "vocab-hon",
+      "word": "ほん",
+      "reading": "hon",
+      "accepts": [
+        "hon"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Book",
+      "mnemonic": "HON — sounds like \"phone\" in a Japanese accent; keep a book in your pocket.",
+      "example": {
+        "ja": "ほんをよみます。",
+        "en": "I read a book."
+      }
+    },
+    {
+      "id": "vocab-kaban",
+      "word": "かばん",
+      "reading": "kaban",
+      "accepts": [
+        "kaban"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Bag",
+      "mnemonic": "KA-BAN — \"kah-ban\"; you carry your bag to the cab.",
+      "example": {
+        "ja": "かばんのなかにほんがあります。",
+        "en": "There is a book in the bag."
+      }
+    },
+    {
+      "id": "vocab-enpitsu",
+      "word": "えんぴつ",
+      "reading": "enpitsu",
+      "accepts": [
+        "enpitsu"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Pencil",
+      "mnemonic": "EN-PI-TSU — \"en-pee-tsoo\"; pencils write envelopes.",
+      "example": {
+        "ja": "えんぴつでかきます。",
+        "en": "I write with a pencil."
+      }
+    },
+    {
+      "id": "vocab-pen",
+      "word": "ペン",
+      "reading": "pen",
+      "accepts": [
+        "pen"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Pen",
+      "mnemonic": "PEN — English loanword! Easy.",
+      "example": {
+        "ja": "ペンをかいます。",
+        "en": "I buy a pen."
+      }
+    },
+    {
+      "id": "vocab-tsukue",
+      "word": "つくえ",
+      "reading": "tsukue",
+      "accepts": [
+        "tsukue"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Desk",
+      "mnemonic": "TSU-KU-E — \"tsoo-koo-eh\"; at the desk you focus.",
+      "example": {
+        "ja": "つくえのうえにほんがあります。",
+        "en": "There is a book on the desk."
+      }
+    },
+    {
+      "id": "vocab-isu",
+      "word": "いす",
+      "reading": "isu",
+      "accepts": [
+        "isu"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Chair",
+      "mnemonic": "I-SU — \"ee-soo\"; easy to sit on a chair.",
+      "example": {
+        "ja": "いすにすわります。",
+        "en": "I sit on the chair."
+      }
+    },
+    {
+      "id": "vocab-denwa",
+      "word": "でんわ",
+      "reading": "denwa",
+      "accepts": [
+        "denwa"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Telephone",
+      "mnemonic": "DEN-WA — \"den\" = electricity, \"wa\" = talk. Electric talk!",
+      "example": {
+        "ja": "でんわをします。",
+        "en": "I make a phone call."
+      }
+    },
+    {
+      "id": "vocab-tokei",
+      "word": "とけい",
+      "reading": "tokei",
+      "accepts": [
+        "tokei"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Clock / Watch",
+      "mnemonic": "TO-KE-I — \"toh-keh-ee\"; the ticking clock on your wrist.",
+      "example": {
+        "ja": "とけいをみます。",
+        "en": "I look at the clock."
+      }
+    },
+    {
+      "id": "vocab-kasa",
+      "word": "かさ",
+      "reading": "kasa",
+      "accepts": [
+        "kasa"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Umbrella",
+      "mnemonic": "KA-SA — \"kah-sah\"; \"casa\" (house) — umbrella is your portable house.",
+      "example": {
+        "ja": "かさをかいます。",
+        "en": "I buy an umbrella."
+      }
+    },
+    {
+      "id": "vocab-kuruma",
+      "word": "くるま",
+      "reading": "kuruma",
+      "accepts": [
+        "kuruma"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Car",
+      "mnemonic": "KU-RU-MA — \"koo-roo-mah\"; the car goes roo-ma!",
+      "example": {
+        "ja": "くるまでいきます。",
+        "en": "I go by car."
+      }
+    },
+    {
+      "id": "vocab-densha",
+      "word": "でんしゃ",
+      "reading": "densha",
+      "accepts": [
+        "densha"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Train",
+      "mnemonic": "DEN-SHA — \"den\" = electricity + \"sha\" = vehicle. Electric vehicle!",
+      "example": {
+        "ja": "でんしゃにのります。",
+        "en": "I ride the train."
+      }
+    },
+    {
+      "id": "vocab-basu",
+      "word": "バス",
+      "reading": "basu",
+      "accepts": [
+        "basu"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Bus",
+      "mnemonic": "BA-SU — English loanword \"bus\". The bus arrives.",
+      "example": {
+        "ja": "バスでがっこうにいきます。",
+        "en": "I go to school by bus."
+      }
+    },
+    {
+      "id": "vocab-shinbun",
+      "word": "しんぶん",
+      "reading": "shinbun",
+      "accepts": [
+        "shinbun"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Newspaper",
+      "mnemonic": "SHIN-BUN — shin (new) + bun (writing) = newspaper.",
+      "example": {
+        "ja": "ちちはしんぶんをよみます。",
+        "en": "My father reads the newspaper."
+      }
+    },
+    {
+      "id": "vocab-terebi",
+      "word": "テレビ",
+      "reading": "terebi",
+      "accepts": [
+        "terebi"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "TV / Television",
+      "mnemonic": "TE-RE-BI — \"television\" shortened. Easy loanword!",
+      "example": {
+        "ja": "テレビをみます。",
+        "en": "I watch TV."
+      }
+    },
+    {
+      "id": "vocab-gakkou",
+      "word": "がっこう",
+      "reading": "gakkou",
+      "accepts": [
+        "gakkou"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "School",
+      "mnemonic": "GAK-KOU — \"gah-koh\"; gaku = study, kou = school. Study house!",
+      "example": {
+        "ja": "まいにちがっこうにいきます。",
+        "en": "I go to school every day."
+      }
+    },
+    {
+      "id": "vocab-toshokan",
+      "word": "としょかん",
+      "reading": "toshokan",
+      "accepts": [
+        "toshokan"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Library",
+      "mnemonic": "TO-SHO-KAN — \"toh-show-kan\"; the show of books.",
+      "example": {
+        "ja": "としょかんでほんをよみます。",
+        "en": "I read a book at the library."
+      }
+    },
+    {
+      "id": "vocab-eki",
+      "word": "えき",
+      "reading": "eki",
+      "accepts": [
+        "eki"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Station",
+      "mnemonic": "E-KI — \"eh-kee\"; station gates go \"eki\"!",
+      "example": {
+        "ja": "えきまであるきます。",
+        "en": "I walk to the station."
+      }
+    },
+    {
+      "id": "vocab-mise",
+      "word": "みせ",
+      "reading": "mise",
+      "accepts": [
+        "mise"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Shop / Store",
+      "mnemonic": "MI-SE — \"mee-seh\"; like \"mise en place\" — a shop has everything in order.",
+      "example": {
+        "ja": "みせでやさいをかいます。",
+        "en": "I buy vegetables at the shop."
+      }
+    },
+    {
+      "id": "vocab-ie",
+      "word": "いえ",
+      "reading": "ie",
+      "accepts": [
+        "ie"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "House / Home",
+      "mnemonic": "I-E — \"ee-eh\"; your home is where you go \"ee-eh!\" with relief.",
+      "example": {
+        "ja": "いえにかえります。",
+        "en": "I return home."
+      }
+    },
+    {
+      "id": "vocab-heya",
+      "word": "へや",
+      "reading": "heya",
+      "accepts": [
+        "heya"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Room",
+      "mnemonic": "HE-YA — \"hey-ya!\"; in my room: hey ya!",
+      "example": {
+        "ja": "へやはきれいです。",
+        "en": "The room is clean."
+      }
+    },
+    {
+      "id": "vocab-kouen",
+      "word": "こうえん",
+      "reading": "kouen",
+      "accepts": [
+        "kouen"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Park",
+      "mnemonic": "KOU-EN — \"koh-en\"; you \"go in\" to the park.",
+      "example": {
+        "ja": "こうえんをさんぽします。",
+        "en": "I walk in the park."
+      }
+    },
+    {
+      "id": "vocab-toire",
+      "word": "トイレ",
+      "reading": "toire",
+      "accepts": [
+        "toire"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Restroom / Toilet",
+      "mnemonic": "TO-I-RE — \"toi-reh\"; English \"toilet\" adapted. Essential!",
+      "example": {
+        "ja": "トイレはどこですか？",
+        "en": "Where is the restroom?"
+      }
+    },
+    {
+      "id": "vocab-byouin",
+      "word": "びょういん",
+      "reading": "byouin",
+      "accepts": [
+        "byouin"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Hospital",
+      "mnemonic": "BYOU-IN — byou = sick, in = building. Sick building = hospital.",
+      "example": {
+        "ja": "びょういんにいきます。",
+        "en": "I go to the hospital."
+      }
+    },
+    {
+      "id": "vocab-yuubinkyoku",
+      "word": "ゆうびんきょく",
+      "reading": "yuubinkyoku",
+      "accepts": [
+        "yuubinkyoku"
+      ],
+      "lesson": "things",
+      "audio": "",
+      "meaning": "Post office",
+      "mnemonic": "YUU-BIN-KYOU-KU — long word for the place the mail comes from.",
+      "example": {
+        "ja": "ゆうびんきょくはえきのそばです。",
+        "en": "The post office is near the station."
+      }
+    },
+    {
+      "id": "vocab-mizu",
+      "word": "みず",
+      "reading": "mizu",
+      "accepts": [
+        "mizu"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Water",
+      "mnemonic": "MIZU — sounds like 'me zoo' — animals at the zoo need water!",
+      "example": {
+        "ja": "みずをのむ",
+        "en": "drink water"
+      }
+    },
+    {
+      "id": "vocab-ocha",
+      "word": "おちゃ",
+      "reading": "ocha",
+      "accepts": [
+        "ocha"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Tea",
+      "mnemonic": "O-CHA — the 'o' is honorific; cha is tea (like 'chai').",
+      "example": {
+        "ja": "おちゃをのむ",
+        "en": "drink tea"
+      }
+    },
+    {
+      "id": "vocab-tabemono",
+      "word": "たべもの",
+      "reading": "tabemono",
+      "accepts": [
+        "tabemono"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Food",
+      "mnemonic": "TABE (eat) + MONO (thing) = food thing; taberu means 'to eat'.",
+      "example": {
+        "ja": "おいしいたべもの",
+        "en": "delicious food"
+      }
+    },
+    {
+      "id": "vocab-neko",
+      "word": "ねこ",
+      "reading": "neko",
+      "accepts": [
+        "neko"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Cat",
+      "mnemonic": "NEKO — Japanese cats say 'nyan!' but their name is neko.",
+      "example": {
+        "ja": "かわいいねこ",
+        "en": "cute cat"
+      }
+    },
+    {
+      "id": "vocab-inu",
+      "word": "いぬ",
+      "reading": "inu",
+      "accepts": [
+        "inu"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Dog",
+      "mnemonic": "INU — 'ee-noo'; Japanese dogs wag their tail with a WOOF.",
+      "example": {
+        "ja": "おおきいいぬ",
+        "en": "big dog"
+      }
+    },
+    {
+      "id": "vocab-hana",
+      "word": "はな",
+      "reading": "hana",
+      "accepts": [
+        "hana"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Flower / Nose",
+      "mnemonic": "HANA — a beautiful Hawaiian-sounding name; also means nose (context matters).",
+      "example": {
+        "ja": "きれいなはな",
+        "en": "beautiful flower"
+      }
+    },
+    {
+      "id": "vocab-yama",
+      "word": "やま",
+      "reading": "yama",
+      "accepts": [
+        "yama"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Mountain",
+      "mnemonic": "YAMA — sounds like 'yeah-mah'; mama's mountain.",
+      "example": {
+        "ja": "たかいやま",
+        "en": "tall mountain"
+      }
+    },
+    {
+      "id": "vocab-umi",
+      "word": "うみ",
+      "reading": "umi",
+      "accepts": [
+        "umi"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Sea / Ocean",
+      "mnemonic": "UMI — like 'oo-me!'; the ocean calling you in.",
+      "example": {
+        "ja": "あおいうみ",
+        "en": "blue sea"
+      }
+    },
+    {
+      "id": "vocab-sora",
+      "word": "そら",
+      "reading": "sora",
+      "accepts": [
+        "sora"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Sky",
+      "mnemonic": "SORA — sounds like 'soar-ah!'; birds soar through the sky.",
+      "example": {
+        "ja": "あおいそら",
+        "en": "blue sky"
+      }
+    },
+    {
+      "id": "vocab-gohan",
+      "word": "ごはん",
+      "reading": "gohan",
+      "accepts": [
+        "gohan"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Rice / Meal",
+      "mnemonic": "GO-HAN — \"go-han\"; the heart of every Japanese meal.",
+      "example": {
+        "ja": "ごはんをたべます。",
+        "en": "I eat a meal."
+      }
+    },
+    {
+      "id": "vocab-sushi",
+      "word": "すし",
+      "reading": "sushi",
+      "accepts": [
+        "sushi"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Sushi",
+      "mnemonic": "SU-SHI — you know sushi! Vinegared rice with toppings.",
+      "example": {
+        "ja": "すしがすきです。",
+        "en": "I like sushi."
+      }
+    },
+    {
+      "id": "vocab-yasai",
+      "word": "やさい",
+      "reading": "yasai",
+      "accepts": [
+        "yasai"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Vegetable",
+      "mnemonic": "YA-SA-I — \"yah-sah-ee\"; yah, salad!",
+      "example": {
+        "ja": "やさいをたべます。",
+        "en": "I eat vegetables."
+      }
+    },
+    {
+      "id": "vocab-sakana",
+      "word": "さかな",
+      "reading": "sakana",
+      "accepts": [
+        "sakana"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Fish",
+      "mnemonic": "SA-KA-NA — \"sah-kah-nah\"; sake and a fish dinner.",
+      "example": {
+        "ja": "さかなをたべます。",
+        "en": "I eat fish."
+      }
+    },
+    {
+      "id": "vocab-niku",
+      "word": "にく",
+      "reading": "niku",
+      "accepts": [
+        "niku"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Meat",
+      "mnemonic": "NI-KU — \"nee-koo\"; a neat cook serves meat.",
+      "example": {
+        "ja": "にくをたべます。",
+        "en": "I eat meat."
+      }
+    },
+    {
+      "id": "vocab-tamago",
+      "word": "たまご",
+      "reading": "tamago",
+      "accepts": [
+        "tamago"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Egg",
+      "mnemonic": "TA-MA-GO — \"tah-mah-go\"; let's go get eggs!",
+      "example": {
+        "ja": "たまごをたべます。",
+        "en": "I eat eggs."
+      }
+    },
+    {
+      "id": "vocab-pan",
+      "word": "パン",
+      "reading": "pan",
+      "accepts": [
+        "pan"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Bread",
+      "mnemonic": "PAN — from Portuguese \"pão\". A soft round loaf.",
+      "example": {
+        "ja": "パンをかいます。",
+        "en": "I buy bread."
+      }
+    },
+    {
+      "id": "vocab-kudamono",
+      "word": "くだもの",
+      "reading": "kudamono",
+      "accepts": [
+        "kudamono"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Fruit",
+      "mnemonic": "KU-DA-MO-NO — \"koo-dah-moh-noh\"; fruit falls down (kudaru = descend).",
+      "example": {
+        "ja": "くだものをたべます。",
+        "en": "I eat fruit."
+      }
+    },
+    {
+      "id": "vocab-ringo",
+      "word": "りんご",
+      "reading": "ringo",
+      "accepts": [
+        "ringo"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Apple",
+      "mnemonic": "RIN-GO — \"rin-go\"; ring-shaped apple on the table.",
+      "example": {
+        "ja": "りんごをたべます。",
+        "en": "I eat an apple."
+      }
+    },
+    {
+      "id": "vocab-koohii",
+      "word": "コーヒー",
+      "reading": "koohii",
+      "accepts": [
+        "koohii"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Coffee",
+      "mnemonic": "KOO-HI-I — English \"coffee\" adapted. Easy!",
+      "example": {
+        "ja": "コーヒーをのみます。",
+        "en": "I drink coffee."
+      }
+    },
+    {
+      "id": "vocab-okashi",
+      "word": "おかし",
+      "reading": "okashi",
+      "accepts": [
+        "okashi"
+      ],
+      "lesson": "food",
+      "audio": "",
+      "meaning": "Sweets / Candy",
+      "mnemonic": "O-KA-SHI — \"oh-kah-shee\"; the honorable sweet thing.",
+      "example": {
+        "ja": "おかしをたべます。",
+        "en": "I eat sweets."
+      }
+    },
+    {
+      "id": "vocab-aka",
+      "word": "あか",
+      "reading": "aka",
+      "accepts": [
+        "aka"
+      ],
+      "lesson": "colors",
+      "audio": "",
+      "meaning": "Red",
+      "mnemonic": "AKA sounds like 'a car' on fire — red flames!",
+      "example": {
+        "ja": "あかいりんご",
+        "en": "red apple"
+      }
+    },
+    {
+      "id": "vocab-ao",
+      "word": "あお",
+      "reading": "ao",
+      "accepts": [
+        "ao"
+      ],
+      "lesson": "colors",
+      "audio": "",
+      "meaning": "Blue / Blue-green",
+      "mnemonic": "AO — sounds like 'ow!' staring at the blue sky.",
+      "example": {
+        "ja": "あおいそら",
+        "en": "blue sky"
+      }
+    },
+    {
+      "id": "vocab-kiiro",
+      "word": "きいろ",
+      "reading": "kiiro",
+      "accepts": [
+        "kiiro"
+      ],
+      "lesson": "colors",
+      "audio": "",
+      "meaning": "Yellow",
+      "mnemonic": "KI-IRO — like a 'key' painted yellow.",
+      "example": {
+        "ja": "きいろいひまわり",
+        "en": "yellow sunflower"
+      }
+    },
+    {
+      "id": "vocab-shiro",
+      "word": "しろ",
+      "reading": "shiro",
+      "accepts": [
+        "shiro"
+      ],
+      "lesson": "colors",
+      "audio": "",
+      "meaning": "White",
+      "mnemonic": "SHIRO — like 'Sierra' snowfields, pure white.",
+      "example": {
+        "ja": "しろいゆき",
+        "en": "white snow"
+      }
+    },
+    {
+      "id": "vocab-kuro",
+      "word": "くろ",
+      "reading": "kuro",
+      "accepts": [
+        "kuro"
+      ],
+      "lesson": "colors",
+      "audio": "",
+      "meaning": "Black",
+      "mnemonic": "KURO — like 'crow', the black bird.",
+      "example": {
+        "ja": "くろいねこ",
+        "en": "black cat"
+      }
+    },
+    {
+      "id": "vocab-midori",
+      "word": "みどり",
+      "reading": "midori",
+      "accepts": [
+        "midori"
+      ],
+      "lesson": "colors",
+      "audio": "",
+      "meaning": "Green",
+      "mnemonic": "MIDORI — a Japanese name meaning 'green'; like a green meadow.",
+      "example": {
+        "ja": "みどりのき",
+        "en": "green tree"
+      }
+    },
+    {
+      "id": "vocab-murasaki",
+      "word": "むらさき",
+      "reading": "murasaki",
+      "accepts": [
+        "murasaki"
+      ],
+      "lesson": "colors",
+      "audio": "",
+      "meaning": "Purple",
+      "mnemonic": "MURASAKI — as in the author of The Tale of Genji, Lady Murasaki.",
+      "example": {
+        "ja": "むらさきのはな",
+        "en": "purple flower"
+      }
+    },
+    {
+      "id": "vocab-nihon",
+      "word": "にほん",
+      "reading": "nihon",
+      "accepts": [
+        "nihon"
+      ],
+      "lesson": "extras",
+      "audio": "",
+      "meaning": "Japan",
+      "mnemonic": "NI-HON — \"nee-hon\"; the land of the rising sun.",
+      "example": {
+        "ja": "にほんにいきたいです。",
+        "en": "I want to go to Japan."
+      }
+    },
+    {
+      "id": "vocab-nihongo",
+      "word": "にほんご",
+      "reading": "nihongo",
+      "accepts": [
+        "nihongo"
+      ],
+      "lesson": "extras",
+      "audio": "",
+      "meaning": "Japanese language",
+      "mnemonic": "NI-HON-GO — nihon (Japan) + go (language).",
+      "example": {
+        "ja": "にほんごをべんきょうします。",
+        "en": "I study Japanese."
+      }
+    },
+    {
+      "id": "vocab-eigo",
+      "word": "えいご",
+      "reading": "eigo",
+      "accepts": [
+        "eigo"
+      ],
+      "lesson": "extras",
+      "audio": "",
+      "meaning": "English language",
+      "mnemonic": "EI-GO — \"ay-go\"; ei (英) = English, go = language.",
+      "example": {
+        "ja": "えいごをはなします。",
+        "en": "I speak English."
+      }
+    },
+    {
+      "id": "vocab-america",
+      "word": "アメリカ",
+      "reading": "america",
+      "accepts": [
+        "america"
+      ],
+      "lesson": "extras",
+      "audio": "",
+      "meaning": "America / USA",
+      "mnemonic": "A-ME-RI-KA — loanword from English. Easy!",
+      "example": {
+        "ja": "アメリカにいきます。",
+        "en": "I go to America."
+      }
+    },
+    {
+      "id": "vocab-mainichi",
+      "word": "まいにち",
+      "reading": "mainichi",
+      "accepts": [
+        "mainichi"
+      ],
+      "lesson": "extras",
+      "audio": "",
+      "meaning": "Every day",
+      "mnemonic": "MA-I-NI-CHI — \"my-nee-chee\"; my day, every day.",
+      "example": {
+        "ja": "まいにちべんきょうします。",
+        "en": "I study every day."
+      }
+    },
+    {
+      "id": "vocab-totemo",
+      "word": "とても",
+      "reading": "totemo",
+      "accepts": [
+        "totemo"
+      ],
+      "lesson": "extras",
+      "audio": "",
+      "meaning": "Very / Really",
+      "mnemonic": "TO-TE-MO — \"toh-teh-moh\"; totally, very!",
+      "example": {
+        "ja": "このほんはとてもおもしろいです。",
+        "en": "This book is very interesting."
+      }
+    },
+    {
+      "id": "vocab-sukoshi",
+      "word": "すこし",
+      "reading": "sukoshi",
+      "accepts": [
+        "sukoshi"
+      ],
+      "lesson": "extras",
+      "audio": "",
+      "meaning": "A little",
+      "mnemonic": "SU-KO-SHI — \"soo-koh-shee\"; just a little, scoochy.",
+      "example": {
+        "ja": "すこしわかります。",
+        "en": "I understand a little."
+      }
+    },
+    {
+      "id": "vocab-takusan",
+      "word": "たくさん",
+      "reading": "takusan",
+      "accepts": [
+        "takusan"
+      ],
+      "lesson": "extras",
+      "audio": "",
+      "meaning": "A lot / Many",
+      "mnemonic": "TA-KU-SAN — \"tah-koo-san\"; tons and tons!",
+      "example": {
+        "ja": "ともだちがたくさんいます。",
+        "en": "I have many friends."
+      }
+    }
+  ]
+}

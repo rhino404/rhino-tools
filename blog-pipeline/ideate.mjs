@@ -28,6 +28,8 @@ const TRACKS = [
   { category: 'devops', subcategory: 'iac',            trackKey: 'devops/iac',            label: 'DevOps — Infrastructure as Code',        icon: '⚙️' },
   { category: 'devops', subcategory: 'cloud',          trackKey: 'devops/cloud',          label: 'DevOps — Cloud Platforms',               icon: '⚙️' },
   { category: 'devops', subcategory: 'observability',  trackKey: 'devops/observability',  label: 'DevOps — Monitoring & Observability',    icon: '⚙️' },
+  { category: 'japanese', subcategory: 'foundations', trackKey: 'japanese/foundations', label: 'Japanese — Foundations', icon: '🇯🇵' },
+  { category: 'japanese', subcategory: 'grammar',     trackKey: 'japanese/grammar',     label: 'Japanese — Grammar',     icon: '🇯🇵' },
 ];
 
 function loadJson(path) {

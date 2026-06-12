@@ -35,6 +35,8 @@ const TRACK_META = {
   'cybersecurity/sy0-701':{ label: 'Security+ SY0-701',      icon: '🔒', slug: 'cybersecurity', category: 'cybersecurity', subcategory: 'security+ sy0-701', heroImage: '/images/blog/security-plus-blog-hero.webp', heroAlt: CYBER_ALT },
   'devops/core-concepts': { label: 'DevOps — Core Concepts', icon: '⚙️', slug: 'devops', category: 'devops', subcategory: 'core-concepts', heroImage: '/images/blog/devops-blog-hero.webp', heroAlt: DEVOPS_ALT },
   'devops/containers-k8s':{ label: 'DevOps — Containers & Kubernetes', icon: '⚙️', slug: 'devops', category: 'devops', subcategory: 'containers-k8s', heroImage: '/images/blog/devops-blog-hero.webp', heroAlt: DEVOPS_ALT },
+  'japanese/foundations': { label: 'Japanese — Foundations', icon: '🇯🇵', slug: 'japanese', category: 'japanese', subcategory: 'foundations', heroImage: '/images/blog/japanese-blog-hero.webp', heroAlt: 'Hiragana chart and Japanese text on a dark background — Ryno Tools Japanese learning' },
+  'japanese/grammar':     { label: 'Japanese — Grammar',     icon: '🇯🇵', slug: 'japanese', category: 'japanese', subcategory: 'grammar',     heroImage: '/images/blog/japanese-blog-hero.webp', heroAlt: 'Japanese grammar particles and sentence patterns — Ryno Tools Japanese learning' },
 };
 
 // ── Tiny Markdown renderer (constrained subset) ────────────────────────────────

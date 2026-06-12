@@ -38,7 +38,9 @@
         "devops/cicd",
         "devops/iac",
         "devops/cloud",
-        "devops/observability"
+        "devops/observability",
+        "japanese/foundations",
+        "japanese/grammar"
       ],
       "description": "The quiz track this post maps to. Drives the quiz CTA deep-link and track badge color."
     },

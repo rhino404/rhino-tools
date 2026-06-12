@@ -1,0 +1,368 @@
+{
+  "version": "1.0",
+  "id": "numbers",
+  "type": "vocab",
+  "stages": [
+    { "id": "s1", "label": "Numbers 1–10",     "lessons": ["basic"] },
+    { "id": "s2", "label": "Larger Numbers",   "lessons": ["large"] },
+    { "id": "s3", "label": "Counters",         "lessons": ["counters"] },
+    { "id": "s4", "label": "Telling Time",     "lessons": ["time"] },
+    { "id": "s5", "label": "Days & Dates",     "lessons": ["days"] }
+  ],
+  "items": [
+    {
+      "id": "num-ichi", "word": "一 / いち", "reading": "ichi",
+      "accepts": ["ichi"], "lesson": "basic", "audio": "",
+      "meaning": "One (1)",
+      "mnemonic": "ICHI — one itchy finger.",
+      "example": { "ja": "いちじ", "en": "one o'clock" }
+    },
+    {
+      "id": "num-ni", "word": "二 / に", "reading": "ni",
+      "accepts": ["ni"], "lesson": "basic", "audio": "",
+      "meaning": "Two (2)",
+      "mnemonic": "NI — you have two knees!",
+      "example": { "ja": "にほん", "en": "Japan (two origins)" }
+    },
+    {
+      "id": "num-san", "word": "三 / さん", "reading": "san",
+      "accepts": ["san"], "lesson": "basic", "audio": "",
+      "meaning": "Three (3)",
+      "mnemonic": "SAN — three suns.",
+      "example": { "ja": "さんじ", "en": "three o'clock" }
+    },
+    {
+      "id": "num-yon", "word": "四 / よん", "reading": "yon",
+      "accepts": ["yon", "shi"], "lesson": "basic", "audio": "",
+      "meaning": "Four (4)",
+      "mnemonic": "YON is safe (し sounds like 'death'). Use よん in daily life.",
+      "example": { "ja": "よじ", "en": "four o'clock" }
+    },
+    {
+      "id": "num-go", "word": "五 / ご", "reading": "go",
+      "accepts": ["go"], "lesson": "basic", "audio": "",
+      "meaning": "Five (5)",
+      "mnemonic": "GO — five fingers, ready to go!",
+      "example": { "ja": "ごじ", "en": "five o'clock" }
+    },
+    {
+      "id": "num-roku", "word": "六 / ろく", "reading": "roku",
+      "accepts": ["roku"], "lesson": "basic", "audio": "",
+      "meaning": "Six (6)",
+      "mnemonic": "ROKU — like the streaming box you watch 6 shows on.",
+      "example": { "ja": "ろくじ", "en": "six o'clock" }
+    },
+    {
+      "id": "num-nana", "word": "七 / なな", "reading": "nana",
+      "accepts": ["nana", "shichi"], "lesson": "basic", "audio": "",
+      "meaning": "Seven (7)",
+      "mnemonic": "NANA — your nana (grandma) counts seven grandchildren.",
+      "example": { "ja": "しちじ", "en": "seven o'clock (しち used for time)" }
+    },
+    {
+      "id": "num-hachi", "word": "八 / はち", "reading": "hachi",
+      "accepts": ["hachi"], "lesson": "basic", "audio": "",
+      "meaning": "Eight (8)",
+      "mnemonic": "HACHI — a hatchet has 8 sharp edges in your imagination.",
+      "example": { "ja": "はちじ", "en": "eight o'clock" }
+    },
+    {
+      "id": "num-kyuu", "word": "九 / きゅう", "reading": "kyuu",
+      "accepts": ["kyuu", "kyu", "ku"], "lesson": "basic", "audio": "",
+      "meaning": "Nine (9)",
+      "mnemonic": "KYUU — like 'queue': nine people waiting in line.",
+      "example": { "ja": "くじ", "en": "nine o'clock (く used for time)" }
+    },
+    {
+      "id": "num-juu", "word": "十 / じゅう", "reading": "juu",
+      "accepts": ["juu", "ju"], "lesson": "basic", "audio": "",
+      "meaning": "Ten (10)",
+      "mnemonic": "JUU — like 'jewels'; ten glittering gems.",
+      "example": { "ja": "じゅうじ", "en": "ten o'clock" }
+    },
+
+    {
+      "id": "num-juu-ichi", "word": "十一", "reading": "juuichi",
+      "accepts": ["juuichi", "juichi"], "lesson": "large", "audio": "",
+      "meaning": "Eleven (11)",
+      "mnemonic": "じゅう (10) + いち (1) = 11. Japanese numbers are strictly additive.",
+      "example": { "ja": "じゅういちじ", "en": "eleven o'clock" }
+    },
+    {
+      "id": "num-nijuu", "word": "二十", "reading": "nijuu",
+      "accepts": ["nijuu", "niju"], "lesson": "large", "audio": "",
+      "meaning": "Twenty (20)",
+      "mnemonic": "に (2) × じゅう (10) = 20. Pattern: 2×10, 3×10… works to 99.",
+      "example": { "ja": "にじゅうさい", "en": "twenty years old" }
+    },
+    {
+      "id": "num-sanjuu", "word": "三十", "reading": "sanjuu",
+      "accepts": ["sanjuu", "sanju"], "lesson": "large", "audio": "",
+      "meaning": "Thirty (30)",
+      "mnemonic": "さん (3) × じゅう (10) = 30.",
+      "example": { "ja": "さんじゅうえん", "en": "thirty yen" }
+    },
+    {
+      "id": "num-hyaku", "word": "百", "reading": "hyaku",
+      "accepts": ["hyaku"], "lesson": "large", "audio": "",
+      "meaning": "One hundred (100)",
+      "mnemonic": "HYAKU — like 'hack you' times 100!",
+      "example": { "ja": "ひゃくえん", "en": "100 yen" }
+    },
+    {
+      "id": "num-sanbyaku", "word": "三百", "reading": "sanbyaku",
+      "accepts": ["sanbyaku"], "lesson": "large", "audio": "",
+      "meaning": "Three hundred (300)",
+      "mnemonic": "さん + ひゃく → さんびゃく (sound change: h→b after さん/ろく).",
+      "example": { "ja": "さんびゃくえん", "en": "300 yen" }
+    },
+    {
+      "id": "num-roppyaku", "word": "六百", "reading": "roppyaku",
+      "accepts": ["roppyaku"], "lesson": "large", "audio": "",
+      "meaning": "Six hundred (600)",
+      "mnemonic": "ろく + ひゃく → ろっぴゃく (double-p sound change).",
+      "example": { "ja": "ろっぴゃくえん", "en": "600 yen" }
+    },
+    {
+      "id": "num-happyaku", "word": "八百", "reading": "happyaku",
+      "accepts": ["happyaku"], "lesson": "large", "audio": "",
+      "meaning": "Eight hundred (800)",
+      "mnemonic": "はち + ひゃく → はっぴゃく (double-p sound change).",
+      "example": { "ja": "はっぴゃくえん", "en": "800 yen" }
+    },
+    {
+      "id": "num-sen", "word": "千", "reading": "sen",
+      "accepts": ["sen"], "lesson": "large", "audio": "",
+      "meaning": "One thousand (1,000)",
+      "mnemonic": "SEN — like a 'cent' but 1,000 yen!",
+      "example": { "ja": "せんえん", "en": "1,000 yen" }
+    },
+    {
+      "id": "num-sanzen", "word": "三千", "reading": "sanzen",
+      "accepts": ["sanzen"], "lesson": "large", "audio": "",
+      "meaning": "Three thousand (3,000)",
+      "mnemonic": "さん + せん → さんぜん (s→z sound change after さん).",
+      "example": { "ja": "さんぜんえん", "en": "3,000 yen" }
+    },
+    {
+      "id": "num-man", "word": "万", "reading": "man",
+      "accepts": ["man"], "lesson": "large", "audio": "",
+      "meaning": "Ten thousand (10,000)",
+      "mnemonic": "MAN — one 'man' worth of work = 10,000 yen! Japan counts in units of 10,000.",
+      "example": { "ja": "いちまんえん", "en": "10,000 yen" }
+    },
+
+    {
+      "id": "num-tsu", "word": "〜つ", "reading": "hitotsu / futatsu",
+      "accepts": ["hitotsu", "futatsu"], "lesson": "counters", "audio": "",
+      "meaning": "Native counter for small objects (1–10)",
+      "mnemonic": "ひとつ(1) ふたつ(2) みっつ(3) よっつ(4) いつつ(5) むっつ(6) ななつ(7) やっつ(8) ここのつ(9) とお(10).",
+      "example": { "ja": "りんごをひとつください。", "en": "One apple please." }
+    },
+    {
+      "id": "num-nin", "word": "〜人", "reading": "nin",
+      "accepts": ["nin"], "lesson": "counters", "audio": "",
+      "meaning": "Counter for people",
+      "mnemonic": "Exceptions: ひとり (1 person), ふたり (2 people). From 3: さんにん, よにん…",
+      "example": { "ja": "さんにんいます。", "en": "There are three people." }
+    },
+    {
+      "id": "num-hitori", "word": "一人", "reading": "hitori",
+      "accepts": ["hitori"], "lesson": "counters", "audio": "",
+      "meaning": "One person (irregular)",
+      "mnemonic": "ひとり — not いちにん. The only truly irregular person-counter.",
+      "example": { "ja": "ひとりでいきます。", "en": "I'll go alone (one person)." }
+    },
+    {
+      "id": "num-hon", "word": "〜本", "reading": "hon",
+      "accepts": ["hon", "pon", "bon"], "lesson": "counters", "audio": "",
+      "meaning": "Counter for long thin objects",
+      "mnemonic": "いっぽん(1), にほん(2), さんぼん(3), よんほん(4)… for pens, bottles, rivers, roads.",
+      "example": { "ja": "えんぴつをさんぼんください。", "en": "Three pencils please." }
+    },
+    {
+      "id": "num-mai", "word": "〜枚", "reading": "mai",
+      "accepts": ["mai"], "lesson": "counters", "audio": "",
+      "meaning": "Counter for flat thin objects",
+      "mnemonic": "MAI for flat things — paper, stamps, shirts, slices. Regular: いちまい, にまい…",
+      "example": { "ja": "かみをいちまいください。", "en": "One sheet of paper please." }
+    },
+    {
+      "id": "num-hiki", "word": "〜匹", "reading": "hiki",
+      "accepts": ["hiki", "piki", "biki"], "lesson": "counters", "audio": "",
+      "meaning": "Counter for small animals",
+      "mnemonic": "いっぴき(1 small animal), にひき(2)… For fish, cats, dogs, insects.",
+      "example": { "ja": "ねこがさんびきいます。", "en": "There are three cats." }
+    },
+    {
+      "id": "num-ko", "word": "〜個", "reading": "ko",
+      "accepts": ["ko"], "lesson": "counters", "audio": "",
+      "meaning": "Counter for small round objects",
+      "mnemonic": "いっこ(1), にこ(2), さんこ(3)… for eggs, apples, buttons, small things.",
+      "example": { "ja": "たまごをよっこかいました。", "en": "I bought four eggs." }
+    },
+    {
+      "id": "num-dai", "word": "〜台", "reading": "dai",
+      "accepts": ["dai"], "lesson": "counters", "audio": "",
+      "meaning": "Counter for machines & vehicles",
+      "mnemonic": "いちだい(1), にだい(2)… for cars, bikes, computers, TVs.",
+      "example": { "ja": "くるまがにだいあります。", "en": "There are two cars." }
+    },
+    {
+      "id": "num-tsu-hitotsu", "word": "ひとつ〜とお", "reading": "hitotsu to too",
+      "accepts": ["hitotsu", "too"], "lesson": "counters", "audio": "",
+      "meaning": "Native numbers 1–10 (summary)",
+      "mnemonic": "ひとつ・ふたつ・みっつ・よっつ・いつつ・むっつ・ななつ・やっつ・ここのつ・とお. After 10, use Chinese numbers.",
+      "example": { "ja": "みかんをみっつください。", "en": "Three mandarins please." }
+    },
+    {
+      "id": "num-satsu", "word": "〜冊", "reading": "satsu",
+      "accepts": ["satsu"], "lesson": "counters", "audio": "",
+      "meaning": "Counter for bound books",
+      "mnemonic": "いっさつ(1), にさつ(2), さんさつ(3)… for books, notebooks, manga volumes.",
+      "example": { "ja": "ほんをにさつかいました。", "en": "I bought two books." }
+    },
+
+    {
+      "id": "num-ji", "word": "〜時", "reading": "ji",
+      "accepts": ["ji"], "lesson": "time", "audio": "",
+      "meaning": "O'clock (hours)",
+      "mnemonic": "〜じ for hours. いちじ(1:00)〜じゅうにじ(12:00). Special: しちじ(7:00), くじ(9:00).",
+      "example": { "ja": "いまはさんじです。", "en": "It is now 3 o'clock." }
+    },
+    {
+      "id": "num-fun", "word": "〜分", "reading": "fun / pun",
+      "accepts": ["fun", "pun"], "lesson": "time", "audio": "",
+      "meaning": "Minutes",
+      "mnemonic": "いっぷん(1m), にふん(2m), さんぷん(3m), よんふん(4m), ごふん(5m)…",
+      "example": { "ja": "さんじじゅっぷんです。", "en": "It is 3:10." }
+    },
+    {
+      "id": "num-han", "word": "半", "reading": "han",
+      "accepts": ["han"], "lesson": "time", "audio": "",
+      "meaning": "Half-past (30 minutes)",
+      "mnemonic": "〜じはん = half past. ごじはん = 5:30. Literally 'five o'clock half'.",
+      "example": { "ja": "ごじはんにあいましょう。", "en": "Let's meet at 5:30." }
+    },
+    {
+      "id": "num-gozen", "word": "午前 / 午後", "reading": "gozen / gogo",
+      "accepts": ["gozen", "gogo"], "lesson": "time", "audio": "",
+      "meaning": "AM / PM",
+      "mnemonic": "ごぜん = before noon (午前). ごご = afternoon (午後). Put before the time: ごぜんくじ.",
+      "example": { "ja": "ごごにじにきてください。", "en": "Please come at 2 p.m." }
+    },
+    {
+      "id": "num-ima", "word": "今〜時〜分", "reading": "ima nanji desu ka",
+      "accepts": ["ima", "nanji"], "lesson": "time", "audio": "",
+      "meaning": "What time is it now?",
+      "mnemonic": "いまなんじですか？= the most useful time question. いま = now, なんじ = what time.",
+      "example": { "ja": "いまくじさんじゅっぷんです。", "en": "It is now 9:30." }
+    },
+    {
+      "id": "num-nichi", "word": "〜日", "reading": "nichi / ka",
+      "accepts": ["nichi", "ka"], "lesson": "time", "audio": "",
+      "meaning": "Date / day of month",
+      "mnemonic": "ついたち(1日), ふつか(2日), みっか(3日)… many irregular! 14日: じゅうよっか. 20日: はつか.",
+      "example": { "ja": "きょうはなんにちですか？", "en": "What is today's date?" }
+    },
+    {
+      "id": "num-asa", "word": "朝 / あさ", "reading": "asa",
+      "accepts": ["asa"], "lesson": "time", "audio": "",
+      "meaning": "Morning",
+      "mnemonic": "ASA — the sun rises on Asia every ASA (morning).",
+      "example": { "ja": "あさはちじにおきます。", "en": "I wake up at 8 a.m." }
+    },
+    {
+      "id": "num-hiru", "word": "昼 / ひる", "reading": "hiru",
+      "accepts": ["hiru"], "lesson": "time", "audio": "",
+      "meaning": "Noon / Daytime",
+      "mnemonic": "HIRU — sounds like 'here you' are at noon, right in the middle.",
+      "example": { "ja": "ひるごはんはじゅうにじです。", "en": "Lunch is at 12 o'clock." }
+    },
+    {
+      "id": "num-yoru", "word": "夜 / よる", "reading": "yoru",
+      "accepts": ["yoru"], "lesson": "time", "audio": "",
+      "meaning": "Night / Evening",
+      "mnemonic": "YORU — 'your' night to relax. よる is the general word for nighttime.",
+      "example": { "ja": "よるくじにねます。", "en": "I go to bed at 9 p.m." }
+    },
+    {
+      "id": "num-ban", "word": "晩 / ばん", "reading": "ban",
+      "accepts": ["ban"], "lesson": "time", "audio": "",
+      "meaning": "Evening (mealtime sense)",
+      "mnemonic": "BAN — like こんばんは, the evening greeting. ばんごはん = evening meal.",
+      "example": { "ja": "ばんごはんはなんじですか？", "en": "What time is dinner?" }
+    },
+
+    {
+      "id": "num-getsuyoubi", "word": "月曜日", "reading": "getsuyoubi",
+      "accepts": ["getsuyoubi", "getsuyōbi"], "lesson": "days", "audio": "",
+      "meaning": "Monday",
+      "mnemonic": "月(moon/month) — Mon in Monday is also related to moon. 月曜 = moon-day.",
+      "example": { "ja": "げつようびにいきます。", "en": "I'll go on Monday." }
+    },
+    {
+      "id": "num-kayoubi", "word": "火曜日", "reading": "kayoubi",
+      "accepts": ["kayoubi", "kayōbi"], "lesson": "days", "audio": "",
+      "meaning": "Tuesday",
+      "mnemonic": "火(fire) — Tuesday comes from Tiw, Norse god of war/fire.",
+      "example": { "ja": "かようびはひまです。", "en": "I'm free on Tuesday." }
+    },
+    {
+      "id": "num-suiyoubi", "word": "水曜日", "reading": "suiyoubi",
+      "accepts": ["suiyoubi", "suiyōbi"], "lesson": "days", "audio": "",
+      "meaning": "Wednesday",
+      "mnemonic": "水(water) — Wednesday has water in the middle of the week.",
+      "example": { "ja": "すいようびはなんじですか？", "en": "What time on Wednesday?" }
+    },
+    {
+      "id": "num-mokuyoubi", "word": "木曜日", "reading": "mokuyoubi",
+      "accepts": ["mokuyoubi", "mokuyōbi"], "lesson": "days", "audio": "",
+      "meaning": "Thursday",
+      "mnemonic": "木(tree/wood) — Thor's day, and Thor's hammer is wooden.",
+      "example": { "ja": "もくようびにべんきょうします。", "en": "I study on Thursday." }
+    },
+    {
+      "id": "num-kinyoubi", "word": "金曜日", "reading": "kinyoubi",
+      "accepts": ["kinyoubi", "kinyōbi"], "lesson": "days", "audio": "",
+      "meaning": "Friday",
+      "mnemonic": "金(gold/money) — Freya's day, and gold is precious like Friday!",
+      "example": { "ja": "きんようびがすきです。", "en": "I like Fridays." }
+    },
+    {
+      "id": "num-doyoubi", "word": "土曜日", "reading": "doyoubi",
+      "accepts": ["doyoubi", "doyōbi"], "lesson": "days", "audio": "",
+      "meaning": "Saturday",
+      "mnemonic": "土(earth/soil) — Saturn's day, god of earth and harvest.",
+      "example": { "ja": "どようびにかいものします。", "en": "I shop on Saturday." }
+    },
+    {
+      "id": "num-nichiyoubi", "word": "日曜日", "reading": "nichiyoubi",
+      "accepts": ["nichiyoubi", "nichiyōbi"], "lesson": "days", "audio": "",
+      "meaning": "Sunday",
+      "mnemonic": "日(sun/day) — Sun-day. The kanji 日 means both sun and day.",
+      "example": { "ja": "にちようびはやすみです。", "en": "Sunday is a day off." }
+    },
+    {
+      "id": "num-kyou", "word": "今日 / きょう", "reading": "kyou",
+      "accepts": ["kyou", "kyo"], "lesson": "days", "audio": "",
+      "meaning": "Today",
+      "mnemonic": "きょう (today), あした (tomorrow), きのう (yesterday). Most-used time words.",
+      "example": { "ja": "きょうはなんようびですか？", "en": "What day is it today?" }
+    },
+    {
+      "id": "num-ashita", "word": "明日 / あした", "reading": "ashita",
+      "accepts": ["ashita", "asu"], "lesson": "days", "audio": "",
+      "meaning": "Tomorrow",
+      "mnemonic": "あした — the 'ashi' part sounds like 'Asia's' bright tomorrow.",
+      "example": { "ja": "あしたまたきます。", "en": "I'll come again tomorrow." }
+    },
+    {
+      "id": "num-kinou", "word": "昨日 / きのう", "reading": "kinou",
+      "accepts": ["kinou", "kino"], "lesson": "days", "audio": "",
+      "meaning": "Yesterday",
+      "mnemonic": "きのう — sounds a bit like 'Kino', a wanderer going back in time.",
+      "example": { "ja": "きのうなにをしましたか？", "en": "What did you do yesterday?" }
+    }
+  ]
+}

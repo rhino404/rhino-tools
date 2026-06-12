@@ -1,0 +1,232 @@
+{
+  "version": "2.1",
+  "levels": [
+    {
+      "id": "foundations",
+      "label": "Foundations",
+      "sublabel": "基礎",
+      "icon": "あ",
+      "status": "available",
+      "blurb": "Master hiragana and katakana — the two phonetic scripts every Japanese reader uses. No kanji, just sounds.",
+      "skills": [
+        {
+          "id": "hiragana",
+          "label": "Hiragana",
+          "icon": "あ",
+          "type": "kana",
+          "data": "hiragana.json",
+          "layout": "gojuon",
+          "modes": ["learn", "match", "type"],
+          "count": 104,
+          "blurb": "104 characters with vivid mnemonics. The foundation of all reading."
+        },
+        {
+          "id": "katakana",
+          "label": "Katakana",
+          "icon": "ア",
+          "type": "kana",
+          "data": "katakana.json",
+          "layout": "gojuon",
+          "modes": ["learn", "match", "type"],
+          "count": 104,
+          "blurb": "The angular script for loanwords — コーヒー, テレビ, and more."
+        }
+      ]
+    },
+    {
+      "id": "elementary-1",
+      "label": "Elementary 1",
+      "sublabel": "小学1年",
+      "icon": "一",
+      "status": "available",
+      "blurb": "First kanji, core vocabulary, and your first complete sentences with は・を・へ. Start reading and speaking at the same time.",
+      "skills": [
+        {
+          "id": "kanji-g1",
+          "label": "Kanji — Grade 1",
+          "icon": "漢",
+          "type": "kanji",
+          "data": "kanji-g1.json",
+          "layout": "deck",
+          "modes": ["learn", "match", "type"],
+          "count": 80,
+          "blurb": "80 kyōiku kanji — numbers, nature, people, and daily life."
+        },
+        {
+          "id": "vocab",
+          "label": "Vocabulary I",
+          "icon": "📖",
+          "type": "vocab",
+          "data": "vocab.json",
+          "layout": "deck",
+          "modes": ["learn", "match", "type"],
+          "count": 124,
+          "blurb": "Pronouns, verbs, adjectives, food, places, and everyday words — everything you need for your first sentences."
+        },
+        {
+          "id": "numbers",
+          "label": "Numbers & Counters",
+          "icon": "🔢",
+          "type": "vocab",
+          "data": "numbers.json",
+          "layout": "deck",
+          "modes": ["learn", "match", "type"],
+          "count": 50,
+          "blurb": "1–10,000, essential counters, time, and days of the week."
+        },
+        {
+          "id": "sentences-1",
+          "label": "Sentences I",
+          "icon": "💬",
+          "type": "grammar",
+          "data": "sentences-1.json",
+          "layout": "deck",
+          "modes": ["learn", "match", "type"],
+          "count": 40,
+          "blurb": "Your first N5 patterns: AはBです, questions, basic verbs, and これ/それ/あれ."
+        }
+      ]
+    },
+    {
+      "id": "elementary-2",
+      "label": "Elementary 2",
+      "sublabel": "小学2年",
+      "icon": "二",
+      "status": "soon",
+      "blurb": "160 new kanji + て-form verbs and casual speech. Unlocks after Elementary 1.",
+      "skills": [
+        { "id": "kanji-g2", "label": "Kanji — Grade 2", "icon": "漢", "count": 160 },
+        { "id": "sentences-2", "label": "Sentences II", "icon": "💬", "count": 40 },
+        { "id": "vocab-2", "label": "Vocabulary II", "icon": "📖", "count": 80 }
+      ]
+    },
+    {
+      "id": "elementary-3",
+      "label": "Elementary 3",
+      "sublabel": "小学3年",
+      "icon": "三",
+      "status": "soon",
+      "blurb": "200 new kanji. Verb て-form, adjective conjugation, and giving/receiving (あげる/もらう).",
+      "skills": [
+        { "id": "kanji-g3", "label": "Kanji — Grade 3", "icon": "漢", "count": 200 },
+        { "id": "sentences-3", "label": "Sentences III", "icon": "💬", "count": 40 },
+        { "id": "vocab-3", "label": "Vocabulary III", "icon": "📖", "count": 100 }
+      ]
+    },
+    {
+      "id": "elementary-4",
+      "label": "Elementary 4",
+      "sublabel": "小学4年",
+      "icon": "四",
+      "status": "soon",
+      "blurb": "202 new kanji. Potential form (~できる), want-to (~たい), and conditional (~たら/~ば).",
+      "skills": [
+        { "id": "kanji-g4", "label": "Kanji — Grade 4", "icon": "漢", "count": 202 },
+        { "id": "sentences-4", "label": "Sentences IV", "icon": "💬", "count": 40 },
+        { "id": "vocab-4", "label": "Vocabulary IV", "icon": "📖", "count": 120 }
+      ]
+    },
+    {
+      "id": "elementary-5",
+      "label": "Elementary 5",
+      "sublabel": "小学5年",
+      "icon": "五",
+      "status": "soon",
+      "blurb": "193 new kanji. Keigo (honorific language) begins — ます/です polished, いらっしゃる introduced.",
+      "skills": [
+        { "id": "kanji-g5", "label": "Kanji — Grade 5", "icon": "漢", "count": 193 },
+        { "id": "sentences-5", "label": "Sentences V", "icon": "💬", "count": 40 },
+        { "id": "vocab-5", "label": "Vocabulary V", "icon": "📖", "count": 150 }
+      ]
+    },
+    {
+      "id": "elementary-6",
+      "label": "Elementary 6",
+      "sublabel": "小学6年",
+      "icon": "六",
+      "status": "soon",
+      "blurb": "191 new kanji, completing the 1,026 elementary kanji. Passive voice (~られる) and causative (~させる) preview.",
+      "skills": [
+        { "id": "kanji-g6", "label": "Kanji — Grade 6", "icon": "漢", "count": 191 },
+        { "id": "sentences-6", "label": "Sentences VI", "icon": "💬", "count": 40 },
+        { "id": "vocab-6", "label": "Vocabulary VI", "icon": "📖", "count": 150 }
+      ]
+    },
+    {
+      "id": "junior-high-1",
+      "label": "Junior High 1",
+      "sublabel": "中学1年",
+      "icon": "中",
+      "status": "soon",
+      "blurb": "≈370 jōyō kanji. Passive and causative forms mastered. Plain-form writing and informal conversation.",
+      "skills": [
+        { "id": "kanji-jh1", "label": "Kanji — JH1", "icon": "漢", "count": 370 },
+        { "id": "grammar-jh1", "label": "Grammar VII", "icon": "💬", "count": 50 },
+        { "id": "vocab-jh1", "label": "Vocabulary VII", "icon": "📖", "count": 200 }
+      ]
+    },
+    {
+      "id": "junior-high-2",
+      "label": "Junior High 2",
+      "sublabel": "中学2年",
+      "icon": "学",
+      "status": "soon",
+      "blurb": "≈370 more jōyō kanji. Full keigo system — sonkeigo, kenjōgo, teineigo. Compound sentences.",
+      "skills": [
+        { "id": "kanji-jh2", "label": "Kanji — JH2", "icon": "漢", "count": 370 },
+        { "id": "grammar-jh2", "label": "Keigo & Grammar", "icon": "💬", "count": 50 },
+        { "id": "vocab-jh2", "label": "Vocabulary VIII", "icon": "📖", "count": 200 }
+      ]
+    },
+    {
+      "id": "junior-high-3",
+      "label": "Junior High 3",
+      "sublabel": "中学3年",
+      "icon": "語",
+      "status": "soon",
+      "blurb": "Remaining jōyō kanji, completing all 2,136. Classical grammar introduction (古典). N3-level reading.",
+      "skills": [
+        { "id": "kanji-jh3", "label": "Kanji — JH3", "icon": "漢", "count": 370 },
+        { "id": "grammar-jh3", "label": "N3 Patterns", "icon": "💬", "count": 60 },
+        { "id": "vocab-jh3", "label": "Vocabulary IX", "icon": "📖", "count": 250 }
+      ]
+    },
+    {
+      "id": "high-school-1",
+      "label": "High School 1",
+      "sublabel": "高校1年",
+      "icon": "高",
+      "status": "soon",
+      "blurb": "Register mastery — written vs spoken, formal vs casual. N2 grammar patterns. Literary vocabulary.",
+      "skills": [
+        { "id": "grammar-hs1", "label": "N2 Grammar", "icon": "💬", "count": 80 },
+        { "id": "vocab-hs1", "label": "Literary Vocab", "icon": "📖", "count": 300 }
+      ]
+    },
+    {
+      "id": "high-school-2",
+      "label": "High School 2",
+      "sublabel": "高校2年",
+      "icon": "校",
+      "status": "soon",
+      "blurb": "Classical Japanese (古文) — Man'yōshū grammar, pre-modern verb conjugation, classical particles.",
+      "skills": [
+        { "id": "classical-1", "label": "Classical Japanese", "icon": "📜", "count": 80 },
+        { "id": "vocab-hs2", "label": "Classical Vocab", "icon": "📖", "count": 200 }
+      ]
+    },
+    {
+      "id": "high-school-3",
+      "label": "High School 3",
+      "sublabel": "高校3年",
+      "icon": "卒",
+      "status": "soon",
+      "blurb": "Sino-Japanese (漢文) reading. N1-level mastery. Advanced academic and professional register.",
+      "skills": [
+        { "id": "kanbun", "label": "漢文 Kanbun", "icon": "📜", "count": 60 },
+        { "id": "grammar-n1", "label": "N1 Grammar", "icon": "💬", "count": 100 },
+        { "id": "vocab-hs3", "label": "Advanced Vocab", "icon": "📖", "count": 300 }
+      ]
+    }
+  ]
+}
