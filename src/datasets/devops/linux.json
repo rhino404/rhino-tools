@@ -4,12 +4,12 @@
     "q_number": 1,
     "question": "A DevOps engineer runs `ps aux` and sees a process in state 'Z'. What does this indicate and what is the correct way to remove it?",
     "choices": [
-      "A. The process is suspended (paused); send SIGCONT to resume it",
-      "B. The process has exited but its parent has not yet called wait(); the parent must reap it or be killed",
-      "C. The process is waiting for disk I/O and cannot be killed; reboot is required",
-      "D. The process is using 100% CPU; send SIGKILL to terminate it immediately"
+      "The process is suspended (paused); send SIGCONT to resume it",
+      "The process has exited but its parent has not yet called wait(); the parent must reap it or be killed",
+      "The process is waiting for disk I/O and cannot be killed; reboot is required",
+      "The process is using 100% CPU; send SIGKILL to terminate it immediately"
     ],
-    "correct": "B. The process has exited but its parent has not yet called wait(); the parent must reap it or be killed",
+    "correct": "The process has exited but its parent has not yet called wait(); the parent must reap it or be killed",
     "explanation": "A 'Z' (zombie) process has already terminated but remains in the process table because its parent has not called wait() to collect its exit status. Zombies consume no CPU or memory resources, only a process table entry. The fix is to have the parent reap the child (signal it with SIGCHLD) or, if the parent is unresponsive, kill the parent so init/systemd inherits and reaps the zombie. SIGKILL cannot remove a zombie — it has already exited. 'D' is incorrect because the Z state indicates the process is finished, not running. (Source: man7.org/linux/man-pages/man2/waitpid.2.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -17,7 +17,10 @@
     "topic": "Understanding Linux process states and lifecycle: R, S, D, Z, and T states explained for real troubleshooting",
     "topic_label": "Process Management",
     "total_topic_questions": 10,
-    "tags": ["linux", "troubleshooting"],
+    "tags": [
+      "linux",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -25,12 +28,12 @@
     "q_number": 2,
     "question": "A long-running batch job is consuming an entire CPU core and slowing other services. You want to reduce its scheduling priority without stopping it. Which command achieves this?",
     "choices": [
-      "A. kill -9 <pid> to stop it and relaunch with lower priority",
-      "B. renice +10 <pid> to lower the process's scheduling priority",
-      "C. nice -n -10 <pid> to give it more CPU time so it finishes faster",
-      "D. systemctl set-property <service> CPUShares=512 which requires a running systemd unit"
+      "kill -9 <pid> to stop it and relaunch with lower priority",
+      "renice +10 <pid> to lower the process's scheduling priority",
+      "nice -n -10 <pid> to give it more CPU time so it finishes faster",
+      "systemctl set-property <service> CPUShares=512 which requires a running systemd unit"
     ],
-    "correct": "B. renice +10 <pid> to lower the process's scheduling priority",
+    "correct": "renice +10 <pid> to lower the process's scheduling priority",
     "explanation": "renice changes the nice value of a running process. Nice values range from -20 (highest priority) to +19 (lowest priority). Adding +10 to a process's current nice value moves it toward the low-priority end, yielding CPU to other processes. nice sets the value at launch; renice adjusts a live process. Option C uses a negative value (-10) which would increase priority, not reduce it. Option D is valid for cgroup-based throttling but requires a systemd unit and is not a simple priority adjustment. (Source: man7.org/linux/man-pages/man1/renice.1.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -38,7 +41,10 @@
     "topic": "Understanding Linux process states and lifecycle: R, S, D, Z, and T states explained for real troubleshooting",
     "topic_label": "Process Management",
     "total_topic_questions": 10,
-    "tags": ["linux", "troubleshooting"],
+    "tags": [
+      "linux",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -46,12 +52,12 @@
     "q_number": 3,
     "question": "You need to gracefully reload an Nginx configuration without dropping active connections. Which signal should you send to the master Nginx process?",
     "choices": [
-      "A. SIGKILL, which forces an immediate restart",
-      "B. SIGTERM, which initiates a clean shutdown and waits for connections to drain",
-      "C. SIGHUP, which causes Nginx to re-read its configuration and gracefully recycle workers",
-      "D. SIGSTOP, which pauses the process while you swap configuration files"
+      "SIGKILL, which forces an immediate restart",
+      "SIGTERM, which initiates a clean shutdown and waits for connections to drain",
+      "SIGHUP, which causes Nginx to re-read its configuration and gracefully recycle workers",
+      "SIGSTOP, which pauses the process while you swap configuration files"
     ],
-    "correct": "C. SIGHUP, which causes Nginx to re-read its configuration and gracefully recycle workers",
+    "correct": "SIGHUP, which causes Nginx to re-read its configuration and gracefully recycle workers",
     "explanation": "SIGHUP is the conventional 'reload configuration' signal for long-running daemons including Nginx, Apache, and syslog. When Nginx's master receives SIGHUP it validates the new config, starts new workers, and lets old workers finish in-flight requests before exiting — zero dropped connections. SIGTERM initiates a graceful shutdown (connections drain but the process eventually exits). SIGKILL cannot be caught or ignored and terminates immediately, dropping connections. SIGSTOP suspends the process entirely, making it unavailable. (Source: nginx.org/en/docs/control.html; man7.org/linux/man-pages/man7/signal.7.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -59,7 +65,10 @@
     "topic": "Understanding Linux process states and lifecycle: R, S, D, Z, and T states explained for real troubleshooting",
     "topic_label": "Process Management",
     "total_topic_questions": 10,
-    "tags": ["linux", "automation"],
+    "tags": [
+      "linux",
+      "automation"
+    ],
     "image": ""
   },
   {
@@ -67,12 +76,12 @@
     "q_number": 4,
     "question": "After deploying a new systemd service unit file, the service starts fine but does NOT come back after a reboot. What is the most likely cause?",
     "choices": [
-      "A. The unit file is missing a [Service] section",
-      "B. The service was started with `systemctl start` but never enabled with `systemctl enable`",
-      "C. The ExecStart path is wrong and systemd silently ignores the error at boot",
-      "D. The unit file must be placed in /etc/init.d/, not /etc/systemd/system/"
+      "The unit file is missing a [Service] section",
+      "The service was started with `systemctl start` but never enabled with `systemctl enable`",
+      "The ExecStart path is wrong and systemd silently ignores the error at boot",
+      "The unit file must be placed in /etc/init.d/, not /etc/systemd/system/"
     ],
-    "correct": "B. The service was started with `systemctl start` but never enabled with `systemctl enable`",
+    "correct": "The service was started with `systemctl start` but never enabled with `systemctl enable`",
     "explanation": "systemctl start launches a service immediately for the current session. systemctl enable creates the symlink in the appropriate wants/ or requires/ directory so that the unit is activated at the correct boot target. A service that was only started — never enabled — runs now but is not wired into any boot target and will not survive reboot. Option A would prevent the service from starting at all. Option C is false; a bad ExecStart causes the unit to enter a failed state that is logged. Option D is incorrect; /etc/init.d/ is the legacy SysV location; systemd reads units from /etc/systemd/system/ or /lib/systemd/system/. (Source: man7.org/linux/man-pages/man1/systemctl.1.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -80,7 +89,10 @@
     "topic": "Understanding Linux process states and lifecycle: R, S, D, Z, and T states explained for real troubleshooting",
     "topic_label": "Process Management",
     "total_topic_questions": 10,
-    "tags": ["linux", "automation"],
+    "tags": [
+      "linux",
+      "automation"
+    ],
     "image": ""
   },
   {
@@ -88,12 +100,12 @@
     "q_number": 5,
     "question": "A process is stuck in state 'D' (uninterruptible sleep) for several minutes. What is the most accurate characterization of this state?",
     "choices": [
-      "A. The process is intentionally paused by the user with SIGSTOP and will resume on SIGCONT",
-      "B. The process is waiting for a kernel event (typically I/O) and cannot be killed until the wait resolves",
-      "C. The process has terminated and is waiting for its parent to call wait()",
-      "D. The process is in a tight compute loop consuming 100% CPU"
+      "The process is intentionally paused by the user with SIGSTOP and will resume on SIGCONT",
+      "The process is waiting for a kernel event (typically I/O) and cannot be killed until the wait resolves",
+      "The process has terminated and is waiting for its parent to call wait()",
+      "The process is in a tight compute loop consuming 100% CPU"
     ],
-    "correct": "B. The process is waiting for a kernel event (typically I/O) and cannot be killed until the wait resolves",
+    "correct": "The process is waiting for a kernel event (typically I/O) and cannot be killed until the wait resolves",
     "explanation": "The D (TASK_UNINTERRUPTIBLE) state means the process is blocked in a kernel code path that cannot be interrupted by signals, including SIGKILL. This is intentional: certain kernel operations (e.g., waiting on a slow NFS mount, disk I/O during a failing storage path) must not be interrupted mid-operation or data corruption could result. A process stuck in D for a long time usually indicates a hardware or kernel driver problem (hung NFS, broken SCSI path). State T is the SIGSTOP/ptrace-paused state. State Z is the zombie. (Source: man7.org/linux/man-pages/man5/proc.5.html — /proc/[pid]/status State field)",
     "category": "devops",
     "subcategory": "linux",
@@ -101,7 +113,10 @@
     "topic": "Understanding Linux process states and lifecycle: R, S, D, Z, and T states explained for real troubleshooting",
     "topic_label": "Process Management",
     "total_topic_questions": 10,
-    "tags": ["linux", "troubleshooting"],
+    "tags": [
+      "linux",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -109,12 +124,12 @@
     "q_number": 6,
     "question": "What is the functional difference between `systemctl stop` and `systemctl disable` for a running service?",
     "choices": [
-      "A. stop kills the process immediately; disable removes it from the system entirely",
-      "B. stop halts the running service now; disable prevents it from starting at boot but does not stop it currently",
-      "C. They are equivalent — both stop and disable the service at the same time",
-      "D. disable is only valid for socket-activated units; stop is for simple service units"
+      "stop kills the process immediately; disable removes it from the system entirely",
+      "stop halts the running service now; disable prevents it from starting at boot but does not stop it currently",
+      "They are equivalent — both stop and disable the service at the same time",
+      "disable is only valid for socket-activated units; stop is for simple service units"
     ],
-    "correct": "B. stop halts the running service now; disable prevents it from starting at boot but does not stop it currently",
+    "correct": "stop halts the running service now; disable prevents it from starting at boot but does not stop it currently",
     "explanation": "systemctl stop sends the configured stop signal (usually SIGTERM, then SIGKILL) to the running service and waits for it to exit, affecting the current boot session only. systemctl disable removes the symlinks that wire the unit into boot targets, so it will not auto-start on future reboots — but the currently running instance is untouched. To both stop and prevent auto-start you run both commands. Option A is wrong because disable does not uninstall anything from the filesystem. (Source: man7.org/linux/man-pages/man1/systemctl.1.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -122,7 +137,10 @@
     "topic": "Understanding Linux process states and lifecycle: R, S, D, Z, and T states explained for real troubleshooting",
     "topic_label": "Process Management",
     "total_topic_questions": 10,
-    "tags": ["linux", "automation"],
+    "tags": [
+      "linux",
+      "automation"
+    ],
     "image": ""
   },
   {
@@ -130,12 +148,12 @@
     "q_number": 7,
     "question": "A child process calls `fork()` followed immediately by `exec()`. What is the role of `fork()` in this sequence?",
     "choices": [
-      "A. fork() loads the new program binary into the current process's address space",
-      "B. fork() creates a new process that is an exact copy of the parent, which exec() then replaces with a new program image",
-      "C. fork() directly invokes the kernel scheduler to allocate a CPU core to the new program",
-      "D. fork() and exec() are interchangeable; using both is redundant"
+      "fork() loads the new program binary into the current process's address space",
+      "fork() creates a new process that is an exact copy of the parent, which exec() then replaces with a new program image",
+      "fork() directly invokes the kernel scheduler to allocate a CPU core to the new program",
+      "fork() and exec() are interchangeable; using both is redundant"
     ],
-    "correct": "B. fork() creates a new process that is an exact copy of the parent, which exec() then replaces with a new program image",
+    "correct": "fork() creates a new process that is an exact copy of the parent, which exec() then replaces with a new program image",
     "explanation": "fork() duplicates the calling process: the parent and child share the same code, data, and file descriptors (copy-on-write until written). exec() then replaces the child's address space with a new program binary, effectively becoming the target program. This fork+exec pattern is the canonical Unix mechanism for spawning new programs. Shells use it for every command you run. fork() alone does not load a new binary; exec() alone replaces the current process. (Source: man7.org/linux/man-pages/man2/fork.2.html; man7.org/linux/man-pages/man3/exec.3.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -143,7 +161,9 @@
     "topic": "Understanding Linux process states and lifecycle: R, S, D, Z, and T states explained for real troubleshooting",
     "topic_label": "Process Management",
     "total_topic_questions": 10,
-    "tags": ["linux"],
+    "tags": [
+      "linux"
+    ],
     "image": ""
   },
   {
@@ -151,12 +171,12 @@
     "q_number": 8,
     "question": "You run `top` and notice a process with PID 1 named 'systemd'. A colleague insists PID 1 should be 'init'. Who is correct?",
     "choices": [
-      "A. The colleague — PID 1 must always be named 'init'; 'systemd' at PID 1 indicates a misconfiguration",
-      "B. Both are correct in context — on modern systemd-based Linux distros, systemd IS the init system and runs as PID 1",
-      "C. Neither — PID 1 is reserved for the kernel and should not appear in user-space process listings",
-      "D. You are correct — 'init' is an older alias and modern systems no longer support it"
+      "The colleague — PID 1 must always be named 'init'; 'systemd' at PID 1 indicates a misconfiguration",
+      "Both are correct in context — on modern systemd-based Linux distros, systemd IS the init system and runs as PID 1",
+      "Neither — PID 1 is reserved for the kernel and should not appear in user-space process listings",
+      "You are correct — 'init' is an older alias and modern systems no longer support it"
     ],
-    "correct": "B. Both are correct in context — on modern systemd-based Linux distros, systemd IS the init system and runs as PID 1",
+    "correct": "Both are correct in context — on modern systemd-based Linux distros, systemd IS the init system and runs as PID 1",
     "explanation": "PID 1 is always the init process — the first user-space process started by the kernel. On older or minimal distros, this was a program literally named 'init'. On modern Red Hat, Ubuntu, Debian, and other mainstream distros, systemd fulfills the init role and runs as PID 1 under the name 'systemd'. The two names refer to different implementations of the same role. PID 1 is absolutely a user-space process; it appears in all process listings. (Source: man7.org/linux/man-pages/man1/init.1.html; kernel.org/doc/html/latest/admin-guide/init.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -164,7 +184,9 @@
     "topic": "Understanding Linux process states and lifecycle: R, S, D, Z, and T states explained for real troubleshooting",
     "topic_label": "Process Management",
     "total_topic_questions": 10,
-    "tags": ["linux"],
+    "tags": [
+      "linux"
+    ],
     "image": ""
   },
   {
@@ -172,12 +194,12 @@
     "q_number": 9,
     "question": "A production service fails intermittently and the on-call engineer suspects memory pressure is causing the OOM killer to terminate it. Which command output would confirm this?",
     "choices": [
-      "A. `ps aux | grep <service>` showing the process in 'D' state",
-      "B. `dmesg | grep -i 'oom'` showing 'Out of memory: Kill process' entries",
-      "C. `systemctl status <service>` showing 'Active: failed (Result: timeout)'",
-      "D. `top` showing the process with 100% CPU utilization"
+      "`ps aux | grep <service>` showing the process in 'D' state",
+      "`dmesg | grep -i 'oom'` showing 'Out of memory: Kill process' entries",
+      "`systemctl status <service>` showing 'Active: failed (Result: timeout)'",
+      "`top` showing the process with 100% CPU utilization"
     ],
-    "correct": "B. `dmesg | grep -i 'oom'` showing 'Out of memory: Kill process' entries",
+    "correct": "`dmesg | grep -i 'oom'` showing 'Out of memory: Kill process' entries",
     "explanation": "When the Linux kernel's OOM (Out of Memory) killer activates, it logs a detailed message to the kernel ring buffer (accessible via dmesg or /var/log/kern.log) that includes 'Out of memory: Kill process', the victim PID and name, and memory statistics at the time of the kill. This is the authoritative diagnostic path. The D state indicates I/O wait, not memory pressure. A systemd timeout result indicates the service did not start in time, not an OOM event. High CPU does not cause OOM kills. (Source: kernel.org/doc/html/latest/admin-guide/mm/oom_killer_guide.html; man7.org/linux/man-pages/man1/dmesg.1.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -185,7 +207,10 @@
     "topic": "Understanding Linux process states and lifecycle: R, S, D, Z, and T states explained for real troubleshooting",
     "topic_label": "Process Management",
     "total_topic_questions": 10,
-    "tags": ["linux", "troubleshooting"],
+    "tags": [
+      "linux",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -193,12 +218,12 @@
     "q_number": 10,
     "question": "A systemd service unit has `Restart=on-failure` configured. The service crashes due to a bug that causes it to exit with code 1. What happens next?",
     "choices": [
-      "A. systemd waits indefinitely for an operator to manually restart the service",
-      "B. systemd automatically attempts to restart the service after the RestartSec delay (default 100ms)",
-      "C. systemd restarts the service only if it was killed by a signal, not for non-zero exit codes",
-      "D. systemd disables the service and requires `systemctl reset-failed` before it will start again"
+      "systemd waits indefinitely for an operator to manually restart the service",
+      "systemd automatically attempts to restart the service after the RestartSec delay (default 100ms)",
+      "systemd restarts the service only if it was killed by a signal, not for non-zero exit codes",
+      "systemd disables the service and requires `systemctl reset-failed` before it will start again"
     ],
-    "correct": "B. systemd automatically attempts to restart the service after the RestartSec delay (default 100ms)",
+    "correct": "systemd automatically attempts to restart the service after the RestartSec delay (default 100ms)",
     "explanation": "With Restart=on-failure, systemd restarts the service whenever it exits with a non-zero exit code, is killed by a signal (other than a clean stop), or times out — but NOT when it exits cleanly (exit code 0) or is stopped explicitly via systemctl stop. The restart happens after RestartSec (default 100ms). Option C is wrong because on-failure covers non-zero exits, not only signal kills. Option D describes what happens after too many restart attempts (StartLimitBurst), not after a single failure. (Source: man7.org/linux/man-pages/man5/systemd.service.5.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -206,7 +231,10 @@
     "topic": "Understanding Linux process states and lifecycle: R, S, D, Z, and T states explained for real troubleshooting",
     "topic_label": "Process Management",
     "total_topic_questions": 10,
-    "tags": ["linux", "automation"],
+    "tags": [
+      "linux",
+      "automation"
+    ],
     "image": ""
   },
   {
@@ -214,12 +242,12 @@
     "q_number": 11,
     "question": "A server reports it has 200 GB of free disk space via `df -h`, but an application fails with 'No space left on device' when writing a small file. What is the most likely cause?",
     "choices": [
-      "A. The filesystem is mounted read-only due to a disk error",
-      "B. The filesystem has run out of inodes even though block space remains",
-      "C. The file exceeds the maximum file size limit for ext4",
-      "D. The application lacks write permission to the target directory"
+      "The filesystem is mounted read-only due to a disk error",
+      "The filesystem has run out of inodes even though block space remains",
+      "The file exceeds the maximum file size limit for ext4",
+      "The application lacks write permission to the target directory"
     ],
-    "correct": "B. The filesystem has run out of inodes even though block space remains",
+    "correct": "The filesystem has run out of inodes even though block space remains",
     "explanation": "Each file (and directory) on a Linux filesystem requires an inode entry regardless of its size. When the inode table is exhausted, no new files can be created even if many gigabytes of block space are available. This commonly happens when an application creates millions of tiny files (e.g., a mail spool, a cache directory). `df -i` shows inode usage. The maximum file size for ext4 is 16 TiB, far larger than this scenario implies. A read-only mount would produce a different error ('Read-only file system'). A permission error would be 'Permission denied', not 'No space left on device'. (Source: man7.org/linux/man-pages/man5/ext4.5.html; refspecs.linuxfoundation.org/fhs.shtml)",
     "category": "devops",
     "subcategory": "linux",
@@ -227,7 +255,10 @@
     "topic": "Linux filesystem concepts: inodes, hard links, FHS layout, mount points, and storage troubleshooting",
     "topic_label": "Filesystems & Storage",
     "total_topic_questions": 10,
-    "tags": ["linux", "troubleshooting"],
+    "tags": [
+      "linux",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -235,12 +266,12 @@
     "q_number": 12,
     "question": "What information does an inode store, and what is notably absent from it?",
     "choices": [
-      "A. The inode stores the filename and file contents; it does not store permissions",
-      "B. The inode stores metadata (permissions, owner, timestamps, data block pointers) but NOT the filename",
-      "C. The inode stores the filename and permissions but NOT the file's data block locations",
-      "D. The inode stores only a reference count; all other metadata is in the directory entry"
+      "The inode stores the filename and file contents; it does not store permissions",
+      "The inode stores metadata (permissions, owner, timestamps, data block pointers) but NOT the filename",
+      "The inode stores the filename and permissions but NOT the file's data block locations",
+      "The inode stores only a reference count; all other metadata is in the directory entry"
     ],
-    "correct": "B. The inode stores metadata (permissions, owner, timestamps, data block pointers) but NOT the filename",
+    "correct": "The inode stores metadata (permissions, owner, timestamps, data block pointers) but NOT the filename",
     "explanation": "An inode is a data structure that holds file metadata: owner UID/GID, permissions, file type, timestamps (atime/mtime/ctime), size, and pointers to the data blocks. The filename is NOT stored in the inode — it is stored in a directory entry (dentry) that maps the name to the inode number. This separation is what makes hard links possible: multiple directory entries (different names) can point to the same inode. The file contents are in the data blocks referenced by the inode, not in the inode itself. (Source: man7.org/linux/man-pages/man7/inode.7.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -248,7 +279,9 @@
     "topic": "Linux filesystem concepts: inodes, hard links, FHS layout, mount points, and storage troubleshooting",
     "topic_label": "Filesystems & Storage",
     "total_topic_questions": 10,
-    "tags": ["linux"],
+    "tags": [
+      "linux"
+    ],
     "image": ""
   },
   {
@@ -256,12 +289,12 @@
     "q_number": 13,
     "question": "A developer creates a hard link to a file, then deletes the original filename. What happens to the file's data?",
     "choices": [
-      "A. The data is immediately deleted because the original file was removed",
-      "B. The data is moved to /lost+found until fsck recovers it",
-      "C. The data remains accessible through the hard link because the inode's link count is still 1",
-      "D. The data is inaccessible until the filesystem is remounted"
+      "The data is immediately deleted because the original file was removed",
+      "The data is moved to /lost+found until fsck recovers it",
+      "The data remains accessible through the hard link because the inode's link count is still 1",
+      "The data is inaccessible until the filesystem is remounted"
     ],
-    "correct": "C. The data remains accessible through the hard link because the inode's link count is still 1",
+    "correct": "The data remains accessible through the hard link because the inode's link count is still 1",
     "explanation": "A hard link is simply a directory entry pointing to an inode. When you create a hard link, the inode's link count increments (e.g., from 1 to 2). Deleting the original name decrements the link count back to 1. The kernel only frees the data blocks when the link count reaches 0 AND no process has the file open. Because the hard link still exists, the inode's link count is 1 and the data is fully accessible under the link's name. /lost+found is used by fsck for orphaned inodes discovered during recovery, not for intentional deletes. (Source: man7.org/linux/man-pages/man2/link.2.html; man7.org/linux/man-pages/man7/inode.7.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -269,7 +302,9 @@
     "topic": "Linux filesystem concepts: inodes, hard links, FHS layout, mount points, and storage troubleshooting",
     "topic_label": "Filesystems & Storage",
     "total_topic_questions": 10,
-    "tags": ["linux"],
+    "tags": [
+      "linux"
+    ],
     "image": ""
   },
   {
@@ -277,12 +312,12 @@
     "q_number": 14,
     "question": "A symbolic link points to `/opt/app/current/bin/server`. The target directory is unmounted. What happens when a process tries to follow the symlink?",
     "choices": [
-      "A. The symlink transparently redirects to the nearest available parent directory",
-      "B. The process receives 'No such file or directory' because the symlink target is unavailable",
-      "C. The symlink becomes a hard link automatically as a kernel fallback",
-      "D. The process receives a permission error because only root can follow dangling symlinks"
+      "The symlink transparently redirects to the nearest available parent directory",
+      "The process receives 'No such file or directory' because the symlink target is unavailable",
+      "The symlink becomes a hard link automatically as a kernel fallback",
+      "The process receives a permission error because only root can follow dangling symlinks"
     ],
-    "correct": "B. The process receives 'No such file or directory' because the symlink target is unavailable",
+    "correct": "The process receives 'No such file or directory' because the symlink target is unavailable",
     "explanation": "A symbolic link stores only the text path of its target. When the kernel resolves a symlink, it performs a fresh path lookup for that text at the time of access. If the target path does not exist (because the filesystem is unmounted, the file was deleted, or the path is wrong), the lookup fails with ENOENT ('No such file or directory'). This is called a 'dangling symlink'. Unlike hard links, symlinks have no mechanism to track whether their target exists. Option C is incorrect — there is no automatic fallback to hard links. (Source: man7.org/linux/man-pages/man7/symlink.7.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -290,7 +325,10 @@
     "topic": "Linux filesystem concepts: inodes, hard links, FHS layout, mount points, and storage troubleshooting",
     "topic_label": "Filesystems & Storage",
     "total_topic_questions": 10,
-    "tags": ["linux", "troubleshooting"],
+    "tags": [
+      "linux",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -298,12 +336,12 @@
     "q_number": 15,
     "question": "According to the Filesystem Hierarchy Standard (FHS), what is the correct location for application log files generated at runtime, and why does the distinction matter for containers?",
     "choices": [
-      "A. /tmp, because logs are temporary and should be cleared on reboot",
-      "B. /var/log, because /var holds variable data that changes during normal operation",
-      "C. /opt/<appname>/logs, because application data must be self-contained under /opt",
-      "D. /usr/local/logs, because user-installed applications write to the /usr/local subtree"
+      "/tmp, because logs are temporary and should be cleared on reboot",
+      "/var/log, because /var holds variable data that changes during normal operation",
+      "/opt/<appname>/logs, because application data must be self-contained under /opt",
+      "/usr/local/logs, because user-installed applications write to the /usr/local subtree"
     ],
-    "correct": "B. /var/log, because /var holds variable data that changes during normal operation",
+    "correct": "/var/log, because /var holds variable data that changes during normal operation",
     "explanation": "/var is designated by the FHS for variable data: logs, spool files, lock files, and runtime state that grows or changes during normal system operation. /var/log is the canonical location for log files. This matters critically in containers: /tmp uses tmpfs and is lost on restart; /opt is for add-on application packages (static, not runtime-generated data); /usr/local is for locally installed static software, not runtime output. Container log strategies (writing to stdout/stderr or mounting /var/log as a volume) are designed around the FHS expectation that logs live in /var. (Source: refspecs.linuxfoundation.org/FHS_3.0/fhs/ch05s10.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -311,7 +349,9 @@
     "topic": "Linux filesystem concepts: inodes, hard links, FHS layout, mount points, and storage troubleshooting",
     "topic_label": "Filesystems & Storage",
     "total_topic_questions": 10,
-    "tags": ["linux"],
+    "tags": [
+      "linux"
+    ],
     "image": ""
   },
   {
@@ -319,12 +359,12 @@
     "q_number": 16,
     "question": "An engineer runs `df -h` and `du -sh /var` on the same server and gets very different numbers for /var. `df` shows 40 GB used; `du` shows only 15 GB. What is the most likely explanation?",
     "choices": [
-      "A. df reads from the partition table, which is always out of date compared to du",
-      "B. One or more large files in /var have been deleted but are still held open by a running process, so df counts them but du does not",
-      "C. du double-counts hard-linked files while df does not",
-      "D. df includes filesystem metadata overhead that du ignores, causing a systematic ~2x difference"
+      "df reads from the partition table, which is always out of date compared to du",
+      "One or more large files in /var have been deleted but are still held open by a running process, so df counts them but du does not",
+      "du double-counts hard-linked files while df does not",
+      "df includes filesystem metadata overhead that du ignores, causing a systematic ~2x difference"
     ],
-    "correct": "B. One or more large files in /var have been deleted but are still held open by a running process, so df counts them but du does not",
+    "correct": "One or more large files in /var have been deleted but are still held open by a running process, so df counts them but du does not",
     "explanation": "On Linux, when a file is deleted (unlinked), its data blocks are not freed until all file descriptors referencing it are closed. df reports free space at the block layer — it sees those blocks as still allocated. du walks the directory tree and counts only files with directory entries — deleted files have no entries and are invisible to du. The result is a gap between df (actual block usage) and du (visible file usage). The fix is to identify the open deleted file with `lsof | grep deleted` and restart the process holding it open. (Source: man7.org/linux/man-pages/man1/df.1.html; man7.org/linux/man-pages/man2/unlink.2.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -332,7 +372,10 @@
     "topic": "Linux filesystem concepts: inodes, hard links, FHS layout, mount points, and storage troubleshooting",
     "topic_label": "Filesystems & Storage",
     "total_topic_questions": 10,
-    "tags": ["linux", "troubleshooting"],
+    "tags": [
+      "linux",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -340,12 +383,12 @@
     "q_number": 17,
     "question": "What is /proc on a Linux system, and why is it important for system observability?",
     "choices": [
-      "A. A physical disk partition that stores process core dumps for post-mortem analysis",
-      "B. A virtual filesystem (procfs) that the kernel populates in memory at runtime, exposing process and system state as readable files",
-      "C. A directory managed by systemd that contains service unit files for all running processes",
-      "D. A tmpfs mount used for inter-process communication via named pipes"
+      "A physical disk partition that stores process core dumps for post-mortem analysis",
+      "A virtual filesystem (procfs) that the kernel populates in memory at runtime, exposing process and system state as readable files",
+      "A directory managed by systemd that contains service unit files for all running processes",
+      "A tmpfs mount used for inter-process communication via named pipes"
     ],
-    "correct": "B. A virtual filesystem (procfs) that the kernel populates in memory at runtime, exposing process and system state as readable files",
+    "correct": "A virtual filesystem (procfs) that the kernel populates in memory at runtime, exposing process and system state as readable files",
     "explanation": "/proc is a virtual filesystem (type 'proc') mounted at boot by the kernel. It contains no files on disk; instead, reading from /proc files causes the kernel to generate information on demand: /proc/[pid]/status shows process state, /proc/meminfo shows memory statistics, /proc/net/tcp shows TCP connections, and so on. Tools like ps, top, and ss read /proc internally. It is central to Linux observability. /sys is a similar virtual filesystem focused on hardware/device information. (Source: man7.org/linux/man-pages/man5/proc.5.html; kernel.org/doc/html/latest/filesystems/proc.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -353,7 +396,9 @@
     "topic": "Linux filesystem concepts: inodes, hard links, FHS layout, mount points, and storage troubleshooting",
     "topic_label": "Filesystems & Storage",
     "total_topic_questions": 10,
-    "tags": ["linux"],
+    "tags": [
+      "linux"
+    ],
     "image": ""
   },
   {
@@ -361,12 +406,12 @@
     "q_number": 18,
     "question": "A team is choosing between ext4 and XFS for a new high-throughput log ingestion server that will handle many large sequential writes. Which filesystem characteristic makes XFS a better fit?",
     "choices": [
-      "A. XFS supports encryption natively; ext4 does not",
-      "B. XFS uses extent-based allocation and performs better at scale with large files and high-throughput sequential I/O",
-      "C. XFS is the only Linux filesystem that supports POSIX ACLs",
-      "D. ext4 has a 2 TB maximum volume size, making XFS necessary for larger deployments"
+      "XFS supports encryption natively; ext4 does not",
+      "XFS uses extent-based allocation and performs better at scale with large files and high-throughput sequential I/O",
+      "XFS is the only Linux filesystem that supports POSIX ACLs",
+      "ext4 has a 2 TB maximum volume size, making XFS necessary for larger deployments"
     ],
-    "correct": "B. XFS uses extent-based allocation and performs better at scale with large files and high-throughput sequential I/O",
+    "correct": "XFS uses extent-based allocation and performs better at scale with large files and high-throughput sequential I/O",
     "explanation": "XFS was designed at SGI for high-performance workloads. Its extent-based allocation (contiguous block ranges rather than block-by-block bitmaps), delayed allocation, and highly parallel metadata operations make it superior for large files and sustained high-throughput sequential writes. ext4 is excellent for general-purpose workloads with mixed file sizes. Both filesystems support POSIX ACLs and filesystem-level encryption (via fscrypt). ext4 supports volumes up to 1 EiB (not 2 TB). The key real-world differentiator is throughput and scalability at high I/O rates. (Source: access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_file_systems/assembly_comparison-of-xfs-and-ext4)",
     "category": "devops",
     "subcategory": "linux",
@@ -374,7 +419,9 @@
     "topic": "Linux filesystem concepts: inodes, hard links, FHS layout, mount points, and storage troubleshooting",
     "topic_label": "Filesystems & Storage",
     "total_topic_questions": 10,
-    "tags": ["linux"],
+    "tags": [
+      "linux"
+    ],
     "image": ""
   },
   {
@@ -382,12 +429,12 @@
     "q_number": 19,
     "question": "A container workload is writing temporary files during request processing. The operator configures the container's /tmp as a tmpfs mount. What is the key operational implication?",
     "choices": [
-      "A. Files in /tmp persist across container restarts because tmpfs flushes to disk on unmount",
-      "B. Files in /tmp exist only in RAM/swap and are lost when the container stops or the mount is unmounted",
-      "C. tmpfs on /tmp limits the container to 512 MB of total memory regardless of the host configuration",
-      "D. tmpfs requires kernel 5.0 or later and is not available on older container hosts"
+      "Files in /tmp persist across container restarts because tmpfs flushes to disk on unmount",
+      "Files in /tmp exist only in RAM/swap and are lost when the container stops or the mount is unmounted",
+      "tmpfs on /tmp limits the container to 512 MB of total memory regardless of the host configuration",
+      "tmpfs requires kernel 5.0 or later and is not available on older container hosts"
     ],
-    "correct": "B. Files in /tmp exist only in RAM/swap and are lost when the container stops or the mount is unmounted",
+    "correct": "Files in /tmp exist only in RAM/swap and are lost when the container stops or the mount is unmounted",
     "explanation": "tmpfs is a memory-backed filesystem: its contents live in RAM (and optionally swap) and are never written to persistent storage. When the mount is unmounted or the system reboots, all data is gone. For containers, this means /tmp data does not survive restarts, but it also means writes are extremely fast and do not generate disk I/O. This is the intended use case for ephemeral scratch space. Option A is incorrect — tmpfs does not flush to disk. The size limit defaults to half of installed RAM but is fully configurable (size= mount option), not a fixed 512 MB. (Source: man7.org/linux/man-pages/man5/tmpfs.5.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -395,7 +442,9 @@
     "topic": "Linux filesystem concepts: inodes, hard links, FHS layout, mount points, and storage troubleshooting",
     "topic_label": "Filesystems & Storage",
     "total_topic_questions": 10,
-    "tags": ["linux"],
+    "tags": [
+      "linux"
+    ],
     "image": ""
   },
   {
@@ -403,12 +452,12 @@
     "q_number": 20,
     "question": "A mount command succeeds, but the engineer realizes the device should have been mounted read-only to prevent accidental writes. The filesystem is already mounted and in use. What is the correct approach?",
     "choices": [
-      "A. Run `umount` followed by `mount -o ro` — remounting in-place is not possible on Linux",
-      "B. Run `mount -o remount,ro <mountpoint>` to change the mount options without unmounting",
-      "C. Edit /etc/fstab and run `systemctl daemon-reload` to apply the change immediately",
-      "D. Reboot the server with the correct fstab entry — Linux cannot change mount options on a live filesystem"
+      "Run `umount` followed by `mount -o ro` — remounting in-place is not possible on Linux",
+      "Run `mount -o remount,ro <mountpoint>` to change the mount options without unmounting",
+      "Edit /etc/fstab and run `systemctl daemon-reload` to apply the change immediately",
+      "Reboot the server with the correct fstab entry — Linux cannot change mount options on a live filesystem"
     ],
-    "correct": "B. Run `mount -o remount,ro <mountpoint>` to change the mount options without unmounting",
+    "correct": "Run `mount -o remount,ro <mountpoint>` to change the mount options without unmounting",
     "explanation": "The remount option allows changing mount flags (including ro/rw) on an already-mounted filesystem without unmounting it or disrupting current access. The kernel applies the new options to the existing mount. This is safe to do while the filesystem is in use, though write operations that are in flight will complete before the filesystem becomes truly read-only. Editing fstab changes what happens at the next mount (boot or explicit mount), not the current state. A full unmount + remount is also valid if no processes hold files open, but remount is simpler when the filesystem is active. (Source: man7.org/linux/man-pages/man8/mount.8.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -416,7 +465,9 @@
     "topic": "Linux filesystem concepts: inodes, hard links, FHS layout, mount points, and storage troubleshooting",
     "topic_label": "Filesystems & Storage",
     "total_topic_questions": 10,
-    "tags": ["linux"],
+    "tags": [
+      "linux"
+    ],
     "image": ""
   },
   {
@@ -424,12 +475,12 @@
     "q_number": 21,
     "question": "A file has permissions `-rwsr-xr-x` and is owned by root. A non-root user executes this file. Under what identity does the process run?",
     "choices": [
-      "A. As the user who invoked the file, with no privilege elevation",
-      "B. As root (UID 0), because the setuid bit causes the process to run with the file owner's UID",
-      "C. As a member of the file's group, because the setgid bit is set",
-      "D. The execution is blocked — setuid binaries require explicit sudo invocation"
+      "As the user who invoked the file, with no privilege elevation",
+      "As root (UID 0), because the setuid bit causes the process to run with the file owner's UID",
+      "As a member of the file's group, because the setgid bit is set",
+      "The execution is blocked — setuid binaries require explicit sudo invocation"
     ],
-    "correct": "B. As root (UID 0), because the setuid bit causes the process to run with the file owner's UID",
+    "correct": "As root (UID 0), because the setuid bit causes the process to run with the file owner's UID",
     "explanation": "The 's' in the owner execute position (`rws`) is the setuid (SUID) bit. When set on an executable, the kernel sets the process's effective UID to the file owner's UID at exec time — regardless of who invoked it. Since the file is owned by root, the process runs with root's effective UID. This is how commands like `passwd` and `ping` gain elevated privileges when run by ordinary users. The setgid bit would affect the group identity ('s' in the group execute position). (Source: man7.org/linux/man-pages/man2/execve.2.html; man7.org/linux/man-pages/man1/chmod.1.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -437,7 +488,10 @@
     "topic": "Linux user and permission model: chmod, umask, special bits, /etc/passwd, sudo, and PAM",
     "topic_label": "Users & Permissions",
     "total_topic_questions": 10,
-    "tags": ["linux", "security"],
+    "tags": [
+      "linux",
+      "security"
+    ],
     "image": ""
   },
   {
@@ -445,12 +499,12 @@
     "q_number": 22,
     "question": "An engineer sets umask to 0027 before creating a new file. What are the resulting permissions on the file?",
     "choices": [
-      "A. 0027 (-------r--), because umask is applied directly as the permission bits",
-      "B. 0640 (-rw-r-----), because the default file creation mode (0666) is masked by 0027",
-      "C. 0750 (rwxr-x---), because umask is applied to the default directory mode (0777)",
-      "D. 0644 (-rw-r--r--), because umask only affects the group and other execute bits"
+      "0027 (-------r--), because umask is applied directly as the permission bits",
+      "0640 (-rw-r-----), because the default file creation mode (0666) is masked by 0027",
+      "0750 (rwxr-x---), because umask is applied to the default directory mode (0777)",
+      "0644 (-rw-r--r--), because umask only affects the group and other execute bits"
     ],
-    "correct": "B. 0640 (-rw-r-----), because the default file creation mode (0666) is masked by 0027",
+    "correct": "0640 (-rw-r-----), because the default file creation mode (0666) is masked by 0027",
     "explanation": "The umask defines bits to REMOVE from the default creation mode. Files have a default mode of 0666 (rw-rw-rw-); directories have 0777. The kernel applies: effective_perms = default & ~umask. With umask 0027: ~0027 = 0750. 0666 & 0750 = 0640 (rw-r-----). The owner retains read+write, the group retains read, and others get nothing. Option C shows what 0777 & ~0027 = 0750 would give a directory, not a file. umask is a bit mask, not a direct permission assignment (option A). (Source: man7.org/linux/man-pages/man2/umask.2.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -458,7 +512,10 @@
     "topic": "Linux user and permission model: chmod, umask, special bits, /etc/passwd, sudo, and PAM",
     "topic_label": "Users & Permissions",
     "total_topic_questions": 10,
-    "tags": ["linux", "security"],
+    "tags": [
+      "linux",
+      "security"
+    ],
     "image": ""
   },
   {
@@ -466,12 +523,12 @@
     "q_number": 23,
     "question": "The sticky bit is set on the /tmp directory (permissions drwxrwxrwt). What does the sticky bit enforce in this context?",
     "choices": [
-      "A. Files in /tmp are never swapped out to disk and always remain in RAM",
-      "B. Only the file owner, the directory owner, or root can delete or rename files within the directory",
-      "C. All files created in /tmp inherit the directory's group ownership (setgid behavior)",
-      "D. Programs executed from /tmp are kept in the kernel's text segment cache for faster re-execution"
+      "Files in /tmp are never swapped out to disk and always remain in RAM",
+      "Only the file owner, the directory owner, or root can delete or rename files within the directory",
+      "All files created in /tmp inherit the directory's group ownership (setgid behavior)",
+      "Programs executed from /tmp are kept in the kernel's text segment cache for faster re-execution"
     ],
-    "correct": "B. Only the file owner, the directory owner, or root can delete or rename files within the directory",
+    "correct": "Only the file owner, the directory owner, or root can delete or rename files within the directory",
     "explanation": "On a directory, the sticky bit (visible as 't' in the other-execute position) enables deletion restriction: even if a directory is world-writable, a user can only delete or rename files they own. This is essential for /tmp, where all users can create files but no user should be able to delete another user's files. The historical meaning of sticky on executables (keeping text in swap) is obsolete on modern Linux. Setgid on a directory causes group inheritance, not the sticky bit. (Source: man7.org/linux/man-pages/man1/chmod.1.html; refspecs.linuxfoundation.org/FHS_3.0/fhs/ch07s04.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -479,7 +536,10 @@
     "topic": "Linux user and permission model: chmod, umask, special bits, /etc/passwd, sudo, and PAM",
     "topic_label": "Users & Permissions",
     "total_topic_questions": 10,
-    "tags": ["linux", "security"],
+    "tags": [
+      "linux",
+      "security"
+    ],
     "image": ""
   },
   {
@@ -487,12 +547,12 @@
     "q_number": 24,
     "question": "What is the functional difference between `su -` and `su` (without the dash) when switching to root?",
     "choices": [
-      "A. `su -` requires a password; `su` (no dash) does not",
-      "B. `su -` starts a login shell for root, loading root's environment and profile; `su` starts a shell as root but inherits the current user's environment",
-      "C. `su -` is deprecated in favor of sudo; `su` without a dash is the modern form",
-      "D. There is no practical difference — both commands produce identical environments"
+      "`su -` requires a password; `su` (no dash) does not",
+      "`su -` starts a login shell for root, loading root's environment and profile; `su` starts a shell as root but inherits the current user's environment",
+      "`su -` is deprecated in favor of sudo; `su` without a dash is the modern form",
+      "There is no practical difference — both commands produce identical environments"
     ],
-    "correct": "B. `su -` starts a login shell for root, loading root's environment and profile; `su` starts a shell as root but inherits the current user's environment",
+    "correct": "`su -` starts a login shell for root, loading root's environment and profile; `su` starts a shell as root but inherits the current user's environment",
     "explanation": "The hyphen/dash argument to su makes it a login shell invocation: it resets the environment to root's (HOME, PATH, SHELL, etc.) and sources root's profile files (/root/.bash_profile, /etc/profile). Without the dash, su simply changes the UID but carries over the invoking user's environment variables, which can cause subtle issues — for example, root's PATH may differ from the inherited user PATH, causing commands to not be found or the wrong binary to execute. Both require the target user's password (unless PAM or sudo policies override). (Source: man7.org/linux/man-pages/man1/su.1.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -500,7 +560,10 @@
     "topic": "Linux user and permission model: chmod, umask, special bits, /etc/passwd, sudo, and PAM",
     "topic_label": "Users & Permissions",
     "total_topic_questions": 10,
-    "tags": ["linux", "security"],
+    "tags": [
+      "linux",
+      "security"
+    ],
     "image": ""
   },
   {
@@ -508,12 +571,12 @@
     "q_number": 25,
     "question": "A junior engineer is asked to give a service account the ability to run `systemctl restart nginx` without a password, without granting it full root access. What is the correct mechanism?",
     "choices": [
-      "A. Add the account to the 'root' group",
-      "B. Set the setuid bit on the systemctl binary so the service account can run it as root",
-      "C. Add a targeted sudoers rule that allows the specific account to run only that specific command without a password",
-      "D. Modify /etc/passwd to set the service account's UID to 0"
+      "Add the account to the 'root' group",
+      "Set the setuid bit on the systemctl binary so the service account can run it as root",
+      "Add a targeted sudoers rule that allows the specific account to run only that specific command without a password",
+      "Modify /etc/passwd to set the service account's UID to 0"
     ],
-    "correct": "C. Add a targeted sudoers rule that allows the specific account to run only that specific command without a password",
+    "correct": "Add a targeted sudoers rule that allows the specific account to run only that specific command without a password",
     "explanation": "sudoers (configured via visudo or a drop-in file in /etc/sudoers.d/) supports fine-grained rules: you can grant a specific user the ability to run a specific command as root with NOPASSWD, without granting any other elevated privilege. This is the principle of least privilege in practice. Adding the account to the root group grants broad filesystem access, not command-level control. Setting UID 0 makes it a second root account — dangerous and unnecessary. Setting setuid on systemctl would affect all users, not just the service account. (Source: man7.org/linux/man-pages/man5/sudoers.5.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -521,7 +584,10 @@
     "topic": "Linux user and permission model: chmod, umask, special bits, /etc/passwd, sudo, and PAM",
     "topic_label": "Users & Permissions",
     "total_topic_questions": 10,
-    "tags": ["linux", "security"],
+    "tags": [
+      "linux",
+      "security"
+    ],
     "image": ""
   },
   {
@@ -529,12 +595,12 @@
     "q_number": 26,
     "question": "An /etc/passwd entry reads: `deploy:x:1001:1001:Deploy User:/home/deploy:/bin/bash`. What does the 'x' in the second field indicate?",
     "choices": [
-      "A. The account is locked and cannot be used for login",
-      "B. The password hash is stored in /etc/shadow, not inline in /etc/passwd",
-      "C. The account uses an external authentication source (LDAP or Kerberos)",
-      "D. The account has no password set and can be accessed without authentication"
+      "The account is locked and cannot be used for login",
+      "The password hash is stored in /etc/shadow, not inline in /etc/passwd",
+      "The account uses an external authentication source (LDAP or Kerberos)",
+      "The account has no password set and can be accessed without authentication"
     ],
-    "correct": "B. The password hash is stored in /etc/shadow, not inline in /etc/passwd",
+    "correct": "The password hash is stored in /etc/shadow, not inline in /etc/passwd",
     "explanation": "/etc/passwd was historically world-readable, which made storing password hashes in it a security risk. Shadow passwords (implemented in /etc/shadow) moved the hashes to a root-readable-only file. The 'x' in the password field of /etc/passwd is a placeholder indicating the real hash is in /etc/shadow. An '!' or '*' in /etc/shadow's password field indicates a locked account. An empty password field in /etc/shadow indicates no password is set. 'x' specifically means 'look in shadow'. (Source: man7.org/linux/man-pages/man5/passwd.5.html; man7.org/linux/man-pages/man5/shadow.5.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -542,7 +608,10 @@
     "topic": "Linux user and permission model: chmod, umask, special bits, /etc/passwd, sudo, and PAM",
     "topic_label": "Users & Permissions",
     "total_topic_questions": 10,
-    "tags": ["linux", "security"],
+    "tags": [
+      "linux",
+      "security"
+    ],
     "image": ""
   },
   {
@@ -550,12 +619,12 @@
     "q_number": 27,
     "question": "You need to change the group ownership of all files under /srv/shared to 'appteam' recursively. Which command is correct?",
     "choices": [
-      "A. chmod -R appteam /srv/shared",
-      "B. chown -R :appteam /srv/shared",
-      "C. chgrp appteam /srv/shared",
-      "D. usermod -aG appteam /srv/shared"
+      "chmod -R appteam /srv/shared",
+      "chown -R :appteam /srv/shared",
+      "chgrp appteam /srv/shared",
+      "usermod -aG appteam /srv/shared"
     ],
-    "correct": "B. chown -R :appteam /srv/shared",
+    "correct": "chown -R :appteam /srv/shared",
     "explanation": "chown can set both owner and group. The syntax `chown [owner]:[group]` sets both; omitting the owner (`:appteam`) changes only the group. The -R flag applies the change recursively to all files and subdirectories. chgrp is the dedicated group-change command and `chgrp -R appteam /srv/shared` would also be correct, but option C is missing the -R flag and would only change the top-level directory. chmod changes permission bits, not ownership. usermod -aG modifies a user's supplementary groups in /etc/group, not file ownership. (Source: man7.org/linux/man-pages/man1/chown.1.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -563,7 +632,9 @@
     "topic": "Linux user and permission model: chmod, umask, special bits, /etc/passwd, sudo, and PAM",
     "topic_label": "Users & Permissions",
     "total_topic_questions": 10,
-    "tags": ["linux"],
+    "tags": [
+      "linux"
+    ],
     "image": ""
   },
   {
@@ -571,12 +642,12 @@
     "q_number": 28,
     "question": "A PAM configuration line reads: `auth required pam_unix.so`. What does 'required' mean in the context of PAM control flags?",
     "choices": [
-      "A. If this module fails, authentication fails immediately and no further modules are checked",
-      "B. If this module fails, the failure is recorded but subsequent modules continue; overall auth fails only after all modules run",
-      "C. This module must succeed; if it fails, the system falls back to a secondary authentication method",
-      "D. 'required' is a comment keyword and does not affect module behavior"
+      "If this module fails, authentication fails immediately and no further modules are checked",
+      "If this module fails, the failure is recorded but subsequent modules continue; overall auth fails only after all modules run",
+      "This module must succeed; if it fails, the system falls back to a secondary authentication method",
+      "'required' is a comment keyword and does not affect module behavior"
     ],
-    "correct": "B. If this module fails, the failure is recorded but subsequent modules continue; overall auth fails only after all modules run",
+    "correct": "If this module fails, the failure is recorded but subsequent modules continue; overall auth fails only after all modules run",
     "explanation": "PAM (Pluggable Authentication Modules) defines four control flag values: required — module failure causes ultimate failure, but remaining modules still run (to prevent timing-based enumeration); requisite — failure causes immediate return without running further modules; sufficient — success causes immediate return (if no prior required module failed); optional — result is only significant if it is the only module in the stack. 'required' is not an immediate-abort flag — that is 'requisite'. The continued execution hides from the user which module failed. (Source: man7.org/linux/man-pages/man8/pam.8.html; man7.org/linux/man-pages/man5/pam.conf.5.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -584,7 +655,10 @@
     "topic": "Linux user and permission model: chmod, umask, special bits, /etc/passwd, sudo, and PAM",
     "topic_label": "Users & Permissions",
     "total_topic_questions": 10,
-    "tags": ["linux", "security"],
+    "tags": [
+      "linux",
+      "security"
+    ],
     "image": ""
   },
   {
@@ -592,12 +666,12 @@
     "q_number": 29,
     "question": "What does chmod 4755 set on a file, and what security risk does it introduce?",
     "choices": [
-      "A. It sets the sticky bit and world-execute; the risk is anyone can delete the file",
-      "B. It sets the setuid bit with owner rwx and group/others rx; the risk is any user can execute the file as the owner",
-      "C. It sets the setgid bit with full permissions; the risk is group membership is inherited by child processes",
-      "D. It sets read/write/execute for all users; the risk is world-write allows arbitrary modification"
+      "It sets the sticky bit and world-execute; the risk is anyone can delete the file",
+      "It sets the setuid bit with owner rwx and group/others rx; the risk is any user can execute the file as the owner",
+      "It sets the setgid bit with full permissions; the risk is group membership is inherited by child processes",
+      "It sets read/write/execute for all users; the risk is world-write allows arbitrary modification"
     ],
-    "correct": "B. It sets the setuid bit with owner rwx and group/others rx; the risk is any user can execute the file as the owner",
+    "correct": "It sets the setuid bit with owner rwx and group/others rx; the risk is any user can execute the file as the owner",
     "explanation": "In octal notation, the leading digit represents special bits: 4=setuid, 2=setgid, 1=sticky. So 4755 = setuid + rwxr-xr-x. The security risk is privilege escalation: if the file is owned by root and contains a vulnerability (or is a script), any user who can execute it gains root's effective UID during that execution. This is why security audits scan for unexpected SUID root files (`find / -perm -4000 -user root`). Option C describes 2755 (setgid). Option D describes 0777 (no special bits, world-writable). (Source: man7.org/linux/man-pages/man1/chmod.1.html; man7.org/linux/man-pages/man2/execve.2.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -605,7 +679,10 @@
     "topic": "Linux user and permission model: chmod, umask, special bits, /etc/passwd, sudo, and PAM",
     "topic_label": "Users & Permissions",
     "total_topic_questions": 10,
-    "tags": ["linux", "security"],
+    "tags": [
+      "linux",
+      "security"
+    ],
     "image": ""
   },
   {
@@ -613,12 +690,12 @@
     "q_number": 30,
     "question": "A Linux server has two network interfaces. The engineer runs `ip addr show` instead of `ifconfig`. Why is `ip` preferred over `ifconfig` in modern Linux environments?",
     "choices": [
-      "A. `ifconfig` requires root privileges; `ip addr` works for all users",
-      "B. `ifconfig` is part of the deprecated net-tools package and does not support modern features like IPv6 CIDR notation, network namespaces, or policy routing",
-      "C. `ip addr` is faster because it reads from /proc/net directly, while ifconfig makes system calls",
-      "D. `ifconfig` was removed from the Linux kernel in version 4.0 and is no longer available"
+      "`ifconfig` requires root privileges; `ip addr` works for all users",
+      "`ifconfig` is part of the deprecated net-tools package and does not support modern features like IPv6 CIDR notation, network namespaces, or policy routing",
+      "`ip addr` is faster because it reads from /proc/net directly, while ifconfig makes system calls",
+      "`ifconfig` was removed from the Linux kernel in version 4.0 and is no longer available"
     ],
-    "correct": "B. `ifconfig` is part of the deprecated net-tools package and does not support modern features like IPv6 CIDR notation, network namespaces, or policy routing",
+    "correct": "`ifconfig` is part of the deprecated net-tools package and does not support modern features like IPv6 CIDR notation, network namespaces, or policy routing",
     "explanation": "ifconfig, netstat, route, and arp are part of the net-tools package, which is no longer actively maintained and is absent by default on many modern distributions (RHEL 7+, Ubuntu 18.04+). The iproute2 package (`ip`, `ss`, `tc`) is the modern replacement and supports Linux-native features: network namespaces (critical for containers), MPLS, advanced routing policies, and correct IPv6 handling. Both tools require root for most configuration operations. ifconfig is not a kernel feature and was not removed at a kernel version boundary. (Source: access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/; man7.org/linux/man-pages/man8/ip.8.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -626,7 +703,10 @@
     "topic": "Linux networking fundamentals: ip addr, ss, iptables, DNS resolution, and port ownership",
     "topic_label": "Networking Basics",
     "total_topic_questions": 10,
-    "tags": ["linux", "networking"],
+    "tags": [
+      "linux",
+      "networking"
+    ],
     "image": ""
   },
   {
@@ -634,12 +714,12 @@
     "q_number": 31,
     "question": "An application cannot reach an external API at 10.20.30.40. The engineer confirms the interface is up. What is the correct command to check whether a default gateway is configured?",
     "choices": [
-      "A. `ping 10.20.30.40` — if it fails, the gateway is missing",
-      "B. `ip route show` — a default route (0.0.0.0/0 or 'default') indicates a gateway is configured",
-      "C. `cat /etc/resolv.conf` — the nameserver entry serves as the default gateway",
-      "D. `ss -tnp` — listening sockets indicate gateway availability"
+      "`ping 10.20.30.40` — if it fails, the gateway is missing",
+      "`ip route show` — a default route (0.0.0.0/0 or 'default') indicates a gateway is configured",
+      "`cat /etc/resolv.conf` — the nameserver entry serves as the default gateway",
+      "`ss -tnp` — listening sockets indicate gateway availability"
     ],
-    "correct": "B. `ip route show` — a default route (0.0.0.0/0 or 'default') indicates a gateway is configured",
+    "correct": "`ip route show` — a default route (0.0.0.0/0 or 'default') indicates a gateway is configured",
     "explanation": "`ip route show` (or `ip route`) displays the kernel routing table. A default route appears as 'default via <gateway IP> dev <interface>' or '0.0.0.0/0 via <gateway IP>'. Without a default route, the host cannot reach subnets it does not have a specific route for, including internet addresses. ping tells you if the host is reachable, not why it isn't. /etc/resolv.conf lists DNS servers, not the default gateway. ss shows socket state, not routing configuration. (Source: man7.org/linux/man-pages/man8/ip-route.8.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -647,7 +727,11 @@
     "topic": "Linux networking fundamentals: ip addr, ss, iptables, DNS resolution, and port ownership",
     "topic_label": "Networking Basics",
     "total_topic_questions": 10,
-    "tags": ["linux", "networking", "troubleshooting"],
+    "tags": [
+      "linux",
+      "networking",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -655,12 +739,12 @@
     "q_number": 32,
     "question": "An engineer needs to find which process is listening on TCP port 8080. Which command is most direct?",
     "choices": [
-      "A. `ps aux | grep 8080`",
-      "B. `ss -tlnp | grep :8080`",
-      "C. `netstat -a | grep 8080`",
-      "D. `lsof /proc/net/tcp6`"
+      "`ps aux | grep 8080`",
+      "`ss -tlnp | grep :8080`",
+      "`netstat -a | grep 8080`",
+      "`lsof /proc/net/tcp6`"
     ],
-    "correct": "B. `ss -tlnp | grep :8080`",
+    "correct": "`ss -tlnp | grep :8080`",
     "explanation": "`ss` (socket statistics) is the iproute2 replacement for netstat. The flags `-tlnp` mean: -t (TCP only), -l (listening sockets only), -n (numeric ports, don't resolve names), -p (show the process PID and name). The output directly shows which PID/program owns each listening port. `ps aux | grep 8080` would only find processes with '8080' in their command line — not reliable if the port number isn't in the process name. netstat -a (without -p) doesn't show the owning process; -p requires root but would work. lsof /proc/net/tcp6 is not a valid lsof invocation for this purpose. (Source: man7.org/linux/man-pages/man8/ss.8.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -668,7 +752,11 @@
     "topic": "Linux networking fundamentals: ip addr, ss, iptables, DNS resolution, and port ownership",
     "topic_label": "Networking Basics",
     "total_topic_questions": 10,
-    "tags": ["linux", "networking", "troubleshooting"],
+    "tags": [
+      "linux",
+      "networking",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -676,12 +764,12 @@
     "q_number": 33,
     "question": "What is the role of /etc/resolv.conf on a Linux system, and how does it differ from /etc/hosts?",
     "choices": [
-      "A. /etc/resolv.conf maps hostnames to IP addresses statically; /etc/hosts points to DNS servers",
-      "B. /etc/resolv.conf specifies which DNS nameservers to query for name resolution; /etc/hosts provides static hostname-to-IP mappings that are checked first",
-      "C. Both files serve the same purpose; /etc/resolv.conf is used by IPv4 and /etc/hosts by IPv6",
-      "D. /etc/resolv.conf is read only by the systemd-resolved service; /etc/hosts is read only by the kernel network stack"
+      "/etc/resolv.conf maps hostnames to IP addresses statically; /etc/hosts points to DNS servers",
+      "/etc/resolv.conf specifies which DNS nameservers to query for name resolution; /etc/hosts provides static hostname-to-IP mappings that are checked first",
+      "Both files serve the same purpose; /etc/resolv.conf is used by IPv4 and /etc/hosts by IPv6",
+      "/etc/resolv.conf is read only by the systemd-resolved service; /etc/hosts is read only by the kernel network stack"
     ],
-    "correct": "B. /etc/resolv.conf specifies which DNS nameservers to query for name resolution; /etc/hosts provides static hostname-to-IP mappings that are checked first",
+    "correct": "/etc/resolv.conf specifies which DNS nameservers to query for name resolution; /etc/hosts provides static hostname-to-IP mappings that are checked first",
     "explanation": "/etc/resolv.conf contains 'nameserver' directives pointing to DNS recursive resolvers (typically configured by DHCP or the OS). /etc/hosts is a flat file of static name-to-address mappings. The Name Service Switch (/etc/nsswitch.conf) controls resolution order; by default 'files dns' means /etc/hosts is checked first, then DNS. This order matters: an entry in /etc/hosts for a hostname overrides DNS for that name. In containers, both files are often injected by the runtime. (Source: man7.org/linux/man-pages/man5/resolv.conf.5.html; man7.org/linux/man-pages/man5/hosts.5.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -689,7 +777,10 @@
     "topic": "Linux networking fundamentals: ip addr, ss, iptables, DNS resolution, and port ownership",
     "topic_label": "Networking Basics",
     "total_topic_questions": 10,
-    "tags": ["linux", "networking"],
+    "tags": [
+      "linux",
+      "networking"
+    ],
     "image": ""
   },
   {
@@ -697,12 +788,12 @@
     "q_number": 34,
     "question": "An iptables rule is: `iptables -A INPUT -p tcp --dport 22 -j ACCEPT`. What does the `-j ACCEPT` target do, and what happens to packets that don't match this rule?",
     "choices": [
-      "A. ACCEPT allows the packet and stops further rule evaluation; unmatched packets are automatically dropped by the kernel",
-      "B. ACCEPT allows the packet and stops further rule evaluation in this chain; unmatched packets continue to subsequent rules or the chain's default policy",
-      "C. ACCEPT logs the packet and then allows it; unmatched packets are rejected with a TCP RST",
-      "D. ACCEPT passes the packet to user space for application-level filtering; unmatched packets are dropped"
+      "ACCEPT allows the packet and stops further rule evaluation; unmatched packets are automatically dropped by the kernel",
+      "ACCEPT allows the packet and stops further rule evaluation in this chain; unmatched packets continue to subsequent rules or the chain's default policy",
+      "ACCEPT logs the packet and then allows it; unmatched packets are rejected with a TCP RST",
+      "ACCEPT passes the packet to user space for application-level filtering; unmatched packets are dropped"
     ],
-    "correct": "B. ACCEPT allows the packet and stops further rule evaluation in this chain; unmatched packets continue to subsequent rules or the chain's default policy",
+    "correct": "ACCEPT allows the packet and stops further rule evaluation in this chain; unmatched packets continue to subsequent rules or the chain's default policy",
     "explanation": "When a packet matches an iptables rule with target ACCEPT, the packet is allowed and traversal of the current chain stops for that packet — it is not checked against further rules in the chain. Packets that do NOT match this rule simply continue to the next rule in the chain. After all rules are exhausted without a match, the chain's default policy applies (commonly ACCEPT or DROP depending on configuration). The default kernel behavior without iptables rules is not automatic DROP — that depends on the configured policy. REJECT sends an error response (ICMP or TCP RST); DROP silently discards. (Source: man7.org/linux/man-pages/man8/iptables.8.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -710,7 +801,11 @@
     "topic": "Linux networking fundamentals: ip addr, ss, iptables, DNS resolution, and port ownership",
     "topic_label": "Networking Basics",
     "total_topic_questions": 10,
-    "tags": ["linux", "networking", "security"],
+    "tags": [
+      "linux",
+      "networking",
+      "security"
+    ],
     "image": ""
   },
   {
@@ -718,12 +813,12 @@
     "q_number": 35,
     "question": "A containerized service cannot reach the internet. The host has an iptables FORWARD chain with a default policy of DROP. What rule is most likely missing?",
     "choices": [
-      "A. An INPUT ACCEPT rule for the container's source IP",
-      "B. A FORWARD ACCEPT rule for packets from the container network interface to the external interface",
-      "C. A POSTROUTING MASQUERADE rule in the nat table for the container's subnet",
-      "D. Both B and C — containers require both FORWARD rules and NAT masquerading to reach the internet"
+      "An INPUT ACCEPT rule for the container's source IP",
+      "A FORWARD ACCEPT rule for packets from the container network interface to the external interface",
+      "A POSTROUTING MASQUERADE rule in the nat table for the container's subnet",
+      "Both B and C — containers require both FORWARD rules and NAT masquerading to reach the internet"
     ],
-    "correct": "D. Both B and C — containers require both FORWARD rules and NAT masquerading to reach the internet",
+    "correct": "Both B and C — containers require both FORWARD rules and NAT masquerading to reach the internet",
     "explanation": "For a container to reach the internet via the host, two iptables rules are needed: (1) A FORWARD rule allowing packets to traverse from the container's virtual interface (e.g., docker0) to the external NIC — without this, the DROP default policy blocks routed packets. (2) A POSTROUTING MASQUERADE (or SNAT) rule in the nat table — without this, the container's private IP appears as the source, and return traffic has no route back. Docker automatically configures both when you install it and run containers with default networking. On a host where these rules are missing or flushed, containers lose internet access. (Source: access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_firewalls_and_packet_filters/; man7.org/linux/man-pages/man8/iptables.8.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -731,7 +826,11 @@
     "topic": "Linux networking fundamentals: ip addr, ss, iptables, DNS resolution, and port ownership",
     "topic_label": "Networking Basics",
     "total_topic_questions": 10,
-    "tags": ["linux", "networking", "troubleshooting"],
+    "tags": [
+      "linux",
+      "networking",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -739,12 +838,12 @@
     "q_number": 36,
     "question": "A host has the loopback address 127.0.0.1. An application binds to 127.0.0.1:9000. Can another host on the same LAN connect to this port?",
     "choices": [
-      "A. Yes, if the firewall allows port 9000",
-      "B. No, the loopback interface is a virtual interface; traffic to/from it never leaves the host's network stack",
-      "C. Yes, but only within the same subnet without routing",
-      "D. No, port 9000 is in the registered port range and requires a daemon to expose it externally"
+      "Yes, if the firewall allows port 9000",
+      "No, the loopback interface is a virtual interface; traffic to/from it never leaves the host's network stack",
+      "Yes, but only within the same subnet without routing",
+      "No, port 9000 is in the registered port range and requires a daemon to expose it externally"
     ],
-    "correct": "B. No, the loopback interface is a virtual interface; traffic to/from it never leaves the host's network stack",
+    "correct": "No, the loopback interface is a virtual interface; traffic to/from it never leaves the host's network stack",
     "explanation": "The loopback interface (lo, address 127.0.0.1/8 for IPv4, ::1/128 for IPv6) is an entirely virtual interface implemented in the kernel. Packets sent to 127.0.0.1 are routed back to the same host without ever being placed on any physical or virtual network segment. An application bound exclusively to 127.0.0.1 is unreachable from any other host regardless of firewall rules, because no external packet can be addressed to the loopback range and arrive on a real interface. Binding to 0.0.0.0 (all interfaces) or a specific public IP is required for external access. (Source: man7.org/linux/man-pages/man7/ip.7.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -752,7 +851,10 @@
     "topic": "Linux networking fundamentals: ip addr, ss, iptables, DNS resolution, and port ownership",
     "topic_label": "Networking Basics",
     "total_topic_questions": 10,
-    "tags": ["linux", "networking"],
+    "tags": [
+      "linux",
+      "networking"
+    ],
     "image": ""
   },
   {
@@ -760,12 +862,12 @@
     "q_number": 37,
     "question": "What is the difference between DROP and REJECT as iptables targets, and which is preferable for a public-facing server?",
     "choices": [
-      "A. DROP silently discards the packet; REJECT sends an error reply. DROP is preferable to avoid giving information to port scanners",
-      "B. DROP sends a TCP RST; REJECT sends an ICMP unreachable. They are equivalent for security purposes",
-      "C. REJECT is preferable because it allows legitimate clients to fail fast rather than waiting for a timeout",
-      "D. DROP removes the firewall rule; REJECT rejects the rule modification — they are administrative terms, not packet targets"
+      "DROP silently discards the packet; REJECT sends an error reply. DROP is preferable to avoid giving information to port scanners",
+      "DROP sends a TCP RST; REJECT sends an ICMP unreachable. They are equivalent for security purposes",
+      "REJECT is preferable because it allows legitimate clients to fail fast rather than waiting for a timeout",
+      "DROP removes the firewall rule; REJECT rejects the rule modification — they are administrative terms, not packet targets"
     ],
-    "correct": "A. DROP silently discards the packet; REJECT sends an error reply. DROP is preferable to avoid giving information to port scanners",
+    "correct": "DROP silently discards the packet; REJECT sends an error reply. DROP is preferable to avoid giving information to port scanners",
     "explanation": "DROP causes iptables to silently discard the matching packet — the sender receives no response and must wait for a timeout. REJECT sends an active error back: an ICMP port-unreachable message (for UDP) or TCP RST (configurable). From a security standpoint, DROP is preferred on public interfaces because it gives no information to an attacker about whether a port is filtered, reducing the signal value of port scans. REJECT is friendlier for internal networks where you want clients to fail fast. Option C's reasoning is accurate about REJECT being faster for legitimate clients, but that is an argument against using REJECT externally, not for it. (Source: man7.org/linux/man-pages/man8/iptables-extensions.8.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -773,7 +875,11 @@
     "topic": "Linux networking fundamentals: ip addr, ss, iptables, DNS resolution, and port ownership",
     "topic_label": "Networking Basics",
     "total_topic_questions": 10,
-    "tags": ["linux", "networking", "security"],
+    "tags": [
+      "linux",
+      "networking",
+      "security"
+    ],
     "image": ""
   },
   {
@@ -781,12 +887,12 @@
     "q_number": 38,
     "question": "An engineer writes `ip addr add 192.168.10.5/24 dev eth0`. After rebooting, the address is gone. Why?",
     "choices": [
-      "A. `ip addr add` requires the --permanent flag to persist across reboots",
-      "B. `ip addr add` makes a runtime change to the kernel's network state; persistence requires configuration in a network manager (NetworkManager, systemd-networkd, or /etc/network/interfaces)",
-      "C. The address was not added; `ip addr add` only displays addresses and requires `ip addr set` to configure them",
-      "D. IPv4 addresses configured via `ip addr add` expire after 60 minutes by default"
+      "`ip addr add` requires the --permanent flag to persist across reboots",
+      "`ip addr add` makes a runtime change to the kernel's network state; persistence requires configuration in a network manager (NetworkManager, systemd-networkd, or /etc/network/interfaces)",
+      "The address was not added; `ip addr add` only displays addresses and requires `ip addr set` to configure them",
+      "IPv4 addresses configured via `ip addr add` expire after 60 minutes by default"
     ],
-    "correct": "B. `ip addr add` makes a runtime change to the kernel's network state; persistence requires configuration in a network manager (NetworkManager, systemd-networkd, or /etc/network/interfaces)",
+    "correct": "`ip addr add` makes a runtime change to the kernel's network state; persistence requires configuration in a network manager (NetworkManager, systemd-networkd, or /etc/network/interfaces)",
     "explanation": "The `ip` command directly manipulates the kernel's networking data structures (via netlink sockets). These changes are not written to any configuration file and are lost when the system reboots or the interface is cycled. To persist address configuration across reboots, you must configure the address in the appropriate network manager: NetworkManager connection files (/etc/NetworkManager/system-connections/), systemd-networkd .network files (/etc/systemd/network/), or the traditional /etc/network/interfaces (Debian/Ubuntu). There is no --permanent flag for `ip`. (Source: man7.org/linux/man-pages/man8/ip-address.8.html; access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/)",
     "category": "devops",
     "subcategory": "linux",
@@ -794,7 +900,10 @@
     "topic": "Linux networking fundamentals: ip addr, ss, iptables, DNS resolution, and port ownership",
     "topic_label": "Networking Basics",
     "total_topic_questions": 10,
-    "tags": ["linux", "networking"],
+    "tags": [
+      "linux",
+      "networking"
+    ],
     "image": ""
   },
   {
@@ -802,12 +911,12 @@
     "q_number": 39,
     "question": "What does `ss -s` output, and when is it more useful than `ss -tlnp`?",
     "choices": [
-      "A. ss -s shows per-socket send/receive buffer sizes; it is more useful when debugging throughput issues",
-      "B. ss -s shows a summary of socket counts by state and protocol; it is more useful for a quick overview of connection load than listing individual sockets",
-      "C. ss -s shows only ESTABLISHED sockets; it is useful when you want to filter out listening sockets",
-      "D. ss -s is equivalent to ss -tlnp but sorts output by socket age"
+      "ss -s shows per-socket send/receive buffer sizes; it is more useful when debugging throughput issues",
+      "ss -s shows a summary of socket counts by state and protocol; it is more useful for a quick overview of connection load than listing individual sockets",
+      "ss -s shows only ESTABLISHED sockets; it is useful when you want to filter out listening sockets",
+      "ss -s is equivalent to ss -tlnp but sorts output by socket age"
     ],
-    "correct": "B. ss -s shows a summary of socket counts by state and protocol; it is more useful for a quick overview of connection load than listing individual sockets",
+    "correct": "ss -s shows a summary of socket counts by state and protocol; it is more useful for a quick overview of connection load than listing individual sockets",
     "explanation": "`ss -s` (summary) prints aggregate counts: total sockets, TCP sockets in each state (LISTEN, ESTAB, TIME-WAIT, CLOSE-WAIT, etc.), UDP, raw, and UNIX domain socket counts. This gives an instant high-level view of connection load — for example, a large TIME-WAIT count might indicate a port-reuse problem; a growing CLOSE-WAIT count might indicate a connection leak. `ss -tlnp` is better when you need to inspect specific listening ports and their owning processes. The two commands are complementary: summary first, then drill down. (Source: man7.org/linux/man-pages/man8/ss.8.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -815,7 +924,11 @@
     "topic": "Linux networking fundamentals: ip addr, ss, iptables, DNS resolution, and port ownership",
     "topic_label": "Networking Basics",
     "total_topic_questions": 10,
-    "tags": ["linux", "networking", "troubleshooting"],
+    "tags": [
+      "linux",
+      "networking",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -823,12 +936,12 @@
     "q_number": 40,
     "question": "A shell script ends with `exit 0`. A subsequent script in a CI pipeline uses `if [ $? -ne 0 ]; then` to check for failure. What does this pattern rely on?",
     "choices": [
-      "A. $? contains the PID of the last background process",
-      "B. $? contains the exit code of the last foreground command; 0 conventionally means success and any non-zero value means failure",
-      "C. $? is a reserved variable that bash sets to the number of commands executed since the last reset",
-      "D. exit 0 is only meaningful in interactive shells; in scripts, all exit codes are ignored"
+      "$? contains the PID of the last background process",
+      "$? contains the exit code of the last foreground command; 0 conventionally means success and any non-zero value means failure",
+      "$? is a reserved variable that bash sets to the number of commands executed since the last reset",
+      "exit 0 is only meaningful in interactive shells; in scripts, all exit codes are ignored"
     ],
-    "correct": "B. $? contains the exit code of the last foreground command; 0 conventionally means success and any non-zero value means failure",
+    "correct": "$? contains the exit code of the last foreground command; 0 conventionally means success and any non-zero value means failure",
     "explanation": "In Unix shells, every command exits with a status code 0–255. By POSIX convention, 0 means success and any non-zero value means some form of failure (different values often encode different error types). $? is a special shell variable that is updated after each foreground command or pipeline completes. CI systems like Jenkins, GitHub Actions, and GitLab CI rely on this: they capture the exit code of each step and fail the pipeline on non-zero. $! (not $?) holds the PID of the last background process. (Source: man7.org/linux/man-pages/man1/bash.1.html — Special Parameters; POSIX.1-2017 Shell and Utilities)",
     "category": "devops",
     "subcategory": "linux",
@@ -836,7 +949,10 @@
     "topic": "Shell fundamentals: pipes, redirection, environment variables, cron, text processing, and exit codes",
     "topic_label": "Shell & Text Processing",
     "total_topic_questions": 10,
-    "tags": ["linux", "automation"],
+    "tags": [
+      "linux",
+      "automation"
+    ],
     "image": ""
   },
   {
@@ -844,12 +960,12 @@
     "q_number": 41,
     "question": "A shell command is: `app 2>&1 | tee app.log`. What does `2>&1` accomplish before the pipe?",
     "choices": [
-      "A. It discards stderr so only stdout is written to app.log",
-      "B. It duplicates file descriptor 2 (stderr) onto file descriptor 1 (stdout), merging both streams before passing them to tee",
-      "C. It redirects stdout to stderr so tee receives only error output",
-      "D. It creates a named pipe between stderr and stdout for inter-process communication"
+      "It discards stderr so only stdout is written to app.log",
+      "It duplicates file descriptor 2 (stderr) onto file descriptor 1 (stdout), merging both streams before passing them to tee",
+      "It redirects stdout to stderr so tee receives only error output",
+      "It creates a named pipe between stderr and stdout for inter-process communication"
     ],
-    "correct": "B. It duplicates file descriptor 2 (stderr) onto file descriptor 1 (stdout), merging both streams before passing them to tee",
+    "correct": "It duplicates file descriptor 2 (stderr) onto file descriptor 1 (stdout), merging both streams before passing them to tee",
     "explanation": "File descriptor 1 is stdout; file descriptor 2 is stderr. The notation `2>&1` means 'make FD 2 point to wherever FD 1 currently points'. After this redirection, both stdout and stderr go to the same place — in this case, into the pipe feeding tee. tee then writes what it reads to both the terminal and app.log, capturing both output streams. Without `2>&1`, stderr would go directly to the terminal and not be captured in app.log. The order of redirections matters: `2>&1 | tee` merges before piping; `| tee 2>&1` would not (stderr would not be redirected). (Source: man7.org/linux/man-pages/man1/bash.1.html — Redirections)",
     "category": "devops",
     "subcategory": "linux",
@@ -857,7 +973,10 @@
     "topic": "Shell fundamentals: pipes, redirection, environment variables, cron, text processing, and exit codes",
     "topic_label": "Shell & Text Processing",
     "total_topic_questions": 10,
-    "tags": ["linux", "automation"],
+    "tags": [
+      "linux",
+      "automation"
+    ],
     "image": ""
   },
   {
@@ -865,12 +984,12 @@
     "q_number": 42,
     "question": "A cron entry reads: `0 2 * * 1 /opt/backup.sh`. When does this job run?",
     "choices": [
-      "A. Every day at 2:00 AM",
-      "B. Every Monday at 2:00 AM",
-      "C. Every hour at minute 0, starting at 2:00 AM on Mondays",
-      "D. On the 1st of every month at 2:00 AM"
+      "Every day at 2:00 AM",
+      "Every Monday at 2:00 AM",
+      "Every hour at minute 0, starting at 2:00 AM on Mondays",
+      "On the 1st of every month at 2:00 AM"
     ],
-    "correct": "B. Every Monday at 2:00 AM",
+    "correct": "Every Monday at 2:00 AM",
     "explanation": "The five cron time fields are, in order: minute hour day-of-month month day-of-week. Parsing `0 2 * * 1`: minute=0, hour=2, day-of-month=* (any), month=* (any), day-of-week=1 (Monday, where 0 and 7 both represent Sunday). The job runs at minute 0 of hour 2 (2:00 AM) on any day that is a Monday, in any month. Option D would require `0 2 1 * *` (day-of-month=1). Option A would require `0 2 * * *` (day-of-week=*). (Source: man7.org/linux/man-pages/man5/crontab.5.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -878,7 +997,10 @@
     "topic": "Shell fundamentals: pipes, redirection, environment variables, cron, text processing, and exit codes",
     "topic_label": "Shell & Text Processing",
     "total_topic_questions": 10,
-    "tags": ["linux", "automation"],
+    "tags": [
+      "linux",
+      "automation"
+    ],
     "image": ""
   },
   {
@@ -886,12 +1008,12 @@
     "q_number": 43,
     "question": "A script exports a variable: `export APP_ENV=production`. A child process launched by the script reads $APP_ENV and gets 'production'. A sibling shell (started separately) reads $APP_ENV and gets an empty string. Why?",
     "choices": [
-      "A. export only works within the same shell session; once the session ends the variable is lost everywhere",
-      "B. Environment variables are inherited by child processes but not shared between sibling or parent processes — each process has its own copy of the environment",
-      "C. The sibling shell requires a source command to read the exported variable",
-      "D. export is equivalent to a global variable in programming; the sibling shell should have access"
+      "export only works within the same shell session; once the session ends the variable is lost everywhere",
+      "Environment variables are inherited by child processes but not shared between sibling or parent processes — each process has its own copy of the environment",
+      "The sibling shell requires a source command to read the exported variable",
+      "export is equivalent to a global variable in programming; the sibling shell should have access"
     ],
-    "correct": "B. Environment variables are inherited by child processes but not shared between sibling or parent processes — each process has its own copy of the environment",
+    "correct": "Environment variables are inherited by child processes but not shared between sibling or parent processes — each process has its own copy of the environment",
     "explanation": "When a process forks, the child inherits a COPY of the parent's environment. Changes to environment variables in the child do not propagate back to the parent, and variables set or exported in one shell are never visible to a separately started shell (sibling) because they do not share a parent-child relationship for this export. `export` marks a variable for inclusion in the environment passed to child processes via exec. This is unidirectional (parent to child, at exec time). To share state between unrelated processes, use files, environment management tools (direnv), or a shared configuration layer. (Source: man7.org/linux/man-pages/man7/environ.7.html; man7.org/linux/man-pages/man2/execve.2.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -899,7 +1021,9 @@
     "topic": "Shell fundamentals: pipes, redirection, environment variables, cron, text processing, and exit codes",
     "topic_label": "Shell & Text Processing",
     "total_topic_questions": 10,
-    "tags": ["linux"],
+    "tags": [
+      "linux"
+    ],
     "image": ""
   },
   {
@@ -907,12 +1031,12 @@
     "q_number": 44,
     "question": "An engineer uses `grep -E 'ERROR|WARN' /var/log/app.log | awk '{print $1, $2, $NF}'` to parse a log file. What does `$NF` represent in awk?",
     "choices": [
-      "A. The number of fields on the current line",
-      "B. The last field on the current line",
-      "C. The first field on the current line (same as $1)",
-      "D. A built-in awk function that counts non-empty fields"
+      "The number of fields on the current line",
+      "The last field on the current line",
+      "The first field on the current line (same as $1)",
+      "A built-in awk function that counts non-empty fields"
     ],
-    "correct": "B. The last field on the current line",
+    "correct": "The last field on the current line",
     "explanation": "In awk, NF is the built-in variable holding the Number of Fields on the current record (line). Using $NF as a field reference means 'the value of the field at position NF', which is always the last field. This is useful when log lines have a variable number of fields but the meaningful value (e.g., a status code or message) is always last. $1 is the first field; $(NF-1) would be the second-to-last. Option A describes NF itself (the count), not $NF (the field value). (Source: man7.org/linux/man-pages/man1/gawk.1.html; POSIX awk specification)",
     "category": "devops",
     "subcategory": "linux",
@@ -920,7 +1044,10 @@
     "topic": "Shell fundamentals: pipes, redirection, environment variables, cron, text processing, and exit codes",
     "topic_label": "Shell & Text Processing",
     "total_topic_questions": 10,
-    "tags": ["linux", "troubleshooting"],
+    "tags": [
+      "linux",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -928,12 +1055,12 @@
     "q_number": 45,
     "question": "A log rotation script replaces /var/log/app.log with a new empty file. However, the application continues writing to the old (now unlinked) file and no new logs appear. What does this illustrate about file descriptors in Linux?",
     "choices": [
-      "A. The application should be using syslog instead of file-based logging to avoid this issue",
-      "B. When a process opens a file, it holds a file descriptor referencing the inode; renaming or deleting the directory entry does not redirect an already-open file descriptor",
-      "C. This is a kernel bug in inotify that causes file watchers to miss rotation events",
-      "D. The new empty file has incorrect permissions and the application cannot open it"
+      "The application should be using syslog instead of file-based logging to avoid this issue",
+      "When a process opens a file, it holds a file descriptor referencing the inode; renaming or deleting the directory entry does not redirect an already-open file descriptor",
+      "This is a kernel bug in inotify that causes file watchers to miss rotation events",
+      "The new empty file has incorrect permissions and the application cannot open it"
     ],
-    "correct": "B. When a process opens a file, it holds a file descriptor referencing the inode; renaming or deleting the directory entry does not redirect an already-open file descriptor",
+    "correct": "When a process opens a file, it holds a file descriptor referencing the inode; renaming or deleting the directory entry does not redirect an already-open file descriptor",
     "explanation": "When an application opens a file, the kernel gives it a file descriptor that points directly to the inode. The directory entry (filename) is just a path to that inode. If the log rotation tool replaces the filename (moving the old file away and creating a new one), the application's already-open file descriptor still points to the original inode — it never sees the new file. The correct solution is to send the application a signal (often SIGUSR1 or SIGHUP, depending on the app) that causes it to close and reopen its log file descriptors. This is why tools like logrotate have a `postrotate` directive with a signal/restart command. (Source: man7.org/linux/man-pages/man2/open.2.html; man7.org/linux/man-pages/man7/inode.7.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -941,7 +1068,10 @@
     "topic": "Shell fundamentals: pipes, redirection, environment variables, cron, text processing, and exit codes",
     "topic_label": "Shell & Text Processing",
     "total_topic_questions": 10,
-    "tags": ["linux", "troubleshooting"],
+    "tags": [
+      "linux",
+      "troubleshooting"
+    ],
     "image": ""
   },
   {
@@ -949,12 +1079,12 @@
     "q_number": 46,
     "question": "A shell script has the line `set -e`. A command within the script exits with code 1. What happens?",
     "choices": [
-      "A. The script prints 'Error on line N' and continues execution",
-      "B. The script exits immediately with a non-zero status when any simple command returns a non-zero exit code",
-      "C. set -e makes the script prompt the user before each command execution",
-      "D. set -e changes non-zero exit codes to 0 so subsequent commands are not affected"
+      "The script prints 'Error on line N' and continues execution",
+      "The script exits immediately with a non-zero status when any simple command returns a non-zero exit code",
+      "set -e makes the script prompt the user before each command execution",
+      "set -e changes non-zero exit codes to 0 so subsequent commands are not affected"
     ],
-    "correct": "B. The script exits immediately with a non-zero status when any simple command returns a non-zero exit code",
+    "correct": "The script exits immediately with a non-zero status when any simple command returns a non-zero exit code",
     "explanation": "`set -e` (or `set -o errexit`) is a critical safety option for shell scripts: the script terminates as soon as any simple command fails (exits non-zero). Without it, a script continues running after a failed command, potentially performing operations on a corrupted or unexpected state. This is standard practice in CI/CD scripts. A common companion is `set -o pipefail` which makes pipelines fail if any component command fails (otherwise only the last command's exit code is checked). set -e has nuances — commands in conditionals, while/until tests, and commands negated with ! are exempt. (Source: man7.org/linux/man-pages/man1/bash.1.html — The Set Builtin)",
     "category": "devops",
     "subcategory": "linux",
@@ -962,7 +1092,10 @@
     "topic": "Shell fundamentals: pipes, redirection, environment variables, cron, text processing, and exit codes",
     "topic_label": "Shell & Text Processing",
     "total_topic_questions": 10,
-    "tags": ["linux", "automation"],
+    "tags": [
+      "linux",
+      "automation"
+    ],
     "image": ""
   },
   {
@@ -970,12 +1103,12 @@
     "q_number": 47,
     "question": "An engineer needs to replace all occurrences of 'http://old.example.com' with 'https://new.example.com' in a file in place. Which sed command is correct?",
     "choices": [
-      "A. `sed 's/http:\\/\\/old.example.com/https:\\/\\/new.example.com/' file.conf`",
-      "B. `sed -i 's|http://old.example.com|https://new.example.com|g' file.conf`",
-      "C. `sed -n 's|http://old.example.com|https://new.example.com|gp' file.conf`",
-      "D. `sed -r 's/http://old.example.com/https://new.example.com/g' file.conf`"
+      "`sed 's/http:\\/\\/old.example.com/https:\\/\\/new.example.com/' file.conf`",
+      "`sed -i 's|http://old.example.com|https://new.example.com|g' file.conf`",
+      "`sed -n 's|http://old.example.com|https://new.example.com|gp' file.conf`",
+      "`sed -r 's/http://old.example.com/https://new.example.com/g' file.conf`"
     ],
-    "correct": "B. `sed -i 's|http://old.example.com|https://new.example.com|g' file.conf`",
+    "correct": "`sed -i 's|http://old.example.com|https://new.example.com|g' file.conf`",
     "explanation": "The -i flag tells sed to edit the file in place (modify the file directly rather than printing to stdout). Using | as the delimiter instead of / avoids the need to escape the slashes in the URLs. The g flag at the end makes the substitution global (replaces all occurrences on each line, not just the first). Option A is missing -i (writes to stdout only) and also missing the g flag. Option C uses -n (suppress default output) with p (print matched lines only) — this would print matching lines but not edit the file. Option D uses // as delimiters, which breaks the regex. (Source: man7.org/linux/man-pages/man1/sed.1.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -983,7 +1116,10 @@
     "topic": "Shell fundamentals: pipes, redirection, environment variables, cron, text processing, and exit codes",
     "topic_label": "Shell & Text Processing",
     "total_topic_questions": 10,
-    "tags": ["linux", "automation"],
+    "tags": [
+      "linux",
+      "automation"
+    ],
     "image": ""
   },
   {
@@ -991,12 +1127,12 @@
     "q_number": 48,
     "question": "A cron job is defined with `@reboot /opt/startup-check.sh`. What does the @reboot special string guarantee?",
     "choices": [
-      "A. The script runs every time the cron daemon is restarted, not necessarily on system reboot",
-      "B. The script runs once each time the system boots, shortly after the cron daemon starts",
-      "C. The script runs at system boot and again every 60 minutes thereafter",
-      "D. @reboot is a non-standard extension not supported by all cron implementations"
+      "The script runs every time the cron daemon is restarted, not necessarily on system reboot",
+      "The script runs once each time the system boots, shortly after the cron daemon starts",
+      "The script runs at system boot and again every 60 minutes thereafter",
+      "@reboot is a non-standard extension not supported by all cron implementations"
     ],
-    "correct": "B. The script runs once each time the system boots, shortly after the cron daemon starts",
+    "correct": "The script runs once each time the system boots, shortly after the cron daemon starts",
     "explanation": "@reboot is a special cron string (supported by Vixie cron, cronie, and most modern cron implementations) that schedules a command to run once when the cron daemon starts — which on a standard system happens during boot. It does not repeat. It does not run every time crond is restarted in isolation (crond restart without a system reboot does trigger @reboot jobs in some implementations, which is a nuance to be aware of, but the primary and designed use case is system boot). @hourly, @daily, @weekly, @monthly are the equivalents for periodic scheduling. Option D is incorrect for major cron implementations; @reboot is widely supported. (Source: man7.org/linux/man-pages/man5/crontab.5.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -1004,7 +1140,10 @@
     "topic": "Shell fundamentals: pipes, redirection, environment variables, cron, text processing, and exit codes",
     "topic_label": "Shell & Text Processing",
     "total_topic_questions": 10,
-    "tags": ["linux", "automation"],
+    "tags": [
+      "linux",
+      "automation"
+    ],
     "image": ""
   },
   {
@@ -1012,12 +1151,12 @@
     "q_number": 49,
     "question": "A pipeline command is `cat access.log | grep '500' | wc -l`. An engineer suggests rewriting it as `grep -c '500' access.log`. Beyond style, what is the practical difference?",
     "choices": [
-      "A. The pipeline version is more accurate because cat buffers the entire file before processing",
-      "B. `grep -c` is more efficient — it counts matching lines internally without spawning two extra processes (cat and wc) and without creating two pipes",
-      "C. The pipeline is correct only on files over 1 GB; grep -c has a line count limit",
-      "D. grep -c counts characters, not lines, so the two commands produce different numbers"
+      "The pipeline version is more accurate because cat buffers the entire file before processing",
+      "`grep -c` is more efficient — it counts matching lines internally without spawning two extra processes (cat and wc) and without creating two pipes",
+      "The pipeline is correct only on files over 1 GB; grep -c has a line count limit",
+      "grep -c counts characters, not lines, so the two commands produce different numbers"
     ],
-    "correct": "B. `grep -c` is more efficient — it counts matching lines internally without spawning two extra processes (cat and wc) and without creating two pipes",
+    "correct": "`grep -c` is more efficient — it counts matching lines internally without spawning two extra processes (cat and wc) and without creating two pipes",
     "explanation": "The pipeline `cat | grep | wc -l` uses three processes connected by two pipes. Data flows from cat to grep to wc, with the kernel copying buffers between pipe endpoints. `grep -c` achieves the same result entirely within a single grep process: the -c flag causes grep to print the count of matching lines directly. No cat (a classic 'useless use of cat') and no wc are needed. For large files the difference is measurable; for scripting clarity, grep -c is also more readable. `grep -c` counts matching lines, not characters — option D is incorrect; -c is count of matching lines. (Source: man7.org/linux/man-pages/man1/grep.1.html)",
     "category": "devops",
     "subcategory": "linux",
@@ -1025,7 +1164,10 @@
     "topic": "Shell fundamentals: pipes, redirection, environment variables, cron, text processing, and exit codes",
     "topic_label": "Shell & Text Processing",
     "total_topic_questions": 10,
-    "tags": ["linux", "automation"],
+    "tags": [
+      "linux",
+      "automation"
+    ],
     "image": ""
   },
   {
@@ -1033,12 +1175,12 @@
     "q_number": 50,
     "question": "A shell script conditionally checks a command: `if grep -q 'ERROR' /var/log/app.log; then echo 'Errors found'; fi`. What does the -q flag do and why is it appropriate here?",
     "choices": [
-      "A. -q enables quiet mode: grep suppresses all output and relies solely on its exit code to indicate whether a match was found",
-      "B. -q enables quick mode: grep reads only the first 100 lines for faster performance",
-      "C. -q enables query mode: grep returns a JSON-formatted match count instead of matched lines",
-      "D. -q is invalid for grep; the correct flag is --silent and the command would fail"
+      "-q enables quiet mode: grep suppresses all output and relies solely on its exit code to indicate whether a match was found",
+      "-q enables quick mode: grep reads only the first 100 lines for faster performance",
+      "-q enables query mode: grep returns a JSON-formatted match count instead of matched lines",
+      "-q is invalid for grep; the correct flag is --silent and the command would fail"
     ],
-    "correct": "A. -q enables quiet mode: grep suppresses all output and relies solely on its exit code to indicate whether a match was found",
+    "correct": "-q enables quiet mode: grep suppresses all output and relies solely on its exit code to indicate whether a match was found",
     "explanation": "grep -q (quiet/silent) suppresses all output — no matched lines are printed. grep still sets its exit code correctly: 0 if at least one match is found, 1 if no match, 2 for errors. When you only care about whether a pattern exists (not what the matches look like), -q is the right flag because it avoids polluting stdout or needing output redirection. In a shell if-statement, grep's exit code is the condition: 0 (match found) is truthy, non-zero is falsy. -q is a standard POSIX grep option, not grep-specific. (Source: man7.org/linux/man-pages/man1/grep.1.html; POSIX.1-2017 grep specification)",
     "category": "devops",
     "subcategory": "linux",
@@ -1046,7 +1188,10 @@
     "topic": "Shell fundamentals: pipes, redirection, environment variables, cron, text processing, and exit codes",
     "topic_label": "Shell & Text Processing",
     "total_topic_questions": 10,
-    "tags": ["linux", "automation"],
+    "tags": [
+      "linux",
+      "automation"
+    ],
     "image": ""
   }
 ]

@@ -4,12 +4,12 @@
     "q_number": 1,
     "question": "A Prometheus metric is incremented by 1 each time an HTTP request completes. After a service restart, you notice the metric resets to 0. Which metric type best describes this behavior and why is it appropriate here?",
     "choices": [
-      "A. Gauge, because gauges track cumulative totals that reset on restart",
-      "B. Counter, because counters represent monotonically increasing values that reset only on process restart",
-      "C. Histogram, because histograms bucket request counts across latency ranges",
-      "D. Summary, because summaries compute request-rate percentiles server-side"
+      "Gauge, because gauges track cumulative totals that reset on restart",
+      "Counter, because counters represent monotonically increasing values that reset only on process restart",
+      "Histogram, because histograms bucket request counts across latency ranges",
+      "Summary, because summaries compute request-rate percentiles server-side"
     ],
-    "correct": "B. Counter, because counters represent monotonically increasing values that reset only on process restart",
+    "correct": "Counter, because counters represent monotonically increasing values that reset only on process restart",
     "explanation": "A counter is a cumulative metric that only goes up (or resets to zero on process restart). Resetting on restart is expected and handled by PromQL's rate() and increase() functions, which detect resets automatically. A gauge can go up or down, making it inappropriate for a value that only increments. A histogram and summary are both suited to latency/size distributions, not simple event counts. Source: Prometheus documentation — Metric types (https://prometheus.io/docs/concepts/metric_types/).",
     "category": "devops",
     "subcategory": "observability",
@@ -18,19 +18,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring"]
+    "tags": [
+      "observability",
+      "monitoring"
+    ]
   },
   {
     "id": "observability-a38233d4b3",
     "q_number": 2,
     "question": "Your team uses a Prometheus gauge to track the number of active database connections. During an incident, the gauge shows 0 connections even though the database is clearly receiving traffic. What is the most likely cause?",
     "choices": [
-      "A. Gauges are monotonically increasing and cannot decrease below their last value",
-      "B. The scrape interval is longer than the spike duration, causing Prometheus to miss the peak",
-      "C. Gauges reset to 0 on every scrape, so you should use a counter instead",
-      "D. Prometheus only stores integer gauge values; floating-point connections are truncated"
+      "Gauges are monotonically increasing and cannot decrease below their last value",
+      "The scrape interval is longer than the spike duration, causing Prometheus to miss the peak",
+      "Gauges reset to 0 on every scrape, so you should use a counter instead",
+      "Prometheus only stores integer gauge values; floating-point connections are truncated"
     ],
-    "correct": "B. The scrape interval is longer than the spike duration, causing Prometheus to miss the peak",
+    "correct": "The scrape interval is longer than the spike duration, causing Prometheus to miss the peak",
     "explanation": "A gauge is a snapshot metric — Prometheus records whatever value it sees at the moment of each scrape. If connection spikes are shorter than the scrape interval (default 15s), they are invisible in the time series. Gauges can decrease freely (unlike counters) and are not reset to 0 on scrape. Prometheus stores float64 values, so truncation is not the issue. The fix is to lower the scrape interval or instrument a counter for total connections opened and use rate() instead. Source: Prometheus documentation — Metric types (https://prometheus.io/docs/concepts/metric_types/).",
     "category": "devops",
     "subcategory": "observability",
@@ -39,19 +42,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring", "troubleshooting"]
+    "tags": [
+      "observability",
+      "monitoring",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-7fa4b176e0",
     "q_number": 3,
     "question": "A team wants to alert when p99 HTTP request latency exceeds 500 ms. Which Prometheus metric type should they instrument and which PromQL function extracts the percentile?",
     "choices": [
-      "A. Counter with rate(), because rate() computes per-second latency percentiles",
-      "B. Gauge with quantile(), because gauges store raw latency values",
-      "C. Histogram with histogram_quantile(), because histograms bucket observations and allow server-side quantile calculation",
-      "D. Summary with histogram_quantile(), because summaries pre-compute quantiles that histogram_quantile() then aggregates"
+      "Counter with rate(), because rate() computes per-second latency percentiles",
+      "Gauge with quantile(), because gauges store raw latency values",
+      "Histogram with histogram_quantile(), because histograms bucket observations and allow server-side quantile calculation",
+      "Summary with histogram_quantile(), because summaries pre-compute quantiles that histogram_quantile() then aggregates"
     ],
-    "correct": "C. Histogram with histogram_quantile(), because histograms bucket observations and allow server-side quantile calculation",
+    "correct": "Histogram with histogram_quantile(), because histograms bucket observations and allow server-side quantile calculation",
     "explanation": "A Prometheus histogram exposes _bucket, _sum, and _count time series. The PromQL function histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[5m])) computes the p99 from the bucket data, allowing aggregation across instances. A counter tracks count only, not duration distribution. A gauge is a point-in-time snapshot, not a distribution. A summary pre-computes quantiles client-side, but histogram_quantile() does not operate on summary quantile series. Source: Prometheus documentation — Histograms and Summaries (https://prometheus.io/docs/practices/histograms/).",
     "category": "devops",
     "subcategory": "observability",
@@ -60,19 +67,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring"]
+    "tags": [
+      "observability",
+      "monitoring"
+    ]
   },
   {
     "id": "observability-00e066914b",
     "q_number": 4,
     "question": "A developer adds a Prometheus label called `user_id` to an HTTP request counter so they can filter metrics by individual user. After deploying, Prometheus memory usage spikes and the system becomes unstable. What is the root cause?",
     "choices": [
-      "A. The user_id label contains strings, which Prometheus cannot store efficiently",
-      "B. Adding any new label forces Prometheus to re-scrape all existing targets",
-      "C. High-cardinality labels create one unique time series per label value, exhausting memory when millions of users exist",
-      "D. Prometheus enforces a hard limit of 10 labels per metric; exceeding this causes a crash"
+      "The user_id label contains strings, which Prometheus cannot store efficiently",
+      "Adding any new label forces Prometheus to re-scrape all existing targets",
+      "High-cardinality labels create one unique time series per label value, exhausting memory when millions of users exist",
+      "Prometheus enforces a hard limit of 10 labels per metric; exceeding this causes a crash"
     ],
-    "correct": "C. High-cardinality labels create one unique time series per label value, exhausting memory when millions of users exist",
+    "correct": "High-cardinality labels create one unique time series per label value, exhausting memory when millions of users exist",
     "explanation": "Prometheus stores one time series per unique combination of metric name and label set. Using a label with unbounded cardinality — such as user_id — creates millions of series, each consuming memory for samples and index entries. This is called 'cardinality explosion' and is one of the most common Prometheus operational failures. Prometheus supports string labels natively. Re-scraping is not triggered by label changes. Prometheus has no hard label-count crash limit. The fix is to avoid high-cardinality label values; aggregate user-level data in the application instead. Source: Prometheus documentation — Best practices: Labels (https://prometheus.io/docs/practices/naming/#labels).",
     "category": "devops",
     "subcategory": "observability",
@@ -81,19 +91,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring", "reliability"]
+    "tags": [
+      "observability",
+      "monitoring",
+      "reliability"
+    ]
   },
   {
     "id": "observability-ea4188cc34",
     "q_number": 5,
     "question": "In Prometheus, the scrape interval is set to 15s and the evaluation interval is set to 1m. A spike in CPU usage lasts 20 seconds. Which of the following outcomes is most likely?",
     "choices": [
-      "A. The spike will definitely appear in the time series because 20s > 15s scrape interval",
-      "B. The alerting rule may never fire because the 1m evaluation interval might not land during the spike",
-      "C. Prometheus will automatically lower the scrape interval during incidents to capture spikes",
-      "D. The evaluation interval determines when data is collected; the scrape interval controls when alerts fire"
+      "The spike will definitely appear in the time series because 20s > 15s scrape interval",
+      "The alerting rule may never fire because the 1m evaluation interval might not land during the spike",
+      "Prometheus will automatically lower the scrape interval during incidents to capture spikes",
+      "The evaluation interval determines when data is collected; the scrape interval controls when alerts fire"
     ],
-    "correct": "B. The alerting rule may never fire because the 1m evaluation interval might not land during the spike",
+    "correct": "The alerting rule may never fire because the 1m evaluation interval might not land during the spike",
     "explanation": "The scrape interval (15s) controls how often Prometheus collects data — so the spike will likely be captured in the time series (assuming at least one scrape falls within 20s). However, the evaluation interval (1m) controls how often alerting rules are evaluated. If the evaluation runs before and after the 20-second spike, the alert condition may never be true at evaluation time, and the alert will never fire. Prometheus does not dynamically adjust the scrape interval. The scrape interval collects data; the evaluation interval checks rules. These are separate concerns. Source: Prometheus documentation — Configuration (https://prometheus.io/docs/prometheus/latest/configuration/configuration/).",
     "category": "devops",
     "subcategory": "observability",
@@ -102,19 +116,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring", "reliability"]
+    "tags": [
+      "observability",
+      "monitoring",
+      "reliability"
+    ]
   },
   {
     "id": "observability-ec80910487",
     "q_number": 6,
     "question": "A PromQL query `rate(http_requests_total[5m])` returns 'no data' for a specific service even though the service is healthy and receiving traffic. What is the most likely cause?",
     "choices": [
-      "A. rate() requires a histogram metric; http_requests_total is a counter and incompatible",
-      "B. The time range [5m] is shorter than twice the scrape interval, causing insufficient data points for rate calculation",
-      "C. rate() only works on gauge metrics; use increase() for counters",
-      "D. The metric name http_requests_total does not match Prometheus naming conventions, so it is silently dropped"
+      "rate() requires a histogram metric; http_requests_total is a counter and incompatible",
+      "The time range [5m] is shorter than twice the scrape interval, causing insufficient data points for rate calculation",
+      "rate() only works on gauge metrics; use increase() for counters",
+      "The metric name http_requests_total does not match Prometheus naming conventions, so it is silently dropped"
     ],
-    "correct": "B. The time range [5m] is shorter than twice the scrape interval, causing insufficient data points for rate calculation",
+    "correct": "The time range [5m] is shorter than twice the scrape interval, causing insufficient data points for rate calculation",
     "explanation": "Prometheus's rate() function requires at least two data points within the specified range window to compute a per-second rate. The general rule is that the range should be at least 4x the scrape interval to tolerate missed scrapes. With a 15s scrape interval, a [30s] window is the minimum; [5m] is fine in that case — but if someone set a very long scrape interval (e.g., 3m), a [5m] window would only guarantee one data point. rate() is specifically designed for counters, not gauges. increase() is rate() * duration and also works on counters. Naming conventions cause warnings, not silent drops. Source: Prometheus documentation — Query functions: rate() (https://prometheus.io/docs/prometheus/latest/querying/functions/#rate).",
     "category": "devops",
     "subcategory": "observability",
@@ -123,19 +141,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring", "troubleshooting"]
+    "tags": [
+      "observability",
+      "monitoring",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-ab76e764df",
     "q_number": 7,
     "question": "You are building a Grafana dashboard and need a panel that shows the current number of running pods in a Kubernetes cluster, updated every 30 seconds. Which panel type and metric type combination is most appropriate?",
     "choices": [
-      "A. Graph panel with a counter metric, using rate() to convert to a per-second rate",
-      "B. Stat panel with a gauge metric, displaying the current point-in-time value",
-      "C. Heatmap panel with a histogram metric, showing pod count distribution over time",
-      "D. Bar chart panel with a summary metric, aggregating pod counts by quantile"
+      "Graph panel with a counter metric, using rate() to convert to a per-second rate",
+      "Stat panel with a gauge metric, displaying the current point-in-time value",
+      "Heatmap panel with a histogram metric, showing pod count distribution over time",
+      "Bar chart panel with a summary metric, aggregating pod counts by quantile"
     ],
-    "correct": "B. Stat panel with a gauge metric, displaying the current point-in-time value",
+    "correct": "Stat panel with a gauge metric, displaying the current point-in-time value",
     "explanation": "Pod count is a value that goes up and down — a perfect fit for a gauge metric. A Stat panel displays a single current value prominently, which is ideal for an operational count like running pods. A Graph panel with rate() on a counter would give a rate of change, not an absolute count. A heatmap is suited to distribution data (latency buckets), not a single integer count. A summary with quantiles would be nonsensical for pod counts. Source: Grafana documentation — Panel types (https://grafana.com/docs/grafana/latest/panels-visualizations/).",
     "category": "devops",
     "subcategory": "observability",
@@ -144,19 +166,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring", "cloud"]
+    "tags": [
+      "observability",
+      "monitoring",
+      "cloud"
+    ]
   },
   {
     "id": "observability-d845b6baeb",
     "q_number": 8,
     "question": "A Grafana dashboard shows wildly different latency values depending on which replica of a service is selected in a variable dropdown. The underlying Prometheus query is `histogram_quantile(0.95, rate(latency_bucket[5m]))`. What change correctly aggregates across all replicas?",
     "choices": [
-      "A. Switch from histogram_quantile() to avg() across the replica label",
-      "B. Add `sum by (le)` before histogram_quantile() to aggregate bucket counts across replicas first",
-      "C. Replace rate() with increase() so the counts are not divided by time before aggregation",
-      "D. Add a `without(instance)` modifier directly inside histogram_quantile()"
+      "Switch from histogram_quantile() to avg() across the replica label",
+      "Add `sum by (le)` before histogram_quantile() to aggregate bucket counts across replicas first",
+      "Replace rate() with increase() so the counts are not divided by time before aggregation",
+      "Add a `without(instance)` modifier directly inside histogram_quantile()"
     ],
-    "correct": "B. Add `sum by (le)` before histogram_quantile() to aggregate bucket counts across replicas first",
+    "correct": "Add `sum by (le)` before histogram_quantile() to aggregate bucket counts across replicas first",
     "explanation": "histogram_quantile() must receive aggregated bucket counts to produce a meaningful cross-instance percentile. The correct pattern is: `histogram_quantile(0.95, sum by (le) (rate(latency_bucket[5m])))`. Summing by the `le` label (the bucket upper bound) adds the bucket counts across all replicas before the quantile is computed. Averaging quantile values (option A) is mathematically incorrect — percentiles are not additive. increase() does not change the aggregation semantics. `without()` is not a valid modifier inside histogram_quantile(). Source: Prometheus documentation — Histograms and Summaries (https://prometheus.io/docs/practices/histograms/).",
     "category": "devops",
     "subcategory": "observability",
@@ -165,19 +191,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring", "troubleshooting"]
+    "tags": [
+      "observability",
+      "monitoring",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-6590800f95",
     "q_number": 9,
     "question": "A team wants to track the ratio of 5xx HTTP responses to total responses as a Prometheus metric exposed from their application. Which approach is correct?",
     "choices": [
-      "A. Expose a single gauge metric called http_error_ratio that the app computes and sets directly",
-      "B. Expose two counters — http_requests_total and http_errors_total — and compute the ratio in PromQL using division",
-      "C. Expose a histogram of response codes and use histogram_quantile() to find the error threshold",
-      "D. Expose a summary with 0.95 and 0.99 quantiles labeled by status code"
+      "Expose a single gauge metric called http_error_ratio that the app computes and sets directly",
+      "Expose two counters — http_requests_total and http_errors_total — and compute the ratio in PromQL using division",
+      "Expose a histogram of response codes and use histogram_quantile() to find the error threshold",
+      "Expose a summary with 0.95 and 0.99 quantiles labeled by status code"
     ],
-    "correct": "B. Expose two counters — http_requests_total and http_errors_total — and compute the ratio in PromQL using division",
+    "correct": "Expose two counters — http_requests_total and http_errors_total — and compute the ratio in PromQL using division",
     "explanation": "The idiomatic Prometheus approach is to expose raw counters and compute ratios in the query layer: `rate(http_errors_total[5m]) / rate(http_requests_total[5m])`. This preserves all raw data for other queries and avoids baking in a fixed computation in the application. A pre-computed gauge ratio loses the underlying counts and introduces staleness if the app's computation diverges from PromQL. A histogram is for distributions. A summary with status-code quantiles is not meaningful for counting errors. Source: Prometheus documentation — Best Practices: Instrumentation (https://prometheus.io/docs/practices/instrumentation/).",
     "category": "devops",
     "subcategory": "observability",
@@ -186,19 +216,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring"]
+    "tags": [
+      "observability",
+      "monitoring"
+    ]
   },
   {
     "id": "observability-285cc45c6d",
     "q_number": 10,
     "question": "An on-call engineer opens a Grafana dashboard during an incident and sees a panel that was last updated 45 minutes ago. The Prometheus target is listed as UP. What is the most likely explanation?",
     "choices": [
-      "A. The panel's time range is set to 'Last 15 minutes', so data older than 15 minutes is hidden",
-      "B. The Grafana dashboard is set to a stale auto-refresh interval or the browser tab has been in the background and auto-refresh has paused",
-      "C. Prometheus stops storing metrics for healthy targets after 30 minutes to conserve disk space",
-      "D. The panel query uses a counter metric, which only updates when the counter resets"
+      "The panel's time range is set to 'Last 15 minutes', so data older than 15 minutes is hidden",
+      "The Grafana dashboard is set to a stale auto-refresh interval or the browser tab has been in the background and auto-refresh has paused",
+      "Prometheus stops storing metrics for healthy targets after 30 minutes to conserve disk space",
+      "The panel query uses a counter metric, which only updates when the counter resets"
     ],
-    "correct": "B. The Grafana dashboard is set to a stale auto-refresh interval or the browser tab has been in the background and auto-refresh has paused",
+    "correct": "The Grafana dashboard is set to a stale auto-refresh interval or the browser tab has been in the background and auto-refresh has paused",
     "explanation": "Grafana panels refresh on a configurable interval (default often 5m or manual). Modern browsers throttle or pause JavaScript timers in background tabs, which can cause the dashboard to show stale data even if Prometheus is collecting new samples. The target being 'UP' confirms data is flowing into Prometheus. A 15-minute time range would hide no data visible minutes ago. Prometheus does not evict healthy target data after 30 minutes (retention is configurable, defaulting to 15 days). Counter metrics update on every scrape, not only on resets. Source: Grafana documentation — Dashboard auto-refresh (https://grafana.com/docs/grafana/latest/dashboards/use-dashboards/).",
     "category": "devops",
     "subcategory": "observability",
@@ -207,19 +240,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring", "troubleshooting"]
+    "tags": [
+      "observability",
+      "monitoring",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-92cf8ef3c9",
     "q_number": 11,
     "question": "A microservice writes logs as plain text in the format: `[ERROR] 2024-01-15 14:23:01 - payment failed for order 99182`. A downstream log aggregator tries to extract the order ID but fails. What is the primary advantage of switching to structured (JSON) logging?",
     "choices": [
-      "A. JSON logs are compressed automatically by the OS, reducing disk I/O",
-      "B. Structured logs expose fields as key-value pairs, making them machine-parseable without fragile regex",
-      "C. Plain-text logs cannot include timestamps, so structured logging is required for time-based filtering",
-      "D. Structured logging eliminates the need for a log aggregation pipeline entirely"
+      "JSON logs are compressed automatically by the OS, reducing disk I/O",
+      "Structured logs expose fields as key-value pairs, making them machine-parseable without fragile regex",
+      "Plain-text logs cannot include timestamps, so structured logging is required for time-based filtering",
+      "Structured logging eliminates the need for a log aggregation pipeline entirely"
     ],
-    "correct": "B. Structured logs expose fields as key-value pairs, making them machine-parseable without fragile regex",
+    "correct": "Structured logs expose fields as key-value pairs, making them machine-parseable without fragile regex",
     "explanation": "Structured logging emits logs as machine-readable documents (typically JSON) where fields like `order_id`, `level`, and `timestamp` are explicit keys. This lets log aggregators (ELK, Loki, Splunk) index and filter on any field without writing custom parsers or regular expressions that break when the log format changes. JSON is not automatically compressed at the OS level. Plain-text logs can include timestamps. Structured logging still requires a pipeline — it makes the pipeline simpler and more reliable. Source: Majors, Fong-Jones, Miranda, 'Observability Engineering' (O'Reilly, 2022), Chapter 4.",
     "category": "devops",
     "subcategory": "observability",
@@ -228,19 +265,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-20d38ffaee",
     "q_number": 12,
     "question": "Your application logs at DEBUG level in production. Within one week the Elasticsearch cluster runs out of disk space. Which of the following is the most appropriate remediation while preserving troubleshooting ability?",
     "choices": [
-      "A. Delete all DEBUG logs from Elasticsearch and disable logging entirely for the affected service",
-      "B. Raise the log level to WARN or ERROR in production and enable DEBUG only on demand via dynamic log-level configuration",
-      "C. Switch from JSON to plain-text logs to reduce log entry size and recover disk space",
-      "D. Increase the Elasticsearch shard count to distribute the DEBUG log volume across more nodes"
+      "Delete all DEBUG logs from Elasticsearch and disable logging entirely for the affected service",
+      "Raise the log level to WARN or ERROR in production and enable DEBUG only on demand via dynamic log-level configuration",
+      "Switch from JSON to plain-text logs to reduce log entry size and recover disk space",
+      "Increase the Elasticsearch shard count to distribute the DEBUG log volume across more nodes"
     ],
-    "correct": "B. Raise the log level to WARN or ERROR in production and enable DEBUG only on demand via dynamic log-level configuration",
+    "correct": "Raise the log level to WARN or ERROR in production and enable DEBUG only on demand via dynamic log-level configuration",
     "explanation": "DEBUG logs are extremely verbose and are intended for development environments. In production, the standard practice is to log at INFO or WARN and reserve DEBUG for targeted, on-demand activation (many frameworks like Logback and Python's logging module support runtime level changes without restarts). Deleting logs and disabling logging removes observability. Plain-text logs are typically larger than equivalent JSON. Adding shards distributes load but does not reduce volume, so it only delays the problem. Source: Google SRE Book, Chapter 6 — Monitoring Distributed Systems (https://sre.google/sre-book/monitoring-distributed-systems/).",
     "category": "devops",
     "subcategory": "observability",
@@ -249,19 +289,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "reliability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-3e0261db74",
     "q_number": 13,
     "question": "In the ELK stack, what is the role of Logstash and how does it differ from Beats?",
     "choices": [
-      "A. Logstash is a lightweight log shipper installed on each host; Beats is the central server that indexes logs",
-      "B. Logstash is a server-side pipeline for ingesting, transforming, and routing logs; Beats are lightweight agents that ship logs from hosts to Logstash or Elasticsearch",
-      "C. Logstash stores logs in a time-series database; Beats provides the query interface",
-      "D. Logstash and Beats are interchangeable — both perform the same function at different scales"
+      "Logstash is a lightweight log shipper installed on each host; Beats is the central server that indexes logs",
+      "Logstash is a server-side pipeline for ingesting, transforming, and routing logs; Beats are lightweight agents that ship logs from hosts to Logstash or Elasticsearch",
+      "Logstash stores logs in a time-series database; Beats provides the query interface",
+      "Logstash and Beats are interchangeable — both perform the same function at different scales"
     ],
-    "correct": "B. Logstash is a server-side pipeline for ingesting, transforming, and routing logs; Beats are lightweight agents that ship logs from hosts to Logstash or Elasticsearch",
+    "correct": "Logstash is a server-side pipeline for ingesting, transforming, and routing logs; Beats are lightweight agents that ship logs from hosts to Logstash or Elasticsearch",
     "explanation": "In the ELK stack, Beats (e.g., Filebeat, Metricbeat) are minimal, single-purpose agents that run on the source host and forward data with low resource overhead. Logstash is a powerful server-side pipeline that can parse, enrich, filter, and route log data before it reaches Elasticsearch. They are not interchangeable: Beats collect and ship; Logstash transforms and routes; Elasticsearch stores and indexes; Kibana visualizes. Source: Elastic documentation — Getting started with the Elastic Stack (https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-elastic-stack.html).",
     "category": "devops",
     "subcategory": "observability",
@@ -270,19 +314,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring"]
+    "tags": [
+      "observability",
+      "monitoring"
+    ]
   },
   {
     "id": "observability-9cec169fdb",
     "q_number": 14,
     "question": "An e-commerce platform handles 50,000 requests per second. Storing every log entry in Elasticsearch is financially unsustainable. The team considers log sampling — keeping only 1% of INFO logs. What is the primary risk of this approach?",
     "choices": [
-      "A. Log sampling violates GDPR because partial logs cannot satisfy data subject access requests",
-      "B. A 1% sample may discard the single log entry that contains the root cause of a rare production incident",
-      "C. Elasticsearch does not support querying sampled log data, so sampling breaks the entire pipeline",
-      "D. Sampling INFO logs automatically promotes ERROR logs to a lower severity level"
+      "Log sampling violates GDPR because partial logs cannot satisfy data subject access requests",
+      "A 1% sample may discard the single log entry that contains the root cause of a rare production incident",
+      "Elasticsearch does not support querying sampled log data, so sampling breaks the entire pipeline",
+      "Sampling INFO logs automatically promotes ERROR logs to a lower severity level"
     ],
-    "correct": "B. A 1% sample may discard the single log entry that contains the root cause of a rare production incident",
+    "correct": "A 1% sample may discard the single log entry that contains the root cause of a rare production incident",
     "explanation": "Log sampling reduces volume but introduces blind spots. A rare event — such as a specific user request that triggers a bug — may occur only once per million requests. At 1% sampling, that entry has a 99% chance of being dropped, making the incident invisible in logs. Best practice is to sample high-volume, low-value logs (e.g., verbose INFO) while always retaining ERROR and WARN logs, and using trace-based sampling to keep all logs correlated with sampled traces. GDPR compliance is unrelated to sampling ratios. Elasticsearch supports sampled data. Sampling does not affect severity levels. Source: Majors, Fong-Jones, Miranda, 'Observability Engineering' (O'Reilly, 2022), Chapter 11.",
     "category": "devops",
     "subcategory": "observability",
@@ -291,19 +338,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "reliability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-3c373fc5ab",
     "q_number": 15,
     "question": "A security audit finds that your service logs include full customer email addresses and partial credit card numbers in request body logs. What is the recommended mitigation?",
     "choices": [
-      "A. Encrypt the entire log file at rest so that only authorized users can read PII",
-      "B. Scrub or mask PII fields before writing to the log, and audit log schemas regularly to prevent new PII leakage",
-      "C. Move all logs to a private S3 bucket with no public access policy",
-      "D. Replace the logging library with one that does not support string formatting to prevent PII from being inserted"
+      "Encrypt the entire log file at rest so that only authorized users can read PII",
+      "Scrub or mask PII fields before writing to the log, and audit log schemas regularly to prevent new PII leakage",
+      "Move all logs to a private S3 bucket with no public access policy",
+      "Replace the logging library with one that does not support string formatting to prevent PII from being inserted"
     ],
-    "correct": "B. Scrub or mask PII fields before writing to the log, and audit log schemas regularly to prevent new PII leakage",
+    "correct": "Scrub or mask PII fields before writing to the log, and audit log schemas regularly to prevent new PII leakage",
     "explanation": "The correct mitigation is to prevent PII from entering the log stream at the point of emission — masking, redacting, or tokenizing sensitive fields before they are written. Encryption at rest protects against storage theft but does not prevent PII from being visible to anyone with read access (operators, developers, log pipeline services). Moving logs to private storage addresses access control, not the PII content itself. Restricting the logging library's string capabilities would break legitimate logging. Log schemas should be reviewed regularly because new fields (e.g., a new request parameter) can introduce PII unintentionally. Source: OWASP Logging Cheat Sheet — Exclude sensitive data (https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html).",
     "category": "devops",
     "subcategory": "observability",
@@ -312,19 +363,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability"]
+    "tags": [
+      "observability",
+      "reliability"
+    ]
   },
   {
     "id": "observability-4a8b3cb283",
     "q_number": 16,
     "question": "A user reports that their checkout request failed, but the error appears in three different microservices' logs with no common identifier. An engineer must manually correlate timestamps across services to reconstruct the request flow. What logging practice would have prevented this?",
     "choices": [
-      "A. Centralizing all logs in a single Elasticsearch index so they can be searched together",
-      "B. Injecting a unique correlation ID at the entry point of each request and propagating it through all downstream service calls",
-      "C. Standardizing log timestamps to UTC so cross-service correlation is unambiguous",
-      "D. Using ERROR severity for all checkout-related logs to make them easier to filter"
+      "Centralizing all logs in a single Elasticsearch index so they can be searched together",
+      "Injecting a unique correlation ID at the entry point of each request and propagating it through all downstream service calls",
+      "Standardizing log timestamps to UTC so cross-service correlation is unambiguous",
+      "Using ERROR severity for all checkout-related logs to make them easier to filter"
     ],
-    "correct": "B. Injecting a unique correlation ID at the entry point of each request and propagating it through all downstream service calls",
+    "correct": "Injecting a unique correlation ID at the entry point of each request and propagating it through all downstream service calls",
     "explanation": "A correlation ID (also called a trace ID or request ID) is a unique identifier generated when a request enters the system and then passed via HTTP headers (or message metadata) to every downstream service. Each service includes this ID in its log entries, enabling a simple query like `correlation_id: abc123` to retrieve the entire distributed request flow across all services and logs. Centralized logging is a prerequisite but doesn't solve correlation without a common key. UTC timestamps help but don't handle parallel or out-of-order execution. Using ERROR for all logs inflates severity and provides no correlation. Source: Majors, Fong-Jones, Miranda, 'Observability Engineering' (O'Reilly, 2022), Chapter 5.",
     "category": "devops",
     "subcategory": "observability",
@@ -333,19 +387,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-bb1d8a3212",
     "q_number": 17,
     "question": "Grafana Loki is described as 'like Prometheus, but for logs.' What architectural characteristic makes Loki fundamentally different from Elasticsearch for log storage?",
     "choices": [
-      "A. Loki indexes the full content of every log line; Elasticsearch indexes only metadata labels",
-      "B. Loki indexes only log stream labels (like Prometheus label sets) and stores log content as compressed chunks; Elasticsearch full-text indexes every log line",
-      "C. Loki requires structured JSON logs; Elasticsearch accepts any log format",
-      "D. Loki pushes logs to clients on demand; Elasticsearch requires clients to pull logs"
+      "Loki indexes the full content of every log line; Elasticsearch indexes only metadata labels",
+      "Loki indexes only log stream labels (like Prometheus label sets) and stores log content as compressed chunks; Elasticsearch full-text indexes every log line",
+      "Loki requires structured JSON logs; Elasticsearch accepts any log format",
+      "Loki pushes logs to clients on demand; Elasticsearch requires clients to pull logs"
     ],
-    "correct": "B. Loki indexes only log stream labels (like Prometheus label sets) and stores log content as compressed chunks; Elasticsearch full-text indexes every log line",
+    "correct": "Loki indexes only log stream labels (like Prometheus label sets) and stores log content as compressed chunks; Elasticsearch full-text indexes every log line",
     "explanation": "Loki's key design decision is to avoid full-text indexing of log content. Instead, it indexes only a small set of metadata labels (e.g., `app`, `namespace`, `env`) and stores the actual log lines in compressed chunks in object storage (e.g., S3). This makes Loki cheaper to operate at scale than Elasticsearch, at the cost of slower full-text search across arbitrary fields. Elasticsearch creates an inverted index over every token in every log line, enabling fast full-text search but requiring significantly more resources. Source: Grafana Loki documentation — Architecture (https://grafana.com/docs/loki/latest/fundamentals/architecture/).",
     "category": "devops",
     "subcategory": "observability",
@@ -354,19 +411,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring", "cloud"]
+    "tags": [
+      "observability",
+      "monitoring",
+      "cloud"
+    ]
   },
   {
     "id": "observability-f2c9bc31ed",
     "q_number": 18,
     "question": "During an incident, an engineer searches Kibana for logs from the payment service but receives zero results for the time window of the outage. The service was definitely running. What should the engineer check first?",
     "choices": [
-      "A. Whether the Kibana visualization type is set to 'Pie Chart' instead of 'Data Table'",
-      "B. Whether the Filebeat agent on the payment service host stopped shipping logs, or whether the Logstash pipeline is dropping events due to a filter error",
-      "C. Whether Elasticsearch has exceeded its maximum document count and is rejecting new writes silently",
-      "D. Whether the payment service is using DEBUG level, which Kibana hides by default"
+      "Whether the Kibana visualization type is set to 'Pie Chart' instead of 'Data Table'",
+      "Whether the Filebeat agent on the payment service host stopped shipping logs, or whether the Logstash pipeline is dropping events due to a filter error",
+      "Whether Elasticsearch has exceeded its maximum document count and is rejecting new writes silently",
+      "Whether the payment service is using DEBUG level, which Kibana hides by default"
     ],
-    "correct": "B. Whether the Filebeat agent on the payment service host stopped shipping logs, or whether the Logstash pipeline is dropping events due to a filter error",
+    "correct": "Whether the Filebeat agent on the payment service host stopped shipping logs, or whether the Logstash pipeline is dropping events due to a filter error",
     "explanation": "Zero results in Kibana during an active outage almost always indicates a collection or pipeline failure, not a Kibana visualization issue. The most common causes are: the log shipper (Filebeat) crashing or losing connectivity, a Logstash filter throwing an exception and routing events to the dead-letter queue, or a misconfigured index pattern. Elasticsearch does have write limits but surfaces them as errors, not silent drops. Kibana does not filter by severity level by default. Visualization type affects display, not the underlying data availability. Source: Elastic Filebeat documentation — Troubleshooting (https://www.elastic.co/guide/en/beats/filebeat/current/faq.html).",
     "category": "devops",
     "subcategory": "observability",
@@ -375,19 +436,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-3e44cfafc7",
     "q_number": 19,
     "question": "A development team debates whether to log at WARN or INFO for an event where a feature flag is not found and the system falls back to a default value. Which severity is most appropriate and why?",
     "choices": [
-      "A. ERROR, because any unexpected fallback indicates a critical system failure that requires immediate attention",
-      "B. DEBUG, because fallback behavior is internal implementation detail not relevant to operators",
-      "C. WARN, because the system is still functioning but encountered an unexpected condition that an operator might want to investigate",
-      "D. FATAL, because missing configuration should always halt the application to prevent silent misconfiguration"
+      "ERROR, because any unexpected fallback indicates a critical system failure that requires immediate attention",
+      "DEBUG, because fallback behavior is internal implementation detail not relevant to operators",
+      "WARN, because the system is still functioning but encountered an unexpected condition that an operator might want to investigate",
+      "FATAL, because missing configuration should always halt the application to prevent silent misconfiguration"
     ],
-    "correct": "C. WARN, because the system is still functioning but encountered an unexpected condition that an operator might want to investigate",
+    "correct": "WARN, because the system is still functioning but encountered an unexpected condition that an operator might want to investigate",
     "explanation": "WARN is the appropriate level for situations where the system continues to function but encounters something unexpected — such as a missing config key falling back to a default. This lets operators discover misconfiguration without generating an alert. INFO is for normal operational events (service started, request processed). DEBUG is for fine-grained internal detail intended only for developers during troubleshooting. ERROR is for failures that require attention but from which the service can recover. FATAL is for unrecoverable conditions that cause process termination. Using WARN here provides visibility without creating noise. Source: Google SRE Book, Chapter 6 — Monitoring Distributed Systems (https://sre.google/sre-book/monitoring-distributed-systems/).",
     "category": "devops",
     "subcategory": "observability",
@@ -396,19 +460,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-97778781b0",
     "q_number": 20,
     "question": "A team migrates from a monolith to 12 microservices. After the migration, reconstructing a single user's failed purchase requires querying 6 different service log files by timestamp. Which two capabilities, when combined, most directly solve this problem?",
     "choices": [
-      "A. Centralized log aggregation and correlation IDs propagated via request headers",
-      "B. Structured JSON logging and DEBUG-level verbosity across all services",
-      "C. Log rotation with 30-day retention and a dedicated log analysis server",
-      "D. Prometheus metrics for each service and a shared Grafana dashboard"
+      "Centralized log aggregation and correlation IDs propagated via request headers",
+      "Structured JSON logging and DEBUG-level verbosity across all services",
+      "Log rotation with 30-day retention and a dedicated log analysis server",
+      "Prometheus metrics for each service and a shared Grafana dashboard"
     ],
-    "correct": "A. Centralized log aggregation and correlation IDs propagated via request headers",
+    "correct": "Centralized log aggregation and correlation IDs propagated via request headers",
     "explanation": "Two capabilities solve this specific problem together: (1) Centralized log aggregation (ELK, Loki, Splunk) collects logs from all services into one searchable store, eliminating the need to query individual hosts. (2) Correlation IDs tie every log entry from a single user request together with a shared identifier, so a single filter query returns the complete cross-service trace of that request. JSON formatting and debug verbosity improve log quality but don't solve cross-service correlation. Log rotation manages retention, not correlation. Metrics dashboards show aggregate trends, not individual request flows. Source: Majors, Fong-Jones, Miranda, 'Observability Engineering' (O'Reilly, 2022), Chapters 4–5.",
     "category": "devops",
     "subcategory": "observability",
@@ -417,19 +484,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting", "monitoring"]
+    "tags": [
+      "observability",
+      "troubleshooting",
+      "monitoring"
+    ]
   },
   {
     "id": "observability-62f04d656d",
     "q_number": 21,
     "question": "In OpenTelemetry, a trace represents the end-to-end journey of a request through a distributed system. What is a span and how does it relate to a trace?",
     "choices": [
-      "A. A span is a log line emitted by each service; multiple spans form a trace when joined by timestamp",
-      "B. A span is a named, timed unit of work representing a single operation; multiple spans — linked by a shared trace ID and parent-child relationships — form a trace",
-      "C. A span is a Prometheus metric emitted at the start of a trace; the trace ends when the span counter resets",
-      "D. A span is an error boundary; a trace is the collection of all errors that occurred during a request"
+      "A span is a log line emitted by each service; multiple spans form a trace when joined by timestamp",
+      "A span is a named, timed unit of work representing a single operation; multiple spans — linked by a shared trace ID and parent-child relationships — form a trace",
+      "A span is a Prometheus metric emitted at the start of a trace; the trace ends when the span counter resets",
+      "A span is an error boundary; a trace is the collection of all errors that occurred during a request"
     ],
-    "correct": "B. A span is a named, timed unit of work representing a single operation; multiple spans — linked by a shared trace ID and parent-child relationships — form a trace",
+    "correct": "A span is a named, timed unit of work representing a single operation; multiple spans — linked by a shared trace ID and parent-child relationships — form a trace",
     "explanation": "In the OpenTelemetry data model, a trace is a directed acyclic graph (DAG) of spans. Each span captures: a name, start/end timestamps, a trace ID (shared across all spans in the trace), a span ID (unique to this span), an optional parent span ID (enabling parent-child relationships), and attributes (key-value metadata). A root span has no parent. Child spans represent sub-operations, downstream service calls, or database queries. The relationship is hierarchical, not chronological — spans are not just timestamped log lines. Source: OpenTelemetry Specification — Trace API (https://opentelemetry.io/docs/specs/otel/trace/api/).",
     "category": "devops",
     "subcategory": "observability",
@@ -438,19 +509,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-3ecbdb91be",
     "q_number": 22,
     "question": "A frontend service calls a backend API, which calls a database. The engineer wants to see a waterfall view of how long each step took for a specific user request. Which observability signal is designed for this purpose?",
     "choices": [
-      "A. A Prometheus histogram showing p99 latency across all requests to the backend API",
-      "B. A distributed trace showing spans for the frontend call, backend API, and database query with their durations and parent-child relationships",
-      "C. A structured log line from the backend API containing the total request duration in milliseconds",
-      "D. A Grafana time-series panel showing request rate and error rate for the backend API over the last 5 minutes"
+      "A Prometheus histogram showing p99 latency across all requests to the backend API",
+      "A distributed trace showing spans for the frontend call, backend API, and database query with their durations and parent-child relationships",
+      "A structured log line from the backend API containing the total request duration in milliseconds",
+      "A Grafana time-series panel showing request rate and error rate for the backend API over the last 5 minutes"
     ],
-    "correct": "B. A distributed trace showing spans for the frontend call, backend API, and database query with their durations and parent-child relationships",
+    "correct": "A distributed trace showing spans for the frontend call, backend API, and database query with their durations and parent-child relationships",
     "explanation": "Distributed tracing is specifically designed to answer the question 'what happened during this specific request?' A trace's waterfall view shows each span — the frontend call, the backend API handler, the database query — as a horizontal bar with its start time and duration, making latency bottlenecks immediately visible. A Prometheus histogram gives aggregate p99 across all requests but cannot show a single request's breakdown. A single log line captures the total duration but not the internal breakdown. A Grafana panel shows aggregate time-series trends. Source: OpenTelemetry documentation — What is a Trace? (https://opentelemetry.io/docs/concepts/signals/traces/).",
     "category": "devops",
     "subcategory": "observability",
@@ -459,19 +533,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-1381783f2d",
     "q_number": 23,
     "question": "Service A calls Service B over HTTP. When Service B receives the request, it needs to continue the same trace rather than starting a new one. How does trace context propagation work in this scenario using the W3C TraceContext standard?",
     "choices": [
-      "A. Service B queries the tracing backend by timestamp to find the matching trace from Service A",
-      "B. Service A injects the trace ID and span ID into HTTP headers (traceparent and tracestate), and Service B extracts them to create a child span with the same trace ID",
-      "C. Service A embeds the trace ID in the request body JSON, and Service B's SDK automatically parses all JSON fields to find it",
-      "D. The tracing backend assigns a new trace ID to Service B and merges it with Service A's trace ID after the request completes"
+      "Service B queries the tracing backend by timestamp to find the matching trace from Service A",
+      "Service A injects the trace ID and span ID into HTTP headers (traceparent and tracestate), and Service B extracts them to create a child span with the same trace ID",
+      "Service A embeds the trace ID in the request body JSON, and Service B's SDK automatically parses all JSON fields to find it",
+      "The tracing backend assigns a new trace ID to Service B and merges it with Service A's trace ID after the request completes"
     ],
-    "correct": "B. Service A injects the trace ID and span ID into HTTP headers (traceparent and tracestate), and Service B extracts them to create a child span with the same trace ID",
+    "correct": "Service A injects the trace ID and span ID into HTTP headers (traceparent and tracestate), and Service B extracts them to create a child span with the same trace ID",
     "explanation": "The W3C TraceContext specification defines two HTTP headers for trace propagation: `traceparent` (carrying version, trace ID, parent span ID, and trace flags) and `tracestate` (carrying vendor-specific metadata). Service A's instrumentation injects these headers into outgoing HTTP requests. Service B's instrumentation extracts them from incoming requests and creates a child span that shares the trace ID but has its own span ID and sets the parent span ID to Service A's span ID. This links the spans into a single trace without any backend coordination. Querying by timestamp is impractical and not part of the spec. Source: W3C TraceContext specification (https://www.w3.org/TR/trace-context/) and OpenTelemetry propagation docs.",
     "category": "devops",
     "subcategory": "observability",
@@ -480,19 +557,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-9f95002136",
     "q_number": 24,
     "question": "A high-throughput service processes 100,000 requests per second. Storing a full trace for every request would generate terabytes of data daily. Which sampling strategy records all spans for a request and makes the keep/drop decision at the end of the request, enabling retention of traces that contain errors or high latency?",
     "choices": [
-      "A. Head-based sampling, because the sampling decision is made at the first span and propagated to all child spans",
-      "B. Probabilistic sampling, because every request has an equal fixed probability of being sampled",
-      "C. Tail-based sampling, because all span data is buffered and the keep/drop decision is made after the full trace is assembled",
-      "D. Rate-limited sampling, because a fixed number of traces per second are kept regardless of their content"
+      "Head-based sampling, because the sampling decision is made at the first span and propagated to all child spans",
+      "Probabilistic sampling, because every request has an equal fixed probability of being sampled",
+      "Tail-based sampling, because all span data is buffered and the keep/drop decision is made after the full trace is assembled",
+      "Rate-limited sampling, because a fixed number of traces per second are kept regardless of their content"
     ],
-    "correct": "C. Tail-based sampling, because all span data is buffered and the keep/drop decision is made after the full trace is assembled",
+    "correct": "Tail-based sampling, because all span data is buffered and the keep/drop decision is made after the full trace is assembled",
     "explanation": "Tail-based sampling defers the sampling decision until after all spans for a trace have been collected by a collector (e.g., OpenTelemetry Collector, Jaeger's collector). This allows the system to apply smart criteria — keep all traces with errors, keep traces with p99+ latency, drop normal-looking traces — after seeing the complete picture. Head-based sampling makes the decision at the root span before the outcome is known, so interesting traces can still be dropped. Probabilistic sampling is a form of head-based sampling with equal probability. Rate-limited sampling caps volume but cannot target interesting traces. Source: OpenTelemetry documentation — Sampling (https://opentelemetry.io/docs/concepts/sampling/).",
     "category": "devops",
     "subcategory": "observability",
@@ -501,19 +581,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability"]
+    "tags": [
+      "observability",
+      "reliability"
+    ]
   },
   {
     "id": "observability-3fec39709a",
     "q_number": 25,
     "question": "A user reports intermittent slow checkouts. Prometheus shows p99 latency is fine in aggregate. An engineer uses Jaeger to find a specific slow trace. Which span attribute is most useful for identifying which downstream service is causing the bottleneck?",
     "choices": [
-      "A. The trace ID, because sorting traces by trace ID reveals which services are slowest",
-      "B. The span duration and the parent-child span hierarchy, which shows exactly which service's span accounts for most of the total trace duration",
-      "C. The span's log fields, because error logs within spans always identify the slow service by name",
-      "D. The traceparent HTTP header value stored as a span attribute, which encodes the slow service's IP address"
+      "The trace ID, because sorting traces by trace ID reveals which services are slowest",
+      "The span duration and the parent-child span hierarchy, which shows exactly which service's span accounts for most of the total trace duration",
+      "The span's log fields, because error logs within spans always identify the slow service by name",
+      "The traceparent HTTP header value stored as a span attribute, which encodes the slow service's IP address"
     ],
-    "correct": "B. The span duration and the parent-child span hierarchy, which shows exactly which service's span accounts for most of the total trace duration",
+    "correct": "The span duration and the parent-child span hierarchy, which shows exactly which service's span accounts for most of the total trace duration",
     "explanation": "In a Jaeger waterfall view, each span is displayed as a horizontal bar labeled with the service name and operation, positioned by start time, and sized by duration. By comparing span durations in the parent-child tree, the engineer can immediately see which service's span consumes the most wall-clock time. This is precisely the use case distributed tracing was designed for — answering 'which service is slow for this specific request?' that aggregate metrics cannot answer. Trace IDs are identifiers, not sortable by performance. Span log fields may contain errors but are not guaranteed to identify latency culprits. The traceparent header encodes trace/span IDs, not IP addresses. Source: Jaeger documentation — Trace view (https://www.jaegertracing.io/docs/latest/features/).",
     "category": "devops",
     "subcategory": "observability",
@@ -522,19 +605,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-b25e472c42",
     "q_number": 26,
     "question": "An engineer is investigating an error that appears in a distributed trace. The trace ID is `abc123`. How can the engineer use this trace ID to find the corresponding log entries from all involved services?",
     "choices": [
-      "A. Search the tracing backend for `abc123` and it will automatically display embedded log lines from all services",
-      "B. If all services log the trace ID as a structured field, query the log aggregation system for `trace_id: abc123` to retrieve correlated log entries from every service",
-      "C. Use Prometheus to query `trace_id_total{trace_id='abc123'}` and retrieve the associated log references",
-      "D. Replay the request using the trace ID as a parameter — the system will re-execute it and generate fresh logs"
+      "Search the tracing backend for `abc123` and it will automatically display embedded log lines from all services",
+      "If all services log the trace ID as a structured field, query the log aggregation system for `trace_id: abc123` to retrieve correlated log entries from every service",
+      "Use Prometheus to query `trace_id_total{trace_id='abc123'}` and retrieve the associated log references",
+      "Replay the request using the trace ID as a parameter — the system will re-execute it and generate fresh logs"
     ],
-    "correct": "B. If all services log the trace ID as a structured field, query the log aggregation system for `trace_id: abc123` to retrieve correlated log entries from every service",
+    "correct": "If all services log the trace ID as a structured field, query the log aggregation system for `trace_id: abc123` to retrieve correlated log entries from every service",
     "explanation": "The standard practice for correlating traces and logs is to inject the active trace ID (and span ID) into every log entry's structured fields. When an error appears in a trace, querying the log system (Elasticsearch, Loki, etc.) by `trace_id: abc123` returns all log lines — from all services — that were emitted during that specific request. This only works if the instrumentation is in place: both the trace propagation and the log injection. Many observability platforms (Grafana, Datadog, Honeycomb) provide native trace-to-log linking when the trace ID is present in logs. Tracing backends do not embed log lines by default. Prometheus does not store logs. Replaying a request generates new data, not the original. Source: OpenTelemetry documentation — Correlating signals (https://opentelemetry.io/docs/specs/otel/logs/data-model/).",
     "category": "devops",
     "subcategory": "observability",
@@ -543,19 +629,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-1e48713b9a",
     "q_number": 27,
     "question": "Jaeger and Zipkin are both open-source distributed tracing backends. A team is evaluating both. Which statement correctly differentiates them?",
     "choices": [
-      "A. Jaeger supports only head-based sampling; Zipkin supports only tail-based sampling",
-      "B. Jaeger was created by Uber and is a CNCF graduated project with native support for OpenTelemetry; Zipkin was created by Twitter and was one of the first open-source tracing systems, predating OpenTelemetry",
-      "C. Zipkin requires Kubernetes; Jaeger can run as a standalone binary on bare metal only",
-      "D. Jaeger stores traces in Prometheus; Zipkin stores traces in Elasticsearch"
+      "Jaeger supports only head-based sampling; Zipkin supports only tail-based sampling",
+      "Jaeger was created by Uber and is a CNCF graduated project with native support for OpenTelemetry; Zipkin was created by Twitter and was one of the first open-source tracing systems, predating OpenTelemetry",
+      "Zipkin requires Kubernetes; Jaeger can run as a standalone binary on bare metal only",
+      "Jaeger stores traces in Prometheus; Zipkin stores traces in Elasticsearch"
     ],
-    "correct": "B. Jaeger was created by Uber and is a CNCF graduated project with native support for OpenTelemetry; Zipkin was created by Twitter and was one of the first open-source tracing systems, predating OpenTelemetry",
+    "correct": "Jaeger was created by Uber and is a CNCF graduated project with native support for OpenTelemetry; Zipkin was created by Twitter and was one of the first open-source tracing systems, predating OpenTelemetry",
     "explanation": "Both Jaeger and Zipkin are mature open-source distributed tracing backends. Jaeger originated at Uber and graduated from the CNCF. Zipkin originated at Twitter (inspired by Google Dapper) and is one of the earliest open-source tracing implementations. Both support OpenTelemetry instrumentation via OTLP or compatibility shims. Neither requires Kubernetes; both can run on bare metal or as containers. Both support multiple storage backends including Elasticsearch and Cassandra. Both support configurable sampling strategies. Source: Jaeger documentation — Introduction (https://www.jaegertracing.io/docs/latest/); Zipkin documentation (https://zipkin.io/).",
     "category": "devops",
     "subcategory": "observability",
@@ -564,19 +653,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring"]
+    "tags": [
+      "observability",
+      "monitoring"
+    ]
   },
   {
     "id": "observability-301e31b94c",
     "q_number": 28,
     "question": "An engineer instruments a new microservice with OpenTelemetry but forgets to configure context propagation for outgoing HTTP calls. What is the observable symptom in the tracing backend?",
     "choices": [
-      "A. All traces from the new service are missing entirely — no spans are recorded",
-      "B. The new service's spans appear as disconnected root spans rather than children of the caller's span, creating broken trace trees",
-      "C. The new service emits duplicate spans for every request because context propagation is not deduplicated",
-      "D. The tracing backend rejects the new service's spans because they lack a valid traceparent header"
+      "All traces from the new service are missing entirely — no spans are recorded",
+      "The new service's spans appear as disconnected root spans rather than children of the caller's span, creating broken trace trees",
+      "The new service emits duplicate spans for every request because context propagation is not deduplicated",
+      "The tracing backend rejects the new service's spans because they lack a valid traceparent header"
     ],
-    "correct": "B. The new service's spans appear as disconnected root spans rather than children of the caller's span, creating broken trace trees",
+    "correct": "The new service's spans appear as disconnected root spans rather than children of the caller's span, creating broken trace trees",
     "explanation": "When a service receives an HTTP request that carries a `traceparent` header but the instrumentation doesn't extract it, the service creates a new root span with a fresh trace ID instead of a child span within the existing trace. The result is a broken trace tree: the caller's trace ends at its outbound span (which has no recorded child), and the new service's work appears as a completely separate, unconnected trace. The spans are still recorded — they're just orphaned. The tracing backend does not reject spans lacking a parent; root spans are valid. Duplicate spans are not a consequence of missing propagation. Source: OpenTelemetry specification — Context Propagation (https://opentelemetry.io/docs/specs/otel/context/).",
     "category": "devops",
     "subcategory": "observability",
@@ -585,19 +677,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-eef37ae111",
     "q_number": 29,
     "question": "A team sets a head-based probabilistic sampling rate of 1% for their tracing pipeline. A 5-minute outage with a 0.1% error rate occurs. Roughly how many error traces would be captured?",
     "choices": [
-      "A. 100% of error traces, because all error spans are automatically promoted to 100% sampling",
-      "B. Approximately 1% of the error traces — the same rate as all other traces, potentially capturing very few or zero error traces",
-      "C. 0%, because head-based sampling at 1% means only traces starting with a health check are sampled",
-      "D. Exactly 1 trace per minute, because head-based sampling enforces a strict rate limit"
+      "100% of error traces, because all error spans are automatically promoted to 100% sampling",
+      "Approximately 1% of the error traces — the same rate as all other traces, potentially capturing very few or zero error traces",
+      "0%, because head-based sampling at 1% means only traces starting with a health check are sampled",
+      "Exactly 1 trace per minute, because head-based sampling enforces a strict rate limit"
     ],
-    "correct": "B. Approximately 1% of the error traces — the same rate as all other traces, potentially capturing very few or zero error traces",
+    "correct": "Approximately 1% of the error traces — the same rate as all other traces, potentially capturing very few or zero error traces",
     "explanation": "Head-based probabilistic sampling makes a random keep/drop decision at the trace root, before the outcome (error or not) is known. A 1% sampling rate applies uniformly to all traces — including error traces. During a 0.1% error rate outage, the probability of capturing a specific error trace is 1% * 0.1% = 0.001%. At moderate traffic, this means zero or near-zero error traces are retained, making root-cause analysis impossible from traces alone. This is the primary motivation for tail-based sampling, which can preferentially retain error traces. Head-based sampling does not promote errors. It is not limited to health checks or to one trace per minute. Source: OpenTelemetry documentation — Sampling (https://opentelemetry.io/docs/concepts/sampling/).",
     "category": "devops",
     "subcategory": "observability",
@@ -606,19 +701,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "reliability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-7bf3848f09",
     "q_number": 30,
     "question": "During a performance review, a trace shows that a checkout API call takes 2.1 seconds total: 50ms in the API handler, 1,900ms in a downstream inventory service, and 150ms in a payment service. What does this trace reveal that aggregate Prometheus metrics could not?",
     "choices": [
-      "A. That the checkout API has a memory leak causing the 2.1-second response time",
-      "B. That the inventory service is the specific bottleneck for this request, consuming 90% of the latency budget",
-      "C. That the payment service is misconfigured because its 150ms is above the p50 threshold",
-      "D. That the API handler is performing unnecessary work because its 50ms is shorter than the inventory service span"
+      "That the checkout API has a memory leak causing the 2.1-second response time",
+      "That the inventory service is the specific bottleneck for this request, consuming 90% of the latency budget",
+      "That the payment service is misconfigured because its 150ms is above the p50 threshold",
+      "That the API handler is performing unnecessary work because its 50ms is shorter than the inventory service span"
     ],
-    "correct": "B. That the inventory service is the specific bottleneck for this request, consuming 90% of the latency budget",
+    "correct": "That the inventory service is the specific bottleneck for this request, consuming 90% of the latency budget",
     "explanation": "Distributed tracing provides request-scoped, per-service timing that aggregate metrics cannot. A Prometheus p99 latency metric for the checkout API would show that some requests are slow (2.1s), but it cannot attribute the latency to a specific downstream service without per-service breakdowns for the same specific request. The trace's waterfall view immediately shows that the inventory service consumes 1,900ms of the 2,100ms total — 90% of the latency budget — making it the clear optimization target. A memory leak would manifest across many requests and is not derivable from a single trace. The 150ms payment service span cannot be evaluated without knowing its SLO. The API handler's 50ms is normal handler overhead. Source: Google SRE Book, Chapter 6 — Monitoring Distributed Systems (https://sre.google/sre-book/monitoring-distributed-systems/).",
     "category": "devops",
     "subcategory": "observability",
@@ -627,19 +726,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting", "reliability"]
+    "tags": [
+      "observability",
+      "troubleshooting",
+      "reliability"
+    ]
   },
   {
     "id": "observability-341ddb2b30",
     "q_number": 31,
     "question": "An on-call engineer receives 200 alerts in a single hour during a large-scale incident. They silence most of them without reading the details and miss a critical database alert that leads to data loss. What phenomenon does this describe?",
     "choices": [
-      "A. Alert correlation, where redundant alerts are automatically merged into a parent incident",
-      "B. Alert fatigue, where high alert volume degrades the quality of human response and causes critical signals to be missed",
-      "C. Alert escalation, where unacknowledged alerts are promoted to higher severity after a timeout",
-      "D. Alert suppression, where a monitoring system automatically deduplicates related alerts"
+      "Alert correlation, where redundant alerts are automatically merged into a parent incident",
+      "Alert fatigue, where high alert volume degrades the quality of human response and causes critical signals to be missed",
+      "Alert escalation, where unacknowledged alerts are promoted to higher severity after a timeout",
+      "Alert suppression, where a monitoring system automatically deduplicates related alerts"
     ],
-    "correct": "B. Alert fatigue, where high alert volume degrades the quality of human response and causes critical signals to be missed",
+    "correct": "Alert fatigue, where high alert volume degrades the quality of human response and causes critical signals to be missed",
     "explanation": "Alert fatigue occurs when on-call engineers are overwhelmed by alert volume — particularly low-quality, noisy, or redundant alerts — to the point where they begin to dismiss alerts without careful evaluation. This is one of the most dangerous failure modes in an alerting system: when the alert volume is high enough, operators treat paging as background noise, and genuinely critical signals are lost in the flood. The antidote is to ruthlessly prune noisy alerts, move to SLO-based alerting, and ensure every alert is actionable. Alert correlation and suppression are mitigations to alert fatigue, not the phenomenon itself. Escalation is a routing mechanism. Source: Google SRE Book, Chapter 6 — Monitoring Distributed Systems (https://sre.google/sre-book/monitoring-distributed-systems/).",
     "category": "devops",
     "subcategory": "observability",
@@ -648,19 +751,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "monitoring"]
+    "tags": [
+      "observability",
+      "reliability",
+      "monitoring"
+    ]
   },
   {
     "id": "observability-1fcdb8b945",
     "q_number": 32,
     "question": "A team alerts whenever HTTP error rate exceeds 1% for 1 minute. The alert fires 30 times in a month — mostly due to brief network blips that resolve on their own. What is the most effective long-term fix?",
     "choices": [
-      "A. Raise the threshold to 10% so only severe outages trigger alerts",
-      "B. Extend the alert duration window to 1 hour so only sustained problems trigger alerts",
-      "C. Switch from a threshold-based alert to an SLO burn rate alert that triggers when error budget is being consumed faster than sustainable",
-      "D. Disable the alert entirely and rely on customer reports to detect problems"
+      "Raise the threshold to 10% so only severe outages trigger alerts",
+      "Extend the alert duration window to 1 hour so only sustained problems trigger alerts",
+      "Switch from a threshold-based alert to an SLO burn rate alert that triggers when error budget is being consumed faster than sustainable",
+      "Disable the alert entirely and rely on customer reports to detect problems"
     ],
-    "correct": "C. Switch from a threshold-based alert to an SLO burn rate alert that triggers when error budget is being consumed faster than sustainable",
+    "correct": "Switch from a threshold-based alert to an SLO burn rate alert that triggers when error budget is being consumed faster than sustainable",
     "explanation": "Threshold-based alerts are brittle: a fixed 1% threshold fires on transient blips and may not fire during a sustained 0.9% degradation. SLO burn rate alerts solve this by alerting when the error rate, sustained over a rolling window, would exhaust the error budget faster than the SLO period allows. For example, a 1-hour burn rate of 14.4x means the monthly budget would be gone in 2 days. This approach alerts on meaningful impact to reliability rather than momentary spikes. Raising the threshold to 10% risks missing real incidents. Extending to 1 hour means real outages go undetected for up to an hour. Disabling monitoring removes all alerting safety. Source: Google SRE Book, Chapter 5 — Alerting on SLOs (https://sre.google/workbook/alerting-on-slos/).",
     "category": "devops",
     "subcategory": "observability",
@@ -669,19 +776,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "monitoring"]
+    "tags": [
+      "observability",
+      "reliability",
+      "monitoring"
+    ]
   },
   {
     "id": "observability-09c3d3c51e",
     "q_number": 33,
     "question": "A service has a 99.9% availability SLO over a 30-day month. Its error budget is 0.1% of 30 days = 43.2 minutes. A 5x burn rate alert fires. What does a 5x burn rate mean in practical terms?",
     "choices": [
-      "A. The error rate is currently 5%, which is 5 percentage points above the SLO target",
-      "B. The service is consuming its error budget 5 times faster than the sustainable rate, meaning the entire monthly budget would be exhausted in 6 days if the rate continues",
-      "C. The service has already burned 5% of its error budget in the current hour",
-      "D. Five separate alert conditions have fired simultaneously, indicating a multi-component failure"
+      "The error rate is currently 5%, which is 5 percentage points above the SLO target",
+      "The service is consuming its error budget 5 times faster than the sustainable rate, meaning the entire monthly budget would be exhausted in 6 days if the rate continues",
+      "The service has already burned 5% of its error budget in the current hour",
+      "Five separate alert conditions have fired simultaneously, indicating a multi-component failure"
     ],
-    "correct": "B. The service is consuming its error budget 5 times faster than the sustainable rate, meaning the entire monthly budget would be exhausted in 6 days if the rate continues",
+    "correct": "The service is consuming its error budget 5 times faster than the sustainable rate, meaning the entire monthly budget would be exhausted in 6 days if the rate continues",
     "explanation": "A burn rate is the ratio of current error budget consumption to the rate that would exactly exhaust the budget over the full SLO period. A 1x burn rate consumes the budget in exactly 30 days. A 5x burn rate consumes it 5 times faster: 30 / 5 = 6 days. Burn rate is independent of the absolute error percentage — a 5x burn rate could result from different error rates depending on the SLO target. It is not the number of simultaneous alerts or the percentage of budget already consumed in the current hour. Source: Google SRE Workbook, Chapter 5 — Alerting on SLOs (https://sre.google/workbook/alerting-on-slos/).",
     "category": "devops",
     "subcategory": "observability",
@@ -690,19 +801,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability"]
+    "tags": [
+      "observability",
+      "reliability"
+    ]
   },
   {
     "id": "observability-5375020804",
     "q_number": 34,
     "question": "PagerDuty sends an alert to an on-call engineer who is unavailable. After 10 minutes, the alert is automatically escalated to their team lead. What PagerDuty feature does this describe?",
     "choices": [
-      "A. An integration rule that routes alerts to multiple services simultaneously",
-      "B. An escalation policy that defines a sequence of notification targets with timeout-based escalation",
-      "C. An alert suppression window that delays notifications during scheduled maintenance",
-      "D. A webhook that triggers a runbook in response to an unacknowledged alert"
+      "An integration rule that routes alerts to multiple services simultaneously",
+      "An escalation policy that defines a sequence of notification targets with timeout-based escalation",
+      "An alert suppression window that delays notifications during scheduled maintenance",
+      "A webhook that triggers a runbook in response to an unacknowledged alert"
     ],
-    "correct": "B. An escalation policy that defines a sequence of notification targets with timeout-based escalation",
+    "correct": "An escalation policy that defines a sequence of notification targets with timeout-based escalation",
     "explanation": "PagerDuty and OpsGenie both support escalation policies: ordered lists of notification targets (individuals, teams, or schedules) where the next target is notified if the previous recipient does not acknowledge within a configurable timeout. This ensures incidents are not silently dropped when the first responder is unavailable. Integration rules route alerts based on content, not acknowledgment state. Maintenance windows suppress alerts during planned downtime. Webhooks trigger external actions but are not the escalation mechanism. Source: PagerDuty documentation — Escalation Policies (https://support.pagerduty.com/docs/escalation-policies).",
     "category": "devops",
     "subcategory": "observability",
@@ -711,19 +825,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "automation"]
+    "tags": [
+      "observability",
+      "reliability",
+      "automation"
+    ]
   },
   {
     "id": "observability-0112c7fce0",
     "q_number": 35,
     "question": "An on-call engineer receives a 'High memory usage on payment-service-pod-3' alert at 2am. They SSH into the pod, find nothing obviously wrong, and the alert resolves after 5 minutes. This happens weekly. What is the most important improvement to make to this alert?",
     "choices": [
-      "A. Add a Slack notification in addition to a page so the team can see the alert without waking someone up",
-      "B. Remove the alert — memory spikes that self-resolve are expected and do not need monitoring",
-      "C. Either increase the threshold, extend the duration window to filter transient spikes, or convert it to a symptom-based SLO alert so it only fires when users are actually impacted",
-      "D. Change the alert severity from WARNING to INFO so it does not wake the engineer up"
+      "Add a Slack notification in addition to a page so the team can see the alert without waking someone up",
+      "Remove the alert — memory spikes that self-resolve are expected and do not need monitoring",
+      "Either increase the threshold, extend the duration window to filter transient spikes, or convert it to a symptom-based SLO alert so it only fires when users are actually impacted",
+      "Change the alert severity from WARNING to INFO so it does not wake the engineer up"
     ],
-    "correct": "C. Either increase the threshold, extend the duration window to filter transient spikes, or convert it to a symptom-based SLO alert so it only fires when users are actually impacted",
+    "correct": "Either increase the threshold, extend the duration window to filter transient spikes, or convert it to a symptom-based SLO alert so it only fires when users are actually impacted",
     "explanation": "An alert that regularly fires and self-resolves with no user impact is a textbook noisy alert contributing to alert fatigue. The correct response is not to accept it but to fix it. Options include: raising the threshold, requiring the condition to persist (e.g., > 90% for 10m), or replacing the cause-based alert (memory spike) with a symptom-based alert (error rate or latency degradation that users experience). Adding Slack doesn't fix the noise; it just moves it. Removing monitoring entirely creates blind spots. Changing severity to INFO means it will never page, making it useless as an alert. Source: Google SRE Book, Chapter 6 — Monitoring Distributed Systems (https://sre.google/sre-book/monitoring-distributed-systems/).",
     "category": "devops",
     "subcategory": "observability",
@@ -732,19 +850,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "reliability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-822da09e30",
     "q_number": 36,
     "question": "A runbook for a 'Database connection pool exhausted' alert begins with: 'Check if the alert is a false positive.' What critical element is missing from this runbook that makes it difficult to use at 3am?",
     "choices": [
-      "A. A link to the team's Slack channel so the responder knows who to contact",
-      "B. Concrete diagnostic steps with expected output, remediation actions with exact commands, and escalation criteria specifying when to involve the database team",
-      "C. A history of previous occurrences so the engineer can see if this alert has fired before",
-      "D. An architecture diagram of the entire microservices landscape for context"
+      "A link to the team's Slack channel so the responder knows who to contact",
+      "Concrete diagnostic steps with expected output, remediation actions with exact commands, and escalation criteria specifying when to involve the database team",
+      "A history of previous occurrences so the engineer can see if this alert has fired before",
+      "An architecture diagram of the entire microservices landscape for context"
     ],
-    "correct": "B. Concrete diagnostic steps with expected output, remediation actions with exact commands, and escalation criteria specifying when to involve the database team",
+    "correct": "Concrete diagnostic steps with expected output, remediation actions with exact commands, and escalation criteria specifying when to involve the database team",
     "explanation": "A runbook's purpose is to enable a tired, stressed engineer to diagnose and resolve an incident without having to recall tribal knowledge or improvise. An effective runbook for a connection pool alert should include: (1) what metrics and logs to check and what normal vs. abnormal looks like, (2) step-by-step remediation actions (e.g., exact commands to restart the pool, increase limits, or identify the leaking service), and (3) escalation criteria (when to wake the DBA). 'Check if it's a false positive' is not actionable. A Slack link and architecture diagram provide context but don't solve the incident. Alert history is useful but secondary. Source: Google SRE Book, Chapter 14 — Managing Incidents (https://sre.google/sre-book/managing-incidents/).",
     "category": "devops",
     "subcategory": "observability",
@@ -753,19 +875,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "reliability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-37fafb064c",
     "q_number": 37,
     "question": "A team uses Prometheus Alertmanager with routing rules. A single infrastructure failure causes 45 alerts to fire across 15 services. The on-call engineer receives 45 separate pages in 2 minutes. Which Alertmanager feature should have been configured to prevent this?",
     "choices": [
-      "A. Alert silences, which suppress all alerts matching a label selector for a specified duration",
-      "B. Grouping, which batches related alerts (by shared labels like cluster or environment) into a single notification",
-      "C. Inhibition rules, which suppress child alerts when a parent alert has already fired",
-      "D. Both B and C — grouping reduces individual alert noise while inhibition rules suppress downstream symptom alerts caused by a root cause alert"
+      "Alert silences, which suppress all alerts matching a label selector for a specified duration",
+      "Grouping, which batches related alerts (by shared labels like cluster or environment) into a single notification",
+      "Inhibition rules, which suppress child alerts when a parent alert has already fired",
+      "Both B and C — grouping reduces individual alert noise while inhibition rules suppress downstream symptom alerts caused by a root cause alert"
     ],
-    "correct": "D. Both B and C — grouping reduces individual alert noise while inhibition rules suppress downstream symptom alerts caused by a root cause alert",
+    "correct": "Both B and C — grouping reduces individual alert noise while inhibition rules suppress downstream symptom alerts caused by a root cause alert",
     "explanation": "Alertmanager provides two distinct mechanisms for managing alert storms: (1) Grouping aggregates alerts sharing common labels (e.g., `cluster=prod`) into a single notification, reducing 45 pages to a handful grouped by subsystem. (2) Inhibition rules suppress 'child' alerts when a root-cause 'parent' alert is active — for example, suppress all service alerts when a `cluster-unreachable` alert fires, since all services being down is a symptom of the same root cause. Using both together prevents alert floods from infrastructure failures. Silences are manual and require human intervention before the alerts fire. Source: Prometheus Alertmanager documentation — Configuration (https://prometheus.io/docs/alerting/latest/configuration/).",
     "category": "devops",
     "subcategory": "observability",
@@ -774,19 +900,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "automation"]
+    "tags": [
+      "observability",
+      "reliability",
+      "automation"
+    ]
   },
   {
     "id": "observability-4bc94e7050",
     "q_number": 38,
     "question": "A PagerDuty schedule has three engineers in a rotation: Alice, Bob, and Carol. Alice is on-call this week. Bob is listed as the secondary. A critical alert fires and Alice does not acknowledge within 5 minutes. What happens next?",
     "choices": [
-      "A. The alert is automatically resolved because no one acknowledged it within the SLA window",
-      "B. PagerDuty escalates the alert to Bob according to the escalation policy, notifying him via the configured channels",
-      "C. The alert is re-routed to all three engineers simultaneously to ensure someone responds",
-      "D. PagerDuty creates a new on-call schedule for the remainder of the week and assigns it to Carol"
+      "The alert is automatically resolved because no one acknowledged it within the SLA window",
+      "PagerDuty escalates the alert to Bob according to the escalation policy, notifying him via the configured channels",
+      "The alert is re-routed to all three engineers simultaneously to ensure someone responds",
+      "PagerDuty creates a new on-call schedule for the remainder of the week and assigns it to Carol"
     ],
-    "correct": "B. PagerDuty escalates the alert to Bob according to the escalation policy, notifying him via the configured channels",
+    "correct": "PagerDuty escalates the alert to Bob according to the escalation policy, notifying him via the configured channels",
     "explanation": "PagerDuty's escalation policy defines exactly what happens when an alert is not acknowledged: after the configured timeout, it moves to the next level — in this case, Bob, who is listed as the secondary. Bob is notified via his configured notification rules (phone, SMS, email, push). The alert is not auto-resolved on timeout; that would be dangerous for production incidents. All three engineers are not notified simultaneously unless the policy is configured that way (which would itself be a form of alert fatigue). PagerDuty does not reroute or restructure the on-call schedule in response to an unacknowledged page. Source: PagerDuty documentation — Escalation Policies and Schedules (https://support.pagerduty.com/docs/escalation-policies).",
     "category": "devops",
     "subcategory": "observability",
@@ -795,19 +925,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability"]
+    "tags": [
+      "observability",
+      "reliability"
+    ]
   },
   {
     "id": "observability-cef7b3a838",
     "q_number": 39,
     "question": "A team wants to alert on SLOs but is unsure whether to use a 1-hour or 6-hour burn rate window. The 1-hour window catches outages faster but generates more false positives. What is the Google SRE recommended approach for multi-window burn rate alerting?",
     "choices": [
-      "A. Use only the 1-hour window with a very high burn rate multiplier (e.g., 100x) to filter noise",
-      "B. Use only the 6-hour window to ensure alerts only fire for sustained degradation, accepting slower detection",
-      "C. Combine a short window (e.g., 1h) for fast detection with a long window (e.g., 6h) to confirm the alert is not a transient spike — fire only when both conditions are true",
-      "D. Alternate between 1-hour and 6-hour windows daily so the alert fatigue is distributed evenly over the week"
+      "Use only the 1-hour window with a very high burn rate multiplier (e.g., 100x) to filter noise",
+      "Use only the 6-hour window to ensure alerts only fire for sustained degradation, accepting slower detection",
+      "Combine a short window (e.g., 1h) for fast detection with a long window (e.g., 6h) to confirm the alert is not a transient spike — fire only when both conditions are true",
+      "Alternate between 1-hour and 6-hour windows daily so the alert fatigue is distributed evenly over the week"
     ],
-    "correct": "C. Combine a short window (e.g., 1h) for fast detection with a long window (e.g., 6h) to confirm the alert is not a transient spike — fire only when both conditions are true",
+    "correct": "Combine a short window (e.g., 1h) for fast detection with a long window (e.g., 6h) to confirm the alert is not a transient spike — fire only when both conditions are true",
     "explanation": "The Google SRE Workbook's multi-window burn rate approach addresses the precision-recall tradeoff. A short window (1h) detects outages quickly but is prone to transient spikes. A long window (6h) has fewer false positives but detects incidents slowly. Requiring both windows to show elevated burn rates simultaneously improves precision (fewer false positives) without significantly sacrificing recall (fast detection). For example: alert when burn_rate[1h] > 14.4 AND burn_rate[6h] > 6. Using only a very high multiplier in a single short window misses slow burns. A single long window is too slow for urgent incidents. Alternating windows is not a real practice. Source: Google SRE Workbook — Alerting on SLOs (https://sre.google/workbook/alerting-on-slos/).",
     "category": "devops",
     "subcategory": "observability",
@@ -816,19 +949,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "monitoring"]
+    "tags": [
+      "observability",
+      "reliability",
+      "monitoring"
+    ]
   },
   {
     "id": "observability-97310f5e57",
     "q_number": 40,
     "question": "A new engineer joins the on-call rotation. During their first week, they receive a page, open the runbook, and find it says: 'Restart the service if memory exceeds 90%.' They restart the service, but the incident continues because the root cause was a downstream dependency leak. What was missing from the runbook?",
     "choices": [
-      "A. A warning label indicating the runbook was written by an intern and may be inaccurate",
-      "B. A diagnostic decision tree that distinguishes between local resource exhaustion and upstream/downstream dependency issues before prescribing a remediation",
-      "C. A graph showing historical memory usage trends so the engineer could identify the leak pattern",
-      "D. A mandatory approval step requiring a senior engineer to authorize any restart"
+      "A warning label indicating the runbook was written by an intern and may be inaccurate",
+      "A diagnostic decision tree that distinguishes between local resource exhaustion and upstream/downstream dependency issues before prescribing a remediation",
+      "A graph showing historical memory usage trends so the engineer could identify the leak pattern",
+      "A mandatory approval step requiring a senior engineer to authorize any restart"
     ],
-    "correct": "B. A diagnostic decision tree that distinguishes between local resource exhaustion and upstream/downstream dependency issues before prescribing a remediation",
+    "correct": "A diagnostic decision tree that distinguishes between local resource exhaustion and upstream/downstream dependency issues before prescribing a remediation",
     "explanation": "An effective runbook does not jump straight to remediation — it guides the responder through diagnosis first. In this case, the runbook should have included steps to: (1) check local memory metrics and GC behavior, (2) check for upstream error rates or slow responses from dependencies, (3) check connection pool exhaustion against downstream services. Only after ruling out external causes should a restart be attempted. A blind restart fixes a symptom (high memory) without treating the cause (dependency leak), and the incident recurs. Historical graphs are useful context but don't replace diagnostic logic. An approval step adds delay without fixing the diagnostic gap. Source: Google SRE Book, Chapter 14 — Managing Incidents (https://sre.google/sre-book/managing-incidents/).",
     "category": "devops",
     "subcategory": "observability",
@@ -837,19 +974,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "troubleshooting", "reliability"]
+    "tags": [
+      "observability",
+      "troubleshooting",
+      "reliability"
+    ]
   },
   {
     "id": "observability-c58c95f2f5",
     "q_number": 41,
     "question": "A product manager asks the SRE team: 'What is our SLI for the checkout API?' The SRE responds: 'Our SLI is the proportion of checkout requests that return a 2xx response within 500ms.' What is the correct interpretation of this SLI?",
     "choices": [
-      "A. The SLI is the target the team must hit — if 95% of requests succeed within 500ms, the SLI is met",
-      "B. The SLI is a quantitative measurement of user-facing behavior — specifically, the fraction of requests that are both successful and fast enough",
-      "C. The SLI is a contractual commitment that triggers financial penalties if breached",
-      "D. The SLI is the legal agreement between the engineering team and the product manager"
+      "The SLI is the target the team must hit — if 95% of requests succeed within 500ms, the SLI is met",
+      "The SLI is a quantitative measurement of user-facing behavior — specifically, the fraction of requests that are both successful and fast enough",
+      "The SLI is a contractual commitment that triggers financial penalties if breached",
+      "The SLI is the legal agreement between the engineering team and the product manager"
     ],
-    "correct": "B. The SLI is a quantitative measurement of user-facing behavior — specifically, the fraction of requests that are both successful and fast enough",
+    "correct": "The SLI is a quantitative measurement of user-facing behavior — specifically, the fraction of requests that are both successful and fast enough",
     "explanation": "A Service Level Indicator (SLI) is a carefully defined quantitative measure of service behavior, typically expressed as a ratio: (good events) / (total events). The checkout API SLI — proportion of requests returning 2xx within 500ms — measures user-facing quality directly. It is not the target (that is the SLO), not a contractual commitment (that is the SLA), and not a legal document. The SLI is the raw measurement; the SLO defines the acceptable range for that measurement. Source: Google SRE Book, Chapter 4 — Service Level Objectives (https://sre.google/sre-book/service-level-objectives/).",
     "category": "devops",
     "subcategory": "observability",
@@ -858,19 +999,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "monitoring"]
+    "tags": [
+      "observability",
+      "reliability",
+      "monitoring"
+    ]
   },
   {
     "id": "observability-c245a63e6b",
     "q_number": 42,
     "question": "A service has an SLO of 99.5% availability per month and is currently at 99.2% with 10 days remaining in the month. An engineer proposes a risky database migration this week. What does the error budget framework say about this decision?",
     "choices": [
-      "A. The migration should proceed immediately because the SLO is close to its target and there is still 10 days to recover",
-      "B. The error budget is exhausted — the service is already below its SLO target, so the migration should be deferred until the budget is restored next month",
-      "C. The migration is approved because database migrations are excluded from SLO calculations by definition",
-      "D. The SLO only applies to the end of the month; mid-month status has no bearing on the migration decision"
+      "The migration should proceed immediately because the SLO is close to its target and there is still 10 days to recover",
+      "The error budget is exhausted — the service is already below its SLO target, so the migration should be deferred until the budget is restored next month",
+      "The migration is approved because database migrations are excluded from SLO calculations by definition",
+      "The SLO only applies to the end of the month; mid-month status has no bearing on the migration decision"
     ],
-    "correct": "B. The error budget is exhausted — the service is already below its SLO target, so the migration should be deferred until the budget is restored next month",
+    "correct": "The error budget is exhausted — the service is already below its SLO target, so the migration should be deferred until the budget is restored next month",
     "explanation": "The error budget framework gives engineering teams a data-driven mechanism to balance feature velocity against reliability. When the error budget is exhausted (i.e., the SLI is already below the SLO target), the team should stop risky changes and focus on reliability work until the budget recovers. At 99.2% against a 99.5% SLO, the service has already exceeded its allowed downtime for the month. Introducing a risky migration that could cause further outages would deepen the breach. The SLO applies continuously, not only at month-end. Database migrations are not categorically excluded from SLO impact. Source: Google SRE Book, Chapter 4 — Service Level Objectives (https://sre.google/sre-book/service-level-objectives/).",
     "category": "devops",
     "subcategory": "observability",
@@ -879,19 +1024,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability"]
+    "tags": [
+      "observability",
+      "reliability"
+    ]
   },
   {
     "id": "observability-e6019a6496",
     "q_number": 43,
     "question": "Google's SRE Book identifies four 'golden signals' of monitoring. A team instruments only CPU and memory utilization for their API service. Which golden signal are they most critically missing?",
     "choices": [
-      "A. Saturation, because CPU and memory are both saturation metrics and they have covered it fully",
-      "B. Latency and errors — CPU and memory are internal resource metrics, not direct measures of user-facing service quality",
-      "C. Traffic, because request rate is more important than latency for API services",
-      "D. Errors only — latency can be inferred from CPU utilization when the service is under load"
+      "Saturation, because CPU and memory are both saturation metrics and they have covered it fully",
+      "Latency and errors — CPU and memory are internal resource metrics, not direct measures of user-facing service quality",
+      "Traffic, because request rate is more important than latency for API services",
+      "Errors only — latency can be inferred from CPU utilization when the service is under load"
     ],
-    "correct": "B. Latency and errors — CPU and memory are internal resource metrics, not direct measures of user-facing service quality",
+    "correct": "Latency and errors — CPU and memory are internal resource metrics, not direct measures of user-facing service quality",
     "explanation": "Google's four golden signals are: latency (how long requests take), traffic (how much demand the system is serving), errors (the rate of failed requests), and saturation (how full the system is). CPU and memory are saturation proxies, but the team is missing latency (are requests slow?), errors (are requests failing?), and traffic (how many requests are being served?). A system can have low CPU and still be returning 100% errors or timing out. Saturation matters but is not the only missing signal. Latency cannot be reliably inferred from CPU — a service can be CPU-bound for many reasons that don't correlate with latency. Source: Google SRE Book, Chapter 6 — Monitoring Distributed Systems (https://sre.google/sre-book/monitoring-distributed-systems/).",
     "category": "devops",
     "subcategory": "observability",
@@ -900,19 +1048,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "monitoring"]
+    "tags": [
+      "observability",
+      "reliability",
+      "monitoring"
+    ]
   },
   {
     "id": "observability-d1eade33f9",
     "q_number": 44,
     "question": "A company has an SLA with enterprise customers promising 99.9% monthly availability. They set an internal SLO of 99.95%. Why is the internal SLO higher than the external SLA commitment?",
     "choices": [
-      "A. The SLO is set higher to impress customers; it has no operational significance",
-      "B. The SLO creates an internal buffer — if the service hits 99.95% internally, there is headroom to absorb incidents before breaching the external SLA commitment and triggering penalties",
-      "C. The SLA and SLO are the same metric expressed in different units; 99.9% SLA equals 99.95% SLO when normalized",
-      "D. External SLAs are legally required to be lower than internal SLOs to comply with consumer protection regulations"
+      "The SLO is set higher to impress customers; it has no operational significance",
+      "The SLO creates an internal buffer — if the service hits 99.95% internally, there is headroom to absorb incidents before breaching the external SLA commitment and triggering penalties",
+      "The SLA and SLO are the same metric expressed in different units; 99.9% SLA equals 99.95% SLO when normalized",
+      "External SLAs are legally required to be lower than internal SLOs to comply with consumer protection regulations"
     ],
-    "correct": "B. The SLO creates an internal buffer — if the service hits 99.95% internally, there is headroom to absorb incidents before breaching the external SLA commitment and triggering penalties",
+    "correct": "The SLO creates an internal buffer — if the service hits 99.95% internally, there is headroom to absorb incidents before breaching the external SLA commitment and triggering penalties",
     "explanation": "Setting internal SLOs above the external SLA target is standard practice. The gap between SLO (99.95%) and SLA (99.9%) is the buffer the team has to respond to and recover from incidents before the commitment to customers is breached. If the team set the SLO equal to the SLA, any brief dip would immediately breach the customer contract. SLAs also typically trigger financial penalties or service credits when breached, making the buffer operationally and financially important. The SLO and SLA are not the same metric in different units. There is no regulation requiring SLOs to exceed SLAs. Source: Google SRE Book, Chapter 4 — Service Level Objectives (https://sre.google/sre-book/service-level-objectives/).",
     "category": "devops",
     "subcategory": "observability",
@@ -921,19 +1073,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability"]
+    "tags": [
+      "observability",
+      "reliability"
+    ]
   },
   {
     "id": "observability-468840d176",
     "q_number": 45,
     "question": "A team's MTTD for incidents is 45 minutes and MTTR is 2 hours. An observability project reduces MTTD to 5 minutes but MTTR stays at 2 hours. What is the net impact on customers?",
     "choices": [
-      "A. No impact — if MTTR does not change, the total incident duration is the same regardless of MTTD",
-      "B. Significant impact — detecting the incident 40 minutes faster means responders begin remediation sooner, reducing the total customer-facing outage by up to 40 minutes per incident",
-      "C. Negative impact — faster detection means more alerts fire, increasing alert fatigue and slowing the team's MTTR",
-      "D. Partial impact — MTTD only affects incidents caught by automated detection, not those reported by customers"
+      "No impact — if MTTR does not change, the total incident duration is the same regardless of MTTD",
+      "Significant impact — detecting the incident 40 minutes faster means responders begin remediation sooner, reducing the total customer-facing outage by up to 40 minutes per incident",
+      "Negative impact — faster detection means more alerts fire, increasing alert fatigue and slowing the team's MTTR",
+      "Partial impact — MTTD only affects incidents caught by automated detection, not those reported by customers"
     ],
-    "correct": "B. Significant impact — detecting the incident 40 minutes faster means responders begin remediation sooner, reducing the total customer-facing outage by up to 40 minutes per incident",
+    "correct": "Significant impact — detecting the incident 40 minutes faster means responders begin remediation sooner, reducing the total customer-facing outage by up to 40 minutes per incident",
     "explanation": "Total incident duration = MTTD + MTTR. If MTTD drops from 45 minutes to 5 minutes, the clock on remediation starts 40 minutes earlier, even though the remediation process itself still takes 2 hours. For customers, the outage ends 40 minutes sooner per incident. MTTD and MTTR are additive components of total incident time — reducing either reduces customer impact. Better detection doesn't inherently increase alert fatigue; in fact, faster detection from fewer, higher-quality alerts reduces fatigue. MTTD improvements apply regardless of whether the incident was detected automatically or reported by customers. Source: Google SRE Book, Chapter 6 — Monitoring Distributed Systems (https://sre.google/sre-book/monitoring-distributed-systems/).",
     "category": "devops",
     "subcategory": "observability",
@@ -942,19 +1097,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "monitoring"]
+    "tags": [
+      "observability",
+      "reliability",
+      "monitoring"
+    ]
   },
   {
     "id": "observability-19f600e96c",
     "q_number": 46,
     "question": "A team sets up synthetic monitoring probes that send HTTP requests to their API from three geographic regions every 60 seconds. The probes are external to the production infrastructure. What is the primary advantage of this approach over internal health checks?",
     "choices": [
-      "A. Synthetic probes use less bandwidth than internal health checks because they run less frequently",
-      "B. Synthetic monitoring detects failures from the user's perspective, including CDN issues, DNS failures, and network path problems that internal checks running inside the data center cannot observe",
-      "C. Synthetic probes automatically fix detected issues by retrying failed requests until they succeed",
-      "D. External probes are more secure because they do not require network access to the internal monitoring system"
+      "Synthetic probes use less bandwidth than internal health checks because they run less frequently",
+      "Synthetic monitoring detects failures from the user's perspective, including CDN issues, DNS failures, and network path problems that internal checks running inside the data center cannot observe",
+      "Synthetic probes automatically fix detected issues by retrying failed requests until they succeed",
+      "External probes are more secure because they do not require network access to the internal monitoring system"
     ],
-    "correct": "B. Synthetic monitoring detects failures from the user's perspective, including CDN issues, DNS failures, and network path problems that internal checks running inside the data center cannot observe",
+    "correct": "Synthetic monitoring detects failures from the user's perspective, including CDN issues, DNS failures, and network path problems that internal checks running inside the data center cannot observe",
     "explanation": "Synthetic monitoring simulates user behavior from external vantage points — geographically distributed, outside the production network. This approach catches problems that internal monitoring misses entirely: DNS resolution failures, CDN misconfigurations, TLS certificate issues, regional routing outages, or ISP-level problems. An internal health check that runs inside the VPC will report the service as healthy even if users in a specific region cannot reach it due to a BGP routing issue. Synthetic probes do not auto-remediate. Security is not a primary driver — both approaches require appropriate access controls. Source: Majors, Fong-Jones, Miranda, 'Observability Engineering' (O'Reilly, 2022), Chapter 2.",
     "category": "devops",
     "subcategory": "observability",
@@ -963,19 +1122,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "cloud"]
+    "tags": [
+      "observability",
+      "reliability",
+      "cloud"
+    ]
   },
   {
     "id": "observability-0b95eb3ddd",
     "q_number": 47,
     "question": "The 'traffic' golden signal measures the demand placed on a system. For a streaming video service, which metric best represents the traffic golden signal?",
     "choices": [
-      "A. The number of CPU cores provisioned in the streaming cluster",
-      "B. The number of concurrent active streams or the bitrate of video bytes delivered per second",
-      "C. The p99 latency of video segment delivery requests",
-      "D. The percentage of video requests returning HTTP 5xx errors"
+      "The number of CPU cores provisioned in the streaming cluster",
+      "The number of concurrent active streams or the bitrate of video bytes delivered per second",
+      "The p99 latency of video segment delivery requests",
+      "The percentage of video requests returning HTTP 5xx errors"
     ],
-    "correct": "B. The number of concurrent active streams or the bitrate of video bytes delivered per second",
+    "correct": "The number of concurrent active streams or the bitrate of video bytes delivered per second",
     "explanation": "Traffic measures the volume of demand on the system in domain-appropriate terms. For a video streaming service, the most meaningful traffic metrics are concurrent active streams (how many users are watching) and bytes delivered per second (throughput). These directly represent load. CPU core count is a capacity metric, not a demand metric. P99 latency is the latency golden signal. HTTP 5xx rate is the errors golden signal. The choice of traffic metric depends on what 'work' the service does — for an API it might be requests per second, for a queue processor it might be messages consumed per second. Source: Google SRE Book, Chapter 6 — Monitoring Distributed Systems (https://sre.google/sre-book/monitoring-distributed-systems/).",
     "category": "devops",
     "subcategory": "observability",
@@ -984,19 +1147,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "monitoring", "reliability"]
+    "tags": [
+      "observability",
+      "monitoring",
+      "reliability"
+    ]
   },
   {
     "id": "observability-83fd5d08a6",
     "q_number": 48,
     "question": "A service's SLO is 99.9% monthly availability. In a 30-day month, how many minutes of allowed downtime does the error budget represent?",
     "choices": [
-      "A. 14.4 minutes",
-      "B. 43.2 minutes",
-      "C. 72 minutes",
-      "D. 4.32 minutes"
+      "14.4 minutes",
+      "43.2 minutes",
+      "72 minutes",
+      "4.32 minutes"
     ],
-    "correct": "B. 43.2 minutes",
+    "correct": "43.2 minutes",
     "explanation": "Error budget = (1 - SLO) * total period duration. For a 99.9% SLO: 0.001 * 30 days * 24 hours * 60 minutes = 0.001 * 43,200 minutes = 43.2 minutes. This is the total allowed downtime per month. If the service exceeds 43.2 minutes of downtime, the error budget is exhausted and the SLO is breached. 14.4 minutes corresponds to a 99.967% monthly SLO (often cited as the '5 nines' weekly budget). 72 minutes is 0.167% of 30 days. 4.32 minutes is 99.99% availability. Knowing these calculations is fundamental to setting and tracking SLOs. Source: Google SRE Book, Chapter 4 — Service Level Objectives (https://sre.google/sre-book/service-level-objectives/).",
     "category": "devops",
     "subcategory": "observability",
@@ -1005,19 +1172,22 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability"]
+    "tags": [
+      "observability",
+      "reliability"
+    ]
   },
   {
     "id": "observability-b870d8b8a4",
     "q_number": 49,
     "question": "A service reports 100% availability according to internal health checks, but customers are filing support tickets about intermittent failures. What is the most likely explanation for this discrepancy?",
     "choices": [
-      "A. The customers are wrong — internal health checks are always more accurate than user reports",
-      "B. The internal health check tests only a superficial endpoint (e.g., /health returning 200 OK) and does not exercise the full request path that users experience, or it misses regional/CDN failures",
-      "C. Prometheus is rounding the error rate down to 0% due to floating-point precision limitations",
-      "D. The support tickets are for a different service; the monitoring team should investigate the support system instead"
+      "The customers are wrong — internal health checks are always more accurate than user reports",
+      "The internal health check tests only a superficial endpoint (e.g., /health returning 200 OK) and does not exercise the full request path that users experience, or it misses regional/CDN failures",
+      "Prometheus is rounding the error rate down to 0% due to floating-point precision limitations",
+      "The support tickets are for a different service; the monitoring team should investigate the support system instead"
     ],
-    "correct": "B. The internal health check tests only a superficial endpoint (e.g., /health returning 200 OK) and does not exercise the full request path that users experience, or it misses regional/CDN failures",
+    "correct": "The internal health check tests only a superficial endpoint (e.g., /health returning 200 OK) and does not exercise the full request path that users experience, or it misses regional/CDN failures",
     "explanation": "Internal health checks are often shallow: a /health endpoint that returns 200 OK when the process is running does not verify that database connections work, downstream APIs respond, or that users in a specific region can reach the service. Customers experience the full path — DNS, CDN, load balancer, application, dependencies — while the internal check may only verify the application process is alive. This gap between internal metrics and user experience is exactly what synthetic monitoring from external vantage points is designed to close. Prometheus floating-point rounding does not cause false 100% readings. Customer reports are the ground truth for user experience. Source: Majors, Fong-Jones, Miranda, 'Observability Engineering' (O'Reilly, 2022), Chapter 2.",
     "category": "devops",
     "subcategory": "observability",
@@ -1026,19 +1196,23 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability", "troubleshooting"]
+    "tags": [
+      "observability",
+      "reliability",
+      "troubleshooting"
+    ]
   },
   {
     "id": "observability-cc4f732d65",
     "q_number": 50,
     "question": "A team's error budget policy states: 'If the error budget is below 10% remaining with more than 10 days left in the month, a freeze on all production changes is enacted.' A new engineer asks why the policy freezes changes rather than simply alerting. What is the rationale?",
     "choices": [
-      "A. Change freezes are required by ISO 27001 compliance standards whenever error budgets are low",
-      "B. With limited error budget remaining, any additional production change that causes even a minor outage could exhaust the budget entirely and breach the SLA; the freeze preserves the remaining budget for organic recovery",
-      "C. Alerting is unreliable when the error budget is low because Prometheus alert rules are automatically disabled during budget exhaustion",
-      "D. The freeze is a punishment mechanism to hold engineers accountable for consuming error budget through risky deployments"
+      "Change freezes are required by ISO 27001 compliance standards whenever error budgets are low",
+      "With limited error budget remaining, any additional production change that causes even a minor outage could exhaust the budget entirely and breach the SLA; the freeze preserves the remaining budget for organic recovery",
+      "Alerting is unreliable when the error budget is low because Prometheus alert rules are automatically disabled during budget exhaustion",
+      "The freeze is a punishment mechanism to hold engineers accountable for consuming error budget through risky deployments"
     ],
-    "correct": "B. With limited error budget remaining, any additional production change that causes even a minor outage could exhaust the budget entirely and breach the SLA; the freeze preserves the remaining budget for organic recovery",
+    "correct": "With limited error budget remaining, any additional production change that causes even a minor outage could exhaust the budget entirely and breach the SLA; the freeze preserves the remaining budget for organic recovery",
     "explanation": "Error budget policies formalize the trade-off between reliability and velocity. When the error budget is nearly exhausted, the risk of any change — even a well-tested one — causing a further outage is too high relative to the remaining headroom. A change freeze is not punitive but protective: it ensures the service has space to recover organically (or through targeted reliability work) before the SLA is breached. Alerting alone cannot prevent an engineer from deploying a change that triggers the final outage. ISO 27001 does not mandate error budget freezes. Prometheus does not disable alert rules during budget exhaustion. Source: Google SRE Book, Chapter 4 — Service Level Objectives (https://sre.google/sre-book/service-level-objectives/).",
     "category": "devops",
     "subcategory": "observability",
@@ -1047,6 +1221,9 @@
     "total_topic_questions": 10,
     "type": "multiple",
     "image": "",
-    "tags": ["observability", "reliability"]
+    "tags": [
+      "observability",
+      "reliability"
+    ]
   }
 ]
