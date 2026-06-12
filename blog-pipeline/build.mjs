@@ -7,6 +7,8 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { injectChrome } from '../data-pipeline/sync-chrome.mjs';
+import { bumpServiceWorkerVersion } from '../data-pipeline/chrome/sw-version.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DRAFTS_DIR = join(ROOT, 'blog-pipeline', 'drafts');
@@ -35,8 +37,8 @@ const TRACK_META = {
   'cybersecurity/sy0-701':{ label: 'Security+ SY0-701',      icon: '🔒', slug: 'cybersecurity', category: 'cybersecurity', subcategory: 'security+ sy0-701', heroImage: '/images/blog/security-plus-blog-hero.webp', heroAlt: CYBER_ALT },
   'devops/core-concepts': { label: 'DevOps — Core Concepts', icon: '⚙️', slug: 'devops', category: 'devops', subcategory: 'core-concepts', heroImage: '/images/blog/devops-blog-hero.webp', heroAlt: DEVOPS_ALT },
   'devops/containers-k8s':{ label: 'DevOps — Containers & Kubernetes', icon: '⚙️', slug: 'devops', category: 'devops', subcategory: 'containers-k8s', heroImage: '/images/blog/devops-blog-hero.webp', heroAlt: DEVOPS_ALT },
-  'japanese/foundations': { label: 'Japanese — Foundations', icon: '🇯🇵', slug: 'japanese', category: 'japanese', subcategory: 'foundations', heroImage: '/images/blog/japanese-blog-hero.webp', heroAlt: 'Hiragana chart and Japanese text on a dark background — Ryno Tools Japanese learning' },
-  'japanese/grammar':     { label: 'Japanese — Grammar',     icon: '🇯🇵', slug: 'japanese', category: 'japanese', subcategory: 'grammar',     heroImage: '/images/blog/japanese-blog-hero.webp', heroAlt: 'Japanese grammar particles and sentence patterns — Ryno Tools Japanese learning' },
+  'japanese/foundations': { label: 'Japanese — Foundations', icon: '🇯🇵', slug: 'japanese', category: 'japanese', subcategory: 'foundations', heroImage: '/images/blog/japanese-blog-hero.jpeg', heroAlt: 'Hiragana chart and Japanese text on a dark background — Ryno Tools Japanese learning' },
+  'japanese/grammar':     { label: 'Japanese — Grammar',     icon: '🇯🇵', slug: 'japanese', category: 'japanese', subcategory: 'grammar',     heroImage: '/images/blog/japanese-blog-hero.jpeg', heroAlt: 'Japanese grammar particles and sentence patterns — Ryno Tools Japanese learning' },
 };
 
 // ── Tiny Markdown renderer (constrained subset) ────────────────────────────────
@@ -296,10 +298,10 @@ for (const file of draftFiles) {
     SHARE_FACEBOOK_URL: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
   };
 
-  const postHtml = fill(postTemplate, vars);
+  const outDir = join(SRC_BLOG_DIR, slug);
+  const { html: postHtml } = injectChrome(fill(postTemplate, vars), join(outDir, 'index.html'));
   bodyHtmlBySlug.set(slug, bodyHtml);
 
-  const outDir = join(SRC_BLOG_DIR, slug);
   mkdirSync(outDir, { recursive: true });
   writeFileSync(join(outDir, 'index.html'), postHtml);
   console.log(`✅ Built: src/blog/${slug}/index.html`);
@@ -374,10 +376,10 @@ const featuredHtml = featuredPost ? `
 
 const cardsHtml = publishedPosts.map(p => buildCardHtml(p)).join('\n      ');
 
-const indexHtml = fill(indexTemplate, {
+const { html: indexHtml } = injectChrome(fill(indexTemplate, {
   BLOG_FEATURED_HTML: featuredHtml,
   BLOG_CARDS_HTML: cardsHtml,
-});
+}), join(SRC_BLOG_DIR, 'index.html'));
 
 writeFileSync(join(SRC_BLOG_DIR, 'index.html'), indexHtml);
 console.log('✅ Built: src/blog/index.html');
@@ -456,33 +458,7 @@ updateLlms(LLMS_TXT);
 updateLlms(LLMS_FULL_TXT);
 
 // ── Bump CACHE_VERSION in service-worker.js ────────────────────────────────
-// Uses YYYYMMDD; appends/increments a letter suffix on same-day rebuilds.
-// e.g. first build today → v20260607, second → v20260607b, third → v20260607c
-const SW_PATH = join(ROOT, 'src', 'service-worker.js');
-const swSource = readFileSync(SW_PATH, 'utf8');
-const today = new Date().toISOString().slice(0, 10).replace(/-/g, '');
-const existingMatch = swSource.match(/CACHE_VERSION\s*=\s*['"]v(\d{8})([a-z]?)['"]/);
-let newVersion;
-if (!existingMatch) {
-  newVersion = `v${today}`;
-} else {
-  const [, existingDate, existingSuffix] = existingMatch;
-  if (existingDate !== today) {
-    newVersion = `v${today}`;
-  } else if (!existingSuffix) {
-    newVersion = `v${today}b`;
-  } else {
-    newVersion = `v${today}${String.fromCharCode(existingSuffix.charCodeAt(0) + 1)}`;
-  }
-}
-const updatedSw = swSource.replace(
-  /CACHE_VERSION\s*=\s*['"]v\d{8}[a-z]?['"]/,
-  `CACHE_VERSION = '${newVersion}'`
-);
-if (updatedSw !== swSource) {
-  writeFileSync(SW_PATH, updatedSw);
-  console.log(`✅ Bumped service-worker.js CACHE_VERSION → ${newVersion}`);
-}
+bumpServiceWorkerVersion(ROOT);
 
 console.log(`\n🎉 Build complete. ${publishedPosts.length} post(s) compiled.`);
 console.log('Review src/blog/ then authorize merge to main when satisfied.\n');

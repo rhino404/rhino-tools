@@ -1,43 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <title>Privacy Policy | Ryno Tools</title>
-  <meta name="description" content="Ryno Tools privacy policy. This site does not collect personal information. Learn how we use analytics and what choices you have." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://ryno.tools/pages/privacy.html" />
+// Single source of truth for all shared site chrome (header/nav/footer/chrome assets).
+// All 21 pages use marker-delimited regions that sync-chrome.mjs populates from here.
 
-  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
-  <link rel="shortcut icon" href="/images/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-  <meta name="theme-color" content="#0f1115" />
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, '..', '..');
 
-<!-- chrome-assets:start -->
-  <link rel="stylesheet" href="/css/theme.css?v=b8c7ef02" />
-  <link rel="stylesheet" href="/css/chrome.css?v=571c4d12" />
-<!-- chrome-assets:end -->
-  <link rel="stylesheet" href="../css/legal.css?v=20260607g" />
-</head>
-<body class="dark-mode">
+function sha1(filePath) {
+  const content = readFileSync(join(ROOT, filePath));
+  return createHash('sha1').update(content).digest('hex').slice(0, 8);
+}
 
-  <script>
-    (function() {
-      const t = localStorage.getItem('theme');
-      const d = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = t || (d ? 'dark' : 'light');
-      document.body.classList.remove('dark-mode', 'light-mode');
-      document.body.classList.add(theme === 'dark' ? 'dark-mode' : 'light-mode');
-    })();
-  </script>
+// Content-hash versions — auto-computed, idempotent, bump-free.
+export function chromeAssetVersions() {
+  return {
+    theme:  sha1('src/css/theme.css'),
+    chrome: sha1('src/css/chrome.css'),
+    js:     sha1('src/js/chrome.js'),
+  };
+}
 
-  <!-- chrome-header:start active="null" -->
-  <header class="site-header">
+export function renderChromeAssets() {
+  const v = chromeAssetVersions();
+  return [
+    `  <link rel="stylesheet" href="/css/theme.css?v=${v.theme}" />`,
+    `  <link rel="stylesheet" href="/css/chrome.css?v=${v.chrome}" />`,
+  ].join('\n');
+}
+
+// active: practice | ham-radio | falconry | cybersecurity | devops | japanese | blog | about | null
+// Note: Security+ hub uses "cybersecurity" (the category key), not "security-plus" (the slug).
+export function renderHeader(active) {
+  const v = chromeAssetVersions();
+  const cur = (key) => active === key ? ' aria-current="page"' : '';
+  const curDrop = (key) => active === key ? ' aria-current="page"' : '';
+
+  return `  <header class="site-header">
     <div class="site-header-inner">
       <a href="/" class="site-brand" aria-label="Ryno Tools Home">
         <img src="/images/logo.webp" alt="Ryno Tools logo" id="logo" width="36" height="36" class="site-brand-logo" />
@@ -48,67 +49,34 @@
         <svg class="hamburger-icon hamburger-close" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="18" y2="18"/><line x1="18" y1="4" x2="4" y2="18"/></svg>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <a href="/">Practice</a>
+        <a href="/"${cur('practice')}>Practice</a>
         <div class="nav-dropdown">
           <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
             Topics
             <svg class="nav-dropdown-caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2,3 5,7 8,3"/></svg>
           </button>
           <div class="nav-dropdown-menu">
-            <a href="/ham-radio/">Ham Radio</a>
-            <a href="/falconry/">Falconry</a>
-            <a href="/security-plus/">Security+</a>
-            <a href="/devops/">DevOps</a>
-            <a href="/japanese/">Japanese</a>
+            <a href="/ham-radio/"${curDrop('ham-radio')}>Ham Radio</a>
+            <a href="/falconry/"${curDrop('falconry')}>Falconry</a>
+            <a href="/security-plus/"${curDrop('cybersecurity')}>Security+</a>
+            <a href="/devops/"${curDrop('devops')}>DevOps</a>
+            <a href="/japanese/"${curDrop('japanese')}>Japanese</a>
           </div>
         </div>
-        <a href="/blog/">Blog</a>
-        <a href="/pages/about.html">About</a>
+        <a href="/blog/"${cur('blog')}>Blog</a>
+        <a href="/pages/about.html"${cur('about')}>About</a>
       </nav>
       <button id="dark-mode-toggle" class="site-theme-toggle icon-btn" aria-label="Toggle dark mode" aria-pressed="false">
         <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
     </div>
-  </header>
-<!-- chrome-header:end -->
+  </header>`;
+}
 
-  <main class="legal-page">
-    <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: August 16, 2025</p>
-
-    <section>
-      <p>This site does not collect personal information such as your name, email address, or location.</p>
-    </section>
-
-    <section>
-      <h2>Cookies &amp; Analytics</h2>
-      <p>We may use cookies or third-party analytics (such as Google Analytics) to improve site performance and user experience. These tools may collect non-personal data such as browser type, device, and usage statistics.</p>
-    </section>
-
-    <section>
-      <h2>Advertising</h2>
-      <p>If ads are displayed (e.g., via Google AdSense), third-party vendors may use cookies to serve ads based on your prior visits to this or other websites.</p>
-    </section>
-
-    <section>
-      <h2>Your Choices</h2>
-      <p>You can disable cookies in your browser settings. For more information on managing cookies and privacy, please refer to your browser's help documentation.</p>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>If you have any questions about this privacy policy, please contact us at <a href="mailto:rhino404@pm.me">rhino404@pm.me</a>.</p>
-    </section>
-
-    <section>
-      <h2>Changes to This Policy</h2>
-      <p>This policy may be updated from time to time. Please check back for updates.</p>
-    </section>
-  </main>
-
-  <!-- chrome-footer:start -->
-  <footer class="site-footer">
+export function renderFooter() {
+  const v = chromeAssetVersions();
+  return `  <footer class="site-footer">
     <p class="site-footer-brand">Ryno Tools — Build Momentum</p>
     <ul class="site-footer-nav">
       <li><a href="/">Practice</a></li>
@@ -127,8 +95,5 @@
     </div>
     <p class="site-footer-copy">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ryno Tools. All rights reserved.</p>
   </footer>
-  <script src="/js/chrome.js?v=848e2fe9"></script>
-<!-- chrome-footer:end -->
-
-</body>
-</html>
+  <script src="/js/chrome.js?v=${v.js}"></script>`;
+}

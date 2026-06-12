@@ -21,6 +21,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { injectChrome } from './sync-chrome.mjs';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const ROOT  = join(__dir, '..');
@@ -112,9 +113,7 @@ function escJson(str) {
 
 // ── Hub page template ────────────────────────────────────────
 
-const CSS_VER    = '20260607j';
-const CHROME_VER = '20260607i';
-const THEME_VER  = '20260607g';
+const CSS_VER = '20260607j';
 
 function hubPage(catValue, cat, datasets, relatedPosts) {
   const baseUrl = `https://ryno.tools/${cat.slug}/`;
@@ -273,8 +272,8 @@ ${relatedPosts.map(p => `      <li>
     gtag("config", "G-WCJFB67G3V");
   </script>
 
-  <link rel="stylesheet" href="/css/theme.css?v=${THEME_VER}" />
-  <link rel="stylesheet" href="/css/chrome.css?v=${CHROME_VER}" />
+<!-- chrome-assets:start -->
+<!-- chrome-assets:end -->
   <link rel="stylesheet" href="/css/hub.css?v=${CSS_VER}" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
@@ -294,21 +293,8 @@ ${ldHtml}
 
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="site-header-inner">
-      <a href="/" class="site-brand" aria-label="Ryno Tools Home">
-        <img src="/images/logo.webp" alt="Ryno Tools logo" width="36" height="36" class="site-brand-logo" />
-        <span class="site-brand-name">Ryno Tools</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="/">Practice</a>
-        <a href="/blog/">Blog</a>
-        <a href="/pages/about.html">About</a>
-      </nav>
-      <button class="site-theme-toggle icon-btn" aria-label="Toggle dark mode" aria-pressed="false"
-        onclick="(function(btn){var b=document.body,dark=b.classList.contains('dark-mode');b.classList.toggle('dark-mode',!dark);b.classList.toggle('light-mode',dark);localStorage.setItem('theme',dark?'light':'dark');btn.setAttribute('aria-pressed',String(!dark));btn.textContent=dark?'🌑':'🌕';})(this)">🌑</button>
-    </div>
-  </header>
+<!-- chrome-header:start active="${catValue}" -->
+<!-- chrome-header:end -->
 
   <main id="main" class="hub-page">
 
@@ -351,24 +337,8 @@ ${relatedHtml}
 
   </main>
 
-  <footer class="site-footer">
-    <p class="site-footer-brand">Ryno Tools — Build Momentum</p>
-    <ul class="site-footer-nav">
-      <li><a href="/">Practice</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/pages/about.html">About</a></li>
-      <li><a href="/pages/privacy.html">Privacy</a></li>
-      <li><a href="/pages/terms.html">Terms</a></li>
-    </ul>
-    <div class="site-footer-social">
-      <a href="https://github.com/rhino404" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-          <path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12.02c0 5.1 3.29 9.43 7.86 10.96.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.72 1.26 3.38.97.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.19-3.11-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.83 0c2.22-1.49 3.2-1.18 3.2-1.18.63 1.65.23 2.87.11 3.17.74.81 1.19 1.85 1.19 3.11 0 4.43-2.68 5.4-5.24 5.69.41.35.78 1.04.78 2.1v3.11c0 .31.21.66.8.55A10.53 10.53 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-        </svg>
-      </a>
-    </div>
-    <p class="site-footer-copy">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ryno Tools. All rights reserved.</p>
-  </footer>
+<!-- chrome-footer:start -->
+<!-- chrome-footer:end -->
 
 </body>
 </html>`;
@@ -381,7 +351,8 @@ for (const [catValue, cat] of Object.entries(content)) {
   if (catValue.startsWith('_')) continue;
   const datasets     = catalog.datasets.filter(d => d.category === catValue);
   const relatedPosts = posts.filter(p => feedCatToValue(p.feedCat) === catValue);
-  const html         = hubPage(catValue, cat, datasets, relatedPosts);
+  const raw          = hubPage(catValue, cat, datasets, relatedPosts);
+  const { html }     = injectChrome(raw, join(SRC, cat.slug, 'index.html'));
   const dir          = join(SRC, cat.slug);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'index.html'), html, 'utf8');

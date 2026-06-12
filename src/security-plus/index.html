@@ -49,8 +49,10 @@
     gtag("config", "G-WCJFB67G3V");
   </script>
 
-  <link rel="stylesheet" href="/css/theme.css?v=20260607g" />
-  <link rel="stylesheet" href="/css/chrome.css?v=20260607i" />
+<!-- chrome-assets:start -->
+  <link rel="stylesheet" href="/css/theme.css?v=b8c7ef02" />
+  <link rel="stylesheet" href="/css/chrome.css?v=571c4d12" />
+<!-- chrome-assets:end -->
   <link rel="stylesheet" href="/css/hub.css?v=20260607j" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
@@ -180,19 +182,16 @@
 
   <a class="skip-link" href="#main">Skip to content</a>
 
+<!-- chrome-header:start active="cybersecurity" -->
   <header class="site-header">
     <div class="site-header-inner">
       <a href="/" class="site-brand" aria-label="Ryno Tools Home">
-        <img src="/images/logo.webp" alt="Ryno Tools logo" width="36" height="36" class="site-brand-logo" />
+        <img src="/images/logo.webp" alt="Ryno Tools logo" id="logo" width="36" height="36" class="site-brand-logo" />
         <span class="site-brand-name">Ryno Tools</span>
       </a>
       <button class="site-nav-toggle" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">
-        <svg class="hamburger-icon hamburger-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/>
-        </svg>
-        <svg class="hamburger-icon hamburger-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M18 6L6 18M6 6l12 12"/>
-        </svg>
+        <svg class="hamburger-icon hamburger-open" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6"  x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/></svg>
+        <svg class="hamburger-icon hamburger-close" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="18" y2="18"/><line x1="18" y1="4" x2="4" y2="18"/></svg>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <a href="/">Practice</a>
@@ -204,7 +203,7 @@
           <div class="nav-dropdown-menu">
             <a href="/ham-radio/">Ham Radio</a>
             <a href="/falconry/">Falconry</a>
-            <a href="/security-plus/">Security+</a>
+            <a href="/security-plus/" aria-current="page">Security+</a>
             <a href="/devops/">DevOps</a>
             <a href="/japanese/">Japanese</a>
           </div>
@@ -212,12 +211,13 @@
         <a href="/blog/">Blog</a>
         <a href="/pages/about.html">About</a>
       </nav>
-      <button class="site-theme-toggle icon-btn" aria-label="Toggle dark mode" aria-pressed="false">
+      <button id="dark-mode-toggle" class="site-theme-toggle icon-btn" aria-label="Toggle dark mode" aria-pressed="false">
         <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
     </div>
   </header>
+<!-- chrome-header:end -->
 
   <main id="main" class="hub-page">
 
@@ -295,10 +295,12 @@
 
   </main>
 
+<!-- chrome-footer:start -->
   <footer class="site-footer">
     <p class="site-footer-brand">Ryno Tools — Build Momentum</p>
     <ul class="site-footer-nav">
       <li><a href="/">Practice</a></li>
+      <li><a href="/japanese/">Japanese</a></li>
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/pages/about.html">About</a></li>
       <li><a href="/pages/privacy.html">Privacy</a></li>
@@ -313,7 +315,8 @@
     </div>
     <p class="site-footer-copy">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ryno Tools. All rights reserved.</p>
   </footer>
+  <script src="/js/chrome.js?v=848e2fe9"></script>
+<!-- chrome-footer:end -->
 
-  <script src="/js/chrome.js?v=20260607j"></script>
 </body>
 </html>
