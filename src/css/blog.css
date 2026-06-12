@@ -224,11 +224,6 @@ body.light-mode .blog-card:hover {
 .blog-card-banner--devops       { background: linear-gradient(135deg, #1a4a7a 0%, #0a1a2e 100%); }
 .blog-card-banner--japanese     { background: linear-gradient(135deg, #7a0a28 0%, #1a0510 100%); }
 
-/* Japanese hero image is a UI screenshot with embedded text — lower opacity so text
-   doesn't read through the gradient overlay. */
-.blog-card-banner--japanese .blog-card-img,
-.blog-featured-inner.blog-hero--japanese .blog-featured-img { opacity: 0.08; }
-
 /* Wallpaper image layer — sits behind gradient, adds texture */
 .blog-card-img {
   position: absolute;
