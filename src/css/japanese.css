@@ -820,6 +820,22 @@ body.light-mode .jp-deck-item--mastered { background: rgba(34, 197, 94, 0.13); }
   .jp-kana-display--sm { font-size: clamp(1.4rem, 5.5vw, 2.2rem); }
   .jp-kana-display--xs { font-size: clamp(0.95rem, 3vw, 1.25rem); }
   .jp-deck-grid { grid-template-columns: 1fr; }
+
+  /* Game area — tighter horizontal padding so content has more room */
+  .jp-game-area { padding: 1.25rem 1rem 1.5rem; }
+
+  /* Type game — stack input above Check button, both full-width */
+  .jp-type-input-row { flex-direction: column; }
+  .jp-type-submit { width: 100%; }
+
+  /* Mode tabs — equal-width, fill the row */
+  .jp-mode-tabs { width: 100%; }
+  .jp-mode-tab { flex: 1; text-align: center; padding: 0.4rem 0.5rem; }
+
+  /* Difficulty row — hide label, equal-width buttons */
+  .jp-difficulty-label { display: none; }
+  .jp-difficulty { width: 100%; gap: 0.4rem; }
+  .jp-diff-btn { flex: 1; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
