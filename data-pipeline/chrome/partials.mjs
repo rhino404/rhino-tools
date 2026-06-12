@@ -41,8 +41,7 @@ export function renderHeader(active) {
   return `  <header class="site-header">
     <div class="site-header-inner">
       <a href="/" class="site-brand" aria-label="Ryno Tools Home">
-        <img src="/images/logo.webp" alt="Ryno Tools logo" id="logo" width="36" height="36" class="site-brand-logo" />
-        <span class="site-brand-name">Ryno Tools</span>
+        <img src="/images/ryno-wordmark-navy.webp" alt="Ryno Tools" id="logo" width="293" height="72" class="site-brand-wordmark" />
       </a>
       <button class="site-nav-toggle" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">
         <svg class="hamburger-icon hamburger-open" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6"  x2="19" y2="6"/><line x1="3" y1="11" x2="19" y2="11"/><line x1="3" y1="16" x2="19" y2="16"/></svg>

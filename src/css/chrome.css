@@ -15,9 +15,9 @@ body {
 /* ── Sizing token ─────────────────────────────────────────────── */
 :root {
   --site-header-h: 4rem;
-  /* glass surface tints */
-  --glass-dark-bg:    rgba(14, 23, 19, 0.72);
-  --glass-dark-bg-scrolled: rgba(10, 18, 14, 0.88);
+  /* glass surface tints — navbar is light in both themes */
+  --glass-dark-bg:    rgba(245, 250, 247, 0.85);
+  --glass-dark-bg-scrolled: rgba(240, 248, 244, 0.95);
   --glass-light-bg:   rgba(245, 250, 247, 0.75);
   --glass-light-bg-scrolled: rgba(240, 248, 244, 0.92);
 }
@@ -33,19 +33,19 @@ body {
   align-items: center;
   padding: 0 1.25rem;
   box-sizing: border-box;
-  /* frosted glass — dark mode default */
+  /* frosted glass — light surface in both modes */
   background: var(--glass-dark-bg);
   -webkit-backdrop-filter: blur(12px) saturate(140%);
   backdrop-filter: blur(12px) saturate(140%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(26, 117, 94, 0.15);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.10);
   transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 /* Opaque fallback for browsers without backdrop-filter */
 @supports not (backdrop-filter: blur(1px)) {
   .site-header {
-    background: rgba(14, 23, 19, 0.97);
+    background: rgba(240, 248, 244, 0.98);
   }
   body.light-mode .site-header {
     background: rgba(240, 248, 244, 0.98);
@@ -66,8 +66,8 @@ body.light-mode .site-header {
   background: var(--glass-dark-bg-scrolled);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
   backdrop-filter: blur(18px) saturate(160%);
-  border-bottom-color: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
+  border-bottom-color: rgba(26, 117, 94, 0.25);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.14);
 }
 
 body.light-mode .site-header.scrolled {
@@ -108,13 +108,19 @@ body.theme-transition .site-header {
   display: block;
 }
 
+.site-brand-wordmark {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
 .site-brand-name {
   font-family: var(--font-headline);
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   white-space: nowrap;
-  color: #fff;
+  color: var(--color-neutral-dark);
   transition: color 0.4s;
 }
 
@@ -140,7 +146,7 @@ body.light-mode .site-brand-name {
   padding: 0.3rem 0.6rem;
   border-radius: 6px;
   position: relative;
-  color: rgba(255, 255, 255, 0.80);
+  color: rgba(17, 24, 39, 0.75);
   background: none;
   border: none;
   cursor: pointer;
@@ -167,7 +173,7 @@ body.light-mode .nav-dropdown-toggle {
   right: 0.6rem;
   height: 2px;
   border-radius: 1px;
-  background: var(--color-primary-light);
+  background: var(--color-primary);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.2s ease;
@@ -180,8 +186,8 @@ body.light-mode .nav-dropdown-toggle::after {
 
 .site-nav a:hover,
 .nav-dropdown-toggle:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-neutral-dark);
+  background: rgba(26, 117, 94, 0.08);
 }
 
 body.light-mode .site-nav a:hover,
@@ -196,7 +202,7 @@ body.light-mode .nav-dropdown-toggle:hover {
 }
 
 .site-nav a[aria-current="page"] {
-  color: #fff;
+  color: var(--color-neutral-dark);
 }
 
 .site-nav a[aria-current="page"]::after {
@@ -209,7 +215,7 @@ body.light-mode .site-nav a[aria-current="page"] {
 
 /* Topics toggle active state (when on a hub page) */
 .nav-dropdown-toggle.is-active {
-  color: #fff;
+  color: var(--color-neutral-dark);
 }
 
 .nav-dropdown-toggle.is-active::after {
@@ -247,11 +253,11 @@ body.light-mode .nav-dropdown-toggle.is-active {
   min-width: 160px;
   padding: 0.4rem 0;
   border-radius: 10px;
-  background: rgba(14, 23, 19, 0.82);
+  background: rgba(245, 250, 247, 0.92);
   -webkit-backdrop-filter: blur(16px) saturate(150%);
   backdrop-filter: blur(16px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(26, 117, 94, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   z-index: 300;
 }
 
@@ -277,7 +283,7 @@ body.light-mode .nav-dropdown-menu {
   font-size: 0.85rem;
   font-weight: 500;
   font-family: var(--font-body);
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(17, 24, 39, 0.78);
   text-decoration: none;
   white-space: nowrap;
   transition: background 0.12s, color 0.12s;
@@ -290,8 +296,8 @@ body.light-mode .nav-dropdown-menu {
 }
 
 .nav-dropdown-menu a:hover {
-  background: rgba(255, 255, 255, 0.10);
-  color: #fff;
+  background: rgba(26, 117, 94, 0.10);
+  color: var(--color-neutral-dark);
 }
 
 body.light-mode .nav-dropdown-menu a {
@@ -304,8 +310,8 @@ body.light-mode .nav-dropdown-menu a:hover {
 }
 
 .nav-dropdown-menu a[aria-current="page"] {
-  color: var(--color-primary-light);
-  background: rgba(58, 167, 140, 0.10);
+  color: var(--color-primary);
+  background: rgba(26, 117, 94, 0.08);
 }
 
 body.light-mode .nav-dropdown-menu a[aria-current="page"] {
@@ -326,7 +332,7 @@ body.light-mode .nav-dropdown-menu a[aria-current="page"] {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(17, 24, 39, 0.70);
   transition: background 0.15s, color 0.15s;
   margin-left: 0.25rem;
 }
@@ -336,8 +342,8 @@ body.light-mode .site-theme-toggle {
 }
 
 .site-theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
+  background: rgba(26, 117, 94, 0.10);
+  color: var(--color-neutral-dark);
 }
 
 body.light-mode .site-theme-toggle:hover {
@@ -372,7 +378,7 @@ body.dark-mode .theme-icon--moon { display: block; }
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(17, 24, 39, 0.75);
   margin-left: auto;
   flex-shrink: 0;
   transition: background 0.15s;
@@ -383,7 +389,7 @@ body.light-mode .site-nav-toggle {
 }
 
 .site-nav-toggle:hover {
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(26, 117, 94, 0.08);
 }
 
 body.light-mode .site-nav-toggle:hover {
@@ -427,11 +433,11 @@ body.light-mode .site-nav-toggle:hover {
     align-items: stretch;
     gap: 0;
     padding: 0.5rem 0 0.75rem;
-    background: rgba(10, 18, 14, 0.94);
+    background: rgba(240, 248, 244, 0.96);
     -webkit-backdrop-filter: blur(20px) saturate(160%);
     backdrop-filter: blur(20px) saturate(160%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(26, 117, 94, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     z-index: 199;
   }
 
@@ -525,7 +531,7 @@ body.light-mode .site-nav-toggle:hover {
 .nav-dropdown-toggle:focus-visible,
 .site-theme-toggle:focus-visible,
 .site-nav-toggle:focus-visible {
-  outline: 2px solid var(--color-primary-light);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 

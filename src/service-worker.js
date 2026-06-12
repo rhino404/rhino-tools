@@ -6,7 +6,7 @@
 
 // Static version string — increment this (e.g. v20260607b) on each deploy to force
 // the browser to detect a changed SW file and install a fresh cache.
-const CACHE_VERSION = 'v20260612d';
+const CACHE_VERSION = 'v20260612e';
 const CORE_CACHE = `ryno-core-${CACHE_VERSION}`;
 const CONTENT_CACHE = `ryno-content-${CACHE_VERSION}`;
 
@@ -29,7 +29,7 @@ const CORE_ASSETS = [
   `${BASE_PATH}/services/pwaInstaller.js`,
   `${BASE_PATH}/manifest.json`,
   `${BASE_PATH}/datasets/index.json`,
-  `${BASE_PATH}/images/logo.webp`,
+  `${BASE_PATH}/images/ryno-wordmark-navy.webp`,
   `${BASE_PATH}/blog/`,
   `${BASE_PATH}/blog/index.html`,
   `${BASE_PATH}/blog/feed.xml`,
