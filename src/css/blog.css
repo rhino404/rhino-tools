@@ -222,6 +222,12 @@ body.light-mode .blog-card:hover {
 .blog-card-banner--falconry     { background: linear-gradient(135deg, var(--track-falconry) 0%, #2a1f10 100%); }
 .blog-card-banner--cybersecurity { background: linear-gradient(135deg, var(--track-cybersecurity) 0%, #0d2016 100%); }
 .blog-card-banner--devops       { background: linear-gradient(135deg, #1a4a7a 0%, #0a1a2e 100%); }
+.blog-card-banner--japanese     { background: linear-gradient(135deg, #7a0a28 0%, #1a0510 100%); }
+
+/* Japanese hero image is a UI screenshot with embedded text — lower opacity so text
+   doesn't read through the gradient overlay. */
+.blog-card-banner--japanese .blog-card-img,
+.blog-featured-inner.blog-hero--japanese .blog-featured-img { opacity: 0.08; }
 
 /* Wallpaper image layer — sits behind gradient, adds texture */
 .blog-card-img {
@@ -611,6 +617,7 @@ body.light-mode .blog-share-btn:hover { background: rgba(0,0,0,0.05); }
 .blog-featured-inner.blog-hero--falconry     { background: linear-gradient(135deg, var(--track-falconry) 0%, #2a1f10 100%); color: #f0e8d8; }
 .blog-featured-inner.blog-hero--cybersecurity { background: linear-gradient(135deg, var(--track-cybersecurity) 0%, #0d2016 100%); color: #d8f0e4; }
 .blog-featured-inner.blog-hero--devops       { background: linear-gradient(135deg, #1a4a7a 0%, #0a1a2e 100%); color: #e4eef8; }
+.blog-featured-inner.blog-hero--japanese     { background: linear-gradient(135deg, #7a0a28 0%, #1a0510 100%); color: #f8e4ec; }
 
 @media (min-width: 768px) {
   .blog-post-main { padding: 0 2rem 5rem; }
