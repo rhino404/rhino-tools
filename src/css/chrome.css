@@ -16,8 +16,8 @@ body {
 :root {
   --site-header-h: 4rem;
   /* glass surface tints — navbar is light in both themes */
-  --glass-dark-bg:    rgba(245, 250, 247, 0.85);
-  --glass-dark-bg-scrolled: rgba(240, 248, 244, 0.95);
+  --glass-dark-bg:    rgba(168, 172, 180, 0.92);
+  --glass-dark-bg-scrolled: rgba(158, 162, 170, 0.97);
   --glass-light-bg:   rgba(245, 250, 247, 0.75);
   --glass-light-bg-scrolled: rgba(240, 248, 244, 0.92);
 }

@@ -577,13 +577,6 @@ body.light-mode .tag-filter-btn.active {
 body.light-mode {
   background-color: var(--color-neutral-light);
   color: var(--color-neutral-dark);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.85),
-      rgba(255, 255, 255, 0.85)),
-    url(../images/logo.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center left;
-  background-attachment: fixed;
 }
 
 /* =========================
@@ -662,13 +655,6 @@ body.light-mode .question {
 body.dark-mode {
   background-color: var(--primary-bg);
   color: var(--text-color-dark);
-  background-image: linear-gradient(rgba(17, 24, 39, 0.95),
-      rgba(17, 24, 39, 0.95)),
-    url(../images/logo.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center left;
-  background-attachment: fixed;
 }
 
 body.dark-mode .question {
