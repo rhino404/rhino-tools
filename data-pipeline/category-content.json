@@ -255,5 +255,16 @@
       "Cloud Platforms and Monitoring & Observability close the loop. Cloud covers IaaS/PaaS/SaaS, the shared responsibility model, AWS core services (EC2, S3, IAM, RDS/DynamoDB), GCP and Azure patterns, VPC networking, and architecture decisions (HA, fault tolerance, RPO/RTO, serverless trade-offs). Observability covers the three pillars (metrics, logs, traces), Prometheus data model and PromQL, the ELK stack and Loki, OpenTelemetry distributed tracing, SLO-based alerting and burn rate, and the four golden signals from the Google SRE Book.",
       "Core Concepts & Culture and Containers & Kubernetes round out the full picture — DevOps organizational principles (DORA metrics, blameless postmortems, Team Topologies), SRE practices (error budgets, SLI/SLO/SLA), and the container and Kubernetes fundamentals that underlie modern cloud-native deployments."
     ]
+  },
+  "japanese": {
+    "slug": "japanese",
+    "label": "Japanese",
+    "icon": "🇯🇵",
+    "added": "2026-06-11",
+    "lastModified": "2026-06-11",
+    "isNew": false,
+    "handAuthored": true,
+    "countFrom": "japanese/data/manifest.json",
+    "countNoun": "cards"
   }
 }

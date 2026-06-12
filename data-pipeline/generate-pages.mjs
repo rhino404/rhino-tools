@@ -349,6 +349,7 @@ ${relatedHtml}
 console.log('[generate-pages] Generating hub pages...');
 for (const [catValue, cat] of Object.entries(content)) {
   if (catValue.startsWith('_')) continue;
+  if (cat.handAuthored) continue; // hand-authored hub (e.g. Japanese) — page is maintained by hand, not generated
   const datasets     = catalog.datasets.filter(d => d.category === catValue);
   const relatedPosts = posts.filter(p => feedCatToValue(p.feedCat) === catValue);
   const raw          = hubPage(catValue, cat, datasets, relatedPosts);
@@ -374,17 +375,30 @@ const featuredDatasets   = catalog.datasets.filter(d => d.pool?.featured);
 const comingSoonDatasets = featuredDatasets.filter(d => d.pool.featured.comingSoon);
 const newDatasets        = featuredDatasets.filter(d => !d.pool.featured.comingSoon);
 
+// Count = sum of dataset question counts, or — for hand-authored modules with no
+// quiz datasets (e.g. Japanese) — the live item count read from their data manifest.
+function trackCount(catValue, cat) {
+  if (cat.countFrom) {
+    const manifest = JSON.parse(readFileSync(join(SRC, cat.countFrom), 'utf8'));
+    return (manifest.levels || [])
+      .filter(l => l.status === 'available')
+      .flatMap(l => l.skills || [])
+      .reduce((s, sk) => s + (sk.count || 0), 0);
+  }
+  return catalog.datasets
+    .filter(d => d.category === catValue)
+    .reduce((s, d) => s + d.count, 0);
+}
+
 const trackGridHtml = Object.entries(content)
   .filter(([k]) => !k.startsWith('_'))
   .map(([catValue, cat]) => {
-    const datasets  = catalog.datasets.filter(d => d.category === catValue);
-    const totalQ    = datasets.reduce((s, d) => s + d.count, 0);
-    const subLabels = datasets.map(d => d.label).join(' · ');
+    const totalQ = trackCount(catValue, cat);
+    const noun   = cat.countNoun || 'questions';
     return `    <a href="/${esc(cat.slug)}/" class="track-card">
       <span class="track-card-icon">${cat.icon}</span>
       <span class="track-card-title">${esc(cat.label)}</span>
-      <span class="track-card-sub">${esc(subLabels)}</span>
-      <span class="track-card-count">${totalQ.toLocaleString()} questions</span>
+      <span class="track-card-count">${totalQ.toLocaleString()} ${esc(noun)}</span>
     </a>`;
   }).join('\n');
 
@@ -567,7 +581,7 @@ console.log('[generate-pages] Injecting into src/llms.txt...');
 let llmsTxt = readFileSync(join(SRC, 'llms.txt'), 'utf8');
 
 const llmsQuizLines = Object.entries(content)
-  .filter(([k]) => !k.startsWith('_'))
+  .filter(([k, c]) => !k.startsWith('_') && !c.handAuthored)
   .flatMap(([catValue, cat]) => {
     const datasets = catalog.datasets.filter(d => d.category === catValue);
     return datasets.map(ds => {
@@ -586,7 +600,7 @@ console.log('[generate-pages] Injecting into src/llms-full.txt...');
 let llmsFullTxt = readFileSync(join(SRC, 'llms-full.txt'), 'utf8');
 
 const llmsFullQuizLines = Object.entries(content)
-  .filter(([k]) => !k.startsWith('_'))
+  .filter(([k, c]) => !k.startsWith('_') && !c.handAuthored)
   .map(([catValue, cat]) => {
     const datasets = catalog.datasets.filter(d => d.category === catValue);
     const tracks = datasets.map(ds => {
