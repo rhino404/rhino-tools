@@ -350,6 +350,11 @@ body.light-mode .site-theme-toggle {
   color: rgba(17, 24, 39, 0.70);
 }
 
+.site-theme-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .site-theme-toggle:hover {
   background: rgba(255, 255, 255, 0.12);
   color: #fff;
