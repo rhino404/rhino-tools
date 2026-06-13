@@ -71,18 +71,3 @@ export const state = new Proxy(stateData, stateHandler);
 // Attach syncButtons so Proxy can auto-update UI
 state.syncButtons = () => syncAllButtonsUI(state);
 
-// ------------------------
-// Exported setters
-// ------------------------
-
-export async function setCategory(category) {
-  state.currentCategory = category;
-  // Optional: reset subcategory when category changes
-  state.currentSubcategory = null;
-  // Additional logic can be added here
-}
-
-export async function setSubcategory(subcategory) {
-  state.currentSubcategory = subcategory;
-  // Additional logic can be added here
-}
