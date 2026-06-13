@@ -27,8 +27,12 @@ const examSchema = readJson(path.join(__dirname, 'schema', 'exam.schema.json'));
 const taxonomy = readJson(path.join(__dirname, 'taxonomy.json'));
 const { DATA_SOURCES } = await import(pathToFileURL(path.join(ROOT, 'src', 'core', 'dataSources.js')).href);
 
+const SUMMARY = process.argv.includes('--summary');
+
 const errors = [];
 const warnings = [];
+
+const LETTER_PREFIX_RE = /^\s*[A-Da-d][.)]\s/;
 
 // ---------------------------------------------------------------------------
 // Minimal JSON-Schema-subset validator (covers the keywords our schemas use)
@@ -89,6 +93,11 @@ for (const file of findJson(DATASET_DIR)) {
     validate(q, questionSchema, loc);
     if (Array.isArray(q.choices) && typeof q.correct === 'string' && !q.choices.includes(q.correct))
       errors.push(`${loc}: "correct" not present in choices`);
+    if (Array.isArray(q.choices))
+      q.choices.forEach((c, ci) => {
+        if (LETTER_PREFIX_RE.test(c))
+          errors.push(`${loc}: choices[${ci}] has a letter prefix — strip it: ${JSON.stringify(c.slice(0, 30))}`);
+      });
     if (q.id != null) {
       if (ids.has(q.id)) errors.push(`${loc}: duplicate id (also #${ids.get(q.id)})`);
       else ids.set(q.id, i);
@@ -156,26 +165,37 @@ if (fs.existsSync(manifestPath)) {
 // ---------------------------------------------------------------------------
 // Report
 // ---------------------------------------------------------------------------
-console.log(`Validating ${perFile.length} dataset(s) against the canonical schema...\n`);
-for (const f of perFile.sort((a, b) => a.rel.localeCompare(b.rel))) {
-  const bad = errors.some((e) => e.startsWith(f.rel));
-  console.log(`${bad ? '✗' : '✓'} ${f.rel} — ${f.count} questions`);
+if (SUMMARY) {
+  const totals = `${total} Qs / ${perFile.length} datasets`;
+  if (errors.length) {
+    console.error(`✗ ${errors.length} error(s) — ${totals}`);
+    for (const e of errors.slice(0, 5)) console.error(`  ${e}`);
+    if (errors.length > 5) console.error(`  ... and ${errors.length - 5} more`);
+    process.exit(1);
+  }
+  if (warnings.length) console.log(`⚠ ${warnings.length} warning(s) — ${totals}`);
+  else console.log(`✓ ${totals}`);
+} else {
+  console.log(`Validating ${perFile.length} dataset(s) against the canonical schema...\n`);
+  for (const f of perFile.sort((a, b) => a.rel.localeCompare(b.rel))) {
+    const bad = errors.some((e) => e.startsWith(f.rel));
+    console.log(`${bad ? '✗' : '✓'} ${f.rel} — ${f.count} questions`);
+  }
+  console.log(`\nTotal: ${total} questions across ${perFile.length} datasets`);
+  if (warnings.length) {
+    console.log(`\n⚠ ${warnings.length} warning(s):`);
+    for (const w of warnings.slice(0, 50)) console.log(`  - ${w}`);
+    if (warnings.length > 50) console.log(`  ... and ${warnings.length - 50} more`);
+  }
+  if (errors.length) {
+    console.error(`\n✗ ${errors.length} error(s):`);
+    for (const e of errors.slice(0, 100)) console.error(`  - ${e}`);
+    if (errors.length > 100) console.error(`  ... and ${errors.length - 100} more`);
+    console.error('\n✗ Validation failed');
+    process.exit(1);
+  }
+  console.log('\n✓ All datasets valid');
 }
-console.log(`\nTotal: ${total} questions across ${perFile.length} datasets`);
-
-if (warnings.length) {
-  console.log(`\n⚠ ${warnings.length} warning(s):`);
-  for (const w of warnings.slice(0, 50)) console.log(`  - ${w}`);
-  if (warnings.length > 50) console.log(`  ... and ${warnings.length - 50} more`);
-}
-if (errors.length) {
-  console.error(`\n✗ ${errors.length} error(s):`);
-  for (const e of errors.slice(0, 100)) console.error(`  - ${e}`);
-  if (errors.length > 100) console.error(`  ... and ${errors.length - 100} more`);
-  console.error('\n✗ Validation failed');
-  process.exit(1);
-}
-console.log('\n✓ All datasets valid');
 
 // ---------------------------------------------------------------------------
 function readJson(p) { return JSON.parse(fs.readFileSync(p, 'utf8')); }

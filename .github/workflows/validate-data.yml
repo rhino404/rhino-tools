@@ -1,7 +1,8 @@
-# Validates quiz datasets against the canonical schema and checks the dataset
-# manifest is up to date. Gates pull requests — does NOT deploy (deployment is
-# handled separately by static.yml on push to main).
-name: Validate datasets
+# Validates quiz datasets, blog drafts, and generated pages against their
+# canonical schemas and freshness expectations. Gates pull requests and
+# non-main branch pushes — does NOT deploy (deployment is handled separately
+# by static.yml on push to main).
+name: Validate datasets + content
 
 on:
   pull_request:
@@ -10,6 +11,9 @@ on:
       - "src/core/dataSources.js"
       - "src/data/quizMeta.js"
       - "data-pipeline/**"
+      - "blog-pipeline/**"
+      - "src/blog/**"
+      - "src/service-worker.js"
       - ".github/workflows/validate-data.yml"
   push:
     branches-ignore:
@@ -17,6 +21,8 @@ on:
     paths:
       - "src/datasets/**"
       - "data-pipeline/**"
+      - "blog-pipeline/**"
+      - "src/blog/**"
   workflow_dispatch:
 
 jobs:
@@ -41,3 +47,16 @@ jobs:
             echo "::error::src/datasets/index.json is stale. Run 'node data-pipeline/generate-manifest.mjs' and commit the result."
             exit 1
           fi
+
+      - name: Validate blog drafts
+        run: node blog-pipeline/validate.mjs
+
+      - name: Check hub pages are up to date
+        run: |
+          node data-pipeline/generate-pages.mjs --check || {
+            echo "::error::Generated hub pages are stale. Run 'node data-pipeline/generate-pages.mjs' and commit the result."
+            exit 1
+          }
+
+      - name: Check SW precaches all CSS
+        run: node data-pipeline/check-sw-precache.mjs

@@ -103,7 +103,7 @@
         "storm",
         "voltage"
       ],
-      "sha256": "aae3a1f4090285fd1fe5cb984c8cd3da7b53e713d2112af64c8b4062414f7925",
+      "sha256": "7f384903e6590b671a4dd647f588524eb0c5a9e15193385b8bfac9cea3548e7b",
       "exam": {
         "totalQuestions": 35,
         "passingScore": 26
@@ -328,7 +328,7 @@
         "security",
         "troubleshooting"
       ],
-      "sha256": "7a756cb9965abda42fb88df4445c9a80853dce3c180ca16d821779949e34caab",
+      "sha256": "b0e4961b39ea1f160140042a002d332037224c010915479da082e2dc2512513b",
       "exam": null,
       "pool": {
         "version": null,
@@ -359,7 +359,7 @@
         "security",
         "troubleshooting"
       ],
-      "sha256": "b3614cafc446346fcea69e337bd74a1d7b01e8c18dcdd85c4d9950433b0dac82",
+      "sha256": "e83ee48c0fb46ea0f775056e50893a7d680f4c10576e2c0b80f7efc14a0f132a",
       "exam": null,
       "pool": {
         "version": null,
@@ -390,7 +390,7 @@
         "security",
         "troubleshooting"
       ],
-      "sha256": "df3dcdb95679383b44b6b3e02ecabd518bb605d01e33ff59c5cd604a54260fea",
+      "sha256": "2ed8491ae926b5a518b7cc3019a9e152e55f33f63d59a47cecc40407f6f96f36",
       "exam": null,
       "pool": {
         "version": null,
@@ -452,7 +452,7 @@
         "reliability",
         "security"
       ],
-      "sha256": "57a70f5d32d9ff068d8522028d844692c72678faa01cfa31f175de0917698df6",
+      "sha256": "be33e99f002797c351f95b122f76b75806bbed879e18b54c1e05f464fea0b45c",
       "exam": null,
       "pool": {
         "version": null,
@@ -483,7 +483,7 @@
         "reliability",
         "troubleshooting"
       ],
-      "sha256": "35d03f5f400d321d26fcdfbd66b0551054bb0e68802d551645ee4d821a96ba5e",
+      "sha256": "8114216cc7b9a96e5b06f4d0845359fcb7853435d8f6a484e3cf537f9422aed6",
       "exam": null,
       "pool": {
         "version": null,
