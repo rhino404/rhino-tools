@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
   <title>Privacy Policy | Ryno Tools</title>
-  <meta name="description" content="Ryno Tools privacy policy. This site does not collect personal information. Learn how we use analytics and what choices you have." />
+  <meta name="description" content="Ryno Tools privacy policy. Learn how we handle analytics, the optional newsletter, and what choices you have." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://ryno.tools/pages/privacy.html" />
 
@@ -20,7 +20,7 @@
 
 <!-- chrome-assets:start -->
   <link rel="stylesheet" href="/css/theme.css?v=7978a3ce" />
-  <link rel="stylesheet" href="/css/chrome.css?v=c283d4d1" />
+  <link rel="stylesheet" href="/css/chrome.css?v=d76d93cd" />
 <!-- chrome-assets:end -->
   <link rel="stylesheet" href="../css/legal.css?v=20260607g" />
 </head>
@@ -75,25 +75,38 @@
 
   <main class="legal-page">
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: August 16, 2025</p>
+    <p class="last-updated">Last updated: June 13, 2026</p>
 
     <section>
-      <p>This site does not collect personal information such as your name, email address, or location.</p>
+      <p>Ryno Tools is a free microlearning site. We collect minimal data and never sell it. This policy explains what we collect, why, and what choices you have.</p>
     </section>
 
     <section>
       <h2>Cookies &amp; Analytics</h2>
-      <p>We may use cookies or third-party analytics (such as Google Analytics) to improve site performance and user experience. These tools may collect non-personal data such as browser type, device, and usage statistics.</p>
+      <p>We use Google Analytics 4 (GA4) to understand how visitors use the site — pages viewed, time spent, and general device/browser type. GA4 may set cookies. We implement Google Consent Mode v2: if you decline cookies via the consent banner, GA4 operates in cookieless mode and does not store any personal data.</p>
+      <p>Google AdSense may display ads. If ads are shown, Google may use cookies to serve relevant ads based on your browsing history across sites. Declining via the consent banner also disables ad personalisation cookies.</p>
     </section>
 
     <section>
-      <h2>Advertising</h2>
-      <p>If ads are displayed (e.g., via Google AdSense), third-party vendors may use cookies to serve ads based on your prior visits to this or other websites.</p>
+      <h2>Newsletter &amp; Email</h2>
+      <p>If you subscribe to exam update alerts via the footer form, we collect your <strong>email address</strong> for the purpose of sending you exam pool change notifications and study tips. We use a third-party email provider (MailerLite) to store and send these emails. Your email is never shared with or sold to any other party.</p>
+      <p><strong>To unsubscribe</strong>, click the unsubscribe link in any email we send, or contact us at <a href="mailto:rhino404@pm.me">rhino404@pm.me</a> and we will remove you within 48 hours.</p>
+      <p>Newsletter subscription is entirely optional and independent of site functionality.</p>
+    </section>
+
+    <section>
+      <h2>Local Storage</h2>
+      <p>The site stores your theme preference (light/dark) and quiz session state in your browser's localStorage. This data never leaves your device and is not transmitted to our servers.</p>
     </section>
 
     <section>
       <h2>Your Choices</h2>
-      <p>You can disable cookies in your browser settings. For more information on managing cookies and privacy, please refer to your browser's help documentation.</p>
+      <ul>
+        <li><strong>Cookie consent:</strong> Use the banner shown on your first visit to accept or decline analytics and ad cookies. You can change your choice at any time by clearing your browser's localStorage for ryno.tools.</li>
+        <li><strong>Browser settings:</strong> You can disable cookies entirely in your browser settings.</li>
+        <li><strong>Newsletter:</strong> Unsubscribe at any time via the link in any email, or by contacting us.</li>
+        <li><strong>Google opt-out:</strong> Install the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a> to prevent GA4 tracking across all sites.</li>
+      </ul>
     </section>
 
     <section>
@@ -103,13 +116,22 @@
 
     <section>
       <h2>Changes to This Policy</h2>
-      <p>This policy may be updated from time to time. Please check back for updates.</p>
+      <p>This policy may be updated when we add new features or change providers. The "Last updated" date above reflects the most recent revision.</p>
     </section>
   </main>
 
   <!-- chrome-footer:start -->
   <footer class="site-footer">
     <p class="site-footer-brand">Ryno Tools — Build Momentum</p>
+    <div class="site-footer-newsletter">
+      <p class="site-footer-newsletter-label">Get exam update alerts</p>
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <label for="newsletter-email" class="sr-only">Email address</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-status" id="newsletter-status" aria-live="polite" aria-atomic="true"></p>
+    </div>
     <ul class="site-footer-nav">
       <li><a href="/">Practice</a></li>
       <li><a href="/japanese/">Japanese</a></li>
@@ -127,7 +149,7 @@
     </div>
     <p class="site-footer-copy">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ryno Tools. All rights reserved.</p>
   </footer>
-  <script src="/js/chrome.js?v=848e2fe9"></script>
+  <script src="/js/chrome.js?v=8df6b3ef"></script>
 <!-- chrome-footer:end -->
 
 </body>

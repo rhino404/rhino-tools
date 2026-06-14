@@ -78,6 +78,15 @@ export function renderFooter() {
   const v = chromeAssetVersions();
   return `  <footer class="site-footer">
     <p class="site-footer-brand">Ryno Tools — Build Momentum</p>
+    <div class="site-footer-newsletter">
+      <p class="site-footer-newsletter-label">Get exam update alerts</p>
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <label for="newsletter-email" class="sr-only">Email address</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-status" id="newsletter-status" aria-live="polite" aria-atomic="true"></p>
+    </div>
     <ul class="site-footer-nav">
       <li><a href="/">Practice</a></li>
       <li><a href="/japanese/">Japanese</a></li>
