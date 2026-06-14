@@ -77,7 +77,10 @@ export function renderHeader(active) {
 export function renderFooter() {
   const v = chromeAssetVersions();
   return `  <footer class="site-footer">
-    <p class="site-footer-brand">Ryno Tools — Build Momentum</p>
+    <a href="/" class="site-footer-logo" aria-label="Ryno Tools — Home">
+      <img src="/images/logos/ryno_logo_white.webp" alt="Ryno Tools" class="site-footer-logo-img site-footer-logo-img--dark" width="423" height="328" />
+      <img src="/images/logos/ryno_logo_black.webp" alt="Ryno Tools" class="site-footer-logo-img site-footer-logo-img--light" width="427" height="335" />
+    </a>
     <div class="site-footer-newsletter">
       <p class="site-footer-newsletter-label">Stay in touch</p>
       <form class="newsletter-form" id="newsletter-form" novalidate>

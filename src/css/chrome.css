@@ -594,21 +594,22 @@ body.light-mode .site-footer {
   color: #666;
 }
 
-.site-footer-brand {
-  font-family: var(--font-headline);
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  margin: 0 0 0.75rem;
+.site-footer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
 }
 
-body.dark-mode .site-footer-brand {
-  color: var(--color-primary-light);
+.site-footer-logo-img {
+  height: 48px;
+  width: auto;
 }
 
-body.light-mode .site-footer-brand {
-  color: var(--color-primary-dark);
-}
+.site-footer-logo-img--light { display: none; }
+.site-footer-logo-img--dark  { display: block; }
+
+body.light-mode .site-footer-logo-img--light { display: block; }
+body.light-mode .site-footer-logo-img--dark  { display: none; }
 
 .site-footer-nav {
   display: flex;
