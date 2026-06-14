@@ -85,10 +85,10 @@ export function renderSoundMatch(container, items, pool, trackId, presenter, aud
       <div class="jp-session-bar">
         <div class="jp-session-label">
           <span>Match</span>
-          <span>${Math.min(idx + 1, sessionLen)} / ${sessionLen}</span>
+          <span>${idx + 1} / ${session.length}</span>
         </div>
         <div class="jp-session-bar-track">
-          <div class="jp-session-bar-fill" style="width:${(Math.min(idx, sessionLen) / sessionLen) * 100}%"></div>
+          <div class="jp-session-bar-fill" style="width:${(idx / session.length) * 100}%"></div>
         </div>
       </div>
 
@@ -114,8 +114,9 @@ export function renderSoundMatch(container, items, pool, trackId, presenter, aud
 
   function handleChoice(btn, item) {
     const isCorrect = btn.dataset.id === item.id;
+    const isRetry = requeued.has(item.id);
     markResult(trackId, item.id, isCorrect);
-    if (isCorrect) correct++;
+    if (isCorrect && !isRetry) correct++;
 
     container.querySelectorAll('.jp-choice-btn').forEach(b => {
       b.disabled = true;
@@ -124,7 +125,7 @@ export function renderSoundMatch(container, items, pool, trackId, presenter, aud
     if (!isCorrect) {
       btn.classList.add('incorrect');
       // Re-queue missed item once, a few slots later
-      if (!requeued.has(item.id)) {
+      if (!isRetry) {
         requeued.add(item.id);
         const insertAt = Math.min(idx + 3, session.length);
         session.splice(insertAt, 0, item);

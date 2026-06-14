@@ -55,10 +55,10 @@ export function renderTypeRomaji(container, items, trackId, presenter, audioAvai
       <div class="jp-session-bar">
         <div class="jp-session-label">
           <span>Type</span>
-          <span>${Math.min(idx + 1, sessionLen)} / ${sessionLen}</span>
+          <span>${idx + 1} / ${session.length}</span>
         </div>
         <div class="jp-session-bar-track">
-          <div class="jp-session-bar-fill" style="width:${(Math.min(idx, sessionLen) / sessionLen) * 100}%"></div>
+          <div class="jp-session-bar-fill" style="width:${(idx / session.length) * 100}%"></div>
         </div>
       </div>
 
@@ -113,9 +113,10 @@ export function renderTypeRomaji(container, items, trackId, presenter, audioAvai
 
     const accepts   = presenter.accepts(item);
     const isCorrect = accepts.some(a => a.toLowerCase() === typed);
+    const isRetry   = requeued.has(item.id);
     answered = true;
     markResult(trackId, item.id, isCorrect);
-    if (isCorrect) correct++;
+    if (isCorrect && !isRetry) correct++;
 
     input.disabled = true;
     input.classList.add(isCorrect ? 'correct' : 'incorrect');
@@ -127,7 +128,7 @@ export function renderTypeRomaji(container, items, trackId, presenter, audioAvai
       : `Not quite — answer: "${presenter.answer(item)}"`;
 
     // Re-queue missed item once
-    if (!isCorrect && !requeued.has(item.id)) {
+    if (!isCorrect && !isRetry) {
       requeued.add(item.id);
       const insertAt = Math.min(idx + 3, session.length);
       session.splice(insertAt, 0, item);

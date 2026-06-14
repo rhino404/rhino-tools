@@ -537,6 +537,7 @@ function showHomeView() {
   document.getElementById('jp-home-view').hidden   = false;
   document.getElementById('jp-session-view').hidden = true;
   _sessionItems = null;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function showSessionView() {
