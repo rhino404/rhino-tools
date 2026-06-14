@@ -10,10 +10,13 @@
 // getCatalog(); callers that fire synchronously at DOMContentLoaded use
 // getCatalogSync().
 
-import { categories as FALLBACK_CATS, subcategories as FALLBACK_SUBS, getCategoryIcon } from '../data/quizMeta.js';
+import { categories as FALLBACK_CATS, subcategories as FALLBACK_SUBS, getCategoryIcon as _staticIcons } from '../data/quizMeta.js';
 import { DATA_SOURCES } from './dataSources.js';
 
-export { getCategoryIcon };
+// Live icon map — starts with the static fallback, upgraded from manifest on load.
+// Exported as a plain object so importers always read the current (post-manifest) value.
+const _iconMap = { ..._staticIcons };
+export const getCategoryIcon = _iconMap;
 
 const MANIFEST_PATH = '/datasets/index.json';
 
@@ -28,6 +31,16 @@ function _buildFromManifest(manifest) {
   const subcats    = [];
   const paths      = {};
   const examDefs   = {};
+
+  // Prefer top-level categories array (present in manifests generated post-Wave 3).
+  // Fall back to building from dataset entries + FALLBACK_CATS labels.
+  if (Array.isArray(manifest.categories)) {
+    for (const c of manifest.categories) {
+      categories.push({ value: c.value, label: c.label });
+      if (c.icon) _iconMap[c.value] = c.icon;
+      catSeen.add(c.value);
+    }
+  }
 
   for (const ds of manifest.datasets) {
     if (!catSeen.has(ds.category)) {

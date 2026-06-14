@@ -1,0 +1,44 @@
+{
+  "ham-radio": {
+    "label": "Ham Radio",
+    "icon": "📻",
+    "subcategories": {
+      "technician": "Technician",
+      "general": "General",
+      "extra": "Extra"
+    }
+  },
+  "cybersecurity": {
+    "label": "Cybersecurity",
+    "icon": "🛡️",
+    "subcategories": {
+      "security+ sy0-701": "Security+ SY0-701"
+    }
+  },
+  "falconry": {
+    "label": "Falconry",
+    "icon": "🦅",
+    "subcategories": {
+      "apprentice": "Apprentice"
+    }
+  },
+  "devops": {
+    "label": "DevOps",
+    "icon": "⚙️",
+    "subcategories": {
+      "core-concepts": "Core Concepts & Culture",
+      "containers-k8s": "Containers & Kubernetes",
+      "linux": "Linux Fundamentals",
+      "networking": "Networking for DevOps",
+      "cicd": "CI/CD Pipelines",
+      "iac": "Infrastructure as Code",
+      "cloud": "Cloud Platforms",
+      "observability": "Monitoring & Observability"
+    }
+  },
+  "japanese": {
+    "label": "Japanese",
+    "icon": "🇯🇵",
+    "subcategories": {}
+  }
+}
