@@ -23,6 +23,7 @@ on:
       - "data-pipeline/**"
       - "blog-pipeline/**"
       - "src/blog/**"
+      - "src/service-worker.js"
   workflow_dispatch:
 
 jobs:

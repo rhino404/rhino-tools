@@ -112,6 +112,14 @@ for (const file of findJson(DATASET_DIR)) {
     if (vocab.size) tags.forEach((t) => { if (!vocab.has(t)) warnings.push(`${loc}: tag '${t}' not in '${q.category}' taxonomy`); });
   });
 
+  // Per-file: warn if most explanations are copies of the correct answer (placeholder quality)
+  const placeholderCount = data.filter(q =>
+    typeof q.explanation === 'string' && typeof q.correct === 'string' &&
+    q.explanation.trim() === q.correct.trim()
+  ).length;
+  if (placeholderCount > 0)
+    warnings.push(`${rel}: ${placeholderCount}/${data.length} explanations are copies of the correct answer (placeholder text)`);
+
   perFile.push({ rel, count: data.length });
   total += data.length;
 }

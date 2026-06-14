@@ -23,8 +23,10 @@ function findHtml(dir) {
   return out;
 }
 
-// Match stylesheet links; capture the href value (before any ? or #)
-const CSS_LINK_RE = /<link[^>]+rel=["']stylesheet["'][^>]+href=["']([^"'?#]+\.css)/g;
+// Match stylesheet links regardless of attribute order:
+// lookahead confirms rel=stylesheet is present anywhere in the tag, then grabs href.
+// Captures the local path only (skips external http/https URLs).
+const CSS_LINK_RE = /<link(?=[^>]*rel=["']stylesheet["'])[^>]*\shref=["']([^"'?#]+\.css)/g;
 
 const cssInHtml = new Set();
 for (const f of findHtml(SRC)) {
@@ -32,12 +34,11 @@ for (const f of findHtml(SRC)) {
   let m;
   while ((m = CSS_LINK_RE.exec(text)) !== null) {
     const href = m[1];
+    if (href.startsWith('http://') || href.startsWith('https://')) continue; // skip external
     let normalized;
     if (href.startsWith('/')) {
-      // Absolute path from site root → relative to SRC
-      normalized = href.slice(1); // strip leading "/"
+      normalized = href.slice(1); // absolute site-root path → relative to SRC
     } else {
-      // Relative path → resolve from the HTML file's directory, then express relative to SRC
       normalized = relative(SRC, resolve(dirname(f), href));
     }
     cssInHtml.add(normalized);
