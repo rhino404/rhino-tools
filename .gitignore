@@ -1,34 +1,19 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
-
-# Virtual environments
-.venv
-.mypy_cache
-
-# uv astral
-uv.lock
-.python-version
-pyproject.toml
-
-# Folders
-local/
-
-# OS / editor
-.DS_Store
-*.log
+# Claude Code — local-only; never commit or deploy
+CLAUDE.md
+.claude/
 
 # Node
 node_modules/
 
-# Test / coverage caches
-.pytest_cache/
-.ruff_cache/
-htmlcov/
-.coverage
-playwright-report/
-test-results/
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Local dev scratch space
+local/
