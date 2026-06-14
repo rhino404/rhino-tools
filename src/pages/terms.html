@@ -20,7 +20,7 @@
 
 <!-- chrome-assets:start -->
   <link rel="stylesheet" href="/css/theme.css?v=7978a3ce" />
-  <link rel="stylesheet" href="/css/chrome.css?v=c283d4d1" />
+  <link rel="stylesheet" href="/css/chrome.css?v=d76d93cd" />
 <!-- chrome-assets:end -->
   <link rel="stylesheet" href="../css/legal.css?v=20260607g" />
 </head>
@@ -113,6 +113,15 @@
   <!-- chrome-footer:start -->
   <footer class="site-footer">
     <p class="site-footer-brand">Ryno Tools — Build Momentum</p>
+    <div class="site-footer-newsletter">
+      <p class="site-footer-newsletter-label">Get exam update alerts</p>
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <label for="newsletter-email" class="sr-only">Email address</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-status" id="newsletter-status" aria-live="polite" aria-atomic="true"></p>
+    </div>
     <ul class="site-footer-nav">
       <li><a href="/">Practice</a></li>
       <li><a href="/japanese/">Japanese</a></li>
@@ -130,7 +139,7 @@
     </div>
     <p class="site-footer-copy">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ryno Tools. All rights reserved.</p>
   </footer>
-  <script src="/js/chrome.js?v=848e2fe9"></script>
+  <script src="/js/chrome.js?v=93713c89"></script>
 <!-- chrome-footer:end -->
 
 </body>

@@ -104,3 +104,113 @@
     });
   }
 })();
+
+/* ── Consent banner ────────────────────────────────────────────────
+   Stores choice in localStorage under 'ryno_consent_v1'.
+   On accept: updates GA4 Consent Mode v2 (analytics + ads granted).
+   On decline: fires update with denied storage — GA4 still loads but
+   collects no cookies or ad data (Consent Mode v2 modelled pings only).
+   ------------------------------------------------------------------ */
+(function () {
+  const KEY = 'ryno_consent_v1';
+  const stored = localStorage.getItem(KEY);
+
+  function applyConsent(choice) {
+    if (typeof gtag === 'function') {
+      const v = choice === 'granted' ? 'granted' : 'denied';
+      gtag('consent', 'update', { analytics_storage: v, ad_storage: v });
+    }
+  }
+
+  if (stored) {
+    applyConsent(stored);
+    return;
+  }
+
+  function showBanner() {
+    const el = document.createElement('div');
+    el.className = 'consent-banner';
+    el.setAttribute('role', 'dialog');
+    el.setAttribute('aria-label', 'Cookie consent');
+    el.innerHTML =
+      '<p class="consent-text">We use analytics to improve your study experience. ' +
+      '<a href="/pages/privacy.html">Privacy policy</a>.</p>' +
+      '<div class="consent-actions">' +
+      '<button class="consent-btn consent-btn--accept" id="consent-accept">Accept</button>' +
+      '<button class="consent-btn consent-btn--reject" id="consent-reject">Decline</button>' +
+      '</div>';
+    document.body.appendChild(el);
+
+    function handle(choice) {
+      localStorage.setItem(KEY, choice);
+      el.remove();
+      applyConsent(choice);
+    }
+    el.querySelector('#consent-accept').addEventListener('click', function () { handle('granted'); });
+    el.querySelector('#consent-reject').addEventListener('click', function () { handle('denied'); });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', showBanner);
+  } else {
+    showBanner();
+  }
+})();
+
+/* ── Newsletter form ────────────────────────────────────────────────
+   Set NEWSLETTER_URL to your provider's endpoint to activate the form.
+   Mailchimp: use the form action URL from Audience → Signup forms → Embedded.
+   MailerLite: grab the form action URL from Dashboard → Embedded Forms.
+   Buttondown: https://buttondown.email/api/emails/embed-subscribe/<username>
+   Leave empty to show the form in "coming soon" mode (no submission).
+   ------------------------------------------------------------------ */
+(function () {
+  const NEWSLETTER_URL = ''; // TODO: set after creating email provider account
+
+  const form   = document.getElementById('newsletter-form');
+  const status = document.getElementById('newsletter-status');
+  if (!form) return;
+
+  if (!NEWSLETTER_URL) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (status) {
+        status.textContent = 'Coming soon — check back shortly!';
+        status.className = 'newsletter-status';
+      }
+    });
+    return;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const emailInput = form.querySelector('input[name="email"]');
+    const email = emailInput && emailInput.value.trim();
+    if (!email) return;
+
+    if (status) {
+      status.textContent = 'Subscribing…';
+      status.className = 'newsletter-status';
+    }
+
+    fetch(NEWSLETTER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ email: email }),
+    })
+      .then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        if (status) {
+          status.textContent = '✓ Check your inbox to confirm.';
+          status.className = 'newsletter-status newsletter-status--success';
+        }
+        form.reset();
+      })
+      .catch(function () {
+        if (status) {
+          status.textContent = 'Something went wrong — try again later.';
+          status.className = 'newsletter-status newsletter-status--error';
+        }
+      });
+  });
+})();
