@@ -30,15 +30,15 @@ const CYBER_ALT  = 'Cybersecurity digital lock visualization — Ryno Tools Comp
 const DEVOPS_ALT = 'Software engineering and DevOps workflow diagram — Ryno Tools DevOps interview prep';
 
 const TRACK_META = {
-  'ham-radio/technician': { label: 'Ham Radio — Technician', icon: '📻', slug: 'ham-radio', category: 'ham-radio', subcategory: 'technician', heroImage: '/images/blog/ham-radio-blog-hero.webp', heroAlt: HAM_ALT },
-  'ham-radio/general':    { label: 'Ham Radio — General',    icon: '📻', slug: 'ham-radio', category: 'ham-radio', subcategory: 'general', heroImage: '/images/blog/ham-radio-blog-hero.webp', heroAlt: HAM_ALT },
-  'ham-radio/extra':      { label: 'Ham Radio — Extra',      icon: '📻', slug: 'ham-radio', category: 'ham-radio', subcategory: 'extra', heroImage: '/images/blog/ham-radio-blog-hero.webp', heroAlt: HAM_ALT },
-  'falconry/apprentice':  { label: 'Falconry — Apprentice',  icon: '🦅', slug: 'falconry',  category: 'falconry',  subcategory: 'apprentice', heroImage: '/images/blog/falconry-blog-hero.webp', heroAlt: FALC_ALT },
-  'cybersecurity/sy0-701':{ label: 'Security+ SY0-701',      icon: '🔒', slug: 'cybersecurity', category: 'cybersecurity', subcategory: 'security+ sy0-701', heroImage: '/images/blog/security-plus-blog-hero.webp', heroAlt: CYBER_ALT },
-  'devops/core-concepts': { label: 'DevOps — Core Concepts', icon: '⚙️', slug: 'devops', category: 'devops', subcategory: 'core-concepts', heroImage: '/images/blog/devops-blog-hero.webp', heroAlt: DEVOPS_ALT },
-  'devops/containers-k8s':{ label: 'DevOps — Containers & Kubernetes', icon: '⚙️', slug: 'devops', category: 'devops', subcategory: 'containers-k8s', heroImage: '/images/blog/devops-blog-hero.webp', heroAlt: DEVOPS_ALT },
-  'japanese/foundations': { label: 'Japanese — Foundations', icon: '🇯🇵', slug: 'japanese', category: 'japanese', subcategory: 'foundations', heroImage: '/images/blog/japanese-blog-hero.jpeg', heroAlt: 'Hiragana chart and Japanese text on a dark background — Ryno Tools Japanese learning' },
-  'japanese/grammar':     { label: 'Japanese — Grammar',     icon: '🇯🇵', slug: 'japanese', category: 'japanese', subcategory: 'grammar',     heroImage: '/images/blog/japanese-blog-hero.jpeg', heroAlt: 'Japanese grammar particles and sentence patterns — Ryno Tools Japanese learning' },
+  'ham-radio/technician': { label: 'Ham Radio — Technician', icon: '📻', slug: 'ham-radio', hubUrl: '/ham-radio/', category: 'ham-radio', subcategory: 'technician', heroImage: '/images/blog/ham-radio-blog-hero.webp', heroAlt: HAM_ALT },
+  'ham-radio/general':    { label: 'Ham Radio — General',    icon: '📻', slug: 'ham-radio', hubUrl: '/ham-radio/', category: 'ham-radio', subcategory: 'general', heroImage: '/images/blog/ham-radio-blog-hero.webp', heroAlt: HAM_ALT },
+  'ham-radio/extra':      { label: 'Ham Radio — Extra',      icon: '📻', slug: 'ham-radio', hubUrl: '/ham-radio/', category: 'ham-radio', subcategory: 'extra', heroImage: '/images/blog/ham-radio-blog-hero.webp', heroAlt: HAM_ALT },
+  'falconry/apprentice':  { label: 'Falconry — Apprentice',  icon: '🦅', slug: 'falconry',  hubUrl: '/falconry/', category: 'falconry',  subcategory: 'apprentice', heroImage: '/images/blog/falconry-blog-hero.webp', heroAlt: FALC_ALT },
+  'cybersecurity/sy0-701':{ label: 'Security+ SY0-701',      icon: '🔒', slug: 'cybersecurity', hubUrl: '/security-plus/', category: 'cybersecurity', subcategory: 'security+ sy0-701', heroImage: '/images/blog/security-plus-blog-hero.webp', heroAlt: CYBER_ALT },
+  'devops/core-concepts': { label: 'DevOps — Core Concepts', icon: '⚙️', slug: 'devops', hubUrl: '/devops/', category: 'devops', subcategory: 'core-concepts', heroImage: '/images/blog/devops-blog-hero.webp', heroAlt: DEVOPS_ALT },
+  'devops/containers-k8s':{ label: 'DevOps — Containers & Kubernetes', icon: '⚙️', slug: 'devops', hubUrl: '/devops/', category: 'devops', subcategory: 'containers-k8s', heroImage: '/images/blog/devops-blog-hero.webp', heroAlt: DEVOPS_ALT },
+  'japanese/foundations': { label: 'Japanese — Foundations', icon: '🇯🇵', slug: 'japanese', hubUrl: '/japanese/', category: 'japanese', subcategory: 'foundations', heroImage: '/images/blog/japanese-blog-hero.jpeg', heroAlt: 'Hiragana chart and Japanese text on a dark background — Ryno Tools Japanese learning' },
+  'japanese/grammar':     { label: 'Japanese — Grammar',     icon: '🇯🇵', slug: 'japanese', hubUrl: '/japanese/', category: 'japanese', subcategory: 'grammar',     heroImage: '/images/blog/japanese-blog-hero.jpeg', heroAlt: 'Japanese grammar particles and sentence patterns — Ryno Tools Japanese learning' },
 };
 
 // ── Tiny Markdown renderer (constrained subset) ────────────────────────────────
@@ -199,8 +199,26 @@ if (draftFiles.length === 0) {
 
 mkdirSync(SRC_BLOG_DIR, { recursive: true });
 
-const publishedPosts = [];
 const bodyHtmlBySlug = new Map(); // used for RSS content:encoded
+
+// ── Related posts helper ───────────────────────────────────────────────────────
+function buildRelatedHtml(current, allParsed) {
+  const sameHub = allParsed.filter(p => p.track.slug === current.track.slug && p.slug !== current.slug);
+  const otherHub = allParsed.filter(p => p.track.slug !== current.track.slug && p.slug !== current.slug);
+  const picks = [...sameHub, ...otherHub].slice(0, 2);
+  if (picks.length === 0) return '';
+  const items = picks.map(p => `        <li><a href="/blog/${p.slug}/">${p.meta.title}</a></li>`).join('\n');
+  return `<section class="blog-related" aria-label="Related articles">
+        <h2>Related Study Guides</h2>
+        <ul>
+${items}
+        </ul>
+        <p><a href="${current.track.hubUrl}">Browse all ${current.track.label} practice tools on Ryno Tools →</a></p>
+      </section>`;
+}
+
+// ── Phase 1: Parse all ready drafts ───────────────────────────────────────────
+const parsedDrafts = [];
 
 for (const file of draftFiles) {
   const raw = readFileSync(join(DRAFTS_DIR, file), 'utf8');
@@ -223,7 +241,6 @@ for (const file of draftFiles) {
   const track = TRACK_META[meta.track];
   if (!track) { console.error(`❌ ${file}: unknown track "${meta.track}"`); process.exit(1); }
 
-  // Render body
   let bodyHtml;
   try {
     bodyHtml = renderMarkdown(bodyMd);
@@ -232,19 +249,29 @@ for (const file of draftFiles) {
     process.exit(1);
   }
 
-  // Parse sources (stored as JSON array in front-matter under sources key)
   let sources = [];
   try {
     const rawSources = meta.sources_json || meta.sources;
     sources = typeof rawSources === 'string' ? JSON.parse(rawSources) : (Array.isArray(rawSources) ? rawSources : []);
   } catch { sources = []; }
 
-  // Parse faq_json for FAQPage schema + HTML H3 structure
   let faqItems = [];
   try {
     const rawFaq = meta.faq_json;
     faqItems = typeof rawFaq === 'string' ? JSON.parse(rawFaq) : (Array.isArray(rawFaq) ? rawFaq : []);
   } catch { faqItems = []; }
+
+  parsedDrafts.push({ file, meta, slug, track, bodyHtml, sources, faqItems });
+}
+
+// Sort by date descending so related posts appear newest-first
+parsedDrafts.sort((a, b) => b.meta.datePublished.localeCompare(a.meta.datePublished));
+
+// ── Phase 2: Build HTML for each post (full parsedDrafts list available) ──────
+const publishedPosts = [];
+
+for (const draft of parsedDrafts) {
+  const { file, meta, slug, track, bodyHtml, sources, faqItems } = draft;
 
   const faqSchemaJson = faqItems.length
     ? JSON.stringify({
@@ -262,10 +289,6 @@ for (const file of draftFiles) {
     `<li><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.title}</a>${s.publisher ? ` — ${s.publisher}` : ''}${s.accessed ? ` (accessed ${s.accessed})` : ''}</li>`
   ).join('\n          ');
 
-  // CTA URL: /?category=...&subcategory=... (URL-encoded)
-  const ctaUrl = `/?category=${encodeURIComponent(track.category)}&subcategory=${encodeURIComponent(track.subcategory)}`;
-
-  // Share URLs
   const postUrl = `https://ryno.tools/blog/${slug}/`;
   const encodedUrl = encodeURIComponent(postUrl);
   const encodedTitle = encodeURIComponent(meta.title);
@@ -288,11 +311,11 @@ for (const file of draftFiles) {
     POST_SOURCES_SECTION: sourcesHtml
       ? `<section class="blog-sources" aria-label="Sources">\n        <h2>Sources</h2>\n        <ul>\n          ${sourcesHtml}\n        </ul>\n      </section>`
       : '',
-    POST_QUIZ_CTA_URL: ctaUrl,
+    POST_QUIZ_CTA_URL: track.hubUrl,
     POST_FAQ_SCHEMA: faqSchemaJson
       ? `\n  <script type="application/ld+json">\n  ${faqSchemaJson}\n  </script>`
       : '',
-    POST_RELATED_HTML: '', // populated post-build once multiple posts exist
+    POST_RELATED_HTML: buildRelatedHtml(draft, parsedDrafts),
     SHARE_TWITTER_URL: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
     SHARE_LINKEDIN_URL: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
     SHARE_FACEBOOK_URL: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
