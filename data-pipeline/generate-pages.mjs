@@ -27,6 +27,25 @@ const __dir = dirname(fileURLToPath(import.meta.url));
 const ROOT  = join(__dir, '..');
 const SRC   = join(ROOT, 'src');
 
+// --check: generate in-memory, compare to disk, exit 1 on any diff — write nothing.
+const CHECK = process.argv.includes('--check');
+const log   = CHECK ? () => {} : console.log.bind(console);
+const drifted = [];
+
+function write(filePath, content) {
+  if (CHECK) {
+    const rel = filePath.startsWith(ROOT + '/') ? filePath.slice(ROOT.length + 1) : filePath;
+    let existing;
+    try { existing = readFileSync(filePath, 'utf8'); } catch { existing = null; }
+    if (existing !== content) {
+      drifted.push(rel);
+      console.error(`  drift: ${rel}`);
+    }
+    return;
+  }
+  writeFileSync(filePath, content, 'utf8');
+}
+
 // ── Load inputs ─────────────────────────────────────────────
 
 const catalog = JSON.parse(readFileSync(join(SRC, 'datasets/index.json'), 'utf8'));
@@ -346,7 +365,7 @@ ${relatedHtml}
 
 // ── Generate hub pages ────────────────────────────────────────
 
-console.log('[generate-pages] Generating hub pages...');
+log('[generate-pages] Generating hub pages...');
 for (const [catValue, cat] of Object.entries(content)) {
   if (catValue.startsWith('_')) continue;
   if (cat.handAuthored) continue; // hand-authored hub (e.g. Japanese) — page is maintained by hand, not generated
@@ -355,14 +374,14 @@ for (const [catValue, cat] of Object.entries(content)) {
   const raw          = hubPage(catValue, cat, datasets, relatedPosts);
   const { html }     = injectChrome(raw, join(SRC, cat.slug, 'index.html'));
   const dir          = join(SRC, cat.slug);
-  mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, 'index.html'), html, 'utf8');
-  console.log(`  → src/${cat.slug}/index.html  (${datasets.length} track${datasets.length !== 1 ? 's' : ''}, ${relatedPosts.length} post${relatedPosts.length !== 1 ? 's' : ''})`);
+  if (!CHECK) mkdirSync(dir, { recursive: true });
+  write(join(dir, 'index.html'), html);
+  log(`  → src/${cat.slug}/index.html  (${datasets.length} track${datasets.length !== 1 ? 's' : ''}, ${relatedPosts.length} post${relatedPosts.length !== 1 ? 's' : ''})`);
 }
 
 // ── Generate home track-grid (injection into index.html) ──────
 
-console.log('[generate-pages] Injecting into src/index.html...');
+log('[generate-pages] Injecting into src/index.html...');
 
 let indexHtml = readFileSync(join(SRC, 'index.html'), 'utf8');
 
@@ -554,12 +573,12 @@ const orgLd = {
 const homeJsonLd = `  <script type="application/ld+json">\n  ${JSON.stringify(orgLd, null, 2).replace(/\n/g, '\n  ')}\n  </script>`;
 indexHtml = inject(indexHtml, 'home-jsonld', homeJsonLd);
 
-writeFileSync(join(SRC, 'index.html'), indexHtml, 'utf8');
-console.log('  → src/index.html');
+write(join(SRC, 'index.html'), indexHtml);
+log('  → src/index.html');
 
 // ── Sitemap injection ─────────────────────────────────────────
 
-console.log('[generate-pages] Injecting into src/sitemap.xml...');
+log('[generate-pages] Injecting into src/sitemap.xml...');
 let sitemapXml = readFileSync(join(SRC, 'sitemap.xml'), 'utf8');
 
 const hubSitemapEntries = Object.entries(content)
@@ -572,12 +591,12 @@ const hubSitemapEntries = Object.entries(content)
   </url>`).join('\n');
 
 sitemapXml = inject(sitemapXml, 'hubs', hubSitemapEntries);
-writeFileSync(join(SRC, 'sitemap.xml'), sitemapXml, 'utf8');
-console.log('  → src/sitemap.xml');
+write(join(SRC, 'sitemap.xml'), sitemapXml);
+log('  → src/sitemap.xml');
 
 // ── llms.txt injection ────────────────────────────────────────
 
-console.log('[generate-pages] Injecting into src/llms.txt...');
+log('[generate-pages] Injecting into src/llms.txt...');
 let llmsTxt = readFileSync(join(SRC, 'llms.txt'), 'utf8');
 
 const llmsQuizLines = Object.entries(content)
@@ -591,12 +610,12 @@ const llmsQuizLines = Object.entries(content)
   }).join('\n');
 
 llmsTxt = inject(llmsTxt, 'quizzes', llmsQuizLines);
-writeFileSync(join(SRC, 'llms.txt'), llmsTxt, 'utf8');
-console.log('  → src/llms.txt');
+write(join(SRC, 'llms.txt'), llmsTxt);
+log('  → src/llms.txt');
 
 // ── llms-full.txt injection ───────────────────────────────────
 
-console.log('[generate-pages] Injecting into src/llms-full.txt...');
+log('[generate-pages] Injecting into src/llms-full.txt...');
 let llmsFullTxt = readFileSync(join(SRC, 'llms-full.txt'), 'utf8');
 
 const llmsFullQuizLines = Object.entries(content)
@@ -611,7 +630,15 @@ const llmsFullQuizLines = Object.entries(content)
   }).join('\n\n');
 
 llmsFullTxt = inject(llmsFullTxt, 'quizzes', llmsFullQuizLines);
-writeFileSync(join(SRC, 'llms-full.txt'), llmsFullTxt, 'utf8');
-console.log('  → src/llms-full.txt');
+write(join(SRC, 'llms-full.txt'), llmsFullTxt);
+log('  → src/llms-full.txt');
 
-console.log('[generate-pages] All done.');
+if (CHECK) {
+  if (drifted.length) {
+    console.error(`\n✗ ${drifted.length} file(s) are stale. Run 'node data-pipeline/generate-pages.mjs' and commit the result.`);
+    process.exit(1);
+  }
+  console.log(`✓ All generated pages are up to date`);
+} else {
+  console.log('[generate-pages] All done.');
+}

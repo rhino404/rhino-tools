@@ -34,7 +34,7 @@
       "uniqueItems": true
     },
     "correct": { "type": "string", "minLength": 1 },
-    "explanation": { "type": "string" },
+    "explanation": { "type": "string", "minLength": 1 },
     "category": { "type": "string", "minLength": 1 },
     "subcategory": { "type": "string", "minLength": 1 },
     "type": { "type": "string", "enum": ["multiple", "boolean"] },

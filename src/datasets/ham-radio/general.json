@@ -1017,7 +1017,7 @@
     "choices": [
       "The person must be a resident of the U.S. for a minimum of 5 years",
       "The person must hold an FCC granted Amateur Radio license of General Class or above",
-      "The person\u2019s home citizenship must be in ITU region 2",
+      "The person’s home citizenship must be in ITU region 2",
       "None of these choices is correct; a non-U.S. citizen cannot be a Volunteer Examiner"
     ],
     "correct": "The person must hold an FCC granted Amateur Radio license of General Class or above",
@@ -1107,13 +1107,13 @@
     "id": "general-b5a2890909",
     "question": "Which of the following would disqualify a third party from participating in stating a message over an amateur station?",
     "choices": [
-      "The third party\u2019s amateur license has been revoked and not reinstated ",
+      "The third party’s amateur license has been revoked and not reinstated ",
       "The third party is not a U.S. citizen",
       "The third party is a licensed amateur",
       "The third party is speaking in a language other than English"
     ],
-    "correct": "The third party\u2019s amateur license has been revoked and not reinstated ",
-    "explanation": "The third party\u2019s amateur license has been revoked and not reinstated ",
+    "correct": "The third party’s amateur license has been revoked and not reinstated ",
+    "explanation": "The third party’s amateur license has been revoked and not reinstated ",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G1E",
@@ -1846,10 +1846,10 @@
       "When they declare a temporary state of communication emergency",
       "When they seize your equipment for use in disaster communications",
       "Only when all amateur stations are instructed to stop transmitting",
-      "When the President\u2019s War Emergency Powers have been invoked"
+      "When the President’s War Emergency Powers have been invoked"
     ],
-    "correct": "When the President\u2019s War Emergency Powers have been invoked",
-    "explanation": "When the President\u2019s War Emergency Powers have been invoked",
+    "correct": "When the President’s War Emergency Powers have been invoked",
+    "explanation": "When the President’s War Emergency Powers have been invoked",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G2B",
@@ -2556,13 +2556,13 @@
     "id": "general-3f5991c6dd",
     "question": "What segment of the 80-meter band is most commonly used for digital transmissions?",
     "choices": [
-      "3570 \u2013 3600 kHz",
-      "3500 \u2013 3525 kHz",
-      "3700 \u2013 3750 kHz",
-      "3775 \u2013 3825 kHz"
+      "3570 – 3600 kHz",
+      "3500 – 3525 kHz",
+      "3700 – 3750 kHz",
+      "3775 – 3825 kHz"
     ],
-    "correct": "3570 \u2013 3600 kHz",
-    "explanation": "3570 \u2013 3600 kHz",
+    "correct": "3570 – 3600 kHz",
+    "explanation": "3570 – 3600 kHz",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G2E",
@@ -2605,10 +2605,10 @@
       "Send an email to the system control operator ",
       "Send QRL in Morse code ",
       "Respond when the station broadcasts its SSID ",
-      "Transmit a connect message on the station\u2019s published frequency "
+      "Transmit a connect message on the station’s published frequency "
     ],
-    "correct": "Transmit a connect message on the station\u2019s published frequency ",
-    "explanation": "Transmit a connect message on the station\u2019s published frequency ",
+    "correct": "Transmit a connect message on the station’s published frequency ",
+    "explanation": "Transmit a connect message on the station’s published frequency ",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G2E",
@@ -2691,16 +2691,16 @@
     ]
   },
   {
-    "id": "general-ed339bf9e6",
+    "id": "general-73839d92ce",
     "question": "What is the significance of the sunspot number with regard to HF propagation?",
     "choices": [
-      "A.\u00a0 Higher sunspot numbers generally indicate a greater probability of good propagation at higher frequencies",
-      "B.\u00a0 Lower sunspot numbers generally indicate greater probability of sporadic E propagation",
-      "C.\u00a0 A zero sunspot number indicate radio propagation is not possible on any band",
-      "D.\u00a0 All of these choices are correct."
+      "Higher sunspot numbers generally indicate a greater probability of good propagation at higher frequencies",
+      "Lower sunspot numbers generally indicate greater probability of sporadic E propagation",
+      "A zero sunspot number indicate radio propagation is not possible on any band",
+      "All of these choices are correct."
     ],
-    "correct": "A.\u00a0 Higher sunspot numbers generally indicate a greater probability of good propagation at higher frequencies",
-    "explanation": "A.\u00a0 Higher sunspot numbers generally indicate a greater probability of good propagation at higher frequencies",
+    "correct": "Higher sunspot numbers generally indicate a greater probability of good propagation at higher frequencies",
+    "explanation": "Higher sunspot numbers indicate greater solar activity, which raises ionospheric F-layer ionization and the Maximum Usable Frequency (MUF), improving HF propagation at higher frequencies.",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G3A",
@@ -2914,12 +2914,12 @@
     "question": "What causes HF propagation conditions to vary periodically in a 28 day cycle?",
     "choices": [
       "Long term oscillations in the upper atmosphere",
-      "Cyclic variation in the Earth\u2019s radiation belts",
-      "The Sun\u2019s rotation on its axis",
+      "Cyclic variation in the Earth’s radiation belts",
+      "The Sun’s rotation on its axis",
       "The position of the Moon in its orbit"
     ],
-    "correct": "The Sun\u2019s rotation on its axis",
-    "explanation": "The Sun\u2019s rotation on its axis",
+    "correct": "The Sun’s rotation on its axis",
+    "explanation": "The Sun’s rotation on its axis",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G3A",
@@ -2966,12 +2966,12 @@
     "question": "What does the K-index indicate?",
     "choices": [
       "The relative position of sunspots on the surface of the Sun",
-      "The short term stability of the Earth\u2019s magnetic field",
+      "The short term stability of the Earth’s magnetic field",
       "The stability of the Sun's magnetic field",
       "The solar radio flux at Boulder, Colorado"
     ],
-    "correct": "The short term stability of the Earth\u2019s magnetic field",
-    "explanation": "The short term stability of the Earth\u2019s magnetic field",
+    "correct": "The short term stability of the Earth’s magnetic field",
+    "explanation": "The short term stability of the Earth’s magnetic field",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G3A",
@@ -2993,11 +2993,11 @@
     "choices": [
       "The relative position of sunspots on the surface of the Sun ",
       "The amount of polarization of the Sun's electric field",
-      "The long term stability of the Earth\u2019s geomagnetic field",
+      "The long term stability of the Earth’s geomagnetic field",
       "The solar radio flux at Boulder, Colorado"
     ],
-    "correct": "The long term stability of the Earth\u2019s geomagnetic field",
-    "explanation": "The long term stability of the Earth\u2019s geomagnetic field",
+    "correct": "The long term stability of the Earth’s geomagnetic field",
+    "explanation": "The long term stability of the Earth’s geomagnetic field",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G3A",
@@ -3964,7 +3964,7 @@
   },
   {
     "id": "general-f23d5d4a66",
-    "question": "What is likely to happen if a transceiver\u2019s ALC system is not set properly when transmitting AFSK signals with the radio using single sideband mode?",
+    "question": "What is likely to happen if a transceiver’s ALC system is not set properly when transmitting AFSK signals with the radio using single sideband mode?",
     "choices": [
       "ALC will invert the modulation of the AFSK mode",
       "Improper action of ALC distorts the signal and can cause spurious emissions",
@@ -4838,7 +4838,7 @@
   },
   {
     "id": "general-c93b2e425f",
-    "question": "How close to the lower\u00a0edge of the 40-meter General Class phone segment should your displayed carrier frequency be when using 3 kHz wide\u00a0LSB?",
+    "question": "How close to the lower edge of the 40-meter General Class phone segment should your displayed carrier frequency be when using 3 kHz wide LSB?",
     "choices": [
       "At least 3 kHz above the edge of the segment",
       "At least 3 kHz below the edge of the segment",
@@ -4861,7 +4861,7 @@
   },
   {
     "id": "general-1f1b04048f",
-    "question": "How close to the upper edge of the 20-meter General Class band should your displayed carrier frequency be when using 3 kHz wide\u00a0USB?",
+    "question": "How close to the upper edge of the 20-meter General Class band should your displayed carrier frequency be when using 3 kHz wide USB?",
     "choices": [
       "At least 3 kHz above the edge of the band",
       "At least 3 kHz below the edge of the band",
@@ -4953,7 +4953,7 @@
   },
   {
     "id": "general-7a3c1d1a70",
-    "question": "Why is it best NOT to draw the DC power for a 100 watt HF transceiver from a vehicle\u2019s auxiliary power socket?",
+    "question": "Why is it best NOT to draw the DC power for a 100 watt HF transceiver from a vehicle’s auxiliary power socket?",
     "choices": [
       "The socket is not wired with an RF-shielded power cable",
       "The socket's wiring may be inadequate for the current drawn by the transceiver",
@@ -6105,13 +6105,13 @@
     "id": "general-37058235d2",
     "question": "What is the value in nanofarads (nF) of a 22,000 pF capacitor?",
     "choices": [
-      "0.22 nF \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 ",
-      "2.2 nF \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 ",
-      "22 nF \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 ",
-      "220 nF \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 "
+      "0.22 nF          ",
+      "2.2 nF         ",
+      "22 nF            ",
+      "220 nF        "
     ],
-    "correct": "22 nF \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 ",
-    "explanation": "22 nF \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 ",
+    "correct": "22 nF            ",
+    "explanation": "22 nF            ",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G5C",
@@ -6128,13 +6128,13 @@
     "id": "general-71dd20e435",
     "question": "What is the value in microfarads of a 4700 nanofarad (nF) capacitor?",
     "choices": [
-      "47 \u00b5F",
-      "0.47 \u00b5F",
-      "47,000 \u00b5F ",
-      "4.7 \u00b5F"
+      "47 µF",
+      "0.47 µF",
+      "47,000 µF ",
+      "4.7 µF"
     ],
-    "correct": "4.7 \u00b5F",
-    "explanation": "4.7 \u00b5F",
+    "correct": "4.7 µF",
+    "explanation": "4.7 µF",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G5C",
@@ -6473,7 +6473,7 @@
     "id": "general-e55cfdd3f4",
     "question": "What will happen to the resistance if the temperature of a resistor is increased?",
     "choices": [
-      "It will change depending on the resistor\u2019s reactance coefficient",
+      "It will change depending on the resistor’s reactance coefficient",
       "It will stay the same",
       "It will change depending on the resistor's temperature coefficient",
       "It will become time dependent"
@@ -7831,12 +7831,12 @@
     "question": "How is an FSK signal generated?",
     "choices": [
       "By keying an FM transmitter with a sub-audible tone",
-      "By changing an oscillator\u2019s frequency directly with a digital control signal",
-      "By using a transceiver\u2019s computer data interface protocol to change frequencies",
+      "By changing an oscillator’s frequency directly with a digital control signal",
+      "By using a transceiver’s computer data interface protocol to change frequencies",
       "By reconfiguring the CW keying input to act as a tone generator"
     ],
-    "correct": "By changing an oscillator\u2019s frequency directly with a digital control signal",
-    "explanation": "By changing an oscillator\u2019s frequency directly with a digital control signal",
+    "correct": "By changing an oscillator’s frequency directly with a digital control signal",
+    "explanation": "By changing an oscillator’s frequency directly with a digital control signal",
     "category": "ham-radio",
     "subcategory": "General",
     "topic_id": "G8A",
@@ -10429,7 +10429,7 @@
     "id": "general-51e7624d58",
     "question": "What is the purpose of a power supply interlock?",
     "choices": [
-      "To prevent unauthorized changes to the circuit that would void the manufacturer\u2019s warranty",
+      "To prevent unauthorized changes to the circuit that would void the manufacturer’s warranty",
       "To shut down the unit if it becomes too hot",
       "To ensure that dangerous voltages are removed if the cabinet is opened",
       "To shut off the power supply if too much voltage is produced"

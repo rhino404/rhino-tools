@@ -37,6 +37,10 @@ jobs:
           node-version: '20'
       - name: Verify chrome sync
         run: node data-pipeline/sync-chrome.mjs --check
+      - name: Validate datasets
+        run: node data-pipeline/validate.mjs --summary
+      - name: Validate blog drafts
+        run: node blog-pipeline/validate.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
