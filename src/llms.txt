@@ -49,6 +49,21 @@ Three active-recall modes: Learn (flashcard), Match (multiple-choice), Type (rom
 ## Articles
 
 <!-- blog-articles:start -->
+- [What Changed in the 2026-2030 FCC Technician Question Pool](https://ryno.tools/blog/2026-technician-question-pool-changes/) — The FCC Technician exam switches to the 2026-2030 question pool on July 1, 2026. Here is exactly what changed — new topics, removed questions, and what every test-taker needs to know before sitting for the exam.
+  author: Ask Ryno
+  published: 2026-06-13
+  track: ham-radio/technician
+  tags: amateur, licensing, privileges, frequency, equipment, modulation, data
+- [Falconry License Requirements by State: The Complete US Guide](https://ryno.tools/blog/falconry-license-requirements-by-state/) — Getting a falconry license in the US requires both a federal USFWS permit and a state permit. Requirements vary significantly by state. Here's what every aspiring apprentice needs to know before applying.
+  author: Ask Ryno
+  published: 2026-06-13
+  track: falconry/apprentice
+  tags: regulations, licensing, apprentice, federal, state
+- [Security+ SY0-701 vs SY0-801: What Changes and Why You Should Test Now](https://ryno.tools/blog/sy0-701-vs-sy0-801-security-plus/) — SY0-801 is in development and drawing early search traffic, but it hasn't launched. Here's what changes between versions, when to expect 801, and why finishing SY0-701 first is the smart move.
+  author: Ask Ryno
+  published: 2026-06-13
+  track: cybersecurity/sy0-701
+  tags: security-plus, certification, exam-strategy, dod-8140, cybersecurity
 - [How to Learn Hiragana: The Complete Beginner's Guide](https://ryno.tools/blog/how-to-learn-hiragana/) — Hiragana is the essential first step in Japanese. Learn the 46-character gojūon grid, understand the full 104-character set, and use active recall to read hiragana in 1–2 weeks.
   author: Ask Ryno
   published: 2026-06-11
