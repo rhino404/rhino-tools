@@ -1,26 +1,14 @@
 // typeRomaji.js — Show prompt, type the accepted answer.
 // cfg.hint → 'always' (hint visible) | 'ontap' (Hint button reveals) | 'none' (no hint)
 
-import { markResult, playAudio, kanaSizeClass } from '../engine.js';
-
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
+import { markResult, markSeen, playAudio, kanaSizeClass } from '../engine.js';
+import { createGameSession } from './gameSession.js';
 
 export function renderTypeRomaji(container, items, trackId, presenter, audioAvailable, cfg, onComplete) {
-  const hintMode  = cfg?.hint ?? 'ontap';
-  const session   = shuffle(items).slice(0, Math.min(items.length, 15));
-  const sessionLen = session.length;
-  let idx = 0;
-  let correct = 0;
-  let answered = false;
+  const hintMode = cfg?.hint ?? 'ontap';
+  const game     = createGameSession(items, { maxItems: 15 });
+  let answered   = false;
   let advanceTimer = null;
-  const requeued = new Set();
   // Mode/difficulty switches re-render into this same container; a pending
   // advance timer from this instance must not fire into the new game's DOM.
   const token = container._jpToken = {};
@@ -28,7 +16,7 @@ export function renderTypeRomaji(container, items, trackId, presenter, audioAvai
   const speakerSvg = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>`;
 
   function next() {
-    if (idx >= session.length) { showScore(); return; }
+    if (game.isDone) { showScore(); return; }
     showQuestion();
   }
 
@@ -47,7 +35,7 @@ export function renderTypeRomaji(container, items, trackId, presenter, audioAvai
 
   function showQuestion() {
     answered = false;
-    const item = session[idx];
+    const item = game.current;
     const displayText = presenter.typePrompt?.(item) ?? presenter.prompt(item);
     const showAudio = audioAvailable && item.audio;
 
@@ -55,10 +43,10 @@ export function renderTypeRomaji(container, items, trackId, presenter, audioAvai
       <div class="jp-session-bar">
         <div class="jp-session-label">
           <span>Type</span>
-          <span>${idx + 1} / ${session.length}</span>
+          <span>${game.index + 1} / ${game.total}</span>
         </div>
         <div class="jp-session-bar-track">
-          <div class="jp-session-bar-fill" style="width:${(idx / session.length) * 100}%"></div>
+          <div class="jp-session-bar-fill" style="width:${(game.index / game.total) * 100}%"></div>
         </div>
       </div>
 
@@ -105,18 +93,20 @@ export function renderTypeRomaji(container, items, trackId, presenter, audioAvai
   }
 
   function submit(item, input) {
-    // Manual "Next →": cancel the pending auto-advance or both paths fire
-    if (answered) { clearTimeout(advanceTimer); idx++; next(); return; }
+    // Manual "Next →": cancel the pending auto-advance so both paths don't fire
+    if (answered) { clearTimeout(advanceTimer); next(); return; }
 
     const typed = input.value.trim().toLowerCase();
     if (!typed) return;
 
     const accepts   = presenter.accepts(item);
     const isCorrect = accepts.some(a => a.toLowerCase() === typed);
-    const isRetry   = requeued.has(item.id);
     answered = true;
-    markResult(trackId, item.id, isCorrect);
-    if (isCorrect && !isRetry) correct++;
+    const { creditMastery, firstTry } = game.answer(isCorrect);
+
+    if (creditMastery)               markResult(trackId, item.id, true);
+    else if (firstTry && !isCorrect) markResult(trackId, item.id, false);
+    else                             markSeen(trackId, item.id);
 
     input.disabled = true;
     input.classList.add(isCorrect ? 'correct' : 'incorrect');
@@ -127,13 +117,6 @@ export function renderTypeRomaji(container, items, trackId, presenter, audioAvai
       ? 'Correct!'
       : `Not quite — answer: "${presenter.answer(item)}"`;
 
-    // Re-queue missed item once
-    if (!isCorrect && !isRetry) {
-      requeued.add(item.id);
-      const insertAt = Math.min(idx + 3, session.length);
-      session.splice(insertAt, 0, item);
-    }
-
     const area = container.closest('.jp-game-area');
     if (area) {
       area.classList.add(isCorrect ? 'correct-effect' : 'incorrect-effect');
@@ -143,16 +126,16 @@ export function renderTypeRomaji(container, items, trackId, presenter, audioAvai
     container.querySelector('#jp-submit').textContent = 'Next →';
     advanceTimer = setTimeout(() => {
       if (container._jpToken !== token) return;
-      idx++; next();
+      next();
     }, isCorrect ? 800 : 1500);
   }
 
   function showScore() {
-    const pct = Math.round((correct / sessionLen) * 100);
+    const { correct, total, pct } = game.score;
     container.innerHTML = `
       <div class="jp-score-screen">
         <div class="jp-score-big">${pct}%</div>
-        <div class="jp-score-label">${correct} / ${sessionLen} correct</div>
+        <div class="jp-score-label">${correct} / ${total} correct</div>
         <p style="color:var(--color-text-secondary);font-size:0.95rem;margin:0">
           ${pct >= 90 ? 'Excellent work!' : pct >= 70 ? 'Good — keep it up!' : 'Keep practising — it gets easier!'}
         </p>
@@ -163,8 +146,7 @@ export function renderTypeRomaji(container, items, trackId, presenter, audioAvai
       </div>
     `;
     container.querySelector('#jp-retry').addEventListener('click', () => {
-      idx = 0; correct = 0; requeued.clear();
-      session.splice(0, session.length, ...shuffle(items).slice(0, Math.min(items.length, 15)));
+      game.restart();
       next();
     });
     container.querySelector('#jp-finish').addEventListener('click', onComplete);

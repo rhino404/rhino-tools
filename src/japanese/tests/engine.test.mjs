@@ -110,6 +110,17 @@ test('markResult: progress is namespaced by trackId', () => {
   assert.equal(getProgress('katakana')['id-1'].correct, 0);
 });
 
+// ── markSeen on already-correct item ─────────────────────────────────────────
+// Guards the retry path: game calls markSeen() for retries; must never inflate mastery.
+
+test('markSeen: calling on item with existing correct count leaves correct unchanged', () => {
+  clearProgress();
+  markResult('hiragana', 'hira-a', true);   // correct = 1
+  markResult('hiragana', 'hira-a', true);   // correct = 2
+  markSeen('hiragana', 'hira-a');           // retry path — must stay 2
+  assert.equal(getProgress('hiragana')['hira-a'].correct, 2);
+});
+
 // ── overallStats ──────────────────────────────────────────────────────────────
 
 test('overallStats: all unseen returns 0 mastered', () => {
