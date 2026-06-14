@@ -1,0 +1,17 @@
+#!/bin/bash
+# Git pre-push hook — runs before every push regardless of branch.
+# Catches deploy-blocking drift before it reaches CI.
+#
+# Activate once after cloning:
+#   git config --local core.hooksPath data-pipeline/hooks
+
+set -e
+ROOT="$(git rev-parse --show-toplevel)"
+
+echo "[pre-push] Verifying chrome sync..."
+node "$ROOT/data-pipeline/sync-chrome.mjs" --check
+
+echo "[pre-push] Checking SW precache..."
+node "$ROOT/data-pipeline/check-sw-precache.mjs"
+
+echo "[pre-push] ✅ Pre-push checks passed."
