@@ -44,6 +44,15 @@ jobs:
         run: node data-pipeline/validate.mjs --summary
       - name: Validate blog drafts
         run: node blog-pipeline/validate.mjs
+      - name: Check dataset manifest is up to date
+        run: |
+          node data-pipeline/generate-manifest.mjs
+          if ! git diff --exit-code -- src/datasets/index.json src/data/quizMeta.js; then
+            echo "::error::src/datasets/index.json or src/data/quizMeta.js is stale. Run: node data-pipeline/generate-manifest.mjs"
+            exit 1
+          fi
+      - name: Check SW precaches all CSS
+        run: node data-pipeline/check-sw-precache.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
