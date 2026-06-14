@@ -159,6 +159,7 @@
 
 /* ── Newsletter form ────────────────────────────────────────────────
    Set NEWSLETTER_URL to your provider's endpoint to activate the form.
+   Mailchimp: use the form action URL from Audience → Signup forms → Embedded.
    MailerLite: grab the form action URL from Dashboard → Embedded Forms.
    Buttondown: https://buttondown.email/api/emails/embed-subscribe/<username>
    Leave empty to show the form in "coming soon" mode (no submission).
