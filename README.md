@@ -47,6 +47,12 @@ python3 -m http.server 8080
 
 Visit <http://localhost:8080>. No build step — raw ES6 modules served as-is. Hard-refresh (`Ctrl+Shift+R`) to bypass the service worker cache after changes.
 
+**One-time after cloning** — activate the pre-push hook:
+
+```bash
+git config --local core.hooksPath data-pipeline/hooks
+```
+
 ---
 
 ## Deployment
