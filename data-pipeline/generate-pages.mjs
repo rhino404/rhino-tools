@@ -505,7 +505,6 @@ const featuredHtml = featured ? `  <section class="landing-block landing-feature
       <p class="featured-post-desc">${esc(featured.description || '')}</p>
       <span class="featured-post-read">Read article →</span>
     </a>
-    <a href="/blog/" class="featured-all-link">All study guides →</a>
   </section>` : '';
 
 indexHtml = inject(indexHtml, 'featured', featuredHtml);
