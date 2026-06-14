@@ -22,6 +22,7 @@ const {
   markSeen,
   getProgress,
   overallStats,
+  isSkillMastered,
   MASTERY_THRESHOLD,
 } = await import('../engine.js');
 
@@ -140,4 +141,25 @@ test('overallStats: counts only items at mastery threshold', () => {
   const stats = overallStats(track, progress);
   assert.equal(stats.mastered, 2); // a and c
   assert.equal(stats.total, 3);
+});
+
+// ── isSkillMastered ───────────────────────────────────────────────────────────
+
+test('isSkillMastered: empty track returns false (no false-positive)', () => {
+  assert.equal(isSkillMastered({ items: [] }, {}), false);
+});
+
+test('isSkillMastered: some-but-not-all mastered returns false', () => {
+  const track = { items: [{ id: 'a' }, { id: 'b' }] };
+  const progress = { a: { seen: true, correct: MASTERY_THRESHOLD } };
+  assert.equal(isSkillMastered(track, progress), false);
+});
+
+test('isSkillMastered: all items at threshold returns true', () => {
+  const track = { items: [{ id: 'a' }, { id: 'b' }] };
+  const progress = {
+    a: { seen: true, correct: MASTERY_THRESHOLD },
+    b: { seen: true, correct: MASTERY_THRESHOLD + 1 },
+  };
+  assert.equal(isSkillMastered(track, progress), true);
 });

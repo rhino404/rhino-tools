@@ -45,7 +45,7 @@ function pickDistractors(correct, pool, presenter, sim, count) {
   return candidates.slice(0, count);
 }
 
-export function renderSoundMatch(container, items, pool, trackId, presenter, audioAvailable, cfg, onComplete) {
+export function renderSoundMatch(container, items, pool, trackId, presenter, audioAvailable, cfg, onComplete, journey) {
   const choiceCount = Math.min(cfg?.match?.choices ?? 4, pool.length);
   const sim         = cfg?.match?.sim ?? 'group';
   const game        = createGameSession(items, { maxItems: 12 });
@@ -128,24 +128,37 @@ export function renderSoundMatch(container, items, pool, trackId, presenter, aud
 
   function showScore() {
     const { correct, total, pct } = game.score;
+    const step = journey?.next?.();
     container.innerHTML = `
       <div class="jp-score-screen">
         <div class="jp-score-big">${pct}%</div>
         <div class="jp-score-label">${correct} / ${total} correct</div>
-        <p style="color:var(--color-text-secondary);font-size:0.95rem;margin:0">
-          ${pct >= 90 ? 'Excellent work!' : pct >= 70 ? 'Good — keep it up!' : 'Keep practising — it gets easier!'}
-        </p>
+        ${step === null
+          ? `<p class="jp-score-celebrate">🎉 You've mastered this skill!</p>`
+          : `<p style="color:var(--color-text-secondary);font-size:0.95rem;margin:0">
+              ${pct >= 90 ? 'Excellent work!' : pct >= 70 ? 'Good — keep it up!' : 'Keep practising — it gets easier!'}
+             </p>`
+        }
         <div class="jp-score-actions">
-          <button class="jp-score-btn" id="jp-retry">Play again</button>
-          <button class="jp-score-btn jp-score-btn--primary" id="jp-finish">Back</button>
+          ${step === null
+            ? `<button class="jp-score-btn" id="jp-retry">Play again</button>
+               <button class="jp-score-btn jp-score-btn--primary" id="jp-finish">Done</button>`
+            : `<button class="jp-score-btn jp-score-btn--primary" id="jp-launch">${step.label}</button>
+               <button class="jp-score-btn" id="jp-finish">Back</button>`
+          }
         </div>
       </div>
     `;
-    container.querySelector('#jp-retry').addEventListener('click', () => {
+    container.querySelector('#jp-retry')?.addEventListener('click', () => {
       game.restart();
       next();
     });
     container.querySelector('#jp-finish').addEventListener('click', onComplete);
+    const launchBtn = container.querySelector('#jp-launch');
+    if (launchBtn) {
+      launchBtn.addEventListener('click', () => step.run());
+      launchBtn.focus();
+    }
   }
 
   next();

@@ -193,6 +193,11 @@ export function overallStats(track, progress) {
   return { mastered, total: track.items.length };
 }
 
+export function isSkillMastered(track, progress) {
+  const { mastered, total } = overallStats(track, progress);
+  return total > 0 && mastered >= total;
+}
+
 export function stageStats(track, stage, progress) {
   const ids = itemsInStage(track, stage).map(it => it.id);
   const mastered = ids.filter(id => isMastered(id, progress)).length;
@@ -238,19 +243,19 @@ export function kanaSizeClass(text) {
 // ── Difficulty settings ───────────────────────────────────────────────────────
 
 const DIFFICULTY_KEY = 'jp-difficulty';
-const DIFFICULTY_LEVELS = ['relaxed', 'standard', 'strict'];
+const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
 
 export const DIFFICULTY = {
-  relaxed:  { learn: { answer: true,  details: true  }, match: { choices: 4, sim: 'low'   }, hint: 'always' },
-  standard: { learn: { answer: true,  details: false }, match: { choices: 4, sim: 'group' }, hint: 'ontap'  },
-  strict:   { learn: { answer: false, details: false }, match: { choices: 6, sim: 'tight' }, hint: 'none'   },
+  easy:   { learn: { answer: true,  details: true  }, match: { choices: 4, sim: 'low'   }, hint: 'always' },
+  medium: { learn: { answer: true,  details: false }, match: { choices: 4, sim: 'group' }, hint: 'ontap'  },
+  hard:   { learn: { answer: false, details: false }, match: { choices: 6, sim: 'tight' }, hint: 'none'   },
 };
 
 export function getDifficulty() {
   try {
     const d = localStorage.getItem(DIFFICULTY_KEY);
-    return DIFFICULTY_LEVELS.includes(d) ? d : 'standard';
-  } catch { return 'standard'; }
+    return DIFFICULTY_LEVELS.includes(d) ? d : 'medium';
+  } catch { return 'medium'; }
 }
 
 export function setDifficulty(level) {

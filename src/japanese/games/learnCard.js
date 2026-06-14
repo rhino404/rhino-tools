@@ -6,7 +6,7 @@ import { markSeen, playAudio, kanaSizeClass } from '../engine.js';
 
 const speakerSvg = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>`;
 
-export function renderLearnCard(container, items, trackId, presenter, audioAvailable, cfg, onComplete) {
+export function renderLearnCard(container, items, trackId, presenter, audioAvailable, cfg, onComplete, journey) {
   let idx = 0;
   const answerOpen  = cfg?.learn?.answer  ?? true;
   const detailsOpen = cfg?.learn?.details ?? false;
@@ -16,6 +16,8 @@ export function renderLearnCard(container, items, trackId, presenter, audioAvail
 
   function show() {
     const item = items[idx];
+    const isLast = idx === items.length - 1;
+    const step = isLast ? journey?.next?.() : null;
     markSeen(trackId, item.id);
 
     const hasAudio  = audioAvailable && item.audio;
@@ -69,10 +71,15 @@ export function renderLearnCard(container, items, trackId, presenter, audioAvail
             ? `<button class="jp-card-nav-btn" id="jp-prev">← Prev</button>`
             : `<span></span>`}
           <span class="jp-card-counter">${idx + 1} of ${items.length}</span>
-          ${idx < items.length - 1
+          ${!isLast
             ? `<button class="jp-card-nav-btn jp-card-nav-btn--primary" id="jp-next">Next →</button>`
-            : `<button class="jp-card-nav-btn jp-card-nav-btn--primary" id="jp-done">Done ✓</button>`}
+            : `<button class="jp-card-nav-btn${step ? '' : ' jp-card-nav-btn--primary'}" id="jp-done">Done ✓</button>`}
         </div>
+        ${step ? `
+          <div class="jp-score-actions" style="margin-top:0.75rem">
+            <button class="jp-score-btn jp-score-btn--primary" id="jp-launch">${step.label}</button>
+          </div>
+        ` : ''}
       </div>
     `;
 
@@ -98,6 +105,11 @@ export function renderLearnCard(container, items, trackId, presenter, audioAvail
     container.querySelector('#jp-prev')?.addEventListener('click', () => { idx--; show(); });
     container.querySelector('#jp-next')?.addEventListener('click', () => { idx++; show(); });
     container.querySelector('#jp-done')?.addEventListener('click', onComplete);
+    const launchBtn = container.querySelector('#jp-launch');
+    if (launchBtn) {
+      launchBtn.addEventListener('click', () => step.run());
+      launchBtn.focus();
+    }
   }
 
   show();

@@ -7,7 +7,7 @@ import {
   getUnlockedStageIds, getItemState, overallStats,
   checkAudioAvailable, vowelColumn, getNextFocus,
   getUnlockedLevelIds, levelStats, MASTERY_THRESHOLD,
-  getDifficulty, setDifficulty, DIFFICULTY,
+  getDifficulty, setDifficulty, DIFFICULTY, isSkillMastered,
 } from './engine.js';
 import { renderLearnCard }  from './games/learnCard.js';
 import { renderSoundMatch } from './games/soundMatch.js';
@@ -159,6 +159,10 @@ const PRESENTERS = {
 };
 
 // ── App state ─────────────────────────────────────────────────────────────────
+
+// Forward "journey" through a set of items, hardest-last.
+const MODE_CHAIN  = ['learn', 'match', 'type'];
+const MODE_LABELS = { learn: 'Learn', match: 'Match', type: 'Type' };
 
 let _manifest      = null;
 let _audioAvailable = false;
@@ -575,7 +579,7 @@ function runGame() {
   });
 
   const level = getDifficulty();
-  const cfg   = DIFFICULTY[level] || DIFFICULTY.standard;
+  const cfg   = DIFFICULTY[level] || DIFFICULTY.medium;
 
   // Sync difficulty control UI
   document.querySelectorAll('.jp-diff-btn').forEach(b => {
@@ -589,11 +593,37 @@ function runGame() {
     renderHomeContent();
   };
 
+  const sessionMode = _activeMode; // lock mode at game-start; run() must not drift to whatever _activeMode is at click time
+  const journey = {
+    // null → whole skill mastered (end screens show celebration + Done only).
+    next() {
+      const progress = getProgress(track.id);
+      if (isSkillMastered(track, progress)) return null;
+
+      // Walk the mode chain on the same items: Learn → Match → Type.
+      const i = MODE_CHAIN.indexOf(sessionMode);
+      const nextMode = i >= 0 && i < MODE_CHAIN.length - 1 ? MODE_CHAIN[i + 1] : null;
+      if (nextMode) {
+        return {
+          label: `Continue to ${MODE_LABELS[nextMode]} →`,
+          run: () => { _activeMode = nextMode; runGame(); },
+        };
+      }
+
+      // End of the chain (finished Type): flow into the next content set.
+      const focus = getNextFocus(track, progress);
+      return {
+        label: `${focus.label} →`,
+        run: () => startSession(focus),
+      };
+    },
+  };
+
   if (_activeMode === 'learn') {
-    renderLearnCard(area, _sessionItems, track.id, presenter, _audioAvailable, cfg, onComplete);
+    renderLearnCard(area, _sessionItems, track.id, presenter, _audioAvailable, cfg, onComplete, journey);
   } else if (_activeMode === 'match') {
-    renderSoundMatch(area, _sessionItems, track.items, track.id, presenter, _audioAvailable, cfg, onComplete);
+    renderSoundMatch(area, _sessionItems, track.items, track.id, presenter, _audioAvailable, cfg, onComplete, journey);
   } else if (_activeMode === 'type') {
-    renderTypeRomaji(area, _sessionItems, track.id, presenter, _audioAvailable, cfg, onComplete);
+    renderTypeRomaji(area, _sessionItems, track.id, presenter, _audioAvailable, cfg, onComplete, journey);
   }
 }

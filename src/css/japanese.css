@@ -694,6 +694,12 @@ body.light-mode .jp-grid-cell--mastered { background: rgba(34, 197, 94, 0.13); }
   color: #fff;
 }
 .jp-score-btn--primary:hover { opacity: 0.9; }
+.jp-score-celebrate {
+  font-size: 1.05rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin: 0;
+}
 
 /* ── Deck layout (vocab) ──────────────────────────────────────── */
 .jp-deck-section { margin-bottom: 1.75rem; }
