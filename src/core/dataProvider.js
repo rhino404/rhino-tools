@@ -20,10 +20,73 @@ export const getCategoryIcon = _iconMap;
 
 const MANIFEST_PATH = '/datasets/index.json';
 
-let _catalog  = null;   // { categories, subcategories }
-let _paths    = null;   // { [category]: { [subcategory]: url } } — null → use DATA_SOURCES
-let _examDefs = null;   // { [category]: { [subcategory]: examDef } } — null → fetch exam.json
+let _catalog   = null;   // { categories, subcategories }
+let _paths     = null;   // { [category]: { [subcategory]: url } } — null → use DATA_SOURCES
+let _examDefs  = null;   // { [category]: { [subcategory]: examDef } } — null → fetch exam.json
+let _sha256Map = null;   // { [url]: sha256 } — built from manifest; used as IDB cache keys
 let _initPromise = null;
+
+// ─── IndexedDB cache ──────────────────────────────────────────────────────────
+// Parsed question arrays are cached by dataset sha256 so repeat visits skip
+// the network entirely. Cache is invalidated automatically when a pool update
+// changes the sha256 in the manifest.
+
+const IDB_NAME    = 'rynoTools';
+const IDB_STORE   = 'datasets';
+const IDB_VERSION = 1;
+let   _db         = null;
+
+function _openIDB() {
+  if (_db) return Promise.resolve(_db);
+  if (typeof indexedDB === 'undefined') return Promise.resolve(null);
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(IDB_NAME, IDB_VERSION);
+    req.onupgradeneeded = e => e.target.result.createObjectStore(IDB_STORE);
+    req.onsuccess       = e => { _db = e.target.result; resolve(_db); };
+    req.onerror         = e => reject(e.target.error);
+  });
+}
+
+async function _idbGet(key) {
+  try {
+    const db = await _openIDB();
+    if (!db) return null;
+    return new Promise((resolve, reject) => {
+      const req = db.transaction(IDB_STORE, 'readonly').objectStore(IDB_STORE).get(key);
+      req.onsuccess = () => resolve(req.result ?? null);
+      req.onerror   = e => reject(e.target.error);
+    });
+  } catch { return null; }
+}
+
+async function _idbSet(key, value) {
+  try {
+    const db = await _openIDB();
+    if (!db) return;
+    return new Promise((resolve, reject) => {
+      const req = db.transaction(IDB_STORE, 'readwrite').objectStore(IDB_STORE).put(value, key);
+      req.onsuccess = () => resolve();
+      req.onerror   = e => reject(e.target.error);
+    });
+  } catch {}
+}
+
+// Remove IDB entries whose sha256 is no longer in the current manifest.
+// Runs in the background after manifest loads; prevents unbounded cache growth.
+function _pruneIDBCache(currentSha256s) {
+  _openIDB().then(db => {
+    if (!db) return;
+    const tx  = db.transaction(IDB_STORE, 'readwrite');
+    const req = tx.objectStore(IDB_STORE).getAllKeys();
+    req.onsuccess = () => {
+      for (const key of req.result) {
+        if (!currentSha256s.has(key)) tx.objectStore(IDB_STORE).delete(key);
+      }
+    };
+  }).catch(() => {});
+}
+
+// ─── Manifest ─────────────────────────────────────────────────────────────────
 
 function _buildFromManifest(manifest) {
   const catSeen    = new Set();
@@ -31,6 +94,8 @@ function _buildFromManifest(manifest) {
   const subcats    = [];
   const paths      = {};
   const examDefs   = {};
+  const sha256Map  = {};
+  const sha256Set  = new Set();
 
   // Prefer top-level categories array (present in manifests generated post-Wave 3).
   // Fall back to building from dataset entries + FALLBACK_CATS labels.
@@ -49,15 +114,23 @@ function _buildFromManifest(manifest) {
       categories.push({ value: ds.category, label: fb?.label || ds.category });
     }
     subcats.push({ label: ds.label, value: ds.subcategory, category: ds.category, featured: ds.pool?.featured || null });
+
+    const url = `./${ds.path}`;
     if (!paths[ds.category]) paths[ds.category] = {};
-    paths[ds.category][ds.subcategory] = `./${ds.path}`;
+    paths[ds.category][ds.subcategory] = url;
+
+    if (ds.sha256) {
+      sha256Map[url] = ds.sha256;
+      sha256Set.add(ds.sha256);
+    }
+
     if (ds.exam) {
       if (!examDefs[ds.category]) examDefs[ds.category] = {};
       examDefs[ds.category][ds.subcategory] = ds.exam;
     }
   }
 
-  return { categories, subcats, paths, examDefs };
+  return { categories, subcats, paths, examDefs, sha256Map, sha256Set };
 }
 
 function _init() {
@@ -67,10 +140,12 @@ function _init() {
     .then(r => r.ok ? r.json() : null)
     .then(manifest => {
       if (!manifest) return;
-      const b = _buildFromManifest(manifest);
-      _catalog  = { categories: b.categories, subcategories: b.subcats };
-      _paths    = b.paths;
-      _examDefs = b.examDefs;
+      const b   = _buildFromManifest(manifest);
+      _catalog   = { categories: b.categories, subcategories: b.subcats };
+      _paths     = b.paths;
+      _examDefs  = b.examDefs;
+      _sha256Map = b.sha256Map;
+      _pruneIDBCache(b.sha256Set);
     })
     .catch(() => {});  // fallback catalog stays active on any failure
 
@@ -82,9 +157,7 @@ function _ensureInit() {
   return _initPromise;
 }
 
-// ────────────────────────────────────────────────────────────
-// Public API
-// ────────────────────────────────────────────────────────────
+// ─── Public API ───────────────────────────────────────────────────────────────
 
 /**
  * Synchronous catalog snapshot — uses fallback on first call, manifest-upgraded
@@ -107,7 +180,8 @@ export async function getCatalog() {
 
 /**
  * Fetch all questions for a category + subcategory.
- * Returns Question[]. Parallel fetch; a failed file yields [].
+ * Returns Question[]. Checks IDB cache first (keyed by sha256); falls back to
+ * network fetch. A failed file yields [].
  */
 export async function getQuestions(category, subcategory = null) {
   if (!category) return [];
@@ -121,10 +195,20 @@ export async function getQuestions(category, subcategory = null) {
 
   const perFile = await Promise.all(urls.map(async url => {
     try {
+      const sha = _sha256Map?.[url];
+      if (sha) {
+        const cached = await _idbGet(sha);
+        if (cached) return cached;
+      }
+
       const r = await fetch(url);
       if (!r.ok) throw new Error(`Dataset fetch failed: ${url}`);
       const d = await r.json();
-      return d.questions || d;
+      const questions = d.questions || d;
+
+      if (sha) _idbSet(sha, questions).catch(() => {});  // fire-and-forget
+
+      return questions;
     } catch (err) {
       console.error('[dataProvider]', err);
       return [];
