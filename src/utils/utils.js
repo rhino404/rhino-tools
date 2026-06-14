@@ -1,13 +1,15 @@
 // utils.js
-import { quizMeta } from '../data/quizMeta.js';
+import { getCategoryIcon, getCatalogSync } from '../core/dataProvider.js';
 
 export function getIcon(type, value) {
-  const item = quizMeta[type]?.find(el => el.value === value);
+  if (type === 'categories') return getCategoryIcon[value] || '';
+  const list = getCatalogSync()[type] || [];
+  const item = list.find(el => el.value === value);
   if (item?.label) {
     const emojiMatch = item.label.match(/^(\p{Emoji_Presentation}|\p{Emoji}\uFE0F)/u);
-    return emojiMatch ? emojiMatch[0] : "";
+    return emojiMatch ? emojiMatch[0] : '';
   }
-  return "";
+  return '';
 }
 
 export function normalizeKey(str = '') {

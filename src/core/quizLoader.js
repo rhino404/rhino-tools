@@ -1,6 +1,5 @@
 // src/core/quizLoader.js
-import { getQuestions as _getQuestions } from './dataProvider.js';
-import { quizMeta, getCategoryIcon, categories } from '../data/quizMeta.js';
+import { getQuestions as _getQuestions, getCatalogSync, getCategoryIcon } from './dataProvider.js';
 import { getSubcategoriesForCategory } from '../utils/quizMetaUtils.js';
 import { filterUnansweredQuestions, showQuestion as originalShowQuestion } from '../ui/questions.js';
 import { saveSession } from './sessionManager.js';
@@ -91,7 +90,7 @@ export async function startQuiz(category, subcategory, stateObj) {
     // Update category UI
     try {
         const icon = getCategoryIcon[category] || '';
-        const label = quizMeta.categories.find(o => o.value === category)?.label || 'Select Category';
+        const label = getCatalogSync().categories.find(o => o.value === category)?.label || 'Select Category';
         if (stateObj.categoryToggle) stateObj.categoryToggle.innerHTML = `${icon} ${label} ▾`;
     } catch {}
 
@@ -165,7 +164,7 @@ export function applyTagFilter(newTags) {
 // =========================
 export function loadAndShowQuestions(category, subcategory, startIndex = 0) {
     const categoryObj = (typeof category === 'string')
-        ? categories.find(c => c.value === category || c.id === category)
+        ? getCatalogSync().categories.find(c => c.value === category || c.id === category)
         : category;
 
     if (!categoryObj) {
