@@ -7,11 +7,9 @@ import {
   getUnlockedStageIds, getItemState, overallStats,
   checkAudioAvailable, vowelColumn, getNextFocus,
   getUnlockedLevelIds, levelStats, MASTERY_THRESHOLD,
-  getDifficulty, setDifficulty, DIFFICULTY, isSkillMastered,
+  isSkillMastered,
 } from './engine.js';
-import { renderLearnCard }  from './games/learnCard.js';
-import { renderSoundMatch } from './games/soundMatch.js';
-import { renderTypeRomaji } from './games/typeRomaji.js';
+import { renderStudy, renderQuiz } from './games/practice.js';
 
 // ── Grid section definitions ──────────────────────────────────────────────────
 
@@ -160,13 +158,10 @@ const PRESENTERS = {
 
 // ── App state ─────────────────────────────────────────────────────────────────
 
-// Forward "journey" through a set of items, hardest-last.
-const MODE_CHAIN  = ['learn', 'match', 'type'];
-const MODE_LABELS = { learn: 'Learn', match: 'Match', type: 'Type' };
-
 let _manifest      = null;
 let _audioAvailable = false;
-let _activeMode    = 'learn';
+let _activeMode    = 'study';
+let _studyFmt      = 'flash';
 let _sessionItems  = null;
 let _activeTrack   = null;
 let _activeLevel   = null;   // current level object (set when in 'level' or 'skill' view)
@@ -190,28 +185,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     else if (_view === 'level') { _view = 'path'; _activeLevel = null; renderHomeContent(); }
   });
 
-  // Session back button
-  document.getElementById('jp-back-btn')?.addEventListener('click', () => {
-    showHomeView();
-    renderHomeContent();
+  // Mode tiles (in session view)
+  document.getElementById('jp-tile-study')?.addEventListener('click', () => {
+    if (!_sessionItems?.length || _activeMode === 'study') return;
+    _activeMode = 'study';
+    runGame();
+  });
+  document.getElementById('jp-tile-quiz')?.addEventListener('click', () => {
+    if (!_sessionItems?.length || _activeMode === 'quiz') return;
+    _activeMode = 'quiz';
+    runGame();
   });
 
-  // Mode tabs (in session view)
-  document.querySelectorAll('.jp-mode-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      if (!_sessionItems?.length) return;
-      _activeMode = tab.dataset.mode;
-      document.querySelectorAll('.jp-mode-tab').forEach(t =>
-        t.classList.toggle('active', t.dataset.mode === _activeMode));
-      runGame();
-    });
-  });
-
-  // Difficulty control (in session view) — persists and re-runs current game
-  document.querySelectorAll('.jp-diff-btn').forEach(btn => {
+  // Study format pills
+  document.querySelectorAll('.jp-study-fmt-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      if (!_sessionItems?.length) return;
-      setDifficulty(btn.dataset.diff);
+      if (!_sessionItems?.length || _studyFmt === btn.dataset.fmt) return;
+      _studyFmt = btn.dataset.fmt;
       runGame();
     });
   });
@@ -389,6 +379,8 @@ function renderLevelView(level, container) {
 // ── Skill home (grid / deck) ──────────────────────────────────────────────────
 
 function renderSkillHome(track, container) {
+  _activeMode = 'study';
+  _studyFmt   = 'flash';
   const progress = getProgress(track.id);
 
   const ctaBtn  = document.getElementById('jp-cta-btn');
@@ -538,8 +530,12 @@ function renderSoonPanel(meta, container) {
 // ── View swap ─────────────────────────────────────────────────────────────────
 
 function showHomeView() {
-  document.getElementById('jp-home-view').hidden   = false;
+  document.getElementById('jp-home-view').hidden    = false;
   document.getElementById('jp-session-view').hidden = true;
+  const sep   = document.getElementById('jp-breadcrumb-sep');
+  const crumb = document.getElementById('jp-breadcrumb-session');
+  if (sep)   sep.hidden   = true;
+  if (crumb) crumb.hidden = true;
   _sessionItems = null;
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -553,16 +549,16 @@ function showSessionView() {
 
 function startSession({ mode, items, label }) {
   if (!items?.length) return;
-  _activeMode   = mode || 'learn';
+  _activeMode   = mode || 'study';
   _sessionItems = items;
 
-  const titleEl = document.getElementById('jp-session-title');
-  if (titleEl) titleEl.textContent = label || '';
+  const sep   = document.getElementById('jp-breadcrumb-sep');
+  const crumb = document.getElementById('jp-breadcrumb-session');
+  if (sep)   sep.hidden   = false;
+  if (crumb) { crumb.hidden = false; crumb.textContent = label || ''; }
 
   showSessionView();
   runGame();
-
-  document.getElementById('jp-session-view')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function runGame() {
@@ -572,45 +568,35 @@ function runGame() {
   if (!area) return;
   area.innerHTML = '';
 
-  document.querySelectorAll('.jp-mode-tab').forEach(t => {
-    const on = t.dataset.mode === _activeMode;
-    t.classList.toggle('active', on);
-    t.setAttribute('aria-selected', on);
-  });
+  // Sync tile active state
+  const studyTile = document.getElementById('jp-tile-study');
+  const quizTile  = document.getElementById('jp-tile-quiz');
+  if (studyTile) {
+    studyTile.classList.toggle('active', _activeMode === 'study');
+    studyTile.setAttribute('aria-pressed', _activeMode === 'study');
+  }
+  if (quizTile) {
+    quizTile.classList.toggle('active', _activeMode === 'quiz');
+    quizTile.setAttribute('aria-pressed', _activeMode === 'quiz');
+  }
 
-  const level = getDifficulty();
-  const cfg   = DIFFICULTY[level] || DIFFICULTY.medium;
-
-  // Sync difficulty control UI
-  document.querySelectorAll('.jp-diff-btn').forEach(b => {
-    const on = b.dataset.diff === level;
-    b.classList.toggle('active', on);
-    b.setAttribute('aria-checked', on);
-  });
+  // Show/hide and sync study format pills
+  const fmtBar = document.getElementById('jp-study-formats');
+  if (fmtBar) {
+    fmtBar.hidden = (_activeMode !== 'study');
+    fmtBar.querySelectorAll('.jp-study-fmt-btn').forEach(b =>
+      b.classList.toggle('active', b.dataset.fmt === _studyFmt));
+  }
 
   const onComplete = () => {
     showHomeView();
     renderHomeContent();
   };
 
-  const sessionMode = _activeMode; // lock mode at game-start; run() must not drift to whatever _activeMode is at click time
   const journey = {
-    // null → whole skill mastered (end screens show celebration + Done only).
     next() {
       const progress = getProgress(track.id);
       if (isSkillMastered(track, progress)) return null;
-
-      // Walk the mode chain on the same items: Learn → Match → Type.
-      const i = MODE_CHAIN.indexOf(sessionMode);
-      const nextMode = i >= 0 && i < MODE_CHAIN.length - 1 ? MODE_CHAIN[i + 1] : null;
-      if (nextMode) {
-        return {
-          label: `Continue to ${MODE_LABELS[nextMode]} →`,
-          run: () => { _activeMode = nextMode; runGame(); },
-        };
-      }
-
-      // End of the chain (finished Type): flow into the next content set.
       const focus = getNextFocus(track, progress);
       return {
         label: `${focus.label} →`,
@@ -619,11 +605,9 @@ function runGame() {
     },
   };
 
-  if (_activeMode === 'learn') {
-    renderLearnCard(area, _sessionItems, track.id, presenter, _audioAvailable, cfg, onComplete, journey);
-  } else if (_activeMode === 'match') {
-    renderSoundMatch(area, _sessionItems, track.items, track.id, presenter, _audioAvailable, cfg, onComplete, journey);
-  } else if (_activeMode === 'type') {
-    renderTypeRomaji(area, _sessionItems, track.id, presenter, _audioAvailable, cfg, onComplete, journey);
+  if (_activeMode === 'study') {
+    renderStudy(area, _sessionItems, track.items, track.id, presenter, _audioAvailable, _studyFmt, onComplete, journey);
+  } else {
+    renderQuiz(area, _sessionItems, track.items, track.id, presenter, _audioAvailable, onComplete, journey);
   }
 }

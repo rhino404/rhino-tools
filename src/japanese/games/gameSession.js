@@ -7,6 +7,13 @@
 //   firstTry && !correct → markResult(false)          — first-try wrong (seen, no increment)
 //   else                 → markSeen()                 — retry or replay re-hit (never inflates)
 
+// Draws a reshuffled permutation, refilling when empty → balanced over each cycle.
+// e.g. createBag(['match','type'])  or  createBag(['flash','flash','match','type'])
+export function createBag(values, shuffle = defaultShuffle) {
+  let queue = [];
+  return { next() { if (!queue.length) queue = shuffle(values.slice()); return queue.shift(); } };
+}
+
 export function defaultShuffle(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {

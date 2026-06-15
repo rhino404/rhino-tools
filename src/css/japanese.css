@@ -237,55 +237,75 @@
 body.light-mode .jp-grid-cell--seen     { background: rgba(245, 158, 11, 0.12); }
 body.light-mode .jp-grid-cell--mastered { background: rgba(34, 197, 94, 0.13); }
 
-/* ── Session controls row (mode tabs + difficulty) ───────────── */
+/* ── Session controls row (mode tiles) ────────────────────────── */
 .jp-session-controls {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0.75rem;
-  flex-wrap: wrap;
   margin-bottom: 1rem;
 }
-.jp-session-controls .jp-mode-tabs { margin-bottom: 0; flex-wrap: wrap; }
 
-/* ── Difficulty segmented control ─────────────────────────────── */
-.jp-difficulty {
+/* ── Mode tiles (Study / Quiz) ────────────────────────────────── */
+.jp-mode-tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+.jp-mode-tile {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
-  flex-wrap: wrap;
-}
-.jp-difficulty-label {
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--color-text-secondary);
-  margin-right: 0.2rem;
-  white-space: nowrap;
-}
-.jp-diff-btn {
-  padding: 0.28rem 0.65rem;
-  border-radius: 6px;
+  gap: 0.2rem;
+  padding: 0.85rem 0.75rem 0.75rem;
+  border-radius: 12px;
   border: 1.5px solid var(--color-border);
   background: transparent;
   color: var(--color-text-secondary);
-  font-size: 0.78rem;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: border-color 0.15s, background 0.15s, color 0.15s, opacity 0.15s, box-shadow 0.15s;
+  text-align: center;
+}
+.jp-mode-tile:hover:not(.active) {
+  opacity: 0.75;
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+.jp-mode-tile.active {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: #fff;
+  opacity: 1;
+  box-shadow: 0 2px 14px rgba(26, 175, 94, 0.35);
+}
+.jp-tile-icon  { font-size: 1.4rem; line-height: 1; }
+.jp-tile-title { font-size: 0.95rem; font-weight: 700; }
+
+/* ── Study format pills (Flashcards / Match / Type) ───────────── */
+.jp-study-formats {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.jp-study-fmt-btn {
+  padding: 0.3rem 0.9rem;
+  border-radius: 99px;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 0.82rem;
   font-weight: 500;
   cursor: pointer;
   transition: border-color 0.15s, color 0.15s, background 0.15s;
   white-space: nowrap;
 }
-.jp-diff-btn:hover:not(.active) { border-color: rgba(255,255,255,0.5); color: var(--color-text); }
-.jp-diff-btn.active {
-  border-color: #fff;
-  background: #fff;
-  color: #111;
-  font-weight: 700;
-  box-shadow: 0 2px 8px rgba(255,255,255,0.2);
+.jp-study-fmt-btn:hover:not(.active) {
+  border-color: var(--color-accent);
+  color: var(--color-text);
 }
-.jp-diff-btn.active::before {
-  content: '✓ ';
+.jp-study-fmt-btn.active {
+  border-color: var(--color-accent);
+  background: rgba(26, 175, 94, 0.15);
+  color: var(--color-accent);
+  font-weight: 600;
 }
 
 /* ── Collapsible blocks (Learn card) ──────────────────────────── */
@@ -358,63 +378,6 @@ body.light-mode .jp-grid-cell--mastered { background: rgba(34, 197, 94, 0.13); }
 .jp-hint--hidden { display: none; }
 
 /* ── Session view ─────────────────────────────────────────────── */
-.jp-session-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 0 1rem;
-  border-bottom: 1.5px solid var(--color-border);
-  margin-bottom: 1rem;
-}
-.jp-back-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.4rem 0.9rem;
-  border-radius: 8px;
-  border: 1.5px solid var(--color-border);
-  background: transparent;
-  color: var(--color-text-secondary);
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
-  white-space: nowrap;
-}
-.jp-back-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
-.jp-session-title {
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
-  flex: 1;
-  font-weight: 500;
-}
-
-/* ── Mode tabs ────────────────────────────────────────────────── */
-.jp-mode-tabs {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 0;
-}
-.jp-mode-tab {
-  padding: 0.4rem 1rem;
-  border-radius: 8px;
-  border: 1.5px solid var(--color-border);
-  background: transparent;
-  color: var(--color-text-secondary);
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s, background 0.15s;
-}
-.jp-mode-tab:hover:not(:disabled):not(.active) { border-color: rgba(255,255,255,0.5); color: var(--color-text); }
-.jp-mode-tab.active {
-  border-color: #fff;
-  background: #fff;
-  color: #111;
-  font-weight: 700;
-  box-shadow: 0 2px 10px rgba(255,255,255,0.25);
-}
-.jp-mode-tab:disabled { opacity: 0.4; cursor: default; }
 
 /* ── Game area ────────────────────────────────────────────────── */
 .jp-game-area {
@@ -515,7 +478,7 @@ body.light-mode .jp-grid-cell--mastered { background: rgba(34, 197, 94, 0.13); }
 .jp-audio-btn:disabled { opacity: 0.4; cursor: default; }
 
 /* Card nav */
-.jp-card-nav { display: flex; align-items: center; gap: 1.5rem; margin-top: 0.5rem; }
+.jp-card-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 0.5rem; width: 100%; }
 .jp-card-nav-btn {
   padding: 0.5rem 1.25rem;
   border-radius: 8px;
@@ -534,7 +497,20 @@ body.light-mode .jp-grid-cell--mastered { background: rgba(34, 197, 94, 0.13); }
   color: #fff;
 }
 .jp-card-nav-btn--primary:hover { opacity: 0.9; }
-.jp-card-counter { font-size: 0.8rem; color: var(--color-text-secondary); }
+
+/* Exit link (Match / Type) */
+.jp-session-exit {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: color 0.15s;
+  margin-top: 0.25rem;
+}
+.jp-session-exit:hover { color: var(--color-accent); }
 
 /* ── Match game ───────────────────────────────────────────────── */
 .jp-match-prompt {
@@ -631,26 +607,48 @@ body.light-mode .jp-grid-cell--mastered { background: rgba(34, 197, 94, 0.13); }
 .jp-type-feedback.incorrect { color: #ef4444; }
 .jp-hint { font-size: 0.9rem; color: var(--color-text-secondary); text-align: center; }
 
-/* ── Session progress bar ─────────────────────────────────────── */
-.jp-session-bar { width: 100%; max-width: 400px; }
-.jp-session-bar-track {
-  height: 5px;
-  background: var(--color-border);
-  border-radius: 999px;
-  overflow: hidden;
-}
-.jp-session-bar-fill {
-  height: 100%;
-  background: var(--color-accent);
-  border-radius: 999px;
-  transition: width 0.3s ease;
-}
-.jp-session-label {
-  font-size: 0.75rem;
-  color: var(--color-text-secondary);
+/* ── Session sticky controls + quiz progress bar ──────────────── */
+.jp-session-sticky {
+  position: sticky;
+  top: var(--site-header-h, 4rem);
+  z-index: 10;
+  background: var(--color-bg);
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.3rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+.jp-session-sticky .jp-session-controls { margin-bottom: 0; }
+.jp-session-sticky .jp-study-formats    { margin-bottom: 0; }
+.jp-quiz-progress-track {
+  width: 100%;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+body.light-mode .jp-quiz-progress-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+.jp-quiz-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #16a34a 0%, #4ade80 100%);
+  border-radius: 999px;
+  transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 14px 3px rgba(74, 222, 128, 0.65);
+  min-width: 0;
+  will-change: width;
+}
+.jp-quiz-progress-label {
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-top: 0.35rem;
+  letter-spacing: 0.05em;
 }
 
 /* ── Score screen ─────────────────────────────────────────────── */
@@ -834,14 +832,6 @@ body.light-mode .jp-deck-item--mastered { background: rgba(34, 197, 94, 0.13); }
   .jp-type-input-row { flex-direction: column; }
   .jp-type-submit { width: 100%; }
 
-  /* Mode tabs — equal-width, fill the row */
-  .jp-mode-tabs { width: 100%; }
-  .jp-mode-tab { flex: 1; text-align: center; padding: 0.4rem 0.5rem; }
-
-  /* Difficulty row — hide label, equal-width buttons */
-  .jp-difficulty-label { display: none; }
-  .jp-difficulty { width: 100%; gap: 0.4rem; }
-  .jp-diff-btn { flex: 1; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1175,6 +1165,5 @@ body.light-mode .jp-deck-item--mastered { background: rgba(34, 197, 94, 0.13); }
   .jp-level-skills { grid-template-columns: 1fr; }
   .jp-level-node { padding: 0.8rem 1rem; }
   .jp-level-node-icon { font-size: 1.6rem; width: 2rem; }
-  .jp-session-controls { flex-direction: column; gap: 0.5rem; }
-  .jp-difficulty { justify-content: flex-start; }
+  .jp-session-controls { gap: 0.5rem; }
 }
