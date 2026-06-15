@@ -211,15 +211,15 @@ export function getNextFocus(track, progress) {
     if (!unlocked.has(stage.id)) continue;
     const items = itemsInStage(track, stage);
     if (items.some(it => !progress[it.id]?.seen)) {
-      return { mode: 'learn', stage, items, label: `Start: ${stage.label}` };
+      return { mode: 'study', stage, items, label: `Start: ${stage.label}` };
     }
   }
   const weak = getWeakItems(track, progress);
   if (weak.length) {
-    return { mode: 'match', items: weak, label: `Review ${weak.length} weak` };
+    return { mode: 'quiz', items: weak, label: `Review ${weak.length} weak` };
   }
   const unlockedItems = track.items.filter(it => isItemUnlocked(track, it, progress));
-  return { mode: 'match', items: unlockedItems, label: 'Review all', allMastered: true };
+  return { mode: 'quiz', items: unlockedItems, label: 'Review all', allMastered: true };
 }
 
 // Derive a kana's vowel column (a/i/u/e/o) from its romaji. Returns null for ん.
@@ -240,28 +240,10 @@ export function kanaSizeClass(text) {
   return 'jp-kana-display--xs';
 }
 
-// ── Difficulty settings ───────────────────────────────────────────────────────
+// ── Session configs (fixed — replaces per-user difficulty selection) ──────────
 
-const DIFFICULTY_KEY = 'jp-difficulty';
-const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
-
-export const DIFFICULTY = {
-  easy:   { learn: { answer: true,  details: true  }, match: { choices: 4, sim: 'low'   }, hint: 'always' },
-  medium: { learn: { answer: true,  details: false }, match: { choices: 4, sim: 'group' }, hint: 'ontap'  },
-  hard:   { learn: { answer: false, details: false }, match: { choices: 6, sim: 'tight' }, hint: 'none'   },
-};
-
-export function getDifficulty() {
-  try {
-    const d = localStorage.getItem(DIFFICULTY_KEY);
-    return DIFFICULTY_LEVELS.includes(d) ? d : 'medium';
-  } catch { return 'medium'; }
-}
-
-export function setDifficulty(level) {
-  if (!DIFFICULTY_LEVELS.includes(level)) return;
-  try { localStorage.setItem(DIFFICULTY_KEY, level); } catch {}
-}
+export const STUDY_CONFIG = { match: { choices: 4, sim: 'group' }, hint: 'always' };
+export const QUIZ_CONFIG  = { match: { choices: 6, sim: 'tight' }, hint: 'none'   };
 
 // ── Audio (clips deferred — UI auto-hides buttons until they exist) ───────────
 

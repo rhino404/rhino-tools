@@ -7,7 +7,7 @@ import assert from 'node:assert/strict';
 
 // Inject identity shuffle so test scenarios are deterministic.
 const identity = a => a;
-const { createGameSession } = await import('../games/gameSession.js');
+const { createGameSession, createBag } = await import('../games/gameSession.js');
 const make = (items, maxItems = 12) => createGameSession(items, { maxItems, shuffle: identity });
 
 const ITEMS = [
@@ -167,6 +167,33 @@ test('maxItems cap applied at session start', () => {
 });
 
 // ── restart() ────────────────────────────────────────────────────────────────
+
+// ── createBag ────────────────────────────────────────────────────────────────
+
+test('createBag: balanced over one cycle (identity shuffle)', () => {
+  const bag = createBag(['match', 'type'], identity);
+  assert.equal(bag.next(), 'match');
+  assert.equal(bag.next(), 'type');
+  // Cycle resets on next call
+  assert.equal(bag.next(), 'match');
+  assert.equal(bag.next(), 'type');
+});
+
+test('createBag: weighted multiset distributes correctly over cycle', () => {
+  const bag = createBag(['flash', 'flash', 'match', 'type'], identity);
+  const cycle = [bag.next(), bag.next(), bag.next(), bag.next()];
+  assert.deepEqual(cycle, ['flash', 'flash', 'match', 'type']);
+  // Refills on next draw
+  assert.equal(bag.next(), 'flash');
+});
+
+test('createBag: uses provided shuffle so output is deterministic under identity', () => {
+  const bag = createBag(['a', 'b', 'c'], identity);
+  assert.equal(bag.next(), 'a');
+  assert.equal(bag.next(), 'b');
+  assert.equal(bag.next(), 'c');
+  assert.equal(bag.next(), 'a'); // refilled
+});
 
 test('restart resets per-play state: idx, correct, session length', () => {
   const g = make(ITEMS);

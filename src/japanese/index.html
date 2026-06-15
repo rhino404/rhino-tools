@@ -53,7 +53,7 @@
   <link rel="stylesheet" href="/css/theme.css?v=7978a3ce" />
   <link rel="stylesheet" href="/css/chrome.css?v=e8580f28" />
 <!-- chrome-assets:end -->
-  <link rel="stylesheet" href="/css/japanese.css?v=20260614a" />
+  <link rel="stylesheet" href="/css/japanese.css?v=20260614c" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
@@ -193,6 +193,8 @@
         <li><a href="/" style="color:var(--color-text-secondary);text-decoration:none">Ryno Tools</a></li>
         <li aria-hidden="true">/</li>
         <li aria-current="page" style="color:var(--color-text-primary)">Japanese</li>
+        <li id="jp-breadcrumb-sep" aria-hidden="true" hidden>/</li>
+        <li id="jp-breadcrumb-session" hidden style="color:var(--color-text-primary)"></li>
       </ol>
     </nav>
 
@@ -220,22 +222,31 @@
     <!-- ═══ Session view (hidden until a session starts) ═══════════════════ -->
     <div id="jp-session-view" hidden>
 
-      <div class="jp-session-header">
-        <button id="jp-back-btn" class="jp-back-btn">← Back</button>
-        <span id="jp-session-title" class="jp-session-title"></span>
-      </div>
-
-      <div class="jp-session-controls">
-        <div class="jp-mode-tabs" role="tablist" aria-label="Practice mode">
-          <button class="jp-mode-tab active" data-mode="learn" role="tab" aria-selected="true">Learn</button>
-          <button class="jp-mode-tab" data-mode="match" role="tab" aria-selected="false">Match</button>
-          <button class="jp-mode-tab" data-mode="type"  role="tab" aria-selected="false">Type</button>
+      <div id="jp-session-sticky" class="jp-session-sticky">
+        <div class="jp-session-controls">
+          <div class="jp-mode-tiles" role="group" aria-label="Practice mode">
+            <button id="jp-tile-study" class="jp-mode-tile active" aria-pressed="true">
+              <span class="jp-tile-icon" aria-hidden="true">📖</span>
+              <span class="jp-tile-title">Study</span>
+            </button>
+            <button id="jp-tile-quiz" class="jp-mode-tile" aria-pressed="false">
+              <span class="jp-tile-icon" aria-hidden="true">🎯</span>
+              <span class="jp-tile-title">Quiz</span>
+            </button>
+          </div>
         </div>
-        <div class="jp-difficulty" role="radiogroup" aria-label="Difficulty">
-          <span class="jp-difficulty-label">Difficulty</span>
-          <button class="jp-diff-btn" data-diff="easy"   role="radio" aria-checked="false">Easy</button>
-          <button class="jp-diff-btn active" data-diff="medium" role="radio" aria-checked="true">Medium</button>
-          <button class="jp-diff-btn" data-diff="hard"   role="radio" aria-checked="false">Hard</button>
+
+        <div id="jp-study-formats" class="jp-study-formats" hidden>
+          <button class="jp-study-fmt-btn active" data-fmt="flash">Flashcards</button>
+          <button class="jp-study-fmt-btn" data-fmt="match">Match</button>
+          <button class="jp-study-fmt-btn" data-fmt="type">Type</button>
+        </div>
+
+        <div id="jp-quiz-progress" class="jp-quiz-progress" hidden>
+          <div class="jp-quiz-progress-track">
+            <div class="jp-quiz-progress-fill" id="jp-quiz-progress-fill"></div>
+          </div>
+          <div class="jp-quiz-progress-label" id="jp-quiz-progress-label"></div>
         </div>
       </div>
 
@@ -318,6 +329,6 @@
   <script src="/js/chrome.js?v=93713c89"></script>
 <!-- chrome-footer:end -->
 
-  <script type="module" src="/japanese/japanese.js?v=20260614a"></script>
+  <script type="module" src="/japanese/japanese.js?v=20260614c"></script>
 </body>
 </html>
