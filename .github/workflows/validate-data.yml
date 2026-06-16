@@ -64,5 +64,8 @@ jobs:
       - name: Check SW precaches all CSS
         run: node data-pipeline/check-sw-precache.mjs
 
+      - name: Check blog audio is in sync
+        run: node data-pipeline/generate-blog-audio.mjs --check
+
       - name: Run Japanese game tests
         run: node --test src/japanese/tests/*.test.mjs

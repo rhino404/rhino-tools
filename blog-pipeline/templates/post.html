@@ -56,7 +56,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 <!-- chrome-assets:start -->
 <!-- chrome-assets:end -->
-  <link rel="stylesheet" href="/css/blog.css?v=20260608b" />
+  <link rel="stylesheet" href="/css/blog.css?v=20260615a" />
 
   <!-- Structured Data: BlogPosting + BreadcrumbList -->
   <script type="application/ld+json">
@@ -154,10 +154,10 @@
           <span class="blog-sep">·</span>
           <span class="blog-reading-time">{{POST_READING_TIME}} min read</span>
         </div>
-        <p class="blog-disclosure">
-          <em>This article was drafted with AI assistance and reviewed by a human before publishing. Sources are listed below so you can verify everything yourself.</em>
-        </p>
+        {{POST_DISCLOSURE}}
       </header>
+
+      {{POST_AUDIO_PLAYER}}
 
       <div class="blog-body">
         {{POST_BODY_HTML}}
