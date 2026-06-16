@@ -409,6 +409,38 @@ body.light-mode .blog-card:hover {
 body.dark-mode .blog-disclosure { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.04); color: #a8aab8; }
 body.light-mode .blog-disclosure { border-color: rgba(0,0,0,0.15); background: rgba(0,0,0,0.03); color: #555; }
 
+/* Audio narration player — only rendered on posts with a committed MP3 */
+.blog-audio-player {
+  margin: 0 0 2rem;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid;
+}
+.blog-audio-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.blog-audio-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  padding-top: 0.15rem;
+  flex-shrink: 0;
+}
+.blog-audio-content { flex: 1; min-width: 0; }
+.blog-audio-label {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.blog-audio-player audio { width: 100%; display: block; }
+
+body.dark-mode .blog-audio-player { border-color: rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); }
+body.light-mode .blog-audio-player { border-color: rgba(0,0,0,0.1); background: rgba(0,0,0,0.03); }
+
 .blog-sep { opacity: 0.4; }
 
 /* Article body typography */

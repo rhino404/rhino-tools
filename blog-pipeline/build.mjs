@@ -7,6 +7,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { createHash } from 'crypto';
 import { injectChrome } from '../data-pipeline/sync-chrome.mjs';
 import { bumpServiceWorkerVersion } from '../data-pipeline/chrome/sw-version.mjs';
 
@@ -14,6 +15,10 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DRAFTS_DIR = join(ROOT, 'blog-pipeline', 'drafts');
 const TEMPLATES_DIR = join(ROOT, 'blog-pipeline', 'templates');
 const SRC_BLOG_DIR = join(ROOT, 'src', 'blog');
+const AUDIO_DIR = join(ROOT, 'src', 'blog', 'audio');
+// Manifest is kept outside src/ (not deployed) so the voice ID / timestamps
+// stay off the public site. Written by data-pipeline/generate-blog-audio.mjs.
+const AUDIO_MANIFEST = join(ROOT, 'blog-pipeline', 'audio-manifest.json');
 const CSS_DIR = join(ROOT, 'src', 'css');
 const POSTS_JSON = join(ROOT, 'blog-pipeline', 'posts.json');
 const SITEMAP = join(ROOT, 'src', 'sitemap.xml');
@@ -261,17 +266,39 @@ for (const file of draftFiles) {
     faqItems = typeof rawFaq === 'string' ? JSON.parse(rawFaq) : (Array.isArray(rawFaq) ? rawFaq : []);
   } catch { faqItems = []; }
 
-  parsedDrafts.push({ file, meta, slug, track, bodyHtml, sources, faqItems });
+  parsedDrafts.push({ file, meta, slug, track, bodyMd, bodyHtml, sources, faqItems });
 }
 
 // Sort by date descending so related posts appear newest-first
 parsedDrafts.sort((a, b) => b.meta.datePublished.localeCompare(a.meta.datePublished));
 
+// ── Audio narration support ────────────────────────────────────────────────────
+// generate-blog-audio.mjs writes src/blog/audio/<slug>.mp3 + manifest.json. We
+// only emit the player when a committed MP3 exists, and warn if its source hash
+// drifted. Hash input MUST match generate-blog-audio.mjs: title + "\n" + rawBody.
+let audioManifest = {};
+if (existsSync(AUDIO_MANIFEST)) {
+  try { audioManifest = JSON.parse(readFileSync(AUDIO_MANIFEST, 'utf8')); } catch { audioManifest = {}; }
+}
+function audioSourceHash(title, rawBody) {
+  return 'sha256:' + createHash('sha256').update(`${title}\n${rawBody}`).digest('hex');
+}
+
 // ── Phase 2: Build HTML for each post (full parsedDrafts list available) ──────
 const publishedPosts = [];
 
 for (const draft of parsedDrafts) {
-  const { file, meta, slug, track, bodyHtml, sources, faqItems } = draft;
+  const { file, meta, slug, track, bodyMd, bodyHtml, sources, faqItems } = draft;
+
+  // Audio narration: emit player only if a committed MP3 exists; warn on drift.
+  const hasAudio = existsSync(join(AUDIO_DIR, `${slug}.mp3`));
+  if (hasAudio) {
+    const entry = audioManifest[slug];
+    const currentHash = audioSourceHash(meta.title, bodyMd);
+    if (!entry || entry.textHash !== currentHash) {
+      console.warn(`⚠️  Audio for ${slug} may be stale — re-run: node data-pipeline/generate-blog-audio.mjs --slug ${slug}`);
+    }
+  }
 
   const faqSchemaJson = faqItems.length
     ? JSON.stringify({
@@ -307,6 +334,23 @@ for (const draft of parsedDrafts) {
     POST_DATE_MODIFIED: meta.dateModified || meta.datePublished,
     POST_DATE_FORMATTED: formatDate(meta.datePublished),
     POST_READING_TIME: meta.readingTime || '5',
+    POST_DISCLOSURE: hasAudio
+      ? `<p class="blog-disclosure"><em>This article was drafted with AI assistance and reviewed by a human before publishing. The audio narration was generated using an ElevenLabs voice. Sources are listed below so you can verify everything yourself.</em></p>`
+      : `<p class="blog-disclosure"><em>This article was drafted with AI assistance and reviewed by a human before publishing. Sources are listed below so you can verify everything yourself.</em></p>`,
+    POST_AUDIO_PLAYER: hasAudio
+      ? `<section class="blog-audio-player" aria-label="Listen to this article">
+        <div class="blog-audio-inner">
+          <span class="blog-audio-icon" aria-hidden="true">🎧</span>
+          <div class="blog-audio-content">
+            <p class="blog-audio-label">Listen to this article</p>
+            <audio controls preload="none">
+              <source src="/blog/audio/${slug}.mp3" type="audio/mpeg" />
+              Your browser does not support audio playback.
+            </audio>
+          </div>
+        </div>
+      </section>`
+      : '',
     POST_BODY_HTML: bodyHtml,
     POST_SOURCES_SECTION: sourcesHtml
       ? `<section class="blog-sources" aria-label="Sources">\n        <h2>Sources</h2>\n        <ul>\n          ${sourcesHtml}\n        </ul>\n      </section>`
