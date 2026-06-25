@@ -1,0 +1,358 @@
+[
+  {
+    "slug": "2026-technician-question-pool-changes",
+    "title": "What Changed in the 2026-2030 FCC Technician Question Pool",
+    "track": "ham-radio/technician",
+    "intentKeyword": "2026 technician question pool changes",
+    "status": "published",
+    "priority": "high",
+    "publishedDate": "2026-06-13",
+    "refreshBy": "2026-08-01",
+    "notes": "Time-sensitive: pool takes effect 2026-07-01. Re-check tense + 'upcoming' language after that date."
+  },
+  {
+    "slug": "falconry-license-requirements-by-state",
+    "title": "Falconry License Requirements by State: The Complete US Guide",
+    "track": "falconry/apprentice",
+    "intentKeyword": "falconry license requirements by state",
+    "status": "published",
+    "priority": "high",
+    "publishedDate": "2026-06-13",
+    "refreshBy": "2027-06-13",
+    "notes": "State permit rules drift; re-verify state-by-state table annually."
+  },
+  {
+    "slug": "sy0-701-vs-sy0-801-security-plus",
+    "title": "Security+ SY0-701 vs SY0-801: What Changes and Why You Should Test Now",
+    "track": "cybersecurity/sy0-701",
+    "intentKeyword": "sy0-701 vs sy0-801",
+    "status": "published",
+    "priority": "high",
+    "publishedDate": "2026-06-13",
+    "refreshBy": "2026-12-01",
+    "notes": "Time-sensitive: revisit when CompTIA announces SY0-801 launch/retirement dates."
+  },
+  {
+    "slug": "how-to-learn-hiragana",
+    "title": "How to Learn Hiragana: The Complete Beginner's Guide",
+    "track": "japanese/foundations",
+    "intentKeyword": "how to learn hiragana",
+    "status": "published",
+    "priority": "high",
+    "publishedDate": "2026-06-11"
+  },
+  {
+    "slug": "japanese-particles-guide",
+    "title": "Japanese Particles Explained for Beginners",
+    "track": "japanese/grammar",
+    "intentKeyword": "japanese particles for beginners",
+    "status": "published",
+    "priority": "medium",
+    "publishedDate": "2026-06-11"
+  },
+  {
+    "slug": "what-is-jlpt-n5",
+    "title": "What Is JLPT N5? The Beginner's Entry Point to Japanese Proficiency",
+    "track": "japanese/foundations",
+    "intentKeyword": "what is jlpt n5",
+    "status": "published",
+    "priority": "medium",
+    "publishedDate": "2026-06-11"
+  },
+  {
+    "slug": "what-is-cicd-beginners-guide",
+    "title": "What Is CI/CD? A Beginner's Guide to Continuous Integration and Delivery",
+    "track": "devops/core-concepts",
+    "intentKeyword": "what is ci/cd",
+    "status": "published",
+    "priority": "high",
+    "publishedDate": "2026-06-09"
+  },
+  {
+    "slug": "what-is-sli-slo-sla-devops",
+    "title": "What Is an SLI, SLO, and SLA?",
+    "track": "devops/core-concepts",
+    "intentKeyword": "sli vs slo vs sla",
+    "status": "published",
+    "priority": "medium",
+    "publishedDate": "2026-06-09"
+  },
+  {
+    "slug": "falconry-mews-housing-standards",
+    "title": "Falconry Mews & Housing Standards Every Apprentice Must Know",
+    "track": "falconry/apprentice",
+    "intentKeyword": "falconry mews requirements",
+    "status": "published",
+    "priority": "medium",
+    "publishedDate": "2026-06-08"
+  },
+  {
+    "slug": "ohms-law-technician-exam",
+    "title": "Ohm's Law Made Simple for the Ham Radio Technician Exam",
+    "track": "ham-radio/technician",
+    "intentKeyword": "ohm's law ham radio",
+    "status": "published",
+    "priority": "medium",
+    "publishedDate": "2026-06-08"
+  },
+  {
+    "slug": "symmetric-vs-asymmetric-encryption",
+    "title": "Symmetric vs. Asymmetric Encryption: A Security+ SY0-701 Primer",
+    "track": "cybersecurity/sy0-701",
+    "intentKeyword": "symmetric vs asymmetric encryption",
+    "status": "published",
+    "priority": "medium",
+    "publishedDate": "2026-06-08"
+  },
+  {
+    "slug": "ham-radio-exam-online-2026",
+    "title": "Can You Take the Ham Radio Exam Online in 2026?",
+    "track": "ham-radio/technician",
+    "intentKeyword": "ham radio exam online",
+    "status": "published",
+    "priority": "medium",
+    "publishedDate": "2026-06-07",
+    "refreshBy": "2027-01-01",
+    "notes": "Year in title/URL — refresh or re-slug for the new year."
+  },
+  {
+    "slug": "how-hard-is-ham-radio-technician-exam",
+    "title": "How Hard Is the Ham Radio Technician Exam?",
+    "track": "ham-radio/technician",
+    "intentKeyword": "how hard is the technician exam",
+    "status": "published",
+    "priority": "high",
+    "publishedDate": "2026-06-07"
+  },
+  {
+    "slug": "how-many-questions-falconry-apprentice-exam",
+    "title": "How Many Questions Are on the Falconry Apprentice Exam?",
+    "track": "falconry/apprentice",
+    "intentKeyword": "how many questions falconry apprentice exam",
+    "status": "published",
+    "priority": "medium",
+    "publishedDate": "2026-06-07"
+  },
+
+  {
+    "slug": "which-ham-radio-license-first",
+    "title": "Technician vs General vs Extra: Which Ham Radio License Should You Get First?",
+    "track": "ham-radio/technician",
+    "intentKeyword": "which ham radio license should I get",
+    "status": "queued",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "ARRL license class privileges; FCC Part 97 band plan.",
+    "notes": "High-intent comparison post; links to all three ham quiz tracks."
+  },
+  {
+    "slug": "what-can-you-do-technician-license",
+    "title": "What Can You Actually Do With a Technician License?",
+    "track": "ham-radio/technician",
+    "intentKeyword": "technician license privileges",
+    "status": "queued",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "FCC Part 97 Technician privileges; ARRL band chart."
+  },
+  {
+    "slug": "ham-radio-callsign-after-passing",
+    "title": "How to Get Your Callsign After Passing the Ham Exam",
+    "track": "ham-radio/technician",
+    "intentKeyword": "how to get ham radio callsign",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-08",
+    "sourcesHint": "FCC ULS / CORES registration; vanity callsign process."
+  },
+  {
+    "slug": "how-hard-is-general-exam",
+    "title": "How Hard Is the Ham Radio General Exam?",
+    "track": "ham-radio/general",
+    "intentKeyword": "how hard is the general exam",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-08",
+    "sourcesHint": "NCVEC General pool size, passing score; mirrors the Technician 'how hard' post."
+  },
+  {
+    "slug": "is-security-plus-worth-it-2026",
+    "title": "Is CompTIA Security+ Worth It in 2026?",
+    "track": "cybersecurity/sy0-701",
+    "intentKeyword": "is security+ worth it",
+    "status": "queued",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "DoD 8140; salary/jobs data; CompTIA certification value."
+  },
+  {
+    "slug": "how-hard-is-security-plus",
+    "title": "How Hard Is Security+? Questions, Passing Score, and Study Time",
+    "track": "cybersecurity/sy0-701",
+    "intentKeyword": "how hard is security+",
+    "status": "queued",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "CompTIA SY0-701 exam objectives: 90 questions, 750/900 passing score, 90 min."
+  },
+  {
+    "slug": "security-plus-study-plan",
+    "title": "Security+ Study Plan: How Long to Study for SY0-701",
+    "track": "cybersecurity/sy0-701",
+    "intentKeyword": "security+ study plan",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-08",
+    "sourcesHint": "CompTIA recommended experience; common study timelines."
+  },
+  {
+    "slug": "cia-triad-explained",
+    "title": "The CIA Triad Explained for Security+",
+    "track": "cybersecurity/sy0-701",
+    "intentKeyword": "cia triad",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-08",
+    "sourcesHint": "NIST definitions of confidentiality, integrity, availability."
+  },
+  {
+    "slug": "security-plus-common-ports",
+    "title": "Common Ports You Must Memorize for Security+",
+    "track": "cybersecurity/sy0-701",
+    "intentKeyword": "security+ ports to memorize",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-09",
+    "sourcesHint": "IANA port registry; CompTIA objectives port list."
+  },
+  {
+    "slug": "how-to-become-a-falconer",
+    "title": "How to Become a Falconer: A Step-by-Step Guide",
+    "track": "falconry/apprentice",
+    "intentKeyword": "how to become a falconer",
+    "status": "queued",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "USFWS migratory bird permit; apprentice sponsorship; state exam path."
+  },
+  {
+    "slug": "how-to-find-falconry-sponsor",
+    "title": "How to Find a Falconry Sponsor for Your Apprenticeship",
+    "track": "falconry/apprentice",
+    "intentKeyword": "how to find a falconry sponsor",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-08",
+    "sourcesHint": "NAFA / state falconry club directories; apprentice requirements."
+  },
+  {
+    "slug": "red-tailed-hawk-vs-kestrel-apprentice",
+    "title": "Red-Tailed Hawk vs Kestrel: Choosing Your First Apprentice Bird",
+    "track": "falconry/apprentice",
+    "intentKeyword": "best first falconry bird",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-09",
+    "sourcesHint": "Apprentice-legal species rules; husbandry differences."
+  },
+  {
+    "slug": "beginner-falconry-equipment-checklist",
+    "title": "Beginner Falconry Equipment Checklist",
+    "track": "falconry/apprentice",
+    "intentKeyword": "falconry equipment for beginners",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-09",
+    "sourcesHint": "Jesses, leash, swivel, glove, scale, mews, perch standards."
+  },
+  {
+    "slug": "hiragana-vs-katakana",
+    "title": "Hiragana vs Katakana: What's the Difference?",
+    "track": "japanese/foundations",
+    "intentKeyword": "hiragana vs katakana",
+    "status": "queued",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "Use cases for each kana set; loanwords; learning order."
+  },
+  {
+    "slug": "how-to-learn-katakana",
+    "title": "How to Learn Katakana Fast",
+    "track": "japanese/foundations",
+    "intentKeyword": "how to learn katakana",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-08",
+    "sourcesHint": "Mirror the hiragana post; katakana chart + mnemonics."
+  },
+  {
+    "slug": "jlpt-n5-vs-n4",
+    "title": "JLPT N5 vs N4: What's the Difference and Which to Take",
+    "track": "japanese/foundations",
+    "intentKeyword": "jlpt n5 vs n4",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-08",
+    "sourcesHint": "Official JLPT level descriptors; vocab/kanji counts."
+  },
+  {
+    "slug": "japanese-numbers-counting",
+    "title": "Japanese Numbers and Counting for Beginners",
+    "track": "japanese/grammar",
+    "intentKeyword": "japanese numbers",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-09",
+    "sourcesHint": "Counters, on'yomi numerals, common counting words."
+  },
+  {
+    "slug": "docker-vs-kubernetes",
+    "title": "Docker vs Kubernetes: What's the Difference?",
+    "track": "devops/containers-k8s",
+    "intentKeyword": "docker vs kubernetes",
+    "status": "queued",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "Docker docs; Kubernetes concepts; container runtime vs orchestrator."
+  },
+  {
+    "slug": "what-is-infrastructure-as-code",
+    "title": "What Is Infrastructure as Code?",
+    "track": "devops/iac",
+    "intentKeyword": "what is infrastructure as code",
+    "status": "queued",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "Terraform/CloudFormation; declarative vs imperative; idempotency."
+  },
+  {
+    "slug": "blue-green-vs-canary-deployment",
+    "title": "Blue-Green vs Canary Deployments Explained",
+    "track": "devops/cicd",
+    "intentKeyword": "blue green vs canary deployment",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-08",
+    "sourcesHint": "Deployment strategy tradeoffs; rollback; traffic shifting."
+  },
+  {
+    "slug": "three-pillars-of-observability",
+    "title": "The Three Pillars of Observability",
+    "track": "devops/observability",
+    "intentKeyword": "pillars of observability",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-08",
+    "sourcesHint": "Metrics, logs, traces; OpenTelemetry."
+  },
+  {
+    "slug": "essential-linux-commands-devops",
+    "title": "Essential Linux Commands Every DevOps Engineer Needs",
+    "track": "devops/linux",
+    "intentKeyword": "linux commands for devops",
+    "status": "idea",
+    "priority": "medium",
+    "targetMonth": "2026-09",
+    "sourcesHint": "File ops, permissions, processes, networking, text processing."
+  }
+]

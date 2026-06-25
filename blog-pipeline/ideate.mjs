@@ -11,7 +11,13 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATASETS_DIR = join(ROOT, 'src', 'datasets');
 const TAXONOMY_FILE = join(ROOT, 'data-pipeline', 'taxonomy.json');
 const POSTS_FILE = join(ROOT, 'blog-pipeline', 'posts.json');
+const BACKLOG_FILE = join(ROOT, 'blog-pipeline', 'backlog.json');
 const QUEUE_FILE = join(ROOT, 'blog-pipeline', 'queue.json');
+
+// A topic_label that is just a subelement code (T7, E9, G4, F8, **) makes a weak
+// blog title ("T7 — Study Guide"). The backlog holds the real, intent-driven
+// topics; these auto rows are raw signal only, so we flag and sink them.
+const LOW_VALUE_TOPIC = /^[*]+$|^[A-Z]{1,2}\d+$/;
 
 // Track config: maps dataset paths to blog metadata
 const TRACKS = [
@@ -40,6 +46,13 @@ function loadJson(path) {
 // Load existing published/ready posts to avoid re-suggesting covered topics
 const existingPosts = loadJson(POSTS_FILE) || [];
 const coveredTopics = new Set(existingPosts.flatMap(p => p.tags || []));
+
+// Load the curated backlog: it is the editorial source of truth. Count how many
+// rows already target each track so ideate can surface UNDER-served tracks
+// instead of re-suggesting topics a human already lined up.
+const backlog = loadJson(BACKLOG_FILE) || [];
+const backlogByTrack = {};
+for (const row of backlog) backlogByTrack[row.track] = (backlogByTrack[row.track] || 0) + 1;
 
 // Load taxonomy for tag vocabulary reference
 const taxonomy = loadJson(TAXONOMY_FILE);
@@ -77,12 +90,18 @@ for (const track of TRACKS) {
   }
 }
 
-// Score topics: more questions = richer material; penalize already-covered tags
+// Score topics: more questions = richer material; penalize already-covered tags,
+// flag low-value subelement-code topics, and boost tracks the backlog under-serves.
 const ideas = Object.values(topicMap).map(t => {
   const tags = [...t.tags];
   const alreadyCovered = tags.filter(tag => coveredTopics.has(tag)).length;
   const novelty = tags.length > 0 ? 1 - alreadyCovered / tags.length : 1;
-  const score = Math.round(t.questionCount * novelty);
+  const lowValue = LOW_VALUE_TOPIC.test(t.topic.trim());
+  // Under-served tracks (few/no curated backlog rows) get a gentle multiplier so
+  // they float above tracks the editorial calendar already covers well.
+  const backlogCount = backlogByTrack[t.trackKey] || 0;
+  const demand = 1 + 1 / (1 + backlogCount);
+  const score = Math.round(t.questionCount * novelty * demand);
   return {
     trackKey: t.trackKey,
     trackLabel: t.trackLabel,
@@ -90,19 +109,33 @@ const ideas = Object.values(topicMap).map(t => {
     topic: t.topic,
     tags,
     questionCount: t.questionCount,
+    backlogCount,
+    lowValue,
     noveltyScore: score,
     suggestedTitle: `${t.topic} — ${t.trackLabel} Study Guide`,
     notes: `${t.questionCount} questions covering this topic in the dataset. Tags: ${tags.join(', ') || 'none'}.`,
   };
 });
 
-// Sort by novelty score descending, then question count
-ideas.sort((a, b) => b.noveltyScore - a.noveltyScore || b.questionCount - a.questionCount);
+// Real topics first; low-value subelement codes always sink to the bottom.
+ideas.sort((a, b) =>
+  (a.lowValue ? 1 : 0) - (b.lowValue ? 1 : 0) ||
+  b.noveltyScore - a.noveltyScore ||
+  b.questionCount - a.questionCount);
 
 writeFileSync(QUEUE_FILE, JSON.stringify(ideas, null, 2));
 
-console.log(`✅ Wrote ${ideas.length} topic ideas to blog-pipeline/queue.json`);
-console.log('Top 10 ideas:');
-ideas.slice(0, 10).forEach((idea, i) => {
+const realIdeas = ideas.filter(i => !i.lowValue);
+console.log(`✅ Wrote ${ideas.length} topic ideas to blog-pipeline/queue.json (${realIdeas.length} usable, ${ideas.length - realIdeas.length} low-value subelement rows sunk).`);
+console.log('\nUnder-served tracks (fewest curated backlog rows):');
+Object.keys(backlogByTrack).length === 0
+  ? console.log('  (backlog.json empty — every track is open)')
+  : [...new Set(ideas.map(i => i.trackKey))]
+      .sort((a, b) => (backlogByTrack[a] || 0) - (backlogByTrack[b] || 0))
+      .slice(0, 5)
+      .forEach(tk => console.log(`  ${(backlogByTrack[tk] || 0).toString().padStart(2)} backlog rows — ${tk}`));
+console.log('\nTop 10 usable ideas:');
+realIdeas.slice(0, 10).forEach((idea, i) => {
   console.log(`  ${i + 1}. [${idea.trackKey}] ${idea.topic} (score: ${idea.noveltyScore}, questions: ${idea.questionCount})`);
 });
+console.log('\n→ Curate the winners into blog-pipeline/backlog.json, then: node blog-pipeline/backlog.mjs --next');
