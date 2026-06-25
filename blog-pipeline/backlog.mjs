@@ -26,7 +26,10 @@ const SCHEMA_FILE = join(ROOT, 'blog-pipeline', 'schema', 'post.schema.json');
 const SRC_BLOG_DIR = join(ROOT, 'src', 'blog');
 
 const TODAY = new Date().toISOString().slice(0, 10);
-const STATUS_ENUM = ['idea', 'queued', 'drafting', 'review', 'published', 'refresh-due'];
+// 'refresh-due' is intentionally absent: staleness is computed dynamically from
+// the refreshBy date by --stale, so a status flag for it would be redundant and
+// would cause --check to warn whenever CI runs after a post ages past refreshBy.
+const STATUS_ENUM = ['idea', 'queued', 'drafting', 'review', 'published'];
 const PRIORITY_ENUM = ['high', 'medium', 'low'];
 const PRIORITY_RANK = { high: 0, medium: 1, low: 2 };
 
@@ -86,12 +89,12 @@ function check() {
   }
 
   // Reverse drift: anything shipped that the backlog forgot about.
-  const backlogSlugs = new Set(backlog.map(r => r.slug));
+  const bySlug = new Map(backlog.map(r => [r.slug, r]));
   for (const p of posts) {
-    if (!backlogSlugs.has(p.slug)) {
+    if (!bySlug.has(p.slug)) {
       err(`posts.json has "${p.slug}" but backlog.json has no row for it — run: node blog-pipeline/backlog.mjs --sync`);
     } else {
-      const row = backlog.find(r => r.slug === p.slug);
+      const row = bySlug.get(p.slug);
       if (row.status !== 'published') {
         warn(`"${p.slug}" is shipped (in posts.json) but backlog status is "${row.status}" — run --sync`);
       }
@@ -180,6 +183,12 @@ function status() {
   for (const t of Object.keys(byTrack).sort()) console.log(`    ${t.padEnd(24)} ${byTrack[t]}`);
   const dueCount = backlog.filter(r => r.status === 'published' && r.refreshBy && r.refreshBy <= TODAY).length;
   if (dueCount) console.log(`\n  ⚠️  ${dueCount} post(s) past refreshBy — run --stale`);
+}
+
+const COMMANDS = ['--check', '--sync', '--next', '--stale', '--status'];
+if (cmd && !COMMANDS.includes(cmd)) {
+  console.error(`❌ Unknown command: ${cmd}\nUsage: node blog-pipeline/backlog.mjs [${COMMANDS.join('|')}]`);
+  process.exit(1);
 }
 
 switch (cmd) {
