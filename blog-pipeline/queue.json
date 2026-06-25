@@ -1,17 +1,746 @@
 [
   {
-    "trackKey": "ham-radio/technician",
-    "trackLabel": "ham-radio — Technician",
-    "trackIcon": "📻",
-    "kind": "pool-refresh",
-    "topic": "Technician pool refreshed (2026-2030)",
+    "trackKey": "falconry/apprentice",
+    "trackLabel": "Falconry — Apprentice",
+    "trackIcon": "🦅",
+    "topic": "Raptor Biology",
     "tags": [
-      "Whats New"
+      "General",
+      "Other Falconry Birds",
+      "Apprentice Birds"
     ],
-    "questionCount": 409,
-    "noveltyScore": 1000,
-    "suggestedTitle": "What's New in the 2026-2030 Question Pool",
-    "notes": "Technician refreshed to 2026-2030 (effective 2026-07-01). 409 questions. Announce what changed and link to the quiz."
+    "questionCount": 86,
+    "backlogCount": 7,
+    "lowValue": false,
+    "noveltyScore": 97,
+    "suggestedTitle": "Raptor Biology — Falconry — Apprentice Study Guide",
+    "notes": "86 questions covering this topic in the dataset. Tags: General, Other Falconry Birds, Apprentice Birds."
+  },
+  {
+    "trackKey": "falconry/apprentice",
+    "trackLabel": "Falconry — Apprentice",
+    "trackIcon": "🦅",
+    "topic": "Falconry Practices",
+    "tags": [
+      "Hunting and Training"
+    ],
+    "questionCount": 71,
+    "backlogCount": 7,
+    "lowValue": false,
+    "noveltyScore": 80,
+    "suggestedTitle": "Falconry Practices — Falconry — Apprentice Study Guide",
+    "notes": "71 questions covering this topic in the dataset. Tags: Hunting and Training."
+  },
+  {
+    "trackKey": "devops/cloud",
+    "trackLabel": "DevOps — Cloud Platforms",
+    "trackIcon": "⚙️",
+    "topic": "Networking & Security",
+    "tags": [
+      "cloud",
+      "networking",
+      "security"
+    ],
+    "questionCount": 10,
+    "backlogCount": 0,
+    "lowValue": false,
+    "noveltyScore": 20,
+    "suggestedTitle": "Networking & Security — DevOps — Cloud Platforms Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: cloud, networking, security."
+  },
+  {
+    "trackKey": "devops/networking",
+    "trackLabel": "DevOps — Networking for DevOps",
+    "trackIcon": "⚙️",
+    "topic": "TCP/IP & Routing",
+    "tags": [
+      "networking",
+      "reliability",
+      "security",
+      "linux",
+      "troubleshooting",
+      "cloud"
+    ],
+    "questionCount": 10,
+    "backlogCount": 0,
+    "lowValue": false,
+    "noveltyScore": 17,
+    "suggestedTitle": "TCP/IP & Routing — DevOps — Networking for DevOps Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: networking, reliability, security, linux, troubleshooting, cloud."
+  },
+  {
+    "trackKey": "devops/cloud",
+    "trackLabel": "DevOps — Cloud Platforms",
+    "trackIcon": "⚙️",
+    "topic": "GCP & Azure Patterns",
+    "tags": [
+      "cloud",
+      "security",
+      "kubernetes",
+      "automation",
+      "networking"
+    ],
+    "questionCount": 10,
+    "backlogCount": 0,
+    "lowValue": false,
+    "noveltyScore": 16,
+    "suggestedTitle": "GCP & Azure Patterns — DevOps — Cloud Platforms Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: cloud, security, kubernetes, automation, networking."
+  },
+  {
+    "trackKey": "devops/containers-k8s",
+    "trackLabel": "DevOps — Containers & Kubernetes",
+    "trackIcon": "⚙️",
+    "topic": "Services & Networking",
+    "tags": [
+      "kubernetes",
+      "networking",
+      "cloud",
+      "security",
+      "troubleshooting"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 15,
+    "suggestedTitle": "Services & Networking — DevOps — Containers & Kubernetes Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: kubernetes, networking, cloud, security, troubleshooting."
+  },
+  {
+    "trackKey": "devops/linux",
+    "trackLabel": "DevOps — Linux Fundamentals",
+    "trackIcon": "⚙️",
+    "topic": "Filesystems & Storage",
+    "tags": [
+      "linux",
+      "troubleshooting"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 15,
+    "suggestedTitle": "Filesystems & Storage — DevOps — Linux Fundamentals Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: linux, troubleshooting."
+  },
+  {
+    "trackKey": "devops/linux",
+    "trackLabel": "DevOps — Linux Fundamentals",
+    "trackIcon": "⚙️",
+    "topic": "Networking Basics",
+    "tags": [
+      "linux",
+      "networking",
+      "troubleshooting",
+      "security"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 15,
+    "suggestedTitle": "Networking Basics — DevOps — Linux Fundamentals Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: linux, networking, troubleshooting, security."
+  },
+  {
+    "trackKey": "devops/networking",
+    "trackLabel": "DevOps — Networking for DevOps",
+    "trackIcon": "⚙️",
+    "topic": "DNS & Name Resolution",
+    "tags": [
+      "networking",
+      "troubleshooting",
+      "reliability",
+      "security"
+    ],
+    "questionCount": 10,
+    "backlogCount": 0,
+    "lowValue": false,
+    "noveltyScore": 15,
+    "suggestedTitle": "DNS & Name Resolution — DevOps — Networking for DevOps Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: networking, troubleshooting, reliability, security."
+  },
+  {
+    "trackKey": "devops/networking",
+    "trackLabel": "DevOps — Networking for DevOps",
+    "trackIcon": "⚙️",
+    "topic": "TLS & Certificate Management",
+    "tags": [
+      "networking",
+      "security",
+      "reliability",
+      "troubleshooting"
+    ],
+    "questionCount": 10,
+    "backlogCount": 0,
+    "lowValue": false,
+    "noveltyScore": 15,
+    "suggestedTitle": "TLS & Certificate Management — DevOps — Networking for DevOps Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: networking, security, reliability, troubleshooting."
+  },
+  {
+    "trackKey": "devops/networking",
+    "trackLabel": "DevOps — Networking for DevOps",
+    "trackIcon": "⚙️",
+    "topic": "Load Balancers & Proxies",
+    "tags": [
+      "networking",
+      "reliability",
+      "troubleshooting",
+      "security"
+    ],
+    "questionCount": 10,
+    "backlogCount": 0,
+    "lowValue": false,
+    "noveltyScore": 15,
+    "suggestedTitle": "Load Balancers & Proxies — DevOps — Networking for DevOps Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: networking, reliability, troubleshooting, security."
+  },
+  {
+    "trackKey": "devops/networking",
+    "trackLabel": "DevOps — Networking for DevOps",
+    "trackIcon": "⚙️",
+    "topic": "HTTP & Application Protocols",
+    "tags": [
+      "networking",
+      "reliability",
+      "security",
+      "troubleshooting"
+    ],
+    "questionCount": 10,
+    "backlogCount": 0,
+    "lowValue": false,
+    "noveltyScore": 15,
+    "suggestedTitle": "HTTP & Application Protocols — DevOps — Networking for DevOps Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: networking, reliability, security, troubleshooting."
+  },
+  {
+    "trackKey": "devops/cloud",
+    "trackLabel": "DevOps — Cloud Platforms",
+    "trackIcon": "⚙️",
+    "topic": "Cloud Fundamentals",
+    "tags": [
+      "cloud",
+      "security",
+      "reliability",
+      "networking"
+    ],
+    "questionCount": 10,
+    "backlogCount": 0,
+    "lowValue": false,
+    "noveltyScore": 15,
+    "suggestedTitle": "Cloud Fundamentals — DevOps — Cloud Platforms Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: cloud, security, reliability, networking."
+  },
+  {
+    "trackKey": "devops/iac",
+    "trackLabel": "DevOps — Infrastructure as Code",
+    "trackIcon": "⚙️",
+    "topic": "Terraform State & Modules",
+    "tags": [
+      "iac",
+      "cloud",
+      "troubleshooting",
+      "automation"
+    ],
+    "questionCount": 12,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 14,
+    "suggestedTitle": "Terraform State & Modules — DevOps — Infrastructure as Code Study Guide",
+    "notes": "12 questions covering this topic in the dataset. Tags: iac, cloud, troubleshooting, automation."
+  },
+  {
+    "trackKey": "devops/linux",
+    "trackLabel": "DevOps — Linux Fundamentals",
+    "trackIcon": "⚙️",
+    "topic": "Users & Permissions",
+    "tags": [
+      "linux",
+      "security"
+    ],
+    "questionCount": 9,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 14,
+    "suggestedTitle": "Users & Permissions — DevOps — Linux Fundamentals Study Guide",
+    "notes": "9 questions covering this topic in the dataset. Tags: linux, security."
+  },
+  {
+    "trackKey": "devops/iac",
+    "trackLabel": "DevOps — Infrastructure as Code",
+    "trackIcon": "⚙️",
+    "topic": "Terraform Core",
+    "tags": [
+      "iac",
+      "automation",
+      "troubleshooting",
+      "security"
+    ],
+    "questionCount": 11,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 12,
+    "suggestedTitle": "Terraform Core — DevOps — Infrastructure as Code Study Guide",
+    "notes": "11 questions covering this topic in the dataset. Tags: iac, automation, troubleshooting, security."
+  },
+  {
+    "trackKey": "devops/linux",
+    "trackLabel": "DevOps — Linux Fundamentals",
+    "trackIcon": "⚙️",
+    "topic": "Shell & Text Processing",
+    "tags": [
+      "linux",
+      "automation",
+      "troubleshooting"
+    ],
+    "questionCount": 11,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 11,
+    "suggestedTitle": "Shell & Text Processing — DevOps — Linux Fundamentals Study Guide",
+    "notes": "11 questions covering this topic in the dataset. Tags: linux, automation, troubleshooting."
+  },
+  {
+    "trackKey": "devops/containers-k8s",
+    "trackLabel": "DevOps — Containers & Kubernetes",
+    "trackIcon": "⚙️",
+    "topic": "Pods & Workloads",
+    "tags": [
+      "kubernetes",
+      "observability",
+      "troubleshooting",
+      "security"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 11,
+    "suggestedTitle": "Pods & Workloads — DevOps — Containers & Kubernetes Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: kubernetes, observability, troubleshooting, security."
+  },
+  {
+    "trackKey": "devops/containers-k8s",
+    "trackLabel": "DevOps — Containers & Kubernetes",
+    "trackIcon": "⚙️",
+    "topic": "Container Fundamentals",
+    "tags": [
+      "containers",
+      "linux",
+      "kubernetes",
+      "reliability",
+      "security"
+    ],
+    "questionCount": 9,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 11,
+    "suggestedTitle": "Container Fundamentals — DevOps — Containers & Kubernetes Study Guide",
+    "notes": "9 questions covering this topic in the dataset. Tags: containers, linux, kubernetes, reliability, security."
+  },
+  {
+    "trackKey": "devops/containers-k8s",
+    "trackLabel": "DevOps — Containers & Kubernetes",
+    "trackIcon": "⚙️",
+    "topic": "Storage",
+    "tags": [
+      "kubernetes",
+      "troubleshooting"
+    ],
+    "questionCount": 7,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 11,
+    "suggestedTitle": "Storage — DevOps — Containers & Kubernetes Study Guide",
+    "notes": "7 questions covering this topic in the dataset. Tags: kubernetes, troubleshooting."
+  },
+  {
+    "trackKey": "devops/linux",
+    "trackLabel": "DevOps — Linux Fundamentals",
+    "trackIcon": "⚙️",
+    "topic": "Process Management",
+    "tags": [
+      "linux",
+      "troubleshooting",
+      "automation"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 10,
+    "suggestedTitle": "Process Management — DevOps — Linux Fundamentals Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: linux, troubleshooting, automation."
+  },
+  {
+    "trackKey": "devops/iac",
+    "trackLabel": "DevOps — Infrastructure as Code",
+    "trackIcon": "⚙️",
+    "topic": "IaC Principles & Pulumi",
+    "tags": [
+      "iac",
+      "git",
+      "automation",
+      "cloud",
+      "security",
+      "troubleshooting"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 10,
+    "suggestedTitle": "IaC Principles & Pulumi — DevOps — Infrastructure as Code Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: iac, git, automation, cloud, security, troubleshooting."
+  },
+  {
+    "trackKey": "devops/cloud",
+    "trackLabel": "DevOps — Cloud Platforms",
+    "trackIcon": "⚙️",
+    "topic": "AWS Core Services",
+    "tags": [
+      "cloud",
+      "automation",
+      "security",
+      "reliability"
+    ],
+    "questionCount": 10,
+    "backlogCount": 0,
+    "lowValue": false,
+    "noveltyScore": 10,
+    "suggestedTitle": "AWS Core Services — DevOps — Cloud Platforms Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: cloud, automation, security, reliability."
+  },
+  {
+    "trackKey": "devops/cloud",
+    "trackLabel": "DevOps — Cloud Platforms",
+    "trackIcon": "⚙️",
+    "topic": "Architecture Patterns",
+    "tags": [
+      "cloud",
+      "reliability",
+      "automation",
+      "networking"
+    ],
+    "questionCount": 10,
+    "backlogCount": 0,
+    "lowValue": false,
+    "noveltyScore": 10,
+    "suggestedTitle": "Architecture Patterns — DevOps — Cloud Platforms Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: cloud, reliability, automation, networking."
+  },
+  {
+    "trackKey": "devops/observability",
+    "trackLabel": "DevOps — Monitoring & Observability",
+    "trackIcon": "⚙️",
+    "topic": "Metrics & Dashboards",
+    "tags": [
+      "observability",
+      "monitoring",
+      "troubleshooting",
+      "reliability",
+      "cloud"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 9,
+    "suggestedTitle": "Metrics & Dashboards — DevOps — Monitoring & Observability Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: observability, monitoring, troubleshooting, reliability, cloud."
+  },
+  {
+    "trackKey": "devops/observability",
+    "trackLabel": "DevOps — Monitoring & Observability",
+    "trackIcon": "⚙️",
+    "topic": "Logging",
+    "tags": [
+      "observability",
+      "troubleshooting",
+      "reliability",
+      "monitoring",
+      "cloud"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 9,
+    "suggestedTitle": "Logging — DevOps — Monitoring & Observability Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: observability, troubleshooting, reliability, monitoring, cloud."
+  },
+  {
+    "trackKey": "devops/observability",
+    "trackLabel": "DevOps — Monitoring & Observability",
+    "trackIcon": "⚙️",
+    "topic": "Reliability Concepts",
+    "tags": [
+      "observability",
+      "reliability",
+      "monitoring",
+      "cloud",
+      "troubleshooting"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 9,
+    "suggestedTitle": "Reliability Concepts — DevOps — Monitoring & Observability Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: observability, reliability, monitoring, cloud, troubleshooting."
+  },
+  {
+    "trackKey": "devops/iac",
+    "trackLabel": "DevOps — Infrastructure as Code",
+    "trackIcon": "⚙️",
+    "topic": "Ansible Fundamentals",
+    "tags": [
+      "iac",
+      "automation",
+      "troubleshooting"
+    ],
+    "questionCount": 9,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 9,
+    "suggestedTitle": "Ansible Fundamentals — DevOps — Infrastructure as Code Study Guide",
+    "notes": "9 questions covering this topic in the dataset. Tags: iac, automation, troubleshooting."
+  },
+  {
+    "trackKey": "devops/observability",
+    "trackLabel": "DevOps — Monitoring & Observability",
+    "trackIcon": "⚙️",
+    "topic": "Distributed Tracing",
+    "tags": [
+      "observability",
+      "troubleshooting",
+      "reliability",
+      "monitoring"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 8,
+    "suggestedTitle": "Distributed Tracing — DevOps — Monitoring & Observability Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: observability, troubleshooting, reliability, monitoring."
+  },
+  {
+    "trackKey": "devops/containers-k8s",
+    "trackLabel": "DevOps — Containers & Kubernetes",
+    "trackIcon": "⚙️",
+    "topic": "Troubleshooting",
+    "tags": [
+      "troubleshooting",
+      "kubernetes",
+      "observability",
+      "networking",
+      "reliability"
+    ],
+    "questionCount": 9,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 8,
+    "suggestedTitle": "Troubleshooting — DevOps — Containers & Kubernetes Study Guide",
+    "notes": "9 questions covering this topic in the dataset. Tags: troubleshooting, kubernetes, observability, networking, reliability."
+  },
+  {
+    "trackKey": "devops/iac",
+    "trackLabel": "DevOps — Infrastructure as Code",
+    "trackIcon": "⚙️",
+    "topic": "Ansible Advanced Patterns",
+    "tags": [
+      "iac",
+      "security",
+      "automation",
+      "cloud",
+      "troubleshooting",
+      "git"
+    ],
+    "questionCount": 8,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 8,
+    "suggestedTitle": "Ansible Advanced Patterns — DevOps — Infrastructure as Code Study Guide",
+    "notes": "8 questions covering this topic in the dataset. Tags: iac, security, automation, cloud, troubleshooting, git."
+  },
+  {
+    "trackKey": "devops/cicd",
+    "trackLabel": "DevOps — CI/CD Pipelines",
+    "trackIcon": "⚙️",
+    "topic": "Jenkins & GitLab CI",
+    "tags": [
+      "cicd",
+      "automation",
+      "reliability",
+      "troubleshooting",
+      "security"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 6,
+    "suggestedTitle": "Jenkins & GitLab CI — DevOps — CI/CD Pipelines Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: cicd, automation, reliability, troubleshooting, security."
+  },
+  {
+    "trackKey": "devops/cicd",
+    "trackLabel": "DevOps — CI/CD Pipelines",
+    "trackIcon": "⚙️",
+    "topic": "Testing & Quality Gates",
+    "tags": [
+      "cicd",
+      "reliability",
+      "automation",
+      "security",
+      "troubleshooting"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 6,
+    "suggestedTitle": "Testing & Quality Gates — DevOps — CI/CD Pipelines Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: cicd, reliability, automation, security, troubleshooting."
+  },
+  {
+    "trackKey": "devops/observability",
+    "trackLabel": "DevOps — Monitoring & Observability",
+    "trackIcon": "⚙️",
+    "topic": "Alerting & On-Call",
+    "tags": [
+      "observability",
+      "reliability",
+      "monitoring",
+      "automation",
+      "troubleshooting"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 6,
+    "suggestedTitle": "Alerting & On-Call — DevOps — Monitoring & Observability Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: observability, reliability, monitoring, automation, troubleshooting."
+  },
+  {
+    "trackKey": "devops/containers-k8s",
+    "trackLabel": "DevOps — Containers & Kubernetes",
+    "trackIcon": "⚙️",
+    "topic": "Images & Registries",
+    "tags": [
+      "containers",
+      "security",
+      "reliability",
+      "cicd"
+    ],
+    "questionCount": 8,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 6,
+    "suggestedTitle": "Images & Registries — DevOps — Containers & Kubernetes Study Guide",
+    "notes": "8 questions covering this topic in the dataset. Tags: containers, security, reliability, cicd."
+  },
+  {
+    "trackKey": "devops/cicd",
+    "trackLabel": "DevOps — CI/CD Pipelines",
+    "trackIcon": "⚙️",
+    "topic": "GitHub Actions",
+    "tags": [
+      "cicd",
+      "automation",
+      "git",
+      "security",
+      "reliability",
+      "troubleshooting"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 5,
+    "suggestedTitle": "GitHub Actions — DevOps — CI/CD Pipelines Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: cicd, automation, git, security, reliability, troubleshooting."
+  },
+  {
+    "trackKey": "devops/core-concepts",
+    "trackLabel": "DevOps — Core Concepts & Culture",
+    "trackIcon": "⚙️",
+    "topic": "Agile & Lean",
+    "tags": [
+      "culture",
+      "collaboration",
+      "cicd"
+    ],
+    "questionCount": 10,
+    "backlogCount": 2,
+    "lowValue": false,
+    "noveltyScore": 4,
+    "suggestedTitle": "Agile & Lean — DevOps — Core Concepts & Culture Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: culture, collaboration, cicd."
+  },
+  {
+    "trackKey": "devops/core-concepts",
+    "trackLabel": "DevOps — Core Concepts & Culture",
+    "trackIcon": "⚙️",
+    "topic": "DevOps Culture",
+    "tags": [
+      "culture",
+      "collaboration",
+      "reliability",
+      "cicd"
+    ],
+    "questionCount": 10,
+    "backlogCount": 2,
+    "lowValue": false,
+    "noveltyScore": 3,
+    "suggestedTitle": "DevOps Culture — DevOps — Core Concepts & Culture Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: culture, collaboration, reliability, cicd."
+  },
+  {
+    "trackKey": "devops/core-concepts",
+    "trackLabel": "DevOps — Core Concepts & Culture",
+    "trackIcon": "⚙️",
+    "topic": "SRE & Reliability",
+    "tags": [
+      "reliability",
+      "observability",
+      "collaboration",
+      "automation"
+    ],
+    "questionCount": 10,
+    "backlogCount": 2,
+    "lowValue": false,
+    "noveltyScore": 3,
+    "suggestedTitle": "SRE & Reliability — DevOps — Core Concepts & Culture Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: reliability, observability, collaboration, automation."
+  },
+  {
+    "trackKey": "devops/cicd",
+    "trackLabel": "DevOps — CI/CD Pipelines",
+    "trackIcon": "⚙️",
+    "topic": "Pipeline Fundamentals",
+    "tags": [
+      "cicd",
+      "automation",
+      "troubleshooting",
+      "git",
+      "reliability"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 3,
+    "suggestedTitle": "Pipeline Fundamentals — DevOps — CI/CD Pipelines Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: cicd, automation, troubleshooting, git, reliability."
+  },
+  {
+    "trackKey": "devops/cicd",
+    "trackLabel": "DevOps — CI/CD Pipelines",
+    "trackIcon": "⚙️",
+    "topic": "Deployment Strategies",
+    "tags": [
+      "cicd",
+      "reliability",
+      "troubleshooting",
+      "git",
+      "automation"
+    ],
+    "questionCount": 10,
+    "backlogCount": 1,
+    "lowValue": false,
+    "noveltyScore": 3,
+    "suggestedTitle": "Deployment Strategies — DevOps — CI/CD Pipelines Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: cicd, reliability, troubleshooting, git, automation."
   },
   {
     "trackKey": "falconry/apprentice",
@@ -22,31 +751,63 @@
       "Health"
     ],
     "questionCount": 178,
-    "noveltyScore": 178,
+    "backlogCount": 7,
+    "lowValue": false,
+    "noveltyScore": 0,
     "suggestedTitle": "Health & Maintenance — Falconry — Apprentice Study Guide",
     "notes": "178 questions covering this topic in the dataset. Tags: Health."
   },
   {
-    "trackKey": "ham-radio/extra",
-    "trackLabel": "Ham Radio — Extra",
-    "trackIcon": "📻",
-    "topic": "E7",
+    "trackKey": "falconry/apprentice",
+    "trackLabel": "Falconry — Apprentice",
+    "trackIcon": "🦅",
+    "topic": "Regulations",
     "tags": [
-      "component",
-      "frequency",
-      "voltage",
-      "equipment",
-      "power",
-      "modulation",
-      "analog",
-      "amateur",
-      "data",
-      "current"
+      "Rules and Regulations"
     ],
-    "questionCount": 115,
-    "noveltyScore": 115,
-    "suggestedTitle": "E7 — Ham Radio — Extra Study Guide",
-    "notes": "115 questions covering this topic in the dataset. Tags: component, frequency, voltage, equipment, power, modulation, analog, amateur, data, current."
+    "questionCount": 62,
+    "backlogCount": 7,
+    "lowValue": false,
+    "noveltyScore": 0,
+    "suggestedTitle": "Regulations — Falconry — Apprentice Study Guide",
+    "notes": "62 questions covering this topic in the dataset. Tags: Rules and Regulations."
+  },
+  {
+    "trackKey": "devops/core-concepts",
+    "trackLabel": "DevOps — Core Concepts & Culture",
+    "trackIcon": "⚙️",
+    "topic": "CI/CD Principles",
+    "tags": [
+      "cicd",
+      "automation",
+      "git",
+      "reliability"
+    ],
+    "questionCount": 10,
+    "backlogCount": 2,
+    "lowValue": false,
+    "noveltyScore": 0,
+    "suggestedTitle": "CI/CD Principles — DevOps — Core Concepts & Culture Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: cicd, automation, git, reliability."
+  },
+  {
+    "trackKey": "devops/core-concepts",
+    "trackLabel": "DevOps — Core Concepts & Culture",
+    "trackIcon": "⚙️",
+    "topic": "DORA Metrics",
+    "tags": [
+      "cicd",
+      "reliability",
+      "observability",
+      "automation",
+      "culture"
+    ],
+    "questionCount": 10,
+    "backlogCount": 2,
+    "lowValue": false,
+    "noveltyScore": 0,
+    "suggestedTitle": "DORA Metrics — DevOps — Core Concepts & Culture Study Guide",
+    "notes": "10 questions covering this topic in the dataset. Tags: cicd, reliability, observability, automation, culture."
   },
   {
     "trackKey": "ham-radio/extra",
@@ -67,7 +828,9 @@
       "voltage"
     ],
     "questionCount": 111,
-    "noveltyScore": 111,
+    "backlogCount": 0,
+    "lowValue": true,
+    "noveltyScore": 61,
     "suggestedTitle": "E9 — Ham Radio — Extra Study Guide",
     "notes": "111 questions covering this topic in the dataset. Tags: antennas, frequency, resistance, power, equipment, data, component, schematics, modulation, amateur, voltage."
   },
@@ -88,245 +851,11 @@
       "voltage"
     ],
     "questionCount": 87,
-    "noveltyScore": 87,
+    "backlogCount": 0,
+    "lowValue": true,
+    "noveltyScore": 58,
     "suggestedTitle": "E6 — Ham Radio — Extra Study Guide",
     "notes": "87 questions covering this topic in the dataset. Tags: component, frequency, modulation, equipment, power, data, schematics, inductance, voltage."
-  },
-  {
-    "trackKey": "falconry/apprentice",
-    "trackLabel": "Falconry — Apprentice",
-    "trackIcon": "🦅",
-    "topic": "Raptor Biology",
-    "tags": [
-      "General",
-      "Other Falconry Birds",
-      "Apprentice Birds"
-    ],
-    "questionCount": 86,
-    "noveltyScore": 86,
-    "suggestedTitle": "Raptor Biology — Falconry — Apprentice Study Guide",
-    "notes": "86 questions covering this topic in the dataset. Tags: General, Other Falconry Birds, Apprentice Birds."
-  },
-  {
-    "trackKey": "ham-radio/extra",
-    "trackLabel": "Ham Radio — Extra",
-    "trackIcon": "📻",
-    "topic": "E4",
-    "tags": [
-      "frequency",
-      "equipment",
-      "analog",
-      "data",
-      "component",
-      "power",
-      "modulation",
-      "resistance"
-    ],
-    "questionCount": 79,
-    "noveltyScore": 79,
-    "suggestedTitle": "E4 — Ham Radio — Extra Study Guide",
-    "notes": "79 questions covering this topic in the dataset. Tags: frequency, equipment, analog, data, component, power, modulation, resistance."
-  },
-  {
-    "trackKey": "ham-radio/technician",
-    "trackLabel": "Ham Radio — Technician",
-    "trackIcon": "📻",
-    "topic": "T1",
-    "tags": [
-      "amateur",
-      "privileges",
-      "data",
-      "equipment",
-      "frequency",
-      "modulation",
-      "component"
-    ],
-    "questionCount": 78,
-    "noveltyScore": 78,
-    "suggestedTitle": "T1 — Ham Radio — Technician Study Guide",
-    "notes": "78 questions covering this topic in the dataset. Tags: amateur, privileges, data, equipment, frequency, modulation, component."
-  },
-  {
-    "trackKey": "ham-radio/extra",
-    "trackLabel": "Ham Radio — Extra",
-    "trackIcon": "📻",
-    "topic": "E1",
-    "tags": [
-      "equipment",
-      "power",
-      "frequency",
-      "amateur",
-      "privileges",
-      "modulation",
-      "data",
-      "licensing",
-      "testing",
-      "requirement",
-      "antennas"
-    ],
-    "questionCount": 74,
-    "noveltyScore": 74,
-    "suggestedTitle": "E1 — Ham Radio — Extra Study Guide",
-    "notes": "74 questions covering this topic in the dataset. Tags: equipment, power, frequency, amateur, privileges, modulation, data, licensing, testing, requirement, antennas."
-  },
-  {
-    "trackKey": "ham-radio/extra",
-    "trackLabel": "Ham Radio — Extra",
-    "trackIcon": "📻",
-    "topic": "E2",
-    "tags": [
-      "amateur",
-      "modulation",
-      "equipment",
-      "frequency",
-      "power",
-      "antennas",
-      "component",
-      "data",
-      "privileges"
-    ],
-    "questionCount": 72,
-    "noveltyScore": 72,
-    "suggestedTitle": "E2 — Ham Radio — Extra Study Guide",
-    "notes": "72 questions covering this topic in the dataset. Tags: amateur, modulation, equipment, frequency, power, antennas, component, data, privileges."
-  },
-  {
-    "trackKey": "falconry/apprentice",
-    "trackLabel": "Falconry — Apprentice",
-    "trackIcon": "🦅",
-    "topic": "Falconry Practices",
-    "tags": [
-      "Hunting and Training"
-    ],
-    "questionCount": 71,
-    "noveltyScore": 71,
-    "suggestedTitle": "Falconry Practices — Falconry — Apprentice Study Guide",
-    "notes": "71 questions covering this topic in the dataset. Tags: Hunting and Training."
-  },
-  {
-    "trackKey": "ham-radio/extra",
-    "trackLabel": "Ham Radio — Extra",
-    "trackIcon": "📻",
-    "topic": "E5",
-    "tags": [
-      "voltage",
-      "frequency",
-      "component",
-      "modulation",
-      "power"
-    ],
-    "questionCount": 65,
-    "noveltyScore": 65,
-    "suggestedTitle": "E5 — Ham Radio — Extra Study Guide",
-    "notes": "65 questions covering this topic in the dataset. Tags: voltage, frequency, component, modulation, power."
-  },
-  {
-    "trackKey": "ham-radio/general",
-    "trackLabel": "Ham Radio — General",
-    "trackIcon": "📻",
-    "topic": "G4",
-    "tags": [
-      "frequency",
-      "modulation",
-      "equipment",
-      "power",
-      "component",
-      "analog",
-      "antennas"
-    ],
-    "questionCount": 64,
-    "noveltyScore": 64,
-    "suggestedTitle": "G4 — Ham Radio — General Study Guide",
-    "notes": "64 questions covering this topic in the dataset. Tags: frequency, modulation, equipment, power, component, analog, antennas."
-  },
-  {
-    "trackKey": "falconry/apprentice",
-    "trackLabel": "Falconry — Apprentice",
-    "trackIcon": "🦅",
-    "topic": "Regulations",
-    "tags": [
-      "Rules and Regulations"
-    ],
-    "questionCount": 62,
-    "noveltyScore": 62,
-    "suggestedTitle": "Regulations — Falconry — Apprentice Study Guide",
-    "notes": "62 questions covering this topic in the dataset. Tags: Rules and Regulations."
-  },
-  {
-    "trackKey": "ham-radio/general",
-    "trackLabel": "Ham Radio — General",
-    "trackIcon": "📻",
-    "topic": "G1",
-    "tags": [
-      "frequency",
-      "amateur",
-      "equipment",
-      "antennas",
-      "power",
-      "modulation",
-      "privileges",
-      "data"
-    ],
-    "questionCount": 59,
-    "noveltyScore": 59,
-    "suggestedTitle": "G1 — Ham Radio — General Study Guide",
-    "notes": "59 questions covering this topic in the dataset. Tags: frequency, amateur, equipment, antennas, power, modulation, privileges, data."
-  },
-  {
-    "trackKey": "ham-radio/general",
-    "trackLabel": "Ham Radio — General",
-    "trackIcon": "📻",
-    "topic": "G9",
-    "tags": [
-      "frequency",
-      "power",
-      "antennas",
-      "component"
-    ],
-    "questionCount": 58,
-    "noveltyScore": 58,
-    "suggestedTitle": "G9 — Ham Radio — General Study Guide",
-    "notes": "58 questions covering this topic in the dataset. Tags: frequency, power, antennas, component."
-  },
-  {
-    "trackKey": "ham-radio/general",
-    "trackLabel": "Ham Radio — General",
-    "trackIcon": "📻",
-    "topic": "G2",
-    "tags": [
-      "modulation",
-      "frequency",
-      "equipment",
-      "amateur",
-      "privileges",
-      "component",
-      "antennas"
-    ],
-    "questionCount": 57,
-    "noveltyScore": 57,
-    "suggestedTitle": "G2 — Ham Radio — General Study Guide",
-    "notes": "57 questions covering this topic in the dataset. Tags: modulation, frequency, equipment, amateur, privileges, component, antennas."
-  },
-  {
-    "trackKey": "ham-radio/technician",
-    "trackLabel": "Ham Radio — Technician",
-    "trackIcon": "📻",
-    "topic": "T5",
-    "tags": [
-      "voltage",
-      "power",
-      "component",
-      "current",
-      "amateur",
-      "equipment",
-      "frequency",
-      "inductance",
-      "resistance"
-    ],
-    "questionCount": 49,
-    "noveltyScore": 49,
-    "suggestedTitle": "T5 — Ham Radio — Technician Study Guide",
-    "notes": "49 questions covering this topic in the dataset. Tags: voltage, power, component, current, amateur, equipment, frequency, inductance, resistance."
   },
   {
     "trackKey": "ham-radio/technician",
@@ -334,111 +863,14 @@
     "trackIcon": "📻",
     "topic": "T6",
     "tags": [
-      "component",
-      "equipment"
-    ],
-    "questionCount": 48,
-    "noveltyScore": 48,
-    "suggestedTitle": "T6 — Ham Radio — Technician Study Guide",
-    "notes": "48 questions covering this topic in the dataset. Tags: component, equipment."
-  },
-  {
-    "trackKey": "ham-radio/technician",
-    "trackLabel": "Ham Radio — Technician",
-    "trackIcon": "📻",
-    "topic": "T7",
-    "tags": [
-      "equipment",
-      "frequency",
-      "component",
-      "power",
-      "amateur",
-      "antennas",
-      "voltage"
-    ],
-    "questionCount": 48,
-    "noveltyScore": 48,
-    "suggestedTitle": "T7 — Ham Radio — Technician Study Guide",
-    "notes": "48 questions covering this topic in the dataset. Tags: equipment, frequency, component, power, amateur, antennas, voltage."
-  },
-  {
-    "trackKey": "ham-radio/technician",
-    "trackLabel": "Ham Radio — Technician",
-    "trackIcon": "📻",
-    "topic": "T8",
-    "tags": [
-      "modulation",
-      "frequency",
-      "privileges",
-      "equipment",
-      "data",
-      "amateur",
-      "power",
       "component"
     ],
     "questionCount": 46,
-    "noveltyScore": 46,
-    "suggestedTitle": "T8 — Ham Radio — Technician Study Guide",
-    "notes": "46 questions covering this topic in the dataset. Tags: modulation, frequency, privileges, equipment, data, amateur, power, component."
-  },
-  {
-    "trackKey": "ham-radio/extra",
-    "trackLabel": "Ham Radio — Extra",
-    "trackIcon": "📻",
-    "topic": "E3",
-    "tags": [
-      "equipment",
-      "frequency",
-      "power",
-      "modulation",
-      "antennas",
-      "communication",
-      "amateur"
-    ],
-    "questionCount": 46,
-    "noveltyScore": 46,
-    "suggestedTitle": "E3 — Ham Radio — Extra Study Guide",
-    "notes": "46 questions covering this topic in the dataset. Tags: equipment, frequency, power, modulation, antennas, communication, amateur."
-  },
-  {
-    "trackKey": "ham-radio/extra",
-    "trackLabel": "Ham Radio — Extra",
-    "trackIcon": "📻",
-    "topic": "E8",
-    "tags": [
-      "frequency",
-      "power",
-      "equipment",
-      "voltage",
-      "analog",
-      "modulation",
-      "component",
-      "data"
-    ],
-    "questionCount": 46,
-    "noveltyScore": 46,
-    "suggestedTitle": "E8 — Ham Radio — Extra Study Guide",
-    "notes": "46 questions covering this topic in the dataset. Tags: frequency, power, equipment, voltage, analog, modulation, component, data."
-  },
-  {
-    "trackKey": "ham-radio/general",
-    "trackLabel": "Ham Radio — General",
-    "trackIcon": "📻",
-    "topic": "G5",
-    "tags": [
-      "frequency",
-      "component",
-      "power",
-      "current",
-      "equipment",
-      "voltage",
-      "resistance",
-      "inductance"
-    ],
-    "questionCount": 43,
-    "noveltyScore": 43,
-    "suggestedTitle": "G5 — Ham Radio — General Study Guide",
-    "notes": "43 questions covering this topic in the dataset. Tags: frequency, component, power, current, equipment, voltage, resistance, inductance."
+    "backlogCount": 7,
+    "lowValue": true,
+    "noveltyScore": 52,
+    "suggestedTitle": "T6 — Ham Radio — Technician Study Guide",
+    "notes": "46 questions covering this topic in the dataset. Tags: component."
   },
   {
     "trackKey": "ham-radio/general",
@@ -464,66 +896,256 @@
       "antennas"
     ],
     "questionCount": 41,
-    "noveltyScore": 41,
+    "backlogCount": 1,
+    "lowValue": true,
+    "noveltyScore": 50,
     "suggestedTitle": "G3 — Ham Radio — General Study Guide",
     "notes": "41 questions covering this topic in the dataset. Tags: significance, communication, radiation, stability, frequency, amateur, distance, period, flux, index, storm, equipment, condition, particle, benefit, antennas."
   },
   {
-    "trackKey": "ham-radio/technician",
-    "trackLabel": "Ham Radio — Technician",
+    "trackKey": "ham-radio/extra",
+    "trackLabel": "Ham Radio — Extra",
     "trackIcon": "📻",
-    "topic": "T2",
+    "topic": "E7",
     "tags": [
-      "equipment",
+      "component",
       "frequency",
-      "amateur",
+      "voltage",
+      "equipment",
       "power",
-      "modulation"
+      "modulation",
+      "analog",
+      "amateur",
+      "data",
+      "current"
     ],
-    "questionCount": 37,
-    "noveltyScore": 37,
-    "suggestedTitle": "T2 — Ham Radio — Technician Study Guide",
-    "notes": "37 questions covering this topic in the dataset. Tags: equipment, frequency, amateur, power, modulation."
+    "questionCount": 115,
+    "backlogCount": 0,
+    "lowValue": true,
+    "noveltyScore": 46,
+    "suggestedTitle": "E7 — Ham Radio — Extra Study Guide",
+    "notes": "115 questions covering this topic in the dataset. Tags: component, frequency, voltage, equipment, power, modulation, analog, amateur, data, current."
   },
   {
     "trackKey": "ham-radio/general",
     "trackLabel": "Ham Radio — General",
     "trackIcon": "📻",
-    "topic": "G7",
+    "topic": "G9",
     "tags": [
-      "power",
-      "component",
-      "voltage",
       "frequency",
-      "data",
+      "power",
+      "antennas",
+      "component"
+    ],
+    "questionCount": 58,
+    "backlogCount": 1,
+    "lowValue": true,
+    "noveltyScore": 44,
+    "suggestedTitle": "G9 — Ham Radio — General Study Guide",
+    "notes": "58 questions covering this topic in the dataset. Tags: frequency, power, antennas, component."
+  },
+  {
+    "trackKey": "ham-radio/general",
+    "trackLabel": "Ham Radio — General",
+    "trackIcon": "📻",
+    "topic": "G4",
+    "tags": [
+      "frequency",
       "modulation",
       "equipment",
+      "power",
+      "component",
+      "analog",
+      "antennas"
+    ],
+    "questionCount": 64,
+    "backlogCount": 1,
+    "lowValue": true,
+    "noveltyScore": 41,
+    "suggestedTitle": "G4 — Ham Radio — General Study Guide",
+    "notes": "64 questions covering this topic in the dataset. Tags: frequency, modulation, equipment, power, component, analog, antennas."
+  },
+  {
+    "trackKey": "ham-radio/extra",
+    "trackLabel": "Ham Radio — Extra",
+    "trackIcon": "📻",
+    "topic": "E4",
+    "tags": [
+      "frequency",
+      "equipment",
+      "analog",
+      "data",
+      "component",
+      "power",
+      "modulation",
+      "resistance"
+    ],
+    "questionCount": 79,
+    "backlogCount": 0,
+    "lowValue": true,
+    "noveltyScore": 40,
+    "suggestedTitle": "E4 — Ham Radio — Extra Study Guide",
+    "notes": "79 questions covering this topic in the dataset. Tags: frequency, equipment, analog, data, component, power, modulation, resistance."
+  },
+  {
+    "trackKey": "ham-radio/extra",
+    "trackLabel": "Ham Radio — Extra",
+    "trackIcon": "📻",
+    "topic": "E1",
+    "tags": [
+      "equipment",
+      "power",
+      "frequency",
+      "amateur",
+      "privileges",
+      "modulation",
+      "data",
+      "licensing",
+      "testing",
+      "requirement",
+      "antennas"
+    ],
+    "questionCount": 74,
+    "backlogCount": 0,
+    "lowValue": true,
+    "noveltyScore": 40,
+    "suggestedTitle": "E1 — Ham Radio — Extra Study Guide",
+    "notes": "74 questions covering this topic in the dataset. Tags: equipment, power, frequency, amateur, privileges, modulation, data, licensing, testing, requirement, antennas."
+  },
+  {
+    "trackKey": "ham-radio/extra",
+    "trackLabel": "Ham Radio — Extra",
+    "trackIcon": "📻",
+    "topic": "E2",
+    "tags": [
+      "amateur",
+      "modulation",
+      "equipment",
+      "frequency",
+      "power",
+      "antennas",
+      "component",
+      "data",
+      "privileges"
+    ],
+    "questionCount": 72,
+    "backlogCount": 0,
+    "lowValue": true,
+    "noveltyScore": 32,
+    "suggestedTitle": "E2 — Ham Radio — Extra Study Guide",
+    "notes": "72 questions covering this topic in the dataset. Tags: amateur, modulation, equipment, frequency, power, antennas, component, data, privileges."
+  },
+  {
+    "trackKey": "ham-radio/extra",
+    "trackLabel": "Ham Radio — Extra",
+    "trackIcon": "📻",
+    "topic": "E5",
+    "tags": [
+      "voltage",
+      "frequency",
+      "component",
+      "modulation",
+      "power"
+    ],
+    "questionCount": 65,
+    "backlogCount": 0,
+    "lowValue": true,
+    "noveltyScore": 26,
+    "suggestedTitle": "E5 — Ham Radio — Extra Study Guide",
+    "notes": "65 questions covering this topic in the dataset. Tags: voltage, frequency, component, modulation, power."
+  },
+  {
+    "trackKey": "ham-radio/extra",
+    "trackLabel": "Ham Radio — Extra",
+    "trackIcon": "📻",
+    "topic": "E3",
+    "tags": [
+      "equipment",
+      "frequency",
+      "power",
+      "modulation",
+      "antennas",
+      "communication",
       "amateur"
     ],
-    "questionCount": 37,
-    "noveltyScore": 37,
-    "suggestedTitle": "G7 — Ham Radio — General Study Guide",
-    "notes": "37 questions covering this topic in the dataset. Tags: power, component, voltage, frequency, data, modulation, equipment, amateur."
+    "questionCount": 46,
+    "backlogCount": 0,
+    "lowValue": true,
+    "noveltyScore": 26,
+    "suggestedTitle": "E3 — Ham Radio — Extra Study Guide",
+    "notes": "46 questions covering this topic in the dataset. Tags: equipment, frequency, power, modulation, antennas, communication, amateur."
   },
   {
     "trackKey": "ham-radio/technician",
     "trackLabel": "Ham Radio — Technician",
     "trackIcon": "📻",
-    "topic": "T0",
+    "topic": "T4",
+    "tags": [],
+    "questionCount": 23,
+    "backlogCount": 7,
+    "lowValue": true,
+    "noveltyScore": 26,
+    "suggestedTitle": "T4 — Ham Radio — Technician Study Guide",
+    "notes": "23 questions covering this topic in the dataset. Tags: none."
+  },
+  {
+    "trackKey": "ham-radio/technician",
+    "trackLabel": "Ham Radio — Technician",
+    "trackIcon": "📻",
+    "topic": "T9",
     "tags": [
+      "antennas",
+      "component"
+    ],
+    "questionCount": 23,
+    "backlogCount": 7,
+    "lowValue": true,
+    "noveltyScore": 26,
+    "suggestedTitle": "T9 — Ham Radio — Technician Study Guide",
+    "notes": "23 questions covering this topic in the dataset. Tags: antennas, component."
+  },
+  {
+    "trackKey": "ham-radio/general",
+    "trackLabel": "Ham Radio — General",
+    "trackIcon": "📻",
+    "topic": "G2",
+    "tags": [
+      "modulation",
+      "frequency",
+      "equipment",
+      "amateur",
+      "privileges",
       "component",
+      "antennas"
+    ],
+    "questionCount": 57,
+    "backlogCount": 1,
+    "lowValue": true,
+    "noveltyScore": 24,
+    "suggestedTitle": "G2 — Ham Radio — General Study Guide",
+    "notes": "57 questions covering this topic in the dataset. Tags: modulation, frequency, equipment, amateur, privileges, component, antennas."
+  },
+  {
+    "trackKey": "ham-radio/extra",
+    "trackLabel": "Ham Radio — Extra",
+    "trackIcon": "📻",
+    "topic": "E8",
+    "tags": [
+      "frequency",
       "power",
       "equipment",
       "voltage",
-      "antennas",
-      "amateur",
-      "frequency",
-      "privileges"
+      "analog",
+      "modulation",
+      "component",
+      "data"
     ],
-    "questionCount": 36,
-    "noveltyScore": 36,
-    "suggestedTitle": "T0 — Ham Radio — Technician Study Guide",
-    "notes": "36 questions covering this topic in the dataset. Tags: component, power, equipment, voltage, antennas, amateur, frequency, privileges."
+    "questionCount": 46,
+    "backlogCount": 0,
+    "lowValue": true,
+    "noveltyScore": 23,
+    "suggestedTitle": "E8 — Ham Radio — Extra Study Guide",
+    "notes": "46 questions covering this topic in the dataset. Tags: frequency, power, equipment, voltage, analog, modulation, component, data."
   },
   {
     "trackKey": "ham-radio/general",
@@ -541,7 +1163,9 @@
       "amateur"
     ],
     "questionCount": 36,
-    "noveltyScore": 36,
+    "backlogCount": 1,
+    "lowValue": true,
+    "noveltyScore": 20,
     "suggestedTitle": "G6 — Ham Radio — General Study Guide",
     "notes": "36 questions covering this topic in the dataset. Tags: voltage, resistance, component, power, antennas, frequency, analog, amateur."
   },
@@ -549,40 +1173,60 @@
     "trackKey": "ham-radio/technician",
     "trackLabel": "Ham Radio — Technician",
     "trackIcon": "📻",
-    "topic": "T3",
+    "topic": "T7",
     "tags": [
-      "privileges",
+      "equipment",
       "frequency",
+      "amateur",
       "power",
       "antennas",
-      "equipment",
-      "amateur",
-      "data",
-      "component",
-      "modulation"
+      "component"
     ],
-    "questionCount": 34,
-    "noveltyScore": 34,
-    "suggestedTitle": "T3 — Ham Radio — Technician Study Guide",
-    "notes": "34 questions covering this topic in the dataset. Tags: privileges, frequency, power, antennas, equipment, amateur, data, component, modulation."
+    "questionCount": 44,
+    "backlogCount": 7,
+    "lowValue": true,
+    "noveltyScore": 17,
+    "suggestedTitle": "T7 — Ham Radio — Technician Study Guide",
+    "notes": "44 questions covering this topic in the dataset. Tags: equipment, frequency, amateur, power, antennas, component."
   },
   {
     "trackKey": "ham-radio/general",
     "trackLabel": "Ham Radio — General",
     "trackIcon": "📻",
-    "topic": "G8",
+    "topic": "G5",
     "tags": [
       "frequency",
-      "modulation",
+      "component",
+      "power",
+      "current",
       "equipment",
-      "privileges",
-      "data",
-      "component"
+      "voltage",
+      "resistance",
+      "inductance"
     ],
-    "questionCount": 32,
-    "noveltyScore": 32,
-    "suggestedTitle": "G8 — Ham Radio — General Study Guide",
-    "notes": "32 questions covering this topic in the dataset. Tags: frequency, modulation, equipment, privileges, data, component."
+    "questionCount": 43,
+    "backlogCount": 1,
+    "lowValue": true,
+    "noveltyScore": 16,
+    "suggestedTitle": "G5 — Ham Radio — General Study Guide",
+    "notes": "43 questions covering this topic in the dataset. Tags: frequency, component, power, current, equipment, voltage, resistance, inductance."
+  },
+  {
+    "trackKey": "ham-radio/technician",
+    "trackLabel": "Ham Radio — Technician",
+    "trackIcon": "📻",
+    "topic": "T3",
+    "tags": [
+      "component",
+      "frequency",
+      "modulation"
+    ],
+    "questionCount": 35,
+    "backlogCount": 7,
+    "lowValue": true,
+    "noveltyScore": 13,
+    "suggestedTitle": "T3 — Ham Radio — Technician Study Guide",
+    "notes": "35 questions covering this topic in the dataset. Tags: component, frequency, modulation."
   },
   {
     "trackKey": "ham-radio/general",
@@ -599,45 +1243,117 @@
       "power"
     ],
     "questionCount": 27,
-    "noveltyScore": 27,
+    "backlogCount": 1,
+    "lowValue": true,
+    "noveltyScore": 12,
     "suggestedTitle": "G0 — Ham Radio — General Study Guide",
     "notes": "27 questions covering this topic in the dataset. Tags: equipment, frequency, privileges, amateur, antennas, component, power."
   },
   {
-    "trackKey": "ham-radio/technician",
-    "trackLabel": "Ham Radio — Technician",
+    "trackKey": "ham-radio/general",
+    "trackLabel": "Ham Radio — General",
     "trackIcon": "📻",
-    "topic": "T9",
+    "topic": "G1",
     "tags": [
-      "antennas",
       "frequency",
+      "amateur",
       "equipment",
+      "antennas",
       "power",
-      "component"
+      "modulation",
+      "privileges",
+      "data"
     ],
-    "questionCount": 25,
-    "noveltyScore": 25,
-    "suggestedTitle": "T9 — Ham Radio — Technician Study Guide",
-    "notes": "25 questions covering this topic in the dataset. Tags: antennas, frequency, equipment, power, component."
+    "questionCount": 59,
+    "backlogCount": 1,
+    "lowValue": true,
+    "noveltyScore": 11,
+    "suggestedTitle": "G1 — Ham Radio — General Study Guide",
+    "notes": "59 questions covering this topic in the dataset. Tags: frequency, amateur, equipment, antennas, power, modulation, privileges, data."
   },
   {
     "trackKey": "ham-radio/technician",
     "trackLabel": "Ham Radio — Technician",
     "trackIcon": "📻",
-    "topic": "T4",
+    "topic": "T0",
     "tags": [
-      "equipment",
-      "data",
-      "power",
-      "modulation",
       "component",
-      "privileges",
-      "frequency"
+      "equipment",
+      "voltage",
+      "antennas",
+      "power",
+      "amateur",
+      "frequency",
+      "privileges"
     ],
-    "questionCount": 24,
-    "noveltyScore": 24,
-    "suggestedTitle": "T4 — Ham Radio — Technician Study Guide",
-    "notes": "24 questions covering this topic in the dataset. Tags: equipment, data, power, modulation, component, privileges, frequency."
+    "questionCount": 36,
+    "backlogCount": 7,
+    "lowValue": true,
+    "noveltyScore": 10,
+    "suggestedTitle": "T0 — Ham Radio — Technician Study Guide",
+    "notes": "36 questions covering this topic in the dataset. Tags: component, equipment, voltage, antennas, power, amateur, frequency, privileges."
+  },
+  {
+    "trackKey": "ham-radio/technician",
+    "trackLabel": "Ham Radio — Technician",
+    "trackIcon": "📻",
+    "topic": "T5",
+    "tags": [
+      "voltage",
+      "power",
+      "frequency",
+      "component",
+      "current",
+      "resistance"
+    ],
+    "questionCount": 50,
+    "backlogCount": 7,
+    "lowValue": true,
+    "noveltyScore": 9,
+    "suggestedTitle": "T5 — Ham Radio — Technician Study Guide",
+    "notes": "50 questions covering this topic in the dataset. Tags: voltage, power, frequency, component, current, resistance."
+  },
+  {
+    "trackKey": "ham-radio/general",
+    "trackLabel": "Ham Radio — General",
+    "trackIcon": "📻",
+    "topic": "G8",
+    "tags": [
+      "frequency",
+      "modulation",
+      "equipment",
+      "privileges",
+      "data",
+      "component"
+    ],
+    "questionCount": 32,
+    "backlogCount": 1,
+    "lowValue": true,
+    "noveltyScore": 8,
+    "suggestedTitle": "G8 — Ham Radio — General Study Guide",
+    "notes": "32 questions covering this topic in the dataset. Tags: frequency, modulation, equipment, privileges, data, component."
+  },
+  {
+    "trackKey": "ham-radio/general",
+    "trackLabel": "Ham Radio — General",
+    "trackIcon": "📻",
+    "topic": "G7",
+    "tags": [
+      "power",
+      "component",
+      "voltage",
+      "frequency",
+      "data",
+      "modulation",
+      "equipment",
+      "amateur"
+    ],
+    "questionCount": 37,
+    "backlogCount": 1,
+    "lowValue": true,
+    "noveltyScore": 7,
+    "suggestedTitle": "G7 — Ham Radio — General Study Guide",
+    "notes": "37 questions covering this topic in the dataset. Tags: power, component, voltage, frequency, data, modulation, equipment, amateur."
   },
   {
     "trackKey": "ham-radio/extra",
@@ -652,9 +1368,65 @@
       "component"
     ],
     "questionCount": 11,
-    "noveltyScore": 11,
+    "backlogCount": 0,
+    "lowValue": true,
+    "noveltyScore": 4,
     "suggestedTitle": "E0 — Ham Radio — Extra Study Guide",
     "notes": "11 questions covering this topic in the dataset. Tags: equipment, amateur, frequency, power, component."
+  },
+  {
+    "trackKey": "ham-radio/technician",
+    "trackLabel": "Ham Radio — Technician",
+    "trackIcon": "📻",
+    "topic": "T1",
+    "tags": [
+      "amateur",
+      "frequency",
+      "privileges",
+      "equipment"
+    ],
+    "questionCount": 68,
+    "backlogCount": 7,
+    "lowValue": true,
+    "noveltyScore": 0,
+    "suggestedTitle": "T1 — Ham Radio — Technician Study Guide",
+    "notes": "68 questions covering this topic in the dataset. Tags: amateur, frequency, privileges, equipment."
+  },
+  {
+    "trackKey": "ham-radio/technician",
+    "trackLabel": "Ham Radio — Technician",
+    "trackIcon": "📻",
+    "topic": "T8",
+    "tags": [
+      "modulation",
+      "data",
+      "equipment",
+      "frequency",
+      "amateur"
+    ],
+    "questionCount": 47,
+    "backlogCount": 7,
+    "lowValue": true,
+    "noveltyScore": 0,
+    "suggestedTitle": "T8 — Ham Radio — Technician Study Guide",
+    "notes": "47 questions covering this topic in the dataset. Tags: modulation, data, equipment, frequency, amateur."
+  },
+  {
+    "trackKey": "ham-radio/technician",
+    "trackLabel": "Ham Radio — Technician",
+    "trackIcon": "📻",
+    "topic": "T2",
+    "tags": [
+      "equipment",
+      "frequency",
+      "amateur"
+    ],
+    "questionCount": 37,
+    "backlogCount": 7,
+    "lowValue": true,
+    "noveltyScore": 0,
+    "suggestedTitle": "T2 — Ham Radio — Technician Study Guide",
+    "notes": "37 questions covering this topic in the dataset. Tags: equipment, frequency, amateur."
   },
   {
     "trackKey": "ham-radio/general",
@@ -666,7 +1438,9 @@
       "voltage"
     ],
     "questionCount": 2,
-    "noveltyScore": 2,
+    "backlogCount": 1,
+    "lowValue": true,
+    "noveltyScore": 0,
     "suggestedTitle": "** — Ham Radio — General Study Guide",
     "notes": "2 questions covering this topic in the dataset. Tags: equipment, voltage."
   },
@@ -679,7 +1453,9 @@
       "Equipment"
     ],
     "questionCount": 1,
-    "noveltyScore": 1,
+    "backlogCount": 7,
+    "lowValue": true,
+    "noveltyScore": 0,
     "suggestedTitle": "F8 — Falconry — Apprentice Study Guide",
     "notes": "1 questions covering this topic in the dataset. Tags: Equipment."
   }

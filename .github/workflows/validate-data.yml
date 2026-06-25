@@ -54,6 +54,9 @@ jobs:
       - name: Validate blog drafts
         run: node blog-pipeline/validate.mjs
 
+      - name: Check blog backlog is in sync
+        run: node blog-pipeline/backlog.mjs --check
+
       - name: Check hub pages are up to date
         run: |
           node data-pipeline/generate-pages.mjs --check || {

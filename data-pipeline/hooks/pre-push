@@ -14,6 +14,9 @@ node "$ROOT/data-pipeline/sync-chrome.mjs" --check
 echo "[pre-push] Checking SW precache..."
 node "$ROOT/data-pipeline/check-sw-precache.mjs"
 
+echo "[pre-push] Checking blog backlog sync..."
+node "$ROOT/blog-pipeline/backlog.mjs" --check
+
 echo "[pre-push] Running Japanese game tests..."
 node --test "$ROOT/src/japanese/tests/"*.test.mjs
 
