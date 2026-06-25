@@ -52,6 +52,7 @@ const coveredTopics = new Set(existingPosts.flatMap(p => p.tags || []));
 // instead of re-suggesting topics a human already lined up.
 const backlog = loadJson(BACKLOG_FILE) || [];
 const backlogByTrack = {};
+const backlogSlugs = new Set(backlog.map(r => r.slug));
 for (const row of backlog) backlogByTrack[row.track] = (backlogByTrack[row.track] || 0) + 1;
 
 // Load taxonomy for tag vocabulary reference
@@ -117,20 +118,29 @@ const ideas = Object.values(topicMap).map(t => {
   };
 });
 
+// Filter out topics whose slug is already in the curated backlog — avoids re-
+// surfacing work already lined up. Slug matching is best-effort (derived from
+// topic label); the backlog is the authoritative list of what's planned.
+const freshIdeas = ideas.filter(i => {
+  const derivedSlug = i.topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  return !backlogSlugs.has(derivedSlug);
+});
+
 // Real topics first; low-value subelement codes always sink to the bottom.
-ideas.sort((a, b) =>
+freshIdeas.sort((a, b) =>
   (a.lowValue ? 1 : 0) - (b.lowValue ? 1 : 0) ||
   b.noveltyScore - a.noveltyScore ||
   b.questionCount - a.questionCount);
 
-writeFileSync(QUEUE_FILE, JSON.stringify(ideas, null, 2));
+writeFileSync(QUEUE_FILE, JSON.stringify(freshIdeas, null, 2));
 
-const realIdeas = ideas.filter(i => !i.lowValue);
-console.log(`✅ Wrote ${ideas.length} topic ideas to blog-pipeline/queue.json (${realIdeas.length} usable, ${ideas.length - realIdeas.length} low-value subelement rows sunk).`);
+const realIdeas = freshIdeas.filter(i => !i.lowValue);
+const skipped = ideas.length - freshIdeas.length;
+console.log(`✅ Wrote ${freshIdeas.length} topic ideas to blog-pipeline/queue.json (${realIdeas.length} usable, ${freshIdeas.length - realIdeas.length} low-value sunk, ${skipped} already in backlog).`);
 console.log('\nUnder-served tracks (fewest curated backlog rows):');
 Object.keys(backlogByTrack).length === 0
   ? console.log('  (backlog.json empty — every track is open)')
-  : [...new Set(ideas.map(i => i.trackKey))]
+  : [...new Set(freshIdeas.map(i => i.trackKey))]
       .sort((a, b) => (backlogByTrack[a] || 0) - (backlogByTrack[b] || 0))
       .slice(0, 5)
       .forEach(tk => console.log(`  ${(backlogByTrack[tk] || 0).toString().padStart(2)} backlog rows — ${tk}`));

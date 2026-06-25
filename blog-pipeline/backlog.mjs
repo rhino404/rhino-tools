@@ -109,6 +109,17 @@ function check() {
   console.log(`✅ backlog OK (${backlog.length} rows, ${warnings} warning(s)).`);
 }
 
+// Default refresh horizon: 1 year after publish for evergreen content.
+// Time-sensitive posts (pool changes, SY0-801 comparison, etc.) should have their
+// refreshBy set manually in the backlog — this is just a safety net.
+const DEFAULT_REFRESH_MONTHS = 12;
+
+function addMonths(dateStr, months) {
+  const d = new Date(dateStr + 'T00:00:00Z');
+  d.setUTCMonth(d.getUTCMonth() + months);
+  return d.toISOString().slice(0, 10);
+}
+
 // ── --sync ─────────────────────────────────────────────────────────────────
 function sync() {
   let changed = 0;
@@ -120,19 +131,36 @@ function sync() {
         slug: p.slug, title: p.title, track: p.track,
         intentKeyword: '', status: 'published', priority: 'medium',
         publishedDate: p.datePublished,
+        refreshBy: addMonths(p.datePublished, DEFAULT_REFRESH_MONTHS),
       });
       changed++;
       console.log(`  + added published row: ${p.slug}`);
-    } else if (row.status !== 'published') {
-      row.status = 'published';
-      if (!row.publishedDate) row.publishedDate = p.datePublished;
-      changed++;
-      console.log(`  ↑ ${p.slug}: ${'->'} published`);
+    } else {
+      if (row.status !== 'published') {
+        row.status = 'published';
+        if (!row.publishedDate) row.publishedDate = p.datePublished;
+        changed++;
+        console.log(`  ↑ ${p.slug}: -> published`);
+      }
+      // Back-fill refreshBy if a published row is missing it.
+      if (!row.refreshBy) {
+        row.refreshBy = addMonths(p.datePublished, DEFAULT_REFRESH_MONTHS);
+        changed++;
+        console.log(`  ~ ${p.slug}: set refreshBy ${row.refreshBy}`);
+      }
     }
   }
   if (changed) {
+    // Keep published rows together at the top, sorted by publishedDate desc,
+    // then planned rows sorted by priority + targetMonth.
+    const STATUS_ORDER = { published: 0, review: 1, drafting: 2, queued: 3, idea: 4 };
+    backlog.sort((a, b) =>
+      (STATUS_ORDER[a.status] ?? 9) - (STATUS_ORDER[b.status] ?? 9) ||
+      (b.publishedDate || '').localeCompare(a.publishedDate || '') ||
+      (PRIORITY_RANK[a.priority] ?? 9) - (PRIORITY_RANK[b.priority] ?? 9) ||
+      (a.targetMonth || '9999').localeCompare(b.targetMonth || '9999'));
     writeFileSync(BACKLOG_FILE, JSON.stringify(backlog, null, 2) + '\n');
-    console.log(`✅ Synced ${changed} row(s) into backlog.json.`);
+    console.log(`✅ Synced ${changed} change(s) into backlog.json.`);
   } else {
     console.log('✅ backlog already in sync with posts.json.');
   }
