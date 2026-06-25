@@ -1,5 +1,39 @@
 [
   {
+    "slug": "is-security-plus-worth-it-2026",
+    "title": "Is CompTIA Security+ Worth It in 2026?",
+    "track": "cybersecurity/sy0-701",
+    "intentKeyword": "is security+ worth it",
+    "status": "published",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "DoD 8140; salary/jobs data; CompTIA certification value.",
+    "publishedDate": "2026-06-24",
+    "refreshBy": "2027-06-24",
+    "differentiator": "ROI and career case — salary data, DoD mandate, who should/should not pursue it. Does not cover exam mechanics or version differences.",
+    "relatedPosts": [
+      "sy0-701-vs-sy0-801-security-plus",
+      "how-hard-is-security-plus"
+    ]
+  },
+  {
+    "slug": "how-hard-is-security-plus",
+    "title": "How Hard Is Security+? Questions, Passing Score, and Study Time",
+    "track": "cybersecurity/sy0-701",
+    "intentKeyword": "how hard is security+",
+    "status": "published",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "CompTIA SY0-701 exam objectives: 90 questions, 750/900 passing score, 90 min.",
+    "publishedDate": "2026-06-24",
+    "refreshBy": "2027-06-24",
+    "differentiator": "Focuses on exam difficulty and study time — not cert value or version comparison.",
+    "relatedPosts": [
+      "sy0-701-vs-sy0-801-security-plus",
+      "symmetric-vs-asymmetric-encryption"
+    ]
+  },
+  {
     "slug": "2026-technician-question-pool-changes",
     "title": "What Changed in the 2026-2030 FCC Technician Question Pool",
     "track": "ham-radio/technician",
@@ -152,7 +186,12 @@
     "priority": "high",
     "targetMonth": "2026-07",
     "sourcesHint": "ARRL license class privileges; FCC Part 97 band plan.",
-    "notes": "High-intent comparison post; links to all three ham quiz tracks."
+    "notes": "High-intent comparison post; links to all three ham quiz tracks.",
+    "differentiator": "License tier comparison and decision guide — not difficulty or exam mechanics.",
+    "relatedPosts": [
+      "how-hard-is-ham-radio-technician-exam",
+      "ham-radio-exam-online-2026"
+    ]
   },
   {
     "slug": "what-can-you-do-technician-license",
@@ -162,27 +201,12 @@
     "status": "queued",
     "priority": "high",
     "targetMonth": "2026-07",
-    "sourcesHint": "FCC Part 97 Technician privileges; ARRL band chart."
-  },
-  {
-    "slug": "is-security-plus-worth-it-2026",
-    "title": "Is CompTIA Security+ Worth It in 2026?",
-    "track": "cybersecurity/sy0-701",
-    "intentKeyword": "is security+ worth it",
-    "status": "queued",
-    "priority": "high",
-    "targetMonth": "2026-07",
-    "sourcesHint": "DoD 8140; salary/jobs data; CompTIA certification value."
-  },
-  {
-    "slug": "how-hard-is-security-plus",
-    "title": "How Hard Is Security+? Questions, Passing Score, and Study Time",
-    "track": "cybersecurity/sy0-701",
-    "intentKeyword": "how hard is security+",
-    "status": "queued",
-    "priority": "high",
-    "targetMonth": "2026-07",
-    "sourcesHint": "CompTIA SY0-701 exam objectives: 90 questions, 750/900 passing score, 90 min."
+    "sourcesHint": "FCC Part 97 Technician privileges; ARRL band chart.",
+    "differentiator": "Privileges and operating rights after passing — what the license unlocks, not how to get it.",
+    "relatedPosts": [
+      "how-hard-is-ham-radio-technician-exam",
+      "which-ham-radio-license-first"
+    ]
   },
   {
     "slug": "how-to-become-a-falconer",
@@ -192,7 +216,12 @@
     "status": "queued",
     "priority": "high",
     "targetMonth": "2026-07",
-    "sourcesHint": "USFWS migratory bird permit; apprentice sponsorship; state exam path."
+    "sourcesHint": "USFWS migratory bird permit; apprentice sponsorship; state exam path.",
+    "differentiator": "End-to-end path from zero to licensed — broad process overview, not a single-topic deep-dive.",
+    "relatedPosts": [
+      "falconry-license-requirements-by-state",
+      "how-many-questions-falconry-apprentice-exam"
+    ]
   },
   {
     "slug": "hiragana-vs-katakana",
@@ -202,7 +231,12 @@
     "status": "queued",
     "priority": "high",
     "targetMonth": "2026-07",
-    "sourcesHint": "Use cases for each kana set; loanwords; learning order."
+    "sourcesHint": "Use cases for each kana set; loanwords; learning order.",
+    "differentiator": "Comparison of the two kana systems and when each is used — not a learning guide for either.",
+    "relatedPosts": [
+      "how-to-learn-hiragana",
+      "what-is-jlpt-n5"
+    ]
   },
   {
     "slug": "docker-vs-kubernetes",
@@ -212,7 +246,11 @@
     "status": "queued",
     "priority": "high",
     "targetMonth": "2026-07",
-    "sourcesHint": "Docker docs; Kubernetes concepts; container runtime vs orchestrator."
+    "sourcesHint": "Docker docs; Kubernetes concepts; container runtime vs orchestrator.",
+    "differentiator": "Container vs orchestrator distinction — conceptual comparison, not IaC or CI/CD.",
+    "relatedPosts": [
+      "what-is-cicd-beginners-guide"
+    ]
   },
   {
     "slug": "what-is-infrastructure-as-code",
@@ -222,7 +260,12 @@
     "status": "queued",
     "priority": "high",
     "targetMonth": "2026-07",
-    "sourcesHint": "Terraform/CloudFormation; declarative vs imperative; idempotency."
+    "sourcesHint": "Terraform/CloudFormation; declarative vs imperative; idempotency.",
+    "differentiator": "IaC concepts and tools — declarative infrastructure management, distinct from containers or CI/CD pipelines.",
+    "relatedPosts": [
+      "what-is-cicd-beginners-guide",
+      "docker-vs-kubernetes"
+    ]
   },
   {
     "slug": "ham-radio-callsign-after-passing",
@@ -232,7 +275,12 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-08",
-    "sourcesHint": "FCC ULS / CORES registration; vanity callsign process."
+    "sourcesHint": "FCC ULS / CORES registration; vanity callsign process.",
+    "differentiator": "Post-exam administrative steps (FCC ULS, CORES) — not exam prep or license selection.",
+    "relatedPosts": [
+      "how-hard-is-ham-radio-technician-exam",
+      "ham-radio-exam-online-2026"
+    ]
   },
   {
     "slug": "how-hard-is-general-exam",
@@ -242,7 +290,12 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-08",
-    "sourcesHint": "NCVEC General pool size, passing score; mirrors the Technician 'how hard' post."
+    "sourcesHint": "NCVEC General pool size, passing score; mirrors the Technician 'how hard' post.",
+    "differentiator": "General-class exam difficulty specifically — mirrors Technician post for the next license tier.",
+    "relatedPosts": [
+      "how-hard-is-ham-radio-technician-exam",
+      "which-ham-radio-license-first"
+    ]
   },
   {
     "slug": "security-plus-study-plan",
@@ -252,7 +305,12 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-08",
-    "sourcesHint": "CompTIA recommended experience; common study timelines."
+    "sourcesHint": "CompTIA recommended experience; common study timelines.",
+    "differentiator": "Week-by-week study schedule — the how-to-prepare guide, not the difficulty assessment or value case.",
+    "relatedPosts": [
+      "how-hard-is-security-plus",
+      "is-security-plus-worth-it-2026"
+    ]
   },
   {
     "slug": "cia-triad-explained",
@@ -262,7 +320,11 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-08",
-    "sourcesHint": "NIST definitions of confidentiality, integrity, availability."
+    "sourcesHint": "NIST definitions of confidentiality, integrity, availability.",
+    "differentiator": "Deep-dive on one core Security+ concept (CIA triad) — not an exam overview or career guide.",
+    "relatedPosts": [
+      "symmetric-vs-asymmetric-encryption"
+    ]
   },
   {
     "slug": "how-to-find-falconry-sponsor",
@@ -272,7 +334,12 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-08",
-    "sourcesHint": "NAFA / state falconry club directories; apprentice requirements."
+    "sourcesHint": "NAFA / state falconry club directories; apprentice requirements.",
+    "differentiator": "Sponsorship search tactics specifically — a step within the broader path, not the full path.",
+    "relatedPosts": [
+      "how-to-become-a-falconer",
+      "falconry-license-requirements-by-state"
+    ]
   },
   {
     "slug": "how-to-learn-katakana",
@@ -282,7 +349,12 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-08",
-    "sourcesHint": "Mirror the hiragana post; katakana chart + mnemonics."
+    "sourcesHint": "Mirror the hiragana post; katakana chart + mnemonics.",
+    "differentiator": "Step-by-step katakana learning guide — mirrors hiragana post for the second kana set.",
+    "relatedPosts": [
+      "how-to-learn-hiragana",
+      "hiragana-vs-katakana"
+    ]
   },
   {
     "slug": "jlpt-n5-vs-n4",
@@ -292,7 +364,11 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-08",
-    "sourcesHint": "Official JLPT level descriptors; vocab/kanji counts."
+    "sourcesHint": "Official JLPT level descriptors; vocab/kanji counts.",
+    "differentiator": "Level comparison and upgrade path — not an introduction to N5 or a learning guide.",
+    "relatedPosts": [
+      "what-is-jlpt-n5"
+    ]
   },
   {
     "slug": "blue-green-vs-canary-deployment",
@@ -302,7 +378,11 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-08",
-    "sourcesHint": "Deployment strategy tradeoffs; rollback; traffic shifting."
+    "sourcesHint": "Deployment strategy tradeoffs; rollback; traffic shifting.",
+    "differentiator": "Deployment strategy comparison — release mechanics, not pipeline setup or IaC.",
+    "relatedPosts": [
+      "what-is-cicd-beginners-guide"
+    ]
   },
   {
     "slug": "three-pillars-of-observability",
@@ -312,7 +392,11 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-08",
-    "sourcesHint": "Metrics, logs, traces; OpenTelemetry."
+    "sourcesHint": "Metrics, logs, traces; OpenTelemetry.",
+    "differentiator": "Metrics/logs/traces deep-dive — operational visibility, not SLI/SLO definitions.",
+    "relatedPosts": [
+      "what-is-sli-slo-sla-devops"
+    ]
   },
   {
     "slug": "security-plus-common-ports",
@@ -322,7 +406,11 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-09",
-    "sourcesHint": "IANA port registry; CompTIA objectives port list."
+    "sourcesHint": "IANA port registry; CompTIA objectives port list.",
+    "differentiator": "Memorization reference for ports — pure exam-prep reference, not a narrative guide.",
+    "relatedPosts": [
+      "how-hard-is-security-plus"
+    ]
   },
   {
     "slug": "red-tailed-hawk-vs-kestrel-apprentice",
@@ -332,7 +420,12 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-09",
-    "sourcesHint": "Apprentice-legal species rules; husbandry differences."
+    "sourcesHint": "Apprentice-legal species rules; husbandry differences.",
+    "differentiator": "Bird selection decision — species comparison for first-time apprentices, not regulations or exam prep.",
+    "relatedPosts": [
+      "how-to-become-a-falconer",
+      "falconry-mews-housing-standards"
+    ]
   },
   {
     "slug": "beginner-falconry-equipment-checklist",
@@ -342,7 +435,12 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-09",
-    "sourcesHint": "Jesses, leash, swivel, glove, scale, mews, perch standards."
+    "sourcesHint": "Jesses, leash, swivel, glove, scale, mews, perch standards.",
+    "differentiator": "Equipment reference list — what to buy/build, not regulations or bird selection.",
+    "relatedPosts": [
+      "falconry-mews-housing-standards",
+      "how-to-become-a-falconer"
+    ]
   },
   {
     "slug": "japanese-numbers-counting",
@@ -352,7 +450,11 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-09",
-    "sourcesHint": "Counters, on'yomi numerals, common counting words."
+    "sourcesHint": "Counters, on'yomi numerals, common counting words.",
+    "differentiator": "Numbers and counters reference — a specific grammar topic, not particles or kana.",
+    "relatedPosts": [
+      "japanese-particles-guide"
+    ]
   },
   {
     "slug": "essential-linux-commands-devops",
@@ -362,6 +464,10 @@
     "status": "idea",
     "priority": "medium",
     "targetMonth": "2026-09",
-    "sourcesHint": "File ops, permissions, processes, networking, text processing."
+    "sourcesHint": "File ops, permissions, processes, networking, text processing.",
+    "differentiator": "Linux command reference for DevOps practitioners — hands-on tooling, not concepts or architecture.",
+    "relatedPosts": [
+      "what-is-cicd-beginners-guide"
+    ]
   }
 ]
