@@ -13,15 +13,23 @@ import { fileURLToPath } from 'url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DRAFTS_DIR = join(ROOT, 'blog-pipeline', 'drafts');
 const SCHEMA_FILE = join(ROOT, 'blog-pipeline', 'schema', 'post.schema.json');
+const POSTS_FILE = join(ROOT, 'blog-pipeline', 'posts.json');
 
 const schema = JSON.parse(readFileSync(SCHEMA_FILE, 'utf8'));
 const REQUIRED = schema.required;
 const TRACK_ENUM = schema.properties.track.enum;
 const STATUS_ENUM = schema.properties.status.enum;
 
+// Published posts manifest — used for cross-post similarity checks.
+let publishedPosts = [];
+try { publishedPosts = JSON.parse(readFileSync(POSTS_FILE, 'utf8')); } catch { /* first run */ }
+
 let errors = 0;
 let warnings = 0;
 const seenSlugs = new Set();
+
+// Collect ready/published draft metadata for post-loop similarity analysis.
+const readyDrafts = []; // { file, slug, track, tags, title }
 
 function err(file, msg) { console.error(`  ❌ [${file}] ${msg}`); errors++; }
 function warn(file, msg) { console.warn(`  ⚠️  [${file}] ${msg}`); warnings++; }
@@ -129,6 +137,11 @@ for (const file of draftFiles) {
   const tags = Array.isArray(meta.tags) ? meta.tags : [];
   if (tags.length === 0) warn(file, 'No tags — add at least one from data-pipeline/taxonomy.json');
 
+  // Collect for cross-post similarity check below.
+  if (meta.slug && meta.track && tags.length > 0) {
+    readyDrafts.push({ file, slug: meta.slug, track: meta.track, tags, title: meta.title || '' });
+  }
+
   // ── Sources ────────────────────────────────────────────────────────────────
   const sources = Array.isArray(meta.sources) ? meta.sources : [];
   if (sources.length === 0) {
@@ -182,6 +195,49 @@ for (const file of draftFiles) {
   }
 
   console.log(`  ✅ ${file} — OK`);
+}
+
+// ── Cross-post similarity check ────────────────────────────────────────────
+// Compares each ready draft against: (a) other ready drafts, (b) published posts.
+// Uses Jaccard tag similarity on the same track. >50% overlap = warn.
+// This is a heuristic backstop — human review is still required before merge.
+function jaccard(setA, setB) {
+  const a = new Set(setA.map(t => t.toLowerCase()));
+  const b = new Set(setB.map(t => t.toLowerCase()));
+  const intersection = [...a].filter(t => b.has(t)).length;
+  const union = new Set([...a, ...b]).size;
+  return union === 0 ? 0 : intersection / union;
+}
+
+// Build a lookup of published posts by slug (exclude posts that are also in
+// readyDrafts — they've already been rebuilt and would self-match).
+const readySlugs = new Set(readyDrafts.map(d => d.slug));
+const published = publishedPosts
+  .filter(p => !readySlugs.has(p.slug))
+  .map(p => ({ slug: p.slug, track: p.track, tags: p.tags || [], title: p.title || '' }));
+
+for (const draft of readyDrafts) {
+  // Compare against all other ready drafts (avoid double-reporting: only check i < j).
+  for (const other of readyDrafts) {
+    if (other.slug >= draft.slug) continue; // only check each pair once
+    if (other.track !== draft.track) continue;
+    const sim = jaccard(draft.tags, other.tags);
+    if (sim > 0.6) {
+      warn(draft.file,
+        `High tag similarity (${Math.round(sim * 100)}%) with another new draft "${other.slug}" on the same track. ` +
+        `Ensure these posts cover distinct angles. Shared tags: ${draft.tags.filter(t => other.tags.map(x => x.toLowerCase()).includes(t.toLowerCase())).join(', ')}`);
+    }
+  }
+  // Compare against published posts on the same track.
+  for (const pub of published) {
+    if (pub.track !== draft.track) continue;
+    const sim = jaccard(draft.tags, pub.tags);
+    if (sim > 0.6) {
+      warn(draft.file,
+        `High tag similarity (${Math.round(sim * 100)}%) with published post "${pub.slug}" on the same track. ` +
+        `Verify this draft covers a distinct angle. Shared tags: ${draft.tags.filter(t => pub.tags.map(x => x.toLowerCase()).includes(t.toLowerCase())).join(', ')}`);
+    }
+  }
 }
 
 console.log(`\n${'─'.repeat(50)}`);

@@ -5,8 +5,143 @@
     <link>https://ryno.tools/blog/</link>
     <description>Study guides and exam prep tips for Ham Radio, Falconry, and CompTIA Security+.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2026 02:50:22 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 02:53:55 GMT</lastBuildDate>
     <atom:link href="https://ryno.tools/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How Hard Is the Security+ Exam? An Honest SY0-701 Difficulty Guide]]></title>
+    <link>https://ryno.tools/blog/how-hard-is-security-plus/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/how-hard-is-security-plus/</guid>
+    <pubDate>Wed, 24 Jun 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Security+ is moderately hard — harder than A+ or Network+, but a long way from CISSP. Up to 90 questions in 90 minutes with performance-based labs. Here's exactly what to expect and how long to study.]]></description>
+    <category><![CDATA[Security+ SY0-701]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p>CompTIA Security+ (SY0-701) is a vendor-neutral entry-to-mid-level cybersecurity certification that tests whether you can apply security concepts to real-world scenarios — not just define them from a glossary. If you're deciding whether to register, the most useful answer to "how hard is it?" depends heavily on what you're bringing to the table.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> Security+ is moderately hard — harder than A+ or Network+, but well below CISSP or CASP+. The exam caps at 90 questions in 90 minutes, requires a 750/900 passing score, and includes up to 5 performance-based lab questions. Candidates with networking/IT experience typically need 6–14 weeks of focused study; complete beginners need longer.</p>
+</blockquote>
+<h2>What is the Security+ SY0-701 exam structure?</h2>
+<p>The exam has four key structural facts every candidate should know before sitting down at a test center:</p>
+<ul>
+<li><strong>Question count:</strong> Maximum 90 questions per session. You may receive fewer.</li>
+<li><strong>Time limit:</strong> 90 minutes total — roughly one minute per question.</li>
+<li><strong>Passing score:</strong> 750 on a scale of 100–900. CompTIA uses scaled scoring, so not every question carries equal weight.</li>
+<li><strong>Question types:</strong> Multiple-choice (single and multiple correct answers) plus <strong>performance-based questions (PBQs)</strong> — interactive simulations where you configure a firewall, analyze a log file, match cryptographic algorithms, or identify vulnerabilities in a network diagram.</li>
+</ul>
+<p>PBQs deserve special attention. You will typically see 3–5 of them, and they can consume 5–10 minutes each. A common and effective test-taking strategy is to flag PBQs at the start and skip to multiple-choice questions first, then return to PBQs with remaining time. Running out of time while stuck on a PBQ is one of the most common reasons candidates fail with strong underlying knowledge.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> PBQs appear early in the exam queue but do not have to be answered first. Flag them, skip forward, work through all multiple-choice questions, and return with whatever time remains. This alone can be the difference between passing and failing.</p>
+</blockquote>
+<h2>What are the five Security+ SY0-701 domains?</h2>
+<p>The SY0-701 exam is organized around five domains. CompTIA publishes the exact domain weights in the official exam objectives document:</p>
+<ul>
+<li><strong>Domain 1 — General Security Concepts:</strong> 12% of the exam. Covers control categories (technical, managerial, operational, physical), basic cryptography concepts, authentication types, and PKI fundamentals.</li>
+<li><strong>Domain 2 — Threats, Vulnerabilities, and Mitigations:</strong> 22%. The largest conceptual domain. Covers malware types, social engineering, phishing, DDoS, SQL injection, vulnerability scanning, and threat intelligence.</li>
+<li><strong>Domain 3 — Security Architecture:</strong> 18%. Network segmentation, cloud security models, zero-trust architecture, virtualization, and secure infrastructure design.</li>
+<li><strong>Domain 4 — Security Operations:</strong> 28%. The heaviest-weighted domain by far. Covers identity and access management, endpoint security, log analysis, incident response, and digital forensics.</li>
+<li><strong>Domain 5 — Security Program Management and Oversight:</strong> 20%. Risk management, compliance frameworks, data privacy regulations, third-party risk, and security policies.</li>
+</ul>
+<p>Domain 4 (Security Operations, 28%) and Domain 5 (Program Management, 20%) together represent nearly half the exam. Candidates who under-prepare incident response and risk management frameworks tend to underperform even when they know their cryptography and network security cold.</p>
+<h2>What does "hard" actually mean for Security+?</h2>
+<p>Security+ does not rely heavily on trick questions or obscure memorization. It is an applied-knowledge exam. The question stem will describe a scenario — a suspicious network alert, a policy decision, a misconfigured server — and ask what the best response is, not just what a term means.</p>
+<p>That shift from definitional recall to applied reasoning is what surprises candidates who try to pass by memorizing flashcards alone. You need to understand <strong>why</strong> a given control exists and <strong>when</strong> to apply it over alternatives.</p>
+<p>Within the CompTIA certification ladder, Security+ sits squarely in the middle:</p>
+<ul>
+<li>Easier than: CySA+, PenTest+, CASP+, CISSP</li>
+<li>Harder than: CompTIA A+, Network+, IT Fundamentals</li>
+</ul>
+<p>CompTIA doesn't publish official pass rates, but training-provider data consistently places first-attempt pass rates around 50–65% for self-study candidates without structured prep, rising to 70–75% with structured training and practice exams. Candidates who go through bootcamps or instructor-led courses report 85–93% first-attempt rates, though that cohort is self-selected toward more motivated learners.</p>
+<h2>How much experience do you need before taking Security+?</h2>
+<p>CompTIA recommends two years of experience in a security or IT administration role, plus CompTIA Network+ or equivalent networking knowledge. That recommendation exists because Security+ assumes you can interpret network diagrams, understand TCP/IP traffic flows, and reason about access control — skills that take hands-on time to develop.</p>
+<p>That said, <strong>there are no formal prerequisites.</strong> Candidates pass without the recommended background every day. What changes is study time and difficulty — not pass/fail eligibility.</p>
+<h2>How many hours should you study?</h2>
+<p>Realistic study-time ranges depend almost entirely on your existing IT background:</p>
+<ul>
+<li><strong>Network+ holder with hands-on IT experience:</strong> 6–8 weeks at 8–12 hours per week (roughly 50–96 hours total).</li>
+<li><strong>IT generalist with networking exposure but no Security certs:</strong> 8–12 weeks (65–144 hours).</li>
+<li><strong>Help-desk or entry-level IT without security exposure:</strong> 10–14 weeks or more.</li>
+<li><strong>Complete career-switcher with no IT background:</strong> 16–20+ weeks. The conceptual gap is wider and requires building foundational networking and operating-system knowledge first.</li>
+</ul>
+<p>The 50–80 hour range often cited assumes someone with solid networking and systems fundamentals who is learning the security-specific content on top of a working IT foundation. Be honest about where you are — overly optimistic study timelines produce surprises on exam day.</p>
+<h2>What study materials work best?</h2>
+<p>The core study loop that produces consistent results:</p>
+<ol>
+<li><strong>Official exam objectives:</strong> Download the SY0-701 objectives PDF from CompTIA's site. Use it as a checklist — every objective is fair game.</li>
+<li><strong>A structured study guide:</strong> Professor Messer's free SY0-701 video course is widely recommended and thorough. Mike Chapple and Jason Dion also produce well-regarded materials.</li>
+<li><strong>Practice questions:</strong> Do not wait until the end to start practice tests. Integrate them from week one. The feedback loop of getting a question wrong and understanding why is the fastest way to close gaps.</li>
+<li><strong>Performance-based question practice:</strong> Specifically find PBQ simulators. Understanding how to navigate a firewall configuration or a log-analysis scenario in a timed environment is a distinct skill from reading about it.</li>
+</ol>
+<p>Ryno Tools includes a full Security+ SY0-701 practice question bank spanning all five domains. Drilling by domain helps you identify exactly which areas need more study time before you commit to an exam date.</p>
+<h2>Frequently asked questions</h2>
+<h2>Is Security+ hard to pass on the first try?</h2>
+<p>For candidates with IT networking experience and structured study preparation, Security+ is a manageable challenge with a reasonable first-attempt pass rate. First-attempt success depends more on prep quality than raw intelligence — candidates who skip practice questions and rely on passive reading tend to underperform. The performance-based questions are the primary source of unexpected difficulty.</p>
+<h2>How is the 750/900 passing score calculated?</h2>
+<p>CompTIA uses scaled scoring, which means the 750 threshold accounts for question difficulty weighting. A score of 750 does not correspond to a fixed percentage of questions answered correctly. Performance-based questions typically carry more weight than standard multiple-choice items. The practical implication is that getting all PBQs wrong while answering multiple-choice correctly may not be enough to pass — PBQs matter.</p>
+<h2>Can you pass Security+ with no IT experience?</h2>
+<p>Yes — some candidates do. But the realistic study timeline for a complete career-switcher is 4–6 months of consistent effort, not 4–6 weeks. The better path is to build fundamental networking knowledge (CompTIA Network+ or equivalent self-study) first, then approach Security+. The investment in foundational knowledge pays back in shorter Security+ prep time and much stronger retention of the material.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title><![CDATA[Is Security+ Worth It in 2026? The Honest ROI Answer]]></title>
+    <link>https://ryno.tools/blog/is-security-plus-worth-it-2026/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/is-security-plus-worth-it-2026/</guid>
+    <pubDate>Wed, 24 Jun 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Security+ costs $425, takes 2–4 months of prep, and opens doors to roles paying $65K–$95K. It's a DoD mandate, the most-requested entry-level security cert, and — for the right candidate — one of the best ROI certs in IT. Here's the honest verdict.]]></description>
+    <category><![CDATA[Security+ SY0-701]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p>CompTIA Security+ (SY0-701) is the most widely required entry-level cybersecurity certification in the United States, and deciding whether it's worth your time and money is a legitimate question with a concrete answer — not a "it depends" non-answer. The right response depends on where you are in your career, what market you want to work in, and whether the Department of Defense is in your future.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> For career-switchers into IT security, existing IT admins moving into security, DoD contractors, and help-desk workers moving up — Security+ is almost certainly worth it. The exam costs $425, the credential opens roles paying $65K–$95K+ and satisfies federal workforce mandates, and it pays for itself within the first paycheck of a new role. If you already hold CISSP or CISM and are targeting senior security engineering roles, you may not need it.</p>
+</blockquote>
+<h2>What does Security+ actually cost?</h2>
+<p>The exam voucher price from CompTIA and Pearson VUE is <strong>$425 USD</strong> for the North American market as of 2026. A bundled voucher-plus-retake package runs approximately $474, adding a second attempt for $49 more. Prices vary by region; check comptia.org directly for your local price.</p>
+<p>Beyond the voucher, your realistic total investment depends on study materials:</p>
+<ul>
+<li><strong>Free path:</strong> Professor Messer's SY0-701 video course (free online) + Ryno Tools practice questions + one or two free practice exams. Total out-of-pocket: the $425 voucher.</li>
+<li><strong>Mid-range path:</strong> A study guide book ($40–$60) plus an online practice exam bundle ($30–$50). Total: ~$515–$535.</li>
+<li><strong>Premium path:</strong> Instructor-led or bootcamp training ($500–$2,000+). Total: $925–$2,500+.</li>
+</ul>
+<p>Most candidates who already have IT experience do not need the premium path. A study guide and structured practice-question drilling covers the material effectively.</p>
+<p><strong>Renewal cost:</strong> Security+ is a three-year certification. Maintaining it requires earning 50 Continuing Education Units (CEUs) over the three-year period, plus an annual maintenance fee of $50 (totaling $150 over the three-year cycle). CEUs can be earned through training courses, conferences, webinars, and other professional activities. Alternatively, you can retake the exam or pass a higher-level CompTIA certification to reset the clock.</p>
+<h2>Why is DoD 8140 a hard requirement — not a nice-to-have?</h2>
+<p>For anyone working in or contracting with the United States Department of Defense, Security+ is not a resume booster — it is a condition of employment. DoD Directive 8140 mandates that every person in a designated cyber work role hold a qualifying certification, and Security+ is the most widely held compliance cert in the cleared workforce.</p>
+<p>The compliance deadline for most Cybersecurity element work roles under DoDM 8140.03 passed in February 2025. If your recruiter or employer says "you need your Security+" — they mean it. Holding an uncertified work role is a compliance gap that employers actively manage.</p>
+<p>For the full breakdown of which work roles Security+ satisfies and how the 8140/8570 framework is structured, see <a href="/blog/sy0-701-vs-sy0-801-security-plus/">Security+ SY0-701 vs SY0-801: DoD 8140 and Compliance</a>.</p>
+<h2>What does the job market actually look like?</h2>
+<p>The Bureau of Labor Statistics projects that employment of information security analysts will grow <strong>29 percent from 2024 to 2034</strong> — one of the fastest growth rates of any occupation tracked by BLS. The median annual wage for information security analysts was <strong>$124,910</strong> as of May 2024, with the top 10 percent earning above $186,420. The BLS projects roughly 16,000 job openings per year in this field through 2034.</p>
+<p>Security+ positions you for the entry-to-mid tier of that market, not the median. Realistic salary ranges for Security+-adjacent roles by experience level:</p>
+<ul>
+<li><strong>0–2 years experience:</strong> $65,000–$80,000 annually in most U.S. markets.</li>
+<li><strong>3–5 years experience:</strong> $80,000–$95,000.</li>
+<li><strong>6+ years experience:</strong> $95,000–$115,000+.</li>
+</ul>
+<p>Specific entry-level roles where Security+ is frequently required or strongly preferred include:</p>
+<ul>
+<li><strong>SOC Analyst (Tier 1/2):</strong> Monitors alerts, investigates incidents, escalates threats.</li>
+<li><strong>IT Security Analyst:</strong> Implements and monitors controls across an organization's systems.</li>
+<li><strong>Systems Administrator (cleared/government):</strong> Manages networks in environments requiring DoD 8140 compliance.</li>
+<li><strong>GRC Analyst:</strong> Handles governance, risk, and compliance documentation — a growing area as regulatory requirements expand.</li>
+<li><strong>Help Desk with security responsibilities:</strong> An increasingly common pairing as organizations bring security closer to tier-1 support.</li>
+</ul>
+<h2>Who is Security+ clearly worth it for?</h2>
+<p><strong>Career-switchers moving into cybersecurity.</strong> If you come from a non-IT background and are targeting security roles, Security+ is the most recognized credential to prove you've covered the foundational material. It's an efficient signal that opens doors to entry-level roles and structured programs.</p>
+<p><strong>IT generalists and system administrators.</strong> If you've been running networks, servers, or help-desk operations and want to move into a security-focused role, Security+ maps directly to skills you already practice daily — firewalls, access controls, patch management, and incident documentation. The conceptual lift is manageable, and the career trajectory it opens is substantial.</p>
+<p><strong>DoD contractors and cleared personnel.</strong> No ambiguity here. If you work on a DoD program and your role falls under 8140, you need a qualifying certification. Security+ is the most commonly accepted option at the IAT Level II / IAM Level I tier.</p>
+<p><strong>Help-desk and tier-1 support workers aiming for advancement.</strong> Security+ is the most direct path from tier-1 support into security-adjacent roles with meaningfully higher compensation. The step-up in pay for making this transition is typically $15,000–$25,000 annually, making the $425 exam cost negligible by comparison.</p>
+<h2>Who may not need Security+?</h2>
+<p><strong>Experienced security engineers already holding senior credentials.</strong> If you hold CISSP, CISM, or CASP+ and are targeting senior security architect or leadership roles, Security+ is unlikely to move the needle with employers at that level. Those credentials already demonstrate and exceed what Security+ signals.</p>
+<p><strong>Professionals targeting cloud-native roles where vendor certs dominate.</strong> If your goal is a cloud security engineer role at a company that operates entirely on AWS or Azure, hiring managers in that space weight AWS Security Specialty, Azure Security Engineer (AZ-500), and similar vendor credentials more heavily than CompTIA certifications. Security+ doesn't hurt, but it may not be the priority.</p>
+<p><strong>Absolute beginners with no IT foundation.</strong> This is nuanced — Security+ is achievable without prior IT experience, but the study investment is substantial (4–6 months minimum) and the material is harder to retain without hands-on context. If you have zero IT background, the better path is to build a foundation in networking (CompTIA Network+, a home lab, or practical help-desk experience) before tackling Security+. The credential will mean more and the preparation will be less painful.</p>
+<h2>What's the verdict?</h2>
+<p>For the population most likely to be Googling "is Security+ worth it" — someone considering a move into cybersecurity from IT or from an adjacent field, or someone in the cleared government-contractor space — the answer is <strong>yes, it's worth it.</strong> The credential is employer-recognized, federally mandated in significant segments of the job market, and the ROI against a $425 voucher is measurable within months of passing.</p>
+<p>The honest caveat: Security+ by itself does not guarantee a job. It is a signal that opens doors in a competitive market. Pairing it with hands-on experience, a portfolio of practical skills, and targeted job applications makes it effective. As a standalone piece of paper with no practical context behind it, its value is more limited.</p>
+<p>Practice is part of preparation. The Ryno Tools Security+ SY0-701 question bank covers all five exam domains. Working through practice questions by domain identifies your weakest areas before you sit for the real exam.</p>
+<h2>Frequently asked questions</h2>
+<h2>Is Security+ enough to get a cybersecurity job with no experience?</h2>
+<p>Security+ alone is rarely sufficient without any practical context. Employers hiring entry-level security roles want to see that you understand how the concepts work in practice, not just that you passed a multiple-choice exam. Pair the certification with a home lab, some documented projects, familiarity with security tools, or prior IT experience. That combination is consistently compelling to hiring managers for SOC analyst and junior security roles.</p>
+<h2>Does Security+ expire?</h2>
+<p>Yes. Security+ is valid for three years from your certification date. To maintain it, you must earn 50 CEUs during the three-year period and pay the annual $50 CE maintenance fee. Failing to complete the renewal process results in certification expiration, after which you would need to retake the exam to recertify.</p>
+<h2>Is Security+ harder than Network+?</h2>
+<p>Yes. For a full breakdown of what makes Security+ harder — exam structure, PBQs, domain weights, and realistic study times by experience level — see <a href="/blog/how-hard-is-security-plus/">How Hard Is the Security+ Exam?</a>.</p>]]></content:encoded>
+  </item>
   <item>
     <title><![CDATA[What Changed in the 2026-2030 FCC Technician Question Pool]]></title>
     <link>https://ryno.tools/blog/2026-technician-question-pool-changes/</link>

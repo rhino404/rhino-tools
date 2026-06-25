@@ -79,6 +79,15 @@ function check() {
     for (const [f, re] of [['publishedDate', /^\d{4}-\d{2}-\d{2}$/], ['refreshBy', /^\d{4}-\d{2}-\d{2}$/], ['targetMonth', /^\d{4}-\d{2}$/]]) {
       if (row[f] && !re.test(row[f])) err(`[${id}] ${f} bad format: "${row[f]}"`);
     }
+    // Planned posts on a track that already has published content should declare
+    // how they differ. Prevents near-duplicate posts from being queued silently.
+    if (['queued', 'drafting', 'review'].includes(row.status)) {
+      const trackHasPublished = backlog.some(r => r.track === row.track && r.status === 'published');
+      if (trackHasPublished && !row.differentiator) {
+        warn(`[${id}] on a track with published posts but missing "differentiator" field. ` +
+          `Add a one-sentence statement of what makes this post distinct from existing ${row.track} posts.`);
+      }
+    }
     // Published rows must correspond to a real shipped post.
     if (row.status === 'published') {
       if (!postsBySlug.has(row.slug)) err(`[${id}] status=published but not in posts.json`);
