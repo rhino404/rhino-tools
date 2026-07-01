@@ -1,5 +1,53 @@
 [
   {
+    "slug": "docker-vs-kubernetes",
+    "title": "Docker vs Kubernetes: What's the Difference?",
+    "description": "Docker and Kubernetes are not competitors — they solve different problems. Learn what each tool actually does, how they work together, and when to use both.",
+    "excerpt": "Most people assume Docker and Kubernetes are rivals and you pick one or the other. The reality is more useful: they operate at entirely different layers, and the most common production stack uses both.",
+    "track": "devops/containers-k8s",
+    "trackLabel": "DevOps — Containers & Kubernetes",
+    "trackIcon": "⚙️",
+    "trackSlug": "devops",
+    "trackCategory": "devops",
+    "trackImage": "/images/blog/devops-blog-hero.webp",
+    "trackImageAlt": "Software engineering and DevOps workflow diagram — Ryno Tools DevOps interview prep",
+    "tags": [
+      "docker",
+      "kubernetes",
+      "containers",
+      "orchestration",
+      "comparison"
+    ],
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "readingTime": 8,
+    "url": "/blog/docker-vs-kubernetes/"
+  },
+  {
+    "slug": "what-is-infrastructure-as-code",
+    "title": "What Is Infrastructure as Code? A Plain-English Guide for Developers",
+    "description": "Infrastructure as code lets you define servers, networks, and databases in version-controlled files instead of clicking through consoles. Here's why it matters.",
+    "excerpt": "Ever wonder who changed that load balancer at 2 a.m.? IaC is the answer — define your entire infrastructure in code, check it into git, and provision identical environments in minutes. Here's what it means and why it matters in 2026.",
+    "track": "devops/iac",
+    "trackLabel": "DevOps — Infrastructure as Code",
+    "trackIcon": "⚙️",
+    "trackSlug": "devops",
+    "trackCategory": "devops",
+    "trackImage": "/images/blog/devops-blog-hero.webp",
+    "trackImageAlt": "Software engineering and DevOps workflow diagram — Ryno Tools DevOps interview prep",
+    "tags": [
+      "iac",
+      "terraform",
+      "automation",
+      "declarative",
+      "provisioning"
+    ],
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "readingTime": 7,
+    "url": "/blog/what-is-infrastructure-as-code/"
+  },
+  {
     "slug": "what-can-you-do-technician-license",
     "title": "What Can You Actually Do With a Technician License?",
     "description": "Technician license privileges explained: full VHF/UHF access, limited HF bands, repeaters, APRS, satellites, emergency comms, and power limits.",

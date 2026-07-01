@@ -138,6 +138,16 @@ Each question includes:
 ## Articles
 
 <!-- blog-articles:start -->
+- [Docker vs Kubernetes: What's the Difference?](https://ryno.tools/blog/docker-vs-kubernetes/) — Most people assume Docker and Kubernetes are rivals and you pick one or the other. The reality is more useful: they operate at entirely different layers, and the most common production stack uses both.
+  author: Ask Ryno
+  published: 2026-07-01
+  track: devops/containers-k8s
+  tags: docker, kubernetes, containers, orchestration, comparison
+- [What Is Infrastructure as Code? A Plain-English Guide for Developers](https://ryno.tools/blog/what-is-infrastructure-as-code/) — Ever wonder who changed that load balancer at 2 a.m.? IaC is the answer — define your entire infrastructure in code, check it into git, and provision identical environments in minutes. Here's what it means and why it matters in 2026.
+  author: Ask Ryno
+  published: 2026-07-01
+  track: devops/iac
+  tags: iac, terraform, automation, declarative, provisioning
 - [What Can You Actually Do With a Technician License?](https://ryno.tools/blog/what-can-you-do-technician-license/) — You passed the Technician exam — now what? Full VHF/UHF privileges, satellite operation, APRS, emergency comms, and yes, up to 1,500 watts on most bands. Here's the complete operating picture.
   author: Ask Ryno
   published: 2026-06-30
