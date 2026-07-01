@@ -5,8 +5,141 @@
     <link>https://ryno.tools/blog/</link>
     <description>Study guides and exam prep tips for Ham Radio, Falconry, and CompTIA Security+.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jul 2026 02:26:16 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 12:20:50 GMT</lastBuildDate>
     <atom:link href="https://ryno.tools/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Docker vs Kubernetes: What's the Difference?]]></title>
+    <link>https://ryno.tools/blog/docker-vs-kubernetes/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/docker-vs-kubernetes/</guid>
+    <pubDate>Wed, 01 Jul 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Most people assume Docker and Kubernetes are rivals and you pick one or the other. The reality is more useful: they operate at entirely different layers, and the most common production stack uses both.]]></description>
+    <category><![CDATA[DevOps — Containers & Kubernetes]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p>Docker and Kubernetes are two of the most frequently mentioned tools in modern software operations, yet they are routinely misunderstood as competitors requiring a choice between them. They are not competitors — Docker builds and runs individual containers, while Kubernetes orchestrates many containers across a cluster of machines. These two tools solve problems at different layers of the stack, and a typical production environment uses both.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> Docker packages and runs a single container. Kubernetes manages hundreds or thousands of containers across many servers — handling scaling, self-healing, and deployment automation. They complement each other. If you are choosing between them, you are asking the wrong question.</p>
+</blockquote>
+<h2>What is Docker?</h2>
+<p><strong>Docker</strong> is an open platform for building, shipping, and running containers. A <strong>container</strong> is a lightweight, isolated environment that bundles an application together with everything it needs to run — code, runtime, libraries, and configuration. Because a container carries its own dependencies, it runs identically on a developer's laptop, a CI server, or a production host.</p>
+<p>Docker provides two main things. First, <code>docker build</code> turns a <code>Dockerfile</code> into an image — a portable, versioned snapshot of the application and its environment. Second, <code>docker run</code> starts a container from that image on any host with Docker installed. The Docker daemon (<code>dockerd</code>) manages images, containers, networks, and volumes behind the scenes; the <code>docker</code> CLI is how engineers interact with it.</p>
+<p>For running several containers together locally — say, a web app, a database, and a cache — <strong>Docker Compose</strong> lets you define the entire stack in a single YAML file and start everything with one command. Compose is excellent for development and small deployments.</p>
+<h2>What is Kubernetes?</h2>
+<p><strong>Kubernetes</strong> (shortened to K8s) is an open-source platform for managing containerized workloads across a cluster of machines. Google open-sourced it in 2014 based on over a decade of internal experience running workloads at scale. The name comes from the Greek word for "helmsman" — apt, because Kubernetes steers containers to where they need to go.</p>
+<p>Kubernetes does not build or run individual containers in the way Docker does. Its job is to decide where containers run, how many copies are running at any moment, and what happens when something goes wrong. Its key capabilities include:</p>
+<ul>
+<li><strong>Self-healing</strong> — automatically restarts failed containers and replaces unresponsive ones</li>
+<li><strong>Horizontal scaling</strong> — adds or removes container copies based on load, either manually or automatically</li>
+<li><strong>Rolling deployments</strong> — updates containers incrementally with no downtime, with automatic rollback on failure</li>
+<li><strong>Service discovery and load balancing</strong> — routes traffic to healthy containers using internal DNS and IP management</li>
+<li><strong>Secret and config management</strong> — stores sensitive values separately from application images</li>
+</ul>
+<p>Kubernetes operates on a declarative model: you describe the desired state (five copies of this container, always), and Kubernetes continuously works to maintain it.</p>
+<h2>Do Docker and Kubernetes compete?</h2>
+<p>No. The confusion arises because both involve containers, but they operate at entirely different levels.</p>
+<p>Docker answers the question: "How do I package and run this one application?" Kubernetes answers the question: "How do I keep hundreds of application instances running reliably across many servers?"</p>
+<p>Think of Docker as the factory that produces standardized shipping containers, and Kubernetes as the logistics system that routes those containers across a global fleet of ships. One builds the unit; the other manages the fleet.</p>
+<p>If there is an actual orchestration competitor to Kubernetes, it is <strong>Docker Swarm</strong> — Docker's own built-in clustering tool. Swarm lets you group multiple Docker hosts into a cluster and deploy services across them. It is simpler to set up than Kubernetes and uses familiar Docker commands, which makes it appealing for smaller teams. However, Kubernetes has become the dominant standard for container orchestration, particularly for larger, more complex workloads, and most cloud providers offer managed Kubernetes services (AWS EKS, Google GKE, Azure AKS) with no equivalent managed Swarm offering.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> If asked "what competes with Kubernetes?", the answer is Docker Swarm — not Docker itself. Docker is a container runtime and build tool; Swarm is Docker's orchestration layer. These are distinct products.</p>
+</blockquote>
+<h2>What did "Kubernetes dropped Docker" actually mean?</h2>
+<p>In <strong>Kubernetes 1.24, released in May 2022</strong>, Kubernetes removed a compatibility shim called <strong>dockershim</strong>. Headlines at the time declared that "Kubernetes dropped Docker support," which caused significant confusion.</p>
+<p>Here is what actually happened. Kubernetes communicates with container runtimes through a standardized interface called the <strong>Container Runtime Interface (CRI)</strong>. Docker Engine was never written to implement CRI, so Kubernetes had maintained dockershim — a translation layer — to bridge the gap. This shim was always intended as a temporary measure, and maintaining it became a burden that blocked newer features.</p>
+<p>When dockershim was removed, Kubernetes began communicating directly with CRI-compatible runtimes instead — primarily <strong>containerd</strong> (which Docker itself uses internally) and <strong>CRI-O</strong>. In most cases, this change was invisible to users: the underlying container runtime was already containerd; only the adapter changed.</p>
+<p>Critically, <strong>Docker images still work exactly the same</strong>. Images built with <code>docker build</code> comply with the Open Container Initiative (OCI) image format, which every CRI runtime supports. Nothing about how you build or push images changed. What changed is how the Kubernetes node runtime is configured — and that is an infrastructure concern, not an application developer concern.</p>
+<p>The short version: "Kubernetes dropped Docker" meant Kubernetes stopped using a compatibility shim. Docker as a tool for building images and developing locally is entirely unaffected.</p>
+<h2>When should you use Docker alone vs add Kubernetes?</h2>
+<p>This is the most practical question, and the honest answer is: Kubernetes earns its complexity at scale.</p>
+<p><strong>Docker + Docker Compose is the right choice when:</strong></p>
+<ul>
+<li>You are running a single-host application or a small team project</li>
+<li>Your application has a handful of containers that fit on one machine</li>
+<li>You want fast local development without cluster overhead</li>
+<li>Operational simplicity matters more than advanced scheduling</li>
+</ul>
+<p>Docker Compose can define your entire stack — web server, database, cache — in one YAML file, start everything with <code>docker compose up</code>, and stop it with <code>docker compose down</code>. For many applications, this is all you ever need.</p>
+<p><strong>Kubernetes is the right choice when:</strong></p>
+<ul>
+<li>You need to run containers across multiple nodes (servers)</li>
+<li>Your application must survive individual host failures automatically</li>
+<li>You need to scale specific services independently based on traffic</li>
+<li>You are deploying multiple microservices that need to discover each other</li>
+<li>Rolling deployments with automatic rollback are a requirement</li>
+</ul>
+<p>Kubernetes adds real operational complexity — concepts like pods, deployments, services, ingress controllers, namespaces, and RBAC. That complexity pays off when you genuinely need what it provides. For a small team running a single-host app, it is overhead without benefit. For a team running twenty microservices across a multi-node cluster, it is the tool that makes the whole thing manageable.</p>
+<h2>How do Docker and Kubernetes work together?</h2>
+<p>In a typical production workflow, Docker and Kubernetes play distinct but connected roles.</p>
+<p>A developer writes a <code>Dockerfile</code> that describes how to build the application image. In the CI/CD pipeline (covered in our <a href="/blog/what-is-cicd-beginners-guide/">CI/CD beginners guide</a>), <code>docker build</code> produces a versioned image that is pushed to a container registry such as Docker Hub or Amazon ECR. Kubernetes then pulls that image and uses it when scheduling containers across the cluster.</p>
+<p>The same image that the developer ran locally with <code>docker run</code> is the exact artifact that Kubernetes deploys to production. The build tool and the orchestrator share a common currency — the OCI-compliant container image — which is what makes the separation of concerns so clean.</p>
+<p>Infrastructure provisioning for the cluster itself is a separate concern, often handled with tools covered in our Infrastructure as Code guide. What Docker and Kubernetes handle between them is everything from the image build through the running container.</p>
+<h2>Frequently asked questions</h2>
+<p><strong>Can I use Kubernetes without Docker?</strong></p>
+<p>Yes. Since dockershim was removed in Kubernetes 1.24, Kubernetes communicates with container runtimes through the CRI, and Docker Engine is no longer one of them by default. Nodes typically use containerd or CRI-O directly. You can also build container images using tools other than Docker, such as Buildah or Podman, as long as the resulting images conform to the OCI image specification.</p>
+<p><strong>Do I need to learn Docker before Kubernetes?</strong></p>
+<p>Practically, yes. Understanding what a container is, how images are layered, how <code>Dockerfile</code> instructions work, and how networking and volumes function in Docker gives you the foundational vocabulary Kubernetes assumes you already have. Jumping straight to Kubernetes without that background makes the abstractions much harder to follow.</p>
+<p><strong>Is Docker Compose a replacement for Kubernetes?</strong></p>
+<p>Not in production at scale. Compose is a single-host tool — it manages containers on one machine. Kubernetes manages containers across a cluster of machines and adds self-healing, autoscaling, rolling deployments, and cross-node networking that Compose does not provide. For local development or small deployments, Compose is often the better choice because it is dramatically simpler. The two tools are not substitutes for each other so much as tools suited to different scales.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title><![CDATA[What Is Infrastructure as Code? A Plain-English Guide for Developers]]></title>
+    <link>https://ryno.tools/blog/what-is-infrastructure-as-code/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/what-is-infrastructure-as-code/</guid>
+    <pubDate>Wed, 01 Jul 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Ever wonder who changed that load balancer at 2 a.m.? IaC is the answer — define your entire infrastructure in code, check it into git, and provision identical environments in minutes. Here's what it means and why it matters in 2026.]]></description>
+    <category><![CDATA[DevOps — Infrastructure as Code]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p><strong>Infrastructure as code (IaC)</strong> is the practice of defining and managing your infrastructure — servers, networks, databases, load balancers, DNS records — in text files that are checked into version control, rather than through manual clicks in a cloud console or one-off shell commands. If you've heard a colleague mention Terraform, or seen an AWS CloudFormation template in a repository and wondered what it was for, you've already brushed up against IaC. Understanding it changes how you think about environments, reliability, and team collaboration.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> IaC means your infrastructure is defined in code files, stored in git, and applied by a tool rather than configured by hand. You get version history, reproducible environments, and peer review for infrastructure changes — the same benefits your application code already gets from source control.</p>
+</blockquote>
+<h2>What does "infrastructure as code" actually mean?</h2>
+<p>Before IaC became common practice, setting up a new environment meant logging into a cloud console, clicking through wizards, running shell commands, and hoping you remembered every step. The result was often an environment that worked but that nobody could fully document, reproduce, or safely change. When something broke at 2 a.m., there was no audit trail for who modified what — and standing up an identical staging environment could take hours or days.</p>
+<p>IaC solves this by treating infrastructure configuration the same way developers treat application code. You write a file that describes the resources you want — "I need a virtual machine with 4 CPUs, a security group allowing HTTPS traffic, and a managed database on the same VPC" — commit that file to git, and run a tool that provisions exactly what you described. The cloud console becomes a read-only view of what your code declared, not a place where changes are made.</p>
+<h2>What are the benefits of Infrastructure as Code?</h2>
+<p>The benefits are concrete and significant, particularly for teams that have experienced the pain of managing infrastructure by hand:</p>
+<ul>
+<li><strong>Version history.</strong> Every infrastructure change goes through a commit. You can see who changed what, when, and why — and roll back to any previous state.</li>
+<li><strong>Reproducibility.</strong> The same code that provisions your production environment creates an identical staging environment. No more "it works in staging" mysteries caused by configuration differences.</li>
+<li><strong>Speed.</strong> What takes hours of manual console work — provisioning a full environment — takes minutes when driven by a tool. Teams can create and destroy environments on demand.</li>
+<li><strong>Peer review.</strong> Infrastructure changes go through pull requests, just like application code. A second engineer can catch a misconfigured security group before it ever reaches production.</li>
+<li><strong>Reduced configuration drift.</strong> Drift occurs when someone manually tweaks a server or adds a rule directly in the console, leaving the real environment out of sync with what the team thinks it looks like. When the declared state is authoritative, drift becomes visible and addressable.</li>
+</ul>
+<blockquote>
+<p><strong>Exam tip:</strong> Configuration drift is one of the most commonly tested IaC concepts. It describes the gap between what your code declares and what actually exists in your cloud environment — usually caused by manual changes made outside of the IaC workflow.</p>
+</blockquote>
+<h2>What is declarative vs. imperative IaC?</h2>
+<p>There are two broad styles of IaC, and understanding the difference helps you choose tools and reason about how they behave.</p>
+<p><strong>Declarative IaC</strong> means you describe the desired end state — "I want three EC2 instances, one S3 bucket, and this IAM role" — and the tool determines how to make reality match that description. You don't write the steps to get there; the tool handles sequencing, dependencies, and identifying what already exists versus what needs to change. Terraform, OpenTofu, AWS CloudFormation, and Pulumi are all declarative tools. This is the dominant style in modern IaC.</p>
+<p><strong>Imperative (procedural) IaC</strong> means you write a sequence of instructions: create this resource, then configure it, then attach it to that. The tool follows your steps in order. Ansible playbooks are a well-known example of this style, though Ansible has evolved to support more declarative patterns over time. Shell scripts that call cloud CLIs are another classic example.</p>
+<p>The practical difference matters most when you re-run the same code. A declarative tool compares your declared state to the current state and makes only the necessary changes — it's inherently safe to run multiple times. An imperative script that creates a resource will create it again if you run it a second time, resulting in duplicates unless you add your own guards.</p>
+<h2>What is idempotency, and why does it matter?</h2>
+<p><strong>Idempotency</strong> means that running the same operation multiple times produces the same result as running it once. It's a term borrowed from mathematics, but in IaC it has a very practical meaning: you can apply your infrastructure code again and again without creating duplicate resources or accumulating unintended changes.</p>
+<p>Consider the difference between a shell script and a declarative IaC tool. A shell script that runs <code>aws ec2 run-instances ...</code> creates a new virtual machine every time you execute it. If you run it three times, you have three machines. A Terraform or OpenTofu configuration that declares <code>count = 1</code> for that same machine will compare the declared count against what exists and do nothing if the machine is already running. It reaches the same end state regardless of how many times you apply it.</p>
+<p>This property is what makes IaC automation trustworthy. You can apply your configuration as part of a CI/CD pipeline on every merge, or after an incident, or to recover from a partial failure — without worrying that you'll accidentally double your infrastructure.</p>
+<h2>What is state, and what is drift?</h2>
+<p>Declarative tools like Terraform and OpenTofu maintain a <strong>state file</strong> — a record that maps every resource declared in your code to the real resource it corresponds to in your cloud account. When you run <code>terraform apply</code>, the tool reads the state file, compares it against your current code, and computes a plan of what needs to be created, modified, or destroyed.</p>
+<p><strong>Drift</strong> is what happens when someone modifies real infrastructure outside of the IaC workflow — changing a security group rule in the console, resizing a database manually, or deleting a resource directly. The state file no longer matches reality. The next time you run your IaC tool, it will either try to revert those manual changes (if the declared state hasn't changed) or behave unpredictably.</p>
+<p>This is why IaC is as much a discipline as a tool choice. The technical setup is straightforward; the harder part is the team agreement that all infrastructure changes flow through code and pull requests, and that the console is used only for reading, not for writing.</p>
+<h2>What are the main IaC tools in 2026?</h2>
+<p><strong>Terraform</strong> (HashiCorp) is the tool most people encounter first. It uses its own configuration language (HCL), supports thousands of cloud providers through a plugin ecosystem, and introduced the declarative, state-based approach that most modern IaC tools now follow. It remains widely used in enterprise environments.</p>
+<p><strong>OpenTofu</strong> is the community-maintained, open-source fork of Terraform, now a Linux Foundation project. The fork emerged after HashiCorp relicensed Terraform from the Mozilla Public License (MPL 2.0) to the Business Source License (BSL 1.1) in August 2023 — a change made without community input that introduced legal uncertainty for teams building products and services on top of Terraform. OpenTofu retains the MPL 2.0 license, is CLI-compatible with Terraform, and has shipped several features the upstream tool lacks, including built-in state file encryption (v1.7), early variable evaluation that allows variables in backend and module source blocks (v1.8), and provider-level <code>for_each</code> iteration (v1.9). For teams starting a greenfield project today, OpenTofu is worth evaluating alongside Terraform — the migration path is low friction, and the open governance model removes vendor licensing risk.</p>
+<p><strong>AWS CloudFormation</strong> is Amazon's native IaC service. You write templates in YAML or JSON that describe AWS resources, and CloudFormation provisions them as a logical unit called a <strong>stack</strong>. CloudFormation is AWS-specific but deeply integrated with the platform, making it a natural fit for teams that live entirely within the AWS ecosystem and prefer managed tooling with no third-party dependencies.</p>
+<p><strong>Pulumi</strong> lets you write infrastructure configuration in general-purpose programming languages — TypeScript, Python, Go, and others — rather than a domain-specific language like HCL. This appeals to teams that want full language features (loops, conditionals, libraries, type checking) and a single language across application and infrastructure code.</p>
+<p><strong>Ansible</strong> is primarily a configuration management and automation tool — used to install software, apply settings, and orchestrate changes on existing servers — but it can also provision cloud resources. Its playbook model is more procedural than the state-based approach of Terraform and OpenTofu, which makes it a different kind of tool rather than a direct alternative. Many teams use Ansible alongside a declarative provisioning tool: Terraform to stand up the servers, Ansible to configure what runs on them.</p>
+<h2>Where does IaC fit with Docker, Kubernetes, and CI/CD?</h2>
+<p>IaC, containers, and CI/CD are often mentioned together but operate at different layers of the stack, and the distinctions matter.</p>
+<p><strong>IaC is about provisioning infrastructure</strong> — the virtual machines, networks, load balancers, managed databases, and DNS records that form the foundation of an environment. It answers the question: "What cloud resources need to exist?"</p>
+<p><strong>Containers and orchestration are about running applications on that infrastructure.</strong> Docker packages your application and its dependencies into a portable image. Kubernetes (or another orchestrator) manages where and how those containers run. These tools assume infrastructure already exists; they don't provision it. (A dedicated post on Docker vs Kubernetes covers that distinction in depth.)</p>
+<p><strong>CI/CD pipelines are about moving code from a commit to a deployed state</strong> — building, testing, scanning, and deploying application changes. IaC code itself can and should flow through a CI/CD pipeline: a pull request modifying a Terraform configuration can trigger a <code>terraform plan</code> in CI so reviewers see the exact changes before approving. See the <a href="/blog/what-is-cicd-beginners-guide/">CI/CD beginners guide</a> for a full walkthrough of how pipelines work.</p>
+<p>The three layers stack on each other: IaC provisions the infrastructure, containers run on it, and CI/CD pipelines automate the movement of changes through both layers.</p>
+<h2>Frequently asked questions</h2>
+<p><strong>Do I need IaC for a small project or personal side project?</strong></p>
+<p>Not necessarily — and starting with IaC just to learn it is completely reasonable even at small scale. The real payoff comes when an environment needs to be reproducible, shared across a team, or rebuilt from scratch after an incident. For a solo project with one server, the console is fine. For anything with more than one environment or more than one person, IaC saves significant time and reduces error.</p>
+<p><strong>What is the difference between IaC and configuration management?</strong></p>
+<p>IaC in the narrower sense refers to provisioning resources — telling a cloud provider to create a virtual machine. Configuration management (the domain of tools like Ansible, Chef, and Puppet) refers to controlling what's installed and configured on a machine after it exists. In practice, the lines blur: tools like Ansible can provision cloud resources, and Terraform can execute configuration scripts as part of provisioning. The distinction is useful for understanding what problem a tool was designed to solve.</p>
+<p><strong>Is Terraform still relevant in 2026, or has OpenTofu replaced it?</strong></p>
+<p>Both are in active use. Terraform remains dominant in organizations that adopted it before the license change, and HashiCorp (now owned by IBM) continues to maintain it. OpenTofu has gained significant traction, particularly for new projects and at companies that need an OSI-approved open-source license. The two tools share HCL syntax and most of the same provider ecosystem, so the choice is primarily about governance and feature roadmap rather than a major technical rewrite.</p>]]></content:encoded>
+  </item>
   <item>
     <title><![CDATA[What Can You Actually Do With a Technician License?]]></title>
     <link>https://ryno.tools/blog/what-can-you-do-technician-license/</link>

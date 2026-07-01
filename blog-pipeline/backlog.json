@@ -1,5 +1,38 @@
 [
   {
+    "slug": "docker-vs-kubernetes",
+    "title": "Docker vs Kubernetes: What's the Difference?",
+    "track": "devops/containers-k8s",
+    "intentKeyword": "docker vs kubernetes",
+    "status": "published",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "Docker docs; Kubernetes concepts; container runtime vs orchestrator.",
+    "differentiator": "Container vs orchestrator distinction — conceptual comparison, not IaC or CI/CD.",
+    "relatedPosts": [
+      "what-is-cicd-beginners-guide"
+    ],
+    "publishedDate": "2026-07-01",
+    "refreshBy": "2027-07-01"
+  },
+  {
+    "slug": "what-is-infrastructure-as-code",
+    "title": "What Is Infrastructure as Code?",
+    "track": "devops/iac",
+    "intentKeyword": "what is infrastructure as code",
+    "status": "published",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "Terraform/CloudFormation; declarative vs imperative; idempotency.",
+    "differentiator": "IaC concepts and tools — declarative infrastructure management, distinct from containers or CI/CD pipelines.",
+    "relatedPosts": [
+      "what-is-cicd-beginners-guide",
+      "docker-vs-kubernetes"
+    ],
+    "publishedDate": "2026-07-01",
+    "refreshBy": "2027-07-01"
+  },
+  {
     "slug": "which-ham-radio-license-first",
     "title": "Technician vs General vs Extra: Which Ham Radio License Should You Get First?",
     "track": "ham-radio/technician",
@@ -240,35 +273,6 @@
     "relatedPosts": [
       "how-to-learn-hiragana",
       "what-is-jlpt-n5"
-    ]
-  },
-  {
-    "slug": "docker-vs-kubernetes",
-    "title": "Docker vs Kubernetes: What's the Difference?",
-    "track": "devops/containers-k8s",
-    "intentKeyword": "docker vs kubernetes",
-    "status": "queued",
-    "priority": "high",
-    "targetMonth": "2026-07",
-    "sourcesHint": "Docker docs; Kubernetes concepts; container runtime vs orchestrator.",
-    "differentiator": "Container vs orchestrator distinction — conceptual comparison, not IaC or CI/CD.",
-    "relatedPosts": [
-      "what-is-cicd-beginners-guide"
-    ]
-  },
-  {
-    "slug": "what-is-infrastructure-as-code",
-    "title": "What Is Infrastructure as Code?",
-    "track": "devops/iac",
-    "intentKeyword": "what is infrastructure as code",
-    "status": "queued",
-    "priority": "high",
-    "targetMonth": "2026-07",
-    "sourcesHint": "Terraform/CloudFormation; declarative vs imperative; idempotency.",
-    "differentiator": "IaC concepts and tools — declarative infrastructure management, distinct from containers or CI/CD pipelines.",
-    "relatedPosts": [
-      "what-is-cicd-beginners-guide",
-      "docker-vs-kubernetes"
     ]
   },
   {
