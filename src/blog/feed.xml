@@ -5,8 +5,129 @@
     <link>https://ryno.tools/blog/</link>
     <description>Study guides and exam prep tips for Ham Radio, Falconry, and CompTIA Security+.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jun 2026 02:53:55 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 02:26:16 GMT</lastBuildDate>
     <atom:link href="https://ryno.tools/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[What Can You Actually Do With a Technician License?]]></title>
+    <link>https://ryno.tools/blog/what-can-you-do-technician-license/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/what-can-you-do-technician-license/</guid>
+    <pubDate>Tue, 30 Jun 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[You passed the Technician exam — now what? Full VHF/UHF privileges, satellite operation, APRS, emergency comms, and yes, up to 1,500 watts on most bands. Here's the complete operating picture.]]></description>
+    <category><![CDATA[Ham Radio — Technician]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p>A Technician class license is not a starter license that locks you in a corner — it is a full, permanent FCC authorization that opens up an enormous amount of amateur radio spectrum and a wide range of operating activities. If you just passed (or are about to pass) the Technician exam, here is a practical breakdown of what you can actually do from day one.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> Technicians get full privileges on all amateur bands above 30 MHz — including the popular 2-meter and 70-centimeter bands — plus limited but real HF access on 10, 15, 40, and 80 meters. Power limits go up to 1,500 watts PEP on VHF/UHF. Activities include local repeaters, emergency communications, APRS tracking, satellite operation, digital modes, and contesting.</p>
+</blockquote>
+<h2>What does "full VHF/UHF privileges" actually mean?</h2>
+<p>Under FCC Part 97, Technician class operators have complete operating privileges on all amateur radio frequency bands above 30 MHz. In practice, that centers on four primary band groups:</p>
+<ul>
+<li><strong>6 meters (50–54 MHz):</strong> CW only in the lowest 100 kHz (50.0–50.1 MHz), all modes including voice across the rest. The 6-meter band is famous for unpredictable long-distance openings via sporadic-E propagation.</li>
+<li><strong>2 meters (144–148 MHz):</strong> CW only from 144.0 to 144.1 MHz, then all modes above that. The 2-meter band is the most active VHF band in the US — it carries the national simplex calling frequency (146.520 MHz) and the vast majority of local FM repeaters.</li>
+<li><strong>1.25 meters (222–225 MHz):</strong> Digital message forwarding only on 219–220 MHz; full privileges on 222–225 MHz.</li>
+<li><strong>70 centimeters (420–450 MHz):</strong> Full privileges across the entire band. Along with 2 meters, 70 cm is the other workhorse UHF band — handheld radios commonly cover both simultaneously.</li>
+</ul>
+<p>There are also allocations at 33 cm (902–928 MHz), 23 cm (1270–1295 MHz), and several higher microwave bands. All fall within full Technician privileges.</p>
+<h2>What are the HF privileges Technicians don't know they have?</h2>
+<p>This surprises a lot of new hams: the Technician license includes real HF operating rights. They are narrower than what General class unlocks, but they are not trivial.</p>
+<p><strong>80 meters (3.525–3.600 MHz):</strong> CW (Morse code) only.</p>
+<p><strong>40 meters (7.025–7.125 MHz):</strong> CW only.</p>
+<p><strong>15 meters (21.025–21.200 MHz):</strong> CW only.</p>
+<p><strong>10 meters (28.000–28.500 MHz):</strong> This is where the HF access gets genuinely interesting. Technicians can use:</p>
+<ul>
+<li>CW, RTTY, and digital modes from 28.000 to 28.300 MHz</li>
+<li>Phone (SSB voice) from 28.300 to 28.500 MHz</li>
+</ul>
+<p>The 10-meter HF band is the only one where Technicians can transmit voice in the HF spectrum. During periods of high solar activity — when the 11-year sunspot cycle is near its peak — the 10-meter band can support intercontinental contacts on modest power with a simple antenna. FT8 (a weak-signal digital mode) is particularly popular on 10 meters because it works even when conditions are marginal.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> The FCC limits Technician operators to a maximum of 200 watts PEP on HF band segments (80, 40, 15, and 10 meters). On VHF/UHF and higher bands, the limit rises to 1,500 watts PEP. This is a commonly tested point — the 200-watt HF limit is specific to Technician class HF segments, not a global Technician power restriction.</p>
+</blockquote>
+<h2>What are the most common operating activities for a new Technician?</h2>
+<p><strong>Local FM repeaters</strong> are where most Technicians start. Repeaters are automated stations that receive a signal on one frequency and retransmit it at higher power on a different frequency, dramatically extending the range of a handheld or mobile radio. The 2-meter (144–148 MHz) and 70-centimeter (420–450 MHz) bands host thousands of repeaters across the US. The 2026 ARRL Repeater Directory lists over 22,000 repeater listings for the US and Canada. Finding one near you typically takes five minutes using RepeaterBook.com or the ARRL's directory.</p>
+<p><strong>APRS (Automatic Packet Reporting System)</strong> runs primarily on 144.390 MHz in North America. It is a digital communication system that broadcasts GPS position data, weather station telemetry, text messages, and other real-time information over the air. Packet digipeaters relay the broadcasts across the region, and the data shows up on public maps at APRS.fi. Many dual-band handheld radios support APRS out of the box. A Technician license is all you need to participate.</p>
+<p><strong>Emergency communications (ARES/RACES)</strong> are open to any licensed amateur. The Amateur Radio Emergency Service (ARES) is an ARRL-organized program of volunteers who provide communications support when conventional infrastructure fails during disasters. RACES (Radio Amateur Civil Emergency Service) operates under civil defense organizations and carries the same entry requirement: a valid amateur radio license. A Technician class license and a willingness to serve is sufficient to register with most local ARES groups.</p>
+<p><strong>Amateur satellite operation</strong> is fully available to Technicians. Amateur satellites — designated OSCAR (Orbiting Satellite Carrying Amateur Radio) — function like space-based repeaters. They receive signals on one frequency (uplink) and retransmit them on another (downlink). Most current linear transponder satellites use VHF/UHF uplink and downlink frequencies, which fall squarely within Technician privileges. The International Space Station (ISS) also carries amateur radio equipment, and any Technician can attempt a contact when the ISS passes overhead on its VHF frequencies — no NASA approval required.</p>
+<p><strong>Weak-signal digital modes on 10 meters.</strong> FT8, developed by Nobel laureate Joe Taylor (K1JT) and Steve Franke (K9AN), encodes 77 bits of information into a 15-second transmission that can decode signals 20 dB below the noise floor. On 10 meters at 28.074 MHz, Technicians can work stations around the world during solar-active periods with a simple wire antenna and 50 watts. It is one of the most accessible forms of HF operating available under a Technician license.</p>
+<p><strong>Contesting on VHF/UHF.</strong> The ARRL sponsors VHF contests throughout the year — the June VHF Contest, the September VHF Contest, and the January VHF Contest among them. These events reward contacts made across grid squares on 6 meters and above. Technicians are full participants. A modest VHF station at a good location can work dozens or hundreds of contacts in a weekend.</p>
+<h2>Is there a power limit that makes Technician "low power"?</h2>
+<p>This is a common misconception. <strong>Technicians are not restricted to low power on VHF/UHF.</strong> Under Part 97, the maximum permitted power for Technician class operators on bands above 30 MHz is 1,500 watts peak envelope power (PEP) — the same ceiling that applies to General and Extra class operators on those same bands.</p>
+<p>The 200-watt restriction applies only to the narrow HF segments described above (the 80, 40, 15, and 10-meter Technician sub-bands). Most Technicians run handheld or mobile radios at 5 to 50 watts simply because that is what the equipment delivers — not because the license requires it.</p>
+<h2>What can Technicians NOT do — and where should you look for the full picture?</h2>
+<p>The main limitations are on HF. Technicians cannot use voice on 80, 40, or 15 meters — those segments are CW only. Technicians have no access to the 20-meter, 17-meter, 12-meter, 30-meter, and 160-meter bands at all. The broad HF phone and digital allocations that let you hold a voice conversation with stations in Europe or South America on 20 or 40 meters require a General class upgrade.</p>
+<p>For a complete side-by-side comparison of what Technician, General, and Extra class licenses each unlock — and guidance on when it makes sense to upgrade — see our companion post <a href="/blog/which-ham-radio-license-first/">Technician vs General vs Extra: Which Ham Radio License Should You Get First?</a>.</p>
+<h2>What should you do first after passing the Technician exam?</h2>
+<p><strong>Step 1: Wait for your callsign.</strong> After your VE session submits the paperwork to the FCC, your license typically appears in the FCC's Universal Licensing System (ULS) database within a few days. You can start transmitting as soon as the grant shows in ULS — you do not need a paper document. Check the ULS at <code>wireless2.fcc.gov</code>.</p>
+<p><strong>Step 2: Get a handheld radio.</strong> A dual-band (2-meter and 70-centimeter) handheld radio — commonly called an HT (handie-talkie) — is the fastest way onto the air. Models from Yaesu, Kenwood, ICOM, and others start under $30 for basic Chinese-made units and $150–$250 for brand-name radios with better build quality. Program in the national 2-meter calling frequency (146.520 MHz) and start listening.</p>
+<p><strong>Step 3: Find a local repeater and net.</strong> Use RepeaterBook.com to identify active repeaters in your area. Many local clubs host weekly "nets" — scheduled on-air check-in sessions — that are specifically welcoming to new Technicians. Introduce yourself and ask questions. The ham radio community is widely considered one of the friendliest technical communities around.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> The FCC specifies that a Technician's operating authority begins the moment the license grant appears in the ULS database — not when physical documents arrive. A callsign like <code>KF6XXX</code> is assigned by the FCC sequentially; any licensed amateur (not just General or Extra) can also apply for a vanity call sign through ULS.</p>
+</blockquote>
+<h2>Frequently asked</h2>
+<h3>Can a Technician operate SSB (single-sideband) voice?</h3>
+<p>Yes — on VHF/UHF and on the 10-meter HF phone segment (28.300–28.500 MHz). SSB is permitted in at least some portion of every amateur band above 50 MHz. On 2 meters, SSB weak-signal operation happens in the 144.100–144.300 MHz range, distinct from the FM repeater portion of the band.</p>
+<h3>Can a Technician join a club or participate in events like Field Day?</h3>
+<p>Absolutely. ARRL Field Day — held every June — is open to all licensed amateurs at any class. It is simultaneously a contest, an emergency preparedness exercise, and a community event. Technicians often operate as part of club teams on VHF/UHF stations or as control operators on HF stations alongside higher-class operators supervising the contact.</p>
+<h3>Do I need to upgrade to General to do anything interesting?</h3>
+<p>No. Many operators spend years — some their entire amateur career — operating as Technicians, working local repeaters, participating in emergency communications, chasing satellites, and running digital modes on 10 meters. Upgrading to General opens up the full HF spectrum and is well worth it if HF communication becomes a goal, but it is not a prerequisite for a rich and active experience on the air.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title><![CDATA[Technician vs General vs Extra: Which Ham Radio License Should You Get First?]]></title>
+    <link>https://ryno.tools/blog/which-ham-radio-license-first/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/which-ham-radio-license-first/</guid>
+    <pubDate>Tue, 30 Jun 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[There are three US amateur radio license classes: Technician, General, and Extra. For most beginners, the answer is simple — start with Technician. Here's why, what each class unlocks, and when it's worth going further.]]></description>
+    <category><![CDATA[Ham Radio — Technician]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p>The US amateur radio licensing system has three classes — Technician, General, and Extra — and for the vast majority of newcomers, the right first step is the Technician license. Understanding what each class offers, and when it might make sense to move faster or aim higher, helps you make an informed choice before you ever open a study guide.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> Most new hams should start with Technician. It's the entry-level class, requires only a 35-question exam, and gets you on the air immediately. General and Extra unlock progressively more spectrum, especially HF (long-distance) bands, but you can earn those upgrades any time after your Technician — nothing locks you out.</p>
+</blockquote>
+<h2>What are the three US amateur radio license classes?</h2>
+<p>The FCC issues three classes of amateur radio operator licenses. They form a staircase of privileges, with each level requiring you to have passed all previous exams:</p>
+<p><strong>Technician</strong> is the entry-level license. You earn it by passing the 35-question Element 2 written exam. No prior license is required. Technicians get full operating privileges on all bands above 30 MHz — that covers VHF and UHF, including the popular 2-meter (144–148 MHz) and 70-centimeter (420–450 MHz) bands. Technicians also get limited HF access: CW (Morse code) on portions of the 80, 40, and 15 meter bands, and CW plus voice plus digital modes on the 10 meter band.</p>
+<p><strong>General</strong> is the intermediate license. You earn it by passing the 35-question Element 3 exam — after you already hold (or have just passed) Technician. General class opens up extensive HF privileges across all amateur bands. That's what makes worldwide voice and data communication possible. For most hams who want to talk to operators on other continents, General is the practical target.</p>
+<p><strong>Amateur Extra</strong> is the top class. It requires a 50-question Element 4 exam and conveys every available US amateur radio privilege — all bands, all modes, no restrictions. Extra licensees also have exclusive access to small segments at the edges of certain HF bands that are off-limits to General and Technician operators.</p>
+<h2>Why should most beginners start with Technician?</h2>
+<p>Technician exists precisely to give newcomers a complete, functional entry point. The privileges it grants are not a consolation prize — they're genuinely useful from day one.</p>
+<p>With a Technician license you can:</p>
+<ul>
+<li>Operate local and regional voice repeaters (the backbone of emergency communication networks)</li>
+<li>Reach the International Space Station during passes overhead</li>
+<li>Use satellite communications via amateur satellites</li>
+<li>Participate in local nets, APRS (automatic position reporting), and digital modes on VHF/UHF</li>
+<li>Operate on the 10 meter HF band, which during periods of high solar activity can carry signals around the world</li>
+</ul>
+<p>The exam itself is the right entry point in difficulty. At 35 questions drawn from a published pool of 409, with a passing score of 26 correct (74%), it's genuinely accessible with a few weeks of focused study. For more detail on the exam format and study approach, see our post on <a href="/blog/how-hard-is-ham-radio-technician-exam/">how hard the Technician exam is</a>.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> You are not skipping General or Extra by starting with Technician — you are following the path that the FCC designed. Technician knowledge is foundational for what comes next. All three exams build on the same core material.</p>
+</blockquote>
+<h2>What does General add — and when does it matter?</h2>
+<p>The General class license is the step most active HF operators eventually take. The upgrade requires passing one 35-question exam; no waiting period applies after earning Technician. You can sit for the General exam the same day you pass Technician if the VE session offers it.</p>
+<p>What General actually unlocks: phone (voice) and digital operating privileges on large portions of the 80, 40, 20, 17, 15, 12, and 10 meter bands. These are the bands where long-distance HF communication happens — talking to stations in Europe or South America on a simple wire antenna is a General-class activity.</p>
+<p>General matters most when you know HF is your primary interest. If your goal is emergency communications with a statewide network, portable HF operation during outdoor trips, or chasing DX (distant stations), you will want General. Some operators earn Technician, spend a few months on VHF/UHF to get comfortable with radio in general, and then pursue General. Others go Technician-to-General within weeks.</p>
+<h2>What does Extra add — and who needs it?</h2>
+<p>Amateur Extra conveys the remaining spectrum slices not available to General, primarily the lower-edge segments of HF bands where some of the most competitive contesting and low-noise DX activity happens. It also enables certain repeater coordination roles and VE (Volunteer Examiner) privileges for administering Element 4 exams.</p>
+<p>Practically speaking, Extra is not something most beginners should think about on their first day. The 50-question exam covers advanced theory: RF propagation, antenna design, modulation techniques, digital signal processing, and complex circuit analysis. It's a meaningful step up from General.</p>
+<p>Extra makes sense when you are already active on HF, find you want access to the lower-edge band segments, or have a specific interest in deep technical topics. Many hams spend months or years at General before pursuing Extra, and many never pursue it at all — General privileges are sufficient for virtually everything most operators want to do.</p>
+<h2>Can you skip Technician and start with General or Extra?</h2>
+<p>No — not for a first US license. FCC regulations require sequential licensing. You must pass Element 2 (Technician) before Element 3 (General), and both before Element 4 (Extra). Volunteer Examiner teams cannot administer a higher element unless you already hold credit for the elements below it.</p>
+<p>However, there is an important nuance: you can take all three exams in a single VE session on the same day. If you pass Element 2, the VEs can immediately offer you Element 3, and if you pass that, Element 4. Some highly motivated candidates have gone from no license to Amateur Extra in one sitting. This is not common, but it is possible.</p>
+<p>There is also a reciprocal licensing path for foreign licensees. If you hold a valid amateur license issued by a country with a bilateral agreement with the United States, FCC rules (Part 97.107) may grant you operating privileges in the US under that license. Some countries grant the equivalent of General class privileges under these agreements. If you already hold a ham license from another country, check with the ARRL or FCC for the specific terms — you may be eligible to operate in the US and potentially convert to a US license at a level above Technician.</p>
+<h2>Should you try to get all three licenses at once?</h2>
+<p>For most beginners, no — and here's why. The Technician question pool has 409 questions; the General pool adds roughly 454 more; the Extra pool adds roughly 622 on top of that. Preparing for all three simultaneously before you have any on-air experience is learning radio theory in a vacuum. The concepts are harder to retain without context.</p>
+<p>The more common and more effective path is to earn Technician, spend some time actually using the radio, and then study for General when you know what you want to do on HF. You will understand why the material matters, which dramatically improves retention and makes the exam easier.</p>
+<p>The exception is someone who already has a strong electronics or RF background — an electrical engineer, a commercial radio operator, or someone who has spent months studying before their first VE session. Those candidates sometimes do sit all three in one day and succeed. But this is the exception, not the recommended path for newcomers.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> The General exam draws from the Element 3 pool (current pool valid through June 2027) and the Extra draws from the Element 4 pool (valid through June 2028). Both pools are free and publicly available from NCVEC at ncvec.org. If you do choose to attempt multiple elements in one sitting, study both pools completely — the exams are not curved, and you still need 26/35 correct for General and 37/50 correct for Extra.</p>
+</blockquote>
+<h2>Frequently asked</h2>
+<h3>Does starting with Technician limit what I can do long-term?</h3>
+<p>Not at all. Technician is a full, permanent license. You can upgrade to General or Extra at any point — there's no expiration on the eligibility to upgrade, and no waiting period between exams. Many operators happily use only their Technician for years before deciding to pursue General, and that's a completely valid path.</p>
+<h3>How long does it typically take to go from Technician to General?</h3>
+<p>Most candidates spend four to eight weeks studying for the General exam after earning Technician. The Element 3 pool covers more complex material — HF propagation, antenna theory, and broader operating practices — but the format is the same 35-question structure. Operators who are already active on the radio during that study period tend to find the material clicks faster because they have real-world context.</p>
+<h3>Is there any cost difference between the license classes?</h3>
+<p>The exams have the same $35 FCC application fee per license grant. VE session fees (typically $14–$15, charged by the VE team) apply to each exam element you sit. If you pass all three in a single session, you generally pay only one session fee and one FCC fee, since it's one license upgrade event. Confirm the fee structure with your specific VE team when you register.</p>]]></content:encoded>
+  </item>
   <item>
     <title><![CDATA[How Hard Is the Security+ Exam? An Honest SY0-701 Difficulty Guide]]></title>
     <link>https://ryno.tools/blog/how-hard-is-security-plus/</link>

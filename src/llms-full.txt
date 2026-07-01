@@ -138,6 +138,16 @@ Each question includes:
 ## Articles
 
 <!-- blog-articles:start -->
+- [What Can You Actually Do With a Technician License?](https://ryno.tools/blog/what-can-you-do-technician-license/) — You passed the Technician exam — now what? Full VHF/UHF privileges, satellite operation, APRS, emergency comms, and yes, up to 1,500 watts on most bands. Here's the complete operating picture.
+  author: Ask Ryno
+  published: 2026-06-30
+  track: ham-radio/technician
+  tags: ham-radio, technician, vhf, uhf, repeater, aprs, privileges
+- [Technician vs General vs Extra: Which Ham Radio License Should You Get First?](https://ryno.tools/blog/which-ham-radio-license-first/) — There are three US amateur radio license classes: Technician, General, and Extra. For most beginners, the answer is simple — start with Technician. Here's why, what each class unlocks, and when it's worth going further.
+  author: Ask Ryno
+  published: 2026-06-30
+  track: ham-radio/technician
+  tags: ham-radio, technician, licensing, amateur-radio, general, extra
 - [How Hard Is the Security+ Exam? An Honest SY0-701 Difficulty Guide](https://ryno.tools/blog/how-hard-is-security-plus/) — Security+ is moderately hard — harder than A+ or Network+, but a long way from CISSP. Up to 90 questions in 90 minutes with performance-based labs. Here's exactly what to expect and how long to study.
   author: Ask Ryno
   published: 2026-06-24

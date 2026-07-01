@@ -1,5 +1,40 @@
 [
   {
+    "slug": "which-ham-radio-license-first",
+    "title": "Technician vs General vs Extra: Which Ham Radio License Should You Get First?",
+    "track": "ham-radio/technician",
+    "intentKeyword": "which ham radio license should I get",
+    "status": "published",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "ARRL license class privileges; FCC Part 97 band plan.",
+    "notes": "High-intent comparison post; links to all three ham quiz tracks.",
+    "differentiator": "License tier comparison and decision guide — not difficulty or exam mechanics.",
+    "relatedPosts": [
+      "how-hard-is-ham-radio-technician-exam",
+      "ham-radio-exam-online-2026"
+    ],
+    "publishedDate": "2026-06-30",
+    "refreshBy": "2027-06-30"
+  },
+  {
+    "slug": "what-can-you-do-technician-license",
+    "title": "What Can You Actually Do With a Technician License?",
+    "track": "ham-radio/technician",
+    "intentKeyword": "technician license privileges",
+    "status": "published",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "FCC Part 97 Technician privileges; ARRL band chart.",
+    "differentiator": "Privileges and operating rights after passing — what the license unlocks, not how to get it.",
+    "relatedPosts": [
+      "how-hard-is-ham-radio-technician-exam",
+      "which-ham-radio-license-first"
+    ],
+    "publishedDate": "2026-06-30",
+    "refreshBy": "2027-06-30"
+  },
+  {
     "slug": "is-security-plus-worth-it-2026",
     "title": "Is CompTIA Security+ Worth It in 2026?",
     "track": "cybersecurity/sy0-701",
@@ -176,37 +211,6 @@
     "priority": "medium",
     "publishedDate": "2026-06-07",
     "refreshBy": "2027-06-07"
-  },
-  {
-    "slug": "which-ham-radio-license-first",
-    "title": "Technician vs General vs Extra: Which Ham Radio License Should You Get First?",
-    "track": "ham-radio/technician",
-    "intentKeyword": "which ham radio license should I get",
-    "status": "queued",
-    "priority": "high",
-    "targetMonth": "2026-07",
-    "sourcesHint": "ARRL license class privileges; FCC Part 97 band plan.",
-    "notes": "High-intent comparison post; links to all three ham quiz tracks.",
-    "differentiator": "License tier comparison and decision guide — not difficulty or exam mechanics.",
-    "relatedPosts": [
-      "how-hard-is-ham-radio-technician-exam",
-      "ham-radio-exam-online-2026"
-    ]
-  },
-  {
-    "slug": "what-can-you-do-technician-license",
-    "title": "What Can You Actually Do With a Technician License?",
-    "track": "ham-radio/technician",
-    "intentKeyword": "technician license privileges",
-    "status": "queued",
-    "priority": "high",
-    "targetMonth": "2026-07",
-    "sourcesHint": "FCC Part 97 Technician privileges; ARRL band chart.",
-    "differentiator": "Privileges and operating rights after passing — what the license unlocks, not how to get it.",
-    "relatedPosts": [
-      "how-hard-is-ham-radio-technician-exam",
-      "which-ham-radio-license-first"
-    ]
   },
   {
     "slug": "how-to-become-a-falconer",

@@ -59,9 +59,21 @@
   <!-- blog:start -->
   <url>
     <loc>https://ryno.tools/blog/</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ryno.tools/blog/what-can-you-do-technician-license/</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ryno.tools/blog/which-ham-radio-license-first/</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ryno.tools/blog/how-hard-is-security-plus/</loc>
