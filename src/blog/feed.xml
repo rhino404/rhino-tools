@@ -5,7 +5,7 @@
     <link>https://ryno.tools/blog/</link>
     <description>Study guides and exam prep tips for Ham Radio, Falconry, and CompTIA Security+.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jul 2026 12:20:50 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 12:40:19 GMT</lastBuildDate>
     <atom:link href="https://ryno.tools/blog/feed.xml" rel="self" type="application/rss+xml" />
   <item>
     <title><![CDATA[Docker vs Kubernetes: What's the Difference?]]></title>
@@ -79,6 +79,159 @@
 <p>Practically, yes. Understanding what a container is, how images are layered, how <code>Dockerfile</code> instructions work, and how networking and volumes function in Docker gives you the foundational vocabulary Kubernetes assumes you already have. Jumping straight to Kubernetes without that background makes the abstractions much harder to follow.</p>
 <p><strong>Is Docker Compose a replacement for Kubernetes?</strong></p>
 <p>Not in production at scale. Compose is a single-host tool — it manages containers on one machine. Kubernetes manages containers across a cluster of machines and adds self-healing, autoscaling, rolling deployments, and cross-node networking that Compose does not provide. For local development or small deployments, Compose is often the better choice because it is dramatically simpler. The two tools are not substitutes for each other so much as tools suited to different scales.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title><![CDATA[Hiragana vs Katakana: What's the Difference?]]></title>
+    <link>https://ryno.tools/blog/hiragana-vs-katakana/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/hiragana-vs-katakana/</guid>
+    <pubDate>Wed, 01 Jul 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Hiragana and katakana both encode the same sounds, yet every piece of real Japanese text uses both for different jobs. This post explains what each script is, when each is used, how they look different, and why you need both.]]></description>
+    <category><![CDATA[Japanese — Foundations]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p>Japanese uses three distinct writing scripts — hiragana, katakana, and kanji — and fluent reading requires all three. Hiragana and katakana are the two <strong>kana</strong> syllabaries, and beginners often hear both names together without understanding how they differ. This post focuses entirely on that question: what each script is, what it looks like, what job it does, and which to tackle first.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> Hiragana and katakana each have 46 base characters and represent the exact same set of sounds. The difference is not phonetic — it is functional. Hiragana handles native Japanese words and grammar; katakana handles foreign loanwords, foreign names, onomatopoeia, and emphasis. Learn hiragana first.</p>
+</blockquote>
+<h2>What is hiragana?</h2>
+<p><strong>Hiragana</strong> (ひらがな) is a phonetic syllabary — each character represents one sound unit (mora), not a meaning. It developed during the Heian period (roughly the 9th century) from the cursive calligraphic form of Chinese characters, a style called sōsho (草書). Scribes simplified full kanji into flowing, rounded shapes, and hiragana grew from that process. Because it originated in cursive brushwork, its characters have a distinctly soft, rounded quality.</p>
+<p>Hiragana is foundational to reading Japanese. Grammatical particles like は, を, が, and に are written in hiragana. So are verb endings, adjective endings (okurigana), and many native Japanese words that either lack kanji or whose kanji are so rarely used that writers prefer the kana form. Hiragana also appears as furigana — small reading guides printed above kanji in children's books, learner texts, and difficult passages in newspapers.</p>
+<h2>What is katakana?</h2>
+<p><strong>Katakana</strong> (カタカナ) is the second phonetic syllabary. It emerged during the same Heian period but from a different source: Buddhist monks and scholars took fragments or partial strokes from Chinese characters — rather than simplifying whole characters — to use as shorthand annotations in classical texts. Those extracted strokes produced the angular, sharp forms that distinguish katakana visually from hiragana.</p>
+<p>Katakana's dominant job in modern Japanese is writing <strong>gairaigo</strong> — foreign loanwords, primarily from English, French, German, and Portuguese. Words like コーヒー (kōhī, "coffee"), テレビ (terebi, "television"), and スマホ (sumaho, "smartphone") are all written in katakana. Beyond loanwords, katakana appears in onomatopoeia, foreign names, scientific names for animals and plants, and as a stylistic emphasis marker.</p>
+<h2>How many characters does each script have?</h2>
+<p>Both hiragana and katakana have exactly <strong>46 base characters</strong>. These 46 cover every mora (sound unit) in standard Japanese — the five vowels, and consonant-vowel combinations across roughly ten consonant rows, plus the standalone nasal ん/ン.</p>
+<p>The full usable set expands beyond 46 when you add:</p>
+<ul>
+<li><strong>Dakuten</strong> (゛) — a pair of small tick marks that voice a consonant (か ka → が ga, for example)</li>
+<li><strong>Handakuten</strong> (゜) — a small circle applied to the は row only, producing the ぱ/パ row (pa, pi, pu, pe, po)</li>
+<li><strong>Combination characters (yōon)</strong> — a full-size character followed by a small ya/yu/yo (like きゃ/キャ for "kya")</li>
+</ul>
+<p>With all of these, the practical usable inventory covers approximately <strong>71 distinct sounds</strong> in each script. The exact total depends on how you count the combination characters, but 46 base is the number to remember.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> A common beginner question is whether hiragana and katakana have different character counts or represent different sounds. They don't. Both scripts have 46 base characters and cover the same phonetic inventory. The difference is entirely about context and function, not sound.</p>
+</blockquote>
+<h2>What is hiragana used for?</h2>
+<p>Hiragana carries the structural weight of the Japanese language. You will find it in:</p>
+<ul>
+<li><strong>Native Japanese words (wago)</strong> that are written without kanji, either because no kanji exists for them or because the kanji has fallen out of everyday use</li>
+<li><strong>Grammatical particles</strong>: は (wa), を (o), が (ga), に (ni), で (de), and others that mark the role of each word in a sentence</li>
+<li><strong>Verb and adjective endings (okurigana)</strong>: the kanji 食 (eat) is followed by hiragana べる to complete the verb 食べる (taberu)</li>
+<li><strong>Furigana</strong>: small hiragana printed above or beside kanji to indicate pronunciation, common in children's materials and learner texts</li>
+<li><strong>Children's books and early-grade writing</strong>: hiragana is the first script Japanese children learn and is used before kanji instruction begins</li>
+</ul>
+<p>This breadth means hiragana appears in virtually every sentence of Japanese. It is the glue of the writing system.</p>
+<h2>What is katakana used for?</h2>
+<p>Katakana marks words and contexts that are treated as external to the native Japanese lexicon. The main uses are:</p>
+<ul>
+<li><strong>Foreign loanwords (gairaigo)</strong>: any word borrowed from a non-Chinese foreign language is written in katakana — アメリカ (Amerika, "America"), パン (pan, "bread" from Portuguese), アイスクリーム (aisukurīmu, "ice cream")</li>
+<li><strong>Foreign personal and place names</strong>: マリア (Maria), ロンドン (Rondon, "London"), フランス (Furansu, "France")</li>
+<li><strong>Onomatopoeia</strong>: sound and texture words in manga and everyday speech frequently appear in katakana — ドキドキ (dokidoki, heart pounding), ガーン (gān, a stunned reaction), ザーザー (zāzā, heavy rain)</li>
+<li><strong>Scientific and biological names</strong>: plant and animal species names in scientific or botanical writing often use katakana, so サクラ (sakura, cherry blossom) appears in botanical contexts where the kanji 桜 might otherwise be used</li>
+<li><strong>Emphasis</strong>: katakana in a sentence otherwise written in hiragana and kanji functions like italics in English — it singles out a word for stress or stylistic effect</li>
+<li><strong>Company names and product branding</strong>: many Japanese companies and products write their names in katakana, such as ソニー (Sonī, "Sony") or トヨタ (Toyota)</li>
+</ul>
+<h2>How do hiragana and katakana look different?</h2>
+<p>The visual difference is immediate once you know what to look for. <strong>Hiragana is curvy and rounded</strong> — its strokes flow together in loops and sweeping curves that reflect its origin in fast cursive brushwork. <strong>Katakana is angular and sharp</strong> — its strokes are short, straight lines and clean intersections that reflect its origin in clipped fragments of formal kanji.</p>
+<p>Compare the character for the sound "ki": hiragana き has a rounded, four-stroke form with overlapping curves. Katakana キ is three straight lines at angles. Both sound identical — /ki/ — but they look nothing alike.</p>
+<p>This visual contrast is the fastest way for a beginner to identify which script they are looking at in real text. Rounded forms are hiragana; angular forms are katakana. Kanji, the third script, is visually more complex than either.</p>
+<h2>Which should you learn first?</h2>
+<p>Learn hiragana first. Hiragana appears in every sentence, covers all grammatical particles and verb endings, and is the script used in furigana — the reading guides that help you decode kanji. Almost all beginner learning materials and textbooks assume hiragana literacy from the very first page.</p>
+<p>For a step-by-step method to memorize all 46 base hiragana characters, see the companion post <a href="/blog/how-to-learn-hiragana/">How to Learn Hiragana: The Complete Beginner's Guide</a>.</p>
+<p>Once hiragana is solid, katakana follows naturally. The sound system is identical — you already know all the sounds — so you are learning only new shapes for familiar phonemes. Most learners finish katakana noticeably faster than hiragana for exactly this reason.</p>
+<h2>Do you need to learn both?</h2>
+<p>Yes — and there is no practical alternative if you intend to read real Japanese. A menu at a Japanese restaurant will use katakana for loanword dishes alongside hiragana particles and kanji. A manga page will mix all three scripts within a single speech bubble. A subway sign might write a station name in kanji with furigana in hiragana alongside a foreign tourist destination in katakana.</p>
+<p>Knowing only hiragana leaves entire categories of vocabulary — everything borrowed from foreign languages, onomatopoeia, many brand names — unreadable. Both scripts are essential; hiragana is simply the more urgent starting point.</p>
+<p>If you are working toward the JLPT N5 proficiency level, reading ability in both scripts is a prerequisite. See <a href="/blog/what-is-jlpt-n5/">What Is JLPT N5?</a> for what the exam requires and how to structure your study plan around it.</p>
+<h2>Frequently asked questions</h2>
+<h2>Is hiragana or katakana harder to learn?</h2>
+<p>Most learners find hiragana marginally harder to learn from scratch because the rounded strokes are more varied and the characters are more visually distinct from each other. Katakana, with its angular forms, can look similar across characters (ソ and ン, or シ and ツ, are classic confusion pairs). In practice, the difficulty difference is small — what matters more is the order: learn hiragana to solid recognition before starting katakana.</p>
+<h2>Can the same word be written in either hiragana or katakana?</h2>
+<p>Phonetically, yes — any Japanese word can be rendered in either script because both cover the same sounds. But in standard written Japanese, which script is used is determined by convention and function, not free choice. A loanword like "coffee" is written コーヒー in katakana; writing it in hiragana would be nonstandard and would signal unusual emphasis or stylistic effect. Native Japanese words use hiragana (or kanji with hiragana endings). The conventions are stable enough that deviating from them is immediately noticeable to a Japanese reader.</p>
+<h2>Do Japanese children learn both scripts at once?</h2>
+<p>No. Japanese children learn hiragana first, typically in the first months of elementary school, reaching full hiragana literacy before katakana instruction begins. Katakana is introduced next, and kanji study starts gradually from first grade and continues through middle school and beyond. The sequence reflects what educators and the writing system's structure naturally suggest: hiragana is foundational, katakana builds on top of it.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title><![CDATA[How to Become a Falconer: A Step-by-Step Guide]]></title>
+    <link>https://ryno.tools/blog/how-to-become-a-falconer/</link>
+    <guid isPermaLink="true">https://ryno.tools/blog/how-to-become-a-falconer/</guid>
+    <pubDate>Wed, 01 Jul 2026 12:00:00 GMT</pubDate>
+    <description><![CDATA[Falconry is one of the most regulated outdoor sports in the US — and one of the most rewarding. Here is the full path from zero experience to licensed apprentice falconer, step by step.]]></description>
+    <category><![CDATA[Falconry — Apprentice]]></category>
+    <author>noreply@ryno.tools (Ask Ryno)</author>
+    <content:encoded><![CDATA[<p>Falconry is the ancient practice of training a raptor — a hawk, falcon, or eagle — to hunt wild quarry in partnership with a human handler. It is also one of the most carefully regulated outdoor pursuits in the United States, governed by both federal law and individual state requirements. The path from curious beginner to a licensed falconer flying your first bird takes real commitment, but it is a clear, sequential process that thousands of people complete every year.</p>
+<blockquote>
+<p><strong>TL;DR:</strong> Becoming a licensed apprentice falconer requires seven steps: understand the commitment, find a General or Master falconer sponsor, pass your state's written exam (≥80%), build and pass inspection of your housing facility, apply for your apprentice permit, acquire your first raptor (one bird only), and complete a minimum 2-year apprenticeship under your sponsor's guidance. USFWS sets the federal baseline under 50 CFR 21.82; your state wildlife agency issues the actual permit.</p>
+</blockquote>
+<h2>How long does it take to become a falconer?</h2>
+<p>The minimum time from starting the process to holding a General-level permit — the level at which you can fly more than one bird and expand your species options — is roughly three years. The 2-year apprenticeship cannot be shortened by any school program or accelerated training.</p>
+<p>The realistic timeline for the earlier steps before the apprenticeship even begins is 6 to 18 months, depending primarily on how quickly you find a willing sponsor and how long your state's facility inspection waitlist runs. Expect the full journey from research to General falconer to take closer to three to four years for most people.</p>
+<h2>Step 1: Understand the commitment — time and money</h2>
+<p>Before doing anything else, honestly assess whether falconry fits your life. A raptor in training requires daily attention. During the active training and hunting season, experienced falconers typically describe a commitment of 10 to 15 hours per week — and that does not count the time spent building facilities or studying regulations before you even have a bird.</p>
+<p>The financial investment is real but not prohibitive. A typical breakdown for a first-year apprentice looks like this:</p>
+<ul>
+<li><strong>Mews construction:</strong> $200–$1,000 depending on whether you adapt an existing shed or build from scratch</li>
+<li><strong>Equipment (glove, jesses, swivel, leash, perch, hood, lure, scale, telemetry):</strong> $300–$800</li>
+<li><strong>State permit fees:</strong> $25–$150 depending on your state</li>
+<li><strong>Veterinary emergency fund:</strong> $200–$500 is a reasonable buffer</li>
+</ul>
+<p>Wild-trapped passage red-tailed hawks and American kestrels cost nothing to acquire — trapping them from the wild is part of the tradition and is covered by your permit. Annual ongoing costs for food and maintenance typically run $200–$700 per year.</p>
+<h2>Step 2: Find a falconry sponsor</h2>
+<p>Finding a sponsor is consistently described by experienced falconers as the hardest single step for most beginners. Federal regulations under 50 CFR 21.82 require that your sponsor be a <strong>General falconer with at least 2 years at that level (and at least 18 years old), or a Master falconer</strong>. Sponsors are not obligated to take on apprentices, and in less-populated areas qualified sponsors can be scarce.</p>
+<p>The most effective route to finding a sponsor is through your state or regional falconry club. The <strong>North American Falconers Association (NAFA)</strong> maintains a directory of affiliated state clubs at n-a-f-a.com. Attending a club meeting, field meet, or demo day is the single best first move — sponsors take on apprentices they have met and trust, and that trust develops through in-person contact.</p>
+<p>Federal rules cap each sponsor at <strong>three apprentices at one time</strong>, so even a willing sponsor may have a waitlist. Start this search early — ideally before you begin building your facilities.</p>
+<h2>Step 3: Pass the state falconry exam</h2>
+<p>Every state requires a written examination before issuing an apprentice permit. The federal standard under 50 CFR 21.82 requires you to answer <strong>at least 80% of questions correctly</strong>. Most states use a 100-question exam, meaning you can miss no more than 20 questions. The exam covers:</p>
+<ul>
+<li><strong>Raptor biology</strong> — anatomy, molt cycles, species identification, behavioral cues</li>
+<li><strong>Housing and equipment</strong> — mews dimensions, perch types, tethering gear</li>
+<li><strong>Health and husbandry</strong> — weight management, signs of illness, nutrition</li>
+<li><strong>Training and hunting</strong> — manning, lure work, legal quarry, ethical obligations</li>
+<li><strong>Federal and state regulations</strong> — 50 CFR Part 21, permit classes, reporting requirements</li>
+</ul>
+<p>There is no national exam portal. You register through your <strong>state wildlife agency</strong>. Some states schedule exams quarterly; others require an appointment. Plan to study for two to three months before sitting.</p>
+<blockquote>
+<p><strong>Exam tip:</strong> The 80% threshold is non-negotiable and applies in every state. Many candidates who fail underestimate how heavily the exam tests raptor biology — not just regulations. Build your study plan so biology and health topics get as much attention as the rules do.</p>
+</blockquote>
+<p>For targeted practice on all five topic areas, Ryno Tools offers practice questions drawn from the same subject matter as state exams — see the <a href="https://ryno.tools" target="_blank" rel="noopener noreferrer">Falconry Apprentice quiz</a> on the home page.</p>
+<p>For a deeper look at what the exam tests and how to register, see our post on <a href="/blog/how-many-questions-falconry-apprentice-exam/">how many questions are on the falconry apprentice exam</a>.</p>
+<h2>Step 4: Build your facilities and pass the inspection</h2>
+<p>You cannot receive your permit until a representative from your state wildlife agency has <strong>inspected and approved your housing facility</strong>. This inspection must happen before the permit is issued — not after you acquire a bird.</p>
+<p>The facility you need is called a <strong>mews</strong>: an enclosed structure where your raptor lives when not being flown or trained. Federal minimums for an apprentice-level bird require inside dimensions of at least 8 feet × 8 feet × 6 feet (length × width × height). No gap or opening in the structure may exceed 1 inch — to prevent escape and bar entry by predators. The door must have a secure latch the bird cannot open from inside.</p>
+<p>You will also need a <strong>weathering area</strong>: a secure outdoor enclosure where the bird can be tethered in natural light. It must be fully covered and free of any gap larger than 1 inch.</p>
+<p>Schedule your inspection early — in some states there can be a wait of several weeks to get a wildlife officer out for the site visit. Do not start the mews build without first confirming your state's specific dimensional requirements, as some states set minimums above the federal baseline.</p>
+<p>For the complete breakdown of mews dimensions, perch types, and equipment standards — all of which are tested on the exam — see our post on <a href="/blog/falconry-mews-housing-standards/">falconry mews and housing standards</a>.</p>
+<h2>Step 5: Apply for your apprentice permit</h2>
+<p>Once you have passed the exam and had your facilities inspected, you apply for your <strong>apprentice falconry permit</strong> through your state wildlife agency. The permit itself is issued by the state — there is no separate federal permit application. What the USFWS manages is the <strong>3-186A electronic reporting database</strong>, which your state coordinates, and which you use throughout your falconry career to report any acquisition, transfer, loss, or death of a raptor.</p>
+<p>Some states process permits quickly; others have administrative queues. A few states periodically restrict new apprentice permits due to inspection staffing or low raptor population concerns. Contact your state agency to confirm current processing timelines before assuming a quick turnaround.</p>
+<p>For state-specific details on age minimums, fees, exam schedules, and species lists, see our post on <a href="/blog/falconry-license-requirements-by-state/">falconry license requirements by state</a>.</p>
+<h2>Step 6: Acquire your first raptor</h2>
+<p>At the apprentice level, federal regulations allow you to possess <strong>no more than one raptor</strong> regardless of how many permits you hold. If you trap a bird from the wild, it must be <strong>less than one year old, and may not be a nestling</strong> — this window targets birds known as <strong>passage hawks</strong>, young raptors in their first season of independence who have already demonstrated basic survival skills but have not yet bred.</p>
+<p>The two most common choices for apprentice birds are:</p>
+<ul>
+<li><strong>Red-tailed hawk</strong> (<code>Buteo jamaicensis</code>) — the most widely recommended first bird; abundant across North America, tolerant of the learning curve, and ideal for ground quarry hunting such as rabbits and squirrels</li>
+<li><strong>American kestrel</strong> (<code>Falco sparverius</code>) — smaller, faster, and suited to hunting small birds; requires quicker reflexes and more advanced field skills but is a rewarding option in areas with suitable prey</li>
+</ul>
+<p>Both species are abundant in the wild and legal to trap during state-specified periods. You may also acquire a bird from a licensed falconer, in which case the bird's age and source must comply with applicable transfer rules.</p>
+<p>Several species are <strong>prohibited for apprentice-level wild take</strong> regardless of their abundance, including bald eagles, golden eagles, peregrine falcons, Swainson's hawks, swallow-tailed kites, and certain owls (flammulated, elf, and short-eared). These restrictions are spelled out in 50 CFR 21.82.</p>
+<h2>Step 7: Complete the 2-year apprenticeship</h2>
+<p>The apprenticeship is not a waiting period — it is an active, mentored practice. Federal regulations require you to maintain, train, fly, and hunt with your raptor for <strong>at least 4 months in each year</strong> of the two-year period. Sitting out a season does not count toward your apprenticeship clock.</p>
+<p>Your sponsor must provide active guidance throughout. They may not carry more than three apprentices simultaneously, and in some states they are required to be present for your first trapping or handling session. At the end of the two years, your sponsor provides written certification of your experience, and you then apply to your state wildlife agency for advancement to the <strong>General falconer</strong> level.</p>
+<p>Key practical realities of the apprenticeship year:</p>
+<ul>
+<li>You will spend considerably more time on daily care — weighing, feeding, manning — than on actual hunting</li>
+<li>Weight management is critical; a bird that is too heavy will not hunt, and a bird that is too lean is at health risk</li>
+<li>Your sponsor is your primary resource when things go wrong, which they will during training</li>
+<li>Annual raptor status reports are filed through the federal 3-186A database</li>
+</ul>
+<h2>What comes after the apprentice level?</h2>
+<p>After completing the 2-year apprenticeship and advancing to <strong>General falconer</strong>, you can possess up to three raptors (specific limits vary by state), fly a broader range of species, and eventually sponsor your own apprentices once you have held the General permit for at least two years. The <strong>Master falconer</strong> level — the highest — becomes available after five additional years at General, and requires a demonstrated depth of knowledge and experience that most states assess through documentation and a committee review rather than another written exam.</p>
+<h2>Frequently asked</h2>
+<p><strong>Can I take the exam before finding a sponsor?</strong></p>
+<p>Yes, in most states you can sit the written exam at any point — you do not need a sponsor to register for it. However, you cannot receive your permit or possess a raptor without one. Starting your sponsor search well before your exam date is strongly recommended, since finding a willing sponsor often takes longer than studying for the test.</p>
+<p><strong>How old do I have to be to become a falconer?</strong></p>
+<p>The federal minimum age under 50 CFR 21.82 is <strong>12 years old</strong>. Applicants under 18 require a parent or guardian to co-sign the application and assume legal responsibility. Several states set their minimum age higher — Ohio requires 16, and Florida and New York require 14. Always check your state's current rules.</p>
+<p><strong>Can I have more than one bird as an apprentice?</strong></p>
+<p>No. Federal regulations cap apprentice-level possession at <strong>one raptor</strong>, regardless of how many state permits you hold. This limit exists because the apprenticeship is designed to build skill progressively — managing a single bird properly is demanding enough in the first two years. You will be able to expand to multiple birds once you advance to General falconer.</p>]]></content:encoded>
   </item>
   <item>
     <title><![CDATA[What Is Infrastructure as Code? A Plain-English Guide for Developers]]></title>

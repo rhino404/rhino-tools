@@ -24,6 +24,54 @@
     "url": "/blog/docker-vs-kubernetes/"
   },
   {
+    "slug": "hiragana-vs-katakana",
+    "title": "Hiragana vs Katakana: What's the Difference?",
+    "description": "Hiragana and katakana represent the same 46 sounds but serve completely different roles. Learn the difference, when each is used, and which to learn first.",
+    "excerpt": "Hiragana and katakana both encode the same sounds, yet every piece of real Japanese text uses both for different jobs. This post explains what each script is, when each is used, how they look different, and why you need both.",
+    "track": "japanese/foundations",
+    "trackLabel": "Japanese — Foundations",
+    "trackIcon": "🇯🇵",
+    "trackSlug": "japanese",
+    "trackCategory": "japanese",
+    "trackImage": "/images/blog/japanese-blog-hero.jpeg",
+    "trackImageAlt": "Hiragana chart and Japanese text on a dark background — Ryno Tools Japanese learning",
+    "tags": [
+      "kana",
+      "hiragana",
+      "katakana",
+      "writing-systems",
+      "comparison"
+    ],
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "readingTime": 5,
+    "url": "/blog/hiragana-vs-katakana/"
+  },
+  {
+    "slug": "how-to-become-a-falconer",
+    "title": "How to Become a Falconer: A Step-by-Step Guide",
+    "description": "Learn how to become a falconer in the US — from finding a sponsor and passing the state exam to completing your 2-year apprenticeship and first bird.",
+    "excerpt": "Falconry is one of the most regulated outdoor sports in the US — and one of the most rewarding. Here is the full path from zero experience to licensed apprentice falconer, step by step.",
+    "track": "falconry/apprentice",
+    "trackLabel": "Falconry — Apprentice",
+    "trackIcon": "🦅",
+    "trackSlug": "falconry",
+    "trackCategory": "falconry",
+    "trackImage": "/images/blog/falconry-blog-hero.webp",
+    "trackImageAlt": "Falconer with a trained bird of prey in flight — Ryno Tools falconry apprentice exam prep",
+    "tags": [
+      "apprentice",
+      "getting-started",
+      "licensing",
+      "sponsor",
+      "permits"
+    ],
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "readingTime": 7,
+    "url": "/blog/how-to-become-a-falconer/"
+  },
+  {
     "slug": "what-is-infrastructure-as-code",
     "title": "What Is Infrastructure as Code? A Plain-English Guide for Developers",
     "description": "Infrastructure as code lets you define servers, networks, and databases in version-controlled files instead of clicking through consoles. Here's why it matters.",

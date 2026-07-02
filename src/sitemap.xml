@@ -70,6 +70,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ryno.tools/blog/hiragana-vs-katakana/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ryno.tools/blog/how-to-become-a-falconer/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ryno.tools/blog/what-is-infrastructure-as-code/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>

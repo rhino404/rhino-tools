@@ -54,6 +54,16 @@ Three active-recall modes: Learn (flashcard), Match (multiple-choice), Type (rom
   published: 2026-07-01
   track: devops/containers-k8s
   tags: docker, kubernetes, containers, orchestration, comparison
+- [Hiragana vs Katakana: What's the Difference?](https://ryno.tools/blog/hiragana-vs-katakana/) — Hiragana and katakana both encode the same sounds, yet every piece of real Japanese text uses both for different jobs. This post explains what each script is, when each is used, how they look different, and why you need both.
+  author: Ask Ryno
+  published: 2026-07-01
+  track: japanese/foundations
+  tags: kana, hiragana, katakana, writing-systems, comparison
+- [How to Become a Falconer: A Step-by-Step Guide](https://ryno.tools/blog/how-to-become-a-falconer/) — Falconry is one of the most regulated outdoor sports in the US — and one of the most rewarding. Here is the full path from zero experience to licensed apprentice falconer, step by step.
+  author: Ask Ryno
+  published: 2026-07-01
+  track: falconry/apprentice
+  tags: apprentice, getting-started, licensing, sponsor, permits
 - [What Is Infrastructure as Code? A Plain-English Guide for Developers](https://ryno.tools/blog/what-is-infrastructure-as-code/) — Ever wonder who changed that load balancer at 2 a.m.? IaC is the answer — define your entire infrastructure in code, check it into git, and provision identical environments in minutes. Here's what it means and why it matters in 2026.
   author: Ask Ryno
   published: 2026-07-01

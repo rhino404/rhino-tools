@@ -33,6 +33,40 @@
     "refreshBy": "2027-07-01"
   },
   {
+    "slug": "how-to-become-a-falconer",
+    "title": "How to Become a Falconer: A Step-by-Step Guide",
+    "track": "falconry/apprentice",
+    "intentKeyword": "how to become a falconer",
+    "status": "published",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "USFWS migratory bird permit; apprentice sponsorship; state exam path.",
+    "differentiator": "End-to-end path from zero to licensed — broad process overview, not a single-topic deep-dive.",
+    "relatedPosts": [
+      "falconry-license-requirements-by-state",
+      "how-many-questions-falconry-apprentice-exam"
+    ],
+    "publishedDate": "2026-07-01",
+    "refreshBy": "2027-07-01"
+  },
+  {
+    "slug": "hiragana-vs-katakana",
+    "title": "Hiragana vs Katakana: What's the Difference?",
+    "track": "japanese/foundations",
+    "intentKeyword": "hiragana vs katakana",
+    "status": "published",
+    "priority": "high",
+    "targetMonth": "2026-07",
+    "sourcesHint": "Use cases for each kana set; loanwords; learning order.",
+    "differentiator": "Comparison of the two kana systems and when each is used — not a learning guide for either.",
+    "relatedPosts": [
+      "how-to-learn-hiragana",
+      "what-is-jlpt-n5"
+    ],
+    "publishedDate": "2026-07-01",
+    "refreshBy": "2027-07-01"
+  },
+  {
     "slug": "which-ham-radio-license-first",
     "title": "Technician vs General vs Extra: Which Ham Radio License Should You Get First?",
     "track": "ham-radio/technician",
@@ -244,36 +278,6 @@
     "priority": "medium",
     "publishedDate": "2026-06-07",
     "refreshBy": "2027-06-07"
-  },
-  {
-    "slug": "how-to-become-a-falconer",
-    "title": "How to Become a Falconer: A Step-by-Step Guide",
-    "track": "falconry/apprentice",
-    "intentKeyword": "how to become a falconer",
-    "status": "queued",
-    "priority": "high",
-    "targetMonth": "2026-07",
-    "sourcesHint": "USFWS migratory bird permit; apprentice sponsorship; state exam path.",
-    "differentiator": "End-to-end path from zero to licensed — broad process overview, not a single-topic deep-dive.",
-    "relatedPosts": [
-      "falconry-license-requirements-by-state",
-      "how-many-questions-falconry-apprentice-exam"
-    ]
-  },
-  {
-    "slug": "hiragana-vs-katakana",
-    "title": "Hiragana vs Katakana: What's the Difference?",
-    "track": "japanese/foundations",
-    "intentKeyword": "hiragana vs katakana",
-    "status": "queued",
-    "priority": "high",
-    "targetMonth": "2026-07",
-    "sourcesHint": "Use cases for each kana set; loanwords; learning order.",
-    "differentiator": "Comparison of the two kana systems and when each is used — not a learning guide for either.",
-    "relatedPosts": [
-      "how-to-learn-hiragana",
-      "what-is-jlpt-n5"
-    ]
   },
   {
     "slug": "ham-radio-callsign-after-passing",
