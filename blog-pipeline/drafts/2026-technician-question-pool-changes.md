@@ -1,21 +1,21 @@
 ---
 title: "What Changed in the 2026-2030 FCC Technician Question Pool"
 slug: 2026-technician-question-pool-changes
-description: "The 2026-2030 Technician question pool takes effect July 1, 2026. Learn what changed, which subelements were revised, and how to study the new questions."
+description: "The 2026-2030 Technician question pool took effect July 1, 2026. See what changed, which subelements were revised, and how to study the new questions."
 track: ham-radio/technician
 tags: [amateur, licensing, privileges, frequency, equipment, modulation, data]
 datePublished: 2026-06-13
-dateModified: 2026-06-13
+dateModified: 2026-07-02
 readingTime: 6
-excerpt: "The FCC Technician exam switches to the 2026-2030 question pool on July 1, 2026. Here is exactly what changed — new topics, removed questions, and what every test-taker needs to know before sitting for the exam."
+excerpt: "The FCC Technician exam now draws from the 2026-2030 question pool, effective July 1, 2026. Here is exactly what changed — new topics, removed questions, and what every test-taker needs to know before sitting for the exam."
 sources_json: [{"title":"New Technician Class Question Pool Released — Effective July 1, 2026","url":"https://www.arrl.org/news/new-technician-class-question-pool-released-effective-july-1-2026","publisher":"ARRL","accessed":"2026-06-13"},{"title":"NCVEC Question Pool Committee Issues Revision to 2026-2030 Technician Pool","url":"http://www.arrl.org/news/view/ncvec-question-pool-committee-issues-revision-to-2026-2030-technician-pool","publisher":"ARRL","accessed":"2026-06-13"},{"title":"2026-2030 Technician Question Pool Release","url":"https://ncvec.org/index.php/2026-2030-technician-question-pool","publisher":"NCVEC","accessed":"2026-06-13"},{"title":"The 2026 US Technician Question Pool Is Here!","url":"https://blog.hamstudy.org/2025/12/the-2026-us-technician-question-pool-is-here/","publisher":"HamStudy.org","accessed":"2026-06-13"},{"title":"FCC Part 97 — Amateur Radio Service Rules","url":"https://www.ecfr.gov/current/title-47/chapter-I/subchapter-D/part-97","publisher":"FCC","accessed":"2026-06-13"},{"title":"Amateur Question Pools","url":"https://www.ncvec.org/index.php/amateur-question-pools","publisher":"NCVEC","accessed":"2026-06-13"}]
-faq_json: [{"q":"When does the 2026-2030 Technician question pool take effect?","a":"The new pool is mandatory for all exam sessions beginning July 1, 2026. The 2022-2026 pool expires June 30, 2026. If you test before July 1, you will still see the old pool; if you test on or after July 1, you will see the new one."},{"q":"Will old questions still appear on the Technician exam after July 1, 2026?","a":"Only questions from the 2026-2030 pool will appear on exams taken on or after July 1, 2026. Volunteer Examiner Coordinators are required to retire all 2022-2026 exam materials at that point. Studying from an outdated pool after that date will not fully prepare you."},{"q":"Where can I practice with the new 2026-2030 Technician questions right now?","a":"Ryno.tools has already loaded all 409 questions from the 2026-2030 pool into its free Technician study quiz. You can drill the exact questions that will appear on your exam at ryno.tools/ham-radio/."}]
+faq_json: [{"q":"When did the 2026-2030 Technician question pool take effect?","a":"The new pool became mandatory for all exam sessions on July 1, 2026, and is now in effect. The 2022-2026 pool expired June 30, 2026. Every Technician exam session now draws exclusively from the 2026-2030 pool."},{"q":"Will old questions still appear on the Technician exam after July 1, 2026?","a":"Only questions from the 2026-2030 pool will appear on exams taken on or after July 1, 2026. Volunteer Examiner Coordinators are required to retire all 2022-2026 exam materials at that point. Studying from an outdated pool after that date will not fully prepare you."},{"q":"Where can I practice with the new 2026-2030 Technician questions right now?","a":"Ryno.tools has already loaded all 409 questions from the 2026-2030 pool into its free Technician study quiz. You can drill the exact questions that will appear on your exam at ryno.tools/ham-radio/."}]
 status: ready
 ---
 
 Every four years the National Conference of Volunteer Examiner Coordinators (NCVEC) refreshes the question pool used for the FCC Technician class license exam, and the 2026-2030 cycle is one of the more substantive updates in recent memory. If you are studying for your Technician license — or helping others prepare — understanding what changed is the single most important step you can take right now.
 
-> **TL;DR:** The 2026-2030 Technician pool takes effect July 1, 2026 and contains 409 questions (27 new, 30 removed, ~155 modified). Key additions include updated digital-mode coverage (DMR, Winlink, FT8 for Technicians), modernized licensing procedures, and clearer technical definitions. Stop studying the old pool if you are testing on or after July 1.
+> **TL;DR:** The 2026-2030 Technician pool took effect July 1, 2026 and contains 409 questions (27 new, 30 removed, ~155 modified). Key additions include updated digital-mode coverage (DMR, Winlink, FT8 for Technicians), modernized licensing procedures, and clearer technical definitions. The old pool is retired — study only 2026-2030 materials.
 
 ## What is a question pool transition, and why does it matter?
 
@@ -23,7 +23,7 @@ FCC regulations under Part 97 require that every amateur radio exam draw its 35 
 
 The transition matters because the old pool and the new pool are not the same. Some questions that appeared in the 2022-2026 pool have been removed entirely. New questions cover topics that were not tested before. Approximately 155 additional questions carry updated wording. If you study from outdated materials after July 1, 2026, you will encounter gaps on the actual exam.
 
-> **Exam tip:** Check the publication date of any study guide or app you use. Study materials based on the 2022-2026 pool are only valid through June 30, 2026. After that date, only 2026-2030 materials count.
+> **Exam tip:** Check the publication date of any study guide or app you use. Study materials based on the 2022-2026 pool expired June 30, 2026 — only 2026-2030 materials now count.
 
 ## How many questions changed in the 2026-2030 pool?
 
@@ -36,7 +36,7 @@ The NCVEC released the 2026-2030 Technician pool (formally FCC Element 2) on Dec
 - **Questions reassigned to new ID numbers:** 8
 - **Diagrams included:** 3 (used in a subset of questions)
 
-A February 19, 2026 errata addressed four questions — T1C01, T5A05, T7A09, and T0A10 — with minor wording clarifications issued before the pool goes live. The Ryno Tools dataset has been reviewed and updated to reflect the corrected versions of these questions.
+A February 19, 2026 errata addressed four questions — T1C01, T5A05, T7A09, and T0A10 — with minor wording clarifications issued before the pool went live. The Ryno Tools dataset has been reviewed and updated to reflect the corrected versions of these questions.
 
 ## What new topics appear in the 2026-2030 pool?
 
@@ -98,9 +98,9 @@ The revision process also corrects questions that were found to be ambiguous, gr
 
 ## Frequently asked questions
 
-## When does the new pool take effect, and what happens to the old one?
+## When did the new pool take effect, and what happened to the old one?
 
-The 2026-2030 pool becomes mandatory for all Technician exam sessions on **July 1, 2026**. The 2022-2026 pool is valid through June 30, 2026 only. VECs are required to retire all exam materials based on the old pool when the transition occurs. If you sit for your exam on or after July 1, every question on your test will come from the 2026-2030 pool.
+The 2026-2030 pool became mandatory for all Technician exam sessions on **July 1, 2026**, and is now in effect. The 2022-2026 pool was valid through June 30, 2026 only. VECs were required to retire all exam materials based on the old pool at the transition. Every question on your test now comes from the 2026-2030 pool.
 
 ## Will questions from the old pool still appear on the exam after July 1?
 
@@ -112,4 +112,4 @@ All 409 questions from the 2026-2030 pool are loaded and ready in the free Ryno 
 
 ---
 
-The July 1, 2026 switchover is 18 days away. Whether you are a first-time test-taker or a VE preparing new materials, the time to move to the 2026-2030 pool is now. Head to [ryno.tools/ham-radio/](https://ryno.tools/ham-radio/) to start practicing with the questions that will actually appear on your exam.
+The July 1, 2026 switchover has arrived — the 2026-2030 pool is now the only pool in use. Whether you are a first-time test-taker or a VE preparing new materials, make sure everything you study from is 2026-2030 material. Head to [ryno.tools/ham-radio/](https://ryno.tools/ham-radio/) to start practicing with the questions that will actually appear on your exam.

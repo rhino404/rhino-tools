@@ -196,8 +196,8 @@
   {
     "slug": "2026-technician-question-pool-changes",
     "title": "What Changed in the 2026-2030 FCC Technician Question Pool",
-    "description": "The 2026-2030 Technician question pool takes effect July 1, 2026. Learn what changed, which subelements were revised, and how to study the new questions.",
-    "excerpt": "The FCC Technician exam switches to the 2026-2030 question pool on July 1, 2026. Here is exactly what changed — new topics, removed questions, and what every test-taker needs to know before sitting for the exam.",
+    "description": "The 2026-2030 Technician question pool took effect July 1, 2026. See what changed, which subelements were revised, and how to study the new questions.",
+    "excerpt": "The FCC Technician exam now draws from the 2026-2030 question pool, effective July 1, 2026. Here is exactly what changed — new topics, removed questions, and what every test-taker needs to know before sitting for the exam.",
     "track": "ham-radio/technician",
     "trackLabel": "Ham Radio — Technician",
     "trackIcon": "📻",
@@ -215,7 +215,7 @@
       "data"
     ],
     "datePublished": "2026-06-13",
-    "dateModified": "2026-06-13",
+    "dateModified": "2026-07-02",
     "readingTime": 6,
     "url": "/blog/2026-technician-question-pool-changes/"
   },

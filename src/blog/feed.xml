@@ -5,7 +5,7 @@
     <link>https://ryno.tools/blog/</link>
     <description>Study guides and exam prep tips for Ham Radio, Falconry, and CompTIA Security+.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jul 2026 12:40:19 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 13:49:09 GMT</lastBuildDate>
     <atom:link href="https://ryno.tools/blog/feed.xml" rel="self" type="application/rss+xml" />
   <item>
     <title><![CDATA[Docker vs Kubernetes: What's the Difference?]]></title>
@@ -554,18 +554,18 @@
     <link>https://ryno.tools/blog/2026-technician-question-pool-changes/</link>
     <guid isPermaLink="true">https://ryno.tools/blog/2026-technician-question-pool-changes/</guid>
     <pubDate>Sat, 13 Jun 2026 12:00:00 GMT</pubDate>
-    <description><![CDATA[The FCC Technician exam switches to the 2026-2030 question pool on July 1, 2026. Here is exactly what changed — new topics, removed questions, and what every test-taker needs to know before sitting for the exam.]]></description>
+    <description><![CDATA[The FCC Technician exam now draws from the 2026-2030 question pool, effective July 1, 2026. Here is exactly what changed — new topics, removed questions, and what every test-taker needs to know before sitting for the exam.]]></description>
     <category><![CDATA[Ham Radio — Technician]]></category>
     <author>noreply@ryno.tools (Ask Ryno)</author>
     <content:encoded><![CDATA[<p>Every four years the National Conference of Volunteer Examiner Coordinators (NCVEC) refreshes the question pool used for the FCC Technician class license exam, and the 2026-2030 cycle is one of the more substantive updates in recent memory. If you are studying for your Technician license — or helping others prepare — understanding what changed is the single most important step you can take right now.</p>
 <blockquote>
-<p><strong>TL;DR:</strong> The 2026-2030 Technician pool takes effect July 1, 2026 and contains 409 questions (27 new, 30 removed, ~155 modified). Key additions include updated digital-mode coverage (DMR, Winlink, FT8 for Technicians), modernized licensing procedures, and clearer technical definitions. Stop studying the old pool if you are testing on or after July 1.</p>
+<p><strong>TL;DR:</strong> The 2026-2030 Technician pool took effect July 1, 2026 and contains 409 questions (27 new, 30 removed, ~155 modified). Key additions include updated digital-mode coverage (DMR, Winlink, FT8 for Technicians), modernized licensing procedures, and clearer technical definitions. The old pool is retired — study only 2026-2030 materials.</p>
 </blockquote>
 <h2>What is a question pool transition, and why does it matter?</h2>
 <p>FCC regulations under Part 97 require that every amateur radio exam draw its 35 questions from an officially approved question pool maintained by the NCVEC. The pool must contain at least 350 questions — ten times the number on any single exam. When the NCVEC releases a new pool, Volunteer Examiner Coordinators (VECs) and their Volunteer Examiners (VEs) must switch to it on the specified effective date.</p>
 <p>The transition matters because the old pool and the new pool are not the same. Some questions that appeared in the 2022-2026 pool have been removed entirely. New questions cover topics that were not tested before. Approximately 155 additional questions carry updated wording. If you study from outdated materials after July 1, 2026, you will encounter gaps on the actual exam.</p>
 <blockquote>
-<p><strong>Exam tip:</strong> Check the publication date of any study guide or app you use. Study materials based on the 2022-2026 pool are only valid through June 30, 2026. After that date, only 2026-2030 materials count.</p>
+<p><strong>Exam tip:</strong> Check the publication date of any study guide or app you use. Study materials based on the 2022-2026 pool expired June 30, 2026 — only 2026-2030 materials now count.</p>
 </blockquote>
 <h2>How many questions changed in the 2026-2030 pool?</h2>
 <p>The NCVEC released the 2026-2030 Technician pool (formally FCC Element 2) on December 18, 2025. The key numbers:</p>
@@ -577,7 +577,7 @@
 <li><strong>Questions reassigned to new ID numbers:</strong> 8</li>
 <li><strong>Diagrams included:</strong> 3 (used in a subset of questions)</li>
 </ul>
-<p>A February 19, 2026 errata addressed four questions — T1C01, T5A05, T7A09, and T0A10 — with minor wording clarifications issued before the pool goes live. The Ryno Tools dataset has been reviewed and updated to reflect the corrected versions of these questions.</p>
+<p>A February 19, 2026 errata addressed four questions — T1C01, T5A05, T7A09, and T0A10 — with minor wording clarifications issued before the pool went live. The Ryno Tools dataset has been reviewed and updated to reflect the corrected versions of these questions.</p>
 <h2>What new topics appear in the 2026-2030 pool?</h2>
 <p>The NCVEC's stated goal for every revision cycle is to ensure "technical accuracy and relevance to current amateur radio practices." The 2026-2030 pool reflects how the hobby has evolved since 2022, particularly in digital communications and online licensing procedures.</p>
 <p><strong>Digital communications — expanded coverage</strong></p>
@@ -625,14 +625,14 @@
 <p><strong>Exam tip:</strong> The exam draws exactly 35 questions — one from each of the 35 question groups across the ten subelements. You need 26 correct (74%) to pass. Knowing which groups cover digital modes and updated regulations helps you prioritize study time.</p>
 </blockquote>
 <h2>Frequently asked questions</h2>
-<h2>When does the new pool take effect, and what happens to the old one?</h2>
-<p>The 2026-2030 pool becomes mandatory for all Technician exam sessions on <strong>July 1, 2026</strong>. The 2022-2026 pool is valid through June 30, 2026 only. VECs are required to retire all exam materials based on the old pool when the transition occurs. If you sit for your exam on or after July 1, every question on your test will come from the 2026-2030 pool.</p>
+<h2>When did the new pool take effect, and what happened to the old one?</h2>
+<p>The 2026-2030 pool became mandatory for all Technician exam sessions on <strong>July 1, 2026</strong>, and is now in effect. The 2022-2026 pool was valid through June 30, 2026 only. VECs were required to retire all exam materials based on the old pool at the transition. Every question on your test now comes from the 2026-2030 pool.</p>
 <h2>Will questions from the old pool still appear on the exam after July 1?</h2>
 <p>No. Once the transition date passes, only questions from the 2026-2030 pool are permitted on exams. Some questions that appeared in both pools (those that carried forward unchanged) will still be present — but approximately 30 questions were removed entirely, and ~155 others changed wording. Relying solely on old practice exams is not sufficient preparation for anyone testing after June 30, 2026.</p>
 <h2>Where can I practice with the new 2026-2030 Technician questions?</h2>
 <p>All 409 questions from the 2026-2030 pool are loaded and ready in the free Ryno Tools Technician study quiz at <a href="https://ryno.tools/ham-radio/" target="_blank" rel="noopener noreferrer">ryno.tools/ham-radio/</a>. The dataset reflects the February 2026 errata corrections. You can drill by subelement, filter by topic, or run a timed 35-question practice exam that mirrors the real test structure.</p>
 <p>---</p>
-<p>The July 1, 2026 switchover is 18 days away. Whether you are a first-time test-taker or a VE preparing new materials, the time to move to the 2026-2030 pool is now. Head to <a href="https://ryno.tools/ham-radio/" target="_blank" rel="noopener noreferrer">ryno.tools/ham-radio/</a> to start practicing with the questions that will actually appear on your exam.</p>]]></content:encoded>
+<p>The July 1, 2026 switchover has arrived — the 2026-2030 pool is now the only pool in use. Whether you are a first-time test-taker or a VE preparing new materials, make sure everything you study from is 2026-2030 material. Head to <a href="https://ryno.tools/ham-radio/" target="_blank" rel="noopener noreferrer">ryno.tools/ham-radio/</a> to start practicing with the questions that will actually appear on your exam.</p>]]></content:encoded>
   </item>
   <item>
     <title><![CDATA[Falconry License Requirements by State: The Complete US Guide]]></title>
