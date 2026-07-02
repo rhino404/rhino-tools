@@ -22,6 +22,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { injectChrome } from './sync-chrome.mjs';
+import { refreshLlmsStamp } from './llms-stamp.mjs';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const ROOT  = join(__dir, '..');
@@ -461,8 +462,9 @@ indexHtml = inject(indexHtml, 'coming-soon', comingSoonHtml);
 const featuredLis = newDatasets.map(d => {
   const cat = content[d.category];
   const f = d.pool.featured;
+  const href = f.blogSlug ? `/blog/${esc(f.blogSlug)}/` : `/${esc(cat.slug)}/`;
   return `      <li>
-        <a href="/${esc(cat.slug)}/" class="whats-new-item is-featured">
+        <a href="${href}" class="whats-new-item is-featured">
           <span class="whats-new-icon">${cat.icon}</span>
           <span>
             <strong>${esc(cat.label)} — ${esc(d.label)}</strong>
@@ -608,7 +610,9 @@ const llmsQuizLines = Object.entries(content)
     });
   }).join('\n');
 
+const llmsTxtOnDisk = llmsTxt;
 llmsTxt = inject(llmsTxt, 'quizzes', llmsQuizLines);
+llmsTxt = refreshLlmsStamp(llmsTxtOnDisk, llmsTxt);
 write(join(SRC, 'llms.txt'), llmsTxt);
 log('  → src/llms.txt');
 
@@ -628,7 +632,9 @@ const llmsFullQuizLines = Object.entries(content)
     return `### ${cat.label}\n\nHub: https://ryno.tools/${cat.slug}/\n\n${tracks}`;
   }).join('\n\n');
 
+const llmsFullTxtOnDisk = llmsFullTxt;
 llmsFullTxt = inject(llmsFullTxt, 'quizzes', llmsFullQuizLines);
+llmsFullTxt = refreshLlmsStamp(llmsFullTxtOnDisk, llmsFullTxt);
 write(join(SRC, 'llms-full.txt'), llmsFullTxt);
 log('  → src/llms-full.txt');
 

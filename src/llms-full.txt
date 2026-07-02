@@ -1,6 +1,6 @@
 # Ryno Tools — Full Content Guide
 
-Last updated: 2026-06-11
+Last updated: 2026-07-02
 
 Ryno Tools is a free, offline-capable Progressive Web App for certification exam preparation. No login required, no paywalls, no tracking.
 
@@ -15,7 +15,7 @@ The platform provides adaptive microlearning through flashcard quizzes and timed
 
 Hub: https://ryno.tools/ham-radio/
 
-  - **Technician** (409+ questions): Entry-level FCC license covering regulations, operating procedures, and electronics fundamentals. Required for VHF/UHF band access. Typical study time: 10–20 hours.
+  - **Technician** (409+ questions): Entry-level FCC license covering regulations, operating procedures, and electronics fundamentals. Uses the current 2026-2030 NCVEC pool (409 questions, effective July 1, 2026). Required for VHF/UHF band access. Typical study time: 10–20 hours.
   - **General** (456+ questions): Intermediate license that unlocks HF band privileges. Covers propagation, antenna theory, advanced operating procedures, and FCC regulations. Typical study time: 20–30 hours.
   - **Extra** (706+ questions): Top-tier FCC license covering advanced regulations, EMI, transmission theory, and expanded privileges. Typical study time: 40–60 hours.
 
@@ -178,7 +178,7 @@ Each question includes:
   published: 2026-06-24
   track: cybersecurity/sy0-701
   tags: security-plus, certification, dod-8140, career, salary
-- [What Changed in the 2026-2030 FCC Technician Question Pool](https://ryno.tools/blog/2026-technician-question-pool-changes/) — The FCC Technician exam switches to the 2026-2030 question pool on July 1, 2026. Here is exactly what changed — new topics, removed questions, and what every test-taker needs to know before sitting for the exam.
+- [What Changed in the 2026-2030 FCC Technician Question Pool](https://ryno.tools/blog/2026-technician-question-pool-changes/) — The FCC Technician exam now draws from the 2026-2030 question pool, effective July 1, 2026. Here is exactly what changed — new topics, removed questions, and what every test-taker needs to know before sitting for the exam.
   author: Ask Ryno
   published: 2026-06-13
   track: ham-radio/technician

@@ -10,6 +10,7 @@ import { fileURLToPath } from 'url';
 import { createHash } from 'crypto';
 import { injectChrome } from '../data-pipeline/sync-chrome.mjs';
 import { bumpServiceWorkerVersion } from '../data-pipeline/chrome/sw-version.mjs';
+import { refreshLlmsStamp } from '../data-pipeline/llms-stamp.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DRAFTS_DIR = join(ROOT, 'blog-pipeline', 'drafts');
@@ -523,7 +524,7 @@ function updateLlms(filePath) {
       tagsLine,
     ].filter(Boolean).join('\n');
   }).join('\n');
-  const updated = replaceManagedRegion(content, 'blog-articles', articlesSection);
+  const updated = refreshLlmsStamp(content, replaceManagedRegion(content, 'blog-articles', articlesSection));
   writeFileSync(filePath, updated);
   console.log(`✅ Updated ${filePath.split('/').pop()} (blog-articles region)`);
 }
